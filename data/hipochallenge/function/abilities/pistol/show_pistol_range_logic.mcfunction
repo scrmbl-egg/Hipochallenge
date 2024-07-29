@@ -1,3 +1,6 @@
+# storage
+    # local_range
+
 scoreboard players add @s timer 1
 
 tp @s ~ ~ ~ ~1 ~

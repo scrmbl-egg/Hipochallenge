@@ -9,7 +9,7 @@ function hipochallenge:load/announce_load with storage minecraft:hipochallenge
 
 #scoreboards:
 
-#TODO: Add storage 'minecraft:hipochallenge' constant definitions
+# TODO: Add storage 'minecraft:hipochallenge' constant definitions
 
 function hipochallenge:msg/debug/msg_info {msg:"Creando scoreboards..."}
 scoreboard objectives add id dummy
