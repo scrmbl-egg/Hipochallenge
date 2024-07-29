@@ -1,0 +1,1 @@
+function hipochallenge:msg/debug/msg_info {msg:"Goto placeholder."}

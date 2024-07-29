@@ -1,0 +1,1 @@
+attribute @s generic.armor modifier remove tank_kit3_horn

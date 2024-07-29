@@ -1,0 +1,1 @@
+$tellraw @a[tag=debug] [{"bold":true,"color":"green","hoverEvent":{"action":"show_text","value":[{"text":"Debug"}]},"text":">> "},{"bold":true,"color":"red","text":"[ERROR] "},{"bold":false,"color":"red","italic":true,"obfuscated":false,"strikethrough":false,"text":"$(msg)","underlined":false}]

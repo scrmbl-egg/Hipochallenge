@@ -1,0 +1,2 @@
+$tellraw @a [{"text":"HIPOCHALLENGE PHOENIX: ","color":"gold","bold":true},{"text":"v$(version)","color":"aqua","bold":false}]
+execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 0.75 1

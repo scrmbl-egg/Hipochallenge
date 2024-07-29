@@ -1,0 +1,2 @@
+execute as @s at @s run particle block{block_state:"minecraft:redstone_block"} ~ ~1 ~ 0.3 0.6 0.3 1 20 normal @a[distance=2..,tag=!hide_blood]
+execute as @s at @s run particle block{block_state:"minecraft:redstone_block"} ~ ~1 ~ 0.3 0.6 0.3 1 5 normal @a[distance=..2,tag=!hide_blood]

@@ -1,0 +1,39 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:black_dye",
+            "count": 1,
+            "components": {
+                "custom_model_data": 1
+            }
+        },
+        "title": [
+            {
+                "text": "SSS",
+                "color": "red",
+                "italic": true
+            },
+            {
+                "text": "hitstorm",
+                "color": "white"
+            }
+        ],
+        "description": "Haz que una bala del Revolver V-445 pase por 4 espejos",
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "hipochallenge:combat/ranger/selected",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

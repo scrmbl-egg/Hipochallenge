@@ -1,0 +1,35 @@
+CONTROL:
+
+'[{"color":"gold","italic":false,"text":"["},{"keybind":"key.use"},"] ",{"color":"white","text":"Soplar cuerno:"}]'
+
+GENÉRICO
+
+'{"color":"white","text":"Texto aquí","italic":false}'
+
+EFECTOS A JUGADOR
+
+'[{"color":"blue","italic":false,"text":"  Tú: "},{"color":"white","fallback":"Absorption","translate":"effect.minecraft.absorption"}," ",{"color":"white","translate":"enchantment.level.1"},{"color":"dark_gray","text":" :: "},{"color":"white","text":"0s"}]'
+
+EFECTOS A ALIADOS
+
+'[{"color":"yellow","italic":false,"text":"  Aliados: "},{"color":"white","translate":"effect.minecraft.absorption"}," ",{"color":"white","translate":"enchantment.level.1"},{"color":"dark_gray","text":" :: "},{"color":"white","text":"0s "},{"color":"dark_gray","text":":: "},{"color":"white","text":"0b"}]'
+
+
+VACÍO
+
+'" "'
+
+COOLDOWN
+
+'[{"color":"gray","italic":false,"text":"Reutilizable después de: "},{"color":"white","text":"0s"}]'
+
+NO COOLDOWN
+
+'{"color":"yellow","text":"Un solo uso.","italic":false}'
+
+
+
+COLORS
+
+- ATTRIBUTE: #c43131
++ ATTRIBUTE: #3131c4

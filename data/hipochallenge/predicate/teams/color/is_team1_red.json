@@ -1,0 +1,9 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:storage",
+      "storage": "minecraft:hipochallenge",
+      "path": "team1_color_number"
+    },
+    "range": 1
+}

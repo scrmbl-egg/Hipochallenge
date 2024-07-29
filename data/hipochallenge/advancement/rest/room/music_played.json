@@ -1,0 +1,68 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:jukebox",
+            "count": 1
+        },
+        "title": [
+            {
+                "text": "ミ",
+                "color": "#FF3C00",
+                "bold": true
+            },
+            {
+                "text": "ラ",
+                "color": "#FF7800"
+            },
+            {
+                "text": "ク",
+                "color": "#FFC500"
+            },
+            {
+                "text": "ル",
+                "color": "#FFF100"
+            },
+            {
+                "text": "ミ",
+                "color": "#C6E300"
+            },
+            {
+                "text": "ュ",
+                "color": "#3C9102"
+            },
+            {
+                "text": "ー",
+                "color": "#006E24"
+            },
+            {
+                "text": "ジ",
+                "color": "#0020C0"
+            },
+            {
+                "text": "カ",
+                "color": "#0300FA"
+            },
+            {
+                "text": "ル",
+                "color": "#3100AD"
+            }
+        ],
+        "description": "Disfruta de tu colección de vinilos",
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "hipochallenge:rest/room/root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

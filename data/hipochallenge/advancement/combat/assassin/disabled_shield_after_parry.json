@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:golden_sword",
+            "count": 1,
+            "components": {
+                "enchantment_glint_override": true
+            }
+        },
+        "title": "Presión",
+        "description": "Inutiliza un escudo cuando tu espada esté potenciada",
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "hipochallenge:combat/assassin/successful_parry",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

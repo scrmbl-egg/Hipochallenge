@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:black_dye",
+            "count": 1,
+            "components": {
+                "custom_model_data": 2
+            }
+        },
+        "title": "Pequeños guerreros",
+        "description": "Consigue una figurita para tu cuarto",
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "hipochallenge:rest/room/root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

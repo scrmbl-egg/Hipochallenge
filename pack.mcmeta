@@ -1,0 +1,23 @@
+{
+    "pack": {
+        "pack_format": 48,
+        "description": [
+            {
+                "text": "HIPOCHALLENGE:",
+                "color": "white",
+                "bold": true
+            },
+            {
+                "text": "Phoenix",
+                "color": "red",
+                "bold": false
+            },
+            {
+                "text": " datapack",
+                "color": "white",
+                "bold": false
+            }
+        ]
+    }
+}
+

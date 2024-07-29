@@ -1,0 +1,1 @@
+$tellraw @a [{"bold":true,"color":"dark_purple","hoverEvent":{"action":"show_text","value":[{"text":"Anuncio"}]},"text":">"},{"bold":true,"color":"blue","hoverEvent":{"action":"show_text","value":[{"text":"Anuncio"}]},"text":"> "},$(txt)]
