@@ -6,3 +6,7 @@
 
 # TODO: Initialise minecraft:hipochallenge variables here.
 
+
+data modify storage minecraft:hipochallenge current_game_state set value 0
+data modify storage minecraft:hipochallenge is_competitive_mode set value true
+data modify storage minecraft:hipochallenge users_playing set value 0

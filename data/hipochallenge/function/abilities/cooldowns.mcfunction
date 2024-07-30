@@ -1,1 +1,0 @@
-execute if entity @s[scores={class=2,cd1=1..}] run scoreboard players remove @s cd1 1

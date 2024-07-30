@@ -4,4 +4,4 @@ execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.lev
 execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1.2 0.25
 execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1 0.25
 execute as @a[tag=dario_update] at @s run playsound minecraft:dario_update master @s ~ ~ ~ 1 1 1 
-scoreboard players add #version var 1
+scoreboard players add #version value 1

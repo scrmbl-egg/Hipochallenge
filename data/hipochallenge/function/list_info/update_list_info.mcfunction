@@ -102,9 +102,9 @@ execute as @s[team=admin] run scoreboard players display numberformat @s player_
 execute as @s[team=spectator] run scoreboard players display numberformat @s player_list_info blank
 
 #free storage memory
-#data remove storage minecraft:hipochallenge local_list_info_class_name
-#data remove storage minecraft:hipochallenge local_list_info_kit_name
-#data remove storage minecraft:hipochallenge local_list_info_perk_name
-#data remove storage minecraft:hipochallenge local_list_info_kill_count
-#data remove storage minecraft:hipochallenge local_list_info_death_count
-#data remove storage minecraft:hipochallenge local_list_info_points
+data remove storage minecraft:hipochallenge local_list_info_class_name
+data remove storage minecraft:hipochallenge local_list_info_kit_name
+data remove storage minecraft:hipochallenge local_list_info_perk_name
+data remove storage minecraft:hipochallenge local_list_info_kill_count
+data remove storage minecraft:hipochallenge local_list_info_death_count
+data remove storage minecraft:hipochallenge local_list_info_points

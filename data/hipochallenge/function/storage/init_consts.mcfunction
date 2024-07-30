@@ -4,12 +4,9 @@
 #
 # HOW TO MODIFY:
 # - Values in this file are named with SCREAM_CASE, to represent constant values.
-#
-# - When a value contains '_SECS' as a suffix, it represents a value that is in seconds. Use
-#   a single decimal digit of precision for non-integer values. For example:
-#   [ALLOWED]     ..._SECS set value 1.5
-#   [NOT ALLOWED] ..._SECS set value 1.52
-#   This is because these values are multiplied by 20 internally to represent game ticks.
+# 
+# - For cooldown, or '..._CD_TICKS' constants, remember that 20 gameticks is equivalent to
+#   1 second in game. Using -1 means INFINITE.
 
 # FIXME: This file is not included in 'load.mcfunction' for safety reasons, YET!
 
@@ -20,9 +17,9 @@
 data modify storage minecraft:hipochallenge MAP_VERSION set value "pre-alpha"
 
 data modify storage minecraft:hipochallenge NECESSARY_PLAYERS_FOR_GAME set value 6
-data modify storage minecraft:hipochallenge ROUND_DURATION_SECS set value 120
+data modify storage minecraft:hipochallenge ROUND_DURATION_TICKS set value 2400
 data modify storage minecraft:hipochallenge WIN_ROUNDS set value 5
-data modify storage minecraft:hipochallenge MAX_ROUNDS set value 9
+data modify storage minecraft:hipochallenge MAX_GAME_REQUEST_TIME set value 1200
 
 ## TEAMS
 
@@ -69,18 +66,19 @@ data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
 # tank
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_ARMOR set value 20
-    data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_ARMOR_TOUGHNESS set value 8
+    data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_ARMOR_TOUGHNESS set value 12
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_SCALE set value 1.1
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_BURNING_TIME set value 1
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE set value 0
     
     # kit 1 
-        data modify storage minecraft:hipochallenge TANK_K1_HORN_CD_SECS set value -1
-        data modify storage minecraft:hipochallenge TANK_K1_CASTLING_CD_SECS set value 10
+        data modify storage minecraft:hipochallenge TANK_K1_HORN_CD_TICKS set value -1
+        data modify storage minecraft:hipochallenge TANK_K1_CASTLING_CD_TICKS set value 42069
     # kit 2
-        data modify storage minecraft:hipochallenge TANK_K2_HORN_CD_SECS set value -1
+        data modify storage minecraft:hipochallenge TANK_K2_HORN_CD_TICKS set value -1
     # kit 3
-        data modify storage minecraft:hipochallenge TANK_K3_HORN_CD_SECS set value -1
+        data modify storage minecraft:hipochallenge TANK_K3_HORN_CD_TICKS set value -1
+        data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_ID set value "tank_k3_horn"
     #
     # perk 1
     # perk 2
@@ -99,7 +97,7 @@ data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
     # kit 3
         # TODO: Change these placeholder values
         data modify storage minecraft:hipochallenge RANGER_K3_PISTOL_RECOIL_PITCH set value -20
-        data modify storage minecraft:hipochallenge RANGER_K3_PISTOL_SHOT_CD_SECS set value 3333
+        data modify storage minecraft:hipochallenge RANGER_K3_PISTOL_SHOT_CD_TICKS set value 42069
     #
     # perk 1
     # perk 2
@@ -170,3 +168,7 @@ data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
     # perk 3
 
 #
+
+## Text components
+
+data modify storage minecraft:hipochallenge NO_COOLDOWN_TXT_COMPONENT set value '{"color":"yellow","text":"Un solo uso"}'

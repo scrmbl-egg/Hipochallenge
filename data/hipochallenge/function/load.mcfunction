@@ -14,8 +14,11 @@ function hipochallenge:load/announce_load with storage minecraft:hipochallenge
 function hipochallenge:msg/debug/msg_info {msg:"Creando scoreboards..."}
 scoreboard objectives add id dummy
 
+# TODO: Delete var scoreboard when memory transition is done.
+
 scoreboard objectives add var dummy
 scoreboard objectives add timer dummy
+scoreboard objectives add value dummy
 
 scoreboard objectives add player_list_info dummy
 scoreboard objectives add class dummy
@@ -35,6 +38,9 @@ scoreboard objectives add menu trigger
 scoreboard objectives add cd1 dummy
 scoreboard objectives add cd2 dummy
 scoreboard objectives add cd3 dummy
+
+scoreboard objectives add match_request_display dummy
+scoreboard objectives modify match_request_display displayname {"bold":true,"color":"gold","translate":"hc.sidebar.match_request.new","fallback":"NEW MATCH REQUEST","italic":true}
 
 # score init
 
@@ -151,6 +157,7 @@ gamerule waterSourceConversion true
 function hipochallenge:msg/debug/msg_info {msg:"Reiniciando logo..."}
 kill @e[tag=logo]
 execute positioned 458 -46 -100 run function hipochallenge:lobby/logo
+execute positioned -217 30 102 run function hipochallenge:lobby/logo
 
 #Bola de nieve:
 function hipochallenge:msg/debug/msg_info {msg:"Inicializando funciones recursivas de tipo main..."}
@@ -163,7 +170,9 @@ schedule function hipochallenge:main_ten_ticks 1s
 
 #Variables:
 
-function hipochallenge:var/var_editor
+# TODO: Delete this line.
+    #function hipochallenge:var/var_editor
+#
 
 #Updates
 function hipochallenge:msg/debug/msg_info {msg:"Actualizando text-displays..."}

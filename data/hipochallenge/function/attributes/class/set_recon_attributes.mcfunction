@@ -1,7 +1,7 @@
 attribute @s generic.max_health base set 20
 attribute @s generic.armor base set 0
 attribute @s generic.armor_toughness base set 0
-attribute @s generic.scale base set 0.90
+attribute @s generic.scale base set 0.83
 attribute @s generic.burning_time base set 1
 attribute @s generic.explosion_knockback_resistance base set 0
 
