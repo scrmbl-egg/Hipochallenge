@@ -19,7 +19,7 @@ data modify storage minecraft:hipochallenge MAP_VERSION set value "pre-alpha"
 data modify storage minecraft:hipochallenge NECESSARY_PLAYERS_FOR_GAME set value 6
 data modify storage minecraft:hipochallenge ROUND_DURATION_TICKS set value 2400
 data modify storage minecraft:hipochallenge WIN_ROUNDS set value 5
-data modify storage minecraft:hipochallenge MAX_GAME_REQUEST_TIME set value 1200
+data modify storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS set value 1200
 
 ## TEAMS
 

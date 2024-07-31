@@ -5,6 +5,10 @@ execute if score $pickup_dice_iteration var matches 1.. run function hipochallen
 #quitar recetas
 recipe take @a *
 
+#Lógica de rondas
+
+    function hipochallenge:game_states/state_logic
+
 #muerte
 
     execute as @a[scores={is_dead=1..}] at @s run function hipochallenge:death/handle_death with storage minecraft:hipochallenge
@@ -24,9 +28,9 @@ recipe take @a *
     #execute as @e[tag=void_arrow,type=marker] at @s run function hipochallenge:abilities/void_arrow/void_arrow with storage minecraft:hipochallenge
 
     #ganar ronda
-    execute if score #local_round_win_timer var matches 0.. run scoreboard players add #local_round_win_timer var 1
-    execute if score #local_round_win_timer var matches 0.. as @a[tag=round_won] run function hipochallenge:vfx/titles/round_win_logic
-    execute if score #local_round_win_timer var matches 15.. run scoreboard players reset #local_round_win_timer var
+    #execute if score #local_round_win_timer var matches 0.. run scoreboard players add #local_round_win_timer var 1
+    #execute if score #local_round_win_timer var matches 0.. as @a[tag=round_won] run function hipochallenge:vfx/titles/round_win_logic
+    #execute if score #local_round_win_timer var matches 15.. run scoreboard players reset #local_round_win_timer var
 
     #vfx de mapas
         #mapa 0

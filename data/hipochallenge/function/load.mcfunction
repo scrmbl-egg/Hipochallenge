@@ -4,8 +4,12 @@ function hipochallenge:msg/debug/msg_info {msg:"Cargando datapack..."}
 #Anunciar reload:
 
 function hipochallenge:msg/debug/msg_info {msg:"Anunciando reloads..."}
-execute store result storage minecraft:hipochallenge version int 1 run scoreboard players get #version var
+execute store result storage minecraft:hipochallenge version int 1 run scoreboard players get #version value
 function hipochallenge:load/announce_load with storage minecraft:hipochallenge
+
+# storage:
+
+function hipochallenge:storage/init_consts
 
 #scoreboards:
 
@@ -40,7 +44,6 @@ scoreboard objectives add cd2 dummy
 scoreboard objectives add cd3 dummy
 
 scoreboard objectives add match_request_display dummy
-scoreboard objectives modify match_request_display displayname {"bold":true,"color":"gold","translate":"hc.sidebar.match_request.new","fallback":"NEW MATCH REQUEST","italic":true}
 
 # score init
 
@@ -58,6 +61,8 @@ scoreboard players add @a points 0
 scoreboard players add @a cd1 0
 scoreboard players add @a cd2 0
 scoreboard players add @a cd3 0
+
+scoreboard objectives modify match_request_display displayname {"bold":true,"color":"gold","translate":"hc.sidebar.match_request.new","fallback":"NEW MATCH REQUEST","italic":true}
 
 # teams
 

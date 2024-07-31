@@ -5,9 +5,9 @@
 data remove storage minecraft:hipochallenge MAP_VERSION
 
 data remove storage minecraft:hipochallenge NECESSARY_PLAYERS_FOR_GAME
-data remove storage minecraft:hipochallenge ROUND_DURATION_SECS
+data remove storage minecraft:hipochallenge ROUND_DURATION_TICKS
 data remove storage minecraft:hipochallenge WIN_ROUNDS
-data remove storage minecraft:hipochallenge MAX_ROUNDS
+data remove storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS
 
 ## TEAMS
 
@@ -60,12 +60,13 @@ data remove storage minecraft:hipochallenge TEAM_SIZE
     data remove storage minecraft:hipochallenge TANK_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE
     
     # kit 1 
-        data remove storage minecraft:hipochallenge TANK_K1_HORN_CD_SECS
-        data remove storage minecraft:hipochallenge TANK_K1_CASTLING_CD_SECS
+        data remove storage minecraft:hipochallenge TANK_K1_HORN_CD_TICKS
+        data remove storage minecraft:hipochallenge TANK_K1_CASTLING_CD_TICKS
     # kit 2
-        data remove storage minecraft:hipochallenge TANK_K2_HORN_CD_SECS
+        data remove storage minecraft:hipochallenge TANK_K2_HORN_CD_TICKS
     # kit 3
-        data remove storage minecraft:hipochallenge TANK_K3_HORN_CD_SECS
+        data remove storage minecraft:hipochallenge TANK_K3_HORN_CD_TICKS
+        data remove storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_ID
     #
     # perk 1
     # perk 2
@@ -84,7 +85,7 @@ data remove storage minecraft:hipochallenge TEAM_SIZE
     # kit 3
         # TODO: Change these placeholder values
         data remove storage minecraft:hipochallenge RANGER_K3_PISTOL_RECOIL_PITCH
-        data remove storage minecraft:hipochallenge RANGER_K3_PISTOL_SHOT_CD_SECS
+        data remove storage minecraft:hipochallenge RANGER_K3_PISTOL_SHOT_CD_TICKS
     #
     # perk 1
     # perk 2
@@ -155,3 +156,7 @@ data remove storage minecraft:hipochallenge TEAM_SIZE
     # perk 3
 
 #
+
+## Text components
+
+data remove storage minecraft:hipochallenge NO_COOLDOWN_TXT_COMPONENT

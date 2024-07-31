@@ -1,5 +1,7 @@
 #params: name
 
+data modify storage minecraft:hipochallenge has_team2_name_changed set value true
+
 $data modify storage minecraft:hipochallenge team2_name set value "$(name)"
 $function hipochallenge:msg/all/inject_text/msg_all_inject {txt:"[\"\",{\"text\":\"El nombre del segundo equipo ha sido cambiado a \",\"bold\":false},{\"text\":\"$(name)\",\"color\":\"green\",\"bold\":false}]"}
 
