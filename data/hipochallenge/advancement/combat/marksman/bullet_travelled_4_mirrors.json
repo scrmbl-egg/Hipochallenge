@@ -24,7 +24,7 @@
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:combat/ranger/selected",
+    "parent": "hipochallenge:combat/marksman/selected",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

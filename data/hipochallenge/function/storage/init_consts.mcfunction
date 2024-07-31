@@ -25,6 +25,9 @@ data modify storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS set val
 
 data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
 
+data modify storage minecraft:hipochallenge TEAM1_DEFAULT_NAME set value "Team 1"
+data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2"
+
 # red
     data modify storage minecraft:hipochallenge RED_TEAM_COLOR_NUMBER set value 1
     data modify storage minecraft:hipochallenge RED_TEAM_DUST_COLOR set value "[1.000,0.000,0.000]"
@@ -84,20 +87,20 @@ data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
     # perk 2
     # perk 3
 
-# ranger
-    data modify storage minecraft:hipochallenge RANGER_ATTRIBUTE_MAX_HEALTH set value 20
-    data modify storage minecraft:hipochallenge RANGER_ATTRIBUTE_ARMOR set value 0
-    data modify storage minecraft:hipochallenge RANGER_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
-    data modify storage minecraft:hipochallenge RANGER_ATTRIBUTE_SCALE set value 1
-    data modify storage minecraft:hipochallenge RANGER_ATTRIBUTE_BURNING_TIME set value 1
-    data modify storage minecraft:hipochallenge RANGER_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE set value 0
+# marksman
+    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_MAX_HEALTH set value 20
+    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR set value 0
+    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
+    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_SCALE set value 1
+    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_BURNING_TIME set value 1
+    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE set value 0
 
     # kit 1
     # kit 2
     # kit 3
         # TODO: Change these placeholder values
-        data modify storage minecraft:hipochallenge RANGER_K3_PISTOL_RECOIL_PITCH set value -20
-        data modify storage minecraft:hipochallenge RANGER_K3_PISTOL_SHOT_CD_TICKS set value 42069
+        data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_RECOIL_PITCH set value -20
+        data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_SHOT_CD_TICKS set value 42069
     #
     # perk 1
     # perk 2

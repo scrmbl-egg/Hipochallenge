@@ -53,7 +53,7 @@ recipe take @a *
         #execute as @a run function hipochallenge:abilities/cooldowns with storage minecraft:hipochallenge
 
     #void_arrow
-        execute as @e[type=arrow,tag=void_arrow] at @s run function hipochallenge:vfx/abilities/void_arrow/void_arrow_vfx_arrow with storage minecraft:hipochallenge
+        #execute as @e[type=arrow,tag=void_arrow] at @s run function hipochallenge:vfx/abilities/void_arrow/void_arrow_vfx_arrow with storage minecraft:hipochallenge
 
     #pistola
     # TODO: Borrar línea de abajo
@@ -62,8 +62,6 @@ recipe take @a *
         
 #perks
 
-    #sabueso
-        execute as @e[tag=hound] run function hipochallenge:perk/class/recon/hound/hound_logic with storage minecraft:hipochallenge
 
 #menu
         execute as @a run function hipochallenge:menus/logic/menu_main

@@ -15,19 +15,19 @@
     execute as @s[predicate=hipochallenge:class/is_tank,predicate=hipochallenge:perk/is_perk3] run data modify storage minecraft:hipochallenge local_list_info_perk_name set value "Bastión (3)"
 #
 
-#ranger
+#marksman
     #class name
-    execute as @s if predicate hipochallenge:class/is_ranger run data modify storage minecraft:hipochallenge local_list_info_class_name set value "Tirador"
+    execute as @s if predicate hipochallenge:class/is_marksman run data modify storage minecraft:hipochallenge local_list_info_class_name set value "Tirador"
     
     #kit name
-    execute as @s[predicate=hipochallenge:class/is_ranger,predicate=hipochallenge:kit/is_kit1] run data modify storage minecraft:hipochallenge local_list_info_kit_name set value "Arquero (1)"
-    execute as @s[predicate=hipochallenge:class/is_ranger,predicate=hipochallenge:kit/is_kit2] run data modify storage minecraft:hipochallenge local_list_info_kit_name set value "Francotirador (2)"
-    execute as @s[predicate=hipochallenge:class/is_ranger,predicate=hipochallenge:kit/is_kit3] run data modify storage minecraft:hipochallenge local_list_info_kit_name set value "Pistolero (3)"
+    execute as @s[predicate=hipochallenge:class/is_marksman,predicate=hipochallenge:kit/is_kit1] run data modify storage minecraft:hipochallenge local_list_info_kit_name set value "Arquero (1)"
+    execute as @s[predicate=hipochallenge:class/is_marksman,predicate=hipochallenge:kit/is_kit2] run data modify storage minecraft:hipochallenge local_list_info_kit_name set value "Francotirador (2)"
+    execute as @s[predicate=hipochallenge:class/is_marksman,predicate=hipochallenge:kit/is_kit3] run data modify storage minecraft:hipochallenge local_list_info_kit_name set value "Pistolero (3)"
     
     #perk name
-    execute as @s[predicate=hipochallenge:class/is_ranger,predicate=hipochallenge:perk/is_perk1] run data modify storage minecraft:hipochallenge local_list_info_perk_name set value "Diana (1)"
-    execute as @s[predicate=hipochallenge:class/is_ranger,predicate=hipochallenge:perk/is_perk2] run data modify storage minecraft:hipochallenge local_list_info_perk_name set value "Salvavidas (2)"
-    execute as @s[predicate=hipochallenge:class/is_ranger,predicate=hipochallenge:perk/is_perk3] run data modify storage minecraft:hipochallenge local_list_info_perk_name set value "Grandes bolsillos (3)"
+    execute as @s[predicate=hipochallenge:class/is_marksman,predicate=hipochallenge:perk/is_perk1] run data modify storage minecraft:hipochallenge local_list_info_perk_name set value "Diana (1)"
+    execute as @s[predicate=hipochallenge:class/is_marksman,predicate=hipochallenge:perk/is_perk2] run data modify storage minecraft:hipochallenge local_list_info_perk_name set value "Salvavidas (2)"
+    execute as @s[predicate=hipochallenge:class/is_marksman,predicate=hipochallenge:perk/is_perk3] run data modify storage minecraft:hipochallenge local_list_info_perk_name set value "Grandes bolsillos (3)"
 #
 
 #assassin

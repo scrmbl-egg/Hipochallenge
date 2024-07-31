@@ -4,7 +4,7 @@
 
 $execute as @s if predicate hipochallenge:class/is_tank run function hipochallenge:equipment/weapons/class/tank/equip_kit$(local_kit_number)
 
-$execute as @s if predicate hipochallenge:class/is_ranger run function hipochallenge:equipment/weapons/class/ranger/equip_kit$(local_kit_number)
+$execute as @s if predicate hipochallenge:class/is_marksman run function hipochallenge:equipment/weapons/class/marksman/equip_kit$(local_kit_number)
 
 $execute as @s if predicate hipochallenge:class/is_assassin run function hipochallenge:equipment/weapons/class/assassin/equip_kit$(local_kit_number)
 

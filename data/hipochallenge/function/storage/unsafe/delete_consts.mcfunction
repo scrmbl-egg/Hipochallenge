@@ -72,20 +72,20 @@ data remove storage minecraft:hipochallenge TEAM_SIZE
     # perk 2
     # perk 3
 
-# ranger
-    data remove storage minecraft:hipochallenge RANGER_ATTRIBUTE_MAX_HEALTH
-    data remove storage minecraft:hipochallenge RANGER_ATTRIBUTE_ARMOR
-    data remove storage minecraft:hipochallenge RANGER_ATTRIBUTE_ARMOR_TOUGHNESS
-    data remove storage minecraft:hipochallenge RANGER_ATTRIBUTE_SCALE
-    data remove storage minecraft:hipochallenge RANGER_ATTRIBUTE_BURNING_TIME
-    data remove storage minecraft:hipochallenge RANGER_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE
+# marksman
+    data remove storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_MAX_HEALTH
+    data remove storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR
+    data remove storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR_TOUGHNESS
+    data remove storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_SCALE
+    data remove storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_BURNING_TIME
+    data remove storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE
 
     # kit 1
     # kit 2
     # kit 3
         # TODO: Change these placeholder values
-        data remove storage minecraft:hipochallenge RANGER_K3_PISTOL_RECOIL_PITCH
-        data remove storage minecraft:hipochallenge RANGER_K3_PISTOL_SHOT_CD_TICKS
+        data remove storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_RECOIL_PITCH
+        data remove storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_SHOT_CD_TICKS
     #
     # perk 1
     # perk 2
