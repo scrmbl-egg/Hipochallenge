@@ -1,9 +1,9 @@
 #init function
 
-function hipochallenge:msg/debug/msg_info {msg:"Cargando datapack..."}
+function hipochallenge:msg/debug/msg_info {msg:"Loading datapack..."}
 #Anunciar reload:
 
-function hipochallenge:msg/debug/msg_info {msg:"Anunciando reloads..."}
+function hipochallenge:msg/debug/msg_info {msg:"Announcing reload..."}
 execute store result storage minecraft:hipochallenge version int 1 run scoreboard players get #version value
 function hipochallenge:load/announce_load with storage minecraft:hipochallenge
 
@@ -15,7 +15,7 @@ function hipochallenge:storage/init_consts
 
 # TODO: Add storage 'minecraft:hipochallenge' constant definitions
 
-function hipochallenge:msg/debug/msg_info {msg:"Creando scoreboards..."}
+function hipochallenge:msg/debug/msg_info {msg:"Creating scoreboards..."}
 scoreboard objectives add id dummy
 
 # TODO: Delete var scoreboard when memory transition is done.
@@ -66,13 +66,21 @@ scoreboard objectives modify match_request_display displayname {"bold":true,"col
 
 # teams
 
-function hipochallenge:msg/debug/msg_info {msg:"Creando equipos..."}
+function hipochallenge:msg/debug/msg_info {msg:"Creating teams..."}
 team add admin
 team add team1
 team add team2
 team add neutral
 team add spectator
 team add not_playing
+
+team modify admin collisionRule never
+team modify admin friendlyFire false
+team modify admin nametagVisibility always
+team modify admin seeFriendlyInvisibles true
+team modify admin color gold
+team modify admin displayName {"translate":"hc.teams.admin.name","fallback":"Admin"}
+team modify admin prefix ["[",{"translate":"hc.teams.admin.name","fallback":"Admin"},"] "]
 
 team modify team1 collisionRule always
 team modify team1 friendlyFire false
@@ -89,27 +97,28 @@ team modify neutral friendlyFire true
 team modify neutral nametagVisibility always
 team modify neutral seeFriendlyInvisibles false
 team modify neutral color aqua
-team modify neutral displayName "Neutral"
-team modify neutral prefix "[Neutral] "
+team modify neutral displayName {"translate":"hc.teams.neutral.name","fallback":"Neutral"}
+team modify neutral prefix ["[",{"translate":"hc.teams.neutral.name","fallback":"Neutral"},"] "]
 
 team modify spectator collisionRule never
 team modify spectator friendlyFire false
 team modify spectator nametagVisibility hideForOtherTeams
 team modify spectator seeFriendlyInvisibles true
 team modify spectator color gray
-team modify spectator displayName "Espectadores"
-team modify spectator prefix "[Espectador] "
+team modify spectator displayName {"translate":"hc.teams.spectator.name","fallback":"Spectator"}
+team modify spectator prefix ["[",{"translate":"hc.teams.spectator.name","fallback":"Spectator"},"] "]
 
 team modify not_playing collisionRule pushOwnTeam
 team modify not_playing friendlyFire false
 team modify not_playing nametagVisibility always
 team modify not_playing seeFriendlyInvisibles false
 team modify not_playing color white
-team modify not_playing displayName "No jugando"
+team modify not_playing displayName {"translate":"hc.teams.not_playing.name","fallback":"Not playing"}
 team modify not_playing prefix ""
 
 #gamerules
 
+function hipochallenge:msg/debug/msg_info {msg:"Setting gamerules..."}
 gamerule announceAdvancements false
 gamerule blockExplosionDropDecay false
 gamerule commandBlockOutput false
@@ -159,13 +168,13 @@ gamerule waterSourceConversion true
 
 #logo
 
-function hipochallenge:msg/debug/msg_info {msg:"Reiniciando logo..."}
+function hipochallenge:msg/debug/msg_info {msg:"Restarting logos..."}
 kill @e[tag=logo]
 execute positioned 458 -46 -100 run function hipochallenge:lobby/logo
-execute positioned -217 30 102 run function hipochallenge:lobby/logo
+execute positioned -84 -32 151 run function hipochallenge:lobby/logo
 
 #Bola de nieve:
-function hipochallenge:msg/debug/msg_info {msg:"Inicializando funciones recursivas de tipo main..."}
+function hipochallenge:msg/debug/msg_info {msg:"Initializing main functions..."}
 
 schedule clear hipochallenge:main_sec
 schedule function hipochallenge:main_sec 1s
@@ -173,12 +182,6 @@ schedule function hipochallenge:main_sec 1s
 schedule clear hipochallenge:main_ten_ticks
 schedule function hipochallenge:main_ten_ticks 1s
 
-#Variables:
-
-# TODO: Delete this line.
-    #function hipochallenge:var/var_editor
-#
-
 #Updates
-function hipochallenge:msg/debug/msg_info {msg:"Actualizando text-displays..."}
+function hipochallenge:msg/debug/msg_info {msg:"Updating text displays..."}
 function hipochallenge:teams/update_team_text_displays with storage minecraft:hipochallenge
