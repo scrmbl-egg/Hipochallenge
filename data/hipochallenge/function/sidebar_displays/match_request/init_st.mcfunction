@@ -1,3 +1,7 @@
+# storage:
+    # users_playing
+    # NECESSARY_PLAYERS_FOR_GAME
+
 scoreboard objectives add local dummy
 
 
