@@ -5,7 +5,7 @@ function hipochallenge:msg/debug/msg_info {msg:"Loading datapack..."}
 
 function hipochallenge:msg/debug/msg_info {msg:"Announcing reload..."}
 execute store result storage minecraft:hipochallenge version int 1 run scoreboard players get #version value
-function hipochallenge:load/announce_load with storage minecraft:hipochallenge
+function hipochallenge:load/announce_load_st with storage minecraft:hipochallenge
 
 # storage:
 
