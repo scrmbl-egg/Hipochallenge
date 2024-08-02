@@ -1,9 +1,8 @@
-
-scoreboard players operation $pickup_dice_iteration var = $pickup_count var
-execute if score $pickup_dice_iteration var matches 1.. run function hipochallenge:var/pickup_dice with storage minecraft:hipochallenge
-
 #quitar recetas
 recipe take @a *
+
+# timers
+    function hipochallenge:timers/timer_main
 
 #Lógica de rondas
 

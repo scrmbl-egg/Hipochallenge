@@ -10,4 +10,6 @@ scoreboard players reset $mr_display0
 scoreboard players reset $match_request_timer
 
 schedule clear hipochallenge:sidebar_displays/match_request/logic
+
+# clear scoreboard display
 scoreboard objectives setdisplay sidebar

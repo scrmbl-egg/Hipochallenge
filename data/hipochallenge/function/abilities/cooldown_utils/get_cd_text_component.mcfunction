@@ -9,7 +9,4 @@ scoreboard objectives add local dummy
 
 $scoreboard players set #ticks_param local $(ticks)
 
-execute if score #ticks_param local matches -1 run say hola
-
-
 scoreboard objectives remove local

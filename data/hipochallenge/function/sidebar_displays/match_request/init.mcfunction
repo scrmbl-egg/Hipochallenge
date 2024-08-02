@@ -13,15 +13,15 @@ scoreboard players set $mr_display0 match_request_display 0
 
 # get gamemode
 
-execute store result score #is_tournament local run data get storage minecraft:hipochallenge is_competitive_mode 1
+execute store result score #is_competitive_mode local run data get storage minecraft:hipochallenge is_competitive_mode 1
 
 # get remaining time
 
-execute store result score #start_time value run data get storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS
+execute store result score #start_time local run data get storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS
 
-scoreboard players set #ticks_per_second value 20
+scoreboard players set #ticks_per_second local 20
 
-scoreboard players operation #start_time value /= $ticks_per_second value
+scoreboard players operation #start_time local /= $ticks_per_second value
 
 scoreboard players reset $ticks_per_second
 
@@ -30,8 +30,8 @@ scoreboard players display numberformat $mr_display7 match_request_display fixed
 scoreboard players display name $mr_display7 match_request_display ""
 
 scoreboard players display numberformat $mr_display6 match_request_display fixed ""
-execute if score #is_tournament local matches 0 run scoreboard players display name $mr_display6 match_request_display [{"bold":true,"color":"#00FF09","translate":"hc.gamemode.casual","fallback":"CASUAL MODE"},{"bold":true,"color":"white","text":" < "},{"bold":false,"color":"#024A4D","translate":"hc.gamemode.competitive","fallback":"COMPETITIVE MODE"}]
-execute if score #is_tournament local matches 1 run scoreboard players display name $mr_display6 match_request_display [{"bold":false,"color":"#005903","translate":"hc.gamemode.casual","fallback":"CASUAL MODE"},{"bold":true,"color":"white","text":" > "},{"bold":true,"color":"#05F7FF","translate":"hc.gamemode.competitive","fallback":"COMPETITIVE MODE"}]
+execute if score #is_competitive_mode local matches 0 run scoreboard players display name $mr_display6 match_request_display [{"bold":true,"color":"#00FF09","translate":"hc.gamemode.casual","fallback":"CASUAL MODE"},{"bold":true,"color":"white","text":" < "},{"bold":false,"color":"#024A4D","translate":"hc.gamemode.competitive","fallback":"COMPETITIVE MODE"}]
+execute if score #is_competitive_mode local matches 1 run scoreboard players display name $mr_display6 match_request_display [{"bold":false,"color":"#005903","translate":"hc.gamemode.casual","fallback":"CASUAL MODE"},{"bold":true,"color":"white","text":" > "},{"bold":true,"color":"#05F7FF","translate":"hc.gamemode.competitive","fallback":"COMPETITIVE MODE"}]
 
 scoreboard players display numberformat $mr_display5 match_request_display fixed ""
 scoreboard players display name $mr_display5 match_request_display ""
@@ -49,7 +49,7 @@ scoreboard players display numberformat $mr_display1 match_request_display fixed
 scoreboard players display name $mr_display1 match_request_display ""
 
 scoreboard players display numberformat $mr_display0 match_request_display fixed ""
-scoreboard players display name $mr_display0 match_request_display [{"bold":true,"color":"white","fallback":"Time remaining: %s","translate":"hc.sidebar.match_request.time_remaining","with":[{"bold":false,"color":"red","score":{"name":"#start_time","objective":"value"}}]}]
+scoreboard players display name $mr_display0 match_request_display [{"bold":true,"color":"white","fallback":"Time remaining: %s","translate":"hc.sidebar.match_request.time_remaining","with":[{"bold":false,"color":"red","score":{"name":"#start_time","objective":"local"}}]}]
 
 # display bar and play sound
 scoreboard objectives setdisplay sidebar match_request_display

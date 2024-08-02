@@ -19,6 +19,7 @@ scoreboard players operation $timer_seconds local /= $ticks_per_second local
 execute store result storage minecraft:hipochallenge local_time_in_seconds int 1 run scoreboard players get $timer_seconds local
 
 # update sidebar
-function hipochallenge:sidebar_displays/match_request/update with storage minecraft:hipochallenge
+function hipochallenge:sidebar_displays/match_request/update_display with storage minecraft:hipochallenge
 
+data remove storage minecraft:hipochallenge local_time_in_seconds
 scoreboard objectives remove local

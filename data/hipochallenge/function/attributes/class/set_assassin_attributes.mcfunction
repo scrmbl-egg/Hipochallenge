@@ -1,8 +1,21 @@
-attribute @s generic.max_health base set 20
-attribute @s generic.armor base set 0
-attribute @s generic.armor_toughness base set 0
-attribute @s generic.scale base set 1
-attribute @s generic.burning_time base set 1
-attribute @s generic.explosion_knockback_resistance base set 0
+# get attributes
 
-effect give @s instant_health 1 100 true
+data modify storage minecraft:hipochallenge local_max_health set from storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_MAX_HEALTH
+data modify storage minecraft:hipochallenge local_armor set from storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_ARMOR
+data modify storage minecraft:hipochallenge local_armor_toughness set from storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_ARMOR_TOUGHNESS
+data modify storage minecraft:hipochallenge local_scale set from storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_SCALE
+data modify storage minecraft:hipochallenge local_burning_time set from storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_BURNING_TIME
+data modify storage minecraft:hipochallenge local_explosion_knockback_resistance set from storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE
+
+# apply attributes
+
+function hipochallenge:attributes/apply_attributes_st with storage minecraft:hipochallenge
+
+
+# free memory
+data remove storage minecraft:hipochallenge local_max_health
+data remove storage minecraft:hipochallenge local_armor
+data remove storage minecraft:hipochallenge local_armor_toughness
+data remove storage minecraft:hipochallenge local_scale
+data remove storage minecraft:hipochallenge local_burning_time
+data remove storage minecraft:hipochallenge local_explosion_knockback_resistance
