@@ -1,4 +1,4 @@
-execute if entity @s[scores={timer=1}] at @s run function hipochallenge:vfx/abilities/void_arrow/void_arrow_vfx_circle_frame with storage minecraft:hipochallenge
+execute if entity @s[scores={timer=1}] at @s run function hipochallenge:vfx/abilities/void_arrow/void_arrow_vfx_circle_frame_st with storage minecraft:hipochallenge
 
 particle dust{color:[0.000,0.000,0.000],scale:2} ~ ~ ~ 2 2 2 1 20 force
 particle squid_ink ~ ~ ~ 0.1 0.1 0.1 0 5 force

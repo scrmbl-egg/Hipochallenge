@@ -1,4 +1,4 @@
-#storage team2_name
+# storage: team2_name
 
 execute as @s[team=team2] run tag @s add local
 execute as @s[tag=local] run function hipochallenge:teams/join_spectators

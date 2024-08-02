@@ -1,7 +1,7 @@
-#init function
+# init function
 
 function hipochallenge:msg/debug/msg_info {msg:"Loading datapack..."}
-#Anunciar reload:
+# announce reload
 
 function hipochallenge:msg/debug/msg_info {msg:"Announcing reload..."}
 execute store result storage minecraft:hipochallenge version int 1 run scoreboard players get #version value
@@ -116,7 +116,7 @@ team modify not_playing color white
 team modify not_playing displayName {"translate":"hc.teams.not_playing.name","fallback":"Not playing"}
 team modify not_playing prefix ""
 
-#gamerules
+# gamerules
 
 function hipochallenge:msg/debug/msg_info {msg:"Setting gamerules..."}
 gamerule announceAdvancements false
@@ -166,22 +166,22 @@ gamerule tntExplosionDropDecay false
 gamerule universalAnger false
 gamerule waterSourceConversion true
 
-#logo
+# logo
 
 function hipochallenge:msg/debug/msg_info {msg:"Restarting logos..."}
 kill @e[tag=logo]
 execute positioned 458 -46 -100 run function hipochallenge:lobby/logo
 execute positioned -84 -32 151 run function hipochallenge:lobby/logo
 
-#Bola de nieve:
-function hipochallenge:msg/debug/msg_info {msg:"Initializing main functions..."}
+# schedule main functions
+function hipochallenge:msg/debug/msg_info {msg:"Scheduling main functions..."}
+
+schedule clear hipochallenge:main_ten_ticks
+schedule function hipochallenge:main_ten_ticks 10t
 
 schedule clear hipochallenge:main_sec
 schedule function hipochallenge:main_sec 1s
 
-schedule clear hipochallenge:main_ten_ticks
-schedule function hipochallenge:main_ten_ticks 1s
-
-#Updates
+# update team text displays
 function hipochallenge:msg/debug/msg_info {msg:"Updating text displays..."}
-function hipochallenge:teams/update_team_text_displays with storage minecraft:hipochallenge
+function hipochallenge:teams/update_team_text_displays_st with storage minecraft:hipochallenge

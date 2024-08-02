@@ -1,4 +1,4 @@
-# params
+# params:
     # msg
 
 $tellraw @s [{"bold":true,"color":"blue","hoverEvent":{"action":"show_text","value":[{"text":"Mensaje privado"}]},"text":">> "},{"bold":true,"color":"red","text":"[ERROR] "},{"bold":false,"color":"red","italic":false,"obfuscated":false,"strikethrough":false,"text":"$(msg)","underlined":false}]

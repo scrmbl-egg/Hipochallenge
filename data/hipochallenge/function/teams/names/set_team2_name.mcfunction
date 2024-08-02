@@ -1,4 +1,4 @@
-#params: name
+# params: name
 
 data modify storage minecraft:hipochallenge has_team2_name_changed set value true
 
@@ -8,4 +8,4 @@ $$function hipochallenge:msg/all/inject_text/msg_all_inject {txt:"{\"translate\"
 $team modify team2 prefix {"text":"[$(name)] "}
 $team modify team2 displayName {"text":"$(name)"}
 
-function hipochallenge:teams/update_team_text_displays with storage minecraft:hipochallenge
+function hipochallenge:teams/update_team_text_displays_st with storage minecraft:hipochallenge

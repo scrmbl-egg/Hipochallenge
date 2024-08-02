@@ -1,4 +1,4 @@
-#sangre
+# blood
     tag @s[scores={menu=-1}] remove hide_blood
     tag @s[scores={menu=-2}] add hide_blood
     execute at @s[scores={menu=-1}] run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.1

@@ -1,13 +1,11 @@
-#storage
+# storage:
     # local_list_info_class_name
     # local_list_info_kit_name
     # local_list_info_perk_name
     # local_list_info_kill_count
     # local_list_info_death_count
     # local_list_info_points
-#    
-
-# FIXME: This function doesn't work properly at times.
+#
 
 #$execute as @s[predicate=hipochallenge:class/has_class,predicate=!hipochallenge:effects/is_glowing] run scoreboard players display numberformat @s player_list_info fixed ["",{"text":"$(local_list_info_class_name)","color":"#B8EEFF"},{"text":" :: ","color":"gray"},{"text":"?","color":"gray"},{"text":" :: ","color":"gray"},{"text":"?","color":"gray"},{"text":" - ","color":"gray"},{"text":"$(local_list_info_kill_count)","color":"yellow"},{"text":" \ud83d\udde1","color":"green"},{"text":" :: ","color":"gray"},{"text":"$(local_list_info_death_count)","color":"yellow"},{"text":" \u2620","color":"red"},{"text":" :: ","color":"gray"},{"text":"$(local_list_info_points)","color":"yellow"},{"text":" \u2605 ","color":"gold"}]
 

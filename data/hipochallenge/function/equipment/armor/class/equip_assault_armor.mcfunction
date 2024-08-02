@@ -1,12 +1,12 @@
-#params team_trim, team_armor_color
+# params: team_trim, team_armor_color
 
-#attributes
+# attributes
 function hipochallenge:attributes/class/set_assault_attributes
 
-#head
+# head
 
-#chest
+# chest
 
-#legs
+# legs
 
-#feet
+# feet

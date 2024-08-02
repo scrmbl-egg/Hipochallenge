@@ -1,4 +1,4 @@
-#storage: team1_armor_color, team1_trim
+# storage: team1_armor_color, team1_trim
 
 execute as @s unless predicate hipochallenge:class/has_all_options_selected run function hipochallenge:msg/private/msg_private_error {msg:"No tienes todas las opciones seleccionadas (clase, kit o perk)."}
 
