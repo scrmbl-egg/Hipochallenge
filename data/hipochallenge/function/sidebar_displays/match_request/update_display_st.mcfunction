@@ -3,6 +3,8 @@
 
 scoreboard objectives add local dummy
 
+scoreboard players enable @a[tag=!accepted_match_request] join
+
 execute store result score #is_competitive_mode local run data get storage minecraft:hipochallenge is_competitive_mode 1
 
 execute if score #is_competitive_mode local matches 0 run scoreboard players display name $mr_display6 match_request_display [{"bold":true,"color":"#00FF09","translate":"hc.gamemode.casual","fallback":"CASUAL MODE"},{"bold":true,"color":"white","text":" < "},{"bold":false,"color":"#024A4D","translate":"hc.gamemode.competitive","fallback":"COMPETITIVE MODE"}]

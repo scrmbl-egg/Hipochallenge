@@ -1,0 +1,10 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:storage",
+      "storage": "minecraft:hipochallenge",
+      "path": "is_team1_name_changed"
+    },
+    "range": 1
+  }
+  

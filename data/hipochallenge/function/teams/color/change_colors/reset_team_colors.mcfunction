@@ -1,7 +1,4 @@
-function hipochallenge:msg/all/msg_all {msg:"Color de equipos reestablecido"}
 execute at @a as @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 0
-scoreboard players set $team1_color var -1
-scoreboard players set $team2_color var -1
 team modify team1 color white
 team modify team2 color white
 

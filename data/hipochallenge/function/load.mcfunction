@@ -38,6 +38,9 @@ scoreboard objectives add points dummy
 
 scoreboard objectives add goto trigger
 scoreboard objectives add menu trigger
+scoreboard objectives add leave trigger
+
+scoreboard objectives add join trigger
 
 scoreboard objectives add cd1 dummy
 scoreboard objectives add cd2 dummy
@@ -96,7 +99,7 @@ team modify neutral collisionRule pushOwnTeam
 team modify neutral friendlyFire true
 team modify neutral nametagVisibility always
 team modify neutral seeFriendlyInvisibles false
-team modify neutral color aqua
+team modify neutral color white
 team modify neutral displayName {"translate":"hc.teams.neutral.name","fallback":"Neutral"}
 team modify neutral prefix ["[",{"translate":"hc.teams.neutral.name","fallback":"Neutral"},"] "]
 

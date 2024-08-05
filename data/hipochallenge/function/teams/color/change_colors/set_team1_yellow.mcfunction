@@ -1,11 +1,11 @@
-$tellraw @a [{"bold":true,"color":"white","hoverEvent":{"action":"show_text","value":[{"text":"Mensaje global"}]},"text":">> "},{"bold":false,"color":"white","italic":false,"obfuscated":false,"strikethrough":false,"text":"El equipo ","underlined":false},{"bold":false,"color":"green","italic":false,"obfuscated":false,"strikethrough":false,"text":"$(team1_name) ","underlined":false},{"bold":false,"italic":false,"obfuscated":false,"strikethrough":false,"text":"ha cambiado su color a ","underlined":false},{"bold":true,"color":"yellow","text":"AMARILLO"}]
+execute if predicate hipochallenge:teams/color/has_team1_name_changed run function hipochallenge:msg/all/inject_text/msg_all_inject {txt:'{"translate":"hc.msg.all.team_has_selected_color","fallback":"The %1$s team has selected the %2$s color","with":[{"translate":"hc.teams.team1.default_name","fallback":"Team 1","color":"green"},{"translate":"hc.teams.colors.yellow","fallback":"YELLOW","color":"yellow","bold":true}]}'}
+execute unless predicate hipochallenge:teams/color/has_team1_name_changed run function hipochallenge:msg/all/inject_text/msg_all_inject {txt:'{"translate":"hc.msg.all.team_has_selected_color","fallback":"The %1$s team has selected the %2$s color","with":[{"nbt":"team1_name","storage":"minecraft:hipochallenge","color":"green"},{"translate":"hc.teams.colors.yellow","fallback":"YELLOW","color":"yellow","bold":true}]}'}
 
 execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
-scoreboard players set $team1_color var 2
 team modify team1 color yellow
 
-data modify storage minecraft:hipochallenge team1_color set value "yellow"
-data modify storage minecraft:hipochallenge team1_trim set value "gold"
-data modify storage minecraft:hipochallenge team1_dust_color set value "[1.000,1.000,0.000]"
-data modify storage minecraft:hipochallenge team1_armor_color set value 16765471
-data modify storage minecraft:hipochallenge team1_color_number set value 2
+data modify storage minecraft:hipochallenge team1_color set from storage minecraft:hipochallenge YELLOW_TEAM_TEXT_COLOR
+data modify storage minecraft:hipochallenge team1_trim set from storage minecraft:hipochallenge YELLOW_TEAM_TRIM_MATERIAL
+data modify storage minecraft:hipochallenge team1_dust_color set from storage minecraft:hipochallenge YELLOW_TEAM_DUST_COLOR
+data modify storage minecraft:hipochallenge team1_armor_color set from storage minecraft:hipochallenge YELLOW_TEAM_ARMOR_COLOR
+data modify storage minecraft:hipochallenge team1_color_number set from storage minecraft:hipochallenge YELLOW_TEAM_COLOR_NUMBER

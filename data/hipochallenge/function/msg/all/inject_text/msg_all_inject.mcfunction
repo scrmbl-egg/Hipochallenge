@@ -1,3 +1,3 @@
 # params: txt
 
-$tellraw @a [{"text":""},{"bold":true,"color":"white","hoverEvent":{"action":"show_text","value":[{"text":"Mensaje global"}]},"text":">> "},$(txt)]
+$tellraw @a [{"text":"","hoverEvent":{"action":"show_text","value":[{"translate":"hc.msg.all","fallback":"Global message"}]}},{"bold":true,"color":"white","text":">> "},$(txt)]

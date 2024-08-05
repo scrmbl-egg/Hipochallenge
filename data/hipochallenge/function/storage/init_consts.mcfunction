@@ -28,38 +28,45 @@ data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
 data modify storage minecraft:hipochallenge TEAM1_DEFAULT_NAME set value "Team 1"
 data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2"
 
+# neutral
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_COLOR_NUMBER set value -1
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_COLOR_DUST set value [1.000,1.000,1.000]
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_TEXT_COLOR set value "white"
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_ARMOR_COLOR set value 16775664
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_TRIM_MATERIAL set value "quartz"
+
 # red
     data modify storage minecraft:hipochallenge RED_TEAM_COLOR_NUMBER set value 1
-    data modify storage minecraft:hipochallenge RED_TEAM_DUST_COLOR set value "[1.000,0.000,0.000]"
+    data modify storage minecraft:hipochallenge RED_TEAM_DUST_COLOR set value [1.000,0.000,0.000]
     data modify storage minecraft:hipochallenge RED_TEAM_TEXT_COLOR set value "red"
     data modify storage minecraft:hipochallenge RED_TEAM_ARMOR_COLOR set value 11546150
     data modify storage minecraft:hipochallenge RED_TEAM_TRIM_MATERIAL set value "redstone"
 
 # yellow
     data modify storage minecraft:hipochallenge YELLOW_TEAM_COLOR_NUMBER set value 2
-    data modify storage minecraft:hipochallenge YELLOW_TEAM_DUST_COLOR set value "[1.000,1.000,0.000]"
+    data modify storage minecraft:hipochallenge YELLOW_TEAM_DUST_COLOR set value [1.000,1.000,0.000]
     data modify storage minecraft:hipochallenge YELLOW_TEAM_TEXT_COLOR set value "yellow"
     data modify storage minecraft:hipochallenge YELLOW_TEAM_ARMOR_COLOR set value 16765471
     data modify storage minecraft:hipochallenge YELLOW_TEAM_TRIM_MATERIAL set value "gold"
 
 # green
     data modify storage minecraft:hipochallenge GREEN_TEAM_COLOR_NUMBER set value 3
-    data modify storage minecraft:hipochallenge GREEN_TEAM_DUST_COLOR set value "[0.000,1.000,0.000]"
+    data modify storage minecraft:hipochallenge GREEN_TEAM_DUST_COLOR set value [0.000,1.000,0.000]
     data modify storage minecraft:hipochallenge GREEN_TEAM_TEXT_COLOR set value "green"
     data modify storage minecraft:hipochallenge GREEN_TEAM_ARMOR_COLOR set value 8439583
     data modify storage minecraft:hipochallenge GREEN_TEAM_TRIM_MATERIAL set value "emerald"
 
 # blue
     data modify storage minecraft:hipochallenge BLUE_TEAM_COLOR_NUMBER set value 4
-    data modify storage minecraft:hipochallenge BLUE_TEAM_DUST_COLOR set value "[0.000,0.000,1.000]"
+    data modify storage minecraft:hipochallenge BLUE_TEAM_DUST_COLOR set value [0.000,0.000,1.000]
     data modify storage minecraft:hipochallenge BLUE_TEAM_TEXT_COLOR set value "blue"
     data modify storage minecraft:hipochallenge BLUE_TEAM_ARMOR_COLOR set value 3949738
     data modify storage minecraft:hipochallenge BLUE_TEAM_TRIM_MATERIAL set value "lapis"
 
 # purple
     data modify storage minecraft:hipochallenge PURPLE_TEAM_COLOR_NUMBER set value 5
-    data modify storage minecraft:hipochallenge PURPLE_TEAM_DUST_COLOR set value "[1.000,0.000,1.000]"
-    data modify storage minecraft:hipochallenge PURPLE_TEAM_TEXT_COLOR set value "purple"
+    data modify storage minecraft:hipochallenge PURPLE_TEAM_DUST_COLOR set value [1.000,0.000,1.000]
+    data modify storage minecraft:hipochallenge PURPLE_TEAM_TEXT_COLOR set value "light_purple"
     data modify storage minecraft:hipochallenge PURPLE_TEAM_ARMOR_COLOR set value 13061821
     data modify storage minecraft:hipochallenge PURPLE_TEAM_TRIM_MATERIAL set value "amethyst"
 #

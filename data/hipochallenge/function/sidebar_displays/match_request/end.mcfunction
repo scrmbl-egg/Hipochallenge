@@ -11,5 +11,7 @@ scoreboard players reset $match_request_timer
 
 schedule clear hipochallenge:sidebar_displays/match_request/logic
 
+scoreboard players reset @a join
+tag @a remove accepted_match_request
 # clear scoreboard display
 scoreboard objectives setdisplay sidebar

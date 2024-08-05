@@ -3,7 +3,7 @@
     # NECESSARY_PLAYERS_FOR_GAME
 
 scoreboard objectives add local dummy
-
+scoreboard players enable @a join
 
 # init sidebar rows
 scoreboard players set $mr_display7 match_request_display 7
