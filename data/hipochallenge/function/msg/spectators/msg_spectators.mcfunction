@@ -1,1 +1,3 @@
-$tellraw @a[team=spectator] [{"bold":true,"color":"gray","hoverEvent":{"action":"show_text","value":[{"text":"Mensaje de espectadores"}]},"text":">> "},{"bold":false,"color":"gray","italic":false,"obfuscated":false,"strikethrough":false,"text":"$(msg)","underlined":false}]
+# params: msg
+
+$tellraw @a[team=spectator] [{"text":"","hoverEvent":{"action":"show_text","value":[{"text":"Mensaje de espectadores"}]}},{"bold":true,"color":"gray","text":">> "},{"color":"gray","text":"$(msg)"}]

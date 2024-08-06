@@ -76,6 +76,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 # tank
     data modify storage minecraft:hipochallenge TANK_CLASS_NAME_TRANSLATION_KEY set value "hc.class.tank"
     
+    data modify storage minecraft:hipochallenge TANK_CLASS_DUST_COLOR set value [0.176,0.6,0.392]
+    
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_ARMOR set value 20
     data modify storage minecraft:hipochallenge TANK_ATTRIBUTE_ARMOR_TOUGHNESS set value 12
@@ -112,6 +114,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 # marksman
     data modify storage minecraft:hipochallenge MARKSMAN_CLASS_NAME_TRANSLATION_KEY set value "hc.class.marksman"
+    
+    data modify storage minecraft:hipochallenge MARKSMAN_CLASS_DUST_COLOR set value [0.788, 0.541, 0.11]
 
     data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR set value 0
@@ -134,7 +138,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     
         # TODO: Change these placeholder values
         data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_RECOIL_PITCH set value -20
-        data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_SHOT_CD_TICKS set value 42069
+        data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_SHOT_CD_TICKS set value 10
     #
     # perk 1
         data modify storage minecraft:hipochallenge MARKSMAN_P1_NAME_TRANSLATION_KEY set value "hc.class.marksman.perk1"
@@ -145,6 +149,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 # assassin
     data modify storage minecraft:hipochallenge ASSASSIN_CLASS_NAME_TRANSLATION_KEY set value "hc.class.assassin"
+    
+    data modify storage minecraft:hipochallenge ASSASSIN_CLASS_DUST_COLOR set value [0.173, 0.482, 0.824]
 
     data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_ARMOR set value 0
@@ -173,6 +179,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 # support
     data modify storage minecraft:hipochallenge SUPPORT_CLASS_NAME_TRANSLATION_KEY set value "hc.class.support"
+    
+    data modify storage minecraft:hipochallenge SUPPORT_CLASS_DUST_COLOR set value [0.863, 0.455, 0.141]
 
     data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_ARMOR set value 0
@@ -201,6 +209,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 # recon
     data modify storage minecraft:hipochallenge RECON_CLASS_NAME_TRANSLATION_KEY set value "hc.class.recon"
+    
+    data modify storage minecraft:hipochallenge RECON_CLASS_DUST_COLOR set value []
 
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR set value 0
