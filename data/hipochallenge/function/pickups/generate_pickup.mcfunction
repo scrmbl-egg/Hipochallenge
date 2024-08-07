@@ -7,4 +7,4 @@ execute if score $pickup_dice var matches 1 run summon item ~ ~ ~ {Item:{id:"min
 execute if score $pickup_dice var matches 2 run summon item ~ ~ ~ {Item:{id:"minecraft:diamond"}}
 execute if score $pickup_dice var matches 3 run summon item ~ ~ ~ {Item:{id:"minecraft:bone"}}
 
-function hipochallenge:msg/debug/msg_info {msg:"Pickup generado"}
+function hipochallenge:msg/debug/msg_info {msg:"Pickup generated"}

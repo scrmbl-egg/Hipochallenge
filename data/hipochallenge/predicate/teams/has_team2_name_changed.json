@@ -3,7 +3,7 @@
     "value": {
       "type": "minecraft:storage",
       "storage": "minecraft:hipochallenge",
-      "path": "is_team2_name_changed"
+      "path": "has_team2_name_changed"
     },
     "range": 1
   }
