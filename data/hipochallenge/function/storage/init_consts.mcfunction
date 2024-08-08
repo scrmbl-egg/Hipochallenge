@@ -210,7 +210,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 # recon
     data modify storage minecraft:hipochallenge RECON_CLASS_NAME_TRANSLATION_KEY set value "hc.class.recon"
     
-    data modify storage minecraft:hipochallenge RECON_CLASS_DUST_COLOR set value []
+    data modify storage minecraft:hipochallenge RECON_CLASS_DUST_COLOR set value [0.552,0.356,0.756]
 
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR set value 0
@@ -239,6 +239,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 # assault
     data modify storage minecraft:hipochallenge ASSAULT_CLASS_NAME_TRANSLATION_KEY set value "hc.class.assault"
+
+    data modify storage minecraft:hipochallenge ASSAULT_CLASS_DUST_COLOR set value [0.803,0.286,0.270]
 
     data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_ARMOR set value 0
