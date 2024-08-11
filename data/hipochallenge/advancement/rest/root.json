@@ -4,8 +4,14 @@
             "id": "minecraft:black_bed",
             "count": 1
         },
-        "title": "Descanso",
-        "description": "¡No todo se trata de pelear!",
+        "title": {
+            "translate": "hc.advancements.rest.root.name",
+            "fallback": "Rest & Chill"
+        },
+        "description": {
+            "translate": "hc.advancements.rest.root.description",
+            "fallback": "Not everything is about fighting!"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,

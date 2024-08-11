@@ -24,7 +24,7 @@
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:combat/marksman/selected",
+    "parent": "hipochallenge:combat/marksman/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

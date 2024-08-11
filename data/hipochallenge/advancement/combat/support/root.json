@@ -1,16 +1,21 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:shield",
-            "count": 1
+            "id": "minecraft:potion",
+            "count": 1,
+            "components": {
+                "minecraft:potion_contents": {
+                    "potion": "minecraft:healing"
+                }
+            }
         },
         "title": {
-            "translate": "hc.advancements.combat.tank.selected.name",
-            "fallback": "Tank"
+            "translate": "hc.advancements.combat.support.root.name",
+            "fallback": "Support"
         },
         "description": {
-            "translate": "hc.advancements.combat.tank.selected.description",
-            "fallback": "Select the Tank class"
+            "translate": "hc.advancements.combat.support.root.description",
+            "fallback": "Select the Support class"
         },
         "frame": "task",
         "show_toast": false,

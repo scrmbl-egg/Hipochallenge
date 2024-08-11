@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:crossbow",
+            "id": "minecraft:nether_star",
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.marksman.selected.name",
-            "fallback": "Marksman"
+            "translate": "hc.advancements.combat.assassin.kit1.root.name",
+            "fallback": "Duelist"
         },
         "description": {
-            "translate": "hc.advancements.combat.marksman.selected.description",
-            "fallback": "Select the Marksman class"
+            "translate": "hc.advancements.combat.assassin.kit1.root.description",
+            "fallback": "Select the Duelist kit"
         },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:combat/root",
+    "parent": "hipochallenge:combat/assassin/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

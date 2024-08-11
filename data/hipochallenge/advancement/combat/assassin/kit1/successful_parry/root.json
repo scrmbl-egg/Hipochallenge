@@ -4,14 +4,20 @@
             "id": "minecraft:golden_sword",
             "count": 1
         },
-        "title": "Esgrima",
-        "description": "Desvía un ataque de manera exitosa",
+        "title": {
+            "translate": "hc.advancements.combat.assassin.kit1.successful_parry.root.name",
+            "fallback": "Fencing"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.assassin.kit1.successful_parry.root.description",
+            "fallback": "Successfully parry an attack with the Duelist's Sword"
+        },
         "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:combat/assassin/selected",
+    "parent": "hipochallenge:combat/assassin/kit1/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

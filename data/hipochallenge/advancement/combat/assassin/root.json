@@ -1,21 +1,16 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:potion",
-            "count": 1,
-            "components": {
-                "minecraft:potion_contents": {
-                    "potion": "minecraft:healing"
-                }
-            }
+            "id": "minecraft:netherite_sword",
+            "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.support.selected.name",
-            "fallback": "Support"
+            "translate": "hc.advancements.combat.assassin.root.name",
+            "fallback": "Assassin"
         },
         "description": {
-            "translate": "hc.advancements.combat.support.selected.description",
-            "fallback": "Select the Support class"
+            "translate": "hc.advancements.combat.assassin.root.description",
+            "fallback": "Select the Assassin class"
         },
         "frame": "task",
         "show_toast": false,

@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:bread",
+            "id": "minecraft:spyglass",
             "count": 1
         },
-        "title": "¿Y las patatas?",
-        "description": [
-            "Come la ",
-            {
-                "text": "Comida nutritiva",
-                "italic": true
-            }
-        ],
+        "title": {
+            "translate": "hc.advancements.combat.recon.root.name",
+            "fallback": "Recon"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.recon.root.description",
+            "fallback": "Select the Recon class"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:combat/tank/selected",
+    "parent": "hipochallenge:combat/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

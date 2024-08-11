@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:spyglass",
+            "id": "minecraft:writable_book",
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.recon.selected.name",
-            "fallback": "Recon"
+            "translate": "hc.advancements.combat.assassin.perk1.root.name",
+            "fallback": "Contract"
         },
         "description": {
-            "translate": "hc.advancements.combat.recon.selected.description",
-            "fallback": "Select the Recon class"
+            "translate": "hc.advancements.combat.assassin.perk1.root.description",
+            "fallback": "Select the Contract perk"
         },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:combat/root",
+    "parent": "hipochallenge:combat/assassin/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

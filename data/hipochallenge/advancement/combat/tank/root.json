@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:netherite_helmet",
+            "id": "minecraft:shield",
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.root.name",
-            "fallback": "The Moment of Truth"
+            "translate": "hc.advancements.combat.tank.root.name",
+            "fallback": "Tank"
         },
         "description": {
-            "translate": "hc.advancements.combat.root.description",
-            "fallback": "The core of the game"
+            "translate": "hc.advancements.combat.tank.root.description",
+            "fallback": "Select the Tank class"
         },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:root",
+    "parent": "hipochallenge:combat/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

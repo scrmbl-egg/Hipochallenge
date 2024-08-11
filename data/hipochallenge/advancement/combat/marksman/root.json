@@ -1,16 +1,16 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:netherite_sword",
+            "id": "minecraft:crossbow",
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.assassin.selected.name",
-            "fallback": "Assassin"
+            "translate": "hc.advancements.combat.marksman.root.name",
+            "fallback": "Marksman"
         },
         "description": {
-            "translate": "hc.advancements.combat.assassin.selected.description",
-            "fallback": "Select the Assassin class"
+            "translate": "hc.advancements.combat.marksman.root.description",
+            "fallback": "Select the Marksman class"
         },
         "frame": "task",
         "show_toast": false,

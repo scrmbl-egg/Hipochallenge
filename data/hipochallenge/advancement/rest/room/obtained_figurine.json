@@ -7,8 +7,14 @@
                 "custom_model_data": 2
             }
         },
-        "title": "Pequeños guerreros",
-        "description": "Consigue una figurita para tu cuarto",
+        "title": {
+            "translate": "hc.advancements.rest.room.obtained_figurine.name",
+            "fallback": "Small Soldiers"
+        },
+        "description": {
+            "translate": "hc.advancements.rest.room.obtained_figurine.description",
+            "fallback": "Get a figurine for your room!"
+        },
         "frame": "goal",
         "show_toast": true,
         "announce_to_chat": false,

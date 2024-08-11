@@ -47,11 +47,14 @@
                 "color": "#3100AD"
             }
         ],
-        "description": "Disfruta de tu colección de vinilos",
+        "description": {
+            "translate": "hc.advancements.rest.room.listened_to_jukebox.description",
+            "fallback": "Enjoy your vinyl collection"
+        },
         "frame": "task",
         "show_toast": true,
         "announce_to_chat": false,
-        "hidden": true
+        "hidden": false
     },
     "parent": "hipochallenge:rest/room/root",
     "criteria": {

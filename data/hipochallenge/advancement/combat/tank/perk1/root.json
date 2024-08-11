@@ -1,23 +1,23 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:tnt",
+            "id": "minecraft:bread",
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.assault.selected.name",
-            "fallback": "Assault"
+            "translate": "hc.advancements.combat.tank.perk1.root.name",
+            "fallback": "Where the fries at??"
         },
         "description": {
-            "translate": "hc.advancements.combat.assault.selected.description",
-            "fallback": "Select the Assault class"
+            "translate": "hc.advancements.combat.tank.perk1.root.description",
+            "fallback": "Eat the Nutritious Meal"
         },
-        "frame": "task",
+        "frame": "goal",
         "show_toast": false,
         "announce_to_chat": false,
         "hidden": false
     },
-    "parent": "hipochallenge:combat/root",
+    "parent": "hipochallenge:combat/tank/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"
