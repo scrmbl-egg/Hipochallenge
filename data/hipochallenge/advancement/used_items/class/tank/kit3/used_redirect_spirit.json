@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "components": {
+                        "minecraft:food": {
+                            "nutrition": 0,
+                            "saturation": 0,
+                            "can_always_eat": true,
+                            "eat_seconds": 1000000
+                        }
+                    },
+                    "predicates": {
+                        "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hipochallenge:abilities/class/tank/kit3/redirect_spirit"
+    }
+}

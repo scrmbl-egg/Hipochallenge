@@ -20,6 +20,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/tank/castle"
+        "function": "hipochallenge:abilities/class/tank/kit1/castle"
     }
 }
