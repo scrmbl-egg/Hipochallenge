@@ -33,7 +33,9 @@ recipe take @a *
 # abilities
 
     # detect eaten item
-        execute as @a[tag=ate_item] run function hipochallenge:abilities/decide_item_eaten
+    
+        # TODO: Detect right click detection with more exhaustive advancement criteria rather than a single function
+        # execute as @a[tag=ate_item] run function hipochallenge:abilities/decide_item_eaten
 
 # menu
     execute as @a run function hipochallenge:menus/logic/menu_main

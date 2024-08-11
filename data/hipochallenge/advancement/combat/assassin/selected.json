@@ -4,8 +4,14 @@
             "id": "minecraft:netherite_sword",
             "count": 1
         },
-        "title": "Asesino",
-        "description": "Selecciona a la clase de Asesino",
+        "title": {
+            "translate": "hc.advancements.combat.assassin.selected.name",
+            "fallback": "Assassin"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.assassin.selected.description",
+            "fallback": "Select the Assassin class"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,

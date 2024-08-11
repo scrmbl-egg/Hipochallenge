@@ -4,8 +4,14 @@
             "id": "minecraft:wheat",
             "count": 1
         },
-        "title": "HipoChallenge: Phoenix",
-        "description": "Tu aventura a lo más alto comienza aquí",
+        "title": {
+            "translate": "hc.advancements.root.name",
+            "fallback": "HipoChallenge: Phoenix"
+        },
+        "description": {
+            "translate": "hc.advancements.root.description",
+            "fallback": "Your journey to the top starts here"
+        },
         "background": "minecraft:textures/block/amethyst_block.png",
         "frame": "task",
         "show_toast": true,
@@ -14,13 +20,12 @@
     },
     "criteria": {
         "impossible": {
-            "trigger": "minecraft:impossible"
+            "trigger": "minecraft:tick"
         }
     },
     "requirements": [
         [
             "impossible"
         ]
-    ],
-    "rewards": {}
+    ]
 }

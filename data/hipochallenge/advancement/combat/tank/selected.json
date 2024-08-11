@@ -4,8 +4,14 @@
             "id": "minecraft:shield",
             "count": 1
         },
-        "title": "Tanque",
-        "description": "Selecciona a la clase de Tanque",
+        "title": {
+            "translate": "hc.advancements.combat.tank.selected.name",
+            "fallback": "Tank"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.tank.selected.description",
+            "fallback": "Select the Tank class"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,

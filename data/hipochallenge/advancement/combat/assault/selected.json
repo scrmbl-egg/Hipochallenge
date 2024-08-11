@@ -4,8 +4,14 @@
             "id": "minecraft:tnt",
             "count": 1
         },
-        "title": "Asalto",
-        "description": "Selecciona a la clase de Asalto",
+        "title": {
+            "translate": "hc.advancements.combat.assault.selected.name",
+            "fallback": "Assault"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.assault.selected.description",
+            "fallback": "Select the Assault class"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,

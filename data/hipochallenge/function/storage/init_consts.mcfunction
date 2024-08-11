@@ -30,10 +30,10 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 # neutral
     data modify storage minecraft:hipochallenge NEUTRAL_TEAM_COLOR_NUMBER set value -1
-    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_COLOR_DUST set value [1.000,1.000,1.000]
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_COLOR_DUST set value [0.400,0.400,0.400]
     data modify storage minecraft:hipochallenge NEUTRAL_TEAM_TEXT_COLOR set value "white"
-    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_ARMOR_COLOR set value 16775664
-    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_TRIM_MATERIAL set value "quartz"
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_ARMOR_COLOR set value 6579300
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_TRIM_MATERIAL set value "netherite"
 
 # red
     data modify storage minecraft:hipochallenge RED_TEAM_COLOR_NUMBER set value 1
@@ -215,7 +215,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_MAX_HEALTH set value 20
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR set value 0
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
-    data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_SCALE set value 1
+    data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_SCALE set value 0.81
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_BURNING_TIME set value 1
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE set value 0
     

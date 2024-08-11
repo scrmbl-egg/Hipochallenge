@@ -9,8 +9,14 @@
                 }
             }
         },
-        "title": "Apoyo",
-        "description": "Selecciona a la clase de Apoyo",
+        "title": {
+            "translate": "hc.advancements.combat.support.selected.name",
+            "fallback": "Support"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.support.selected.description",
+            "fallback": "Select the Support class"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,

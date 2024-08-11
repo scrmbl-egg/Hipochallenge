@@ -4,8 +4,14 @@
             "id": "minecraft:crossbow",
             "count": 1
         },
-        "title": "Tirador",
-        "description": "Selecciona a la clase de Tirador",
+        "title": {
+            "translate": "hc.advancements.combat.marksman.selected.name",
+            "fallback": "Marksman"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.marksman.selected.description",
+            "fallback": "Select the Marksman class"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,

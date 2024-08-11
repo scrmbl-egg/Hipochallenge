@@ -4,8 +4,14 @@
             "id": "minecraft:spyglass",
             "count": 1
         },
-        "title": "Reconocimiento",
-        "description": "Selecciona a la clase de Reconocimiento",
+        "title": {
+            "translate": "hc.advancements.combat.recon.selected.name",
+            "fallback": "Recon"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.recon.selected.description",
+            "fallback": "Select the Recon class"
+        },
         "frame": "task",
         "show_toast": false,
         "announce_to_chat": false,
