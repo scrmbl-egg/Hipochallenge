@@ -1,0 +1,16 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:barrier"
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "!minecraft:food": {}
+        }
+    },
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{item_id:tank_k1_castle_cd}"
+    }
+]

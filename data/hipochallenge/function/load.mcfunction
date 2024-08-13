@@ -20,8 +20,10 @@ scoreboard objectives add id dummy
 
 # TODO: Delete var scoreboard when memory transition is done.
 
-scoreboard objectives add var dummy
+#scoreboard objectives add var dummy
 scoreboard objectives add timer dummy
+scoreboard objectives add silence_timer dummy
+scoreboard objectives add in_combat_timer dummy
 scoreboard objectives add value dummy
 
 scoreboard objectives add player_list_info dummy
@@ -42,9 +44,47 @@ scoreboard objectives add leave trigger
 
 scoreboard objectives add join trigger
 
-scoreboard objectives add cd1 dummy
-scoreboard objectives add cd2 dummy
-scoreboard objectives add cd3 dummy
+# TODO: Add item cooldowns
+scoreboard objectives add tank_kit1_goat_horn_cd dummy
+scoreboard objectives add tank_kit1_castle_cd dummy
+scoreboard objectives add tank_kit2_goat_horn_cd dummy
+scoreboard objectives add tank_kit3_goat_horn_cd dummy
+scoreboard objectives add tank_kit3_bubble_shield_cd dummy
+scoreboard objectives add tank_kit3_redirect_spirit_cd dummy
+scoreboard objectives add tank_perk1_nutritious_meal_cd dummy
+scoreboard objectives add marksman_kit1_archers_potion_cd dummy
+scoreboard objectives add marksman_kit1_smoke_arrow_crossbow_cd dummy
+scoreboard objectives add marksman_kit3_pistol_cd dummy
+scoreboard objectives add marksman_kit3_el_diablo_bullet_cd dummy
+scoreboard objectives add assassin_kit1_duelist_sword_cd dummy
+scoreboard objectives add assassin_kit1_crystal_amulet_cd dummy
+scoreboard objectives add assassin_kit2_stun_mechanism_cd dummy
+scoreboard objectives add assassin_kit3_repulsing_rod_cd dummy
+scoreboard objectives add assassin_kit3_magic_feather_cd dummy
+scoreboard objectives add assassin_kit3_teleportation_mark_cd dummy
+scoreboard objectives add support_kit1_snow_sentinel_cd dummy
+scoreboard objectives add support_kit1_levitation_bomb_cd dummy
+scoreboard objectives add support_kit1_gravity_well_cd dummy
+scoreboard objectives add support_kit2_healing_rod_cd dummy
+scoreboard objectives add support_kit2_cleansing_projectile_cd dummy
+scoreboard objectives add support_kit2_slowness_trap_cd dummy
+scoreboard objectives add support_kit3_unstable_totem_cd dummy
+scoreboard objectives add support_kit3_evil_eye_cd dummy
+scoreboard objectives add recon_kit1_blindness_sentinel_cd dummy
+scoreboard objectives add recon_kit1_flash_bomb_cd dummy
+scoreboard objectives add recon_kit1_low_visibility_area_cd dummy
+scoreboard objectives add recon_kit2_flare_arrow_cd dummy
+scoreboard objectives add recon_kit2_trackers_potion_cd dummy
+scoreboard objectives add recon_kit2_revealing_sentinel_cd dummy
+scoreboard objectives add recon_kit3_portal_cd dummy
+scoreboard objectives add recon_kit3_deception_effigy_cd dummy
+scoreboard objectives add assault_kit1_ticking_bomb_cd dummy
+scoreboard objectives add assault_kit1_knockback_bomb_cd dummy
+scoreboard objectives add assault_kit1_smoke_bomb_cd dummy
+scoreboard objectives add assault_kit2_harpoon_cd dummy
+scoreboard objectives add assault_kit2_void_arrow_cd dummy
+scoreboard objectives add assault_kit3_assault_shield_cd dummy
+scoreboard objectives add assault_kit3_pushing_projectile_cd dummy
 
 scoreboard objectives add match_request_display dummy
 
@@ -61,9 +101,9 @@ scoreboard players add @a player_kill_count 0
 scoreboard players add @a player_health 0
 scoreboard players add @a points 0
 
-scoreboard players add @a cd1 0
-scoreboard players add @a cd2 0
-scoreboard players add @a cd3 0
+#scoreboard players add @a cd1 0
+#scoreboard players add @a cd2 0
+#scoreboard players add @a cd3 0
 
 scoreboard objectives modify match_request_display displayname {"bold":true,"color":"gold","translate":"hc.sidebar.match_request.new","fallback":"NEW MATCH REQUEST","italic":true}
 

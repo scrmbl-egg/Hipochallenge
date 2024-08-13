@@ -31,11 +31,7 @@ recipe take @a *
     execute as @e[type=arrow,tag=!processed] run function hipochallenge:unique/set_team_tag_from_id_origin
     
 # abilities
-
-    # detect eaten item
-    
-        # TODO: Detect right click detection with more exhaustive advancement criteria rather than a single function
-        # execute as @a[tag=ate_item] run function hipochallenge:abilities/decide_item_eaten
+    execute as @a run function hipochallenge:abilities/main
 
 # menu
     execute as @a run function hipochallenge:menus/logic/menu_main
