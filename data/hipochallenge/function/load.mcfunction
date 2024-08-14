@@ -52,11 +52,15 @@ scoreboard objectives add tank_kit3_goat_horn_cd dummy
 scoreboard objectives add tank_kit3_bubble_shield_cd dummy
 scoreboard objectives add tank_kit3_redirect_spirit_cd dummy
 scoreboard objectives add tank_perk1_nutritious_meal_cd dummy
+scoreboard objectives add marksman_kit1_new_projectile_cd dummy
 scoreboard objectives add marksman_kit1_archers_potion_cd dummy
 scoreboard objectives add marksman_kit1_smoke_arrow_crossbow_cd dummy
+scoreboard objectives add marksman_kit2_new_projectile_cd dummy
+scoreboard objectives add marksman_kit3_new_projectile_cd dummy
 scoreboard objectives add marksman_kit3_pistol_cd dummy
 scoreboard objectives add marksman_kit3_el_diablo_bullet_cd dummy
-scoreboard objectives add assassin_kit1_duelist_sword_cd dummy
+scoreboard objectives add assassin_kit1_duelist_sword_parry_cd dummy
+scoreboard objectives add assassin_kit1_enhanced_duelist_sword_cd dummy
 scoreboard objectives add assassin_kit1_crystal_amulet_cd dummy
 scoreboard objectives add assassin_kit2_stun_mechanism_cd dummy
 scoreboard objectives add assassin_kit3_repulsing_rod_cd dummy

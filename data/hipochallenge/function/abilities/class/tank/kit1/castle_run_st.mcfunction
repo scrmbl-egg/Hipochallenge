@@ -1,10 +1,14 @@
 # storage:
     # TANK_K1_CASTLING_CD_TICKS
     # local_player_team
+    # local_yaw
+    # local_pitch
 
 # TODO: Add support for one of these two options: 1. Conserve yaw and pitch when teleporting, or 2. Exchange yaw and pitch of teleported players.
 
-summon marker ~ ~ ~ {Tags:["temp_castle_marker","local"]}
+$summon marker ~ ~ ~ {Rotation:[$(local_yaw),$(local_pitch)],Tags:["temp_castle_marker","local"]}
+
+$tellraw @s "[$(local_yaw),$(local_pitch)]"
 
 $execute at @s run tag @a[limit=1,sort=furthest,team=$(local_player_team),tag=!dead] add temp_castle_target
 

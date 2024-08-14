@@ -102,15 +102,23 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge TANK_K3_NAME_TRANSLATION_KEY set value "hc.class.tank.kit3"
     
         data modify storage minecraft:hipochallenge TANK_K3_HORN_CD_TICKS set value -1
+        data modify storage minecraft:hipochallenge TANK_K3_BUBBLE_SHIELD_CD_TICKS set value -1
         data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_ID set value "tank_k3_horn"
     #
     # perk 1
         data modify storage minecraft:hipochallenge TANK_P1_NAME_TRANSLATION_KEY set value "hc.class.tank.perk1"
+        
+        data modify storage minecraft:hipochallenge TANK_P1_NUTRITIOUS_MEAL_EAT_SECONDS set value 8
+        data modify storage minecraft:hipochallenge TANK_P1_NUTRITIOUS_MEAL_OBTAINED_HEALTH set value 10
     # perk 2
         data modify storage minecraft:hipochallenge TANK_P2_NAME_TRANSLATION_KEY set value "hc.class.tank.perk2"
-    
+        
+        data modify storage minecraft:hipochallenge TANK_P2_SLOWNESS_SECONDS set value 1
+        data modify storage minecraft:hipochallenge TANK_P2_SLOWNESS_MULTIPLIER set value 0
     # perk 3
         data modify storage minecraft:hipochallenge TANK_P3_NAME_TRANSLATION_KEY set value "hc.class.tank.perk3"
+        
+        data modify storage minecraft:hipochallenge TANK_P3_NUTRITIOUS_MEAL_CD_TICKS set value 600
 
 # marksman
     data modify storage minecraft:hipochallenge MARKSMAN_CLASS_NAME_TRANSLATION_KEY set value "hc.class.marksman"
@@ -131,21 +139,36 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     # kit 1
         data modify storage minecraft:hipochallenge MARKSMAN_K1_NAME_TRANSLATION_KEY set value "hc.class.marksman.kit1"
     
+        data modify storage minecraft:hipochallenge MARKSMAN_K1_NEW_PROJECTILE_FIRST_CD_TICKS set value 60
+        data modify storage minecraft:hipochallenge MARKSMAN_K1_NEW_PROJECTILE_REST_CD_TICKS set value 20
     # kit 2
         data modify storage minecraft:hipochallenge MARKSMAN_K2_NAME_TRANSLATION_KEY set value "hc.class.marksman.kit2"
+        
+        data modify storage minecraft:hipochallenge MARKSMAN_K2_NEW_PROJECTILE_FIRST_CD_TICKS set value 80
+        data modify storage minecraft:hipochallenge MARKSMAN_K2_NEW_PROJECTILE_REST_CD_TICKS set value 30
     # kit 3
         data modify storage minecraft:hipochallenge MARKSMAN_K3_NAME_TRANSLATION_KEY set value "hc.class.marksman.kit3"
     
         # TODO: Change these placeholder values
+        data modify storage minecraft:hipochallenge MARKSMAN_K3_NEW_PROJECTILE_FIRST_CD_TICKS set value 80
+        data modify storage minecraft:hipochallenge MARKSMAN_K3_NEW_PROJECTILE_REST_CD_TICKS set value 40
         data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_RECOIL_PITCH set value -20
         data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_SHOT_CD_TICKS set value 10
     #
     # perk 1
         data modify storage minecraft:hipochallenge MARKSMAN_P1_NAME_TRANSLATION_KEY set value "hc.class.marksman.perk1"
+        
+        data modify storage minecraft:hipochallenge MARKSMAN_P1_SUPPRESSION_OR_AIR_MAGIC_DAMAGE set value 2
     # perk 2
         data modify storage minecraft:hipochallenge MARKSMAN_P2_NAME_TRANSLATION_KEY set value "hc.class.marksman.perk2"
+        
+        data modify storage minecraft:hipochallenge MARKSMAN_P2_HEALTH_LIMIT_FOR_ABSORPTION set value 8
+        data modify storage minecraft:hipochallenge MARKSMAN_P2_ABSORPTION_MULTIPLIER set value 1
+        data modify storage minecraft:hipochallenge MARKSMAN_P2_ABSORPTION_SECONDS set value 3
     # perk 3
         data modify storage minecraft:hipochallenge MARKSMAN_P3_NAME_TRANSLATION_KEY set value "hc.class.marksman.perk3"
+        
+        data modify storage minecraft:hipochallenge MARKSMAN_P3_ADDED_PROJECTILES set value 3
 
 # assassin
     data modify storage minecraft:hipochallenge ASSASSIN_CLASS_NAME_TRANSLATION_KEY set value "hc.class.assassin"
@@ -162,6 +185,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge ASSASSIN_CLASS_LIST_INFO_COLOR set value "#80b0e4" 
     data modify storage minecraft:hipochallenge ASSASSIN_KIT_LIST_INFO_COLOR set value "#a6c8ec"
     data modify storage minecraft:hipochallenge ASSASSIN_PERK_LIST_INFO_COLOR set value "#ccdff4"
+    
+    # TODO: Add assassin cooldowns and values
     
     # kit 1
         data modify storage minecraft:hipochallenge ASSASSIN_K1_NAME_TRANSLATION_KEY set value "hc.class.assassin.kit1"
@@ -193,6 +218,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge SUPPORT_KIT_LIST_INFO_COLOR set value "#f0c5a3"
     data modify storage minecraft:hipochallenge SUPPORT_PERK_LIST_INFO_COLOR set value "#f7decb"
     
+    # TODO: Add support cooldowns and values
+    
     # kit 1
         data modify storage minecraft:hipochallenge SUPPORT_K1_NAME_TRANSLATION_KEY set value "hc.class.support.kit1"
     # kit 2
@@ -222,6 +249,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge RECON_CLASS_LIST_INFO_COLOR set value "#b99dda"
     data modify storage minecraft:hipochallenge RECON_KIT_LIST_INFO_COLOR set value "#cebae5"
     data modify storage minecraft:hipochallenge RECON_PERK_LIST_INFO_COLOR set value "#e3d8f0"
+    
+    # TODO: Add recon cooldowns and values
     
     # kit 1
         data modify storage minecraft:hipochallenge RECON_K1_NAME_TRANSLATION_KEY set value "hc.class.recon.kit1"
@@ -253,6 +282,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge ASSAULT_KIT_LIST_INFO_COLOR set value "#e7b3b0"
     data modify storage minecraft:hipochallenge ASSAULT_PERK_LIST_INFO_COLOR set value "#f1d3d2"
     
+    # TODO: Add assault cooldowns and values
+    
     # kit 1
         data modify storage minecraft:hipochallenge ASSAULT_K1_NAME_TRANSLATION_KEY set value "hc.class.assault.kit1"
     # kit 2
@@ -271,5 +302,5 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 ## Text components
 
-data modify storage minecraft:hipochallenge NO_COOLDOWN_TXT_COMPONENT set value '{"color":"yellow","translate":"Un solo uso"}'
+data modify storage minecraft:hipochallenge NO_COOLDOWN_TEXT_COMPONENT set value '{"color":"yellow","translate":"Un solo uso"}'
 data modify storage minecraft:hipochallenge COOLDOWN_TEXT_COMPONENT set value ''
