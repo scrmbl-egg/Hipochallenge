@@ -2,7 +2,7 @@
 recipe take @a *
 
 # timers
-    function hipochallenge:timers/timers_main
+    function hipochallenge:timers/main
 
 # game state logic
 
@@ -17,18 +17,14 @@ recipe take @a *
     function hipochallenge:music/mute_vanilla_music
 
 # vfx
+    function hipochallenge:vfx/main
 
-    # vfx de equiparse
-    execute as @e[tag=equip_spin_particle,type=marker] run function hipochallenge:vfx/equip_spin_particle
 
+    # TODO: Move map functions to a maps/main function
     # map vfx
         # map0
             # pipes
                 function hipochallenge:vfx/maps/map0/pipe_particles
-    
-# kill and process arrows
-    execute as @e[type=arrow,nbt={shake:1b}] at @s run function hipochallenge:unique/arrow_deleter
-    execute as @e[type=arrow,tag=!processed] run function hipochallenge:unique/set_team_tag_from_id_origin
     
 # abilities
     execute as @a run function hipochallenge:abilities/main

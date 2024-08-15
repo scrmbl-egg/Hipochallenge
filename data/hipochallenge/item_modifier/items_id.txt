@@ -1,0 +1,9 @@
+TANK
+    KIT 1
+        
+        GOAT_HORN - item_id:tank_k1_goat_horn
+        CASTLE - item_id:tank_k1_castle
+    KIT 2
+        GOAT_HORN - item_id:tank_k2_goat_horn
+    KIT 3
+        GOAT_HORN - item_id:tank_k3_goat_horn

@@ -1,17 +1,5 @@
 [
     {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:rarity": "uncommon",
-            "minecraft:food": {
-                "nutrition": 0,
-                "saturation": 0,
-                "can_always_eat": true,
-                "eat_seconds": 1000000
-            }
-        }
-    },
-    {
         "function": "minecraft:set_item",
         "item": "minecraft:armor_stand"
     },
@@ -25,7 +13,17 @@
         }
     },
     {
-        "function": "minecraft:set_custom_data",
-        "tag": "{item_id:tank_k1_castle}"
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:tank_k1_castle}",
+            "minecraft:unbreakable": {"show_in_tooltip": false},
+            "minecraft:rarity": "uncommon",
+            "minecraft:food": {
+                "nutrition": 0,
+                "saturation": 0,
+                "can_always_eat": true,
+                "eat_seconds": 1000000
+            }
+        }
     }
 ]

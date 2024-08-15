@@ -57,7 +57,7 @@ scoreboard players display name $mr_display0 match_request_display [{"bold":true
 
 # display bar and play sound
 scoreboard objectives setdisplay sidebar match_request_display
-execute as @a at @s run playsound minecraft:notification1 master @s ~ ~ ~ 1 1
+execute as @a at @s run playsound hipochallenge:notification.match_request master @s ~ ~ ~ 1 1
 
 # free scores 
 scoreboard objectives remove local

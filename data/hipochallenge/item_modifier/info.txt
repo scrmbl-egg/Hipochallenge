@@ -1,1 +1,0 @@
-You can find a generator for item modifiers here: https://misode.github.io/item-modifier/

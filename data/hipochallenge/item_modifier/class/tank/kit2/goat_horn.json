@@ -1,0 +1,22 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:goat_horn"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "hc.items.tank.kit2.goat_horn",
+            "fallback": "Triton's Horn"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:tank_k2_goat_horn}",
+            "minecraft:instrument": "minecraft:feel_goat_horn"
+        }
+    }
+]

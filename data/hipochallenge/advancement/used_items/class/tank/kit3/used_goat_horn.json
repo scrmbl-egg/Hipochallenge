@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": "{item_id:tank_k3_goat_horn}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hipochallenge:abilities/class/tank/kit3/goat_horn"
+    }
+}
