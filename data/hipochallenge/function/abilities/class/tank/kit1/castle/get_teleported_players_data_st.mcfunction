@@ -29,7 +29,6 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_furthest_teammate_uu
 # gives ownership of:
     # local_other_uuid
 
-# FIXME: This is not valid
 # get other data
 function hipochallenge:abilities/class/tank/kit1/castle/get_furthest_teammate_data_st with storage minecraft:hipochallenge
 # gives ownership of:

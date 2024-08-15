@@ -1,1 +1,1 @@
-say uwu
+function hipochallenge:std/for {i:0,end_exclusive:10,command:'say_hola'}

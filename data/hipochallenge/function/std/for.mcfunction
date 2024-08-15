@@ -1,20 +1,18 @@
 # params
-    # end_exclusive = 3
+    # i
+    # size
     # command
 
-# TODO: make a standard for/iterator function
+scoreboard objectives add local dummy
 
-$data modify storage hipochallenge local_end_exclusive set value $(end_exclusive)
-$data modify storage hipochallenge local_command set value "$(command)"
+$data modify storage minecraft:hipochallenge local_command set value "$(command)"
 
-scoreboard objectives add local_recursion dummy
+$scoreboard players set $local_i local $(i)
+$scoreboard players set $local_size local $(size)
 
-$scoreboard players set $remaining_loops local_recursion $(end_exclusive)
-scoreboard players set $local_current_iteration local_recursion 0
+# execute recursive function
+function hipochallenge:std/for/iterate_st with storage minecraft:hipochallenge
 
-function hipochallenge:std/for/iterate with storage minecraft:hipochallenge
-
-scoreboard objectives remove local_recursion
-
-data remove storage hipochallenge local_end_exclusive
+# free memory
+scoreboard objectives remove local
 data remove storage hipochallenge local_command
