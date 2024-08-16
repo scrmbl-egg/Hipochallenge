@@ -1,4 +1,4 @@
-team join spectator @s
+team join spectators @s
 function hipochallenge:msg/all/inject_text/msg_all_inject {txt:"{\"bold\":false,\"color\":\"aqua\",\"selector\":\"@s\"},{\"bold\":false,\"color\":\"white\",\"text\":\" se ha unido a \"},{\"bold\":false,\"color\":\"gray\",\"text\":\"espectadores\"}"}
 
 function hipochallenge:class/reset_class

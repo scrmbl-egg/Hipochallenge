@@ -161,20 +161,20 @@ scoreboard objectives modify match_request_display displayname {"bold":true,"col
 # teams
 
 function hipochallenge:msg/debug/msg_info {msg:"Creating teams..."}
-team add admin
+team add admins
 team add team1
 team add team2
 team add neutral
-team add spectator
+team add spectators
 team add not_playing
 
-team modify admin collisionRule never
-team modify admin friendlyFire false
-team modify admin nametagVisibility always
-team modify admin seeFriendlyInvisibles true
-team modify admin color gold
-team modify admin displayName {"translate":"hc.teams.admin.name","fallback":"Admin"}
-team modify admin prefix ["[",{"translate":"hc.teams.admin.name","fallback":"Admin"},"] "]
+team modify admins collisionRule never
+team modify admins friendlyFire false
+team modify admins nametagVisibility always
+team modify admins seeFriendlyInvisibles true
+team modify admins color gold
+team modify admins displayName {"translate":"hc.teams.admins.name","fallback":"Admins"}
+team modify admins prefix ["[",{"translate":"hc.teams.admins.name","fallback":"Admins"},"] "]
 
 team modify team1 collisionRule always
 team modify team1 friendlyFire false
@@ -194,13 +194,13 @@ team modify neutral color white
 team modify neutral displayName {"translate":"hc.teams.neutral.name","fallback":"Neutral"}
 team modify neutral prefix ["[",{"translate":"hc.teams.neutral.name","fallback":"Neutral"},"] "]
 
-team modify spectator collisionRule never
-team modify spectator friendlyFire false
-team modify spectator nametagVisibility hideForOtherTeams
-team modify spectator seeFriendlyInvisibles true
-team modify spectator color gray
-team modify spectator displayName {"translate":"hc.teams.spectator.name","fallback":"Spectator"}
-team modify spectator prefix ["[",{"translate":"hc.teams.spectator.name","fallback":"Spectator"},"] "]
+team modify spectators collisionRule never
+team modify spectators friendlyFire false
+team modify spectators nametagVisibility hideForOtherTeams
+team modify spectators seeFriendlyInvisibles true
+team modify spectators color gray
+team modify spectators displayName {"translate":"hc.teams.spectators.name","fallback":"Spectators"}
+team modify spectators prefix ["[",{"translate":"hc.teams.spectators.name","fallback":"Spectators"},"] "]
 
 team modify not_playing collisionRule pushOwnTeam
 team modify not_playing friendlyFire false

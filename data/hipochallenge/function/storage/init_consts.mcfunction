@@ -129,7 +129,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge MARKSMAN_CLASS_DUST_COLOR set value [0.788, 0.541, 0.11]
 
     data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_MAX_HEALTH set value 20
-    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR set value 0
+    data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR set value 12
     data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
     data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_SCALE set value 1
     data modify storage minecraft:hipochallenge MARKSMAN_ATTRIBUTE_BURNING_TIME set value 1
@@ -179,8 +179,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge ASSASSIN_CLASS_DUST_COLOR set value [0.173, 0.482, 0.824]
 
     data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_MAX_HEALTH set value 20
-    data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_ARMOR set value 0
-    data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
+    data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_ARMOR set value 16
+    data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_ARMOR_TOUGHNESS set value 4
     data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_SCALE set value 1
     data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_BURNING_TIME set value 1
     data modify storage minecraft:hipochallenge ASSASSIN_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE set value 0
@@ -211,7 +211,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge SUPPORT_CLASS_DUST_COLOR set value [0.863, 0.455, 0.141]
 
     data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_MAX_HEALTH set value 20
-    data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_ARMOR set value 0
+    data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_ARMOR set value 12
     data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
     data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_SCALE set value 1
     data modify storage minecraft:hipochallenge SUPPORT_ATTRIBUTE_BURNING_TIME set value 1
@@ -243,8 +243,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge RECON_CLASS_DUST_COLOR set value [0.552,0.356,0.756]
 
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_MAX_HEALTH set value 20
-    data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR set value 0
-    data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
+    data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR set value 16
+    data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR_TOUGHNESS set value 4
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_SCALE set value 0.81
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_BURNING_TIME set value 1
     data modify storage minecraft:hipochallenge RECON_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE set value 0
@@ -275,8 +275,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     data modify storage minecraft:hipochallenge ASSAULT_CLASS_DUST_COLOR set value [0.803,0.286,0.270]
 
     data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_MAX_HEALTH set value 20
-    data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_ARMOR set value 0
-    data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_ARMOR_TOUGHNESS set value 0
+    data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_ARMOR set value 12
+    data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_ARMOR_TOUGHNESS set value 50
     data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_SCALE set value 1
     data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_BURNING_TIME set value 1
     data modify storage minecraft:hipochallenge ASSAULT_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE set value 0

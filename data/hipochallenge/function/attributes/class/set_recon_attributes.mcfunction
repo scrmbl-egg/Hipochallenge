@@ -1,5 +1,4 @@
 # get attributes
-
 data modify storage minecraft:hipochallenge local_max_health set from storage minecraft:hipochallenge RECON_ATTRIBUTE_MAX_HEALTH
 data modify storage minecraft:hipochallenge local_armor set from storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR
 data modify storage minecraft:hipochallenge local_armor_toughness set from storage minecraft:hipochallenge RECON_ATTRIBUTE_ARMOR_TOUGHNESS
@@ -8,9 +7,7 @@ data modify storage minecraft:hipochallenge local_burning_time set from storage 
 data modify storage minecraft:hipochallenge local_explosion_knockback_resistance set from storage minecraft:hipochallenge RECON_ATTRIBUTE_EXPLOSION_KNOCKBACK_RESISTANCE
 
 # apply attributes
-
 function hipochallenge:attributes/apply_attributes_st with storage minecraft:hipochallenge
-
 
 # free memory
 data remove storage minecraft:hipochallenge local_max_health
