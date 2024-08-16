@@ -89,11 +89,13 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     
     # kit 1
         data modify storage minecraft:hipochallenge TANK_K1_NAME_TRANSLATION_KEY set value "hc.class.tank.kit1"
-    
+
         data modify storage minecraft:hipochallenge TANK_K1_HORN_CD_TICKS set value -1
         data modify storage minecraft:hipochallenge TANK_K1_CASTLING_CD_TICKS set value 400
 
-        data modify storage minecraft:hipochallenge TANK_K1_HORN_DURATION_TICKS set value 60
+        data modify storage minecraft:hipochallenge TANK_K1_HORN_RADIUS set value 7
+        data modify storage minecraft:hipochallenge TANK_K1_HORN_ABSORPTION_AMPLIFIER set value 1
+        data modify storage minecraft:hipochallenge TANK_K1_HORN_ABSORPTION_DURATION_SECONDS set value 3
     # kit 2
         data modify storage minecraft:hipochallenge TANK_K2_NAME_TRANSLATION_KEY set value "hc.class.tank.kit2"
 
@@ -114,8 +116,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     # perk 2
         data modify storage minecraft:hipochallenge TANK_P2_NAME_TRANSLATION_KEY set value "hc.class.tank.perk2"
         
-        data modify storage minecraft:hipochallenge TANK_P2_SLOWNESS_SECONDS set value 1
-        data modify storage minecraft:hipochallenge TANK_P2_SLOWNESS_MULTIPLIER set value 0
+        data modify storage minecraft:hipochallenge TANK_P2_SLOWNESS_AMPLIFIER set value 0
+        data modify storage minecraft:hipochallenge TANK_P2_SLOWNESS_DURATION_SECONDS set value 1
     # perk 3
         data modify storage minecraft:hipochallenge TANK_P3_NAME_TRANSLATION_KEY set value "hc.class.tank.perk3"
         

@@ -6,7 +6,7 @@ execute if entity @s[team=neutral] run data modify storage minecraft:hipochallen
 execute if entity @s[team=team1] run data modify storage minecraft:hipochallenge local_players_team set value "team1"
 execute if entity @s[team=team2] run data modify storage minecraft:hipochallenge local_players_team set value "team2"
 
-# Remove item
+# remove item
 scoreboard objectives add local dummy
 execute store result score $has_cd local run data get storage hipochallenge TANK_K1_HORN_CD_TICKS
 
@@ -17,8 +17,11 @@ execute if score $has_cd local matches 0.. store result score @s tank_kit1_goat_
 
 scoreboard objectives remove local
 
-# Give buffs to team
-function hipochallenge:abilities/class/tank/kit1/horn/give_buffs_st with storage hipochallenge
+# give buffs to team
+function hipochallenge:abilities/class/tank/kit1/goat_horn/give_buffs_st with storage hipochallenge
+
+# vfx
+execute at @s run function hipochallenge:vfx/abilities/tank/kit1/goat_horn_use
 
 # free memory and remove tags
 data remove storage minecraft:hipochallenge local_players_team

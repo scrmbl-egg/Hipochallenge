@@ -6,21 +6,21 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k1_sword}",
+            "minecraft:custom_data": "{item_id:tank_k2_sword}",
             "minecraft:unbreakable": {
                 "show_in_tooltip": false
             },
             "minecraft:attribute_modifiers": {
                 "modifiers": [
                     {
-                        "id": "tank_k1_sword_attack_damage",
+                        "id": "tank_k2_sword_attack_damage",
                         "type": "minecraft:generic.attack_damage",
                         "amount": 4,
                         "operation": "add_value",
                         "slot": "mainhand"
                     },
                     {
-                        "id": "tank_k1_sword_attack_speed",
+                        "id": "tank_k2_sword_attack_speed",
                         "type": "minecraft:generic.attack_speed",
                         "amount": -2.4,
                         "operation": "add_value",

@@ -6,10 +6,9 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k1_goat_horn_cd}",
+            "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit_cd}",
             "minecraft:custom_model_data": 1,
-            "minecraft:unbreakable": {"show_in_tooltip": false},
-            "!minecraft:instrument": {}
+            "!minecraft:food": {}
         }
     }
 ]

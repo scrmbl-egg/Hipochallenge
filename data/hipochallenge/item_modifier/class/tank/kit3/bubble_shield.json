@@ -1,25 +1,26 @@
 [
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:armor_stand"
+        "item": "minecraft:heart_of_the_sea"
     },
     {
         "function": "minecraft:set_name",
         "entity": "this",
         "target": "item_name",
         "name": {
-            "translate": "hc.items.tank.kit1.castle",
-            "fallback": "Castle"
+            "translate": "hc.items.tank.kit3.bubble_shield",
+            "fallback": "Bubble Shield"
         }
     },
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k1_castle}",
+            "minecraft:custom_data": "{item_id:tank_k3_bubble_shield}",
+            "minecraft:custom_model_data": 0,
             "minecraft:unbreakable": {
                 "show_in_tooltip": false
             },
-            "minecraft:rarity": "uncommon",
+            "minecraft:rarity": "rare",
             "minecraft:food": {
                 "nutrition": 0,
                 "saturation": 0,

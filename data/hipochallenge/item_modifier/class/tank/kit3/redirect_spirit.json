@@ -1,25 +1,25 @@
 [
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:armor_stand"
+        "item": "minecraft:glow_ink_sac"
     },
     {
         "function": "minecraft:set_name",
         "entity": "this",
         "target": "item_name",
         "name": {
-            "translate": "hc.items.tank.kit1.castle",
-            "fallback": "Castle"
+            "translate": "hc.items.tank.kit3.redirect_spirit",
+            "fallback": "Redirect Spirit"
         }
     },
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k1_castle}",
+            "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit}",
             "minecraft:unbreakable": {
                 "show_in_tooltip": false
             },
-            "minecraft:rarity": "uncommon",
+            "minecraft:rarity": "epic",
             "minecraft:food": {
                 "nutrition": 0,
                 "saturation": 0,

@@ -1,13 +1,14 @@
-
 # shield goes in weapon.offhand
 function hipochallenge:equipment/weapons/shield/equip_shield
 
-item replace entity @s hotbar.0 with iron_sword[unbreakable={show_in_tooltip:false}]
+# sword
+item replace entity @s hotbar.0 with paper
+item modify entity @s hotbar.0 hipochallenge:class/tank/kit1/sword
 
-# goat horn is not given if perk == 3
-execute as @s unless predicate hipochallenge:perk/is_perk3 run item replace entity @s hotbar.1 with goat_horn[custom_data={item_id:tank_k1_goat_horn},item_name='{"translate":"hc.items.tank.kit1.goat_horn","fallback":"Guardian\'s Horn"}',lore=['[{"color":"gold","italic":false,"text":"["},{"keybind":"key.use"},"] ",{"color":"white","text":"Soplar cuerno:"}]','[{"color":"blue","italic":false,"text":"  Tú: "},{"color":"white","fallback":"Absorption","translate":"effect.minecraft.absorption"}," ",{"color":"white","translate":"enchantment.level.1"},{"color":"dark_gray","text":" :: "},{"color":"white","text":"0s"}]','[{"color":"yellow","italic":false,"text":"  Aliados: "},{"color":"white","translate":"effect.minecraft.absorption"}," ",{"color":"white","translate":"enchantment.level.1"},{"color":"dark_gray","text":" :: "},{"color":"white","text":"0s "},{"color":"dark_gray","text":":: "},{"color":"white","text":"0b"}]','" "','{"color":"yellow","text":"Un solo uso.","italic":false}'],unbreakable={show_in_tooltip:false},hide_additional_tooltip={},rarity="epic",instrument="minecraft:ponder_goat_horn"] 1
+# castle item
+item replace entity @s hotbar.1 with paper
+item modify entity @s hotbar.1 hipochallenge:class/tank/kit1/castle
 
-# items from here must be displaced one to the left if perk == 3
-
-execute as @s unless predicate hipochallenge:perk/is_perk3 run item replace entity @s hotbar.2 with armor_stand[custom_data={item_id:tank_k1_castle},item_name='{"translate":"hc.items.tank.kit1.castle","fallback":"Castle"}',lore=['[{"color":"gold","italic":false,"text":"["},{"keybind":"key.use"},"] ",{"color":"white","text":"Usar habilidad:"}]','[{"text":"  Intercambiar posición con ","italic":false,"color":"white"},{"text":"aliado ","color":"yellow"}, {"text":"más lejano"}]','" "','[{"color":"gray","italic":false,"text":"Reutilizable después de: "},{"color":"white","text":"0s"}]'],rarity="uncommon",food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1000000}]
-execute as @s if predicate hipochallenge:perk/is_perk3 run item replace entity @s hotbar.1 with armor_stand[custom_data={item_id:tank_k1_castle},item_name='{"translate":"hc.items.tank.kit1.castle","fallback":"Castle"}',lore=['[{"color":"gold","italic":false,"text":"["},{"keybind":"key.use"},"] ",{"color":"white","text":"Usar habilidad:"}]','[{"text":"  Intercambiar posición con ","italic":false,"color":"white"},{"text":"aliado ","color":"yellow"}, {"text":"más lejano"}]','" "','[{"color":"gray","italic":false,"text":"Reutilizable después de: "},{"color":"white","text":"0s"}]'],rarity="uncommon",food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1000000}]
+# goat horn (not given if perk == 3)
+execute unless predicate hipochallenge:perk/is_perk3 run item replace entity @s hotbar.2 with paper
+execute unless predicate hipochallenge:perk/is_perk3 run item modify entity @s hotbar.2 hipochallenge:class/tank/kit1/goat_horn
