@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": "{item_id:marksman_k3_revolver}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hipochallenge:abilities/class/tank/kit1/castle"
+    }
+}

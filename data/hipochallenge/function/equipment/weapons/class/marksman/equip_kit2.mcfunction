@@ -1,12 +1,19 @@
 # TODO: Add names and descriptions
 
-item replace entity @s hotbar.0 with iron_hoe[unbreakable={show_in_tooltip:false}]
+# crossbow
+item replace entity @s hotbar.0 with paper
+item modify entity @s hotbar.0 hipochallenge:class/marksman/kit2/crossbow
 
-item replace entity @s hotbar.1 with crossbow[unbreakable={show_in_tooltip:false},enchantments={piercing:1}]
+# sniper's sickle
+item replace entity @s hotbar.1 with paper
+item modify entity @s hotbar.1 hipochallenge:class/marksman/kit2/sickle
 
-# FIXME: Change SLOWNESS_TRAP item
-item replace entity @s hotbar.2 with paper[item_name='"Trampa con lentitud"',food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1000000}]
+# sniper's potion
+item replace entity @s hotbar.2 with paper
+item modify entity @s hotbar.2 hipochallenge:class/marksman/kit2/potion
 
-item replace entity @s hotbar.3 with potion[potion_contents={custom_color:3858016,custom_effects:[{id:"minecraft:speed",amplifier:1,duration:300,show_particles:1b,show_icon:1b,ambient:0b},{id:"minecraft:jump_boost",amplifier:3,duration:300,show_particles:1b,show_icon:1b}]}] 1
+# slowness trap
+item replace entity @s hotbar.3 with paper
+item modify entity @s hotbar.3 hipochallenge:class/marksman/kit2/slowness_trap
 
-item replace entity @s hotbar.4 with arrow 6
+item replace entity @s hotbar.4 with arrow 5

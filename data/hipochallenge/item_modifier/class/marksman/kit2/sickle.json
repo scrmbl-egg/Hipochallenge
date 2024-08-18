@@ -1,0 +1,43 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:wooden_hoe"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "hc.items.marksman.kit2.sickle",
+            "fallback": "Sniper's Sickle"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:marksman_k2_sickle}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:unbreakable": {
+                "show_in_tooltip": false
+            },
+            "minecraft:attribute_modifiers": {
+                "modifiers": [
+                    {
+                        "id": "marksman_k2_sickle_attack_speed",
+                        "type": "minecraft:generic.attack_speed",
+                        "amount": -1,
+                        "operation": "add_value",
+                        "slot": "mainhand"
+                    },
+                    {
+                        "id": "marksman_k2_sickle_attack_damage",
+                        "type": "minecraft:generic.attack_damage",
+                        "amount": 1,
+                        "operation": "add_value",
+                        "slot": "mainhand"
+                    }
+                ]
+            }
+        }
+    }
+]

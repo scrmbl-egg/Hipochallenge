@@ -1,0 +1,37 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:shield"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "item.minecraft.shield",
+            "fallback": "Shield"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:tank_shield}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:unbreakable": {
+                "show_in_tooltip": false
+            },
+            "minecraft:base_color": "green",
+            "minecraft:banner_patterns": [
+                {
+                    "pattern": "minecraft:gradient",
+                    "color": "lime"
+                },
+                {
+                    "pattern": "minecraft:creeper",
+                    "color": "black"
+                }
+            ],
+            "minecraft:hide_additional_tooltip": {}
+        }
+    }
+]

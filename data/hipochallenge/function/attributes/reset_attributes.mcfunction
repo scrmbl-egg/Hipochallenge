@@ -16,13 +16,13 @@ attribute @s generic.follow_range base set 32
 attribute @s generic.knockback_resistance base set 0
 attribute @s generic.luck base set 0
 attribute @s generic.max_absorption base set 0
-attribute @s generic.movement_speed base set 0.7
+attribute @s generic.movement_speed base set 0.1
 attribute @s generic.step_height base set 0.6
 attribute @s generic.jump_strength base set 0.41999998688697815
 attribute @s player.block_interaction_range base set 4.5
 attribute @s player.entity_interaction_range base set 3
 attribute @s player.block_break_speed base set 1
-attribute @s generic.gravity base set 0.06
+attribute @s generic.gravity base set 0.08 
 attribute @s generic.safe_fall_distance base set 3
 attribute @s generic.fall_damage_multiplier base set 1
 attribute @s player.mining_efficiency base set 0

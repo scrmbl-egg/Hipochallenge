@@ -1,0 +1,30 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:crossbow"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "hc.items.marksman.kit1.smoke_arrow_crossbow",
+            "fallback": "Smoke Arrow Crossbow"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:marksman_k1_smoke_arrow_crossbow}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:charged_projectiles": [
+                {
+                    "id": "minecraft:arrow",
+                    "components": {
+                        "minecraft:custom_data": "{item_id:marksman_k1_smoke_arrow}"
+                    }
+                }
+            ]
+        }
+    }
+]

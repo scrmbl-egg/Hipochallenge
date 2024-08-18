@@ -4,6 +4,6 @@ schedule function hipochallenge:main_ten_ticks 10t
 
 # vfx
     # maps
-        # 
+        # map0
             # water drops
                 execute at @e[tag=drops,type=marker,sort=random,limit=3] run particle minecraft:dripping_dripstone_water ~ ~0.9 ~ 0.5 0 0.5 1 2 force

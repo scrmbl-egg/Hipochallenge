@@ -1,5 +1,5 @@
-# shield goes in weapon.offhand
-function hipochallenge:equipment/weapons/shield/equip_shield
+# shield
+function hipochallenge:equipment/weapons/shield/equip_shield {item_slot:"weapon.offhand"}
 
 # sword
 item replace entity @s hotbar.0 with paper

@@ -1,0 +1,28 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:white_stained_glass_pane"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "hc.marksman.kit3.mirror",
+            "fallback": "Mirror"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:marksman_k3_mirror}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:food": {
+                "nutrition": 0,
+                "saturation": 0,
+                "can_always_eat": true,
+                "eat_seconds": 1000000
+            }
+        }
+    }
+]

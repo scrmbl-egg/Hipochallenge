@@ -44,7 +44,7 @@ scoreboard objectives add leave trigger
 
 scoreboard objectives add join trigger
 
-# TODO: Add item cooldowns
+# items and ability cooldowns
 scoreboard objectives add tank_kit1_goat_horn_cd dummy
 scoreboard objectives add tank_kit1_castle_cd dummy
 scoreboard objectives add tank_kit2_goat_horn_cd dummy
@@ -95,7 +95,6 @@ scoreboard objectives add assault_kit3_pushing_projectile_cd dummy
 scoreboard objectives add match_request_display dummy
 
 # score init
-
 scoreboard players add @a player_list_info 0
 scoreboard players add @a class 0
 scoreboard players add @a kit 0
@@ -107,53 +106,52 @@ scoreboard players add @a player_kill_count 0
 scoreboard players add @a player_health 0
 scoreboard players add @a points 0
 
-
-# TODO: Change this part when cooldown list is changed
-
-scoreboard players add @a tank_kit1_goat_horn_cd 0
-scoreboard players add @a tank_kit1_castle_cd 0
-scoreboard players add @a tank_kit2_goat_horn_cd 0
-scoreboard players add @a tank_kit3_goat_horn_cd 0
-scoreboard players add @a tank_kit3_bubble_shield_cd 0
-scoreboard players add @a tank_kit3_redirect_spirit_cd 0
-scoreboard players add @a tank_perk1_nutritious_meal_cd 0
-scoreboard players add @a marksman_kit1_new_projectile_cd 0
-scoreboard players add @a marksman_kit1_archers_potion_cd 0
-scoreboard players add @a marksman_kit1_smoke_arrow_crossbow_cd 0
-scoreboard players add @a marksman_kit2_new_projectile_cd 0
-scoreboard players add @a marksman_kit3_new_projectile_cd 0
-scoreboard players add @a marksman_kit3_pistol_cd 0
-scoreboard players add @a marksman_kit3_el_diablo_bullet_cd 0
-scoreboard players add @a assassin_kit1_duelist_sword_parry_cd 0
-scoreboard players add @a assassin_kit1_enhanced_duelist_sword_cd 0
-scoreboard players add @a assassin_kit1_crystal_amulet_cd 0
-scoreboard players add @a assassin_kit2_stun_mechanism_cd 0
-scoreboard players add @a assassin_kit3_repulsing_rod_cd 0
-scoreboard players add @a assassin_kit3_magic_feather_cd 0
-scoreboard players add @a assassin_kit3_teleportation_mark_cd 0
-scoreboard players add @a support_kit1_snow_sentinel_cd 0
-scoreboard players add @a support_kit1_levitation_bomb_cd 0
-scoreboard players add @a support_kit1_gravity_well_cd 0
-scoreboard players add @a support_kit2_healing_rod_cd 0
-scoreboard players add @a support_kit2_cleansing_projectile_cd 0
-scoreboard players add @a support_kit2_slowness_trap_cd 0
-scoreboard players add @a support_kit3_unstable_totem_cd 0
-scoreboard players add @a support_kit3_evil_eye_cd 0
-scoreboard players add @a recon_kit1_blindness_sentinel_cd 0
-scoreboard players add @a recon_kit1_flash_bomb_cd 0
-scoreboard players add @a recon_kit1_low_visibility_area_cd 0
-scoreboard players add @a recon_kit2_flare_arrow_cd 0
-scoreboard players add @a recon_kit2_trackers_potion_cd 0
-scoreboard players add @a recon_kit2_revealing_sentinel_cd 0
-scoreboard players add @a recon_kit3_portal_cd 0
-scoreboard players add @a recon_kit3_deception_effigy_cd 0
-scoreboard players add @a assault_kit1_ticking_bomb_cd 0
-scoreboard players add @a assault_kit1_knockback_bomb_cd 0
-scoreboard players add @a assault_kit1_smoke_bomb_cd 0
-scoreboard players add @a assault_kit2_harpoon_cd 0
-scoreboard players add @a assault_kit2_void_arrow_cd 0
-scoreboard players add @a assault_kit3_assault_shield_cd 0
-scoreboard players add @a assault_kit3_pushing_projectile_cd 0
+# FIXME: Check if this column is safe to delete
+#scoreboard players add @a tank_kit1_goat_horn_cd 0
+#scoreboard players add @a tank_kit1_castle_cd 0
+#scoreboard players add @a tank_kit2_goat_horn_cd 0
+#scoreboard players add @a tank_kit2_goat_horn_nearby_enemies 0
+#scoreboard players add @a tank_kit3_goat_horn_cd 0
+#scoreboard players add @a tank_kit3_bubble_shield_cd 0
+#scoreboard players add @a tank_kit3_redirect_spirit_cd 0
+#scoreboard players add @a tank_perk1_nutritious_meal_cd 0
+#scoreboard players add @a marksman_kit1_new_projectile_cd 0
+#scoreboard players add @a marksman_kit1_archers_potion_cd 0
+#scoreboard players add @a marksman_kit1_smoke_arrow_crossbow_cd 0
+#scoreboard players add @a marksman_kit2_new_projectile_cd 0
+#scoreboard players add @a marksman_kit3_new_projectile_cd 0
+#scoreboard players add @a marksman_kit3_pistol_cd 0
+#scoreboard players add @a marksman_kit3_el_diablo_bullet_cd 0
+#scoreboard players add @a assassin_kit1_duelist_sword_parry_cd 0
+#scoreboard players add @a assassin_kit1_enhanced_duelist_sword_cd 0
+#scoreboard players add @a assassin_kit1_crystal_amulet_cd 0
+#scoreboard players add @a assassin_kit2_stun_mechanism_cd 0
+#scoreboard players add @a assassin_kit3_repulsing_rod_cd 0
+#scoreboard players add @a assassin_kit3_magic_feather_cd 0
+#scoreboard players add @a assassin_kit3_teleportation_mark_cd 0
+#scoreboard players add @a support_kit1_snow_sentinel_cd 0
+#scoreboard players add @a support_kit1_levitation_bomb_cd 0
+#scoreboard players add @a support_kit1_gravity_well_cd 0
+#scoreboard players add @a support_kit2_healing_rod_cd 0
+#scoreboard players add @a support_kit2_cleansing_projectile_cd 0
+#scoreboard players add @a support_kit2_slowness_trap_cd 0
+#scoreboard players add @a support_kit3_unstable_totem_cd 0
+#scoreboard players add @a support_kit3_evil_eye_cd 0
+#scoreboard players add @a recon_kit1_blindness_sentinel_cd 0
+#scoreboard players add @a recon_kit1_flash_bomb_cd 0
+#scoreboard players add @a recon_kit1_low_visibility_area_cd 0
+#scoreboard players add @a recon_kit2_flare_arrow_cd 0
+#scoreboard players add @a recon_kit2_trackers_potion_cd 0
+#scoreboard players add @a recon_kit2_revealing_sentinel_cd 0
+#scoreboard players add @a recon_kit3_portal_cd 0
+#scoreboard players add @a recon_kit3_deception_effigy_cd 0
+#scoreboard players add @a assault_kit1_ticking_bomb_cd 0
+#scoreboard players add @a assault_kit1_knockback_bomb_cd 0
+#scoreboard players add @a assault_kit1_smoke_bomb_cd 0
+#scoreboard players add @a assault_kit2_harpoon_cd 0
+#scoreboard players add @a assault_kit2_void_arrow_cd 0
+#scoreboard players add @a assault_kit3_assault_shield_cd 0
+#scoreboard players add @a assault_kit3_pushing_projectile_cd 0
 
 
 scoreboard objectives modify match_request_display displayname {"bold":true,"color":"gold","translate":"hc.sidebar.match_request.new","fallback":"NEW MATCH REQUEST","italic":true}
@@ -161,13 +159,8 @@ scoreboard objectives modify match_request_display displayname {"bold":true,"col
 # teams
 
 function hipochallenge:msg/debug/msg_info {msg:"Creating teams..."}
-team add admins
-team add team1
-team add team2
-team add neutral
-team add spectators
-team add not_playing
 
+team add admins
 team modify admins collisionRule never
 team modify admins friendlyFire false
 team modify admins nametagVisibility always
@@ -176,16 +169,19 @@ team modify admins color gold
 team modify admins displayName {"translate":"hc.teams.admins.name","fallback":"Admins"}
 team modify admins prefix ["[",{"translate":"hc.teams.admins.name","fallback":"Admins"},"] "]
 
+team add team1
 team modify team1 collisionRule always
 team modify team1 friendlyFire false
 team modify team1 nametagVisibility hideForOtherTeams
 team modify team1 seeFriendlyInvisibles true
 
+team add team2
 team modify team2 collisionRule always
 team modify team2 friendlyFire false
 team modify team2 nametagVisibility hideForOtherTeams
 team modify team2 seeFriendlyInvisibles true
 
+team add neutral
 team modify neutral collisionRule pushOwnTeam
 team modify neutral friendlyFire true
 team modify neutral nametagVisibility always
@@ -194,6 +190,7 @@ team modify neutral color white
 team modify neutral displayName {"translate":"hc.teams.neutral.name","fallback":"Neutral"}
 team modify neutral prefix ["[",{"translate":"hc.teams.neutral.name","fallback":"Neutral"},"] "]
 
+team add spectators
 team modify spectators collisionRule never
 team modify spectators friendlyFire false
 team modify spectators nametagVisibility hideForOtherTeams
@@ -202,6 +199,7 @@ team modify spectators color gray
 team modify spectators displayName {"translate":"hc.teams.spectators.name","fallback":"Spectators"}
 team modify spectators prefix ["[",{"translate":"hc.teams.spectators.name","fallback":"Spectators"},"] "]
 
+team add not_playing
 team modify not_playing collisionRule pushOwnTeam
 team modify not_playing friendlyFire false
 team modify not_playing nametagVisibility always
@@ -241,7 +239,7 @@ gamerule forgiveDeadPlayers true
 gamerule freezeDamage true
 gamerule globalSoundEvents true
 #gamerule functionCommandLimit 10000
-gamerule keepInventory false
+gamerule keepInventory true
 gamerule lavaSourceConversion false
 gamerule maxCommandChainLength 65536
 gamerule maxEntityCramming 24

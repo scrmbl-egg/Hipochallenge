@@ -1,0 +1,26 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:flint"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "hc.items.marksman.kit2.slowness_trap",
+            "fallback": "Sniper's Crossbow"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:marksman_k2_slowness_trap}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:enchantments": {
+                "piercing": 1
+            },
+            "minecraft:hide_tooltip": {}
+        }
+    }
+]

@@ -1,5 +1,3 @@
-# TODO: Add names and descriptions
-
 # duelist sword
 item replace entity @s hotbar.0 with paper
 item modify entity @s hotbar.0 hipochallenge:class/assassin/kit1/duelist_sword

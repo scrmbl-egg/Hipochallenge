@@ -31,3 +31,6 @@ recipe take @a *
 
 # menu
     execute as @a run function hipochallenge:menus/logic/menu_main
+
+# projectile cleanup
+    function hipochallenge:projectiles/main

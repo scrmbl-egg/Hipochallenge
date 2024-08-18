@@ -1,9 +1,11 @@
-# TODO: Add names and descriptions
+# mace
+item replace entity @s hotbar.0 with paper
+item modify entity @s hotbar.0 hipochallenge:class/assassin/kit3/mace
 
-item replace entity @s hotbar.0 with mace[unbreakable={show_in_tooltip:false}]
+# magic feather
+item replace entity @s hotbar.1 with paper
+item modify entity @s hotbar.1 hipochallenge:class/assassin/kit3/magic_feather
 
-item replace entity @s hotbar.1 with feather[food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1000000}]
-
-
-# FIXME: change TELEPORT_MARK item
-item replace entity @s hotbar.2 with paper[item_name='"Marca de teletransportación"',food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1000000}]
+# teleportation mark
+item replace entity @s hotbar.2 with paper
+item modify entity @s hotbar.2 hipochallenge:class/assassin/kit3/teleportation_mark

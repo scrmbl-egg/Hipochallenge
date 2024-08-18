@@ -1,7 +1,7 @@
-# TODO: Add names and descriptions
+# sword
+item replace entity @s hotbar.0 with paper
+item modify entity @s hotbar.0 hipochallenge:class/assassin/kit2/sword
 
-item replace entity @s hotbar.0 with iron_sword[unbreakable={show_in_tooltip:false}]
-
-
-# FIXME: change STUN item
-item replace entity @s hotbar.1 with paper[item_name='"Stun"',food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1000000}]
+# stun mechanism
+item replace entity @s hotbar.1 with paper
+item modify entity @s hotbar.1 hipochallenge:class/assassin/kit2/stun_mechanism

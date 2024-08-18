@@ -1,4 +1,4 @@
-# shield goes in weapon.offhand
+# bubble shield
 item replace entity @s weapon.offhand with paper
 item modify entity @s weapon.offhand hipochallenge:class/tank/kit3/bubble_shield
 

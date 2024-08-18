@@ -25,20 +25,10 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_teleported_players_d
 # teleport players (with vfx)
 function hipochallenge:abilities/class/tank/kit1/castle/teleport_players_st with storage minecraft:hipochallenge
 
-# get cooldown
-scoreboard objectives add local dummy
-execute store result score $has_cd local run data get storage hipochallenge TANK_K1_CASTLING_CD_TICKS
-
-# if cooldown is -1 or less, cooldown is infinite, clear item
-execute if score $has_cd local matches ..-1 run clear @s *[custom_data={item_id:tank_k1_castle}] 1
-
-# if cooldown is 0 or greater, cooldown exists, replace item with cooldown version and set cooldown constant
-execute if score $has_cd local matches 0.. if entity @s[nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_data":{item_id:tank_k1_castle}}}]}] run item modify entity @s weapon.offhand hipochallenge:class/tank/kit1/castle_cd
-execute if score $has_cd local matches 0.. if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{item_id:tank_k1_castle}}}}] run item modify entity @s weapon.mainhand hipochallenge:class/tank/kit1/castle_cd
-execute if score $has_cd local matches 0.. store result score @s tank_kit1_castle_cd run data get storage minecraft:hipochallenge TANK_K1_CASTLING_CD_TICKS
+# handle cooldown
+function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_castle,cd_item_modifier:"hipochallenge:class/tank/kit1/castle_cd",cd_score:tank_kit1_castle_cd,cd_const:TANK_K1_CASTLING_CD_TICKS}
 
 # free memory and remove tags
-scoreboard objectives remove local
 data remove storage minecraft:hipochallenge local_players_team
 data remove storage minecraft:hipochallenge local_self_pos_x
 data remove storage minecraft:hipochallenge local_self_pos_y

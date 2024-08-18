@@ -1,1 +1,5 @@
-item replace entity @s weapon.offhand with shield[item_name='{"translate":"item.minecraft.shield"}',lore=['[{"bold":false,"color":"gold","italic":false,"obfuscated":false,"strikethrough":false,"text":"[","underlined":false},{"bold":false,"color":"gold","italic":false,"keybind":"key.use","obfuscated":false,"strikethrough":false,"underlined":false},{"bold":false,"italic":false,"obfuscated":false,"strikethrough":false,"text":"] ","underlined":false},{"bold":false,"color":"white","italic":false,"obfuscated":false,"strikethrough":false,"text":"Bloquear","underlined":false}]'],unbreakable={show_in_tooltip:false},hide_additional_tooltip={},base_color="purple",banner_patterns=[{pattern:"minecraft:half_horizontal_bottom",color:"black"},{pattern:"minecraft:skull",color:"black"},{pattern:"minecraft:triangle_bottom",color:"purple"},{pattern:"minecraft:stripe_middle",color:"black"},{pattern:"minecraft:border",color:"purple"}]] 1
+# params
+    # item_slot
+
+$item replace entity @s $(item_slot) with paper
+$item modify entity @s $(item_slot) hipochallenge:shield/purple_shield
