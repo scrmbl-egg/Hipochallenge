@@ -14,6 +14,7 @@
 
 data modify storage minecraft:hipochallenge MAP_VERSION set value "pre-alpha"
 
+data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
 data modify storage minecraft:hipochallenge NECESSARY_PLAYERS_FOR_GAME set value 6
 data modify storage minecraft:hipochallenge ROUND_DURATION_TICKS set value 2400
 data modify storage minecraft:hipochallenge WIN_ROUNDS set value 5
@@ -21,7 +22,6 @@ data modify storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS set val
 
 ## TEAMS
 
-data modify storage minecraft:hipochallenge TEAM_SIZE set value 3
 
 data modify storage minecraft:hipochallenge TEAM1_DEFAULT_NAME set value "Team 1"
 data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2"

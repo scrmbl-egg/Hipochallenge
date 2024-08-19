@@ -11,7 +11,7 @@ execute if entity @p[scores={has_killed=1..}] store result storage minecraft:hip
 function hipochallenge:death/show_player_death
 
 # tag
-#todo descomentar linea
+# TODO: descomentar linea
 #tag @s add dead
 
 # reset scores and free memory

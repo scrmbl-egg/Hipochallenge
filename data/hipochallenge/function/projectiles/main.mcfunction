@@ -1,1 +1,2 @@
-function hipochallenge:projectiles/arrows/main
+# clean arrows
+function hipochallenge:projectiles/arrows/clean

@@ -20,7 +20,7 @@
                     {
                         "id": "minecraft:speed",
                         "amplifier": 1,
-                        "duration": 8,
+                        "duration": 160,
                         "show_icon": true
                     }
                 ]

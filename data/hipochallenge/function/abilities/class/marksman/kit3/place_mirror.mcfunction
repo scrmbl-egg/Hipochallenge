@@ -1,0 +1,1 @@
+advancement revoke @s only hipochallenge:used_items/class/marksman/kit3/used_mirror

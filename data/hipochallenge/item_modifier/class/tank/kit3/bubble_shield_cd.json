@@ -7,7 +7,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": "{item_id:tank_k3_bubble_shield_cd}",
-            "minecraft:custom_model_data": 0,
+            "minecraft:custom_model_data": 2,
             "!minecraft:food": {}
         }
     }

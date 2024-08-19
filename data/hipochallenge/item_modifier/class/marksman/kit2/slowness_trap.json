@@ -9,7 +9,7 @@
         "target": "item_name",
         "name": {
             "translate": "hc.items.marksman.kit2.slowness_trap",
-            "fallback": "Sniper's Crossbow"
+            "fallback": "Slowness Trap"
         }
     },
     {
@@ -17,10 +17,12 @@
         "components": {
             "minecraft:custom_data": "{item_id:marksman_k2_slowness_trap}",
             "minecraft:custom_model_data": 0,
-            "minecraft:enchantments": {
-                "piercing": 1
-            },
-            "minecraft:hide_tooltip": {}
+            "minecraft:food": {
+                "nutrition": 0,
+                "saturation": 0,
+                "can_always_eat": true,
+                "eat_seconds": 1000000
+            }
         }
     }
 ]

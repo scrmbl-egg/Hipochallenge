@@ -30,14 +30,14 @@
                     {
                         "id": "assassin_k1_crystal_amulet_movement_speed",
                         "type": "minecraft:generic.movement_speed",
-                        "amount": 1.2,
+                        "amount": 0.4,
                         "operation": "add_multiplied_total",
                         "slot": "mainhand"
                     },
                     {
                         "id": "assassin_k1_crystal_amulet_movement_speed",
                         "type": "minecraft:generic.movement_speed",
-                        "amount": 1.2,
+                        "amount": 0.4,
                         "operation": "add_multiplied_total",
                         "slot": "offhand"
                     }

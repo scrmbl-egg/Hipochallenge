@@ -1,0 +1,1 @@
+advancement revoke @s only hipochallenge:used_items/class/marksman/kit2/used_slowness_trap

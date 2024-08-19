@@ -1,0 +1,1 @@
+function hipochallenge:teams/names/set_team2_name {name:"hipoteam"}

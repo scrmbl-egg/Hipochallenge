@@ -41,4 +41,3 @@ data remove storage minecraft:hipochallenge local_other_pos_y
 data remove storage minecraft:hipochallenge local_other_pos_z
 data remove storage minecraft:hipochallenge local_other_yaw
 data remove storage minecraft:hipochallenge local_other_pitch
-execute as @p[tag=local_other_player] run tag @s remove local_other_player

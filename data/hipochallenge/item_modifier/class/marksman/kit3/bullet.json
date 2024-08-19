@@ -15,17 +15,8 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:marksman_k3_el_diablo_bullet}",
-            "minecraft:custom_model_data": 0,
-            "minecraft:unbreakable": {
-                "show_in_tooltip": false
-            },
-            "minecraft:food": {
-                "nutrition": 0,
-                "saturation": 0,
-                "can_always_eat": true,
-                "eat_seconds": 1000000
-            } 
+            "minecraft:custom_data": "{item_id:marksman_k3_bullet}",
+            "minecraft:custom_model_data": 0
         }
     }
 ]

@@ -8,7 +8,7 @@
 scoreboard objectives add local dummy
 
 # set score to cooldown constant
-$execute store result score $has_cd local run data get storage hipochallenge $(cd_const)
+$execute store result score $has_cd local run data get storage minecraft:hipochallenge $(cd_const)
 
 # check hand item_id's, and if the cooldown is not -1 (infinite), apply cd_item_modifier and set
 # player's cd_score

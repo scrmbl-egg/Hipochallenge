@@ -2,6 +2,8 @@ execute as @a[scores={timer=1..}] run scoreboard players remove @s timer 1
 execute as @a[scores={silence_timer=1..}] run scoreboard players remove @s silence_timer 1
 
 # cooldown timers
+
+# TODO: Check if all cooldowns are handled
 execute as @a[scores={tank_kit1_goat_horn_cd=1..}] run scoreboard players remove @s tank_kit1_goat_horn_cd 1
 execute as @a[scores={tank_kit1_castle_cd=1..}] run scoreboard players remove @s tank_kit1_castle_cd 1
 execute as @a[scores={tank_kit2_goat_horn_cd=1..}] run scoreboard players remove @s tank_kit2_goat_horn_cd 1

@@ -1,0 +1,1 @@
+execute as @s at @s run particle poof ~ ~ ~ 0.2 0.2 0.2 0.05 10 normal

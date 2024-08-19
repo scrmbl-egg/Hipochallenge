@@ -20,13 +20,13 @@
                     {
                         "id": "minecraft:speed",
                         "amplifier": 0,
-                        "duration": 8,
+                        "duration": 160,
                         "show_icon": true
                     },
                     {
                         "id": "minecraft:jump_boost",
                         "amplifier": 1,
-                        "duration": 8,
+                        "duration": 160,
                         "show_icon": true
                     }
                 ]

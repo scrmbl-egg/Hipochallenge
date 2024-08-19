@@ -7,7 +7,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit_cd}",
-            "minecraft:custom_model_data": 1,
+            "minecraft:custom_model_data": 0,
             "!minecraft:food": {}
         }
     }

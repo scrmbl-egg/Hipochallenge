@@ -5,13 +5,13 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:marksman_k3_revolver}"
+                        "minecraft:custom_data": "{item_id:marksman_k2_slowness_trap}"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/marksman/kit3/shoot_revolver"
+        "function": "hipochallenge:abilities/class/marksman/kit2/place_slowness_trap"
     }
 }
