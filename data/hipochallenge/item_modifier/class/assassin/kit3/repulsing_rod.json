@@ -1,23 +1,21 @@
 [
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:string"
+        "item": "minecraft:breeze_rod"
     },
     {
         "function": "minecraft:set_name",
         "entity": "this",
         "target": "item_name",
         "name": {
-            "translate": "hc.items.assassin.kit3.teleportation_mark",
-            "fallback": "Teleportation Mark"
+            "translate": "hc.items.assassin.kit1.repulsing_rod",
+            "fallback": "Repulsing Rod"
         }
     },
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:assassin_k3_teleportation_mark}",
-            "minecraft:custom_model_data": 0,
-            "minecraft:rarity": "rare",
+            "minecraft:custom_data": "{item_id:assassin_k3_repulsing_rod}",
             "minecraft:food": {
                 "nutrition": 0,
                 "saturation": 0,

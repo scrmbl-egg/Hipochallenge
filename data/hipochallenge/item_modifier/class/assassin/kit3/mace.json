@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:mace"
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:assassin_k3_mace}"
+        }
+    }
+]

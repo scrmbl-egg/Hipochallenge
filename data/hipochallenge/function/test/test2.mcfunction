@@ -1,4 +1,4 @@
-# params:
-    # element
+# storage:
+    # local_element
 
-$tellraw @a "$(element)"
+$tellraw @a "$(local_element)"

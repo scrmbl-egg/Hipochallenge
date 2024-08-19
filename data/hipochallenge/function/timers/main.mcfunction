@@ -7,6 +7,7 @@ execute as @a[scores={silence_timer=1..}] run scoreboard players remove @s silen
 execute as @a[scores={tank_kit1_goat_horn_cd=1..}] run scoreboard players remove @s tank_kit1_goat_horn_cd 1
 execute as @a[scores={tank_kit1_castle_cd=1..}] run scoreboard players remove @s tank_kit1_castle_cd 1
 execute as @a[scores={tank_kit2_goat_horn_cd=1..}] run scoreboard players remove @s tank_kit2_goat_horn_cd 1
+execute as @a[scores={tank_kit2_goat_horn_recovery_ticks=1..}] run scoreboard players remove @s tank_kit2_goat_horn_recovery_ticks 1
 execute as @a[scores={tank_kit2_trident_cd=1..}] run scoreboard players remove @s tank_kit2_trident_cd 1
 execute as @a[scores={tank_kit3_goat_horn_cd=1..}] run scoreboard players remove @s tank_kit3_goat_horn_cd 1
 execute as @a[scores={tank_kit3_bubble_shield_cd=1..}] run scoreboard players remove @s tank_kit3_bubble_shield_cd 1

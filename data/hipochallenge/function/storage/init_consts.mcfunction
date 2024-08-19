@@ -103,6 +103,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
         data modify storage minecraft:hipochallenge TANK_K2_HORN_RADIUS set value 5
         data modify storage minecraft:hipochallenge TANK_K2_HORN_CD_TICKS set value -1
+        data modify storage minecraft:hipochallenge TANK_K2_HORN_RECOVERY_TICKS set value 20
     # kit 3
         data modify storage minecraft:hipochallenge TANK_K3_NAME_TRANSLATION_KEY set value "hc.class.tank.kit3"
     

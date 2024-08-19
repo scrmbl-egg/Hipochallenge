@@ -18,7 +18,7 @@ function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_goat_h
 function hipochallenge:abilities/class/tank/kit1/goat_horn/give_buffs_st with storage hipochallenge
 
 # vfx
-execute at @s run function hipochallenge:vfx/abilities/tank/kit1/goat_horn_use
+execute at @s run function hipochallenge:vfx/abilities/class/tank/kit1/goat_horn_use
 
 # free memory and remove tags
 data remove storage minecraft:hipochallenge local_players_team

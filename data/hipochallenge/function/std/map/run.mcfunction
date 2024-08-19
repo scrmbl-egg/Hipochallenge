@@ -1,6 +1,6 @@
 # params
     # array_name
-    # function_st (this function must have an "element" param)
+    # function_st (this function must have an "local_element" param)
 
 scoreboard objectives add local dummy
 

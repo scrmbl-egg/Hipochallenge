@@ -1,9 +1,6 @@
 # remove recipes
 recipe take @a *
 
-# timers
-    function hipochallenge:timers/main
-
 # game state logic
 
     function hipochallenge:game_states/state_logic
@@ -34,3 +31,6 @@ recipe take @a *
 
 # projectile cleanup
     function hipochallenge:projectiles/main
+
+# timers (must be placed at the end)
+    function hipochallenge:timers/main

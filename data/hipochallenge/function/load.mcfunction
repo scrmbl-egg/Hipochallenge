@@ -49,6 +49,7 @@ scoreboard objectives add tank_kit1_goat_horn_cd dummy
 scoreboard objectives add tank_kit1_castle_cd dummy
 scoreboard objectives add tank_kit2_goat_horn_cd dummy
 scoreboard objectives add tank_kit2_goat_horn_nearby_enemies dummy
+scoreboard objectives add tank_kit2_goat_horn_recovery_ticks dummy
 scoreboard objectives add tank_kit2_trident_cd dummy
 scoreboard objectives add tank_kit3_goat_horn_cd dummy
 scoreboard objectives add tank_kit3_bubble_shield_cd dummy
