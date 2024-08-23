@@ -1,5 +1,8 @@
+team leave @s
+
+function hipochallenge:msg/all/inject_text/msg_all_inject {txt:'{"translate":"hc.msg.all.player_has_joined_team","fallback":"%1$s has joined %2$s","with":[{"selector":"@s","color":"gray"},{"translate":"hc.teams.spectators.name","fallback":"Spectators","color":"gray"}]}'}
+
 team join spectators @s
-function hipochallenge:msg/all/inject_text/msg_all_inject {txt:"{\"bold\":false,\"color\":\"aqua\",\"selector\":\"@s\"},{\"bold\":false,\"color\":\"white\",\"text\":\" se ha unido a \"},{\"bold\":false,\"color\":\"gray\",\"text\":\"espectadores\"}"}
 
 function hipochallenge:class/reset_class
 function hipochallenge:kit/reset_kit

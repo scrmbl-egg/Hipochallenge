@@ -1,4 +1,5 @@
-# TODO: Make text displays support translated team names
+# TODO: make text displays support translated team names
+# although, these should probably be moved to another location
 
 kill @e[type=text_display,tag=team_text_display]
 
