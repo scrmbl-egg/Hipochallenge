@@ -8,4 +8,4 @@ $function hipochallenge:msg/all/inject_text/msg_all_inject {txt:"{\"translate\":
 $team modify team1 prefix {"text":"[$(name)] "}
 $team modify team1 displayName {"text":"$(name)"}
 
-function hipochallenge:teams/update_team_text_displays_st with storage minecraft:hipochallenge
+function hipochallenge:teams/text_displays/update_st with storage minecraft:hipochallenge

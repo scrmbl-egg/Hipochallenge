@@ -277,4 +277,4 @@ schedule function hipochallenge:main_sec 1s
 
 # update team text displays
 function hipochallenge:msg/debug/msg_info {msg:"Updating text displays..."}
-function hipochallenge:teams/update_team_text_displays_st with storage minecraft:hipochallenge
+function hipochallenge:teams/text_displays/update_st with storage minecraft:hipochallenge

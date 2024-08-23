@@ -196,6 +196,12 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     
     # kit 1
         data modify storage minecraft:hipochallenge ASSASSIN_K1_NAME_TRANSLATION_KEY set value "hc.class.assassin.kit1"
+        
+        data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_SUMMON_DISTANCE set value 0.5
+        data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_GLOBAL_Y_OFFSET set value -0.75
+        data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_HEIGHT set value 1.25
+        data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_WIDTH set value 0.54
+        data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_LIFETIME_TICKS set value 10
     # kit 2
         data modify storage minecraft:hipochallenge ASSASSIN_K2_NAME_TRANSLATION_KEY set value "hc.class.assassin.kit2"
     # kit 3

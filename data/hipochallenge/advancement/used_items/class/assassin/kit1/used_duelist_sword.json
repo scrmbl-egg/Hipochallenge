@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": "{item_id:assassin_k1_duelist_sword}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hipochallenge:abilities/class/assassin/kit1/perform_parry"
+    }
+}

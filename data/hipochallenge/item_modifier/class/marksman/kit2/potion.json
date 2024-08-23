@@ -25,7 +25,7 @@
                     },
                     {
                         "id": "minecraft:jump_boost",
-                        "amplifier": 1,
+                        "amplifier": 3,
                         "duration": 160,
                         "show_icon": true
                     }

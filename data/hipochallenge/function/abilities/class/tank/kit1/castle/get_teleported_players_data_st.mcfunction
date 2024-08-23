@@ -13,9 +13,9 @@
 #
 
 # get team
-execute if entity @s[team=neutral] run data modify storage minecraft:hipochallenge local_players_team set value "neutral"
-execute if entity @s[team=team1] run data modify storage minecraft:hipochallenge local_players_team set value "team1"
-execute if entity @s[team=team2] run data modify storage minecraft:hipochallenge local_players_team set value "team2"
+function hipochallenge:teams/get/get_self_team
+# gives ownership of:
+    # local_self_team
 
 # get self data
 data modify storage minecraft:hipochallenge local_self_pos_x set from entity @s Pos[0]
@@ -39,7 +39,7 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_furthest_teammate_da
     # local_other_pitch
 
 # free memory
-data remove storage minecraft:hipochallenge local_players_team
+data remove storage minecraft:hipochallenge local_self_team
 # these values are generated, so they are not freed:
     # local_other_uuid
     # local_other_pos_x

@@ -37,4 +37,7 @@ effect give @s instant_health 1 100 true
 
 # remove modifiers
     # tank modifiers
-        function hipochallenge:attributes/modifiers/tank/kit3/remove
+        function hipochallenge:attributes/modifiers/class/tank/kit3/remove_armor/remove
+    
+    # assassin modifiers
+        function hipochallenge:attributes/modifiers/class/assassin/kit1/parrying/remove

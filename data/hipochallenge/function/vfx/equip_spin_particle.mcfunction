@@ -1,3 +1,5 @@
+# TODO: change implementation of the spinning particles. timer scoreboard is used for decreasing values
+
 scoreboard players add @s timer 20
 
 execute at @s run particle happy_villager ^ ^ ^0.75 0 0 0 0 0 normal

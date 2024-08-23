@@ -17,6 +17,5 @@
     execute as @s[scores={tank_kit2_goat_horn_cd=1}] run function hipochallenge:replace_item/replace {custom_data:"{item_id:tank_k2_goat_horn_cd}",item_modifier:"hipochallenge:class/tank/kit2/goat_horn"}
 
     # goat horn detection
-    
     execute as @s[tag=tank_kit2_goat_horn_detecting,scores={tank_kit2_goat_horn_recovery_ticks=1..}] at @s run function hipochallenge:abilities/class/tank/kit2/goat_horn/detect_enemy_players
     
