@@ -93,6 +93,10 @@ scoreboard objectives add assault_kit2_void_arrow_cd dummy
 scoreboard objectives add assault_kit3_assault_shield_cd dummy
 scoreboard objectives add assault_kit3_pushing_projectile_cd dummy
 
+# item scores
+scoreboard objectives add bow_shot minecraft.used:minecraft.bow
+
+# display scores
 scoreboard objectives add match_request_display dummy
 
 # score init

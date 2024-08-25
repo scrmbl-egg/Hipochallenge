@@ -17,6 +17,9 @@
         "components": {
             "minecraft:custom_data": "{item_id:marksman_k1_smoke_arrow_crossbow}",
             "minecraft:custom_model_data": 0,
+            "minecraft:unbreakable": {
+                "show_in_tooltip": false
+            },
             "minecraft:charged_projectiles": [
                 {
                     "id": "minecraft:arrow",

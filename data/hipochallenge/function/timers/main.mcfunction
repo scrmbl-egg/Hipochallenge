@@ -13,8 +13,11 @@ execute as @a[scores={tank_kit3_goat_horn_cd=1..}] run scoreboard players remove
 execute as @a[scores={tank_kit3_bubble_shield_cd=1..}] run scoreboard players remove @s tank_kit3_bubble_shield_cd 1
 execute as @a[scores={tank_kit3_redirect_spirit_cd=1..}] run scoreboard players remove @s tank_kit3_redirect_spirit_cd 1
 execute as @a[scores={tank_perk1_nutritious_meal_cd=1..}] run scoreboard players remove @s tank_perk1_nutritious_meal_cd 1
+execute as @a[scores={marksman_kit1_new_projectile_cd=1..}] run scoreboard players remove @s marksman_kit1_new_projectile_cd 1
 execute as @a[scores={marksman_kit1_archers_potion_cd=1..}] run scoreboard players remove @s marksman_kit1_archers_potion_cd 1
 execute as @a[scores={marksman_kit1_smoke_arrow_crossbow_cd=1..}] run scoreboard players remove @s marksman_kit1_smoke_arrow_crossbow_cd 1
+execute as @a[scores={marksman_kit2_new_projectile_cd=1..}] run scoreboard players remove @s marksman_kit2_new_projectile_cd 1
+execute as @a[scores={marksman_kit3_new_projectile_cd=1..}] run scoreboard players remove @s marksman_kit3_new_projectile_cd 1
 execute as @a[scores={marksman_kit3_pistol_cd=1..}] run scoreboard players remove @s marksman_kit3_pistol_cd 1
 execute as @a[scores={marksman_kit3_el_diablo_bullet_cd=1..}] run scoreboard players remove @s marksman_kit3_el_diablo_bullet_cd 1
 execute as @a[scores={assassin_kit1_duelist_sword_parry_cd=1..}] run scoreboard players remove @s assassin_kit1_duelist_sword_parry_cd 1

@@ -24,7 +24,7 @@ recipe take @a *
                 function hipochallenge:vfx/maps/map0/pipe_particles
     
 # abilities
-    execute as @a run function hipochallenge:abilities/main
+    function hipochallenge:abilities/main
 
 # menu
     execute as @a run function hipochallenge:menus/logic/menu_main
