@@ -1,0 +1,17 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:barrier"
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:marksman_k1_smoke_arrow_crossbow_cd}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:unbreakable": {
+                "show_in_tooltip": false
+            },
+            "!minecraft:food": {}
+        }
+    }
+]

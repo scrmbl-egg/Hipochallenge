@@ -148,6 +148,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge MARKSMAN_K1_MAX_PROJECTILE_AMOUNT set value 6
         data modify storage minecraft:hipochallenge MARKSMAN_K1_NEW_PROJECTILE_FIRST_CD_TICKS set value 60
         data modify storage minecraft:hipochallenge MARKSMAN_K1_NEW_PROJECTILE_REST_CD_TICKS set value 20
+        data modify storage minecraft:hipochallenge MARKSMAN_K1_SMOKE_ARROW_CROSSBOW_CD_TICKS set value -1
     # kit 2
         data modify storage minecraft:hipochallenge MARKSMAN_K2_NAME_TRANSLATION_KEY set value "hc.class.marksman.kit2"
         
