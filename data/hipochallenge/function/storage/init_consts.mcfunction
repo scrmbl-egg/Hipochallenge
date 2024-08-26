@@ -145,17 +145,20 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     # kit 1
         data modify storage minecraft:hipochallenge MARKSMAN_K1_NAME_TRANSLATION_KEY set value "hc.class.marksman.kit1"
     
+        data modify storage minecraft:hipochallenge MARKSMAN_K1_MAX_PROJECTILE_AMOUNT set value 6
         data modify storage minecraft:hipochallenge MARKSMAN_K1_NEW_PROJECTILE_FIRST_CD_TICKS set value 60
         data modify storage minecraft:hipochallenge MARKSMAN_K1_NEW_PROJECTILE_REST_CD_TICKS set value 20
     # kit 2
         data modify storage minecraft:hipochallenge MARKSMAN_K2_NAME_TRANSLATION_KEY set value "hc.class.marksman.kit2"
         
+        data modify storage minecraft:hipochallenge MARKSMAN_K2_MAX_PROJECTILE_AMOUNT set value 5
         data modify storage minecraft:hipochallenge MARKSMAN_K2_NEW_PROJECTILE_FIRST_CD_TICKS set value 80
         data modify storage minecraft:hipochallenge MARKSMAN_K2_NEW_PROJECTILE_REST_CD_TICKS set value 30
     # kit 3
         data modify storage minecraft:hipochallenge MARKSMAN_K3_NAME_TRANSLATION_KEY set value "hc.class.marksman.kit3"
     
-        # TODO: Change these placeholder values
+        data modify storage minecraft:hipochallenge MARKSMAN_K3_MAX_LOADED_PROJECTILE_AMOUNT set value 6
+        data modify storage minecraft:hipochallenge MARKSMAN_K3_MAX_PROJECTILE_AMOUNT set value 3
         data modify storage minecraft:hipochallenge MARKSMAN_K3_NEW_PROJECTILE_FIRST_CD_TICKS set value 80
         data modify storage minecraft:hipochallenge MARKSMAN_K3_NEW_PROJECTILE_REST_CD_TICKS set value 40
         data modify storage minecraft:hipochallenge MARKSMAN_K3_PISTOL_RECOIL_PITCH set value -20

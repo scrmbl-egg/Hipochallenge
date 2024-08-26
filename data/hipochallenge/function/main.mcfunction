@@ -9,10 +9,6 @@ recipe take @a *
     # TODO: Move this function to a separate folder
     execute as @a[scores={is_dead=1..}] at @s run function hipochallenge:death/handle_death
 
-# music
-
-    function hipochallenge:music/mute_vanilla_music
-
 # vfx
     function hipochallenge:vfx/main
 

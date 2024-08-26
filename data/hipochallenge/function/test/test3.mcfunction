@@ -1,1 +1,1 @@
-function hipochallenge:teams/names/set_team2_name {name:"hipoteam"}
+function hipochallenge:abilities/class/marksman/kit2/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge

@@ -20,6 +20,8 @@ scoreboard objectives add id dummy
 
 # TODO: Delete var scoreboard when memory transition is done.
 
+# TODO: Move scores to their own separate init functions
+
 #scoreboard objectives add var dummy
 scoreboard objectives add timer dummy
 scoreboard objectives add silence_timer dummy
