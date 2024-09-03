@@ -2,7 +2,7 @@ advancement revoke @s only hipochallenge:used_items/class/assassin/kit1/used_due
 
 function hipochallenge:msg/debug/msg_info {msg:"parried"}
 
-# set entity range attribute modifiers (lasts until )
+# set entity range attribute modifiers (must last until hitbox is gone)
 function hipochallenge:attributes/modifiers/class/assassin/kit1/parrying/add
 
 # get self uuid

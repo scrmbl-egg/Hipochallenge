@@ -110,6 +110,11 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge TANK_K3_HORN_CD_TICKS set value -1
         data modify storage minecraft:hipochallenge TANK_K3_BUBBLE_SHIELD_CD_TICKS set value -1
         data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_ID set value "tank_k3_horn"
+        data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_AMOUNT set value -6
+        data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_BUFF_RANGE_BLOCKS set value 6
+        data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_BUFF_MODIFIER_AMOUNT set value 6
+        data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_BUFF_MODIFIER_ID set value "tank_k3_spirit_buff"
+        data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_DEBUFF_MODIFIER_ID set value "tank_k3_spirit_debuff"
     #
     # perk 1
         data modify storage minecraft:hipochallenge TANK_P1_NAME_TRANSLATION_KEY set value "hc.class.tank.perk1"

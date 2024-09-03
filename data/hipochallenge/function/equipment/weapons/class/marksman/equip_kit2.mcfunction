@@ -1,5 +1,3 @@
-# TODO: Add names and descriptions
-
 # crossbow
 item replace entity @s hotbar.0 with paper
 item modify entity @s hotbar.0 hipochallenge:class/marksman/kit2/crossbow

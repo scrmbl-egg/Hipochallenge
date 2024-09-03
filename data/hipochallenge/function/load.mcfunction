@@ -215,6 +215,15 @@ team modify not_playing color white
 team modify not_playing displayName {"translate":"hc.teams.not_playing.name","fallback":"Not playing"}
 team modify not_playing prefix ""
 
+team add no_collision_entity
+team modify no_collision_entity collisionRule never
+team modify no_collision_entity friendlyFire true
+team modify no_collision_entity nametagVisibility never
+team modify no_collision_entity seeFriendlyInvisibles false
+team modify no_collision_entity color white
+team modify no_collision_entity displayName "no_collision_entity"
+team modify no_collision_entity prefix ""
+
 # gamerules
 
 function hipochallenge:msg/debug/msg_info {msg:"Setting gamerules..."}

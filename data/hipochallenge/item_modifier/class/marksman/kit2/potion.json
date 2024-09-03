@@ -8,7 +8,7 @@
         "entity": "this",
         "target": "item_name",
         "name": {
-            "translate": "hc.items.marksman.kit1.potion",
+            "translate": "hc.items.marksman.kit2.potion",
             "fallback": "Archer's potion"
         }
     },

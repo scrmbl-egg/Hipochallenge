@@ -1,4 +1,3 @@
-
 # kit 1
     # castle
     execute as @a[scores={tank_kit1_castle_cd=1}] run function hipochallenge:replace_item/replace {custom_data:"{item_id:tank_k1_castle_cd}",item_modifier:"hipochallenge:class/tank/kit1/castle"}
@@ -18,4 +17,6 @@
 
     # goat horn detection
     execute as @a[tag=tank_kit2_goat_horn_detecting,scores={tank_kit2_goat_horn_recovery_ticks=1..}] at @s run function hipochallenge:abilities/class/tank/kit2/goat_horn/detect_enemy_players
-    
+# kit 3
+    # spirit
+    execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/main
