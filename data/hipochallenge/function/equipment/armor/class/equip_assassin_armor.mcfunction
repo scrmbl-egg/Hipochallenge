@@ -1,5 +1,7 @@
 # params: team_trim, team_armor_color
 
+# TODO: rename with _st suffix
+
 # attributes
 function hipochallenge:attributes/default/class/set_assassin_attributes
 

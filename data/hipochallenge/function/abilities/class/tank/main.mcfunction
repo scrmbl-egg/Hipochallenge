@@ -19,4 +19,5 @@
     execute as @a[tag=tank_kit2_goat_horn_detecting,scores={tank_kit2_goat_horn_recovery_ticks=1..}] at @s run function hipochallenge:abilities/class/tank/kit2/goat_horn/detect_enemy_players
 # kit 3
     # spirit
+    execute as @a run function hipochallenge:attributes/modifiers/class/tank/kit3/spirit/remove_buff_st with storage hipochallenge
     execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/main
