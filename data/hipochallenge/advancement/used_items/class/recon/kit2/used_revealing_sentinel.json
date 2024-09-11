@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": "{item_id:recon_k2_revealing_sentinel}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hipochallenge:abilities/class/recon/kit2/on_revealing_sentinel_placed"
+    }
+}

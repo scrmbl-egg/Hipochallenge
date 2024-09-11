@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/marksman/kit2/place_slowness_trap"
+        "function": "hipochallenge:abilities/class/marksman/kit2/on_slowness_trap_used"
     }
 }

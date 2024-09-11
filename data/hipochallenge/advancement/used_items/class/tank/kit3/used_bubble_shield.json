@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/tank/kit3/place_bubble_shield"
+        "function": "hipochallenge:abilities/class/tank/kit3/on_bubble_shield_used"
     }
 }

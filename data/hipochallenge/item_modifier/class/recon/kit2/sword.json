@@ -1,0 +1,35 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:stone_sword"
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:recon_k2_sword}",
+            "minecraft:unbreakable": {
+                "show_in_tooltip": false
+            },
+            "minecraft:custom_model_data": 0,
+            "minecraft:attribute_modifiers": {
+                "modifiers": [
+                    {
+                        "id": "recon_k2_sword_attack_damage",
+                        "type": "minecraft:generic.attack_damage",
+                        "amount": 4,
+                        "operation": "add_value",
+                        "slot": "mainhand"
+                    },
+                    {
+                        "id": "recon_k2_sword_attack_speed",
+                        "type": "minecraft:generic.attack_speed",
+                        "amount": -2.4,
+                        "operation": "add_value",
+                        "slot": "mainhand"
+                    }
+                ],
+                "show_in_tooltip": false
+            }
+        }
+    }
+]

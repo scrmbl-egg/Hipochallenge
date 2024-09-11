@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/marksman/kit3/shoot_revolver"
+        "function": "hipochallenge:abilities/class/marksman/kit3/on_revolver_used"
     }
 }

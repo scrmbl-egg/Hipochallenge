@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:shot_crossbow",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": "{item_id:recon_k2_flare_arrow_crossbow}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hipochallenge:abilities/class/recon/kit2/on_flare_arrow_crossbow_shot"
+    }
+}

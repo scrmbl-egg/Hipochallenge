@@ -7,6 +7,9 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": "{item_id:assassin_k2_sword}",
+            "minecraft:unbreakable": {
+                "show_in_tooltip": false
+            },
             "minecraft:custom_model_data": 0,
             "minecraft:attribute_modifiers": {
                 "modifiers": [

@@ -6,6 +6,7 @@
     execute as @a[scores={bow_shot=1..}] run scoreboard players set @s bow_shot 0
     
     # arrows
+    # HACK: this command must be changed to a proper give with item modifier
     execute as @a[scores={marksman_kit1_new_projectile_cd=1},gamemode=!creative] run function hipochallenge:abilities/class/marksman/kit1/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
     
 # kit 2

@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assassin/kit1/perform_parry"
+        "function": "hipochallenge:abilities/class/assassin/kit1/on_parry_performed"
     }
 }

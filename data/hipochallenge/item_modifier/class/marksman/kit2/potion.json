@@ -9,7 +9,7 @@
         "target": "item_name",
         "name": {
             "translate": "hc.items.marksman.kit2.potion",
-            "fallback": "Archer's potion"
+            "fallback": "Archer's Potion"
         }
     },
     {

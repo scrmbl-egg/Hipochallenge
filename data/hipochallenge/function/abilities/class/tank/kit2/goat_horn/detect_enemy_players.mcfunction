@@ -5,9 +5,9 @@ scoreboard players set @s tank_kit2_goat_horn_nearby_enemies 0
 data modify storage minecraft:hipochallenge local_enemy_uuid_array set value []
 
 # get enemy team
-execute if entity @s[team=neutral] run data modify storage minecraft:hipochallenge local_enemy_team set value "neutral"
-execute if entity @s[team=team1] run data modify storage minecraft:hipochallenge local_enemy_team set value "team2"
-execute if entity @s[team=team2] run data modify storage minecraft:hipochallenge local_enemy_team set value "team1"
+function hipochallenge:teams/get/get_enemy_team
+# gives ownership of:
+    # local_enemy_team
 
 # fill array with enemy team members
 # in:

@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/marksman/kit3/place_mirror"
+        "function": "hipochallenge:abilities/class/marksman/kit3/on_mirror_used"
     }
 }

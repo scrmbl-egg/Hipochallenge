@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/tank/kit3/redirect_spirit"
+        "function": "hipochallenge:abilities/class/tank/kit3/on_redirect_spirit_used"
     }
 }

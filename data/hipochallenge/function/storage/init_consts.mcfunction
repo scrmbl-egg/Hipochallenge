@@ -109,6 +109,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
     
         data modify storage minecraft:hipochallenge TANK_K3_HORN_CD_TICKS set value -1
         data modify storage minecraft:hipochallenge TANK_K3_BUBBLE_SHIELD_CD_TICKS set value -1
+        data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_CD_TICKS set value 100
         data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_ID set value "tank_k3_horn"
         data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_AMOUNT set value -6
         data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_BUFF_RANGE_BLOCKS set value 6
@@ -207,7 +208,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge ASSASSIN_K1_NAME_TRANSLATION_KEY set value "hc.class.assassin.kit1"
         
         data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_SUMMON_DISTANCE set value 0.5
-        data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_GLOBAL_Y_OFFSET set value -0.75
+        data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_GLOBAL_Y_OFFSET set value -0.9
         data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_HEIGHT set value 1.25
         data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_WIDTH set value 0.54
         data modify storage minecraft:hipochallenge ASSASSIN_K1_PARRY_INTERACTION_LIFETIME_TICKS set value 10
@@ -277,6 +278,15 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge RECON_K1_NAME_TRANSLATION_KEY set value "hc.class.recon.kit1"
     # kit 2
         data modify storage minecraft:hipochallenge RECON_K2_NAME_TRANSLATION_KEY set value "hc.class.recon.kit2"
+        
+        data modify storage minecraft:hipochallenge RECON_K2_MAX_FLARE_ARROW_AMOUNT set value 1
+        data modify storage minecraft:hipochallenge RECON_K2_NEW_FLARE_ARROW_FIRST_CD_TICKS set value 120
+        data modify storage minecraft:hipochallenge RECON_K2_NEW_FLARE_ARROW_REST_CD_TICKS set value -1
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_DETECTION_RANGE set value 1.5
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_EXPLOSION_RANGE set value 4.5
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_GLOWING_DURATION_SECONDS set value 5
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_BLINDNESS_AMPLIFIER set value 0
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_BLINDNESS_DURATION_SECONDS set value 2
     # kit 3
         data modify storage minecraft:hipochallenge RECON_K3_NAME_TRANSLATION_KEY set value "hc.class.recon.kit3"
     #

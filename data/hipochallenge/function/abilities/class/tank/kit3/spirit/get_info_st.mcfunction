@@ -1,0 +1,1 @@
+$execute at @p[nbt={UUID:$(local_spirit_target)}] run function hipochallenge:teams/get/get_self_team
