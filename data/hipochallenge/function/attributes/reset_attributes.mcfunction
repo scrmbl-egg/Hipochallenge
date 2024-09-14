@@ -1,4 +1,9 @@
-# set base
+# NOTE:
+# this function has hardcoded values because they are taken directly from the minecraft wiki:
+# https://minecraft.wiki/w/Attribute
+# do not change these values unless they don't match the wiki docs, or are modified in new versions
+
+# set attributes whose bases are modified in the game
 attribute @s generic.max_health base set 20
 attribute @s generic.armor base set 0
 attribute @s generic.armor_toughness base set 0
@@ -6,7 +11,7 @@ attribute @s generic.scale base set 1
 attribute @s generic.burning_time base set 1
 attribute @s generic.explosion_knockback_resistance base set 0
 
-# set base of other attributes (taken from https://minecraft.wiki/w/Attribute)
+# set attributes whose bases aren't modified in the game (in theory)
 attribute @s generic.attack_damage base set 1
 attribute @s generic.attack_knockback base set 0
 #attribute @s generic.attack_reach base set 2.5 (only exists in JE combat tests)
@@ -37,7 +42,11 @@ effect give @s instant_health 1 100 true
 
 # remove modifiers
     # tank modifiers
-        function hipochallenge:attributes/modifiers/class/tank/kit3/remove_armor/remove
+    
+    # kit 3
+        function hipochallenge:attributes/modifiers/class/tank/kit3/remove_armor/remove_st with storage minecraft:hipochallenge
+        
+        function hipochallenge:attributes/modifiers/class/tank/kit3/spirit/remove_debuff_st with storage minecraft:hipochallenge
     
     # assassin modifiers
         function hipochallenge:attributes/modifiers/class/assassin/kit1/parrying/remove

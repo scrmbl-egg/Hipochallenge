@@ -1,0 +1,28 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:paper"
+    },
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "hc.items.support.kit1.snow_sentinel",
+            "fallback": "Snow Sentinel"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:support_k1_snow_sentinel}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:food": {
+                "nutrition": 0,
+                "saturation": 0,
+                "can_always_eat": true,
+                "eat_seconds": 1000000
+            }
+        }
+    }
+]

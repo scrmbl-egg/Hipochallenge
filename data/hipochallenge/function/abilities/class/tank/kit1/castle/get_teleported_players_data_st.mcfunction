@@ -40,10 +40,3 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_furthest_teammate_da
 
 # free memory
 data remove storage minecraft:hipochallenge local_self_team
-# these values are generated, so they are not freed:
-    # local_other_uuid
-    # local_other_pos_x
-    # local_other_pos_y
-    # local_other_pos_z
-    # local_other_yaw
-    # local_other_pitch

@@ -23,13 +23,24 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_teleported_players_d
     # local_other_pitch
 
 # teleport players (with vfx)
+# in:
+    # local_self_pos_x
+    # local_self_pos_y
+    # local_self_pos_z
+    # local_self_yaw
+    # local_self_pitch
+    # local_other_uuid
+    # local_other_pos_x
+    # local_other_pos_y
+    # local_other_pos_z
+    # local_other_yaw
+    # local_other_pitch
 function hipochallenge:abilities/class/tank/kit1/castle/teleport_players_st with storage minecraft:hipochallenge
 
 # handle cooldown
 function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_castle,cd_item_modifier:"hipochallenge:class/tank/kit1/castle_cd",cd_score:tank_kit1_castle_cd,cd_const:TANK_K1_CASTLING_CD_TICKS}
 
-# free memory and remove tags
-data remove storage minecraft:hipochallenge local_players_team
+# free memory
 data remove storage minecraft:hipochallenge local_self_pos_x
 data remove storage minecraft:hipochallenge local_self_pos_y
 data remove storage minecraft:hipochallenge local_self_pos_z
