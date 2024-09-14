@@ -3,7 +3,7 @@
     # local_function_st
 
 # turn current iteration into data for next caption
-execute store result storage minecraft:hipochallenge local_idx int 1 run scoreboard players get $local_i local
+execute store result storage minecraft:hipochallenge local_idx int 1 run scoreboard players get $local_i local_000
 
 # in:
     # local_array_name
@@ -21,7 +21,7 @@ function hipochallenge:std/map/unsafe/run_function_with_element with storage min
 data remove storage minecraft:hipochallenge local_element
 
 # add one to current iteration
-scoreboard players add $local_i local 1
+scoreboard players add $local_i local_000 1
 
 # run function_st and reiterate if local_i < local_size
-execute if score $local_i local < $local_size local as @s run function hipochallenge:std/map/unsafe/iterate_st with storage minecraft:hipochallenge
+execute if score $local_i local_000 < $local_size local_000 as @s run function hipochallenge:std/map/unsafe/iterate_st with storage minecraft:hipochallenge
