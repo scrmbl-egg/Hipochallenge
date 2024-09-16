@@ -1,1 +1,1 @@
-function hipochallenge:abilities/class/marksman/kit2/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
+function hipochallenge:std/aabb/cast_from_consts {selector:"@e",dx_const:"RECON_K2_FLARE_ARROW_DETECTION_DX",dy_const:"RECON_K2_FLARE_ARROW_DETECTION_DY",dz_const:"RECON_K2_FLARE_ARROW_DETECTION_DZ",cmd:"say hola"}
