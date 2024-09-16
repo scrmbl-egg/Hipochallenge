@@ -8,10 +8,10 @@ execute on origin run function hipochallenge:teams/get/get_enemy_team
 # gives ownership of:
     # local_enemy_team
 
-# get arrow motion for more checks
-data modify storage minecraft:hipochallenge local_arrow_motion_x set from entity @s Motion[0]
-data modify storage minecraft:hipochallenge local_arrow_motion_y set from entity @s Motion[1]
-data modify storage minecraft:hipochallenge local_arrow_motion_z set from entity @s Motion[2]
+# get arrow motion (and a bit more) for more checks
+execute store result storage minecraft:hipochallenge local_arrow_motion_x double 1 run data get entity @s Motion[0]
+execute store result storage minecraft:hipochallenge local_arrow_motion_y double 1 run data get entity @s Motion[1]
+execute store result storage minecraft:hipochallenge local_arrow_motion_z double 1 run data get entity @s Motion[2]
 
 # in:
     # local_owner_uuid
@@ -19,7 +19,7 @@ data modify storage minecraft:hipochallenge local_arrow_motion_z set from entity
     # local_arrow_motion_x
     # local_arrow_motion_y
     # local_arrow_motion_z
-function hipochallenge:projectiles/flare_arrows/detection/cast_aabbs_st with storage minecraft:hipochallenge
+execute at @s run function hipochallenge:projectiles/flare_arrows/detection/cast_aabbs_st with storage minecraft:hipochallenge
 # sets $must_explode local score to 1 if the internal aabb cast works
 
 # if it never finds an enemy, explode directly when arrow hits a surface
