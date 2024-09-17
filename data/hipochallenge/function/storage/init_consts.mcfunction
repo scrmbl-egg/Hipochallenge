@@ -282,10 +282,10 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge RECON_K2_MAX_FLARE_ARROW_AMOUNT set value 1
         data modify storage minecraft:hipochallenge RECON_K2_NEW_FLARE_ARROW_FIRST_CD_TICKS set value 120
         data modify storage minecraft:hipochallenge RECON_K2_NEW_FLARE_ARROW_REST_CD_TICKS set value -1
-        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_DETECTION_DX set value 1.5
-        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_DETECTION_DY set value 1.5
-        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_DETECTION_DZ set value 1.5
-        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_EXPLOSION_RANGE set value 4.5
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_DETECTION_DX set value 2.2
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_DETECTION_DY set value 2.2
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_DETECTION_DZ set value 2.2
+        data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_EXPLOSION_RANGE set value 6
         data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_GLOWING_DURATION_SECONDS set value 5
         data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_BLINDNESS_AMPLIFIER set value 0
         data modify storage minecraft:hipochallenge RECON_K2_FLARE_ARROW_BLINDNESS_DURATION_SECONDS set value 2

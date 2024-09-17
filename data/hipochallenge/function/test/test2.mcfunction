@@ -1,4 +1,1 @@
-# storage:
-    # local_element
-
-$tellraw @a "$(local_element)"
+function hipochallenge:std/self_reference/self_reference {function:"hipochallenge:test/test"}

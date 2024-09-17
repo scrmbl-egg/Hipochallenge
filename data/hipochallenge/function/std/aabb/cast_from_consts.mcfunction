@@ -1,8 +1,8 @@
 # params:
     # selector  (entity selector)
-    # dx_const  (volume x component)
-    # dy_const  (volume y component)
-    # dz_const  (volume z component)
+    # dx_const  (size x)
+    # dy_const  (size y)
+    # dz_const  (size z)
     # cmd       (command executed on success)
 
 # save params

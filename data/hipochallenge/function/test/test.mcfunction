@@ -1,7 +1,7 @@
+data modify storage minecraft:hipochallenge local_test set value "Mariete"
 
-# construct array
-data modify storage minecraft:hipochallenge arr set value [1,0,0,0,1]
+execute if function hipochallenge:std/self_reference/should_return run return fail
 
-function hipochallenge:std/map/run {array_name:arr,function_st:'hipochallenge:test/test2'}
+$say $(local_test)
 
-data remove storage minecraft:hipochallenge arr
+data remove storage minecraft:hipochallenge local_test

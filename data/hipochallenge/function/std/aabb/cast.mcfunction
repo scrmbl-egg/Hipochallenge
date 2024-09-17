@@ -1,8 +1,8 @@
 # params:
     # selector  (entity selector)
-    # dx        (volume x component)
-    # dy        (volume y component)
-    # dz        (volume z component)
+    # dx        (size x)
+    # dy        (size y)
+    # dz        (size z)
     # cmd       (command executed on success) 
 
 # save params
