@@ -20,15 +20,18 @@ data modify storage minecraft:hipochallenge ROUND_DURATION_TICKS set value 2400
 data modify storage minecraft:hipochallenge WIN_ROUNDS set value 5
 data modify storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS set value 1200
 
-## TEAMS
+## SYSTEMS CONSTANTS
 
+data modify storage minecraft:hipochallenge MAX_RAY_CASTING_ITERATIONS set value 256
+
+## TEAMS
 
 data modify storage minecraft:hipochallenge TEAM1_DEFAULT_NAME set value "Team 1"
 data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2"
 
 # neutral
     data modify storage minecraft:hipochallenge NEUTRAL_TEAM_COLOR_NUMBER set value -1
-    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_COLOR_DUST set value [0.400,0.400,0.400]
+    data modify storage minecraft:hipochallenge NEUTRAL_TEAM_DUST_COLOR set value [0.400,0.400,0.400]
     data modify storage minecraft:hipochallenge NEUTRAL_TEAM_TEXT_COLOR set value "white"
     data modify storage minecraft:hipochallenge NEUTRAL_TEAM_ARMOR_COLOR set value 6579300
     data modify storage minecraft:hipochallenge NEUTRAL_TEAM_TRIM_MATERIAL set value "netherite"
@@ -112,6 +115,8 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_CD_TICKS set value 100
         data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_ID set value "tank_k3_horn"
         data modify storage minecraft:hipochallenge TANK_K3_HORN_ARMOR_MODIFIER_AMOUNT set value -6
+        data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_SELECTOR_RANGE_BLOCKS set value 5
+        data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_SELECTOR_RANGE_SPHERE_BLOCKS set value 5
         data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_BUFF_RANGE_BLOCKS set value 6
         data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_BUFF_MODIFIER_AMOUNT set value 6
         data modify storage minecraft:hipochallenge TANK_K3_SPIRIT_BUFF_MODIFIER_ID set value "tank_k3_spirit_buff"

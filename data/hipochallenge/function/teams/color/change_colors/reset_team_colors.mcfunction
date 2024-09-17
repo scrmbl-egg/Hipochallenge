@@ -2,12 +2,14 @@ execute at @a as @s run playsound minecraft:entity.experience_orb.pickup master 
 team modify team1 color white
 team modify team2 color white
 
-data modify storage minecraft:hipochallenge team1_color set value "white"
+# TODO: get values from neutral team instead of hardcoding
+
+data modify storage minecraft:hipochallenge team1_text_color set value "white"
 data modify storage minecraft:hipochallenge team1_trim set value "quartz"
 data modify storage minecraft:hipochallenge team1_dust_color set value "[1.000,1.000,1.000]"
 data modify storage minecraft:hipochallenge team1_armor_color set value 13224393
 data modify storage minecraft:hipochallenge team1_color_number set value 0
-data modify storage minecraft:hipochallenge team2_color set value "white"
+data modify storage minecraft:hipochallenge team2_text_color set value "white"
 data modify storage minecraft:hipochallenge team2_trim set value "quartz"
 data modify storage minecraft:hipochallenge team2_dust_color set value "[1.000,1.000,1.000]"
 data modify storage minecraft:hipochallenge team2_armor_color set value 13224393

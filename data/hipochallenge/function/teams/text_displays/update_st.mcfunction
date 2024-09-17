@@ -1,3 +1,7 @@
+# storage:
+    # team1_name
+    # team2_name
+
 # TODO: make text displays support translated team names
 # although, these should probably be moved to another location
 

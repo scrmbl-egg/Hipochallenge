@@ -1,1 +1,0 @@
-function hipochallenge:std/aabb/cast_from_consts {selector:"@a",dx_const:RECON_K2_FLARE_ARROW_DETECTION_DX,dy_const:RECON_K2_FLARE_ARROW_DETECTION_DY,dz_const:RECON_K2_FLARE_ARROW_DETECTION_DZ,cmd:"say hola"}

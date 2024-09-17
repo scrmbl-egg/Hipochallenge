@@ -4,7 +4,7 @@ execute unless predicate hipochallenge:teams/has_team1_name_changed run function
 execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
 team modify team1 color green
 
-data modify storage minecraft:hipochallenge team1_color set from storage minecraft:hipochallenge GREEN_TEAM_TEXT_COLOR
+data modify storage minecraft:hipochallenge team1_text_color set from storage minecraft:hipochallenge GREEN_TEAM_TEXT_COLOR
 data modify storage minecraft:hipochallenge team1_trim set from storage minecraft:hipochallenge GREEN_TEAM_TRIM_MATERIAL
 data modify storage minecraft:hipochallenge team1_dust_color set from storage minecraft:hipochallenge GREEN_TEAM_DUST_COLOR
 data modify storage minecraft:hipochallenge team1_armor_color set from storage minecraft:hipochallenge GREEN_TEAM_ARMOR_COLOR

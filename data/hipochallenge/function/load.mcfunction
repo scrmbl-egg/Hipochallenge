@@ -33,6 +33,8 @@ scoreboard objectives add class dummy
 scoreboard objectives add kit dummy
 scoreboard objectives add perk dummy
 
+scoreboard objectives add has_left minecraft.custom:minecraft.leave_game
+
 scoreboard objectives add is_dead deathCount
 scoreboard objectives add death_count deathCount
 scoreboard objectives add has_killed playerKillCount
