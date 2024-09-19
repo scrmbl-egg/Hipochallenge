@@ -1,2 +1,2 @@
 playsound minecraft:block.vault.activate master @s[gamemode=!creative] ~ ~ ~ 1 1
-execute as @s[gamemode=!creative] run function hipochallenge:replace_item/give {item_modifier:"hipochallenge:class/tank/kit2/trident",count:1}
+execute as @s[gamemode=!creative] run function hipochallenge:replace_item/give {item_modifier:"hipochallenge:weapons/class/tank/kit2/trident",count:1}

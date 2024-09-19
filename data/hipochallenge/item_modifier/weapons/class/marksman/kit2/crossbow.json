@@ -21,9 +21,12 @@
                 "show_in_tooltip": false
             },
             "minecraft:enchantments": {
-                "piercing": 1
+                "levels": {
+                    "piercing": 1
+                },
+                "show_in_tooltip": false
             },
-            "minecraft:hide_tooltip": {}
+            "minecraft:hide_additional_tooltip": {}
         }
     }
 ]

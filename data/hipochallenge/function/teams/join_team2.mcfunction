@@ -1,7 +1,7 @@
 team leave @s
 
-execute if predicate hipochallenge:teams/has_team1_name_changed run function hipochallenge:msg/all/inject_text/msg_all_inject {txt:'{"translate":"hc.msg.all.player_has_joined_team","fallback":"%1$s has joined %2$s","with":[{"selector":"@s","color":"gray"},{"nbt":"team2_name","storage":"minecraft:hipochallenge","color":"green"}]}'}
-execute unless predicate hipochallenge:teams/has_team1_name_changed run function hipochallenge:msg/all/inject_text/msg_all_inject {txt:'{"translate":"hc.msg.all.player_has_joined_team","fallback":"%1$s has joined %2$s","with":[{"selector":"@s","color":"gray"},{"translate":"hc.teams.team2.default_name","fallback":"Team 2","color":"green"}]}'}
+execute if predicate hipochallenge:teams/has_team1_name_changed run function hipochallenge:msg/all/inject_text/msg_all_inject {txt:'{"translate":"hc.msg.all.player_has_joined_team","fallback":"%1$s has joined %2$s","with":[{"selector":"@s","color":"gray"},{"nbt":"team2_name","storage":"minecraft:hipochallenge","color":"green","underlined":true}]}'}
+execute unless predicate hipochallenge:teams/has_team1_name_changed run function hipochallenge:msg/all/inject_text/msg_all_inject {txt:'{"translate":"hc.msg.all.player_has_joined_team","fallback":"%1$s has joined %2$s","with":[{"selector":"@s","color":"gray"},{"translate":"hc.teams.team2.default_name","fallback":"Team 2","color":"green","underlined":true}]}'}
 
 team join team2 @s
 

@@ -132,11 +132,12 @@ execute if predicate hipochallenge:class/has_all_options_selected store result s
 execute if predicate hipochallenge:class/has_all_options_selected store result storage minecraft:hipochallenge local_list_info_death_count int 1 run scoreboard players get @s death_count
 execute if predicate hipochallenge:class/has_all_options_selected store result storage minecraft:hipochallenge local_list_info_points int 1 run scoreboard players get @s points
 
-execute as @s[team=!admins,team=!spectators] if predicate hipochallenge:class/has_all_options_selected run function hipochallenge:list_info/display_list_info_st with storage minecraft:hipochallenge
+execute as @s[team=!admins,team=!spectators,team=!not_playing] if predicate hipochallenge:class/has_all_options_selected run function hipochallenge:list_info/display_list_info_st with storage minecraft:hipochallenge
 
 execute as @s unless predicate hipochallenge:class/has_all_options_selected run scoreboard players display numberformat @s player_list_info blank
 execute as @s[team=admins] run scoreboard players display numberformat @s player_list_info blank
 execute as @s[team=spectators] run scoreboard players display numberformat @s player_list_info blank
+execute as @s[team=not_playing] run scoreboard players display numberformat @s player_list_info blank
 
 #  free storage memory (holy sh*t)
 data remove storage minecraft:hipochallenge local_list_info_class_name_key

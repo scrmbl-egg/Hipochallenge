@@ -20,9 +20,10 @@ data modify storage minecraft:hipochallenge ROUND_DURATION_TICKS set value 2400
 data modify storage minecraft:hipochallenge WIN_ROUNDS set value 5
 data modify storage minecraft:hipochallenge MATCH_REQUEST_DURATION_TICKS set value 1200
 
-## SYSTEMS CONSTANTS
+## LIMITS
 
 data modify storage minecraft:hipochallenge MAX_RAY_CASTING_ITERATIONS set value 256
+data modify storage minecraft:hipochallenge NO_GRAVITY_PROJECTILES_LIFETIME_TICKS set value 200
 
 ## TEAMS
 

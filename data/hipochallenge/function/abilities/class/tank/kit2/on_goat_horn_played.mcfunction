@@ -9,5 +9,7 @@ execute if entity @s[team=spectators] run return run function hipochallenge:msg/
 # give tag to player
 tag @s add tank_kit2_goat_horn_detecting
 
+execute store result score @s tank_kit2_goat_horn_recovery_ticks run data get storage minecraft:hipochallenge TANK_K2_HORN_RECOVERY_TICKS
+
 # handle cooldown
-function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k2_goat_horn,cd_item_modifier:"hipochallenge:class/tank/kit2/goat_horn_cd",cd_score:tank_kit2_goat_horn_cd,cd_const:TANK_K2_HORN_CD_TICKS}
+function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k2_goat_horn,cd_item_modifier:"hipochallenge:weapons/class/tank/kit2/goat_horn_cd",cd_score:tank_kit2_goat_horn_cd,cd_const:TANK_K2_HORN_CD_TICKS}

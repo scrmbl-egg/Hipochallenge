@@ -19,6 +19,7 @@ function hipochallenge:msg/debug/msg_info {msg:"Creating scoreboards..."}
 scoreboard objectives add id dummy
 
 # TODO: Delete var scoreboard when memory transition is done.
+# TODO: 'timer' score is probably not very descriptive. 'lifetime' could work better for what it's being used for
 
 # TODO: Move scores to their own separate init functions
 
@@ -178,8 +179,8 @@ team modify admins friendlyFire false
 team modify admins nametagVisibility always
 team modify admins seeFriendlyInvisibles true
 team modify admins color gold
-team modify admins displayName {"translate":"hc.teams.admins.name","fallback":"Admins"}
-team modify admins prefix ["[",{"translate":"hc.teams.admins.name","fallback":"Admins"},"] "]
+team modify admins displayName {"translate":"hc.teams.admins.name","fallback":"Admins","underlined":true}
+team modify admins prefix ["",{"translate":"hc.teams.admins.name","fallback":"Admins","underlined":true}," "]
 
 team add team1
 team modify team1 collisionRule always
@@ -199,8 +200,8 @@ team modify neutral friendlyFire true
 team modify neutral nametagVisibility always
 team modify neutral seeFriendlyInvisibles false
 team modify neutral color white
-team modify neutral displayName {"translate":"hc.teams.neutral.name","fallback":"Neutral"}
-team modify neutral prefix ["[",{"translate":"hc.teams.neutral.name","fallback":"Neutral"},"] "]
+team modify neutral displayName {"translate":"hc.teams.neutral.name","fallback":"Neutral","underlined":true}
+team modify neutral prefix ["",{"translate":"hc.teams.neutral.name","fallback":"Neutral","underlined":true}," "]
 
 team add spectators
 team modify spectators collisionRule never
@@ -208,8 +209,8 @@ team modify spectators friendlyFire false
 team modify spectators nametagVisibility hideForOtherTeams
 team modify spectators seeFriendlyInvisibles true
 team modify spectators color gray
-team modify spectators displayName {"translate":"hc.teams.spectators.name","fallback":"Spectators"}
-team modify spectators prefix ["[",{"translate":"hc.teams.spectators.name","fallback":"Spectators"},"] "]
+team modify spectators displayName {"translate":"hc.teams.spectators.name","fallback":"Spectators","underlined":true}
+team modify spectators prefix ["",{"translate":"hc.teams.spectators.name","fallback":"Spectators","underlined":true}," "]
 
 team add not_playing
 team modify not_playing collisionRule pushOwnTeam
