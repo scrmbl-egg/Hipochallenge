@@ -15,7 +15,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "potion_contents": {
+            "minecraft:potion_contents": {
                 "custom_effects": [
                     {
                         "id": "minecraft:speed",
@@ -24,7 +24,8 @@
                         "show_icon": true
                     }
                 ]
-            }
+            },
+            "minecraft:hide_additional_tooltip": {}
         }
     }
 ]
