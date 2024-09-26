@@ -30,6 +30,8 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_furthest_teammate_uu
     # local_other_uuid
 
 # get other data
+# in:
+    # local_other_uuid
 function hipochallenge:abilities/class/tank/kit1/castle/get_furthest_teammate_data_st with storage minecraft:hipochallenge
 # gives ownership of:
     # local_other_pos_x

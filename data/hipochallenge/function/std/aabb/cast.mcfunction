@@ -41,6 +41,7 @@ execute if score $less_than_1_components local_000 matches 3 run execute store r
 execute if score $less_than_1_components local_000 matches 3 run data modify storage minecraft:hipochallenge local_do_intersection set value false
 
 execute unless score $less_than_1_components local_000 matches 3 run data modify storage minecraft:hipochallenge local_do_intersection set value true
+
 # in:
     # local_selector
     # local_dx

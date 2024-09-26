@@ -18,6 +18,3 @@ execute store result score $do_intersection local_000 run data get storage minec
 
 $execute if score $do_intersection local_000 matches 1 positioned ~$(local_origin_offset_x) ~$(local_origin_offset_y) ~$(local_origin_offset_z) as $(local_selector) if entity @s[dx=$(local_dx),dy=$(local_dy),dz=$(local_dz)] positioned ~-0.999 ~-0.999 ~-0.999 if entity @s[dx=$(local_dx),dy=$(local_dy),dz=$(local_dz)] run $(local_cmd)
 $execute unless score $do_intersection local_000 matches 1 positioned ~$(local_origin_offset_x) ~$(local_origin_offset_y) ~$(local_origin_offset_z) as $(local_selector) if entity @s[dx=$(local_dx),dy=$(local_dy),dz=$(local_dz)] run $(local_cmd)
-
-$tellraw @a "selectors size: [$(local_dx),$(local_dy),$(local_dz)]"
-tellraw @a {"score":{"name":"$do_intersection","objective":"local_000"}}
