@@ -1,5 +1,19 @@
+# lifetimes
+# TODO: There's two routes we could take regarding the following command:
+    # 1: We could change the selector to @e so that ANY entity with timer score has its lifetime
+    # updated.
+        # PROS: no individual entity handling
+        # CONS: AWFUL performance
+    # 2: Remove it entirely
+        # PROS: BETTER performance, since we are capable of filtering more precisely what entities
+        # actually decrease their lifetime
+        # CONS: every entity that needs a lifetime must be individually handled
 execute as @a[scores={timer=1..}] run scoreboard players remove @s timer 1
+
+# mechanics
 execute as @a[scores={silence_timer=1..}] run scoreboard players remove @s silence_timer 1
+execute as @a[scores={in_combat_timer=1..}] run scoreboard players remove @s in_combat_timer 1
+execute as @a[scores={suppression_timer=1..}] run scoreboard players remove @s suppression_timer 1
 
 # cooldown timers
 

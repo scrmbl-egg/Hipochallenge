@@ -1,3 +1,1 @@
-# suppression abstraction function
-
-tag @s remove suppressed
+scoreboard players set @s suppression_timer 0

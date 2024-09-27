@@ -27,6 +27,7 @@ scoreboard objectives add id dummy
 scoreboard objectives add timer dummy
 scoreboard objectives add silence_timer dummy
 scoreboard objectives add in_combat_timer dummy
+scoreboard objectives add suppression_timer dummy
 scoreboard objectives add value dummy
 
 scoreboard objectives add player_list_info dummy
