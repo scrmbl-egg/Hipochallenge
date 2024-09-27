@@ -1,3 +1,1 @@
-execute at @s run function hipochallenge:std/aabb/cast {selector:"@a",dx:0.5,dy:0.5,dz:0.5,cmd:"say hola"}
-execute at @s run function hipochallenge:std/aabb/cast {selector:"@a",dx:1,dy:1,dz:1,cmd:"say hola 2"}
-execute at @s run function hipochallenge:std/aabb/cast {selector:"@a",dx:2,dy:2,dz:2,cmd:"say hola 3"}
+execute as MarieteColequete run execute unless data storage minecraft:hipochallenge local_target run execute as a15f59f4-4b0e-436b-ae40-e4c7fe3e8d0e on passengers run data modify entity @s data.target set from storage minecraft:hipochallenge local_target
