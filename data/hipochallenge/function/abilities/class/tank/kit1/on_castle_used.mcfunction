@@ -38,7 +38,7 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_teleported_players_d
 function hipochallenge:abilities/class/tank/kit1/castle/teleport_players_st with storage minecraft:hipochallenge
 
 # handle cooldown
-function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_castle,cd_item_modifier:"hipochallenge:class/tank/kit1/castle_cd",cd_score:tank_kit1_castle_cd,cd_const:TANK_K1_CASTLING_CD_TICKS}
+function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_castle,cd_item_modifier:"hipochallenge:weapons/class/tank/kit1/castle_cd",cd_score:tank_kit1_castle_cd,cd_const:TANK_K1_CASTLING_CD_TICKS}
 
 # free memory
 data remove storage minecraft:hipochallenge local_self_pos_x
