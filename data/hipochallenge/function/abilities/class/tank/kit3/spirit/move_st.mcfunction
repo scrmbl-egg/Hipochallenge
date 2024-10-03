@@ -2,10 +2,10 @@
     # local_spirit_target
     # local_spirit_owner
 
-# nbt={UUID:$(local_spirit_target)}
+#nbt={UUID:$(local_spirit_target)}
 
-# $execute on vehicle at @s unless entity @p[nbt={UUID:$(local_spirit_target)},distance=..3] run tp @s ^ ^ ^0.3
-# $execute on vehicle at @s if entity @p[nbt={UUID:$(local_spirit_target)},distance=..3] run tp @s ^ ^ ^-0.3
+#$execute on vehicle at @s unless entity @p[nbt={UUID:$(local_spirit_target)},distance=..3] run tp @s ^ ^ ^0.3
+#$execute on vehicle at @s if entity @p[nbt={UUID:$(local_spirit_target)},distance=..3] run tp @s ^ ^ ^-0.3
 
 $execute if entity @p[nbt={UUID:$(local_spirit_target)},tag=dead] run data modify entity @s data.target set from storage minecraft:hipochallenge local_spirit_owner
 
