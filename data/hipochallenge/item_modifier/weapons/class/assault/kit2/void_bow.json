@@ -1,23 +1,22 @@
 [
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:arrow"
+        "item": "minecraft:bow"
     },
     {
         "function": "minecraft:set_name",
         "entity": "this",
         "target": "item_name",
         "name": {
-            "translate": "hc.items.marksman.kit3.bullet",
-            "fallback": "Bullet"
+            "translate": "hc.items.assault.kit3.void_bow",
+            "fallback": "Void Bow"
         }
     },
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:marksman_k3_bullet}",
-            "minecraft:custom_model_data": 0,
-            "minecraft:hide_additional_tooltip": {}
+            "minecraft:custom_data": "{item_id:assault_k3_void_bow}",
+            "minecraft:custom_model_data": 0
         }
     }
 ]

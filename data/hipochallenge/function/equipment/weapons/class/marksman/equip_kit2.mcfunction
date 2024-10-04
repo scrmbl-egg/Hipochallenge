@@ -15,4 +15,5 @@ item replace entity @s hotbar.3 with paper
 item modify entity @s hotbar.3 hipochallenge:weapons/class/marksman/kit2/slowness_trap
 
 # arrows 
-item replace entity @s hotbar.4 with arrow 5
+item replace entity @s hotbar.4 with paper 5
+item modify entity @s hotbar.4 hipochallenge:weapons/class/marksman/kit2/arrow

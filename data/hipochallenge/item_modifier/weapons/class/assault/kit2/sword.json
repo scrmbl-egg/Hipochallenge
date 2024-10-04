@@ -1,25 +1,26 @@
 [
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:mace"
+        "item": "minecraft:iron_sword"
     },
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:assassin_k3_mace}",
+            "minecraft:custom_data": "{item_id:assault_k2_sword}",
+            "minecraft:custom_model_data": 0,
             "minecraft:attribute_modifiers": {
                 "modifiers": [
                     {
-                        "id": "assassin_k3_mace_attack_damage",
+                        "id": "assault_k2_sword_attack_damage",
                         "type": "minecraft:generic.attack_damage",
                         "amount": 5,
                         "operation": "add_value",
                         "slot": "mainhand"
                     },
                     {
-                        "id": "assassin_k3_mace_attack_speed",
+                        "id": "assault_k2_sword_attack_speed",
                         "type": "minecraft:generic.attack_speed",
-                        "amount": -3.4,
+                        "amount": -2.4,
                         "operation": "add_value",
                         "slot": "mainhand"
                     }

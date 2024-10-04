@@ -1,0 +1,14 @@
+[
+    {
+        "function": "minecraft:set_item",
+        "item": "minecraft:arrow"
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:marksman_k2_arrow}",
+            "minecraft:custom_model_data": 0,
+            "minecraft:hide_additional_tooltip": {}
+        }
+    }
+]

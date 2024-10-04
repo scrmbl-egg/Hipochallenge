@@ -15,4 +15,5 @@ item replace entity @s hotbar.3 with paper
 item modify entity @s hotbar.3 hipochallenge:weapons/class/marksman/kit1/smoke_arrow_crossbow
 
 # arrows
-item replace entity @s hotbar.4 with arrow 6
+item replace entity @s hotbar.4 with paper 6
+item modify entity @s hotbar.4 hipochallenge:weapons/class/marksman/kit1/arrow

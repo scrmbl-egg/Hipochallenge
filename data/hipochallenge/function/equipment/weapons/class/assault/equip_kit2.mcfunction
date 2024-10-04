@@ -1,10 +1,15 @@
-# TODO: Add names and descriptions
+# sword
+item replace entity @s hotbar.0 with paper
+item modify entity @s hotbar.0 hipochallenge:weapons/class/assault/kit2/sword
 
-item replace entity @s hotbar.0 with diamond_sword
+# harpoon
+item replace entity @s hotbar.1 with paper
+item modify entity @s hotbar.1 hipochallenge:weapons/class/assault/kit2/harpoon
 
-# FIXME: Probably change HOOK item
-item replace entity @s hotbar.1 with chain[item_name='"Gancho"',food={nutrition:0,saturation:0,can_always_eat:true,eat_seconds:1000000}]
+# void bow
+item replace entity @s hotbar.2 with paper
+item modify entity @s hotbar.2 hipochallenge:weapons/class/assault/kit2/void_bow
 
-item replace entity @s hotbar.2 with bow[item_name='"Arco de vacío"']
-
-item replace entity @s hotbar.3 with arrow 1
+# void arrow
+item replace entity @s hotbar.3 with paper
+item modify entity @s hotbar.3 hipochallenge:weapons/class/assault/kit2/void_arrow

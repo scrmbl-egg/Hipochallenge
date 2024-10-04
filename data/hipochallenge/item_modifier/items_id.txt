@@ -1,9 +1,109 @@
-TANK
+# WARNING: cooldown (_CD) items will be eventually removed with Java 1.21.2 #
+
+TANK CLASS CLASS
+    SHIELD: tank_shield
+    
     KIT 1
-        
-        GOAT_HORN - item_id:tank_k1_goat_horn
-        CASTLE - item_id:tank_k1_castle
+        SWORD :                         tank_k1_sword
+        GOAT_HORN :                     tank_k1_goat_horn
+        GOAT_HORN_CD :                  tank_k1_goat_horn_cd
+        CASTLE :                        tank_k1_castle
+        CASTLE_CD :                     tank_k1_castle_cd
     KIT 2
-        GOAT_HORN - item_id:tank_k2_goat_horn
+        SWORD :                         tank_k2_sword
+        TRIDENT :                       tank_k2_trident
+        GOAT_HORN :                     tank_k2_goat_horn
+        GOAT_HORN_CD :                  tank_k2_goat_horn_cd
     KIT 3
-        GOAT_HORN - item_id:tank_k3_goat_horn
+        AXE : tank_k3_axe
+        BUBBLE_SHIELD :                 tank_k3_bubble_shield
+        BUBBLE_SHIELD_CD :              tank_k3_bubble_shield_cd
+        REDIRECT_SPIRIT :               tank_k3_redirect_spirit
+        REDIRECT_SPIRIT_CD :            tank_k3_redirect_spirit_cd
+        GOAT_HORN :                     tank_k3_goat_horn
+        GOAT_HORN_CD :                  tank_k3_goat_horn_cd
+
+MARKSMAN CLASS
+    KIT 1
+        BOW :                           marksman_k1_bow
+        SICKLE :                        marksman_k1_sickle
+        POTION :                        marksman_k1_potion
+        SMOKE_ARROW_CROSSBOW :          marksman_k1_smoke_arrow_crossbow
+            SMOKE_ARROW :               marksman_k1_smoke_arrow
+        SMOKE_ARROW_CROSSBOW_CD :       marksman_k1_smoke_arrow_crossbow_cd
+        ARROW :                         marksman_k1_arrow
+    KIT 2
+        CROSSBOW :                      marksman_k2_crossbow
+        SICKLE :                        marksman_k2_sickle
+        POTION :                        marksman_k2_potion
+        SLOWNESS_TRAP :                 marksman_k2_slowness_trap
+        ARROW :                         marksman_k2_arrow
+    KIT 3
+        REVOLVER :                      marksman_k3_revolver
+        MIRROR :                        marksman_k3_mirror
+        EL_DIABLO_BULLET :              marksman_k3_el_diablo_bullet
+        BULLET :                        marksman_k3_bullet
+
+ASSASSIN CLASS
+    KIT 1
+        DUELIST_SWORD :                 assassin_k1_duelist_sword
+        ENHANCED_DUELIST_SWORD :        assassin_k1_enhanced_duelist_sword
+        CRYSTAL_AMULET :                assassin_k1_crystal_amulet
+    KIT 2
+        SWORD :                         assassin_k2_sword
+        STUN_MECHANISM :                assassin_k2_stun_mechanism
+    KIT 3
+        MACE :                          assassin_k3_mace
+        HEAVY_CORE :                    assassin_k3_heavy_core
+        REPULSING_ROD :                 assassin_k3_repulsing_rod
+        MAGIC_FEATHER :                 assassin_k3_magic_feather
+        TELEPORTATION_MARK :            assassin_k3_teleportation_mark
+
+SUPPORT CLASS
+    KIT 1
+        SWORD :                         support_k1_sword
+        LEVITATION_BOMB :               support_k1_levitation_bomb
+        LEVITATION_BOMB_DETONATOR :     support_k1_levitation_bomb_detonator
+        SNOW_SENTINEL :                 support_k1_snow_sentinel
+        GRAVITY_WELL :                  support_k1_gravity_well
+    KIT 2
+        SWORD :                         support_k2_sword
+        HEALING_ROD :                   support_k2_healing_rod
+        SLOWNESS_TRAP :                 support_k2_slowness_trap
+        CLEANSING_PROJECTILE :          support_k2_cleansing_projectile
+    KIT 3
+        SWORD :                         support_k3_sword
+        UNSTABLE_TOTEM :                support_k3_unstable_totem
+        EVIL_EYE :                      support_k3_evil_eye
+
+RECON CLASS
+    KIT 1
+        SWORD :                         recon_k1_sword
+        BLINDNESS_SENTINEL :            recon_k1_blindness_sentinel
+        FLASH_BOMB :                    recon_k1_flash_bomb
+        LOW_VISIBILITY_AREA :           recon_k1_low_visibility_area
+    KIT 2
+        SWORD :                         recon_k2_sword
+        POTION :                        recon_k2_potion
+        FLARE_ARROW_CROSSBOW :          recon_k2_flare_arrow_crossbow
+        REVEALING_SENTINEL :            recon_k2_revealing_sentinel
+        FLARE_ARROW :                   recon_k2_flare_arrow
+    KIT 3
+        SWORD :                         recon_k3_sword
+        PORTAL :                        recon_k3_portal
+        DECEPTION_EFFIGY :              recon_k3_deception_effigy
+
+ASSAULT CLASS
+    KIT 1
+        SWORD :                         assault_k1_sword
+        TICKING_BOMB :                  assault_k1_ticking_bomb
+        KNOCKBACK_BOMB :                assault_k1_knockback_bomb
+        SMOKE_BOMB :                    assault_k1_smoke_bomb
+    KIT 2
+        SWORD :                         assault_k2_sword
+        HARPOON :                       assault_k2_harpoon
+        VOID_BOW :                      assault_k2_void_bow
+        VOID_ARROW :                    assault_k2_void_arrow
+    KIT 3
+        SWORD :                         assault_k3_sword
+        PUSHING_PROJECTILE :            assault_k3_pushing_projectile

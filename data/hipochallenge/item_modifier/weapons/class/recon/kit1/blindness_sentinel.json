@@ -1,23 +1,22 @@
 [
     {
         "function": "minecraft:set_item",
-        "item": "minecraft:stone_pickaxe"
+        "item": "minecraft:paper"
     },
     {
         "function": "minecraft:set_name",
         "entity": "this",
         "target": "item_name",
         "name": {
-            "translate": "hc.items.support.kit2.healing_rod",
-            "fallback": "Healing Rod"
+            "translate": "hc.items.recon.kit1.blindness_sentinel",
+            "fallback": "Blindness Sentinel"
         }
     },
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:support_k2_healing_rod}",
+            "minecraft:custom_data": "{item_id:recon_k1_blindness_sentinel}",
             "minecraft:custom_model_data": 0,
-            "!minecraft:attribute_modifiers": {},
             "minecraft:food": {
                 "nutrition": 0,
                 "saturation": 0,
