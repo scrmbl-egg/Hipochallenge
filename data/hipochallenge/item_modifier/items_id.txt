@@ -15,7 +15,7 @@ TANK CLASS CLASS
         GOAT_HORN :                     tank_k2_goat_horn
         GOAT_HORN_CD :                  tank_k2_goat_horn_cd
     KIT 3
-        AXE : tank_k3_axe
+        AXE :                           tank_k3_axe
         BUBBLE_SHIELD :                 tank_k3_bubble_shield
         BUBBLE_SHIELD_CD :              tank_k3_bubble_shield_cd
         REDIRECT_SPIRIT :               tank_k3_redirect_spirit
