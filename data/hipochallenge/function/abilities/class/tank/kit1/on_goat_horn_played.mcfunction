@@ -12,7 +12,7 @@ function hipochallenge:teams/get/get_self_team
     # local_self_team
 
 # handle cooldown
-function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_goat_horn,cd_item_modifier:"hipochallenge:class/tank/kit1/goat_horn_cd",cd_score:tank_kit1_goat_horn_cd,cd_const:TANK_K1_HORN_CD_TICKS}
+function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_goat_horn,cd_item_modifier:"hipochallenge:weapons/class/tank/kit1/goat_horn_cd",cd_score:tank_kit1_goat_horn_cd,cd_const:TANK_K1_HORN_CD_TICKS}
 
 # give buffs to team
 # in:

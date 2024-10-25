@@ -11,7 +11,8 @@ $scoreboard players set $local_i local_000 $(i)
 $scoreboard players set $local_size local_000 $(size)
 
 # execute recursive function
-execute as @s run function hipochallenge:std/for/unsafe/iterate_st with storage minecraft:hipochallenge
+execute if entity @s as @s run function hipochallenge:std/for/decider/entity
+execute unless entity @s run function hipochallenge:std/for/decider/command
 
 # free memory
 scoreboard objectives remove local_000

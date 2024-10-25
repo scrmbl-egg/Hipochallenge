@@ -9,7 +9,7 @@
 # kit 2
     # trident
     # TODO: Move this function to the \projectiles folder
-    execute as @e[type=trident] at @s run function hipochallenge:abilities/class/tank/kit2/trident_st
+    execute as @e[type=trident] at @s run function hipochallenge:abilities/class/tank/kit2/trident
     execute as @a[scores={tank_kit2_trident_cd=1},gamemode=!creative] at @s run function hipochallenge:abilities/class/tank/kit2/trident/return
     
     # goat horn
@@ -21,3 +21,5 @@
     # spirit
     execute as @a run function hipochallenge:attributes/modifiers/class/tank/kit3/spirit/remove_buff_st with storage minecraft:hipochallenge
     execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/main
+    # bubble shield
+    execute as @e[type=marker,tag=bubble_shield] run function hipochallenge:abilities/class/tank/kit3/bubble_shield/main

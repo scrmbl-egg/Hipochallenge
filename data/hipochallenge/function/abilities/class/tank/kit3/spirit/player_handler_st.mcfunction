@@ -3,6 +3,8 @@
     # local_self_team
 
 # Get selection
+
+# FIXME: move sphere select function to std datapack
 $execute as @s run function hipochallenge:std/sphere_select/sphere_select {range:"$(TANK_K3_SPIRIT_SELECTOR_RANGE_BLOCKS)",selector:"@a[nbt=!{UUID:$(local_spirit_owner)},team=$(local_self_team),distance=..$(TANK_K3_SPIRIT_SELECTOR_RANGE_SPHERE_BLOCKS),sort=nearest]"}
 
 # Get nearest player within selection range

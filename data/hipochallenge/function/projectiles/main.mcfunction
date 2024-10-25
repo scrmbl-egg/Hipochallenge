@@ -1,3 +1,6 @@
+# tag arrows as projectiles
+tag @e[type=#arrows,tag=!projectiles] add projectiles
+
 # marksman kit 2 arrows remove gravity
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{item_id:marksman_k2_crossbow}}}},tag=!no_gravity_arrow] run function hipochallenge:projectiles/no_gravity_arrows/remove_gravity
 

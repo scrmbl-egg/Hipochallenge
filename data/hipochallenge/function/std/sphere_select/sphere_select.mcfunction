@@ -1,6 +1,8 @@
 # params:
     # range
     # selector
+# generates:
+    # local_sphere_selector_targets (array of uuids)
 
 data modify storage minecraft:hipochallenge local_sphere_selector_targets set value []
 
