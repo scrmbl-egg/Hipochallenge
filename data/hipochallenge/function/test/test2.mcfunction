@@ -1,1 +1,0 @@
-function hipochallenge:test/test {translate:hc.test,fallback:"this is a test %s",with:["hola"]}
