@@ -20,11 +20,26 @@
                 "show_in_tooltip": false
             },
             "minecraft:rarity": "uncommon",
-            "minecraft:food": {
-                "nutrition": 0,
-                "saturation": 0,
-                "can_always_eat": true,
-                "eat_seconds": 1000000
+            "minecraft:consumable": {
+                "consume_seconds": 0.0,
+                "animation": "bow",
+                "sound": "minecraft:ui.button.click",
+                "has_consume_particles": false
+            },
+            "minecraft:use_cooldown": {
+                "seconds": 20.0,
+                "cooldown_group": "hipochallenge:tank_k1_castle_cd"
+            },
+            "minecraft:use_remainder": {
+                "id": "minecraft:armor_stand",
+                "components": {
+                    "minecraft:custom_data": "{item_id:tank_k1_castle_cd}",
+                    "minecraft:unbreakable": {"show_in_tooltip": false},
+                    "minecraft:use_cooldown": {
+                        "seconds": 20.0,
+                        "cooldown_group": "hipochallenge:tank_k1_castle_cd"
+                    }
+                }
             }
         }
     }

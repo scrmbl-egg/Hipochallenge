@@ -1,36 +1,56 @@
 [
     {
-      "function": "minecraft:set_item",
-      "item": "minecraft:glow_ink_sac"
+        "function": "minecraft:set_item",
+        "item": "minecraft:glow_ink_sac"
     },
     {
-      "function": "minecraft:set_name",
-      "entity": "this",
-      "target": "item_name",
-      "name": {
-        "translate": "hc.items.tank.kit3.redirect_spirit",
-        "fallback": "Redirect Spirit"
-      }
-    },
-    {
-      "function": "minecraft:set_components",
-      "components": {
-        "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit}",
-        "minecraft:unbreakable": {
-          "show_in_tooltip": false
-        },
-        "minecraft:rarity": "epic",
-        "minecraft:food": {
-          "nutrition": 0,
-          "saturation": 0,
-          "can_always_eat": true,
-          "eat_seconds": 1000000
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "target": "item_name",
+        "name": {
+            "translate": "hc.items.tank.kit3.redirect_spirit",
+            "fallback": "Redirect Spirit"
         }
-      }
     },
     {
-      "function": "minecraft:set_custom_model_data",
-      "value": 1
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit}",
+            "minecraft:unbreakable": {
+                "show_in_tooltip": false
+            },
+            "minecraft:rarity": "epic",
+            "minecraft:consumable": {
+                "animation": "brush",
+                "consume_seconds": 0,
+                "has_consume_particles": false,
+                "on_consume_effects": [],
+                "sound": "ui.button.click"
+            },
+            "minecraft:use_cooldown": {
+                "seconds": 5,
+                "cooldown_group": "tank_k3_redirect_spirit_cd"
+            },
+            "minecraft:use_remainder": {
+                "id": "minecraft:glow_ink_sac",
+                "components": {
+                    "minecraft:item_name": "{\"translate\": \"hc.items.tank.kit3.redirect_spirit\",\"fallback\":\"Redirect Spirit\"}", 
+                    "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit_cd}",
+                    "minecraft:custom_model_data": 1,
+                    "minecraft:unbreakable": {
+                        "show_in_tooltip": false
+                    },
+                    "minecraft:rarity": "epic",
+                    "minecraft:use_cooldown": {
+                        "seconds": 0.1,
+                        "cooldown_group": "tank_k3_redirect_spirit_cd"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "function": "minecraft:set_custom_model_data",
+        "value": 1
     }
-  ]
-  
+]

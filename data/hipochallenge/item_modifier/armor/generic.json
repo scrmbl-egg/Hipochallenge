@@ -16,14 +16,14 @@
                 "modifiers": [
                     {
                         "id": "zero_armor",
-                        "type": "minecraft:generic.armor",
+                        "type": "minecraft:armor",
                         "amount": 0,
                         "operation": "add_value",
                         "slot": "armor"
                     },
                     {
                         "id": "zero_armor_toughness",
-                        "type": "minecraft:generic.armor_toughness",
+                        "type": "minecraft:armor_toughness",
                         "amount": 0,
                         "operation": "add_value",
                         "slot": "armor"

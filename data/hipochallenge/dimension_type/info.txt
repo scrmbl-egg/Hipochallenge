@@ -1,1 +1,0 @@
-You can find a generator for custom dimensions types here: https://misode.github.io/dimension-type/

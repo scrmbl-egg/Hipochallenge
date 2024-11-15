@@ -28,5 +28,6 @@ recipe take @a *
 # projectile cleanup
     function hipochallenge:projectiles/main
 
-# timers (must be placed at the end)
+## __ KEEP AT BOTTOM OF FILE __
+# timers
     function hipochallenge:timers/main

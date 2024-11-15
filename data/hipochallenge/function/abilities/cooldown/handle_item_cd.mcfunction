@@ -1,22 +1,13 @@
 # params:
     # item_id
-    # cd_item_modifier
     # cd_score
-    # cd_const
 
-# create local score
-scoreboard objectives add local_cd_score dummy
+# NOTE: this function takes the item's cooldown seconds and turns them into score for cooldown. 
+# This is used to sidestep the game's bug where the item disappears when trying to modify it
+# after being consumed.
 
-# set score to cooldown constant
-$execute store result score $cd_ticks local_cd_score run data get storage minecraft:hipochallenge $(cd_const)
+# mainhand item case
+$execute if items entity @s weapon.mainhand *[custom_data={item_id:$(item_id)}] run execute store result score @s $(cd_score) run data get entity @s SelectedItem.components."minecraft:use_cooldown".seconds 20
 
-# if cd_ticks <= -1, cooldown is infinite -> clear item
-$execute if score $cd_ticks local_cd_score matches ..-1 run clear @s *[custom_data={item_id:$(item_id)}] 1
-
-# otherwise, set cooldown item modifier, and set cooldown score
-$execute if score $cd_ticks local_cd_score matches 0.. if items entity @s weapon.offhand *[custom_data={item_id:$(item_id)}] run item modify entity @s weapon.offhand $(cd_item_modifier)
-$execute if score $cd_ticks local_cd_score matches 0.. if items entity @s weapon.mainhand *[custom_data={item_id:$(item_id)}] run item modify entity @s weapon.mainhand $(cd_item_modifier)
-$execute if score $cd_ticks local_cd_score matches 0.. store result score @s $(cd_score) run data get storage minecraft:hipochallenge $(cd_const)
-
-# remove score
-scoreboard objectives remove local_cd_score
+# offhand item case
+$execute if items entity @s weapon.offhand *[custom_data={item_id:$(item_id)}] run execute store result score @s $(cd_score) run data get entity @s Inventory[{Slot:-106b}].components."!minecraft:use_cooldown".seconds 20

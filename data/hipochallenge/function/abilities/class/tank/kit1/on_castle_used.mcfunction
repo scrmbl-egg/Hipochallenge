@@ -8,6 +8,10 @@ execute if entity @s[team=spectators] run return run function hipochallenge:msg/
 # silenced guard clause
 execute if entity @s[scores={silence_timer=1..}] run return run function hipochallenge:msg/private/inject_text/msg_private_inject {txt:'{"color":"red","translate":"hc.msg.private.mechanics.silenced","fallback":"You are silenced!"}'}
 
+# set cooldown
+function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_castle,cd_score:tank_kit1_castle_cd}
+# TODO: make sure item's use_remainder matches the original item's look
+
 function hipochallenge:abilities/class/tank/kit1/castle/get_teleported_players_data_st with storage minecraft:hipochallenge
 # gives ownership of:
     # local_self_pos_x
@@ -36,9 +40,6 @@ function hipochallenge:abilities/class/tank/kit1/castle/get_teleported_players_d
     # local_other_yaw
     # local_other_pitch
 function hipochallenge:abilities/class/tank/kit1/castle/teleport_players_st with storage minecraft:hipochallenge
-
-# handle cooldown
-function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k1_castle,cd_item_modifier:"hipochallenge:weapons/class/tank/kit1/castle_cd",cd_score:tank_kit1_castle_cd,cd_const:TANK_K1_CASTLING_CD_TICKS}
 
 # free memory
 data remove storage minecraft:hipochallenge local_self_pos_x

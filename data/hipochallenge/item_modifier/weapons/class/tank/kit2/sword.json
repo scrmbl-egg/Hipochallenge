@@ -14,14 +14,14 @@
                 "modifiers": [
                     {
                         "id": "tank_k2_sword_attack_damage",
-                        "type": "minecraft:generic.attack_damage",
+                        "type": "minecraft:attack_damage",
                         "amount": 4,
                         "operation": "add_value",
                         "slot": "mainhand"
                     },
                     {
                         "id": "tank_k2_sword_attack_speed",
-                        "type": "minecraft:generic.attack_speed",
+                        "type": "minecraft:attack_speed",
                         "amount": -2.4,
                         "operation": "add_value",
                         "slot": "mainhand"
