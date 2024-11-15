@@ -1,0 +1,32 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:beacon",
+            "count": 1
+        },
+        "title": {
+            "translate": "hc.advancements.rest.plaza.root.name",
+            "fallback": "Plaza"
+        },
+        "description": {
+            "translate": "hc.advancements.rest.plaza.root.description",
+            "fallback": "Explore the plaza for the first time"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "hipochallenge:rest/root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

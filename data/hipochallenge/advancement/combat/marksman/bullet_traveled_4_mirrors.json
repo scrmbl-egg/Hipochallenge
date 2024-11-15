@@ -18,10 +18,13 @@
                 "color": "white"
             }
         ],
-        "description": "Haz que una bala del Revolver V-445 pase por 4 espejos",
+        "description": {
+            "translate": "hc.advancements.combat.marksman.kit3.bullet_traveled_4_mirrors.description",
+            "fallback": "Make a bullet from the V-445 Revolver travel through 4 mirrors"
+        },
         "frame": "challenge",
         "show_toast": false,
-        "announce_to_chat": false,
+        "announce_to_chat": true,
         "hidden": false
     },
     "parent": "hipochallenge:combat/marksman/root",
