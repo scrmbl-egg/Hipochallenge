@@ -15,7 +15,8 @@ data remove storage minecraft:hipochallenge local_self_team
 # get the attacker's uuid
 execute as @s if data entity @s attack run data modify storage minecraft:hipochallenge local_attacker_uuid set from entity @s attack.player
 
-# if interaction has attacker, check if attacker is in the same team as the interaction owner's team
+# if interaction has attacker, check if attacker is in the same team as the 
+# interaction owner's team
 # in:
     # local_interaction_owner_uuid
     # local_interaction_team

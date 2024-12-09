@@ -19,7 +19,8 @@ $execute as @n[type=interaction,tag=new_0] run scoreboard players set @s timer $
 
 # save relative position from player (intr - player)
 
-# get interaction's position: for small performance boost, save in storage, and get components from there
+# get interaction's position: for small performance boost, save in storage,
+# and get components from there
 data modify storage minecraft:hipochallenge local_interaction_pos set from entity @n[type=interaction,tag=new_0] Pos
 data modify storage minecraft:hipochallenge local_owner_pos set from entity @s Pos
 

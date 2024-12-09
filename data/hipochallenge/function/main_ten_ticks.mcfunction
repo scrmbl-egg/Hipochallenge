@@ -1,6 +1,6 @@
 schedule function hipochallenge:main_ten_ticks 10t
 
-# FIXME: The following function should be moved
+# FIXME: The following function should be moved to a maps/main function
 
 # vfx
     # maps

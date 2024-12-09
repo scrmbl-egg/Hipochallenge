@@ -1,3 +1,3 @@
 # TODO: implement
-execute as @s run say "he atacado"
+execute as @s run say "i attacked"
 

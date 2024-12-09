@@ -20,7 +20,8 @@ execute store result storage minecraft:hipochallenge local_origin_offset_x doubl
 execute store result storage minecraft:hipochallenge local_origin_offset_y double -0.5 run data get storage minecraft:hipochallenge local_dy
 execute store result storage minecraft:hipochallenge local_origin_offset_z double -0.5 run data get storage minecraft:hipochallenge local_dz
 
-# check if doing a two volume intersection is necessary (all components must be < 1)
+# check if doing a two volume intersection is necessary (all components must be
+# < 1)
 
 # check if dx, dy and dz >= 1
 execute store result score $dx local_000 run data get storage minecraft:hipochallenge local_dx 1000
@@ -30,8 +31,8 @@ execute if score $dx local_000 >= $one_scaled_block local_000 run scoreboard pla
 execute if score $dy local_000 >= $one_scaled_block local_000 run scoreboard players add $less_than_1_components local_000 1
 execute if score $dz local_000 >= $one_scaled_block local_000 run scoreboard players add $less_than_1_components local_000 1
 
-# if all components (3) are less than 1, subtract 1 from all and set 'local_do_intersection' to
-# false, otherwise, set it to true 
+# if all components (3) are less than 1, subtract 1 from all and set 
+# 'local_do_intersection' to false, otherwise, set it to true 
 execute if score $less_than_1_components local_000 matches 3 run scoreboard players remove $dx local_000 1000
 execute if score $less_than_1_components local_000 matches 3 run scoreboard players remove $dy local_000 1000
 execute if score $less_than_1_components local_000 matches 3 run scoreboard players remove $dz local_000 1000

@@ -19,7 +19,8 @@ execute store result storage minecraft:hipochallenge local_int_self_pos_x int 1 
 execute store result storage minecraft:hipochallenge local_int_self_pos_y int 1 run data get entity @s Pos[1]
 execute store result storage minecraft:hipochallenge local_int_self_pos_z int 1 run data get entity @s Pos[2]
 
-# for every uuid in the enemy array, generate a vibration particle and cause effects
+# for every uuid in the enemy array, generate a vibration particle and cause
+# effects
 # in:
     # local_int_self_pos_x
     # local_int_self_pos_y

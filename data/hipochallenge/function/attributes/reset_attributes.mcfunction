@@ -1,7 +1,9 @@
 # NOTE:
-# this function has hardcoded values because they are taken directly from the minecraft wiki:
+# this function has hardcoded values because they are taken directly from the
+# minecraft wiki:
 # https://minecraft.wiki/w/Attribute
-# do not change these values unless they don't match the wiki docs, or are modified in new versions
+# do not change these values unless they don't match the wiki docs, or are
+# modified in new versions
 
 # set attributes whose bases are modified in the game
 attribute @s minecraft:max_health base set 20

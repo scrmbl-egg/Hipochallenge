@@ -11,6 +11,7 @@ schedule function hipochallenge:main_sec 1s
     function hipochallenge:music/mute_vanilla_music
 
 # vfx
+    # FIXME: this should be moved to a maps/main function
     # maps
         # map0
             # pipes

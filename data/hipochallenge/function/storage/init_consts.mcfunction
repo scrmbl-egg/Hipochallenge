@@ -1,12 +1,14 @@
 # INFO:
-# This function is executed every reload, or 'load.mcfunction' call. This file is meant to be
-# changed only by the developers, or a user who might want to change properties of the game.
+# This function is executed every reload, or 'load.mcfunction' call. 
+# This file is meant to be changed only by the developers, or a user who might
+# want to change properties of the game.
 #
 # HOW TO MODIFY:
-# - Values in this file are named with SCREAM_CASE, to represent constant values.
+# - Values in this file are named with SCREAM_CASE, to represent constant
+#   values.
 # 
-# - For cooldown, or '..._CD_TICKS' constants, remember that 20 gameticks is equivalent to
-#   1 second in game. Using -1 means INFINITE.
+# - For cooldown, or '..._CD_TICKS' constants, remember that 20 gameticks is
+#   equivalent to 1 second in game. Using -1 means INFINITE.
 
 # TODO: Complete the list of constants
 

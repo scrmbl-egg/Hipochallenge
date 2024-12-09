@@ -6,7 +6,7 @@ recipe take @a *
     function hipochallenge:game_states/state_logic
 
 # deaths
-    # TODO: Move this function to a separate folder
+    # TODO: Move this function to a separate folder (death/main)
     execute as @a[scores={is_dead=1..}] at @s run function hipochallenge:death/handle_death
 
 # vfx

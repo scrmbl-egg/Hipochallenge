@@ -19,7 +19,8 @@ function hipochallenge:msg/debug/msg_info {msg:"Creating scoreboards..."}
 scoreboard objectives add id dummy
 
 # TODO: Delete var scoreboard when memory transition is done.
-# TODO: 'timer' score is probably not very descriptive. 'lifetime' could work better for what it's being used for
+# TODO: 'timer' score is probably not very descriptive. 'lifetime' could work
+# better for what it's being used for
 
 # TODO: Move scores to their own separate init functions
 

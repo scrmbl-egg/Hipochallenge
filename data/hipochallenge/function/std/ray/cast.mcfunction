@@ -10,9 +10,10 @@
     # dz                            (size z)
     # cmd                           (command executed when selector entity is found)
     # MAX_RAY_CASTING_ITERATIONS    (constant iteration limit)
-# NOTE: maybe we should add a yaw and pitch parameter, or instead of a length, a 3d vector
+# NOTE: maybe we should add a yaw and pitch parameter, or instead of a length,
+# a 3d vector
 
 # TODO: implement raycasts
 
-# NOTE: use AABBs for the implementation, since they provide precise collision detection, and can
-# also have bigger sizes
+# NOTE: use AABBs for the implementation, since they provide precise collision
+# detection, and can also have bigger sizes

@@ -10,7 +10,8 @@ scoreboard players set $secs_to_ticks local_suppr_score 20
 $scoreboard players set $calculated_suppr local_suppr_score $(duration_seconds)
 scoreboard players operation $calculated_suppr local_suppr_score *= $secs_to_ticks local_suppr_score
 
-# if the current suppression timer is less than the scaled constant, set it to the constant,
+# if the current suppression timer is less than the scaled constant, set it to
+# the constant,
 # otherwise, do nothing
 execute if score $calculated_suppr local_suppr_score > @s suppression_timer run scoreboard players operation @s suppression_timer = $calculated_suppr local_suppr_score
 

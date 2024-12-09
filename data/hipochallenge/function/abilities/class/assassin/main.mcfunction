@@ -2,7 +2,8 @@
     # parry
     
     # decrease lifetime of parry interactions
-    # HACK: In \timers\main.mcfunction, the selectors are players, here is an exception with an interaction box entity
+    # HACK: In \timers\main.mcfunction, the selectors are players, here is an 
+    # exception with an interaction box entity
     execute as @e[type=interaction,tag=assassin_k1_parry_interaction,scores={timer=1..}] run scoreboard players remove @s timer 1
     
     # check if attacker is an enemy and execute the proper commands

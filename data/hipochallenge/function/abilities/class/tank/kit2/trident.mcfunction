@@ -1,5 +1,5 @@
-# TODO: Since no other class has a trident, this function can be moved to \projectiles,
-# some other parts can be moved to \vfx
+# TODO: Since no other class has a trident, this function can be moved to
+# \projectiles, some other parts can be moved to \vfx
 
 execute as @s[nbt={DealtDamage:1b}] at @s run function hipochallenge:abilities/class/tank/kit2/trident/kill_and_return
 

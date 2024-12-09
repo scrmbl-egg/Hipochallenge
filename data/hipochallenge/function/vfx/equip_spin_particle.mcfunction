@@ -1,4 +1,5 @@
-# TODO: change implementation of the spinning particles. timer scoreboard is used for decreasing values
+# TODO: change implementation of the spinning particles. timer scoreboard is
+# used for decreasing values
 
 scoreboard players add @s timer 20
 
