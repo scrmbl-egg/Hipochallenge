@@ -5,13 +5,13 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assassin_k1_duelist_sword}"
+                        "minecraft:custom_data": "{item_id:support_k2_cleansing_projectile}"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assassin/kit1/on_parry_performed"
+        "function": "hipochallenge:abilities/class/support/kit2/on_cleansing_projectile_thrown"
     }
 }

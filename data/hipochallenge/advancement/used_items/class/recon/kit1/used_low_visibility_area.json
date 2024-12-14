@@ -5,13 +5,13 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assassin_k1_duelist_sword}"
+                        "minecraft:custom_data": "{item_id:recon_k1_low_visibility_area}"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assassin/kit1/on_parry_performed"
+        "function": "hipochallenge:abilities/class/recon/kit1/on_low_visibility_area_placed"
     }
 }

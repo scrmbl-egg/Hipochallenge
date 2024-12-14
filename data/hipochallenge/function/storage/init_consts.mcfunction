@@ -77,6 +77,9 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 ## CLASSES
 
+# TODO: remove item consuming cooldown constants, since they are handled in
+# the use_cooldown.seconds item modifier field.
+
 # tank
     data modify storage minecraft:hipochallenge TANK_CLASS_NAME_TRANSLATION_KEY set value "hc.class.tank"
     
@@ -108,6 +111,7 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
         data modify storage minecraft:hipochallenge TANK_K2_TRIDENT_CD_TICKS set value 30
 
         data modify storage minecraft:hipochallenge TANK_K2_HORN_RADIUS set value 5
+        data modify storage minecraft:hipochallenge TANK_K2_HORN_SLOWNESS_DURATION_SECONDS set value 2
         data modify storage minecraft:hipochallenge TANK_K2_HORN_CD_TICKS set value -1
         data modify storage minecraft:hipochallenge TANK_K2_HORN_RECOVERY_TICKS set value 20
     # kit 3

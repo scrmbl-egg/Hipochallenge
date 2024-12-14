@@ -106,4 +106,5 @@ ASSAULT CLASS
         VOID_ARROW :                    assault_k2_void_arrow
     KIT 3
         SWORD :                         assault_k3_sword
+        ASSAULT_SHIELD :                assault_k3_assault_shield
         PUSHING_PROJECTILE :            assault_k3_pushing_projectile

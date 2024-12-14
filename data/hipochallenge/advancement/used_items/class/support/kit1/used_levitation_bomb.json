@@ -5,13 +5,13 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assassin_k1_duelist_sword}"
+                        "minecraft:custom_data": "{item_id:support_k1_levitation_bomb}"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assassin/kit1/on_parry_performed"
+        "function": "hipochallenge:abilities/class/support/kit1/on_levitation_bomb_placed"
     }
 }

@@ -5,13 +5,13 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assassin_k1_duelist_sword}"
+                        "minecraft:custom_data": "{item_id:marksman_k3_el_diablo_bullet}"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assassin/kit1/on_parry_performed"
+        "function": "hipochallenge:abilities/class/marksman/kit3/on_el_diablo_bullet_used"
     }
 }

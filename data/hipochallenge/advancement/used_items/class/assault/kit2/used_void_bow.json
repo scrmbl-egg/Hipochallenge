@@ -5,13 +5,13 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assassin_k1_duelist_sword}"
+                        "minecraft:custom_data": "{item_id:assault_k2_void_bow}"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assassin/kit1/on_parry_performed"
+        "function": "hipochallenge:abilities/class/assault/kit2/on_void_bow_shot"
     }
 }

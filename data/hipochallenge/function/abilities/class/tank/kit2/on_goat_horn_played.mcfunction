@@ -13,6 +13,9 @@ execute if entity @s[scores={silence_timer=1..}] run return run function hipocha
 # score: tank_kit2_goat_horn_cd
 clear @s *[custom_data={item_id:tank_k2_goat_horn}] 1
 
+# TODO: give slowness to enemies at the start, a single time with
+# TANK_K2_HORN_SLOWNESS_DURATION_SECONDS
+
 # give tag to player
 tag @s add tank_kit2_goat_horn_detecting
 

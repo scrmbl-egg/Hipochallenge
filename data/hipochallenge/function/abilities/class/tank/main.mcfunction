@@ -17,6 +17,9 @@
 
     # goat horn detection
     execute as @a[tag=tank_kit2_goat_horn_detecting,scores={tank_kit2_goat_horn_recovery_ticks=1..}] at @s run function hipochallenge:abilities/class/tank/kit2/goat_horn/detect_enemy_players
+    
+    # TODO: play sounds depending on the amount of recovery ticks
+    
 # kit 3
     # spirit
     execute as @a run function hipochallenge:attributes/modifiers/class/tank/kit3/spirit/remove_buff_st with storage minecraft:hipochallenge
