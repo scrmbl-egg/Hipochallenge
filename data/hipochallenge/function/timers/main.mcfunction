@@ -1,12 +1,13 @@
 # lifetimes
 # TODO: There's two routes we could take regarding the following command:
-    # 1: We could change the selector to @e so that ANY entity with timer score has its lifetime
+    # 1: We could change the selector to @e so that ANY entity with timer score
+    # has its lifetime
     # updated.
         # PROS: no individual entity handling
         # CONS: AWFUL performance
     # 2: Remove it entirely
-        # PROS: BETTER performance, since we are capable of filtering more precisely what entities
-        # actually decrease their lifetime
+        # PROS: BETTER performance, since we are capable of filtering more
+        # precisely what entities actually decrease their lifetime
         # CONS: every entity that needs a lifetime must be individually handled
 execute as @a[scores={timer=1..}] run scoreboard players remove @s timer 1
 
