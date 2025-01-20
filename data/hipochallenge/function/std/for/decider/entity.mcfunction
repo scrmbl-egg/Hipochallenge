@@ -1,1 +1,0 @@
-execute as @s at @s run function hipochallenge:std/for/unsafe/iterate_st with storage minecraft:hipochallenge
