@@ -1,5 +1,3 @@
-# TODO: make a function that swaps the teams' names.
-
 # create score to store bools
 scoreboard objectives add local_swap_score dummy
 
