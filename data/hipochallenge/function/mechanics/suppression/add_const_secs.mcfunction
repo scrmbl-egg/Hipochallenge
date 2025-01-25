@@ -1,6 +1,9 @@
 # params:
     # duration_const_seconds
 
+# ensure scoreboard has previous value
+scoreboard players add @s suppression_timer 0
+
 # create local score
 scoreboard objectives add local_suppr_score dummy
 
