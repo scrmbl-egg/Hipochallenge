@@ -1,2 +1,7 @@
+# ignore text files
+*.txt
+
+# ignore test, experimental and secret directories
 **/test*
 **/experimental*
+**/secret*
