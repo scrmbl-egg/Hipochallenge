@@ -345,7 +345,15 @@ data modify storage minecraft:hipochallenge TEAM2_DEFAULT_NAME set value "Team 2
 
 #
 
+## MAPS
+
+# callouts
+
+# TODO: add callout objects and lists
+
 ## Text components
+
+# TODO: delete or use text components
 
 data modify storage minecraft:hipochallenge NO_COOLDOWN_TEXT_COMPONENT set value '{"color":"yellow","translate":"Un solo uso"}'
 data modify storage minecraft:hipochallenge COOLDOWN_TEXT_COMPONENT set value ''

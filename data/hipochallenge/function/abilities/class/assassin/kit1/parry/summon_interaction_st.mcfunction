@@ -15,7 +15,7 @@ scoreboard objectives add local dummy
 $execute as @s at @s positioned ~ ~$(ASSASSIN_K1_PARRY_INTERACTION_GLOBAL_Y_OFFSET) ~ anchored eyes run summon interaction ^ ^ ^$(ASSASSIN_K1_PARRY_INTERACTION_SUMMON_DISTANCE) {width:$(ASSASSIN_K1_PARRY_INTERACTION_WIDTH),height:$(ASSASSIN_K1_PARRY_INTERACTION_HEIGHT),Tags:["new_0"],Passengers:[{id:"minecraft:marker",data:{owner:$(local_self_uuid),team:$(local_self_team)}}]}
 
 # set lifetime
-$execute as @n[type=interaction,tag=new_0] run scoreboard players set @s timer $(ASSASSIN_K1_PARRY_INTERACTION_LIFETIME_TICKS)
+$execute as @n[type=interaction,tag=new_0] run scoreboard players set @s life_timer $(ASSASSIN_K1_PARRY_INTERACTION_LIFETIME_TICKS)
 
 # save relative position from player (intr - player)
 

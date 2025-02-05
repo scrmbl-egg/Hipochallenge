@@ -12,7 +12,6 @@ recipe take @a *
 # vfx
     function hipochallenge:vfx/main
 
-
     # TODO: Move map functions to a maps/main function
     # map vfx
         # map0
