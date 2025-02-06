@@ -4,7 +4,7 @@ scoreboard objectives add local dummy
 execute on origin run data modify storage minecraft:hipochallenge local_owner_uuid set from entity @s UUID
 
 # origin is actually the owner, thanks minecraft!
-execute on origin run function hipochallenge:teams/get/get_enemy_team
+execute on origin run function hipochallenge:teams/get/get_enemy_team {dest_st:"minecraft:hipochallenge",dest_path:"local_enemy_team"}
 # gives ownership of:
     # local_enemy_team
 

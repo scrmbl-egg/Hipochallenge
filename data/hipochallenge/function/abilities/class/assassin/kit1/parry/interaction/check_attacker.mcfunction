@@ -6,7 +6,7 @@ data modify storage minecraft:hipochallenge local_interaction_team set from enti
 data modify storage minecraft:hipochallenge local_interaction_owner_uuid set from entity @s Passengers[0].data.owner
 
 # get the enemy's team if there is an attacker and rename output
-execute as @s if data entity @s attack on attacker as @s run function hipochallenge:teams/get/get_self_team
+execute as @s if data entity @s attack on attacker as @s run function hipochallenge:teams/get/get_self_team {dest_st:"minecraft:hipochallenge",dest_path:"local_self_team"}
 # gives ownership of:
     # local_self_team
 execute as @s if data entity @s attack run data modify storage minecraft:hipochallenge local_attacker_team set from storage minecraft:hipochallenge local_self_team

@@ -5,7 +5,7 @@ scoreboard players set @s tank_kit2_goat_horn_nearby_enemies 0
 data modify storage minecraft:hipochallenge local_enemy_uuid_array set value []
 
 # get enemy team
-function hipochallenge:teams/get/get_enemy_team
+function hipochallenge:teams/get/get_enemy_team {dest_st:"minecraft:hipochallenge",dest_path:"local_enemy_team"}
 # gives ownership of:
     # local_enemy_team
 
