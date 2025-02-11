@@ -15,6 +15,7 @@ scoreboard players add #version value 1
 # data constants
 # TODO: use experimental init_consts function once all constant references are changed
 function hipochallenge:storage/init_consts
+#function hipochallenge:storage/new/init_consts
 
 # scoreboards
 function hipochallenge:msg/debug/msg_info {msg:"Initialising scoreboards..."}

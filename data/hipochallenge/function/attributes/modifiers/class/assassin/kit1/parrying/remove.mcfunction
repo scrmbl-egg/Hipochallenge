@@ -1,2 +1,0 @@
-attribute @s player.entity_interaction_range modifier remove assassin_k1_parrying
-attribute @s generic.attack_speed modifier remove assassin_k1_parrying

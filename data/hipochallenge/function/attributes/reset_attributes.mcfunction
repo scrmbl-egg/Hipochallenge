@@ -46,9 +46,9 @@ effect give @s instant_health 1 100 true
     # tank modifiers
     
     # kit 3
-        function hipochallenge:attributes/modifiers/class/tank/kit3/remove_armor/remove_st with storage minecraft:hipochallenge
+        function hipochallenge:attributes/class/modifiers/tank/kit3/remove_armor/remove
         
-        function hipochallenge:attributes/modifiers/class/tank/kit3/spirit/remove_debuff_st with storage minecraft:hipochallenge
+        function hipochallenge:attributes/class/modifiers/tank/kit3/spirit/remove_buff
     
     # assassin modifiers
-        function hipochallenge:attributes/modifiers/class/assassin/kit1/parrying/remove
+        function hipochallenge:attributes/class/modifiers/assassin/kit1/parrying/remove

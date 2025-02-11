@@ -1,7 +1,7 @@
 # params: team_trim, team_armor_color
 
 # attributes
-function hipochallenge:attributes/default/class/set_marksman_attributes
+function hipochallenge:attributes/class/base/set_marksman_attributes
 
 # head
 $item replace entity @s armor.head with leather_helmet[dyed_color={rgb:$(team_armor_color),show_in_tooltip:false},trim={material:"$(team_trim)",pattern:"eye",show_in_tooltip:false}] 1

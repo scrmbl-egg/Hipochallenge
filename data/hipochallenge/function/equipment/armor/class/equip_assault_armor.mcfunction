@@ -3,7 +3,7 @@
 # TODO: add assault's armor
 
 # attributes
-function hipochallenge:attributes/default/class/set_assault_attributes
+function hipochallenge:attributes/class/base/set_assault_attributes
 
 # head
 
