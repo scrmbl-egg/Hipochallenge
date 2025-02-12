@@ -2,6 +2,6 @@
 *.txt
 
 # ignore test, experimental and secret directories
-**/test*
-**/experimental*
-**/secret*
+**/test/*
+**/experimental/*
+**/secret/*
