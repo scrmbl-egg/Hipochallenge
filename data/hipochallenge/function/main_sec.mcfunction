@@ -7,9 +7,6 @@ schedule function hipochallenge:main_sec 1s
     scoreboard players add @a id 0
     execute as @a[scores={id=0}] at @s run function hipochallenge:unique/generate_id
 
-# music
-    function hipochallenge:music/mute_vanilla_music
-
 # vfx
     # FIXME: this should be moved to a maps/main function
     # maps

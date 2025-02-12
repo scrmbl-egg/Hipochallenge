@@ -1,3 +1,9 @@
+# params:
+    # team
+    # radius
+    # duration_seconds
+    # amplifier
+
 # storage:
     # local_self_team
     # TANK_K1_HORN_RADIUS

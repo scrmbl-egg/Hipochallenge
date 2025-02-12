@@ -14,7 +14,7 @@ execute if entity @s[scores={silence_timer=1..}] run return run function hipocha
 clear @s *[custom_data={item_id:tank_k1_goat_horn}] 1
 
 # get team
-function hipochallenge:teams/get/get_self_team {dest_st:"minecraft:hipochallenge",dest_path:"local_self_team"}
+function hipochallenge:teams/get/get_self_team {dest_st:"minecraft:hipochallenge",dest_path:"local_give_buffs_params.team"}
 # gives ownership of:
     # local_self_team
 
