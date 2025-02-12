@@ -2,18 +2,18 @@
     "condition": "minecraft:entity_scores",
     "entity": "this",
     "scores": {
-      "kit": {
-        "min": 1,
-        "max": 3
-      },
-      "perk": {
-        "min": 1,
-        "max": 3
-      },
-      "class": {
-        "min": 1,
-        "max": 6
-      }
+        "kit": {
+            "min": 1,
+            "max": 3
+        },
+        "perk": {
+            "min": 1,
+            "max": 3
+        },
+        "class": {
+            "min": 1,
+            "max": 6
+        }
     }
-  }
+}
   

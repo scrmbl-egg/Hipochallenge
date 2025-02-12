@@ -2,6 +2,6 @@
     "condition": "minecraft:entity_scores",
     "entity": "this",
     "scores": {
-      "kit": 3
+        "kit": 3
     }
 }

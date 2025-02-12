@@ -1,7 +1,7 @@
 {
-  "condition": "minecraft:entity_scores",
-  "entity": "this",
-  "scores": {
-    "class": 4
-  }
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+        "class": 4
+    }
 }

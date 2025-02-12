@@ -2,6 +2,6 @@
     "condition": "minecraft:entity_scores",
     "entity": "this",
     "scores": {
-      "perk": 3
+        "perk": 3
     }
 }
