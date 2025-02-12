@@ -1,6 +1,9 @@
 # remove recipes
 recipe take @a *
 
+# mute vanilla music
+    function hipochallenge:music/mute_vanilla_music
+
 # game state logic
 
     function hipochallenge:game_states/state_logic
