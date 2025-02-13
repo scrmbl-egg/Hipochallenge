@@ -1,9 +1,9 @@
 {
     "condition": "minecraft:value_check",
     "value": {
-      "type": "minecraft:storage",
-      "storage": "minecraft:hipochallenge",
-      "path": "team2_color_number"
+        "type": "minecraft:storage",
+        "storage": "minecraft:hipochallenge",
+        "path": "vars.teams.team2.color_number"
     },
     "range": 1
 }

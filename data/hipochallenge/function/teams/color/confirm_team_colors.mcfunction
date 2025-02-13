@@ -1,2 +1,0 @@
-execute if function hipochallenge:teams/color/are_team_colors_selected run function hipochallenge:teams/color/go_ahead
-execute unless function hipochallenge:teams/color/are_team_colors_selected run function hipochallenge:msg/all/msg_all_error {msg:"Los colores no están correctamente seleccionados."}

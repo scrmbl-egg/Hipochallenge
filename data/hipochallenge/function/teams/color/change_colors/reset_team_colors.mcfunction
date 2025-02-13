@@ -4,12 +4,14 @@ team modify team2 color white
 
 # TODO: get values from neutral team instead of hardcoding
 
-data modify storage minecraft:hipochallenge team1_text_color set value "white"
-data modify storage minecraft:hipochallenge team1_trim set value "quartz"
-data modify storage minecraft:hipochallenge team1_dust_color set value "[1.000,1.000,1.000]"
-data modify storage minecraft:hipochallenge team1_armor_color set value 13224393
-data modify storage minecraft:hipochallenge team1_color_number set value 0
-data modify storage minecraft:hipochallenge team2_text_color set value "white"
-data modify storage minecraft:hipochallenge team2_trim set value "quartz"
-data modify storage minecraft:hipochallenge team2_dust_color set value "[1.000,1.000,1.000]"
-data modify storage minecraft:hipochallenge team2_armor_color set value 13224393
+data modify storage minecraft:hipochallenge vars.teams.team1.color_number set from storage minecraft:hipochallenge consts.teams.neutral.color_number
+data modify storage minecraft:hipochallenge vars.teams.team1.dust_color set from storage minecraft:hipochallenge consts.teams.neutral.dust_color
+data modify storage minecraft:hipochallenge vars.teams.team1.text_color set from storage minecraft:hipochallenge consts.teams.neutral.text_color
+data modify storage minecraft:hipochallenge vars.teams.team1.armor_color set from storage minecraft:hipochallenge consts.teams.neutral.armor_color
+data modify storage minecraft:hipochallenge vars.teams.team1.trim_material set from storage minecraft:hipochallenge consts.teams.neutral.trim_material
+
+data modify storage minecraft:hipochallenge vars.teams.team2.color_number set from storage minecraft:hipochallenge consts.teams.neutral.color_number
+data modify storage minecraft:hipochallenge vars.teams.team2.dust_color set from storage minecraft:hipochallenge consts.teams.neutral.dust_color
+data modify storage minecraft:hipochallenge vars.teams.team2.text_color set from storage minecraft:hipochallenge consts.teams.neutral.text_color
+data modify storage minecraft:hipochallenge vars.teams.team2.armor_color set from storage minecraft:hipochallenge consts.teams.neutral.armor_color
+data modify storage minecraft:hipochallenge vars.teams.team2.trim_material set from storage minecraft:hipochallenge consts.teams.neutral.trim_material
