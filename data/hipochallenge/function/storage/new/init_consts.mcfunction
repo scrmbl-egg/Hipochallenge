@@ -269,12 +269,12 @@ data modify storage minecraft:hipochallenge consts.teams.team2.default_name set 
     
     data modify storage minecraft:hipochallenge consts.classes.recon.dust_color set value [0.552,0.356,0.756]
 
-    data modify storage minecraft:hipochallenge consts.classes.recon.attribute.max_health set value 20
-    data modify storage minecraft:hipochallenge consts.classes.recon.attribute.armor set value 16
-    data modify storage minecraft:hipochallenge consts.classes.recon.attribute.armor_toughness set value 4
-    data modify storage minecraft:hipochallenge consts.classes.recon.attribute.scale set value 0.81
-    data modify storage minecraft:hipochallenge consts.classes.recon.attribute.burning_time set value 1
-    data modify storage minecraft:hipochallenge consts.classes.recon.attribute.explosion_knockback_resistance set value 0
+    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.max_health set value 20
+    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.armor set value 16
+    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.armor_toughness set value 4
+    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.scale set value 0.81
+    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.burning_time set value 1
+    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.explosion_knockback_resistance set value 0
     
     data modify storage minecraft:hipochallenge consts.classes.recon.list_info.class_color set value "#b99dda"
     data modify storage minecraft:hipochallenge consts.classes.recon.list_info.kit_color set value "#cebae5"
