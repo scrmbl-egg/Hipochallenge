@@ -1,4 +1,6 @@
-# params: team_trim, team_armor_color
+# params: 
+    # trim_material
+    # armor_color
 
 # TODO: add assault's armor
 

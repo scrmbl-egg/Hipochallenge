@@ -1,16 +1,18 @@
-# params: team_trim, team_armor_color
+# params: 
+    # armor_color
+    # trim_material
 
 # attributes
 function hipochallenge:attributes/class/base/set_assassin_attributes
 
 # head
-$item replace entity @s armor.head with leather_helmet[dyed_color={rgb:$(team_armor_color),show_in_tooltip:false},trim={material:"$(team_trim)",pattern:"tide",show_in_tooltip:false}] 1
+$item replace entity @s armor.head with leather_helmet[dyed_color={rgb:$(armor_color),show_in_tooltip:false},trim={material:"$(trim_material)",pattern:"tide",show_in_tooltip:false}] 1
 
 # chest
-$item replace entity @s armor.chest with chainmail_chestplate[trim={material:"$(team_trim)",pattern:"tide",show_in_tooltip:false}] 1
+$item replace entity @s armor.chest with chainmail_chestplate[trim={material:"$(trim_material)",pattern:"tide",show_in_tooltip:false}] 1
 
 # legs
-$item replace entity @s armor.legs with leather_leggings[dyed_color={rgb:$(team_armor_color),show_in_tooltip:false}] 1
+$item replace entity @s armor.legs with leather_leggings[dyed_color={rgb:$(armor_color),show_in_tooltip:false}] 1
 
 # feet
 item replace entity @s armor.feet with air
