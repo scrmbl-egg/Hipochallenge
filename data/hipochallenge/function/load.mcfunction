@@ -36,8 +36,11 @@ function hipochallenge:gamerules/init_gamerules
 # logo
 function hipochallenge:msg/debug/msg_info {msg:"Restarting logos..."}
 kill @e[tag=logo]
-execute positioned 458 -46 -100 run function hipochallenge:lobby/logo
-execute positioned -84 -32 151 run function hipochallenge:lobby/logo
+
+# FIXME: logo display entity has such a long JSON text string that it could
+# cause players to disconnect when attempting to render it.
+#execute positioned 458 -46 -100 run function hipochallenge:lobby/logo
+#execute positioned -84 -32 151 run function hipochallenge:lobby/logo
 
 # schedule main functions
 function hipochallenge:msg/debug/msg_info {msg:"Scheduling main functions..."}
