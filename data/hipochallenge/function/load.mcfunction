@@ -45,11 +45,11 @@ kill @e[tag=logo]
 # schedule main functions
 function hipochallenge:msg/debug/msg_info {msg:"Scheduling main functions..."}
 
-schedule clear hipochallenge:main_ten_ticks
-schedule function hipochallenge:main_ten_ticks 10t
+schedule clear hipochallenge:ten_ticks
+schedule function hipochallenge:ten_ticks 10t
 
-schedule clear hipochallenge:main_sec
-schedule function hipochallenge:main_sec 1s
+schedule clear hipochallenge:second
+schedule function hipochallenge:second 1s
 
 # update team text displays
 #function hipochallenge:msg/debug/msg_info {msg:"Updating text displays..."}

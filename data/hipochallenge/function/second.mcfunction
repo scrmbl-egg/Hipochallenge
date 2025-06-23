@@ -1,4 +1,4 @@
-schedule function hipochallenge:main_sec 1s
+schedule function hipochallenge:second 1s
 
 # hunger
     effect give @a minecraft:saturation infinite 0 true
@@ -8,7 +8,7 @@ schedule function hipochallenge:main_sec 1s
     execute as @a[scores={id=0}] at @s run function hipochallenge:unique/generate_id
 
 # vfx
-    # FIXME: this should be moved to a maps/main function
+    # FIXME: this should be moved to a levels/tick function
     # maps
         # map0
             # pipes

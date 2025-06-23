@@ -11,19 +11,19 @@
     # TODO: Move this function to the \projectiles folder
     execute as @e[type=trident] at @s run function hipochallenge:abilities/class/tank/kit2/trident
     execute as @a[scores={tank_kit2_trident_cd=1},gamemode=!creative] at @s run function hipochallenge:abilities/class/tank/kit2/trident/return
-    
+
     # goat horn
     execute as @a[scores={tank_kit2_goat_horn_cd=1}] run function hipochallenge:replace_item/replace {custom_data:"{item_id:tank_k2_goat_horn_cd}",item_modifier:"hipochallenge:weapons/class/tank/kit2/goat_horn"}
 
     # goat horn detection
     execute as @a[tag=tank_kit2_goat_horn_detecting,scores={tank_kit2_goat_horn_recovery_ticks=1..}] at @s run function hipochallenge:abilities/class/tank/kit2/goat_horn/detect_enemy_players
-    
+
     # TODO: play sounds depending on the amount of recovery ticks
-    
+
 # kit 3
     # spirit
     execute as @a run function hipochallenge:attributes/class/modifiers/tank/kit3/spirit/remove_buff
-    execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/main
-    
+    execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/tick
+
     # bubble shield
-    execute as @e[type=marker,tag=bubble_shield] at @s run function hipochallenge:abilities/class/tank/kit3/bubble_shield/main with storage minecraft:hipochallenge consts.classes.tank.kit3.bubble_shield
+    execute as @e[type=marker,tag=bubble_shield] at @s run function hipochallenge:abilities/class/tank/kit3/bubble_shield/tick with storage minecraft:hipochallenge consts.classes.tank.kit3.bubble_shield

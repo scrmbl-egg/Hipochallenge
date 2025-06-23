@@ -9,27 +9,24 @@ recipe take @a *
     #function hipochallenge:game_states/state_logic
 
 # deaths
-    # TODO: Move this function to a separate folder (death/main)
+    # TODO: Move this function to a separate folder (death/tick)
     execute as @a[scores={is_dead=1..}] at @s run function hipochallenge:death/handle_death
 
 # vfx
-    function hipochallenge:vfx/main
+    function hipochallenge:vfx/tick
 
-    # TODO: Move map functions to a maps/main function
+    # TODO: Move level functions to a level/tick function
     # map vfx
         # map0
             # pipes
                 function hipochallenge:vfx/maps/map0/pipe_particles
 
 # projectiles
-    function hipochallenge:projectiles/main
+    function hipochallenge:projectiles/tick
 
 # abilities
-    function hipochallenge:abilities/main
-
-# menu
-    execute as @a run function hipochallenge:menus/logic/menu_main
+    function hipochallenge:abilities/tick
 
 ## __ KEEP AT BOTTOM OF FILE __
 # timers
-    function hipochallenge:timers/main
+    function hipochallenge:timers/tick

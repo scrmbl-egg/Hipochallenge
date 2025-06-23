@@ -10,8 +10,9 @@ execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{item_
 execute as @e[type=arrow,tag=no_gravity_arrow] run scoreboard players remove @s life_timer 1
 
 # flare arrows main logic
-execute as @e[type=spectral_arrow,nbt={weapon:{components:{"minecraft:custom_data":{item_id:recon_k2_flare_arrow_crossbow}}}}] run function hipochallenge:projectiles/flare_arrows/main
+execute as @e[type=spectral_arrow,nbt={weapon:{components:{"minecraft:custom_data":{item_id:recon_k2_flare_arrow_crossbow}}}}] run function hipochallenge:projectiles/flare_arrows/tick
 
 ## __ KEEP AT BOTTOM OF FILE __
 # clean all arrows
-execute as @e[type=#arrows,nbt={shake:1b}] at @s run function hipochallenge:projectiles/arrows/clean
+execute as @e[type=#arrows,nbt={shake:1b}] at @s run \
+    function hipochallenge:projectiles/arrows/clean
