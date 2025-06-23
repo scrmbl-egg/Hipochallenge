@@ -2,6 +2,9 @@
     # users_playing
     # NECESSARY_PLAYERS_FOR_GAME
 
+# FIXME: the current implementation, while it works, it's confusing to work with
+# and could also have hidden errors or code smells
+
 scoreboard objectives add local dummy
 scoreboard players enable @a join
 

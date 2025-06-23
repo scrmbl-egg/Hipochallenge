@@ -15,21 +15,15 @@
     {
         "function": "minecraft:set_components",
         "components": {
+            "minecraft:consumable": {
+                "has_consume_particles": true,
+                "consume_seconds": 8,
+                "animation": "eat"
+            },
             "minecraft:food": {
                 "nutrition": 0,
                 "saturation": 0,
-                "can_always_eat": true,
-                "eat_seconds": 8,
-                "effects": [
-                    {
-                        "effect": {
-                            "id": "minecraft:regeneration",
-                            "amplifier": 3,
-                            "duration": 60,
-                            "show_particles": false
-                        }
-                    }
-                ]
+                "can_always_eat": true
             }
         }
     }

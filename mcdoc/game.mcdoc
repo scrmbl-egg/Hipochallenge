@@ -1,0 +1,103 @@
+/// Game context/global variables struct.
+struct GameContext {
+    /// Current game state.
+    current_state: GameState,
+    /// Current game mode data.
+    current_game_mode_id: GameMode,
+    /// Amount of players playing the game, doesn't count spectators.
+    users_playing: int @ 0..,
+    /// Current round number.
+    current_round: int @ 1..,
+    /// Index of the current level being played.
+    current_level_index: int @ 0..,
+    /// Amount of points/rounds won by Team 1.
+    team1_wins: int @ 0..,
+    /// Amount of points/rounds won by Team 2.
+    team2_wins: int @ 0..,
+    /// List of banned level IDs.
+    banned_level_ids: [int]
+}
+
+/// Game mode struct.
+struct GameMode {
+    /// Duration of a game round in ticks.
+    round_duration_ticks: #[divisible_by=20] int @ 20..,
+    /// Amount of rounds/points that must be won by default to win a game.
+    necessary_wins: int @ 1..,
+    /// Minimum amount of rounds/points that the winning team must lead with to win the game.
+    minimum_win_lead_for_victory: int @ 1..,
+}
+
+/// Game states of the game.
+enum(byte) GameState {
+    /// State where the players are not playing.
+    NotPlaying = 0,
+    /// State where a match is requested and is waiting for players.
+    WaitingForPlayers = 1,
+    /// State where all players have joined and are selecting their team.
+    SelectingTeam = 2,
+    /// State where the teams are decided, and a random player of the team decides the name.
+    NamingTeam = 3,
+    /// State where the players decide on a color for the team.
+    SelectingTeamColor = 4,
+    /// State where the players select their class for the game.
+    SelectingClasses = 5,
+    /// State where the players select/ban/decide on a level for the game.
+    SelectingLevel = 6,
+    /// State where the players are shown the level they are going to play.
+    LevelIntro = 7,
+    /// State where the players select the kit for the next round.
+    SelectingKit = 8,
+    /// State where the players wait for the round to start.
+    StartingRound = 9,
+    /// State where the players are playing the round.
+    Playing = 10,
+    /// State where the players have finished the round.
+    EndingRound = 11,
+    /// State where the players have finished the match and a winner is announced.
+    EndingMatch = 12
+}
+
+struct AvailableGameStates {
+    /// State where the players are not playing.
+    not_playing: GameState,
+    /// State where a match is requested and is waiting for players.
+    waiting_for_players: GameState,
+    /// State where all players have joined and are selecting their team.
+    selecting_team: GameState,
+    /// State where the teams are decided, and a random player of the team decides the name.
+    naming_team: GameState,
+    /// State where the players decide on a color for the team.
+    selecting_team_color: GameState,
+    /// State where the players select their class for the game.
+    selecting_class: GameState,
+    /// State where the players select/ban/decide on a level for the game.
+    selecting_level: GameState,
+    /// State where the players are shown the level they are going to play.
+    level_intro: GameState,
+    /// State where the players select the kit for the next round.
+    selecting_kit: GameState,
+    /// State where the players wait for the round to start.
+    starting_round: GameState,
+    /// State where the players are playing the round.
+    playing: GameState,
+    /// State where the players have finished the round.
+    ending_round: GameState,
+    /// State where the players have finished the match and a winner is announced.
+    ending_match: GameState
+}
+
+/// Struct of available game modes.
+struct AvailableGameModes {
+    /// Casual game mode data.
+    /// Random/re-rolled level, no n-point lead.
+    casual: GameMode,
+    /// Competitive game mode data.
+    /// Selected level, n-point lead.
+    competitive: GameMode,
+    /// Deathmatch game mode data.
+    /// Timed respawning, and victory is reached through amount of kills.
+    deathmatch?: GameMode
+}
+
+

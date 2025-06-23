@@ -6,13 +6,14 @@ advancement revoke @s only hipochallenge:used_items/class/assassin/kit1/used_due
 # interaction
 
 # set entity range attribute modifiers (must last until hitbox is gone)
-function hipochallenge:attributes/modifiers/class/assassin/kit1/parrying/add
+function hipochallenge:attributes/class/modifiers/assassin/kit1/parrying/add
 
 # get self uuid
 data modify storage minecraft:hipochallenge local_self_uuid set from entity @s UUID
 
 # get team
-function hipochallenge:teams/get/get_self_team {dest_st:"minecraft:hipochallenge",dest_path:"local_self_team"}
+function hipochallenge:teams/get/get_self_team \
+    {dest_st:"minecraft:hipochallenge",dest_path:"local_self_team"}
 # gives ownership of:
     # local_self_team
 

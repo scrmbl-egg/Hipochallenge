@@ -5,8 +5,8 @@ recipe take @a *
     function hipochallenge:music/mute_vanilla_music
 
 # game state logic
-
-    function hipochallenge:game_states/state_logic
+    # TODO: uncomment this command when game states are done
+    #function hipochallenge:game_states/state_logic
 
 # deaths
     # TODO: Move this function to a separate folder (death/main)
@@ -20,15 +20,15 @@ recipe take @a *
         # map0
             # pipes
                 function hipochallenge:vfx/maps/map0/pipe_particles
-    
+
+# projectiles
+    function hipochallenge:projectiles/main
+
 # abilities
     function hipochallenge:abilities/main
 
 # menu
     execute as @a run function hipochallenge:menus/logic/menu_main
-
-# projectile cleanup
-    function hipochallenge:projectiles/main
 
 ## __ KEEP AT BOTTOM OF FILE __
 # timers

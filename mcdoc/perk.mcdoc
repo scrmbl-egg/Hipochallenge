@@ -1,0 +1,88 @@
+use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
+
+struct Perk {
+    /// Resource pack `.json` key for the perk name.
+    name_translation_key: string,
+    /// Perk name fallback.
+    name_fallback: string,
+}
+
+struct TankPerk1 {
+    ...Perk,
+    food_item: struct {
+        initial_cooldown_ticks: (int @ 2.. | -1)
+    }
+}
+
+struct TankPerk2 {
+    ...Perk,
+    attack_effects: [Effect]
+}
+
+struct TankPerk3 {
+    ...Perk,
+}
+
+struct MarksmanPerk1 {
+    ...Perk,
+    suppression_or_on_air_magic_damage: int @ 0..
+}
+
+struct MarksmanPerk2 {
+    ...Perk,
+    max_health_for_effects: int @ 1..20,
+    effects: [Effect]
+}
+
+struct MarksmanPerk3 {
+    ...Perk,
+    added_projectiles: int @ 1..
+}
+
+struct AssassinPerk1 {
+    ...Perk,
+}
+
+struct AssassinPerk2 {
+    ...Perk,
+}
+
+struct AssassinPerk3 {
+    ...Perk,
+}
+
+struct SupportPerk1 {
+    ...Perk,
+}
+
+struct SupportPerk2 {
+    ...Perk,
+}
+
+struct SupportPerk3 {
+    ...Perk,
+}
+
+struct ReconPerk1 {
+    ...Perk,
+}
+
+struct ReconPerk2 {
+    ...Perk,
+}
+
+struct ReconPerk3 {
+    ...Perk,
+}
+
+struct AssaultPerk1 {
+    ...Perk,
+}
+
+struct AssaultPerk2 {
+    ...Perk,
+}
+
+struct AssaultPerk3 {
+    ...Perk,
+}

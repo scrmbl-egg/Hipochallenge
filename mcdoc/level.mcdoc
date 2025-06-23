@@ -1,0 +1,27 @@
+type LocalSpaceVolumeCoordinates = [[int[] @ 3] @ 2]
+
+/// Level information struct.
+struct Level {
+    /// Resource pack `.json` key for the level name.
+    name_translation_key: string,
+    /// Level name fallback.
+    name_fallback: string,
+    /// List of callouts.
+    callouts: [Callout]
+}
+
+/// Callout information struct.
+struct Callout {
+    /// Resource pack `.json` key for the callout name.
+    name_translation_key: string,
+    /// Callout name fallback.
+    name_fallback: string,
+    /// List of volumes of the callout.
+    local_space_volume_coordinates: LocalSpaceVolumeCoordinates
+}
+
+enum(byte) Levels {
+    TrainingArea = -1,
+    SubterraneanDecay = 0,
+    FroggylandPlayplace2 = 1,
+}

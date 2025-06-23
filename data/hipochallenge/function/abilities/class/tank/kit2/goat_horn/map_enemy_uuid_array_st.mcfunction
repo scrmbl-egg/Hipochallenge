@@ -9,5 +9,3 @@
     # local_int_self_pos_y
     # local_int_self_pos_z
 $execute as @p[nbt={UUID:$(enemy_uuid)}] at @s run function hipochallenge:vfx/abilities/class/tank/kit2/send_armor_st with storage minecraft:hipochallenge
-
-$execute as @p[nbt={UUID:$(enemy_uuid)}] run effect give @s slowness 1 1 false

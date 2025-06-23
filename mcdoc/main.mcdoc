@@ -1,0 +1,46 @@
+use ::Hipochallenge::mcdoc::team::AvailableTeams
+use ::Hipochallenge::mcdoc::team::TeamContext
+use ::Hipochallenge::mcdoc::class::AvailableClasses
+use ::Hipochallenge::mcdoc::game::AvailableGameModes
+use ::Hipochallenge::mcdoc::game::AvailableGameStates
+use ::Hipochallenge::mcdoc::game::GameContext
+
+dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
+    /// Global constants of the datapack.
+    consts: struct MainConsts {
+        /// Game related constants.
+        game: struct {
+            /// Version of the map.
+            map_version: string,
+            /// Size of a team.
+            team_size: int @ 1..,
+            /// Players necessary for starting a game.
+            necessary_players_for_game: int @ 1..,
+            /// Duration of the match request notification.
+            match_request_duration_ticks: int @ 1..,
+            /// Available game modes.
+            modes: AvailableGameModes,
+            /// Available game states.
+            states: AvailableGameStates,
+        },
+        limits: struct {
+            no_gravity_projectiles_lifetime_ticks: int @ 0..
+        },
+        /// Class related constants.
+        classes: AvailableClasses,
+        /// Team related constants.
+        teams: AvailableTeams,
+    },
+    /// Global variables of the datapack.
+    vars: struct MainVars {
+        /// Current game context/global variables.
+        game_context: GameContext,
+        /// Team global variables.
+        team_contexts: struct {
+            /// Team 1 global variables.
+            team1: TeamContext,
+            /// Team 2 global variables.
+            team2: TeamContext
+        }
+    }
+}

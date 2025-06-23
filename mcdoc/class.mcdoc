@@ -1,0 +1,159 @@
+use ::java::util::text::TextColor
+
+/// Modifiable attributes of the available classes.
+struct ClassAttributes {
+    /// Maximum health attribute.
+    max_health: int @ 1..,
+    /// Armor attribute.
+    armor: int @ 0..,
+    /// Armor toughness attribute.
+    armor_toughness: int @ 0..,
+    /// Scale attribute.
+    scale: double @ 0.0625..16,
+    /// Burning time attribute.
+    burning_time: double @ 0.0..1024.0,
+    /// Explosion knockback resistance attribute.
+    explosion_knockback_resistance: double @ 0.0..1.0
+}
+
+/// Player list information of the class.
+struct ClassListInfo {
+    /// Color for the player's class name in the player list.
+    class_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+    /// Color for the player's kit name in the player list.
+    kit_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+    /// Color for the player's perk name in the player list.
+    perk_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+}
+
+/// Game class struct.
+struct Class {
+    /// Resource pack `.json` key for the class name.
+    name_translation_key: string,
+    /// Class name fallback.
+    name_fallback: string,
+    /// Dust color of the class.
+    dust_color: #[color="dec_rgb"] [float] @ 3,
+    /// Class custom attributes.
+    attributes: ClassAttributes,
+    /// Player list class information.
+    list_info: ClassListInfo
+}
+
+/// Tank class struct.
+struct TankClass {
+    ...Class,
+    /// Kit 1.
+    kit1: ::Hipochallenge::mcdoc::kit::TankKit1,
+    /// Kit 2.
+    kit2: ::Hipochallenge::mcdoc::kit::TankKit2,
+    /// Kit3.
+    kit3: ::Hipochallenge::mcdoc::kit::TankKit3,
+    /// Perk 1.
+    perk1: ::Hipochallenge::mcdoc::perk::TankPerk1,
+    /// Perk 2.
+    perk2: ::Hipochallenge::mcdoc::perk::TankPerk2,
+    /// Perk 3.
+    perk3: ::Hipochallenge::mcdoc::perk::TankPerk3
+}
+
+/// Marksman class struct.
+struct MarksmanClass {
+    ...Class,
+    /// Kit 1.
+    kit1: ::Hipochallenge::mcdoc::kit::MarksmanKit1,
+    /// Kit 2.
+    kit2: ::Hipochallenge::mcdoc::kit::MarksmanKit2,
+    /// Kit3.
+    kit3: ::Hipochallenge::mcdoc::kit::MarksmanKit3,
+    /// Perk 1.
+    perk1: ::Hipochallenge::mcdoc::perk::MarksmanPerk1,
+    /// Perk 2.
+    perk2: ::Hipochallenge::mcdoc::perk::MarksmanPerk2,
+    /// Perk 3.
+    perk3: ::Hipochallenge::mcdoc::perk::MarksmanPerk3
+}
+
+/// Assassin class struct.
+struct AssassinClass {
+    ...Class,
+    /// Kit 1.
+    kit1: ::Hipochallenge::mcdoc::kit::AssassinKit1,
+    /// Kit 2.
+    kit2: ::Hipochallenge::mcdoc::kit::AssassinKit2,
+    /// Kit3.
+    kit3: ::Hipochallenge::mcdoc::kit::AssassinKit3,
+    /// Perk 1.
+    perk1: ::Hipochallenge::mcdoc::perk::AssassinPerk1,
+    /// Perk 2.
+    perk2: ::Hipochallenge::mcdoc::perk::AssassinPerk2,
+    /// Perk 3.
+    perk3: ::Hipochallenge::mcdoc::perk::AssassinPerk3
+}
+
+/// Support class struct.
+struct SupportClass {
+    ...Class,
+    /// Kit 1.
+    kit1: ::Hipochallenge::mcdoc::kit::SupportKit1,
+    /// Kit 2.
+    kit2: ::Hipochallenge::mcdoc::kit::SupportKit2,
+    /// Kit3.
+    kit3: ::Hipochallenge::mcdoc::kit::SupportKit3,
+    /// Perk 1.
+    perk1: ::Hipochallenge::mcdoc::perk::SupportPerk1,
+    /// Perk 2.
+    perk2: ::Hipochallenge::mcdoc::perk::SupportPerk2,
+    /// Perk 3.
+    perk3: ::Hipochallenge::mcdoc::perk::SupportPerk3
+}
+
+/// Recon class struct.
+struct ReconClass {
+    ...Class,
+    /// Kit 1.
+    kit1: ::Hipochallenge::mcdoc::kit::ReconKit1,
+    /// Kit 2.
+    kit2: ::Hipochallenge::mcdoc::kit::ReconKit2,
+    /// Kit3.
+    kit3: ::Hipochallenge::mcdoc::kit::ReconKit3,
+    /// Perk 1.
+    perk1: ::Hipochallenge::mcdoc::perk::ReconPerk1,
+    /// Perk 2.
+    perk2: ::Hipochallenge::mcdoc::perk::ReconPerk2,
+    /// Perk 3.
+    perk3: ::Hipochallenge::mcdoc::perk::ReconPerk3
+}
+
+/// Assault class struct.
+struct AssaultClass {
+    ...Class,
+    /// Kit 1.
+    kit1: ::Hipochallenge::mcdoc::kit::AssaultKit1,
+    /// Kit 2.
+    kit2: ::Hipochallenge::mcdoc::kit::AssaultKit2,
+    /// Kit3.
+    kit3: ::Hipochallenge::mcdoc::kit::AssaultKit3,
+    /// Perk 1.
+    perk1: ::Hipochallenge::mcdoc::perk::AssaultPerk1,
+    /// Perk 2.
+    perk2: ::Hipochallenge::mcdoc::perk::AssaultPerk2,
+    /// Perk 3.
+    perk3: ::Hipochallenge::mcdoc::perk::AssaultPerk3
+}
+
+/// All classes struct.
+struct AvailableClasses {
+    /// Tank class related constants.
+    tank: TankClass,
+    /// Marksman class related constants.
+    marksman: MarksmanClass,
+    /// Assassin class related constants.
+    assassin: AssassinClass,
+    /// Support class related constants.
+    support: SupportClass,
+    /// Recon class related constants.
+    recon: ReconClass,
+    /// Assault class related constants.
+    assault: AssaultClass
+}

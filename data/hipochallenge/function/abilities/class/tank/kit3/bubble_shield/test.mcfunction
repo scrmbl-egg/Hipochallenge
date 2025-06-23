@@ -1,0 +1,1 @@
+function hipochallenge:abilities/class/tank/kit3/bubble_shield/destroy_projectiles with storage minecraft:hipochallenge local_bubble_shield

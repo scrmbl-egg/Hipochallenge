@@ -22,8 +22,8 @@
     
 # kit 3
     # spirit
-    execute as @a run function hipochallenge:attributes/modifiers/class/tank/kit3/spirit/remove_buff_st with storage minecraft:hipochallenge
+    execute as @a run function hipochallenge:attributes/class/modifiers/tank/kit3/spirit/remove_buff
     execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/main
     
     # bubble shield
-    execute as @e[type=marker,tag=bubble_shield] run function hipochallenge:abilities/class/tank/kit3/bubble_shield/main
+    execute as @e[type=marker,tag=bubble_shield] at @s run function hipochallenge:abilities/class/tank/kit3/bubble_shield/main with storage minecraft:hipochallenge consts.classes.tank.kit3.bubble_shield

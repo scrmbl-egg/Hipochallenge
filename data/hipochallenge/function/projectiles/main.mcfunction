@@ -1,5 +1,7 @@
 # tag specific entities as projectiles
-tag @e[type=#arrows,tag=!projectile] add projectile
+execute in overworld run tag @e[type=#hipochallenge:vanilla_projectiles,tag=!projectile,distance=0..] add projectile
+
+# TODO: tag specific armor_stands and markers too
 
 # marksman kit 2 arrows remove gravity
 execute as @e[type=arrow,nbt={weapon:{components:{"minecraft:custom_data":{item_id:marksman_k2_crossbow}}}},tag=!no_gravity_arrow] run function hipochallenge:projectiles/no_gravity_arrows/remove_gravity

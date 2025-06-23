@@ -9,20 +9,20 @@ execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.lev
 execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1.5 0.25
 execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1.2 0.25
 execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1 0.25
-execute as @a[tag=dario_update] at @s run playsound hipochallenge:dario.dario_update master @s ~ ~ ~ 1 1 1 
+execute as @a[tag=dario_update] at @s run playsound hipochallenge:dario.dario_update master @s ~ ~ ~ 1 1 1
 scoreboard players add #version value 1
 
 # data constants
 # TODO: use experimental init_consts function once all constant references are changed
 function hipochallenge:storage/init_consts
-#function hipochallenge:storage/new/init_consts
+function hipochallenge:storage/new/init_consts
 
 # scoreboards
 function hipochallenge:msg/debug/msg_info {msg:"Initialising scoreboards..."}
 function hipochallenge:scores/init_scores
 
 # display scores
-function hipochallenge:msg/debug/msg_info {msg:""}
+function hipochallenge:msg/debug/msg_info {msg:"Initialising sidebar displays..."}
 function hipochallenge:sidebar_displays/init_sidebar_displays
 
 # teams
@@ -49,5 +49,5 @@ schedule clear hipochallenge:main_sec
 schedule function hipochallenge:main_sec 1s
 
 # update team text displays
-function hipochallenge:msg/debug/msg_info {msg:"Updating text displays..."}
-function hipochallenge:teams/text_displays/update_st with storage minecraft:hipochallenge
+#function hipochallenge:msg/debug/msg_info {msg:"Updating text displays..."}
+#function hipochallenge:teams/text_displays/update_st with storage minecraft:hipochallenge

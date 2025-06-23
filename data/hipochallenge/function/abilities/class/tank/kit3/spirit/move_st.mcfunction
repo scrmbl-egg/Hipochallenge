@@ -11,7 +11,7 @@ $execute if entity @p[nbt={UUID:$(local_spirit_target)},tag=dead] run data modif
 
 $execute unless entity @p[nbt={UUID:$(local_spirit_target)}] run data modify entity @s data.target set from storage minecraft:hipochallenge local_spirit_owner
 
-$execute at @p[nbt={UUID:$(local_spirit_target)}] positioned ^-0.5 ^1.5 ^-1 run summon marker ~ ~ ~ {Tags:["kill_at_end"],data:{id:445}}
+$execute at @p[nbt={UUID:$(local_spirit_target)}] positioned ^-0.5 ^1.5 ^-1 run summon marker ~ ~ ~ {Tags:["kill_at_end_of_round"],data:{id:445}}
 
 $execute on vehicle at @s run data modify entity @n[nbt={data:{id:445}},type=minecraft:marker] Pos[1] set from entity @p[nbt={UUID:$(local_spirit_target)}] Pos[1]
 execute on vehicle at @s as @n[nbt={data:{id:445}},type=minecraft:marker] at @s run tp @s ~ ~2 ~

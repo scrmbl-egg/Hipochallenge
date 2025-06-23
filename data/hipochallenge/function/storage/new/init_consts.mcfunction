@@ -1,5 +1,5 @@
 # INFO:
-# This function is executed every reload, or 'load.mcfunction' call. 
+# This function is executed every reload, or 'load.mcfunction' call.
 # This file is meant to be changed only by the developers, or a user who might
 # want to change properties of the game.
 
@@ -10,336 +10,478 @@ data remove storage minecraft:hipochallenge consts
 
 ## GAME CONSTANTS
 
-data modify storage minecraft:hipochallenge consts.game.map_version set value "pre-alpha"
-
-data modify storage minecraft:hipochallenge consts.game.team_size set value 3
-data modify storage minecraft:hipochallenge consts.game.necessary_players_for_game set value 6
-data modify storage minecraft:hipochallenge consts.game.round_duration_ticks set value 2400
-data modify storage minecraft:hipochallenge consts.game.win_rounds set value 5
-data modify storage minecraft:hipochallenge consts.game.match_request_duration_ticks set value 1200
-
-# game states
-data modify storage minecraft:hipochallenge consts.game.states.not_playing set value 0
-data modify storage minecraft:hipochallenge consts.game.states.waiting_for_players set value 1
-data modify storage minecraft:hipochallenge consts.game.states.team_selection set value 2
-data modify storage minecraft:hipochallenge consts.game.states.team_naming set value 3
-data modify storage minecraft:hipochallenge consts.game.states.team_color_selection set value 4
-data modify storage minecraft:hipochallenge consts.game.states.class_selection set value 5
-data modify storage minecraft:hipochallenge consts.game.states.map_selection set value 6
-data modify storage minecraft:hipochallenge consts.game.states.map_intro set value 7
-data modify storage minecraft:hipochallenge consts.game.states.kit_selection set value 8
-data modify storage minecraft:hipochallenge consts.game.states.round_start set value 9
-data modify storage minecraft:hipochallenge consts.game.states.ongoing_round set value 10
-data modify storage minecraft:hipochallenge consts.game.states.round_end set value 11
-data modify storage minecraft:hipochallenge consts.game.states.game_end set value 12
+data modify storage minecraft:hipochallenge consts.game set value { \
+    map_version: "pre-alpha", \
+    team_size:3, \
+    necessary_players_for_game:6, \
+    match_request_duration_ticks:1200, \
+    states:{ \
+        not_playing:0b, \
+        waiting_for_players:1b, \
+        selecting_team:2b, \
+        naming_team:3b, \
+        selecting_team_color:4b, \
+        selecting_class:5b, \
+        selecting_level:6b, \
+        level_intro:7b, \
+        selecting_kit:8b, \
+        starting_round:9b, \
+        playing:10b, \
+        ending_round:11b, \
+        ending_match:12b, \
+    }, \
+    modes:{ \
+        casual:{ \
+            necessary_wins:5, \
+            minimum_win_lead_for_victory:1, \
+            round_duration_ticks:2400, \
+        }, \
+        competitive: { \
+            necessary_wins:5, \
+            minimum_win_lead_for_victory:2, \
+            round_duration_ticks:2400, \
+        }, \
+    }, \
+}
 
 ## LIMITS
 
-data modify storage minecraft:hipochallenge consts.limits.no_gravity_projectiles_lifetime_ticks set value 200
+data modify storage minecraft:hipochallenge consts.limits set value { \
+    no_gravity_projectiles_lifetime_ticks:200, \
+}
 
 ## TEAMS
 
-data modify storage minecraft:hipochallenge consts.teams.team1.default_name set value "Team 1"
-data modify storage minecraft:hipochallenge consts.teams.team2.default_name set value "Team 2"
-
 # neutral
-    data modify storage minecraft:hipochallenge consts.teams.neutral.color_number set value -1
-    data modify storage minecraft:hipochallenge consts.teams.neutral.dust_color set value [0.400,0.400,0.400]
-    data modify storage minecraft:hipochallenge consts.teams.neutral.text_color set value "white"
-    data modify storage minecraft:hipochallenge consts.teams.neutral.armor_color set value 6579300
-    data modify storage minecraft:hipochallenge consts.teams.neutral.trim_material set value "netherite"
+data modify storage minecraft:hipochallenge consts.teams.neutral set value { \
+    name_color:"#ffffff", \
+    text_color:"black", \
+    color_id:0, \
+    dust_color:[0.4f,0.4f,0.4f], \
+    armor_color:6579300, \
+    trim_material:"netherite", \
+}
 
 # red
-    data modify storage minecraft:hipochallenge consts.teams.red.color_number set value 1
-    data modify storage minecraft:hipochallenge consts.teams.red.dust_color set value [1.000,0.000,0.000]
-    data modify storage minecraft:hipochallenge consts.teams.red.text_color set value "red"
-    data modify storage minecraft:hipochallenge consts.teams.red.armor_color set value 11546150
-    data modify storage minecraft:hipochallenge consts.teams.red.trim_material set value "redstone"
+data modify storage minecraft:hipochallenge consts.teams.red set value { \
+    name_color:"#ff0000", \
+    text_color:"red", \
+    color_id:1, \
+    dust_color:[1.0f,0.0f,0.0f], \
+    armor_color:11546150, \
+    trim_material:"redstone", \
+}
 
 # yellow
-    data modify storage minecraft:hipochallenge consts.teams.yellow.color_number set value 2
-    data modify storage minecraft:hipochallenge consts.teams.yellow.dust_color set value [1.000,1.000,0.000]
-    data modify storage minecraft:hipochallenge consts.teams.yellow.text_color set value "yellow"
-    data modify storage minecraft:hipochallenge consts.teams.yellow.armor_color set value 16765471
-    data modify storage minecraft:hipochallenge consts.teams.yellow.trim_material set value "gold"
+data modify storage minecraft:hipochallenge consts.teams.yellow set value { \
+    name_color:"#fffb0a", \
+    text_color:"yellow", \
+    color_id:2, \
+    dust_color:[1.0f,1.0f,0.0f], \
+    armor_color:16765471, \
+    trim_material:"gold", \
+}
 
 # green
-    data modify storage minecraft:hipochallenge consts.teams.green.color_number set value 3
-    data modify storage minecraft:hipochallenge consts.teams.green.dust_color set value [0.000,1.000,0.000]
-    data modify storage minecraft:hipochallenge consts.teams.green.text_color set value "green"
-    data modify storage minecraft:hipochallenge consts.teams.green.armor_color set value 8439583
-    data modify storage minecraft:hipochallenge consts.teams.green.trim_material set value "emerald"
+data modify storage minecraft:hipochallenge consts.teams.green set value { \
+    name_color:"#0eff36", \
+    text_color:"green", \
+    color_id:3, \
+    dust_color:[0.0f,1.0f,0.0f], \
+    armor_color:8439583, \
+    trim_material:"emerald", \
+}
 
 # blue
-    data modify storage minecraft:hipochallenge consts.teams.blue.color_number set value 4
-    data modify storage minecraft:hipochallenge consts.teams.blue.dust_color set value [0.000,0.000,1.000]
-    data modify storage minecraft:hipochallenge consts.teams.blue.text_color set value "blue"
-    data modify storage minecraft:hipochallenge consts.teams.blue.armor_color set value 3949738
-    data modify storage minecraft:hipochallenge consts.teams.blue.trim_material set value "lapis"
+data modify storage minecraft:hipochallenge consts.teams.blue set value { \
+    name_color:"#0400e4", \
+    text_color:"blue", \
+    color_id:4, \
+    dust_color:[0.0f,0.0f,1.0f], \
+    armor_color:3949738, \
+    trim_material:"lapis", \
+}
 
 # purple
-    data modify storage minecraft:hipochallenge consts.teams.purple.color_number set value 5
-    data modify storage minecraft:hipochallenge consts.teams.purple.dust_color set value [1.000,0.000,1.000]
-    data modify storage minecraft:hipochallenge consts.teams.purple.text_color set value "light_purple"
-    data modify storage minecraft:hipochallenge consts.teams.purple.armor_color set value 13061821
-    data modify storage minecraft:hipochallenge consts.teams.purple.trim_material set value "amethyst"
-#
+data modify storage minecraft:hipochallenge consts.teams.purple set value { \
+    name_color:"#ffef0c", \
+    text_color:"light_purple", \
+    color_id:5, \
+    dust_color:[1.0f,0.0f,1.0f], \
+    armor_color:13061821, \
+    trim_material:"amethyst", \
+}
 
 ## CLASSES
 
 # tank
-    data modify storage minecraft:hipochallenge consts.classes.tank.name_translation_key set value "hc.class.tank"
-    
-    data modify storage minecraft:hipochallenge consts.classes.tank.dust_color set value [0.176,0.6,0.392]
-    
-    data modify storage minecraft:hipochallenge consts.classes.tank.attributes.max_health set value 20
-    data modify storage minecraft:hipochallenge consts.classes.tank.attributes.armor set value 20
-    data modify storage minecraft:hipochallenge consts.classes.tank.attributes.armor_toughness set value 12
-    data modify storage minecraft:hipochallenge consts.classes.tank.attributes.scale set value 1.1
-    data modify storage minecraft:hipochallenge consts.classes.tank.attributes.burning_time set value 1
-    data modify storage minecraft:hipochallenge consts.classes.tank.attributes.explosion_knockback_resistance set value 0
-    
-    data modify storage minecraft:hipochallenge consts.classes.tank.list_info.class_color set value "#80c3a1"
-    data modify storage minecraft:hipochallenge consts.classes.tank.list_info.kit_color set value "#a6d5bd"
-    data modify storage minecraft:hipochallenge consts.classes.tank.list_info.perk_color set value "#cce7d9"
-    
-    # kit 1
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit1.name_translation_key set value "hc.class.tank.kit1"
-
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit1.horn.effects set value [{id:"absorption",duration_seconds:3,amplifier:1,hide_particles:false}]
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit1.horn.radius set value 7
-
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit1.castling.cooldown_ticks set value 400
-    # kit 2
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit2.name_translation_key set value "hc.class.tank.kit2"
-
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit2.trident_cooldown_ticks set value 30
-
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit2.horn.effects set value [{id:"slowness",duration_seconds:2,amplifier:0,hide_particles:false}]
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit2.horn.radius set value 5
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit2.horn.recovery_ticks set value 20
-    # kit 3
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.name_translation_key set value "hc.class.tank.kit3"
-    
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.horn.radius set value 8
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.horn.modifiers.armor set value {id:"tank_k3_horn_armor",type:"armor",amount:-6,operation:"add_value"}
-        
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.spirit.selection.forward_range_blocks set value 5
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.spirit.selection.sphere_range_blocks set value 5
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.spirit.buff.range_blocks set value 6
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.spirit.buff.modifiers.armor set value {id:"tank_k3_spirit_buff_armor",type:"armor",amount:6,operation:"add_value"}
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.spirit.debuff.modifiers.armor set value {id:"tank_k3_spirit_debuff_armor",type:"armor",amount:-6,operation:"add_value"}
-        
-        data modify storage minecraft:hipochallenge consts.classes.tank.kit3.bubble_shield.radius set value 4
-    #
-    # perk 1
-        data modify storage minecraft:hipochallenge consts.classes.tank.perk1.name_translation_key set value "hc.class.tank.perk1"
-    # perk 2
-        data modify storage minecraft:hipochallenge consts.classes.tank.perk2.name_translation_key set value "hc.class.tank.perk2"
-        
-        data modify storage minecraft:hipochallenge consts.classes.tank.perk2.attack_effects set value [{id:"slowness",duration_seconds:1,amplifier:0,hide_particles:false}]
-    # perk 3
-        data modify storage minecraft:hipochallenge consts.classes.tank.perk3.name_translation_key set value "hc.class.tank.perk3"
-        
-        data modify storage minecraft:hipochallenge consts.classes.tank.perk3.initial_cooldown_ticks set value 600
+data modify storage minecraft:hipochallenge consts.classes.tank set value { \
+    name_translation_key: "hc.class.tank", \
+    name_fallback:"Tank", \
+    dust_color: [0.176f,0.6f,0.392f], \
+    attributes:{ \
+        max_health:20, \
+        armor:20, \
+        armor_toughness: 12, \
+        scale:1.1, \
+        burning_time:1.0, \
+        explosion_knockback_resistance:0.0, \
+    }, \
+    list_info:{ \
+        class_color:"#80c3a1", \
+        kit_color:"#a6d5bd", \
+        perk_color:"#cce7d9", \
+    }, \
+    kit1:{ \
+        name_translation_key:"hc.class.tank.kit1", \
+        name_fallback:"I Guardian", \
+        horn:{ \
+            effects:[ \
+                {effect:"absorption",seconds:2,amplifier:1,hide_particles:0b}, \
+            ], \
+            radius:7.0, \
+        }, \
+        castling:{cooldown_ticks:400}, \
+    }, \
+    kit2: { \
+        name_translation_key:"hc.class.tank.kit2", \
+        name_fallback:"II Triton", \
+        horn:{ \
+            effects:[ \
+                {effect:"slowness",seconds:2,amplifier:0,hide_particles:0b}, \
+            ], \
+            radius:5.0, \
+            recovery_ticks:20, \
+        }, \
+        trident:{ \
+            cooldown_ticks:30, \
+        }, \
+    }, \
+    kit3:{ \
+        name_translation_key:"hc.class.tank.kit3", \
+        name_fallback:"III Druid", \
+        horn:{ \
+            modifiers:[ \
+                {id:"tank_k3_horn_armor",attribute:"armor",value:-6,operation:"add_value"}, \
+            ], \
+            radius:8.0, \
+        }, \
+        spirit:{ \
+            selection:{forward_distance:5.0,sphere_radius:5.0}, \
+            buff: { \
+                modifiers:[ \
+                    {id:"tank_k3_spirit_buff_armor",attribute:"armor",value:6,operation:"add_value"}, \
+                ], \
+                radius:6, \
+            }, \
+            owner_debuff:{ \
+                modifiers:[ \
+                    {id:"tank_k3_spirit_debuff_armor",attribute:"armor",value:-6,operation:"add_value"}, \
+                ], \
+            }, \
+        }, \
+        bubble_shield:{ \
+            draw_command:"particle dust_color_transition{from_color:[0.000f,0.800f,1.000f],scale:2,to_color:[0.161f,0.255f,0.271f]} ~ ~ ~ 0 0 0 0 1 force", \
+            radius:4.0, \
+            high_speed_arrow_detection_radius:10.0, \
+            lifetime_ticks:240, \
+            lifetime_ticks_added_on_impact:60, \
+        }, \
+    }, \
+    perk1:{ \
+        name_translation_key:"hc.class.tank.perk1", \
+        name_fallback:"I Nutrition", \
+        food_item: {initial_cooldown_ticks:1200}, \
+    }, \
+    perk2:{ \
+        name_translation_key:"hc.class.tank.perk2", \
+        name_fallback:"II Profound scars", \
+        attack_effects:[ \
+            {effect:"slowness",seconds:1,amplifier:0,hide_particles:false} \
+        ] \
+    }, \
+    perk3:{ \
+        name_translation_key:"hc.class.tank.perk3", \
+        name_fallback:"III Inspiration", \
+    }, \
+}
 
 # marksman
-    data modify storage minecraft:hipochallenge consts.classes.marksman.name_translation_key set value "hc.class.marksman"
-    
-    data modify storage minecraft:hipochallenge consts.classes.marksman.dust_color set value [0.788, 0.541, 0.11]
-
-    data modify storage minecraft:hipochallenge consts.classes.marksman.attributes.max_health set value 20
-    data modify storage minecraft:hipochallenge consts.classes.marksman.attributes.armor set value 12
-    data modify storage minecraft:hipochallenge consts.classes.marksman.attributes.armor_toughness set value 0
-    data modify storage minecraft:hipochallenge consts.classes.marksman.attributes.scale set value 1
-    data modify storage minecraft:hipochallenge consts.classes.marksman.attributes.burning_time set value 1
-    data modify storage minecraft:hipochallenge consts.classes.marksman.attributes.explosion_knockback_resistance set value 0
-    
-    data modify storage minecraft:hipochallenge consts.classes.marksman.list_info.class_color set value "#dfb977"
-    data modify storage minecraft:hipochallenge consts.classes.marksman.list_info.kit_color set value "#e9cea0"
-    data modify storage minecraft:hipochallenge consts.classes.marksman.list_info.perk_color set value "#f2e3c9"
-    
-    # kit 1
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit1.name_translation_key set value "hc.class.marksman.kit1"
-    
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit1.max_projectile_amount set value 6
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit1.new_projectile_first_cooldown_ticks set value 60
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit1.new_projectile_rest_cooldown_ticks set value 20
-    # kit 2
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit2.name_translation_key set value "hc.class.marksman.kit2"
-        
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit2.max_projectile_amount set value 5
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit2.new_projectile_first_cooldown_ticks set value 80
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit2.new_projectile_rest_cooldown_ticks set value 30
-    # kit 3
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit3.name_translation_key set value "hc.class.marksman.kit3"
-    
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit3.max_projectile_amount set value 3
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit3.new_projectile_first_cooldown_ticks set value 80
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit3.new_projectile_rest_cooldown_ticks set value 40
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit3.revolver.max_loaded_projectile_amount set value 6
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit3.revolver.recoil_pitch set value -20
-        data modify storage minecraft:hipochallenge consts.classes.marksman.kit3.revolver.shot_cooldown_ticks set value 10
-    #
-    # perk 1
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk1.name_translation_key set value "hc.class.marksman.perk1"
-        
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk1.suppression_or_air_magic_damage set value 2
-    # perk 2
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk2.name_translation_key set value "hc.class.marksman.perk2"
-        
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk2.health_limit_for_absorption set value 8
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk2.absorption_multiplier set value 1
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk2.absorption_seconds set value 3
-    # perk 3
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk3.name_translation_key set value "hc.class.marksman.perk3"
-        
-        data modify storage minecraft:hipochallenge consts.classes.marksman.perk3.added_projectiles set value 3
+data modify storage minecraft:hipochallenge consts.classes.marksman set value { \
+    name_translation_key:"hc.class.marksman", \
+    name_fallback:"Marksman", \
+    dust_color:[0.788f, 0.541f, 0.11f], \
+    attributes:{ \
+        max_health:20, \
+        armor:12, \
+        armor_toughness:0, \
+        scale:1, \
+        burning_time:1, \
+        explosion_knockback_resistance:0.0 \
+    }, \
+    list_info:{ \
+        class_color:"#dfb977", \
+        kit_color:"#e9cea0", \
+        perk_color:"#f2e3c9", \
+    }, \
+    kit1:{ \
+        name_translation_key:"hc.class.marksman.kit1", \
+        name_fallback:"I Archer", \
+        projectiles:{ \
+            max_amount:6, \
+            new_first_cooldown_ticks:60, \
+            new_rest_cooldown_ticks:20, \
+        }, \
+    }, \
+    kit2:{ \
+        name_translation_key:"hc.class.marksman.kit2", \
+        name_fallback:"II Sniper", \
+        projectiles:{ \
+            max_amount:5, \
+            new_first_cooldown_ticks:80, \
+            new_rest_cooldown_ticks:30, \
+        }, \
+    }, \
+    kit3:{ \
+        name_translation_key:"hc.class.marksman.kit3", \
+        name_fallback:"III Gunslinger", \
+        projectiles:{ \
+            max_amount:6, \
+            new_first_cooldown_ticks:80, \
+            new_rest_cooldown_ticks:40, \
+        }, \
+        revolver:{ \
+            max_loaded_projectile_amount:6, \
+            recoil_pitch_rotation:-20, \
+            per_shot_cooldown_ticks:10, \
+        }, \
+    }, \
+    perk1:{ \
+        name_translation_key:"hc.class.marksman.perk1", \
+        name_fallback:"I Bullseye", \
+        suppression_or_on_air_magic_damage:2, \
+    }, \
+    perk2:{ \
+        name_translation_key:"hc.class.marksman.perk2", \
+        name_fallback:"II Lifesaver", \
+        max_health_for_effects:8, \
+        effects:[ \
+            {effect:"absorption",seconds:3,amplifier:1,hide_particles:false}, \
+        ], \
+    }, \
+    perk3:{ \
+        name_translation_key:"hc.class.marksman.perk3", \
+        name_fallback:"III Big pockets", \
+        added_projectiles:3, \
+    }, \
+}
 
 # assassin
-    data modify storage minecraft:hipochallenge consts.classes.assassin.name_translation_key set value "hc.class.assassin"
-    
-    data modify storage minecraft:hipochallenge consts.classes.assassin.dust_color set value [0.173, 0.482, 0.824]
-
-    data modify storage minecraft:hipochallenge consts.classes.assassin.attributes.max_health set value 20
-    data modify storage minecraft:hipochallenge consts.classes.assassin.attributes.armor set value 16
-    data modify storage minecraft:hipochallenge consts.classes.assassin.attributes.armor_toughness set value 4
-    data modify storage minecraft:hipochallenge consts.classes.assassin.attributes.scale set value 1
-    data modify storage minecraft:hipochallenge consts.classes.assassin.attributes.burning_time set value 1
-    data modify storage minecraft:hipochallenge consts.classes.assassin.attributes.explosion_knockback_resistance set value 0
-    
-    data modify storage minecraft:hipochallenge consts.classes.assassin.list_info.class_color set value "#80b0e4" 
-    data modify storage minecraft:hipochallenge consts.classes.assassin.list_info.kit_color set value "#a6c8ec"
-    data modify storage minecraft:hipochallenge consts.classes.assassin.list_info.perk_color set value "#ccdff4"
-    
-    # kit 1
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.name_translation_key set value "hc.class.assassin.kit1"
-        
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.summon_distance set value 0.5
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.global_y_offset set value -0.9
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.height set value 1.25
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.width set value 0.54
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.lifetime_ticks set value 10
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.modifiers.entity_interaction_range set value {id:"assassin_k1_parrying_entity_interaction_range",type:"entity_interaction_range",value:-3,operation:"add_value"}
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.modifiers.attack_speed set value {id:"assassin_k1_parrying_attack_speed",type:"attack_speed",value:-1.1,operation:"add_value"}
-    # kit 2
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit2.name_translation_key set value "hc.class.assassin.kit2"
-    # kit 3
-        data modify storage minecraft:hipochallenge consts.classes.assassin.kit3.name_translation_key set value "hc.class.assassin.kit3"
-    #
-    # perk 1
-        data modify storage minecraft:hipochallenge consts.classes.assassin.perk1.name_translation_key set value "hc.class.assassin.perk1"
-    # perk 2
-        data modify storage minecraft:hipochallenge consts.classes.assassin.perk2.name_translation_key set value "hc.class.assassin.perk2"
-    # perk 3
-        data modify storage minecraft:hipochallenge consts.classes.assassin.perk3.name_translation_key set value "hc.class.assassin.perk3"
+data modify storage minecraft:hipochallenge consts.classes.assassin set value { \
+    name_translation_key:"hc.class.assassin", \
+    name_fallback:"Assassin", \
+    dust_color:[0.173f, 0.482f, 0.824f], \
+    attributes:{ \
+        max_health:20, \
+        armor:16, \
+        armor_toughness:4, \
+        scale:1, \
+        burning_time:1, \
+        explosion_knockback_resistance:0 \
+    }, \
+    list_info:{ \
+        class_color:"#80b0e4", \
+        kit_color:"#a6c8ec", \
+        perk_color:"#ccdff4", \
+    }, \
+    kit1:{ \
+        name_translation_key:"hc.class.assassin.kit1", \
+        name_fallback:"I Duelist", \
+        parry:{ \
+            on_owner_when_success:{ \
+                modifiers: [], \
+            }, \
+            on_owner_when_fail:{ \
+                modifiers: [ \
+                    {id:"assassin_k1_owner_failed_parry_entity_interaction_range",attribute:"entity_interaction_range",value:-3,operation:"add_value"}, \
+                    {id:"assassin_k1_owner_failed_parry_attack_speed",attribute:"attack_speed",value:-1.1,operation:"add_value"}, \
+                ], \
+            }, \
+            on_enemy_when_parried:{ \
+                modifiers: [], \
+                effects: [], \
+            }, \
+        }, \
+    }, \
+    kit2:{ \
+        name_translation_key:"hc.class.assassin.kit2", \
+        name_fallback:"II Phantom", \
+    }, \
+    kit3:{ \
+        name_translation_key:"hc.class.assassin.kit3", \
+        name_fallback:"III Mercenary", \
+    }, \
+    perk1:{ \
+        name_translation_key:"hc.class.assassin.perk1", \
+        name_fallback:"I Contract", \
+    }, \
+    perk2:{ \
+        name_translation_key:"hc.class.assassin.perk2", \
+        name_fallback:"II Harvesting", \
+    }, \
+    perk3:{ \
+        name_translation_key:"hc.class.assassin.perk3", \
+        name_fallback:"III Acidity", \
+    }, \
+}
+#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.summon_distance set value 0.5
+#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.global_y_offset set value -0.9
+#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.height set value 1.25
+#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.width set value 0.54
+#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.lifetime_ticks set value 10
 
 # support
-    data modify storage minecraft:hipochallenge consts.classes.support.name_translation_key set value "hc.class.support"
-    
-    data modify storage minecraft:hipochallenge consts.classes.support.dust_color set value [0.863, 0.455, 0.141]
-
-    data modify storage minecraft:hipochallenge consts.classes.support.attributes.max_health set value 20
-    data modify storage minecraft:hipochallenge consts.classes.support.attributes.armor set value 12
-    data modify storage minecraft:hipochallenge consts.classes.support.attributes.armor_toughness set value 0
-    data modify storage minecraft:hipochallenge consts.classes.support.attributes.scale set value 1
-    data modify storage minecraft:hipochallenge consts.classes.support.attributes.burning_time set value 1
-    data modify storage minecraft:hipochallenge consts.classes.support.attributes.explosion_knockback_resistance set value 0
-    
-    data modify storage minecraft:hipochallenge consts.classes.support.list_info.class_color set value "#eaac7c"
-    data modify storage minecraft:hipochallenge consts.classes.support.list_info.kit_color set value "#f0c5a3"
-    data modify storage minecraft:hipochallenge consts.classes.support.list_info.perk_color set value "#f7decb"
-    
-    # kit 1
-        data modify storage minecraft:hipochallenge consts.classes.support.kit1.name_translation_key set value "hc.class.support.kit1"
-    # kit 2
-        data modify storage minecraft:hipochallenge consts.classes.support.kit2.name_translation_key set value "hc.class.support.kit2"
-    # kit 3
-        data modify storage minecraft:hipochallenge consts.classes.support.kit3.name_translation_key set value "hc.class.support.kit3"
-    #
-    # perk 1
-        data modify storage minecraft:hipochallenge consts.classes.support.perk1.name_translation_key set value "hc.class.support.perk1"
-    # perk 2
-        data modify storage minecraft:hipochallenge consts.classes.support.perk2.name_translation_key set value "hc.class.support.perk2"
-    # perk 3
-        data modify storage minecraft:hipochallenge consts.classes.support.perk3.name_translation_key set value "hc.class.support.perk3"
+data modify storage minecraft:hipochallenge consts.classes.support set value { \
+    name_translation_key:"hc.class.support", \
+    name_fallback:"Support", \
+    dust_color:[0.863f, 0.455f, 0.141f], \
+    attributes:{ \
+        max_health:20, \
+        armor:12, \
+        armor_toughness:0, \
+        scale:1, \
+        burning_time:1, \
+        explosion_knockback_resistance:0, \
+    }, \
+    list_info:{ \
+        class_color:"#eaac7c", \
+        kit_color:"#f0c5a3", \
+        perk_color:"#f7decb", \
+    }, \
+    kit1:{ \
+        name_translation_key:"hc.class.support.kit1", \
+        name_fallback:"I Trapper", \
+    }, \
+    kit2:{ \
+        name_translation_key:"hc.class.support.kit2", \
+        name_fallback:"II Doctor", \
+    }, \
+    kit3:{ \
+        name_translation_key:"hc.class.support.kit3", \
+        name_fallback:"III Shaman", \
+    }, \
+    perk1:{ \
+        name_translation_key:"hc.class.support.perk1", \
+        name_fallback:"I Overclock", \
+    }, \
+    perk2:{ \
+        name_translation_key:"hc.class.support.perk2", \
+        name_fallback:"II Personal space", \
+    }, \
+    perk3:{ \
+        name_translation_key:"hc.class.support.perk3", \
+        name_fallback:"III Supercharge", \
+    }, \
+}
 
 # recon
-    data modify storage minecraft:hipochallenge consts.classes.recon.name_translation_key set value "hc.class.recon"
-    
-    data modify storage minecraft:hipochallenge consts.classes.recon.dust_color set value [0.552,0.356,0.756]
+data modify storage minecraft:hipochallenge consts.classes.recon set value { \
+    name_translation_key:"hc.class.recon", \
+    name_fallback:"Recon", \
+    dust_color:[0.863f, 0.455f, 0.141f], \
+    attributes:{ \
+        max_health:20, \
+        armor:16, \
+        armor_toughness:4, \
+        scale:0.81, \
+        burning_time:1, \
+        explosion_knockback_resistance:0, \
+    }, \
+    list_info:{ \
+        class_color:"#b99dda", \
+        kit_color:"#cebae5", \
+        perk_color:"#e3d8f0", \
+    }, \
+    kit1:{ \
+        name_translation_key:"hc.class.recon.kit1", \
+        name_fallback:"I Spec. ops", \
+    }, \
+    kit2:{ \
+        name_translation_key:"hc.class.recon.kit2", \
+        name_fallback:"II Tracker", \
+    }, \
+    kit3:{ \
+        name_translation_key:"hc.class.recon.kit3", \
+        name_fallback:"III Anomaly", \
+    }, \
+    perk1:{ \
+        name_translation_key:"hc.class.recon.perk1", \
+        name_fallback:"I Inhibitor", \
+    }, \
+    perk2:{ \
+        name_translation_key:"hc.class.recon.perk2", \
+        name_fallback:"II Assimilation", \
+    }, \
+    perk3:{ \
+        name_translation_key:"hc.class.recon.perk3", \
+        name_fallback:"III Animal instinct", \
+    }, \
+}
 
-    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.max_health set value 20
-    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.armor set value 16
-    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.armor_toughness set value 4
-    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.scale set value 0.81
-    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.burning_time set value 1
-    data modify storage minecraft:hipochallenge consts.classes.recon.attributes.explosion_knockback_resistance set value 0
-    
-    data modify storage minecraft:hipochallenge consts.classes.recon.list_info.class_color set value "#b99dda"
-    data modify storage minecraft:hipochallenge consts.classes.recon.list_info.kit_color set value "#cebae5"
-    data modify storage minecraft:hipochallenge consts.classes.recon.list_info.perk_color set value "#e3d8f0"
-    
-    # TODO: Add recon cooldowns and values
-    
-    # kit 1
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit1.name_translation_key set value "hc.class.recon.kit1"
-    # kit 2
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.name_translation_key set value "hc.class.recon.kit2"
-        
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.max_flare_arrow_amount set value 1
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.new_flare_arrow_first_cooldown_ticks set value 120
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.new_flare_arrow_rest_cooldown_ticks set value -1
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dx set value 2.2
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dy set value 2.2
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dz set value 2.2
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_range set value 6
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_effects set value [{id:"glowing",duration_seconds:5,amplifier:0,hide_particles:false},{id:"blindness",duration_seconds:2,amplifier:0,hide_particles:false}]
-    # kit 3
-        data modify storage minecraft:hipochallenge consts.classes.recon.kit3.name_translation_key set value "hc.class.recon.kit3"
-    #
-    # perk 1
-        data modify storage minecraft:hipochallenge consts.classes.recon.perk1.name_translation_key set value "hc.class.recon.perk1"
-    # perk 2
-        data modify storage minecraft:hipochallenge consts.classes.recon.perk2.name_translation_key set value "hc.class.recon.perk2"
-    # perk 3
-        data modify storage minecraft:hipochallenge consts.classes.recon.perk3.name_translation_key set value "hc.class.recon.perk3"
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.max_flare_arrow_amount set value 1
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.new_flare_arrow_first_cooldown_ticks set value 120
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.new_flare_arrow_rest_cooldown_ticks set value -1
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dx set value 2.2
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dy set value 2.2
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dz set value 2.2
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_range set value 6
+#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_effects set value [{id:"glowing",duration_seconds:5,amplifier:0,hide_particles:false},{id:"blindness",duration_seconds:2,amplifier:0,hide_particles:false}]
 
 # assault
-    data modify storage minecraft:hipochallenge consts.classes.assault.class_name_translation_key set value "hc.class.assault"
+data modify storage minecraft:hipochallenge consts.classes.assault set value { \
+    name_translation_key:"hc.class.assault", \
+    name_fallback:"Recon", \
+    dust_color:[0.803f,0.286f,0.270f], \
+    attributes:{ \
+        max_health:20, \
+        armor:12, \
+        armor_toughness:50, \
+        scale:1, \
+        burning_time:1, \
+        explosion_knockback_resistance:0, \
+    }, \
+    list_info:{ \
+        class_color:"#dc928e", \
+        kit_color:"#dc928e", \
+        perk_color:"#dc928e", \
+    }, \
+    kit1:{ \
+        name_translation_key:"hc.class.assault.kit1", \
+        name_fallback:"I Explosives expert", \
+    }, \
+    kit2:{ \
+        name_translation_key:"hc.class.assault.kit2", \
+        name_fallback:"II Harpooner", \
+    }, \
+    kit3:{ \
+        name_translation_key:"hc.class.assault.kit3", \
+        name_fallback:"III Commander", \
+    }, \
+    perk1:{ \
+        name_translation_key:"hc.class.assault.perk1", \
+        name_fallback:"I Engineering", \
+    }, \
+    perk2:{ \
+        name_translation_key:"hc.class.assault.perk2", \
+        name_fallback:"II Adaptable shell", \
+    }, \
+    perk3:{ \
+        name_translation_key:"hc.class.assault.perk3", \
+        name_fallback:"III Chase", \
+    }, \
+}
 
-    data modify storage minecraft:hipochallenge consts.classes.assault.class_dust_color set value [0.803,0.286,0.270]
-
-    data modify storage minecraft:hipochallenge consts.classes.assault.attributes.max_health set value 20
-    data modify storage minecraft:hipochallenge consts.classes.assault.attributes.armor set value 12
-    data modify storage minecraft:hipochallenge consts.classes.assault.attributes.armor_toughness set value 50
-    data modify storage minecraft:hipochallenge consts.classes.assault.attributes.scale set value 1
-    data modify storage minecraft:hipochallenge consts.classes.assault.attributes.burning_time set value 1
-    data modify storage minecraft:hipochallenge consts.classes.assault.attributes.explosion_knockback_resistance set value 0
-    
-    data modify storage minecraft:hipochallenge consts.classes.assault.list_info.class_color set value "#dc928e"
-    data modify storage minecraft:hipochallenge consts.classes.assault.list_info.kit_color set value "#e7b3b0"
-    data modify storage minecraft:hipochallenge consts.classes.assault.list_info.perk_color set value "#f1d3d2"
-    
-    # TODO: Add assault cooldowns and values
-    
-    # kit 1
-        data modify storage minecraft:hipochallenge consts.classes.assault.kit1.name_translation_key set value "hc.class.assault.kit1"
-    # kit 2
-        data modify storage minecraft:hipochallenge consts.classes.assault.kit2.name_translation_key set value "hc.class.assault.kit2"
-    # kit 3
-        data modify storage minecraft:hipochallenge consts.classes.assault.kit3.name_translation_key set value "hc.class.assault.kit3"
-    #
-    # perk 1
-        data modify storage minecraft:hipochallenge consts.classes.assault.perk1.name_translation_key set value "hc.class.assault.perk1"
-    # perk 2
-        data modify storage minecraft:hipochallenge consts.classes.assault.perk2.name_translation_key set value "hc.class.assault.perk2"
-    # perk 3
-        data modify storage minecraft:hipochallenge consts.classes.assault.perk3.name_translation_key set value "hc.class.assault.perk3"
-
-#
-
-## MAPS
+## LEVELS
 
 # callouts
 

@@ -7,7 +7,7 @@ scoreboard objectives add id dummy
 # score for entity lifetimes
 scoreboard objectives add life_timer dummy
 
-# scores for timed mechanics 
+# scores for timed mechanics
 scoreboard objectives add silence_timer dummy
 #scoreboard objectives add detection_timer dummy
 scoreboard objectives add in_combat_timer dummy

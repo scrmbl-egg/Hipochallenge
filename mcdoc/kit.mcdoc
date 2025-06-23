@@ -1,0 +1,164 @@
+use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
+use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters
+    as AttributeModifier
+
+struct Kit {
+    /// Resource pack `.json` key for the kit name.
+    name_translation_key: string,
+    /// Kit name fallback.
+    name_fallback: string
+}
+
+/// First tank kit struct.
+struct TankKit1 {
+    ...Kit,
+    /// Goat horn related data.
+    horn: struct {
+        /// Radius of the effects.
+        radius: double @ 0..,
+        /// List of effects that will be given to allies.
+        effects: [Effect]
+    },
+    /// Castling ability related data.
+    castling: struct {
+        /// Cooldown ticks after using the
+        cooldown_ticks: int @ 0..
+    }
+}
+
+struct TankKit2 {
+    ...Kit,
+    /// Goat horn related data.
+    horn: struct {
+        /// Radius of the effects.
+        radius: double @ 0..,
+        /// List of effects that will be given to enemies.
+        effects: [Effect],
+        /// Amount of ticks that define the time frame the owner can recover their ability if the enemies are out of range.
+        recovery_ticks: int @ 0..
+    },
+    trident: struct {
+        cooldown_ticks: int @ 0..
+    }
+}
+
+struct TankKit3 {
+    ...Kit,
+    horn: struct {
+        radius: double @ 0..,
+        modifiers: [AttributeModifier],
+
+    },
+    spirit: struct {
+        selection: struct {
+            forward_distance: double @ 0..,
+            sphere_radius: double @ 0..
+        },
+        buff: struct {
+            radius: double @ 0..,
+            modifiers: [AttributeModifier]
+        },
+        owner_debuff: struct {
+            modifiers: [AttributeModifier]
+        }
+    },
+    bubble_shield: struct {
+        draw_command: #[command] string,
+        radius: double @ 0..,
+        high_speed_arrow_detection_radius: double @ 0..,
+        lifetime_ticks: int @ 0..,
+        lifetime_ticks_added_on_impact: int @ 0..,
+    }
+}
+
+struct MarksmanKit1 {
+    ...Kit,
+    projectiles: struct {
+        max_amount: int @ 1..,
+        new_first_cooldown_ticks: int @ 0..,
+        new_rest_cooldown_ticks: int @ 0..
+    }
+}
+
+struct MarksmanKit2 {
+    ...Kit,
+    projectiles: struct {
+        max_amount: int @ 1..,
+        new_first_cooldown_ticks: int @ 0..,
+        new_rest_cooldown_ticks: int @ 0..
+    }
+}
+
+struct MarksmanKit3 {
+    ...Kit,
+    projectiles: struct {
+        max_amount: int @ 1..,
+        new_first_cooldown_ticks: int @ 0..,
+        new_rest_cooldown_ticks: int @ 0..
+    },
+    revolver: struct {
+        max_loaded_projectile_amount: int @ 1..,
+        per_shot_cooldown_ticks: int @ 1..,
+        recoil_pitch_rotation: double @ -180..180
+    }
+}
+
+struct AssassinKit1 {
+    ...Kit,
+    parry: struct {
+        on_owner_when_fail: struct {
+            modifiers: [AttributeModifier]
+        },
+        on_owner_when_success: struct {
+            modifiers: [AttributeModifier]
+        },
+        on_enemy_when_parried: struct {
+            effects: [Effect],
+            modifiers: [AttributeModifier]
+        }
+    }
+}
+
+struct AssassinKit2 {
+    ...Kit,
+}
+
+struct AssassinKit3 {
+    ...Kit,
+}
+
+struct SupportKit1 {
+    ...Kit,
+}
+
+struct SupportKit2 {
+    ...Kit,
+}
+
+struct SupportKit3 {
+    ...Kit,
+}
+
+struct ReconKit1 {
+    ...Kit,
+}
+
+struct ReconKit2 {
+    ...Kit,
+}
+
+struct ReconKit3 {
+    ...Kit,
+}
+
+struct AssaultKit1 {
+    ...Kit,
+}
+
+struct AssaultKit2 {
+    ...Kit,
+}
+
+struct AssaultKit3 {
+    ...Kit,
+}
