@@ -30,18 +30,26 @@ data modify storage minecraft:hipochallenge consts.game set value { \
         ending_round:11b, \
         ending_match:12b, \
     }, \
-    modes:{ \
-        casual:{ \
+    modes:[ \
+        { \
+            internal_name:"casual", \
+            id:0b, \
+            name_translation_key:"", \
+            name_fallback:"CASUAL", \
             necessary_wins:5, \
             minimum_win_lead_for_victory:1, \
             round_duration_ticks:2400, \
         }, \
-        competitive: { \
+        { \
+            internal_name:"competitive", \
+            id:1b, \
+            name_translation_key:"", \
+            name_fallback:"COMPETITIVE", \
             necessary_wins:5, \
             minimum_win_lead_for_victory:2, \
             round_duration_ticks:2400, \
         }, \
-    }, \
+    ], \
 }
 
 ## LIMITS
@@ -52,61 +60,67 @@ data modify storage minecraft:hipochallenge consts.limits set value { \
 
 ## TEAMS
 
-# neutral
-data modify storage minecraft:hipochallenge consts.teams.neutral set value { \
+# neutral -> team_presets[0]
+data modify storage minecraft:hipochallenge consts.team_presets append value { \
+    internal_name:"neutral", \
+    id:0b, \
     name_color:"#ffffff", \
     text_color:"black", \
-    color_id:0, \
     dust_color:[0.4f,0.4f,0.4f], \
     armor_color:6579300, \
     trim_material:"netherite", \
 }
 
-# red
-data modify storage minecraft:hipochallenge consts.teams.red set value { \
+# red -> team_presets[1]
+data modify storage minecraft:hipochallenge consts.team_presets append value { \
+    internal_name:"red", \
+    id:1b, \
     name_color:"#ff0000", \
     text_color:"red", \
-    color_id:1, \
     dust_color:[1.0f,0.0f,0.0f], \
     armor_color:11546150, \
     trim_material:"redstone", \
 }
 
-# yellow
-data modify storage minecraft:hipochallenge consts.teams.yellow set value { \
+# yellow -> team_presets[2]
+data modify storage minecraft:hipochallenge consts.team_presets append value { \
+    internal_name:"yellow", \
+    id:2b, \
     name_color:"#fffb0a", \
     text_color:"yellow", \
-    color_id:2, \
     dust_color:[1.0f,1.0f,0.0f], \
     armor_color:16765471, \
     trim_material:"gold", \
 }
 
-# green
-data modify storage minecraft:hipochallenge consts.teams.green set value { \
+# green -> team_presets[3]
+data modify storage minecraft:hipochallenge consts.team_presets append value { \
+    internal_name:"green", \
+    id:3b, \
     name_color:"#0eff36", \
     text_color:"green", \
-    color_id:3, \
     dust_color:[0.0f,1.0f,0.0f], \
     armor_color:8439583, \
     trim_material:"emerald", \
 }
 
-# blue
-data modify storage minecraft:hipochallenge consts.teams.blue set value { \
+# blue -> team_presets[4]
+data modify storage minecraft:hipochallenge consts.team_presets append value { \
+    internal_name:"blue", \
+    id:4b, \
     name_color:"#0400e4", \
     text_color:"blue", \
-    color_id:4, \
     dust_color:[0.0f,0.0f,1.0f], \
     armor_color:3949738, \
     trim_material:"lapis", \
 }
 
-# purple
-data modify storage minecraft:hipochallenge consts.teams.purple set value { \
-    name_color:"#ffef0c", \
+# purple -> team_presets[5]
+data modify storage minecraft:hipochallenge consts.team_presets append value { \
+    internal_name:"purple", \
+    id:5b, \
+    name_color:"#ad06ad", \
     text_color:"light_purple", \
-    color_id:5, \
     dust_color:[1.0f,0.0f,1.0f], \
     armor_color:13061821, \
     trim_material:"amethyst", \
@@ -116,6 +130,8 @@ data modify storage minecraft:hipochallenge consts.teams.purple set value { \
 
 # tank
 data modify storage minecraft:hipochallenge consts.classes.tank set value { \
+    internal_name:"tank", \
+    id:1b, \
     name_translation_key: "hc.class.tank", \
     name_fallback:"Tank", \
     dust_color: [0.176f,0.6f,0.392f], \
@@ -137,7 +153,7 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         name_fallback:"I Guardian", \
         horn:{ \
             effects:[ \
-                {effect:"absorption",seconds:2,amplifier:1,hide_particles:0b}, \
+                {effect:"absorption",seconds:2,amplifier:1,hide_particles:"false"}, \
             ], \
             radius:7.0, \
         }, \
@@ -148,7 +164,7 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         name_fallback:"II Triton", \
         horn:{ \
             effects:[ \
-                {effect:"slowness",seconds:2,amplifier:0,hide_particles:0b}, \
+                {effect:"slowness",seconds:2,amplifier:0,hide_particles:"false"}, \
             ], \
             radius:5.0, \
             recovery_ticks:20, \
@@ -197,7 +213,7 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         name_translation_key:"hc.class.tank.perk2", \
         name_fallback:"II Profound scars", \
         attack_effects:[ \
-            {effect:"slowness",seconds:1,amplifier:0,hide_particles:false} \
+            {effect:"slowness",seconds:1,amplifier:0,hide_particles:"false"} \
         ] \
     }, \
     perk3:{ \
@@ -208,6 +224,8 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
 
 # marksman
 data modify storage minecraft:hipochallenge consts.classes.marksman set value { \
+    internal_name:"marksman", \
+    id:2b, \
     name_translation_key:"hc.class.marksman", \
     name_fallback:"Marksman", \
     dust_color:[0.788f, 0.541f, 0.11f], \
@@ -266,7 +284,7 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
         name_fallback:"II Lifesaver", \
         max_health_for_effects:8, \
         effects:[ \
-            {effect:"absorption",seconds:3,amplifier:1,hide_particles:false}, \
+            {effect:"absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
         ], \
     }, \
     perk3:{ \
@@ -278,6 +296,8 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
 
 # assassin
 data modify storage minecraft:hipochallenge consts.classes.assassin set value { \
+    internal_name:"assassin", \
+    id:3b, \
     name_translation_key:"hc.class.assassin", \
     name_fallback:"Assassin", \
     dust_color:[0.173f, 0.482f, 0.824f], \
@@ -342,6 +362,8 @@ data modify storage minecraft:hipochallenge consts.classes.assassin set value { 
 
 # support
 data modify storage minecraft:hipochallenge consts.classes.support set value { \
+    internal_name:"support", \
+    id:4b, \
     name_translation_key:"hc.class.support", \
     name_fallback:"Support", \
     dust_color:[0.863f, 0.455f, 0.141f], \
@@ -386,6 +408,8 @@ data modify storage minecraft:hipochallenge consts.classes.support set value { \
 
 # recon
 data modify storage minecraft:hipochallenge consts.classes.recon set value { \
+    internal_name:"recon", \
+    id:5b, \
     name_translation_key:"hc.class.recon", \
     name_fallback:"Recon", \
     dust_color:[0.863f, 0.455f, 0.141f], \
@@ -439,6 +463,8 @@ data modify storage minecraft:hipochallenge consts.classes.recon set value { \
 
 # assault
 data modify storage minecraft:hipochallenge consts.classes.assault set value { \
+    internal_name:"assault", \
+    id:6b, \
     name_translation_key:"hc.class.assault", \
     name_fallback:"Recon", \
     dust_color:[0.803f,0.286f,0.270f], \

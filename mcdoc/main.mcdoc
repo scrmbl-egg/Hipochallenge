@@ -1,7 +1,7 @@
-use ::Hipochallenge::mcdoc::team::AvailableTeams
+use ::Hipochallenge::mcdoc::team::TeamPreset
 use ::Hipochallenge::mcdoc::team::TeamContext
 use ::Hipochallenge::mcdoc::class::AvailableClasses
-use ::Hipochallenge::mcdoc::game::AvailableGameModes
+use ::Hipochallenge::mcdoc::game::GameMode
 use ::Hipochallenge::mcdoc::game::AvailableGameStates
 use ::Hipochallenge::mcdoc::game::GameContext
 
@@ -19,7 +19,7 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
             /// Duration of the match request notification.
             match_request_duration_ticks: int @ 1..,
             /// Available game modes.
-            modes: AvailableGameModes,
+            modes: [GameMode],
             /// Available game states.
             states: AvailableGameStates,
         },
@@ -29,7 +29,7 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
         /// Class related constants.
         classes: AvailableClasses,
         /// Team related constants.
-        teams: AvailableTeams,
+        team_presets: [TeamPreset],
     },
     /// Global variables of the datapack.
     vars: struct MainVars {

@@ -1,13 +1,15 @@
 use ::java::util::text::TextColor
 
 /// Struct for representing a team.
-struct Team {
+struct TeamPreset {
+    /// Internal name of the team.
+    internal_name: TeamPresetName,
+    /// ID of the team preset.
+    id: TeamPresetId,
     /// Color of the team's name in team's prefix.
     name_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
     /// Vanilla color of the team.
     text_color: TextColor,
-    /// Number that corresponds to the team's color (used for predicates).
-    color_id: TeamColorId,
     /// RGB of the dust particles for the team.
     dust_color: #[color="dec_rgb"] [float] @ 3,
     /// Team's leather armor color.
@@ -20,14 +22,16 @@ struct Team {
 }
 
 struct TeamContext {
-    ...Team,
-    /// (Nullable) Custom name of the team.
+    /// *(Nullable)* Custom name of the team.
     custom_name?: string @ 1..10,
+    /// ID of the team presets array.
+    preset_id: TeamPresetId,
+    /// List of players in the team.
+    players: [#[uuid] int[] @ 4]
 }
 
-/// All possible team color NBT fields in the datapack constants.
-/// Used for accessing data through macros.
-enum(string) TeamColorNBTField {
+/// All possible team color names.
+enum(string) TeamPresetName {
     /// Neutral team color name (gray).
     Neutral = "neutral",
     /// Red team color name.
@@ -43,7 +47,7 @@ enum(string) TeamColorNBTField {
 }
 
 /// Team color ID's, used for datapack predicates.
-enum(int) TeamColorId {
+enum(byte) TeamPresetId {
     /// Neutral team color ID.
     Neutral = 0,
     /// Red team color ID.
@@ -56,20 +60,4 @@ enum(int) TeamColorId {
     Blue = 4,
     /// Purple team color ID.
     Purple = 5
-}
-
-/// Struct of available teams to choose from.
-struct AvailableTeams {
-    /// Neutral/training team.
-    neutral: Team,
-    /// Red team.
-    red: Team,
-    /// Yellow team.
-    yellow: Team,
-    /// Green team.
-    green: Team,
-    /// Blue team.
-    blue: Team,
-    /// Purple team.
-    purple: Team
 }

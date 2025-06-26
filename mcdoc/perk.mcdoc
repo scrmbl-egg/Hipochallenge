@@ -1,7 +1,7 @@
 use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
 
 struct Perk {
-    /// Resource pack `.json` key for the perk name.
+    /// Resource pack lang file JSON key for the perk name.
     name_translation_key: string,
     /// Perk name fallback.
     name_fallback: string,

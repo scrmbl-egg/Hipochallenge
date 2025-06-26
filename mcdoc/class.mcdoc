@@ -28,7 +28,11 @@ struct ClassListInfo {
 
 /// Game class struct.
 struct Class {
-    /// Resource pack `.json` key for the class name.
+    /// Internal name of the class.
+    internal_name: ClassName,
+    /// Internal numeric ID of the class.
+    id: ClassId,
+    /// Resource pack lang file JSON key for the class name.
     name_translation_key: string,
     /// Class name fallback.
     name_fallback: string,
@@ -140,6 +144,38 @@ struct AssaultClass {
     perk2: ::Hipochallenge::mcdoc::perk::AssaultPerk2,
     /// Perk 3.
     perk3: ::Hipochallenge::mcdoc::perk::AssaultPerk3
+}
+
+/// Enum of all class names.
+enum(string) ClassName {
+    /// Tank class name.
+    Tank = "tank",
+    /// Marksman class name.
+    Marksman = "marksman",
+    /// Assassin class name.
+    Assassin = "assassin",
+    /// Support class name.
+    Support = "support",
+    /// Recon class name.
+    Recon = "recon",
+    /// Assault class name.
+    Assault = "assault"
+}
+
+/// Enum of all class ID's.
+enum(byte) ClassId {
+    /// Tank class ID.
+    Tank = 1,
+    /// Marksman class ID.
+    Marksman = 2,
+    /// Assassin class ID.
+    Assassin = 3,
+    /// Support class ID.
+    Support = 4,
+    /// Recon class ID.
+    Recon = 5,
+    /// Assault class ID.
+    Assault = 6
 }
 
 /// All classes struct.

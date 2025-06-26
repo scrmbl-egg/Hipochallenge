@@ -3,7 +3,7 @@ use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters
     as AttributeModifier
 
 struct Kit {
-    /// Resource pack `.json` key for the kit name.
+    /// Resource pack lang file JSON key for the kit name.
     name_translation_key: string,
     /// Kit name fallback.
     name_fallback: string

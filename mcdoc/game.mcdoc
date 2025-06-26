@@ -1,25 +1,35 @@
+use ::Hipochallenge::mcdoc::level::LevelId
+
 /// Game context/global variables struct.
 struct GameContext {
     /// Current game state.
     current_state: GameState,
-    /// Current game mode data.
-    current_game_mode_id: GameMode,
+    /// Current game mode index from the game modes array.
+    current_game_mode_id: GameModeId,
     /// Amount of players playing the game, doesn't count spectators.
     users_playing: int @ 0..,
     /// Current round number.
     current_round: int @ 1..,
-    /// Index of the current level being played.
-    current_level_index: int @ 0..,
+    /// ID of the current level being played.
+    current_level_id: LevelId,
     /// Amount of points/rounds won by Team 1.
     team1_wins: int @ 0..,
     /// Amount of points/rounds won by Team 2.
     team2_wins: int @ 0..,
     /// List of banned level IDs.
-    banned_level_ids: [int]
+    banned_level_ids: [LevelId]
 }
 
 /// Game mode struct.
 struct GameMode {
+    /// Internal name of the game mode.
+    internal_name: GameModeName,
+    /// Internal numeric ID of the game mode.
+    id: GameModeId,
+    /// Resource pack lang file JSON key for the game mode name.
+    name_translation_key: string,
+    /// Game mode name fallback.
+    name_fallback: string,
     /// Duration of a game round in ticks.
     round_duration_ticks: #[divisible_by=20] int @ 20..,
     /// Amount of rounds/points that must be won by default to win a game.
@@ -87,17 +97,15 @@ struct AvailableGameStates {
     ending_match: GameState
 }
 
-/// Struct of available game modes.
-struct AvailableGameModes {
-    /// Casual game mode data.
-    /// Random/re-rolled level, no n-point lead.
-    casual: GameMode,
-    /// Competitive game mode data.
-    /// Selected level, n-point lead.
-    competitive: GameMode,
-    /// Deathmatch game mode data.
-    /// Timed respawning, and victory is reached through amount of kills.
-    deathmatch?: GameMode
+enum(string) GameModeName {
+    Casual = "casual",
+    Competitive = "competitive",
+    Deathmatch = "deathmatch"
 }
 
+enum(byte) GameModeId {
+    Casual = 0,
+    Competitive = 1,
+    DeathMatch = 2
+}
 
