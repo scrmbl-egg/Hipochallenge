@@ -1,2 +1,10 @@
 scoreboard players set @s perk 0
-function hipochallenge:msg/debug/inject_text/msg_inject_info {txt:'{"bold":false,"color":"gray","italic":true,"obfuscated":false,"selector":"@s","strikethrough":false,"underlined":false},{"bold":false,"color":"gray","italic":true,"obfuscated":false,"strikethrough":false,"text":" has reset their perk","underlined":false}'}
+function hipochallenge:msg/debug/send_info \
+    {text:[ \
+        { \
+            selector:"@s", \
+        }, \
+        { \
+            text:" has reset their perk.", \
+        }, \
+    ]}

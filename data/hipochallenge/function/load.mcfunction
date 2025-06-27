@@ -1,8 +1,8 @@
 # reload function
-function hipochallenge:msg/debug/msg_info {msg:"Loading datapack..."}
+function hipochallenge:msg/debug/send_info {text:"Loading datapack..."}
 
 # announce reload
-function hipochallenge:msg/debug/msg_info {msg:"Announcing reload..."}
+function hipochallenge:msg/debug/send_info {text:"Announcing reload..."}
 
 tellraw @a [{"bold":true,"color":"white","text":"HIPOCHALLENGE: "},{"bold":false,"color":"red","italic":false,"obfuscated":false,"strikethrough":false,"text":"Phoenix ","underlined":false},{"color":"gray","text":"- "},{"bold":false,"color":"aqua","text":"¡Recargado! - v"},{"bold":false,"color":"aqua","score":{"name":"#version","objective":"value"}}]
 execute as @a[tag=!dario_update] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 0 0.25
@@ -18,23 +18,23 @@ function hipochallenge:storage/init_consts
 function hipochallenge:storage/new/init_consts
 
 # scoreboards
-function hipochallenge:msg/debug/msg_info {msg:"Initialising scoreboards..."}
+function hipochallenge:msg/debug/send_info {text:"'Initialising scoreboards...'"}
 function hipochallenge:scores/init_scores
 
 # display scores
-function hipochallenge:msg/debug/msg_info {msg:"Initialising sidebar displays..."}
+function hipochallenge:msg/debug/send_info {text:"'Initialising sidebar displays...'"}
 function hipochallenge:sidebar_displays/init_sidebar_displays
 
 # teams
-function hipochallenge:msg/debug/msg_info {msg:"Creating teams..."}
+function hipochallenge:msg/debug/send_info {text:"'Creating teams...'"}
 function hipochallenge:teams/init_teams
 
 # gamerules
-function hipochallenge:msg/debug/msg_info {msg:"Setting gamerules..."}
+function hipochallenge:msg/debug/send_info {text:"'Setting gamerules...'"}
 function hipochallenge:gamerules/init_gamerules
 
 # logo
-function hipochallenge:msg/debug/msg_info {msg:"Restarting logos..."}
+function hipochallenge:msg/debug/send_info {text:"'Restarting logos...'"}
 kill @e[tag=logo]
 
 # FIXME: logo display entity has such a long JSON text string that it could
@@ -43,7 +43,7 @@ kill @e[tag=logo]
 #execute positioned -84 -32 151 run function hipochallenge:lobby/logo
 
 # schedule main functions
-function hipochallenge:msg/debug/msg_info {msg:"Scheduling main functions..."}
+function hipochallenge:msg/debug/send_info {text:"'Scheduling main functions...'"}
 
 schedule clear hipochallenge:ten_ticks
 schedule function hipochallenge:ten_ticks 10t
@@ -52,5 +52,5 @@ schedule clear hipochallenge:second
 schedule function hipochallenge:second 1s
 
 # update team text displays
-#function hipochallenge:msg/debug/msg_info {msg:"Updating text displays..."}
+#function hipochallenge:msg/debug/send_info {text:"Updating text displays..."}
 #function hipochallenge:teams/text_displays/update_st with storage minecraft:hipochallenge

@@ -1,5 +1,13 @@
 scoreboard players set @s class 0
-function hipochallenge:msg/debug/inject_text/msg_inject_info {txt:'{"bold":false,"color":"gray","italic":true,"obfuscated":false,"selector":"@s","strikethrough":false,"underlined":false},{"bold":false,"color":"gray","italic":true,"obfuscated":false,"strikethrough":false,"text":" has reset their class","underlined":false}'}
+function hipochallenge:msg/debug/send_info \
+    {text:[ \
+        { \
+            selector:"@s", \
+        }, \
+        { \
+            text:" has reset their class.", \
+        }, \
+    ]}
 
 # reset all ability scores
 scoreboard players set @s tank_kit1_goat_horn_cd 0
