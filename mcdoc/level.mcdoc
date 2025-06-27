@@ -1,23 +1,21 @@
+use ::java::util::text::TranslatedText
+
 type LocalSpaceVolumeCoordinates = [[int[] @ 3] @ 2]
 
 /// Level information struct.
 struct Level {
     /// Internal ID of the level.
     id: LevelId,
-    /// Resource pack lang file JSON key for the level name.
-    name_translation_key: string,
-    /// Level name fallback.
-    name_fallback: string,
+    /// Translated text for the level name.
+    name: TranslatedText,
     /// List of callouts.
     callouts: [Callout]
 }
 
 /// Callout information struct.
 struct Callout {
-    /// Resource pack lang file JSON key for the callout name.
-    name_translation_key: string,
-    /// Callout name fallback.
-    name_fallback: string,
+    /// Translated text for the callout name.
+    name: TranslatedText,
     /// List of volumes of the callout.
     local_space_volume_coordinates: LocalSpaceVolumeCoordinates
 }

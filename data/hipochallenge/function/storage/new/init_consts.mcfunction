@@ -34,8 +34,7 @@ data modify storage minecraft:hipochallenge consts.game set value { \
         { \
             internal_name:"casual", \
             id:0b, \
-            name_translation_key:"", \
-            name_fallback:"CASUAL", \
+            name:{translate:"",fallback:"CASUAL"}, \
             necessary_wins:5, \
             minimum_win_lead_for_victory:1, \
             round_duration_ticks:2400, \
@@ -43,8 +42,7 @@ data modify storage minecraft:hipochallenge consts.game set value { \
         { \
             internal_name:"competitive", \
             id:1b, \
-            name_translation_key:"", \
-            name_fallback:"COMPETITIVE", \
+            name:{translate:"",fallback:"COMPETITIVE"}, \
             necessary_wins:5, \
             minimum_win_lead_for_victory:2, \
             round_duration_ticks:2400, \
@@ -64,6 +62,7 @@ data modify storage minecraft:hipochallenge consts.limits set value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"neutral", \
     id:0b, \
+    default_name:{translate:"",fallback:"NEUTRAL"}, \
     name_color:"#ffffff", \
     text_color:"black", \
     dust_color:[0.4f,0.4f,0.4f], \
@@ -75,6 +74,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"red", \
     id:1b, \
+    default_name:{translate:"",fallback:"RED"}, \
     name_color:"#ff0000", \
     text_color:"red", \
     dust_color:[1.0f,0.0f,0.0f], \
@@ -86,6 +86,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"yellow", \
     id:2b, \
+    default_name:{translate:"",fallback:"YELLOW"}, \
     name_color:"#fffb0a", \
     text_color:"yellow", \
     dust_color:[1.0f,1.0f,0.0f], \
@@ -97,6 +98,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"green", \
     id:3b, \
+    default_name:{translate:"",fallback:"GREEN"}, \
     name_color:"#0eff36", \
     text_color:"green", \
     dust_color:[0.0f,1.0f,0.0f], \
@@ -108,6 +110,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"blue", \
     id:4b, \
+    default_name:{translate:"",fallback:"BLUE"}, \
     name_color:"#0400e4", \
     text_color:"blue", \
     dust_color:[0.0f,0.0f,1.0f], \
@@ -119,6 +122,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"purple", \
     id:5b, \
+    default_name:{translate:"",fallback:"PURPLE"}, \
     name_color:"#ad06ad", \
     text_color:"light_purple", \
     dust_color:[1.0f,0.0f,1.0f], \
@@ -132,8 +136,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.classes.tank set value { \
     internal_name:"tank", \
     id:1b, \
-    name_translation_key: "hc.class.tank", \
-    name_fallback:"Tank", \
+    name:{translate:"hc.class.tank",fallback:"Tank"}, \
     dust_color: [0.176f,0.6f,0.392f], \
     attributes:{ \
         max_health:20, \
@@ -149,8 +152,7 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         perk_color:"#cce7d9", \
     }, \
     kit1:{ \
-        name_translation_key:"hc.class.tank.kit1", \
-        name_fallback:"I Guardian", \
+        name:{translate:"hc.class.tank.kit1",fallback:"I Guardian"}, \
         horn:{ \
             effects:[ \
                 {effect:"absorption",seconds:2,amplifier:1,hide_particles:"false"}, \
@@ -160,8 +162,7 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         castling:{cooldown_ticks:400}, \
     }, \
     kit2: { \
-        name_translation_key:"hc.class.tank.kit2", \
-        name_fallback:"II Triton", \
+        name:{translate:"hc.class.tank.kit2",fallback:"II Triton"}, \
         horn:{ \
             effects:[ \
                 {effect:"slowness",seconds:2,amplifier:0,hide_particles:"false"}, \
@@ -174,8 +175,7 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         }, \
     }, \
     kit3:{ \
-        name_translation_key:"hc.class.tank.kit3", \
-        name_fallback:"III Druid", \
+        name:{translate:"hc.class.tank.kit3",fallback:"III Druid"}, \
         horn:{ \
             modifiers:[ \
                 {id:"tank_k3_horn_armor",attribute:"armor",value:-6,operation:"add_value"}, \
@@ -205,20 +205,17 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         }, \
     }, \
     perk1:{ \
-        name_translation_key:"hc.class.tank.perk1", \
-        name_fallback:"I Nutrition", \
+        name:{translate:"hc.class.tank.perk1",fallback:"I Nutrition"}, \
         food_item: {initial_cooldown_ticks:1200}, \
     }, \
     perk2:{ \
-        name_translation_key:"hc.class.tank.perk2", \
-        name_fallback:"II Profound scars", \
+        name:{translate:"hc.class.tank.perk2",fallback:"II Profound scars"}, \
         attack_effects:[ \
             {effect:"slowness",seconds:1,amplifier:0,hide_particles:"false"} \
         ] \
     }, \
     perk3:{ \
-        name_translation_key:"hc.class.tank.perk3", \
-        name_fallback:"III Inspiration", \
+        name:{translate:"hc.class.tank.perk3",fallback:"III Inspiration"}, \
     }, \
 }
 
@@ -226,8 +223,7 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
 data modify storage minecraft:hipochallenge consts.classes.marksman set value { \
     internal_name:"marksman", \
     id:2b, \
-    name_translation_key:"hc.class.marksman", \
-    name_fallback:"Marksman", \
+    name:{translate:"hc.class.marksman",fallback:"Marksman"}, \
     dust_color:[0.788f, 0.541f, 0.11f], \
     attributes:{ \
         max_health:20, \
@@ -243,8 +239,7 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
         perk_color:"#f2e3c9", \
     }, \
     kit1:{ \
-        name_translation_key:"hc.class.marksman.kit1", \
-        name_fallback:"I Archer", \
+        name:{translate:"hc.class.marksman.kit1",fallback:"I Archer"}, \
         projectiles:{ \
             max_amount:6, \
             new_first_cooldown_ticks:60, \
@@ -252,8 +247,7 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
         }, \
     }, \
     kit2:{ \
-        name_translation_key:"hc.class.marksman.kit2", \
-        name_fallback:"II Sniper", \
+        name:{translate:"hc.class.marksman.kit2",fallback:"II Sniper"}, \
         projectiles:{ \
             max_amount:5, \
             new_first_cooldown_ticks:80, \
@@ -261,8 +255,7 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
         }, \
     }, \
     kit3:{ \
-        name_translation_key:"hc.class.marksman.kit3", \
-        name_fallback:"III Gunslinger", \
+        name:{translate:"hc.class.marksman.kit3",fallback:"III Gunslinger"}, \
         projectiles:{ \
             max_amount:6, \
             new_first_cooldown_ticks:80, \
@@ -275,21 +268,18 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
         }, \
     }, \
     perk1:{ \
-        name_translation_key:"hc.class.marksman.perk1", \
-        name_fallback:"I Bullseye", \
+        name:{translate:"hc.class.marksman.perk1",fallback:"I Bullseye"}, \
         suppression_or_on_air_magic_damage:2, \
     }, \
     perk2:{ \
-        name_translation_key:"hc.class.marksman.perk2", \
-        name_fallback:"II Lifesaver", \
+        name:{translate:"hc.class.marksman.perk2",fallback:"II Lifesaver"}, \
         max_health_for_effects:8, \
         effects:[ \
             {effect:"absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
         ], \
     }, \
     perk3:{ \
-        name_translation_key:"hc.class.marksman.perk3", \
-        name_fallback:"III Big pockets", \
+        name:{translate:"hc.class.marksman.perk3",fallback:"III Big pockets"}, \
         added_projectiles:3, \
     }, \
 }
@@ -298,8 +288,7 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
 data modify storage minecraft:hipochallenge consts.classes.assassin set value { \
     internal_name:"assassin", \
     id:3b, \
-    name_translation_key:"hc.class.assassin", \
-    name_fallback:"Assassin", \
+    name:{translate:"hc.class.assassin",fallback:"Assassin"}, \
     dust_color:[0.173f, 0.482f, 0.824f], \
     attributes:{ \
         max_health:20, \
@@ -315,8 +304,7 @@ data modify storage minecraft:hipochallenge consts.classes.assassin set value { 
         perk_color:"#ccdff4", \
     }, \
     kit1:{ \
-        name_translation_key:"hc.class.assassin.kit1", \
-        name_fallback:"I Duelist", \
+        name:{translate:"hc.class.assassin.kit1",fallback:"I Duelist"}, \
         parry:{ \
             on_owner_when_success:{ \
                 modifiers: [], \
@@ -334,24 +322,19 @@ data modify storage minecraft:hipochallenge consts.classes.assassin set value { 
         }, \
     }, \
     kit2:{ \
-        name_translation_key:"hc.class.assassin.kit2", \
-        name_fallback:"II Phantom", \
+        name:{translate:"hc.class.assassin.kit2",fallback:"II Phantom"}, \
     }, \
     kit3:{ \
-        name_translation_key:"hc.class.assassin.kit3", \
-        name_fallback:"III Mercenary", \
+        name:{translate:"hc.class.assassin.kit3",fallback:"III Mercenary"}, \
     }, \
     perk1:{ \
-        name_translation_key:"hc.class.assassin.perk1", \
-        name_fallback:"I Contract", \
+        name:{translate:"hc.class.assassin.perk1",fallback:"I Contract"}, \
     }, \
     perk2:{ \
-        name_translation_key:"hc.class.assassin.perk2", \
-        name_fallback:"II Harvesting", \
+        name:{translate:"hc.class.assassin.perk2",fallback:"II Harvesting"}, \
     }, \
     perk3:{ \
-        name_translation_key:"hc.class.assassin.perk3", \
-        name_fallback:"III Acidity", \
+        name:{translate:"hc.class.assassin.perk3",fallback:"III Acidity"}, \
     }, \
 }
 #data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.summon_distance set value 0.5
@@ -364,8 +347,7 @@ data modify storage minecraft:hipochallenge consts.classes.assassin set value { 
 data modify storage minecraft:hipochallenge consts.classes.support set value { \
     internal_name:"support", \
     id:4b, \
-    name_translation_key:"hc.class.support", \
-    name_fallback:"Support", \
+    name:{translate:"hc.class.support",fallback:"Support"}, \
     dust_color:[0.863f, 0.455f, 0.141f], \
     attributes:{ \
         max_health:20, \
@@ -381,28 +363,22 @@ data modify storage minecraft:hipochallenge consts.classes.support set value { \
         perk_color:"#f7decb", \
     }, \
     kit1:{ \
-        name_translation_key:"hc.class.support.kit1", \
-        name_fallback:"I Trapper", \
+        name:{translate:"hc.class.support.kit1",fallback:"I Trapper"}, \
     }, \
     kit2:{ \
-        name_translation_key:"hc.class.support.kit2", \
-        name_fallback:"II Doctor", \
+        name:{translate:"hc.class.assassin.kit2",fallback:"II Doctor"}, \
     }, \
     kit3:{ \
-        name_translation_key:"hc.class.support.kit3", \
-        name_fallback:"III Shaman", \
+        name:{translate:"hc.class.assassin.kit3",fallback:"III Shaman"}, \
     }, \
     perk1:{ \
-        name_translation_key:"hc.class.support.perk1", \
-        name_fallback:"I Overclock", \
+        name:{translate:"hc.class.assassin.perk1",fallback:"I Overclock"}, \
     }, \
     perk2:{ \
-        name_translation_key:"hc.class.support.perk2", \
-        name_fallback:"II Personal space", \
+        name:{translate:"hc.class.assassin.perk2",fallback:"II Personal space"}, \
     }, \
     perk3:{ \
-        name_translation_key:"hc.class.support.perk3", \
-        name_fallback:"III Supercharge", \
+        name:{translate:"hc.class.assassin.perk3",fallback:"III Supercharge"}, \
     }, \
 }
 
@@ -410,8 +386,7 @@ data modify storage minecraft:hipochallenge consts.classes.support set value { \
 data modify storage minecraft:hipochallenge consts.classes.recon set value { \
     internal_name:"recon", \
     id:5b, \
-    name_translation_key:"hc.class.recon", \
-    name_fallback:"Recon", \
+    name:{translate:"hc.class.recon",fallback:"Recon"}, \
     dust_color:[0.863f, 0.455f, 0.141f], \
     attributes:{ \
         max_health:20, \
@@ -427,28 +402,22 @@ data modify storage minecraft:hipochallenge consts.classes.recon set value { \
         perk_color:"#e3d8f0", \
     }, \
     kit1:{ \
-        name_translation_key:"hc.class.recon.kit1", \
-        name_fallback:"I Spec. ops", \
+        name:{translate:"hc.class.recon.kit1",fallback:"I Spec. ops"}, \
     }, \
     kit2:{ \
-        name_translation_key:"hc.class.recon.kit2", \
-        name_fallback:"II Tracker", \
+        name:{translate:"hc.class.recon.kit2",fallback:"II Tracker"}, \
     }, \
     kit3:{ \
-        name_translation_key:"hc.class.recon.kit3", \
-        name_fallback:"III Anomaly", \
+        name:{translate:"hc.class.recon.kit3",fallback:"III Anomaly"}, \
     }, \
     perk1:{ \
-        name_translation_key:"hc.class.recon.perk1", \
-        name_fallback:"I Inhibitor", \
+        name:{translate:"hc.class.recon.perk1",fallback:"I Inhibitor"}, \
     }, \
     perk2:{ \
-        name_translation_key:"hc.class.recon.perk2", \
-        name_fallback:"II Assimilation", \
+        name:{translate:"hc.class.recon.perk2",fallback:"II Assimilation"}, \
     }, \
     perk3:{ \
-        name_translation_key:"hc.class.recon.perk3", \
-        name_fallback:"III Animal instinct", \
+        name:{translate:"hc.class.recon.perk3",fallback:"III Animal instinct"}, \
     }, \
 }
 
@@ -465,8 +434,7 @@ data modify storage minecraft:hipochallenge consts.classes.recon set value { \
 data modify storage minecraft:hipochallenge consts.classes.assault set value { \
     internal_name:"assault", \
     id:6b, \
-    name_translation_key:"hc.class.assault", \
-    name_fallback:"Recon", \
+    name:{translate:"hc.class.assault",fallback:"Assault"}, \
     dust_color:[0.803f,0.286f,0.270f], \
     attributes:{ \
         max_health:20, \
@@ -482,28 +450,22 @@ data modify storage minecraft:hipochallenge consts.classes.assault set value { \
         perk_color:"#dc928e", \
     }, \
     kit1:{ \
-        name_translation_key:"hc.class.assault.kit1", \
-        name_fallback:"I Explosives expert", \
+        name:{translate:"hc.class.assault.kit1",fallback:"I Explosives expert"}, \
     }, \
     kit2:{ \
-        name_translation_key:"hc.class.assault.kit2", \
-        name_fallback:"II Harpooner", \
+        name:{translate:"hc.class.assault.kit2",fallback:"II Harpooner"}, \
     }, \
     kit3:{ \
-        name_translation_key:"hc.class.assault.kit3", \
-        name_fallback:"III Commander", \
+        name:{translate:"hc.class.assault.kit3",fallback:"III Commander"}, \
     }, \
     perk1:{ \
-        name_translation_key:"hc.class.assault.perk1", \
-        name_fallback:"I Engineering", \
+        name:{translate:"hc.class.assault.perk1",fallback:"I Engineering"}, \
     }, \
     perk2:{ \
-        name_translation_key:"hc.class.assault.perk2", \
-        name_fallback:"II Adaptable shell", \
+        name:{translate:"hc.class.assault.perk2",fallback:"II Adaptable shell"}, \
     }, \
     perk3:{ \
-        name_translation_key:"hc.class.assault.perk3", \
-        name_fallback:"III Chase", \
+        name:{translate:"hc.class.assault.perk3",fallback:"III Chase"}, \
     }, \
 }
 

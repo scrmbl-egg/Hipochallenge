@@ -1,3 +1,4 @@
+use ::java::util::text::TranslatedText
 use ::Hipochallenge::mcdoc::level::LevelId
 
 /// Game context/global variables struct.
@@ -26,10 +27,8 @@ struct GameMode {
     internal_name: GameModeName,
     /// Internal numeric ID of the game mode.
     id: GameModeId,
-    /// Resource pack lang file JSON key for the game mode name.
-    name_translation_key: string,
-    /// Game mode name fallback.
-    name_fallback: string,
+    /// Translated text for the game mode name.
+    name: TranslatedText,
     /// Duration of a game round in ticks.
     round_duration_ticks: #[divisible_by=20] int @ 20..,
     /// Amount of rounds/points that must be won by default to win a game.

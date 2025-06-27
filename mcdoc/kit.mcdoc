@@ -1,12 +1,11 @@
+use ::java::util::text::TranslatedText
 use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
 use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters
     as AttributeModifier
 
 struct Kit {
-    /// Resource pack lang file JSON key for the kit name.
-    name_translation_key: string,
-    /// Kit name fallback.
-    name_fallback: string
+    /// Translated text for the kit name.
+    name: TranslatedText,
 }
 
 /// First tank kit struct.

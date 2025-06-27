@@ -1,10 +1,9 @@
+use ::java::util::text::TranslatedText
 use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
 
 struct Perk {
-    /// Resource pack lang file JSON key for the perk name.
-    name_translation_key: string,
-    /// Perk name fallback.
-    name_fallback: string,
+    /// Translated text for the perk name.
+    name: TranslatedText
 }
 
 struct TankPerk1 {

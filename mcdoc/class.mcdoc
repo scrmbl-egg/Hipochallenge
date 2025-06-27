@@ -1,4 +1,5 @@
 use ::java::util::text::TextColor
+use ::java::util::text::TranslatedText
 
 /// Modifiable attributes of the available classes.
 struct ClassAttributes {
@@ -32,10 +33,8 @@ struct Class {
     internal_name: ClassName,
     /// Internal numeric ID of the class.
     id: ClassId,
-    /// Resource pack lang file JSON key for the class name.
-    name_translation_key: string,
-    /// Class name fallback.
-    name_fallback: string,
+    /// Translated text for the class name.
+    name: TranslatedText,
     /// Dust color of the class.
     dust_color: #[color="dec_rgb"] [float] @ 3,
     /// Class custom attributes.
