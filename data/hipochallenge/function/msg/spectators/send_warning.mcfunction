@@ -17,7 +17,7 @@ $tellraw @a[team=spectators] [ \
     }, \
     { \
         bold:true, \
-        color:"green", \
+        color:"gray", \
         text:">> ", \
     }, \
     { \
