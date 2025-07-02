@@ -12,7 +12,7 @@ $tellraw @a[team=spectators] [ \
         color:"red", \
         hover_event:{ \
             action:"show_text",\
-            value:{translate:"hc.msg.spectator",fallback:"Spectator message"} \
+            value:{translate:"hc.msg.spectators",fallback:"Spectator message"} \
         }, \
     }, \
     { \
