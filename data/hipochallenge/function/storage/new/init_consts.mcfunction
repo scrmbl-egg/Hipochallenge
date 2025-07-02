@@ -62,7 +62,7 @@ data modify storage minecraft:hipochallenge consts.limits set value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"neutral", \
     id:0b, \
-    default_name:{translate:"",fallback:"NEUTRAL"}, \
+    default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
     name_color:"#ffffff", \
     text_color:"black", \
     dust_color:[0.4f,0.4f,0.4f], \
@@ -74,7 +74,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"red", \
     id:1b, \
-    default_name:{translate:"",fallback:"RED"}, \
+    default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
     name_color:"#ff0000", \
     text_color:"red", \
     dust_color:[1.0f,0.0f,0.0f], \
@@ -86,7 +86,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"yellow", \
     id:2b, \
-    default_name:{translate:"",fallback:"YELLOW"}, \
+    default_name:{translate:"hc.teams.colors.yellow",fallback:"YELLOW"}, \
     name_color:"#fffb0a", \
     text_color:"yellow", \
     dust_color:[1.0f,1.0f,0.0f], \
@@ -98,7 +98,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"green", \
     id:3b, \
-    default_name:{translate:"",fallback:"GREEN"}, \
+    default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
     name_color:"#0eff36", \
     text_color:"green", \
     dust_color:[0.0f,1.0f,0.0f], \
@@ -110,7 +110,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"blue", \
     id:4b, \
-    default_name:{translate:"",fallback:"BLUE"}, \
+    default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
     name_color:"#0400e4", \
     text_color:"blue", \
     dust_color:[0.0f,0.0f,1.0f], \
@@ -122,7 +122,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"purple", \
     id:5b, \
-    default_name:{translate:"",fallback:"PURPLE"}, \
+    default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
     name_color:"#ad06ad", \
     text_color:"light_purple", \
     dust_color:[1.0f,0.0f,1.0f], \
