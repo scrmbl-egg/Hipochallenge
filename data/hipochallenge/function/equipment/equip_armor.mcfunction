@@ -1,5 +1,11 @@
+#>hipochallenge:equipment/equip_armor
+#
+# Equips armor to the player depending on the player's class.
+#
+# @context player
+
 # guard clause
-execute as @s unless predicate hipochallenge:teams/is_in_pvp_team \
+execute as @s unless predicate hipochallenge:team/is_in_pvp_team \
     run \
     return run \
     function hipochallenge:msg/private/send_error \
@@ -8,26 +14,23 @@ execute as @s unless predicate hipochallenge:teams/is_in_pvp_team \
         fallback:"You don't belong in a team that is allowed to equip armor", \
     }}
 
-# team 1
-execute as @s[team=team1,predicate=hipochallenge:class/is_tank] run function hipochallenge:equipment/armor/class/equip_tank_armor with storage minecraft:hipochallenge vars.teams.team1
-execute as @s[team=team1,predicate=hipochallenge:class/is_marksman] run function hipochallenge:equipment/armor/class/equip_marksman_armor with storage minecraft:hipochallenge vars.teams.team1
-execute as @s[team=team1,predicate=hipochallenge:class/is_assassin] run function hipochallenge:equipment/armor/class/equip_assassin_armor with storage minecraft:hipochallenge vars.teams.team1
-execute as @s[team=team1,predicate=hipochallenge:class/is_support] run function hipochallenge:equipment/armor/class/equip_support_armor with storage minecraft:hipochallenge vars.teams.team1
-execute as @s[team=team1,predicate=hipochallenge:class/is_recon] run function hipochallenge:equipment/armor/class/equip_recon_armor with storage minecraft:hipochallenge vars.teams.team1
-execute as @s[team=team1,predicate=hipochallenge:class/is_assault] run function hipochallenge:equipment/armor/class/equip_assault_armor with storage minecraft:hipochallenge vars.teams.team1
+# TODO: this match/switch-like structure could be changed with an event macros.
 
-# team 2
-execute as @s[team=team2,predicate=hipochallenge:class/is_tank] run function hipochallenge:equipment/armor/class/equip_tank_armor with storage minecraft:hipochallenge vars.teams.team2
-execute as @s[team=team2,predicate=hipochallenge:class/is_marksman] run function hipochallenge:equipment/armor/class/equip_marksman_armor with storage minecraft:hipochallenge vars.teams.team2
-execute as @s[team=team2,predicate=hipochallenge:class/is_assassin] run function hipochallenge:equipment/armor/class/equip_assassin_armor with storage minecraft:hipochallenge vars.teams.team2
-execute as @s[team=team2,predicate=hipochallenge:class/is_support] run function hipochallenge:equipment/armor/class/equip_support_armor with storage minecraft:hipochallenge vars.teams.team2
-execute as @s[team=team2,predicate=hipochallenge:class/is_recon] run function hipochallenge:equipment/armor/class/equip_recon_armor with storage minecraft:hipochallenge vars.teams.team2
-execute as @s[team=team2,predicate=hipochallenge:class/is_assault] run function hipochallenge:equipment/armor/class/equip_assault_armor with storage minecraft:hipochallenge vars.teams.team2
-
-# neutral
-execute as @s[team=neutral,predicate=hipochallenge:class/is_tank] run function hipochallenge:equipment/armor/class/equip_tank_armor with storage minecraft:hipochallenge consts.teams.neutral
-execute as @s[team=neutral,predicate=hipochallenge:class/is_marksman] run function hipochallenge:equipment/armor/class/equip_marksman_armor with storage minecraft:hipochallenge consts.teams.neutral
-execute as @s[team=neutral,predicate=hipochallenge:class/is_assassin] run function hipochallenge:equipment/armor/class/equip_assassin_armor with storage minecraft:hipochallenge consts.teams.neutral
-execute as @s[team=neutral,predicate=hipochallenge:class/is_support] run function hipochallenge:equipment/armor/class/equip_support_armor with storage minecraft:hipochallenge consts.teams.neutral
-execute as @s[team=neutral,predicate=hipochallenge:class/is_recon] run function hipochallenge:equipment/armor/class/equip_recon_armor with storage minecraft:hipochallenge consts.teams.neutral
-execute as @s[team=neutral,predicate=hipochallenge:class/is_assault] run function hipochallenge:equipment/armor/class/equip_assault_armor with storage minecraft:hipochallenge consts.teams.neutral
+execute if predicate hipochallenge:class/is_tank \
+    run \
+    function hipochallenge:equipment/armor/equip_tank_armor
+execute if predicate hipochallenge:class/is_marksman \
+    run \
+    function hipochallenge:equipment/armor/equip_marksman_armor
+execute if predicate hipochallenge:class/is_assassin \
+    run \
+    function hipochallenge:equipment/armor/equip_assassin_armor
+execute if predicate hipochallenge:class/is_support \
+    run \
+    function hipochallenge:equipment/armor/equip_support_armor
+execute if predicate hipochallenge:class/is_recon \
+    run \
+    function hipochallenge:equipment/armor/equip_recon_armor
+execute if predicate hipochallenge:class/is_assault \
+    run \
+    function hipochallenge:equipment/armor/equip_assault_armor
