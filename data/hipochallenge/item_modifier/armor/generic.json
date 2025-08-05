@@ -1,37 +1,44 @@
-[
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:unbreakable": {
-                "show_in_tooltip": false
+{
+    "function": "minecraft:set_components",
+    "components": {
+        "minecraft:unbreakable": {},
+        "minecraft:enchantment_glint_override": false,
+        "minecraft:enchantments": {
+            "minecraft:binding_curse": 1
+        },
+        "minecraft:attribute_modifiers": [
+            {
+                "type": "minecraft:armor",
+                "id": "hipochallenge:no_armor",
+                "amount": 0,
+                "operation": "add_value",
+                "slot": "armor"
             },
-            "minecraft:enchantment_glint_override": false,
-            "minecraft:enchantments": {
-                "levels": {
-                    "minecraft:binding_curse": 1
-                },
-                "show_in_tooltip": false
+            {
+                "type": "minecraft:armor_toughness",
+                "id": "hipochallenge:no_armor_toughness",
+                "amount": 0,
+                "operation": "add_value",
+                "slot": "armor"
             },
-            "minecraft:attribute_modifiers": {
-                "modifiers": [
-                    {
-                        "id": "zero_armor",
-                        "type": "minecraft:armor",
-                        "amount": 0,
-                        "operation": "add_value",
-                        "slot": "armor"
-                    },
-                    {
-                        "id": "zero_armor_toughness",
-                        "type": "minecraft:armor_toughness",
-                        "amount": 0,
-                        "operation": "add_value",
-                        "slot": "armor"
-                    }
-                ],
-                "show_in_tooltip": false
-            },
-            "minecraft:hide_additional_tooltip": {}
+            {
+                "type": "minecraft:knockback_resistance",
+                "id": "hipochallenge:no_knockback_resistance",
+                "amount": 0,
+                "operation": "add_value",
+                "slot": "armor"
+            }
+        ],
+        "minecraft:tooltip_display": {
+            "hide_tooltip": true,
+            "hidden_components": [
+                "minecraft:unbreakable",
+                "minecraft:enchantment_glint_override",
+                "minecraft:enchantments",
+                "minecraft:attribute_modifiers",
+                "minecraft:dyed_color",
+                "minecraft:trim"
+            ]
         }
     }
-]
+}
