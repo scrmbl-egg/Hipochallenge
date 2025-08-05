@@ -1,0 +1,9 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+        "type": "minecraft:storage",
+        "storage": "minecraft:hipochallenge",
+        "path": "vars.team_contexts.team2.preset.id"
+    },
+    "range": 2
+}

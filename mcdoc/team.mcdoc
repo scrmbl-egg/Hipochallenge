@@ -1,3 +1,4 @@
+use ::java::util::text::TextBase
 use ::java::util::text::TranslatedText
 use ::java::util::text::TextColor
 
@@ -10,13 +11,16 @@ struct TeamPreset {
     /// Translated text of the team's default name.
     default_name: TranslatedText,
     /// Color of the team's name in team's prefix.
-    name_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+    name_color?: (#[color="hex_rgb"] string | #[color="named"] TextColor),
     /// Vanilla color of the team.
-    text_color: TextColor,
+    text_color?: TextColor,
     /// RGB of the dust particles for the team.
     dust_color: #[color="dec_rgb"] [float] @ 3,
     /// Team's leather armor color.
-    armor_color: #[color="composite_rgb"] int,
+    armor_color: (
+		#[canonical] #[color="composite_rgb"] int |
+		#[color="dec_rgb"] [float] @ 3 |
+	),
     /// Team's custom armor trim material.
     trim_material: (
         #[id(registry="trim_material",tags="allowed")] string |
@@ -25,10 +29,13 @@ struct TeamPreset {
 }
 
 struct TeamContext {
-    /// *(Nullable)* Custom name of the team.
-    custom_name?: string @ 1..10,
+    /// **(Nullable)** Custom name of the team.
+    custom_name?: struct TeamNameText {
+        ...TextBase,
+        text: string @ 1..12
+    },
     /// ID of the team presets array.
-    preset_id: TeamPresetId,
+    preset: TeamPreset,
     /// List of players in the team.
     players: [#[uuid] int[] @ 4]
 }
@@ -46,11 +53,15 @@ enum(string) TeamPresetName {
     /// Blue team color name.
     Blue = "blue",
     /// Purple team color name.
-    Purple = "purple"
+    Purple = "purple",
+    /// Orange team color name.
+    Orange = "orange",
+    /// Cyan team color name.
+    Cyan = "cyan",
 }
 
 /// Team color ID's, used for datapack predicates.
-enum(byte) TeamPresetId {
+enum(int) TeamPresetId {
     /// Neutral team color ID.
     Neutral = 0,
     /// Red team color ID.
@@ -62,5 +73,9 @@ enum(byte) TeamPresetId {
     /// Blue team color ID.
     Blue = 4,
     /// Purple team color ID.
-    Purple = 5
+    Purple = 5,
+    /// Orange team color ID.
+    Orange = 6,
+    /// Cyan team color ID.
+    Cyan = 7,
 }

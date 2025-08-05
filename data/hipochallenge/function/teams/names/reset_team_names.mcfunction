@@ -1,2 +1,0 @@
-function hipochallenge:teams/names/reset_team1_name
-function hipochallenge:teams/names/reset_team2_name
