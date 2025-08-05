@@ -6,10 +6,31 @@ type LocalSpaceVolumeCoordinates = [[int[] @ 3] @ 2]
 struct Level {
     /// Internal ID of the level.
     id: LevelId,
+    /// Internal name of the level.
+    internal_name: #[match_regex="^[A-Za-z0-9_]+$"] string,
     /// Translated text for the level name.
     name: TranslatedText,
     /// List of callouts.
-    callouts: [Callout]
+    callouts: [Callout],
+    /// Event callbacks of the level.
+    event_callbacks: struct LevelEventCallbacks {
+        /// Command ran when the match starts.
+        match_start_command: #[id="function"] string,
+        /// Command ran when the round starts.
+        round_start_command: #[id="function"] string,
+        /// Command ran when the round timer ends.
+        overtime_command: #[id="function"] string,
+        /// Command ran when the round ends.
+        round_end_command: #[id="function"] string,
+        /// Command ran when teh match ends.
+        match_end_command: #[id="function"] string,
+        /// Command ran each tick.
+        tick_command: #[id="function"] string,
+        /// Command ran every ten ticks.
+        ten_ticks_command: #[id="function"] string,
+        /// Command ran every second.
+        second_command: #[id="function"] string,
+    }
 }
 
 /// Callout information struct.
@@ -20,9 +41,11 @@ struct Callout {
     local_space_volume_coordinates: LocalSpaceVolumeCoordinates
 }
 
-enum(byte) LevelId {
+enum(int) LevelId {
     TrainingArea = 0,
     SubterraneanDecay = 1,
     FroggylandPlayplace2 = 2,
     SepulchredSacrifice2 = 3,
+    VillagerFactory = 4,
+    CrazyTrains = 5,
 }

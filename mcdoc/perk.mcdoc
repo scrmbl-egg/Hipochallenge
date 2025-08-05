@@ -3,7 +3,9 @@ use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
 
 struct Perk {
     /// Translated text for the perk name.
-    name: TranslatedText
+    name: TranslatedText,
+    /// Command for equipping the perk.
+    equip_command: #[command(max_length=32500)] string,
 }
 
 struct TankPerk1 {

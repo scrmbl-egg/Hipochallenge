@@ -3,7 +3,7 @@ use ::java::util::attribute::AttributeOperation
 /// Struct for parameters of the attribute modifier command.
 struct AttributeModifierCommmandParameters {
     /// ID of the modifier.
-    id: string,
+    id: #[match_regex="^[A-Za-z0-9_]+$"] string,
     /// Attribute name.
     attribute: #[id=attribute] string,
     /// Modifier operation.

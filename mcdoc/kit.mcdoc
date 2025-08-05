@@ -6,6 +6,8 @@ use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters
 struct Kit {
     /// Translated text for the kit name.
     name: TranslatedText,
+    /// Command for equipping the kit.
+    equip_command: #[command(max_length=32500)] string
 }
 
 /// First tank kit struct.
@@ -62,7 +64,7 @@ struct TankKit3 {
         }
     },
     bubble_shield: struct {
-        draw_command: #[command] string,
+        draw_command: #[command(max_length=32500)] string,
         radius: double @ 0..,
         high_speed_arrow_detection_radius: double @ 0..,
         lifetime_ticks: int @ 0..,

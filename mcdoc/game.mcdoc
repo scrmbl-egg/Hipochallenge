@@ -38,7 +38,7 @@ struct GameMode {
 }
 
 /// Game states of the game.
-enum(byte) GameState {
+enum(int) GameState {
     /// State where the players are not playing.
     NotPlaying = 0,
     /// State where a match is requested and is waiting for players.
@@ -102,7 +102,7 @@ enum(string) GameModeName {
     Deathmatch = "deathmatch"
 }
 
-enum(byte) GameModeId {
+enum(int) GameModeId {
     Casual = 0,
     Competitive = 1,
     DeathMatch = 2

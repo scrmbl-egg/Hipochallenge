@@ -4,12 +4,13 @@ use ::Hipochallenge::mcdoc::class::AvailableClasses
 use ::Hipochallenge::mcdoc::game::GameMode
 use ::Hipochallenge::mcdoc::game::AvailableGameStates
 use ::Hipochallenge::mcdoc::game::GameContext
+use ::Hipochallenge::mcdoc::level::Level
 
 dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
     /// Global constants of the datapack.
     consts: struct MainConsts {
         /// Game related constants.
-        game: struct {
+        game: struct GameConstants {
             /// Version of the map.
             map_version: string,
             /// Size of a team.
@@ -23,7 +24,7 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
             /// Available game states.
             states: AvailableGameStates,
         },
-        limits: struct {
+        limits: struct Limits {
             no_gravity_projectiles_lifetime_ticks: int @ 0..
         },
         /// Class related constants.
@@ -36,7 +37,7 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
         /// Current game context/global variables.
         game_context: GameContext,
         /// Team global variables.
-        team_contexts: struct {
+        team_contexts: struct TeamContexts {
             /// Team 1 global variables.
             team1: TeamContext,
             /// Team 2 global variables.

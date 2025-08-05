@@ -3,7 +3,7 @@ struct EffectCommandParameters {
     /// Effect name.
     effect: #[id="mob_effect"] string,
     /// Effect amplifier.
-    amplifier: byte @ 0..,
+    amplifier: int @ 0..,
     /// Duration in seconds of the effect.
     /// `"infinite"` can be used to indicate infinite duration.
     seconds: (#[canonical] int @ 0.. | "infinite"),
