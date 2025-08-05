@@ -1,4 +1,9 @@
-schedule function hipochallenge:ten_ticks 10t
+#>core_hc:ten_ticks
+#
+# Datapack function that executes each half-second (10 ticks).
+
+# schedule next
+schedule function core_hc:ten_ticks 10t
 
 # FIXME: The following function should be moved to a maps/main function
 
