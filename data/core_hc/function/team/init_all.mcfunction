@@ -33,7 +33,6 @@ team modify team1 collisionRule always
 team modify team1 friendlyFire false
 team modify team1 nametagVisibility hideForOtherTeams
 team modify team1 seeFriendlyInvisibles true
-team modify team1 color white
 
 # team 2 (name is not initialised, as it can be changed)
 team add team2
@@ -41,7 +40,6 @@ team modify team2 collisionRule always
 team modify team2 friendlyFire false
 team modify team2 nametagVisibility hideForOtherTeams
 team modify team2 seeFriendlyInvisibles true
-team modify team2 color white
 
 # neutral (only available in training)
 team add neutral

@@ -59,9 +59,12 @@ data modify storage minecraft:hipochallenge local_set_name.team \
 data modify storage minecraft:hipochallenge local_set_name.text \
     set from storage \
     minecraft:hipochallenge vars.team_contexts.team1.custom_name
-data modify storage minecraft:hipochallenge local_set_name.color \
+data modify storage minecraft:hipochallenge local_set_name.prefix_color \
     set from storage \
     minecraft:hipochallenge vars.team_contexts.team1.preset.name_color
+data modify storage minecraft:hipochallenge local_set_name.team_color \
+    set from storage \
+    minecraft:hipochallenge vars.team_contexts.team1.preset.text_color
 
 function core_hc:team/name/set \
     with storage minecraft:hipochallenge local_set_name
