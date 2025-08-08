@@ -5,7 +5,10 @@ scoreboard players set @s tank_kit2_goat_horn_nearby_enemies 0
 data modify storage minecraft:hipochallenge local_enemy_uuid_array set value []
 
 # get enemy team
-function hipochallenge:teams/get/get_enemy_team {dest_st:"minecraft:hipochallenge",dest_path:"local_enemy_team"}
+function core_hc:team/get_enemy_team { \
+    out_storage:"minecraft:hipochallenge", \
+    out_nbt:"local_enemy_team" \
+}
 # gives ownership of:
     # local_enemy_team
 
@@ -26,7 +29,7 @@ execute store result storage minecraft:hipochallenge local_int_self_pos_z int 1 
     # local_int_self_pos_y
     # local_int_self_pos_z
 #function hipochallenge:std/map/run {array_name:local_enemy_uuid_array,function_st:'hipochallenge:abilities/class/tank/kit2/goat_horn/map_enemy_uuid_array_st'}
-function std:array/map {arr_st:"minecraft:hipochallenge",arr_path:local_enemy_uuid_array,fn:'hipochallenge:abilities/class/tank/kit2/goat_horn/map_enemy_uuid_array_st',fn_st:"minecraft:hipochallenge",elem_macro:"enemy_uuid"}
+# TODO: CHECK -> function std:array/foreach {arr_st:"minecraft:hipochallenge",arr_path:local_enemy_uuid_array,fn:'hipochallenge:abilities/class/tank/kit2/goat_horn/map_enemy_uuid_array_st',fn_st:"minecraft:hipochallenge",elem_macro:"enemy_uuid"}
 
 # store length of uuid array in score (amount of players)
 execute store result score @s tank_kit2_goat_horn_nearby_enemies run data get storage minecraft:hipochallenge local_enemy_uuid_array

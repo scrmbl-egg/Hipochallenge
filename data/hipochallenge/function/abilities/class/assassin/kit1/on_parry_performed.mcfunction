@@ -1,5 +1,5 @@
 advancement revoke @s \
-    only hipochallenge:used_items/class/assassin/kit1/used_duelist_sword
+    only core_hc:class/assassin/kit1/used_duelist_sword
 
 # TODO: investigate next minecraft version's new weapon blocking component.
 # this could probably make it so that, if a player blocks an attack with a sword

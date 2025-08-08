@@ -1,7 +1,7 @@
-advancement revoke @s only hipochallenge:used_items/class/tank/kit3/used_bubble_shield
+advancement revoke @s only core_hc:class/tank/kit3/used_bubble_shield
 
 # team with no abilities guard clause
-execute as @s unless predicate hipochallenge:teams/is_in_pvp_team run \
+execute as @s unless predicate hipochallenge:team/is_in_pvp_team run \
     return run \
     function hipochallenge:msg/private/send_error \
     {text: \

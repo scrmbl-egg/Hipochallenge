@@ -1,8 +1,8 @@
-advancement revoke @s only hipochallenge:used_items/class/tank/kit2/used_goat_horn
+advancement revoke @s only core_hc:class/tank/kit2/used_goat_horn
 function hipochallenge:msg/debug/send_info {text:"used kit2 horn"}
 
 # team with no abilities guard clause
-execute as @s unless predicate hipochallenge:teams/is_in_pvp_team run \
+execute as @s unless predicate hipochallenge:team/is_in_pvp_team run \
     return run \
     function hipochallenge:msg/private/send_error \
     {text: \
