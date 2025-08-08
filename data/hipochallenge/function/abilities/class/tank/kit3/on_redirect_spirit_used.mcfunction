@@ -1,4 +1,5 @@
-advancement revoke @s only core_hc:class/tank/kit3/used_redirect_spirit
+advancement revoke @s \
+    only core_hc:class/tank/kit3/used_redirect_spirit
 
 # team with no abilities guard clause
 execute as @s unless predicate hipochallenge:team/is_in_pvp_team run \

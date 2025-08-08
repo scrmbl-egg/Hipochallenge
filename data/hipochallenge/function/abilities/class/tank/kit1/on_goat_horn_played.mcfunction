@@ -1,4 +1,6 @@
-advancement revoke @s only core_hc:class/tank/kit1/used_goat_horn
+advancement revoke @s \
+    only core_hc:class/tank/kit1/used_goat_horn
+
 function hipochallenge:msg/debug/send_info {text:"used kit1 horn"}
 
 # team with no abilities guard clause
