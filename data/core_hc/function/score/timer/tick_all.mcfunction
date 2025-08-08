@@ -1,15 +1,22 @@
-# lifetimes
-# TODO: There's two routes we could take regarding the following command:
-    # 1: We could change the selector to @e so that ANY entity with life_timer score
-    # has its lifetime
-    # updated.
-        # PROS: no individual entity handling
-        # CONS: AWFUL performance
-    # 2: Remove it entirely
-        # PROS: BETTER performance, since we are capable of filtering more
-        # precisely what entities actually decrease their lifetime
-        # CONS: every entity that needs a lifetime must be individually handled
-execute as @a[scores={life_timer=1..}] run scoreboard players remove @s life_timer 1
+#>core_hc:score/timer/tick_all
+#
+# Decreases 1 unit from all scores that are meant to represent timers.
+
+# temporary entity lifetimes
+## NOTE:
+# There's two routes we could take regarding the following commands:
+#   1: We could change the selector to @e so that ANY entity with life_timer
+#   score has its lifetime updated.
+#       PROS: no individual entity handling, and all entities are handled at
+#       exactly the same time
+#       CONS: could probably cause AWFUL performance
+#   2: Remove it entirely
+#       PROS: BETTER performance, since we are capable of filtering more
+#       precisely what entities actually decrease their lifetime
+#       CONS: every entity that needs a lifetime must be individually handled
+#       and that could mean an unclear order.
+execute as @e[type=!minecraft:player,scores={life_timer=1..}] \
+    run scoreboard players remove @s life_timer 1
 
 # mechanics
 execute as @a[scores={silence_timer=1..}] run scoreboard players remove @s silence_timer 1

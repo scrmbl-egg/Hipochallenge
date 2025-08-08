@@ -32,5 +32,5 @@ function hipochallenge:projectiles/tick
 function hipochallenge:abilities/tick
 
 ## __ KEEP AT BOTTOM OF FILE __
-# timers
-function hipochallenge:timers/tick
+# timers (must be deferred)
+function core_hc:score/timer/tick_all
