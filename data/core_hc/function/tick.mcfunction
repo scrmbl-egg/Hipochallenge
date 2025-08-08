@@ -14,7 +14,9 @@ function core_hc:music/mute_vanilla
 
 # deaths
 # TODO: Move this function to a separate folder (death/tick)
-execute as @a[scores={is_dead=1..}] at @s run function hipochallenge:death/handle_death
+execute as @a[scores={is_dead=1..}] at @s \
+    run \
+    function hipochallenge:death/handle_death
 
 # vfx
 function hipochallenge:vfx/tick
@@ -26,10 +28,11 @@ function hipochallenge:vfx/tick
                 function hipochallenge:vfx/maps/map0/pipe_particles
 
 # projectiles
+# TODO: move to core_hc
 function hipochallenge:projectiles/tick
 
 # abilities
-function hipochallenge:abilities/tick
+function #core_hc:ability/tick
 
 ## __ KEEP AT BOTTOM OF FILE __
 # timers (must be deferred)
