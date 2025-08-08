@@ -6,7 +6,7 @@
 recipe take @a *
 
 # mute vanilla music
-function hipochallenge:music/mute_vanilla_music
+function core_hc:music/mute_vanilla
 
 # game state logic
 # TODO: uncomment this command when game states are done
