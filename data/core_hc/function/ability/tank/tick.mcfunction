@@ -32,4 +32,4 @@
     execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/tick
 
     # bubble shield
-    execute as @e[type=marker,tag=bubble_shield] at @s run function hipochallenge:abilities/class/tank/kit3/bubble_shield/tick with storage minecraft:hipochallenge consts.classes.tank.kit3.bubble_shield
+    # execute as @e[type=marker,tag=bubble_shield] at @s run function hipochallenge:abilities/class/tank/kit3/bubble_shield/tick with storage minecraft:hipochallenge consts.classes.tank.kit3.bubble_shield
