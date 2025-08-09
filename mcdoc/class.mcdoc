@@ -43,108 +43,10 @@ struct Class {
     list_info: ClassListInfo,
     /// Command executed for equipping the class's armor.
     equip_armor_command: #[command(max_length=32500)] string,
-}
-
-/// Tank class struct.
-struct TankClass {
-    ...Class,
-    /// Kit 1.
-    kit1: ::Hipochallenge::mcdoc::kit::TankKit1,
-    /// Kit 2.
-    kit2: ::Hipochallenge::mcdoc::kit::TankKit2,
-    /// Kit3.
-    kit3: ::Hipochallenge::mcdoc::kit::TankKit3,
-    /// Perk 1.
-    perk1: ::Hipochallenge::mcdoc::perk::TankPerk1,
-    /// Perk 2.
-    perk2: ::Hipochallenge::mcdoc::perk::TankPerk2,
-    /// Perk 3.
-    perk3: ::Hipochallenge::mcdoc::perk::TankPerk3
-}
-
-/// Marksman class struct.
-struct MarksmanClass {
-    ...Class,
-    /// Kit 1.
-    kit1: ::Hipochallenge::mcdoc::kit::MarksmanKit1,
-    /// Kit 2.
-    kit2: ::Hipochallenge::mcdoc::kit::MarksmanKit2,
-    /// Kit3.
-    kit3: ::Hipochallenge::mcdoc::kit::MarksmanKit3,
-    /// Perk 1.
-    perk1: ::Hipochallenge::mcdoc::perk::MarksmanPerk1,
-    /// Perk 2.
-    perk2: ::Hipochallenge::mcdoc::perk::MarksmanPerk2,
-    /// Perk 3.
-    perk3: ::Hipochallenge::mcdoc::perk::MarksmanPerk3
-}
-
-/// Assassin class struct.
-struct AssassinClass {
-    ...Class,
-    /// Kit 1.
-    kit1: ::Hipochallenge::mcdoc::kit::AssassinKit1,
-    /// Kit 2.
-    kit2: ::Hipochallenge::mcdoc::kit::AssassinKit2,
-    /// Kit3.
-    kit3: ::Hipochallenge::mcdoc::kit::AssassinKit3,
-    /// Perk 1.
-    perk1: ::Hipochallenge::mcdoc::perk::AssassinPerk1,
-    /// Perk 2.
-    perk2: ::Hipochallenge::mcdoc::perk::AssassinPerk2,
-    /// Perk 3.
-    perk3: ::Hipochallenge::mcdoc::perk::AssassinPerk3
-}
-
-/// Support class struct.
-struct SupportClass {
-    ...Class,
-    /// Kit 1.
-    kit1: ::Hipochallenge::mcdoc::kit::SupportKit1,
-    /// Kit 2.
-    kit2: ::Hipochallenge::mcdoc::kit::SupportKit2,
-    /// Kit3.
-    kit3: ::Hipochallenge::mcdoc::kit::SupportKit3,
-    /// Perk 1.
-    perk1: ::Hipochallenge::mcdoc::perk::SupportPerk1,
-    /// Perk 2.
-    perk2: ::Hipochallenge::mcdoc::perk::SupportPerk2,
-    /// Perk 3.
-    perk3: ::Hipochallenge::mcdoc::perk::SupportPerk3
-}
-
-/// Recon class struct.
-struct ReconClass {
-    ...Class,
-    /// Kit 1.
-    kit1: ::Hipochallenge::mcdoc::kit::ReconKit1,
-    /// Kit 2.
-    kit2: ::Hipochallenge::mcdoc::kit::ReconKit2,
-    /// Kit3.
-    kit3: ::Hipochallenge::mcdoc::kit::ReconKit3,
-    /// Perk 1.
-    perk1: ::Hipochallenge::mcdoc::perk::ReconPerk1,
-    /// Perk 2.
-    perk2: ::Hipochallenge::mcdoc::perk::ReconPerk2,
-    /// Perk 3.
-    perk3: ::Hipochallenge::mcdoc::perk::ReconPerk3
-}
-
-/// Assault class struct.
-struct AssaultClass {
-    ...Class,
-    /// Kit 1.
-    kit1: ::Hipochallenge::mcdoc::kit::AssaultKit1,
-    /// Kit 2.
-    kit2: ::Hipochallenge::mcdoc::kit::AssaultKit2,
-    /// Kit3.
-    kit3: ::Hipochallenge::mcdoc::kit::AssaultKit3,
-    /// Perk 1.
-    perk1: ::Hipochallenge::mcdoc::perk::AssaultPerk1,
-    /// Perk 2.
-    perk2: ::Hipochallenge::mcdoc::perk::AssaultPerk2,
-    /// Perk 3.
-    perk3: ::Hipochallenge::mcdoc::perk::AssaultPerk3
+    /// List of class kits.
+    kits: [::Hipochallenge::mcdoc::kit::Kit] @ 3,
+    /// List of class perks.
+    perks: [::Hipochallenge::mcdoc::perk::Perk] @ 3
 }
 
 /// Enum of all class names.
@@ -177,20 +79,4 @@ enum(int) ClassId {
     Recon = 5,
     /// Assault class ID.
     Assault = 6
-}
-
-/// All classes struct.
-struct AvailableClasses {
-    /// Tank class related constants.
-    tank: TankClass,
-    /// Marksman class related constants.
-    marksman: MarksmanClass,
-    /// Assassin class related constants.
-    assassin: AssassinClass,
-    /// Support class related constants.
-    support: SupportClass,
-    /// Recon class related constants.
-    recon: ReconClass,
-    /// Assault class related constants.
-    assault: AssaultClass
 }

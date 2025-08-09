@@ -161,8 +161,8 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 
 ## CLASSES
 
-# tank
-data modify storage minecraft:hipochallenge consts.classes.tank set value { \
+# tank -> classes[0]
+data modify storage minecraft:hipochallenge consts.classes append value { \
     internal_name:"tank", \
     id:1, \
     name:{translate:"hc.class.tank",fallback:"Tank"}, \
@@ -181,82 +181,109 @@ data modify storage minecraft:hipochallenge consts.classes.tank set value { \
         perk_color:"#cce7d9", \
     }, \
     equip_armor_command:"function hipochallenge:equipment/armor/equip_tank_armor", \
-    kit1:{ \
-        name:{translate:"hc.class.tank.kit1",fallback:"I Guardian"}, \
-        equip_command:"say tank kit 1 equip command called", \
-        horn:{ \
-            effects:[ \
-                {effect:"absorption",seconds:2,amplifier:1,hide_particles:"false"}, \
-            ], \
-            radius:7.0, \
-        }, \
-        castling:{cooldown_ticks:400}, \
-    }, \
-    kit2: { \
-        name:{translate:"hc.class.tank.kit2",fallback:"II Triton"}, \
-        equip_command:"say tank kit 2 equip command called", \
-        horn:{ \
-            effects:[ \
-                {effect:"slowness",seconds:2,amplifier:0,hide_particles:"false"}, \
-            ], \
-            radius:5.0, \
-            recovery_ticks:20, \
-        }, \
-        trident:{ \
-            cooldown_ticks:30, \
-        }, \
-    }, \
-    kit3:{ \
-        name:{translate:"hc.class.tank.kit3",fallback:"III Druid"}, \
-        equip_command:"say tank kit 3 equip command called", \
-        horn:{ \
-            modifiers:[ \
-                {id:"tank_k3_horn_armor",attribute:"armor",value:-6,operation:"add_value"}, \
-            ], \
-            radius:8.0, \
-        }, \
-        spirit:{ \
-            selection:{forward_distance:5.0,sphere_radius:5.0}, \
-            buff: { \
-                modifiers:[ \
-                    {id:"tank_k3_spirit_buff_armor",attribute:"armor",value:6,operation:"add_value"}, \
-                ], \
-                radius:6, \
-            }, \
-            owner_debuff:{ \
-                modifiers:[ \
-                    {id:"tank_k3_spirit_debuff_armor",attribute:"armor",value:-6,operation:"add_value"}, \
-                ], \
+    kits: [ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.tank.kit1",fallback:"I Guardian"}, \
+            equip_command:"say tank kit 1 equip command called", \
+            data_type:"tank_k1_data", \
+            tank_k1_data:{ \
+                horn:{ \
+                    effects:[ \
+                        {effect:"absorption",seconds:2,amplifier:1,hide_particles:"false"}, \
+                    ], \
+                    radius:7.0, \
+                }, \
+                castling:{cooldown_ticks:400}, \
             }, \
         }, \
-        bubble_shield:{ \
-            draw_command:"particle dust_color_transition{from_color:[0.000f,0.800f,1.000f],scale:2,to_color:[0.161f,0.255f,0.271f]} ~ ~ ~ 0 0 0 0 1 force", \
-            radius:4.0, \
-            high_speed_arrow_detection_radius:10.0, \
-            lifetime_ticks:240, \
-            lifetime_ticks_added_on_impact:60, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.tank.kit2",fallback:"II Triton"}, \
+            equip_command:"say tank kit 2 equip command called", \
+            data_type:"tank_k2_data", \
+            tank_k2_data:{ \
+                horn:{ \
+                    effects:[ \
+                        {effect:"slowness",seconds:2,amplifier:0,hide_particles:"false"}, \
+                    ], \
+                    radius:5.0, \
+                    recovery_ticks:20, \
+                }, \
+                trident:{ \
+                    cooldown_ticks:30, \
+                }, \
+            }, \
         }, \
-    }, \
-    perk1:{ \
-        name:{translate:"hc.class.tank.perk1",fallback:"I Nutrition"}, \
-        equip_command:"say tank perk 1 equip command called", \
-        food_item: {initial_cooldown_ticks:1200}, \
-    }, \
-    perk2:{ \
-        name:{translate:"hc.class.tank.perk2",fallback:"II Profound scars"}, \
-        equip_command:"say tank perk 2 equip command called", \
-        attack_effects:[ \
-            {effect:"slowness",seconds:1,amplifier:0,hide_particles:"false"} \
-        ] \
-    }, \
-    perk3:{ \
-        name:{translate:"hc.class.tank.perk3",fallback:"III Inspiration"}, \
-        equip_command:"say tank perk 3 equip command called", \
-    }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.tank.kit3",fallback:"III Druid"}, \
+            equip_command:"say tank kit 3 equip command called", \
+            data_type:"tank_k3_data", \
+            tank_k3_data:{ \
+                horn:{ \
+                    modifiers:[ \
+                        {id:"tank_k3_horn_armor",attribute:"armor",value:-6,operation:"add_value"}, \
+                    ], \
+                    radius:8.0, \
+                }, \
+                spirit:{ \
+                    selection:{forward_distance:5.0,sphere_radius:5.0}, \
+                    buff: { \
+                        modifiers:[ \
+                            {id:"tank_k3_spirit_buff_armor",attribute:"armor",value:6,operation:"add_value"}, \
+                        ], \
+                        radius:6, \
+                    }, \
+                    owner_debuff:{ \
+                        modifiers:[ \
+                            {id:"tank_k3_spirit_debuff_armor",attribute:"armor",value:-6,operation:"add_value"}, \
+                        ], \
+                    }, \
+                }, \
+                bubble_shield:{ \
+                    draw_command:"particle dust_color_transition{from_color:[0.000f,0.800f,1.000f],scale:2,to_color:[0.161f,0.255f,0.271f]} ~ ~ ~ 0 0 0 0 1 force", \
+                    radius:4.0, \
+                    high_speed_arrow_detection_radius:10.0, \
+                    lifetime_ticks:240, \
+                    lifetime_ticks_added_on_impact:60, \
+                }, \
+            }, \
+        }, \
+    ], \
+    perks:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.tank.kit1",fallback:"I Guardian"}, \
+            equip_command:"say tank perk 1 equip command called", \
+            data_type:"tank_p1_data", \
+            tank_p1_data:{ \
+                food_item:{initial_cooldown_ticks:1200}, \
+            }, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.tank.perk2",fallback:"II Profound scars"}, \
+            equip_command:"say tank perk 2 equip command called", \
+            data_type:"tank_p2_data", \
+            tank_p2_data: { \
+                attack_effects: [ \
+                    {effect:"slowness",seconds:1,amplifier:0,hide_particles:"false"}, \
+                ], \
+            }, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.tank.perk3",fallback:"III Inspiration"}, \
+            equip_command:"say tank perk 3 equip command called", \
+            data_type:"tank_p3_data", \
+            tank_p3_data: {}, \
+        }, \
+    ], \
 }
 
-# marksman
-data modify storage minecraft:hipochallenge consts.classes.marksman set value { \
+# marksman -> classes[1]
+data modify storage minecraft:hipochallenge consts.classes append value { \
     internal_name:"marksman", \
     id:2, \
     name:{translate:"hc.class.marksman",fallback:"Marksman"}, \
@@ -275,60 +302,88 @@ data modify storage minecraft:hipochallenge consts.classes.marksman set value { 
         perk_color:"#f2e3c9", \
     }, \
     equip_armor_command:"function hipochallenge:equipment/armor/equip_marksman_armor", \
-    kit1:{ \
-        name:{translate:"hc.class.marksman.kit1",fallback:"I Archer"}, \
-        equip_command:"say marksman kit 1 equip command called", \
-        projectiles:{ \
-            max_amount:6, \
-            new_first_cooldown_ticks:60, \
-            new_rest_cooldown_ticks:20, \
+    kits:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.marksman.kit1",fallback:"I Archer"}, \
+            equip_command:"say marksman kit 1 equip command called", \
+            data_type:"marksman_k1_data", \
+            marksman_k1_data:{ \
+                projectiles:{ \
+                    max_amount:6, \
+                    new_first_cooldown_ticks:60, \
+                    new_rest_cooldown_ticks:20, \
+                }, \
+            }, \
         }, \
-    }, \
-    kit2:{ \
-        name:{translate:"hc.class.marksman.kit2",fallback:"II Sniper"}, \
-        equip_command:"say marksman kit 2 equip command called", \
-        projectiles:{ \
-            max_amount:5, \
-            new_first_cooldown_ticks:80, \
-            new_rest_cooldown_ticks:30, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.marksman.kit2",fallback:"II Sniper"}, \
+            equip_command:"say marksman kit 2 equip command called", \
+            data_type:"marksman_k2_data", \
+            marksman_k2_data:{ \
+                projectiles:{ \
+                    max_amount:5, \
+                    new_first_cooldown_ticks:80, \
+                    new_rest_cooldown_ticks:30, \
+                }, \
+            }, \
         }, \
-    }, \
-    kit3:{ \
-        name:{translate:"hc.class.marksman.kit3",fallback:"III Gunslinger"}, \
-        equip_command:"say marksman kit 3 equip command called", \
-        projectiles:{ \
-            max_amount:6, \
-            new_first_cooldown_ticks:80, \
-            new_rest_cooldown_ticks:40, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.marksman.kit3",fallback:"III Gunslinger"}, \
+            equip_command:"say marksman kit 3 equip command called", \
+            data_type:"marksman_k3_data", \
+            marksman_k3_data:{ \
+                projectiles:{ \
+                    max_amount:6, \
+                    new_first_cooldown_ticks:80, \
+                    new_rest_cooldown_ticks:40, \
+                }, \
+                revolver:{ \
+                    max_loaded_projectile_amount:6, \
+                    recoil_pitch_rotation:-20, \
+                    per_shot_cooldown_ticks:10, \
+                }, \
+            }, \
         }, \
-        revolver:{ \
-            max_loaded_projectile_amount:6, \
-            recoil_pitch_rotation:-20, \
-            per_shot_cooldown_ticks:10, \
+    ], \
+    perks:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.marksman.perk1",fallback:"I Bullseye"}, \
+            equip_command:"say marksman perk 1 equip command called", \
+            data_type:"marksman_p1_data", \
+            marksman_p1_data: { \
+                suppression_or_on_air_magic_damage:2, \
+            }, \
         }, \
-    }, \
-    perk1:{ \
-        name:{translate:"hc.class.marksman.perk1",fallback:"I Bullseye"}, \
-        equip_command:"say marksman perk 1 equip command called", \
-        suppression_or_on_air_magic_damage:2, \
-    }, \
-    perk2:{ \
-        name:{translate:"hc.class.marksman.perk2",fallback:"II Lifesaver"}, \
-        equip_command:"say marksman perk 2 equip command called", \
-        max_health_for_effects:8, \
-        effects:[ \
-            {effect:"absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
-        ], \
-    }, \
-    perk3:{ \
-        name:{translate:"hc.class.marksman.perk3",fallback:"III Big pockets"}, \
-        equip_command:"say marksman perk 3 equip command called", \
-        added_projectiles:3, \
-    }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.marksman.perk2",fallback:"II Lifesaver"}, \
+            equip_command:"say marksman perk 2 equip command called", \
+            data_type:"marksman_p2_data", \
+            marksman_p2_data:{ \
+                max_health_for_effects:8, \
+                effects:[ \
+                    {effect:"absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
+                ], \
+            }, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.marksman.perk3",fallback:"III Big pockets"}, \
+            equip_command:"say marksman perk 3 equip command called", \
+            data_type:"marksman_p3_data", \
+            marksman_p3_data:{ \
+                added_projectiles:3, \
+            }, \
+        }, \
+    ], \
 }
 
-# assassin
-data modify storage minecraft:hipochallenge consts.classes.assassin set value { \
+# assassin -> classes[2]
+data modify storage minecraft:hipochallenge consts.classes append value { \
     internal_name:"assassin", \
     id:3, \
     name:{translate:"hc.class.assassin",fallback:"Assassin"}, \
@@ -347,45 +402,68 @@ data modify storage minecraft:hipochallenge consts.classes.assassin set value { 
         perk_color:"#ccdff4", \
     }, \
     equip_armor_command:"function hipochallenge:equipment/armor/equip_assassin_armor", \
-    kit1:{ \
-        name:{translate:"hc.class.assassin.kit1",fallback:"I Duelist"}, \
-        equip_command:"say assassin kit 1 equip command called", \
-        parry:{ \
-            on_owner_when_success:{ \
-                modifiers: [], \
-            }, \
-            on_owner_when_fail:{ \
-                modifiers: [ \
-                    {id:"assassin_k1_owner_failed_parry_entity_interaction_range",attribute:"entity_interaction_range",value:-3,operation:"add_value"}, \
-                    {id:"assassin_k1_owner_failed_parry_attack_speed",attribute:"attack_speed",value:-1.1,operation:"add_value"}, \
-                ], \
-            }, \
-            on_enemy_when_parried:{ \
-                modifiers: [], \
-                effects: [], \
+    kits:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.assassin.kit1",fallback:"I Duelist"}, \
+            equip_command:"say assassin kit 1 equip command called", \
+            data_type:"assassin_k1_data", \
+            assassin_k1_data:{ \
+                parry:{ \
+                    on_owner_when_success:{ \
+                        modifiers: [], \
+                    }, \
+                    on_owner_when_fail:{ \
+                        modifiers: [ \
+                            {id:"assassin_k1_owner_failed_parry_entity_interaction_range",attribute:"entity_interaction_range",value:-3,operation:"add_value"}, \
+                            {id:"assassin_k1_owner_failed_parry_attack_speed",attribute:"attack_speed",value:-1.1,operation:"add_value"}, \
+                        ], \
+                    }, \
+                    on_enemy_when_parried:{ \
+                        modifiers: [], \
+                        effects: [], \
+                    }, \
+                }, \
             }, \
         }, \
-    }, \
-    kit2:{ \
-        name:{translate:"hc.class.assassin.kit2",fallback:"II Phantom"}, \
-        equip_command:"say assassin kit 2 equip command called", \
-    }, \
-    kit3:{ \
-        name:{translate:"hc.class.assassin.kit3",fallback:"III Mercenary"}, \
-        equip_command:"say assassin kit 3 equip command called", \
-    }, \
-    perk1:{ \
-        name:{translate:"hc.class.assassin.perk1",fallback:"I Contract"}, \
-        equip_command:"say assassin perk 1 equip command called", \
-    }, \
-    perk2:{ \
-        name:{translate:"hc.class.assassin.perk2",fallback:"II Harvesting"}, \
-        equip_command:"say assassin perk 2 equip command called", \
-    }, \
-    perk3:{ \
-        name:{translate:"hc.class.assassin.perk3",fallback:"III Acidity"}, \
-        equip_command:"say assassin perk 3 equip command called", \
-    }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.assassin.kit2",fallback:"II Phantom"}, \
+            equip_command:"say assassin kit 2 equip command called", \
+            data_type:"assassin_k2_data", \
+            assassin_k2_data:{}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.assassin.kit3",fallback:"III Mercenary"}, \
+            equip_command:"say assassin kit 3 equip command called", \
+            data_type:"assassin_k3_data", \
+            assassin_k3_data:{}, \
+        }, \
+    ], \
+    perks:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.assassin.perk1",fallback:"I Contract"}, \
+            equip_command:"say assassin perk 1 equip command called", \
+            data_type:"assassin_p1_data", \
+            assassin_p1_data:{}, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.assassin.perk2",fallback:"II Harvesting"}, \
+            equip_command:"say assassin perk 2 equip command called", \
+            data_type:"assassin_p2_data", \
+            assassin_p2_data:{}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.assassin.perk3",fallback:"III Acidity"}, \
+            equip_command:"say assassin perk 3 equip command called", \
+            data_type:"assassin_p3_data", \
+            assassin_p3_data:{}, \
+        }, \
+    ], \
 }
 #data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.summon_distance set value 0.5
 #data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.global_y_offset set value -0.9
@@ -393,8 +471,8 @@ data modify storage minecraft:hipochallenge consts.classes.assassin set value { 
 #data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.width set value 0.54
 #data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.lifetime_ticks set value 10
 
-# support
-data modify storage minecraft:hipochallenge consts.classes.support set value { \
+# support -> classes[3]
+data modify storage minecraft:hipochallenge consts.classes append value { \
     internal_name:"support", \
     id:4, \
     name:{translate:"hc.class.support",fallback:"Support"}, \
@@ -413,34 +491,56 @@ data modify storage minecraft:hipochallenge consts.classes.support set value { \
         perk_color:"#f7decb", \
     }, \
     equip_armor_command:"function hipochallenge:equipment/armor/equip_support_armor", \
-    kit1:{ \
-        name:{translate:"hc.class.support.kit1",fallback:"I Trapper"}, \
-        equip_command:"say support kit 1 equip command called", \
-    }, \
-    kit2:{ \
-        name:{translate:"hc.class.assassin.kit2",fallback:"II Doctor"}, \
-        equip_command:"say support kit 2 equip command called", \
-    }, \
-    kit3:{ \
-        name:{translate:"hc.class.assassin.kit3",fallback:"III Shaman"}, \
-        equip_command:"say support kit 3 equip command called", \
-    }, \
-    perk1:{ \
-        name:{translate:"hc.class.assassin.perk1",fallback:"I Overclock"}, \
-        equip_command:"say support perk 1 equip command called", \
-    }, \
-    perk2:{ \
-        name:{translate:"hc.class.assassin.perk2",fallback:"II Personal space"}, \
-        equip_command:"say support perk 2 equip command called", \
-    }, \
-    perk3:{ \
-        name:{translate:"hc.class.assassin.perk3",fallback:"III Supercharge"}, \
-        equip_command:"say support perk 3 equip command called", \
-    }, \
+    kits:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.support.kit1",fallback:"I Trapper"}, \
+            equip_command:"say support kit 1 equip command called", \
+            data_type:"support_k1_data", \
+            support_k1_data:{}, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.support.kit2",fallback:"II Doctor"}, \
+            equip_command:"say support kit 2 equip command called", \
+            data_type:"support_k2_data", \
+            support_k2_data:{}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.support.kit3",fallback:"II Doctor"}, \
+            equip_command:"say support kit 3 equip command called", \
+            data_type:"support_k3_data", \
+            support_k3_data:{}, \
+        }, \
+    ], \
+    perks:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.support.perk1",fallback:"I Overclock"}, \
+            equip_command:"say support perk 1 equip command called", \
+            data_type:"support_p1_data", \
+            support_p1_data: {}, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.support.perk2",fallback:"II Personal space"}, \
+            equip_command:"say support perk 2 equip command called", \
+            data_type:"support_p2_data", \
+            support_p2_data: {}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.support.perk3",fallback:"III Supercharge"}, \
+            equip_command:"say support perk 3 equip command called", \
+            data_type:"support_p3_data", \
+            support_p3_data: {}, \
+        }, \
+    ], \
 }
 
-# recon
-data modify storage minecraft:hipochallenge consts.classes.recon set value { \
+# recon -> classes[4]
+data modify storage minecraft:hipochallenge consts.classes append value { \
     internal_name:"recon", \
     id:5, \
     name:{translate:"hc.class.recon",fallback:"Recon"}, \
@@ -459,30 +559,52 @@ data modify storage minecraft:hipochallenge consts.classes.recon set value { \
         perk_color:"#e3d8f0", \
     }, \
     equip_armor_command:"function hipochallenge:equipment/armor/equip_recon_armor", \
-    kit1:{ \
-        name:{translate:"hc.class.recon.kit1",fallback:"I Spec. ops"}, \
-        equip_command:"say recon kit 1 equip command called", \
-    }, \
-    kit2:{ \
-        name:{translate:"hc.class.recon.kit2",fallback:"II Tracker"}, \
-        equip_command:"say recon kit 2 equip command called", \
-    }, \
-    kit3:{ \
-        name:{translate:"hc.class.recon.kit3",fallback:"III Anomaly"}, \
-        equip_command:"say recon kit 3 equip command called", \
-    }, \
-    perk1:{ \
-        name:{translate:"hc.class.recon.perk1",fallback:"I Inhibitor"}, \
-        equip_command:"say recon perk 1 equip command called", \
-    }, \
-    perk2:{ \
-        name:{translate:"hc.class.recon.perk2",fallback:"II Assimilation"}, \
-        equip_command:"say recon perk 2 equip command called", \
-    }, \
-    perk3:{ \
-        name:{translate:"hc.class.recon.perk3",fallback:"III Animal instinct"}, \
-        equip_command:"say recon perk 3 equip command called", \
-    }, \
+    kits:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.recon.kit1",fallback:"I Spec. ops"}, \
+            equip_command:"say recon kit 1 equip command called", \
+            data_type:"recon_k1_data", \
+            recon_k1_data: {}, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.recon.kit2",fallback:"II Tracker"}, \
+            equip_command:"say recon kit 2 equip command called", \
+            data_type:"recon_k2_data", \
+            recon_k2_data: {}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.recon.kit3",fallback:"III Anomaly"}, \
+            equip_command:"say recon kit 3 equip command called", \
+            data_type:"recon_k3_data", \
+            recon_k3_data: {}, \
+        }, \
+    ], \
+    perks:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.recon.perk1",fallback:"I Inhibitor"}, \
+            equip_command:"say recon perk 1 equip command called", \
+            data_type:"recon_p1_data", \
+            recon_p1_data: {}, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.recon.perk2",fallback:"II Assimilation"}, \
+            equip_command:"say recon perk 2 equip command called", \
+            data_type:"recon_p2_data", \
+            recon_p2_data: {}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.recon.perk3",fallback:"III Animal instinct"}, \
+            equip_command:"say recon perk 3 equip command called", \
+            data_type:"recon_p3_data", \
+            recon_p3_data: {}, \
+        }, \
+    ], \
 }
 
 #data modify storage minecraft:hipochallenge consts.classes.recon.kit2.max_flare_arrow_amount set value 1
@@ -494,8 +616,8 @@ data modify storage minecraft:hipochallenge consts.classes.recon set value { \
 #data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_range set value 6
 #data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_effects set value [{id:"glowing",duration_seconds:5,amplifier:0,hide_particles:false},{id:"blindness",duration_seconds:2,amplifier:0,hide_particles:false}]
 
-# assault
-data modify storage minecraft:hipochallenge consts.classes.assault set value { \
+# assault -> classes[5]
+data modify storage minecraft:hipochallenge consts.classes append value { \
     internal_name:"assault", \
     id:6, \
     name:{translate:"hc.class.assault",fallback:"Assault"}, \
@@ -514,30 +636,52 @@ data modify storage minecraft:hipochallenge consts.classes.assault set value { \
         perk_color:"#dc928e", \
     }, \
     equip_armor_command:"function hipochallenge:equipment/armor/equip_assault_armor", \
-    kit1:{ \
-        name:{translate:"hc.class.assault.kit1",fallback:"I Explosives expert"}, \
-        equip_command:"say assault kit 1 equip command called", \
-    }, \
-    kit2:{ \
-        name:{translate:"hc.class.assault.kit2",fallback:"II Harpooner"}, \
-        equip_command:"say assault kit 2 equip command called", \
-    }, \
-    kit3:{ \
-        name:{translate:"hc.class.assault.kit3",fallback:"III Commander"}, \
-        equip_command:"say assault kit 3 equip command called", \
-    }, \
-    perk1:{ \
-        name:{translate:"hc.class.assault.perk1",fallback:"I Engineering"}, \
-        equip_command:"say assault perk 1 equip command called", \
-    }, \
-    perk2:{ \
-        name:{translate:"hc.class.assault.perk2",fallback:"II Adaptable shell"}, \
-        equip_command:"say assault perk 2 equip command called", \
-    }, \
-    perk3:{ \
-        name:{translate:"hc.class.assault.perk3",fallback:"III Chase"}, \
-        equip_command:"say assault perk 3 equip command called", \
-    }, \
+    kits:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.assault.kit1",fallback:"I Explosives expert"}, \
+            equip_command:"say assault kit 1 equip command called", \
+            data_type:"assault_k1_data", \
+            assault_k1_data:{}, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.assault.kit2",fallback:"II Harpooner"}, \
+            equip_command:"say assault kit 2 equip command called", \
+            data_type:"assault_k2_data", \
+            assault_k2_data:{}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.assault.kit3",fallback:"III Commander"}, \
+            equip_command:"say assault kit 3 equip command called", \
+            data_type:"assault_k3_data", \
+            assault_k3_data:{}, \
+        }, \
+    ], \
+    perks:[ \
+        { \
+            id:1, \
+            name:{translate:"hc.class.assault.perk1",fallback:"I Engineering"}, \
+            equip_command:"say assault perk 1 equip command called", \
+            data_type:"assault_p1_data", \
+            assault_p1_data: {}, \
+        }, \
+        { \
+            id:2, \
+            name:{translate:"hc.class.assault.perk2",fallback:"II Adaptable shell"}, \
+            equip_command:"say assault perk 2 equip command called", \
+            data_type:"assault_p2_data", \
+            assault_p2_data: {}, \
+        }, \
+        { \
+            id:3, \
+            name:{translate:"hc.class.assault.perk3",fallback:"III Chase"}, \
+            equip_command:"say assault perk 3 equip command called", \
+            data_type:"assault_p3_data", \
+            assault_p3_data: {}, \
+        }, \
+    ], \
 }
 
 ## LEVELS

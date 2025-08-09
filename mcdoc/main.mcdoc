@@ -1,6 +1,6 @@
 use ::Hipochallenge::mcdoc::team::TeamPreset
 use ::Hipochallenge::mcdoc::team::TeamContext
-use ::Hipochallenge::mcdoc::class::AvailableClasses
+use ::Hipochallenge::mcdoc::class::Class
 use ::Hipochallenge::mcdoc::game::GameMode
 use ::Hipochallenge::mcdoc::game::AvailableGameStates
 use ::Hipochallenge::mcdoc::game::GameContext
@@ -27,9 +27,9 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
         limits: struct Limits {
             no_gravity_projectiles_lifetime_ticks: int @ 0..
         },
-        /// Class related constants.
-        classes: AvailableClasses,
-        /// Team related constants.
+        /// List of available classes, with their constants.
+        classes: [Class],
+        /// List of available team presets.
         team_presets: [TeamPreset],
     },
     /// Global variables of the datapack.

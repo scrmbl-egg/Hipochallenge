@@ -1,89 +1,137 @@
 use ::java::util::text::TranslatedText
 use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
 
-struct Perk {
+/// Base struct for perks.
+struct PerkBase {
+    /// ID of the perk.
+    id: int @ 1..3,
     /// Translated text for the perk name.
     name: TranslatedText,
     /// Command for equipping the perk.
     equip_command: #[command(max_length=32500)] string,
 }
 
-struct TankPerk1 {
-    ...Perk,
-    food_item: struct {
-        initial_cooldown_ticks: (int @ 2.. | -1)
-    }
-}
-
-struct TankPerk2 {
-    ...Perk,
-    attack_effects: [Effect]
-}
-
-struct TankPerk3 {
-    ...Perk,
-}
-
-struct MarksmanPerk1 {
-    ...Perk,
-    suppression_or_on_air_magic_damage: int @ 0..
-}
-
-struct MarksmanPerk2 {
-    ...Perk,
-    max_health_for_effects: int @ 1..20,
-    effects: [Effect]
-}
-
-struct MarksmanPerk3 {
-    ...Perk,
-    added_projectiles: int @ 1..
-}
-
-struct AssassinPerk1 {
-    ...Perk,
-}
-
-struct AssassinPerk2 {
-    ...Perk,
-}
-
-struct AssassinPerk3 {
-    ...Perk,
-}
-
-struct SupportPerk1 {
-    ...Perk,
-}
-
-struct SupportPerk2 {
-    ...Perk,
-}
-
-struct SupportPerk3 {
-    ...Perk,
-}
-
-struct ReconPerk1 {
-    ...Perk,
-}
-
-struct ReconPerk2 {
-    ...Perk,
-}
-
-struct ReconPerk3 {
-    ...Perk,
-}
-
-struct AssaultPerk1 {
-    ...Perk,
-}
-
-struct AssaultPerk2 {
-    ...Perk,
-}
-
-struct AssaultPerk3 {
-    ...Perk,
-}
+/// Union type that encapsulates all perk types.
+type Perk = (
+    struct TankPerk1 {
+        ...PerkBase,
+        id: 1,
+        data_type?: "tank_p1_data",
+        tank_p1_data: struct {
+            food_item: struct {
+                initial_cooldown_ticks: (int @ 2.. | -1)
+            }
+        }
+    } |
+    struct TankPerk2 {
+        ...PerkBase,
+        id: 2,
+        data_type?: "tank_p2_data",
+        tank_p2_data: struct {
+            attack_effects: [Effect]
+        }
+    } |
+    struct TankPerk3 {
+        ...PerkBase,
+        id: 3,
+        data_type?: "tank_p3_data",
+        tank_p3_data: struct {}
+    } |
+    struct MarksmanPerk1 {
+        ...PerkBase,
+        id: 1,
+        data_type?: "marksman_p1_data",
+        marksman_p1_data: struct {
+            suppression_or_on_air_magic_damage: int @ 0..
+        }
+    } |
+    struct MarksmanPerk2 {
+        ...PerkBase,
+        id: 2,
+        data_type?: "marksman_p2_data",
+        marksman_p2_data: struct {
+            max_health_for_effects: int @ 1..20,
+            effects: [Effect]
+        }
+    } |
+    struct MarksmanPerk3 {
+        ...PerkBase,
+        id: 3,
+        data_type?: "marksman_p3_data",
+        marksman_p3_data: struct {
+            added_projectiles: int @ 1..
+        }
+    } |
+    struct AssassinPerk1 {
+        ...PerkBase,
+        id: 1,
+        data_type?: "assassin_p1_data",
+        assassin_p1_data: struct {}
+    } |
+    struct AssassinPerk2 {
+        ...PerkBase,
+        id: 2,
+        data_type?: "assassin_p2_data",
+        assassin_p2_data: struct {}
+    } |
+    struct AssassinPerk3 {
+        ...PerkBase,
+        id: 3,
+        data_type?: "assassin_p3_data",
+        assassin_p3_data: struct {}
+    } |
+    struct SupportPerk1 {
+        ...PerkBase,
+        id: 1,
+        data_type?: "support_p1_data",
+        support_p1_data: struct {}
+    } |
+    struct SupportPerk2 {
+        ...PerkBase,
+        id: 2,
+        data_type?: "support_p2_data",
+        support_p2_data: struct {}
+    } |
+    struct SupportPerk3 {
+        ...PerkBase,
+        id: 3,
+        data_type?: "support_p3_data",
+        support_p3_data: struct {}
+    } |
+    struct ReconPerk1 {
+        ...PerkBase,
+        id: 1,
+        data_type?: "recon_p1_data",
+        recon_p1_data: struct {}
+    } |
+    struct ReconPerk2 {
+        ...PerkBase,
+        id: 2,
+        data_type?: "recon_p2_data",
+        recon_p2_data: struct {}
+    } |
+    struct ReconPerk3 {
+        ...PerkBase,
+        id: 3,
+        data_type?: "recon_p3_data",
+        recon_p3_data: struct {}
+    } |
+    struct AssaultPerk1 {
+        ...PerkBase,
+        id: 1,
+        data_type?: "assault_p1_data",
+        assault_p1_data: struct {}
+    } |
+    struct AssaultPerk2 {
+        ...PerkBase,
+        id: 2,
+        data_type?: "assault_p2_data",
+        assault_p2_data: struct {}
+    } |
+    struct AssaultPerk3 {
+        ...PerkBase,
+        id: 3,
+        data_type?: "assault_p3_data",
+        assault_p3_data: struct {}
+    } |
+)
