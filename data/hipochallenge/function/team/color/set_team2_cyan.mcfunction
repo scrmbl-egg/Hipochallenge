@@ -70,10 +70,10 @@ data modify storage minecraft:hipochallenge local_set_color.name.team \
     set value "team2"
 data modify storage minecraft:hipochallenge local_set_color.name.prefix_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.name_color
+    minecraft:hipochallenge vars.team_contexts.team2.preset.name_color
 data modify storage minecraft:hipochallenge local_set_color.name.team_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.text_color
+    minecraft:hipochallenge vars.team_contexts.team2.preset.text_color
 
 function core_hc:team/name/set \
     with storage minecraft:hipochallenge local_set_color.name
