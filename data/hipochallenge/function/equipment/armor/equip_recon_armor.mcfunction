@@ -29,7 +29,7 @@ execute if predicate hipochallenge:team/is_in_team1 \
     function core_hc:equipment/armor/apply_team1_color
 execute if predicate hipochallenge:team/is_in_team2 \
     run \
-    function core_hc:equipment/armor/apply_team1_color
+    function core_hc:equipment/armor/apply_team2_color
 
 # modify all possible armor items
 item modify entity @s armor.head hipochallenge:armor/generic
