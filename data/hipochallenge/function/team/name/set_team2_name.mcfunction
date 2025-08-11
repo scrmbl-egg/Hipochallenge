@@ -14,7 +14,7 @@ scoreboard objectives add local_set_team_name dummy
 # save input
 # TODO: add some player input validation
 $data modify storage minecraft:hipochallenge local_set_name.input_str \
-    set value '$(name)'
+    set value "$(name)"
 
 # get input length
 execute store result score $strlen local_set_team_name \
