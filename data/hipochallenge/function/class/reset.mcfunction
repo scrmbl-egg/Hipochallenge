@@ -1,8 +1,15 @@
+#>hipochallenge:class/reset
+#
+# Resets the player's class.
+#
+# @context player
+
 scoreboard players set @s class 0
 function hipochallenge:msg/debug/send_info { \
     text:[ \
+        "", \
         {selector:"@s"}, \
-        {text:" has reset their class."}, \
+        " has reset their class.", \
     ], \
 }
 
