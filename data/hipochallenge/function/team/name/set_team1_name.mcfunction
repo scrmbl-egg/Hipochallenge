@@ -12,7 +12,6 @@
 scoreboard objectives add local_set_team_name dummy
 
 # save input
-# TODO: add some player input validation
 $data modify storage hc:temp set_name.input_str \
     set value "$(name)"
 
