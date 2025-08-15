@@ -25,7 +25,7 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
             states: AvailableGameStates,
         },
         limits: struct Limits {
-            no_gravity_projectiles_lifetime_ticks: int @ 0..
+            no_gravity_projectiles_lifetime_ticks: int @ 2..
         },
         /// List of available classes, with their constants.
         classes: [Class],
