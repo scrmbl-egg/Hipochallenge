@@ -254,7 +254,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
     perks:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.tank.kit1",fallback:"I Guardian"}, \
+            name:{translate:"hc.class.tank.perk1",fallback:"I Nutrition"}, \
             equip_command:"say tank perk 1 equip command called", \
             data_type:"tank_p1_data", \
             tank_p1_data:{ \
