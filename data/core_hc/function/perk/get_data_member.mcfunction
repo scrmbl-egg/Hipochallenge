@@ -22,4 +22,4 @@ $data modify storage $(out_storage) $(out_nbt) \
     minecraft:hipochallenge \
     consts.\
     classes[{id:$(class_id)}].\
-    perks[{id:$(kit_id)}].$(member_name)
+    perks[{id:$(perk_id)}].$(member_name)
