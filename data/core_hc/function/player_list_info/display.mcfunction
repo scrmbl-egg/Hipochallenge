@@ -1,0 +1,53 @@
+#>core_hc:player_list_info/display
+#
+# Displays the player's updated list information.
+#
+# @input
+#   class_text: ::java::util::text::Text
+#       Text component for the class name.
+#   kit_text: ::java::util::text::Text
+#       Text component for the kit name.
+#   perk_text: ::java::util::text::Text
+#       Text component for the perk name.
+
+# hide kit and perk if player is not detected
+$execute unless predicate hipochallenge:mechanics/is_detected \
+    run \
+    scoreboard players display numberformat @s player_list_info fixed [ \
+        "", \
+        $(class_text), \
+        {text:" :: ",color:"gray"}, \
+        {text:"?",color:"gray"}, \
+        {text:" :: ",color:"gray"}, \
+        {text:"?",color:"gray"}, \
+        {text:" - ",color:"gray"}, \
+        {score:{name:"@s",objective:"player_kill_count"},color:"yellow"}, \
+        {text:" \ud83d\udde1",color:"green"}, \
+        {text:" :: ",color:"gray"}, \
+        {score:{name:"@s",objective:"death_count"},color:"yellow"}, \
+        {text:" \u2620",color:"red"}, \
+        {text:" :: ",color:"gray"}, \
+        {score:{name:"@s",objective:"points"},color:"yellow"}, \
+        {text:" \u2605 ",color:"gold"}, \
+    ]
+
+# show kit and perk if player is detected
+$execute if predicate hipochallenge:mechanics/is_detected \
+    run \
+    scoreboard players display numberformat @s player_list_info fixed [ \
+        "", \
+        $(class_text), \
+        {text:" :: ",color:"gray"}, \
+        $(kit_text), \
+        {text:" :: ",color:"gray"}, \
+        $(perk_text), \
+        {text:" - ",color:"gray"}, \
+        {score:{name:"@s",objective:"player_kill_count"},color:"yellow"}, \
+        {text:" \ud83d\udde1",color:"green"}, \
+        {text:" :: ",color:"gray"}, \
+        {score:{name:"@s",objective:"death_count"},color:"yellow"}, \
+        {text:" \u2620",color:"red"}, \
+        {text:" :: ",color:"gray"}, \
+        {score:{name:"@s",objective:"points"},color:"yellow"}, \
+        {text:" \u2605 ",color:"gold"}, \
+    ]
