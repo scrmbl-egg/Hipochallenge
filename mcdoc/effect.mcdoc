@@ -10,3 +10,11 @@ struct EffectCommandParameters {
     /// `true` if the particles of the effect are hidden.
     hide_particles: ("true" | "false")
 }
+
+/// Struct for effect information inside game abilities.
+struct AbilityEffects {
+    /// Amount of ticks the targets will be suppressed for.
+    suppression_ticks: int @ 0..,
+    /// List of effects the ability will give.
+    effects: [EffectCommandParameters],
+}

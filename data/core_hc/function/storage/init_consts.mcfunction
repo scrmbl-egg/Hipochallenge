@@ -189,9 +189,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             data_type:"tank_k1_data", \
             tank_k1_data:{ \
                 horn:{ \
-                    effects:[ \
-                        {effect:"absorption",seconds:2,amplifier:1,hide_particles:"false"}, \
-                    ], \
+                    effects_info:{ \
+                        suppression_ticks:0, \
+                        effects:[ \
+                            {effect:"minecraft:absorption",seconds:2,amplifier:1,hide_particles:"false"}, \
+                        ], \
+                    }, \
                     radius:7.0, \
                 }, \
                 castling:{cooldown_ticks:400}, \
@@ -204,9 +207,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             data_type:"tank_k2_data", \
             tank_k2_data:{ \
                 horn:{ \
-                    effects:[ \
-                        {effect:"slowness",seconds:2,amplifier:0,hide_particles:"false"}, \
-                    ], \
+                    effects_info:{ \
+                        suppression_ticks:0, \
+                        effects:[ \
+                            {effect:"minecraft:slowness",seconds:2,amplifier:0,hide_particles:"false"}, \
+                        ], \
+                    }, \
                     radius:5.0, \
                     recovery_ticks:20, \
                 }, \
@@ -421,7 +427,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
                     }, \
                     on_enemy_when_parried:{ \
                         modifiers: [], \
-                        effects: [], \
+                        effects_info: {suppression_ticks:0,effects:[]}, \
                     }, \
                 }, \
             }, \

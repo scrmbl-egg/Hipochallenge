@@ -1,5 +1,5 @@
 use ::java::util::text::TranslatedText
-use ::Hipochallenge::mcdoc::effect::EffectCommandParameters as Effect
+use ::Hipochallenge::mcdoc::effect::AbilityEffects
 use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters
     as AttributeModifier
 
@@ -26,8 +26,8 @@ type Kit = (
             horn: struct {
                 /// Radius of the effects.
                 radius: double @ 0..,
-                /// List of effects that will be given to allies.
-                effects: [Effect]
+                /// Effects that will be given to allies.
+                effects_info: AbilityEffects
             },
             /// Castling ability related data.
             castling: struct {
@@ -47,8 +47,8 @@ type Kit = (
             horn: struct {
                 /// Radius of the effects.
                 radius: double @ 0..,
-                /// List of effects that will be given to enemies.
-                effects: [Effect],
+                /// Effects that will be given to enemies.
+                effects_info: AbilityEffects,
                 /// Amount of ticks that define the time frame the owner can recover their ability if the enemies are out of range.
                 recovery_ticks: int @ 0..
             },
@@ -144,7 +144,7 @@ type Kit = (
                     modifiers: [AttributeModifier]
                 },
                 on_enemy_when_parried: struct {
-                    effects: [Effect],
+                    effects_info: AbilityEffects,
                     modifiers: [AttributeModifier]
                 }
             }
