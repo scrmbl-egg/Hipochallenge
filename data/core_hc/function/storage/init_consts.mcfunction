@@ -547,7 +547,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
     dust_color:[0.863f, 0.455f, 0.141f], \
     attributes:{ \
         max_health:20, \
-        armor:16, \
+        armor:12, \
         armor_toughness:4, \
         scale:0.81, \
         burning_time:1, \
