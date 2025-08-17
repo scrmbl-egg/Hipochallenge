@@ -5,7 +5,9 @@
 # TODO: put distinctive prefix in score to prevent collisions
 # IDEAS: "hc." "__hc_"
 
-function hipochallenge:msg/debug/send_info {text:"\"Initialising score objectives...\""}
+function hipochallenge:msg/debug/send_info { \
+    text:"\"Initialising score objectives...\"", \
+}
 
 # TODO: check if this score is necessary at all.
 # player unique id's
@@ -119,3 +121,6 @@ scoreboard players add @a death_count 0
 scoreboard players add @a points 0
 scoreboard players add @a is_dead 0
 scoreboard players add @a has_killed 0
+
+# init extension scores
+function #extension_hc:score/init

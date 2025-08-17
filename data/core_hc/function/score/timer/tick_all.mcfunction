@@ -72,3 +72,6 @@ execute as @a[scores={assault_kit2_harpoon_cd=1..}] run scoreboard players remov
 execute as @a[scores={assault_kit2_void_arrow_cd=1..}] run scoreboard players remove @s assault_kit2_void_arrow_cd 1
 execute as @a[scores={assault_kit3_assault_shield_cd=1..}] run scoreboard players remove @s assault_kit3_assault_shield_cd 1
 execute as @a[scores={assault_kit3_pushing_projectile_cd=1..}] run scoreboard players remove @s assault_kit3_pushing_projectile_cd 1
+
+# tick extension timers
+function #extension_hc:score/timer/tick
