@@ -264,7 +264,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             equip_command:"say tank perk 1 equip command called", \
             data_type:"tank_p1_data", \
             tank_p1_data:{ \
-                food_item:{initial_cooldown_ticks:1200}, \
+                food_item:{give_delay_ticks:1200}, \
             }, \
         }, \
         { \
@@ -273,9 +273,14 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             equip_command:"say tank perk 2 equip command called", \
             data_type:"tank_p2_data", \
             tank_p2_data: { \
-                attack_effects: [ \
-                    {effect:"slowness",seconds:1,amplifier:0,hide_particles:"false"}, \
-                ], \
+                attack:{ \
+                    effects_info:{ \
+                        suppression_ticks:0, \
+                        effects:[ \
+                            {effect:"minecraft:slowness",seconds:1,amplifier:0,hide_particles:"false"}, \
+                        ], \
+                    }, \
+                }, \
             }, \
         }, \
         { \
@@ -283,7 +288,14 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             name:{translate:"hc.class.tank.perk3",fallback:"III Inspiration"}, \
             equip_command:"say tank perk 3 equip command called", \
             data_type:"tank_p3_data", \
-            tank_p3_data: {}, \
+            tank_p3_data: { \
+                close_ally_buff:{ \
+                    radius:9, \
+                    attributes:[ \
+                        {id:"tank_p3_inspiration_armor",attribute:"minecraft:armor",value:10,operation:"add_value"}, \
+                    ], \
+                }, \
+            }, \
         }, \
     ], \
 }
@@ -370,10 +382,13 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             equip_command:"say marksman perk 2 equip command called", \
             data_type:"marksman_p2_data", \
             marksman_p2_data:{ \
-                max_health_for_effects:8, \
-                effects:[ \
-                    {effect:"absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
-                ], \
+                health_threshold:8, \
+                effects_info:{ \
+                    suppression_ticks:0, \
+                    effects:[ \
+                        {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
+                    ], \
+                }, \
             }, \
         }, \
         { \
@@ -453,21 +468,33 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             name:{translate:"hc.class.assassin.perk1",fallback:"I Contract"}, \
             equip_command:"say assassin perk 1 equip command called", \
             data_type:"assassin_p1_data", \
-            assassin_p1_data:{}, \
+            assassin_p1_data:{ \
+                contract_success_effects_info:{ \
+                    suppression_ticks:0, \
+                    effects:[ \
+                        {effect:"minecraft:strength",seconds:"infinite",amplifier:0,hide_particles:"false"}, \
+                        {effect:"minecraft:instant_health",seconds:1,amplifier:0,hide_particles:"false"}, \
+                    ], \
+                }, \
+            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.assassin.perk2",fallback:"II Harvesting"}, \
             equip_command:"say assassin perk 2 equip command called", \
             data_type:"assassin_p2_data", \
-            assassin_p2_data:{}, \
+            assassin_p2_data:{ \
+                enemy_true_health_threshold:3, \
+            }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.assassin.perk3",fallback:"III Acidity"}, \
             equip_command:"say assassin perk 3 equip command called", \
             data_type:"assassin_p3_data", \
-            assassin_p3_data:{}, \
+            assassin_p3_data:{ \
+                on_hit_by_owner_armor_toughness:0, \
+            }, \
         }, \
     ], \
 }
@@ -526,21 +553,37 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             name:{translate:"hc.class.support.perk1",fallback:"I Overclock"}, \
             equip_command:"say support perk 1 equip command called", \
             data_type:"support_p1_data", \
-            support_p1_data: {}, \
+            support_p1_data: { \
+                cooldown_multiplier:0.75, \
+            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.support.perk2",fallback:"II Personal space"}, \
             equip_command:"say support perk 2 equip command called", \
             data_type:"support_p2_data", \
-            support_p2_data: {}, \
+            support_p2_data: { \
+                on_hit_explosion:{ \
+                    radius:3, \
+                    delay_ticks:40, \
+                    effects_info:{ \
+                        suppression_ticks:0, \
+                        effects:[ \
+                            {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:"false"}, \
+                            {effect:"minecraft:jump_boost",seconds:2,amplifier:0,hide_particles:"true"}, \
+                        ], \
+                    }, \
+                }, \
+            }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.support.perk3",fallback:"III Supercharge"}, \
             equip_command:"say support perk 3 equip command called", \
             data_type:"support_p3_data", \
-            support_p3_data: {}, \
+            support_p3_data: { \
+                extra_area_ability_radius:2, \
+            }, \
         }, \
     ], \
 }
@@ -578,7 +621,23 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             name:{translate:"hc.class.recon.kit2",fallback:"II Tracker"}, \
             equip_command:"say recon kit 2 equip command called", \
             data_type:"recon_k2_data", \
-            recon_k2_data: {}, \
+            recon_k2_data: { \
+                flare_arrow:{\
+                    max_amount:1, \
+                    cooldown_ticks:120, \
+                    detection_aabb_size:[1.5, 1.5, 1.5], \
+                    explosion:{ \
+                        radius:6, \
+                        effects_info:{ \
+                            suppression_ticks:0, \
+                            effects:[ \
+                                {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:"false"}, \
+                                {effect:"minecraft:glowing",seconds:5,amplifier:0,hide_particles:"false"}, \
+                            ], \
+                        }, \
+                    }, \
+                }, \
+            }, \
         }, \
         { \
             id:3, \
@@ -594,21 +653,32 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             name:{translate:"hc.class.recon.perk1",fallback:"I Inhibitor"}, \
             equip_command:"say recon perk 1 equip command called", \
             data_type:"recon_p1_data", \
-            recon_p1_data: {}, \
+            recon_p1_data: { \
+                glowing_max_duration_ticks:5, \
+            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.recon.perk2",fallback:"II Assimilation"}, \
             equip_command:"say recon perk 2 equip command called", \
             data_type:"recon_p2_data", \
-            recon_p2_data: {}, \
+            recon_p2_data: { \
+                on_glowing_enemy_hit_effects_info:{ \
+                    suppression_ticks:0, \
+                    effects:[\
+                        {effect:"minecraft:haste",seconds:3,amplifier:2,hide_particles:"false"}, \
+                    ], \
+                }, \
+            }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.recon.perk3",fallback:"III Animal instinct"}, \
             equip_command:"say recon perk 3 equip command called", \
             data_type:"recon_p3_data", \
-            recon_p3_data: {}, \
+            recon_p3_data: { \
+                enemy_trace_lifetime_ticks:10, \
+            }, \
         }, \
     ], \
 }
@@ -671,21 +741,37 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             name:{translate:"hc.class.assault.perk1",fallback:"I Engineering"}, \
             equip_command:"say assault perk 1 equip command called", \
             data_type:"assault_p1_data", \
-            assault_p1_data: {}, \
+            assault_p1_data: { \
+                trap_disabling_explosion_radius:6, \
+            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.assault.perk2",fallback:"II Adaptable shell"}, \
             equip_command:"say assault perk 2 equip command called", \
             data_type:"assault_p2_data", \
-            assault_p2_data: {}, \
+            assault_p2_data: { \
+                on_enemy_crowd_controlled:{ \
+                    duration_ticks:40, \
+                    attributes:[ \
+                        {id:"assault_p2_crowd_control_armor",attribute:"minecraft:armor",value:20,operation:"add_value"}, \
+                    ], \
+                }, \
+            }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.assault.perk3",fallback:"III Chase"}, \
             equip_command:"say assault perk 3 equip command called", \
             data_type:"assault_p3_data", \
-            assault_p3_data: {}, \
+            assault_p3_data: { \
+                on_looking_at_enemy_effects_info:{ \
+                    suppression_ticks:0, \
+                    effects:[ \
+                        {effect:"minecraft:speed",seconds:1,amplifier:0,hide_particles:"true"}, \
+                    ], \
+                }, \
+            }, \
         }, \
     ], \
 }
