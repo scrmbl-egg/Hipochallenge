@@ -1,7 +1,12 @@
+#>hipochallenge:equipment/clear
+#
+# Clears all the player's equipment, attributes, and leftover entities.
+
 clear @s *
-function hipochallenge:attributes/reset_attributes
+function hipochallenge:attribute/reset_all
 
-# special cases
-
-# kill spirit
-    execute as @s run function hipochallenge:abilities/class/tank/kit3/spirit/kill_player_spirit
+# cleanup
+## NOTE:
+# the following function tag encapsulates all functions that dispose resources
+# or kill temporary entities owned by the player.
+function #core_hc:equipment/cleanup
