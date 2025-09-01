@@ -816,6 +816,20 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 
 # TODO: add callout objects and lists
 
-## Text components
+## EXTENSION CONSTANTS SETUP
 
-# TODO: delete or use text components
+## POST-SETUP CALCULATIONS
+# the constants that are calculated here are mainly used for predicates that
+# the perform checks of constant values.
+
+# class count
+execute store result storage minecraft:hipochallenge consts.class_count \
+    int 1 \
+    run \
+    data get storage minecraft:hipochallenge consts.classes
+
+# team preset count
+execute store result storage minecraft:hipochallenge consts.team_preset_count \
+    int 1 \
+    run \
+    data get storage minecraft:hipochallenge consts.team_presets
