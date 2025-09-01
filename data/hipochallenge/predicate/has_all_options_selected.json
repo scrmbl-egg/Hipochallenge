@@ -1,0 +1,14 @@
+[
+    {
+        "condition": "minecraft:reference",
+        "name": "hipochallenge:class/has_selected"
+    },
+    {
+        "condition": "minecraft:reference",
+        "name": "hipochallenge:kit/has_selected"
+    },
+    {
+        "condition": "minecraft:reference",
+        "name": "hipochallenge:perk/has_selected"
+    }
+]
