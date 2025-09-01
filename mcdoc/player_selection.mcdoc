@@ -1,0 +1,20 @@
+
+/// Struct for data related to selecting a player.
+struct PlayerSelectionInfo {
+    /// Selection mode.
+    target_mode: PlayerSelectionTargetMode,
+    /// Max distance the targets
+    max_distance: double @ 0..,
+    /// Radius of the sphere.
+    sphere_radius: double @ 0..,
+}
+
+/// Enum representing the modes available for
+enum(int) PlayerSelectionTargetMode {
+    /// Targets all players.
+    TargetAll = 0,
+    /// Targets only allies.
+    TargetAlliesOnly = 1,
+    /// Targets only enemies.
+    TargetEnemiesOnly = 2,
+}

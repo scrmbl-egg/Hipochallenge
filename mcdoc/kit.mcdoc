@@ -1,7 +1,7 @@
 use ::java::util::text::TranslatedText
 use ::Hipochallenge::mcdoc::effect::AbilityEffects
-use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters
-    as AttributeModifier
+use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters as AttributeModifier
+use ::Hipochallenge::mcdoc::player_selection::PlayerSelectionInfo
 
 /// Base struct for kits.
 struct KitBase {
@@ -11,6 +11,8 @@ struct KitBase {
     name: TranslatedText,
     /// Command for equipping the kit.
     equip_command: #[command(max_length=32500)] string,
+    /// Type of data this kit holds. This is used to identify the union variant of the kit data.
+    data_type: string,
 }
 
 /// Union type that encapsulates all kit types.
@@ -54,7 +56,7 @@ type Kit = (
             },
             /// Trident related data.
             trident: struct {
-                /// Cooldown
+                /// Cooldown after landing.
                 cooldown_ticks: int @ 0.. // TODO: cooldown should obtained from item's "consumable" data component
             }
         }
@@ -63,29 +65,44 @@ type Kit = (
         ...KitBase,
         id: 3,
         data_type: "tank_k3_data",
+        /// Tank's kit 3 variant data.
         tank_k3_data: struct {
+            /// Goat horn related data.
             horn: struct {
+                /// Radius of the attributes.
                 radius: double @ 0..,
+                /// Modifiers that will be applied to the enemies in the radius.
                 modifiers: [AttributeModifier],
             },
+            /// Spirit related data.
             spirit: struct {
-                selection: struct {
-                    forward_distance: double @ 0..,
-                    sphere_radius: double @ 0..
-                },
+                /// Player selection related data.
+                selection: PlayerSelectionInfo,
+                /// Buff related data.
                 buff: struct {
+                    /// Radius in which the spirit gives its buff.
                     radius: double @ 0..,
+                    /// Modifiers that are applied to the target.
                     modifiers: [AttributeModifier]
                 },
+                /// Data related to the de-buff that is given to the owner when targetting the spirit to other player.
                 owner_debuff: struct {
+                    /// Modifiers that are applied to the owner.
                     modifiers: [AttributeModifier]
                 }
             },
+            /// Bubble shield related data.
             bubble_shield: struct {
+                /// Command that is executed on a random part of the bubble's surface for drawing.
                 draw_command: #[command(max_length=32500)] string,
+                /// Radius of the bubble sphere.
                 radius: double @ 0..,
+                /// Radius for detecting high-speed arrows.
+                /// Used for guaranteeing that no fast arrows pass through the bubble.
                 high_speed_arrow_detection_radius: double @ 0..,
+                /// Duration in ticks of the bubble's lifetime.
                 lifetime_ticks: int @ 0..,
+                /// Amount of ticks added to the bubble's lifetime when it successfully blocks a projectile.
                 lifetime_ticks_added_on_impact: int @ 0..,
             }
         }
@@ -94,10 +111,14 @@ type Kit = (
         ...KitBase,
         id: 1,
         data_type: "marksman_k1_data",
+        /// Marksman's kit 1 variant data.
         marksman_k1_data: struct {
-            projectiles: struct {
+            arrows: struct {
+                /// Maximum amount of arrows the owner can have.
                 max_amount: int @ 1..,
+                /// Cooldown of the first arrow given after shooting the last one.
                 new_first_cooldown_ticks: int @ 0..,
+                /// Cooldown of the rest of arrows right after the first new arrow is given.
                 new_rest_cooldown_ticks: int @ 0..
             }
         }
@@ -106,10 +127,15 @@ type Kit = (
         ...KitBase,
         id: 2,
         data_type: "marksman_k2_data",
+        /// Marksman's kit 2 variant data.
         marksman_k2_data: struct {
-            projectiles: struct {
+            /// Arrow related data.
+            arrows: struct {
+                /// Maximum amount of arrows the owner can have.
                 max_amount: int @ 1..,
+                /// Cooldown of the first arrow given after shooting the last one.
                 new_first_cooldown_ticks: int @ 0..,
+                /// Cooldown of the rest of arrows right after the first new arrow is given.
                 new_rest_cooldown_ticks: int @ 0..
             }
         }
@@ -118,16 +144,25 @@ type Kit = (
         ...KitBase,
         id: 3,
         data_type: "marksman_k3_data",
+        /// Marksman's kit 3 variant data.
         marksman_k3_data: struct {
-            projectiles: struct {
+            /// Regular bullet related data.
+            bullets: struct {
+                /// Maximum amount of bullets the owner can have.
                 max_amount: int @ 1..,
+                /// Cooldown of the first bullet given after shooting the last one.
                 new_first_cooldown_ticks: int @ 0..,
+                /// Cooldown of the rest of bullets right after the first new bullet is given.
                 new_rest_cooldown_ticks: int @ 0..
             },
+            /// Revolver related data.
             revolver: struct {
-                max_loaded_projectile_amount: int @ 1..,
-                per_shot_cooldown_ticks: int @ 1..,
-                recoil_pitch_rotation: double @ -180..180
+                /// Maximum amount of bullets that can be loaded into the gun.
+                max_loaded_bullet_amount: int @ 1..,
+                /// Cooldown ticks the next shot is going to take.
+                per_shot_cooldown_ticks: int @ 1.., // TODO: this should probably be moved to a consumable data component
+                /// Pitch rotation when the revolver is shot.
+                recoil_pitch_rotation: double @ -90.0..90.0
             }
         }
     } |
@@ -135,16 +170,23 @@ type Kit = (
         ...KitBase,
         id: 1,
         data_type: "assassin_k1_data",
+        /// Assassin's kit 1 variant data.
         assassin_k1_data: struct {
+            /// Parry related information.
             parry: struct {
+                /// Modifiers applied to the owner when the parry fails.
                 on_owner_when_fail: struct {
                     modifiers: [AttributeModifier]
                 },
+                /// Modifiers applied to the owner when the parry succeeds.
                 on_owner_when_success: struct {
                     modifiers: [AttributeModifier]
                 },
+                /// Modifiers and effects applied to the enemy when they are parried.
                 on_enemy_when_parried: struct {
+                    /// Effects that are going to be applied.
                     effects_info: AbilityEffects,
+                    /// Modifiers that are going to be applied.
                     modifiers: [AttributeModifier]
                 }
             }
@@ -154,66 +196,94 @@ type Kit = (
         ...KitBase,
         id: 2,
         data_type: "assassin_k2_data",
+        /// Assassin's kit 2 variant data.
         assassin_k2_data: struct {}
     } |
     struct AssassinKit3 {
         ...KitBase,
         id: 3,
         data_type: "assassin_k3_data",
+        /// Assassin's kit 3 variant data.
         assassin_k3_data: struct {}
     } |
     struct SupportKit1 {
         ...KitBase,
         id: 1,
         data_type: "support_k1_data",
+        /// Support's kit 1 variant data.
         support_k1_data: struct {}
     } |
     struct SupportKit2 {
         ...KitBase,
         id: 2,
         data_type: "support_k2_data",
+        /// Support's kit 2 variant data.
         support_k2_data: struct {}
     } |
     struct SupportKit3 {
         ...KitBase,
         id: 3,
         data_type: "support_k3_data",
+        /// Support's kit 3 variant data.
         support_k3_data: struct {}
     } |
     struct ReconKit1 {
         ...KitBase,
         id: 1,
         data_type: "recon_k1_data",
+        /// Recon's kit 1 variant data.
         recon_k1_data: struct {}
     } |
     struct ReconKit2 {
         ...KitBase,
         id: 2,
         data_type: "recon_k2_data",
-        recon_k2_data: struct {}
+        /// Recon's kit 2 variant data.
+        recon_k2_data: struct {
+            /// Data for flare arrows.
+            flare_arrow: struct {
+                /// Maximum amount of flare arrows the player can hold at a time.
+                max_amount: int @ 1..,
+                /// Amount of ticks it will take to get another flare arrow.
+                cooldown_ticks: int @ 2..,
+                /// Size of the AABB's that detect enemy players.
+                detection_aabb_size: [double @ 0..] @ 3,
+                /// Explosion related data.
+                explosion: struct {
+                    /// Radius of the explosion.
+                    radius: double @ 0..,
+                    /// Effects that will be given to the detected enemies.
+                    effects_info: AbilityEffects
+                }
+            }
+        }
     } |
     struct ReconKit3 {
         ...KitBase,
         id: 3,
         data_type: "recon_k3_data",
+        /// Recon's kit 3 variant data.
         recon_k3_data: struct {}
     } |
     struct AssaultKit1 {
         ...KitBase,
         id: 1,
         data_type: "assault_k1_data",
+        /// Assault's kit 1 variant data.
         assault_k1_data: struct {}
     } |
     struct AssaultKit2 {
         ...KitBase,
         id: 2,
         data_type: "assault_k2_data",
+        /// Assault's kit 2 variant data.
         assault_k2_data: struct {}
     } |
     struct AssaultKit3 {
         ...KitBase,
         id: 3,
         data_type: "assault_k3_data",
+        /// Assault's kit 3 variant data.
         assault_k3_data: struct {}
     } |
 )

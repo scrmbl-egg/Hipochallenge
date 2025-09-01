@@ -29,8 +29,12 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
         },
         /// List of available classes, with their constants.
         classes: [Class],
+        /// Amount of classes.
+        class_count: int @ 0..,
         /// List of available team presets.
         team_presets: [TeamPreset],
+        /// Amount of team presets.
+        team_preset_count: int @ 0..,
     },
     /// Global variables of the datapack.
     vars: struct MainVars {

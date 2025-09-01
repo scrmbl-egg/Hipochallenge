@@ -41,8 +41,17 @@ struct Class {
     attributes: ClassAttributes,
     /// Player list class information.
     list_info: ClassListInfo,
-    /// Command executed for equipping the class's armor.
-    equip_armor_command: #[command(max_length=32500)] string,
+    /// Loot tables for the class's armor.
+    armor_loot_tables: struct ArmorLootTables {
+        /// Loot table for the player's head slot item.
+        head: #[id(registry="loot_table")] string,
+        /// Loot table for the player's chest slot item.
+        chest: #[id(registry="loot_table")] string,
+        /// Loot table for the player's legs slot item.
+        legs: #[id(registry="loot_table")] string,
+        /// Loot table for the player's feet slot item.
+        feet: #[id(registry="loot_table")] string,
+    },
     /// List of class kits.
     kits: [::Hipochallenge::mcdoc::kit::Kit] @ 3,
     /// List of class perks.
