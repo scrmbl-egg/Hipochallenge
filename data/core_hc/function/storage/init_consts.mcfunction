@@ -70,7 +70,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
     name_color:"#09d8f3", \
     text_color:"white", \
-    dust_color:[0.4f,0.4f,0.4f], \
+    dust_color:[0.9f,0.9f,0.9f], \
     armor_color:15329769, \
     trim_material:"minecraft:quartz", \
 }
@@ -104,7 +104,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"green", \
     id:3, \
     default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
-    name_color:"#39ff5a", \
+    name_color:"#2ece49", \
     text_color:"green", \
     dust_color:[0.0f,1.0f,0.0f], \
     armor_color:5162826, \
@@ -128,7 +128,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"purple", \
     id:5, \
     default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
-    name_color:"#ad06ad", \
+    name_color:"#df2fdf", \
     text_color:"light_purple", \
     dust_color:[1.0f,0.0f,1.0f], \
     armor_color:13061821, \
@@ -140,7 +140,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
     internal_name:"orange", \
     id:6, \
     default_name:{translate:"hc.teams.colors.orange",fallback:"ORANGE"}, \
-    name_color:"#f74e00", \
+    name_color:"#ff811a", \
     text_color:"gold", \
     dust_color:[1.0f,0.455f,0.141f], \
     armor_color:16739609, \
