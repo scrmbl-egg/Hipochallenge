@@ -16,7 +16,7 @@ execute unless predicate hipochallenge:team/is_in_match_team \
     run \
     return run \
     function core_hc:player_list_info/clear
-execute unless predicate hipochallenge:class/has_all_options_selected \
+execute unless predicate hipochallenge:has_all_options_selected \
     run \
     return run \
     function core_hc:player_list_info/clear

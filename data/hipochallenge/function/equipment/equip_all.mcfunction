@@ -1,6 +1,6 @@
 # guard clause
 execute as @s \
-    unless predicate hipochallenge:class/has_all_options_selected \
+    unless predicate hipochallenge:has_all_options_selected \
     run \
     return run \
     function hipochallenge:msg/private/send_error \
