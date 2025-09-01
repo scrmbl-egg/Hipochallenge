@@ -234,7 +234,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             tank_k3_data:{ \
                 horn:{ \
                     modifiers:[ \
-                        {id:"tank_k3_horn_armor",attribute:"armor",value:-6,operation:"add_value"}, \
+                        {id:"tank_k3_horn_armor",attribute:"minecraft:armor",value:-6,operation:"add_value"}, \
                     ], \
                     radius:8.0, \
                 }, \
@@ -242,13 +242,13 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
                     selection:{forward_distance:5.0,sphere_radius:5.0}, \
                     buff: { \
                         modifiers:[ \
-                            {id:"tank_k3_spirit_buff_armor",attribute:"armor",value:6,operation:"add_value"}, \
+                            {id:"tank_k3_spirit_buff_armor",attribute:"minecraft:armor",value:6,operation:"add_value"}, \
                         ], \
                         radius:6, \
                     }, \
                     owner_debuff:{ \
                         modifiers:[ \
-                            {id:"tank_k3_spirit_debuff_armor",attribute:"armor",value:-6,operation:"add_value"}, \
+                            {id:"tank_k3_spirit_debuff_armor",attribute:"minecraft:armor",value:-6,operation:"add_value"}, \
                         ], \
                     }, \
                 }, \
@@ -451,8 +451,8 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
                     }, \
                     on_owner_when_fail:{ \
                         modifiers: [ \
-                            {id:"assassin_k1_owner_failed_parry_entity_interaction_range",attribute:"entity_interaction_range",value:-3,operation:"add_value"}, \
-                            {id:"assassin_k1_owner_failed_parry_attack_speed",attribute:"attack_speed",value:-1.1,operation:"add_value"}, \
+                            {id:"assassin_k1_owner_failed_parry_entity_interaction_range",attribute:"minecraft:entity_interaction_range",value:-3,operation:"add_value"}, \
+                            {id:"assassin_k1_owner_failed_parry_attack_speed",attribute:"minecraft:attack_speed",value:-1.1,operation:"add_value"}, \
                         ], \
                     }, \
                     on_enemy_when_parried:{ \
