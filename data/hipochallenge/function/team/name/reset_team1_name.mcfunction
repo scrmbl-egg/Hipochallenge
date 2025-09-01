@@ -9,14 +9,18 @@ data remove storage minecraft:hipochallenge vars.team_contexts.team1.custom_name
 data modify storage hc:temp reset_name set value { \
     team:"team1", \
     text:{}, \
-    color:"", \
+    prefix_color:"", \
+    team_color:"", \
 }
 data modify storage hc:temp reset_name.text \
     set from storage \
     minecraft:hipochallenge vars.team_contexts.team1.preset.default_name
-data modify storage hc:temp reset_name.color \
+data modify storage hc:temp reset_name.prefix_color \
     set from storage \
     minecraft:hipochallenge vars.team_contexts.team1.preset.name_color
+data modify storage hc:temp reset_name.team_color \
+    set from storage \
+    minecraft:hipochallenge vars.team_contexts.team1.preset.text_color
 
 # set preset name as new team name
 function core_hc:team/name/set \
