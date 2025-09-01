@@ -1,0 +1,36 @@
+{
+    "function": "minecraft:set_components",
+    "components": {
+        "minecraft:attribute_modifiers": [
+            {
+                "type": "minecraft:armor",
+                "id": "hipochallenge:no_armor",
+                "amount": 0,
+                "operation": "add_value",
+                "slot": "armor"
+            },
+            {
+                "type": "minecraft:armor_toughness",
+                "id": "hipochallenge:no_armor_toughness",
+                "amount": 0,
+                "operation": "add_value",
+                "slot": "armor"
+            },
+            {
+                "type": "minecraft:knockback_resistance",
+                "id": "hipochallenge:no_knockback_resistance",
+                "amount": 0,
+                "operation": "add_value",
+                "slot": "armor"
+            }
+        ],
+        "minecraft:unbreakable": {},
+        "minecraft:enchantment_glint_override": false,
+        "minecraft:enchantments": {
+            "minecraft:binding_curse": 255
+        },
+        "minecraft:tooltip_display": {
+            "hide_tooltip": true
+        }
+    }
+}

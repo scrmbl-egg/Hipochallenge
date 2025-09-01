@@ -180,7 +180,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
         kit_color:"#a6d5bd", \
         perk_color:"#cce7d9", \
     }, \
-    equip_armor_command:"function hipochallenge:equipment/armor/equip_tank_armor", \
+    armor_loot_tables:{ \
+        head:"hipochallenge:class/tank/armor/head", \
+        chest:"hipochallenge:class/tank/armor/chest", \
+        legs:"hipochallenge:class/tank/armor/legs", \
+        feet:"hipochallenge:class/tank/armor/feet", \
+    }, \
     kits: [ \
         { \
             id:1, \
@@ -319,7 +324,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
         kit_color:"#e9cea0", \
         perk_color:"#f2e3c9", \
     }, \
-    equip_armor_command:"function hipochallenge:equipment/armor/equip_marksman_armor", \
+    armor_loot_tables:{ \
+        head:"hipochallenge:class/marksman/armor/head", \
+        chest:"hipochallenge:class/marksman/armor/chest", \
+        legs:"hipochallenge:class/marksman/armor/legs", \
+        feet:"hipochallenge:class/marksman/armor/feet", \
+    }, \
     kits:[ \
         { \
             id:1, \
@@ -422,7 +432,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
         kit_color:"#a6c8ec", \
         perk_color:"#ccdff4", \
     }, \
-    equip_armor_command:"function hipochallenge:equipment/armor/equip_assassin_armor", \
+    armor_loot_tables: { \
+        head:"hipochallenge:class/assassin/armor/head", \
+        chest:"hipochallenge:class/assassin/armor/chest", \
+        legs:"hipochallenge:class/assassin/armor/legs", \
+        feet:"hipochallenge:class/assassin/armor/feet", \
+    }, \
     kits:[ \
         { \
             id:1, \
@@ -523,7 +538,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
         kit_color:"#f0c5a3", \
         perk_color:"#f7decb", \
     }, \
-    equip_armor_command:"function hipochallenge:equipment/armor/equip_support_armor", \
+    armor_loot_tables:{ \
+        head:"hipochallenge:class/support/armor/head", \
+        chest:"hipochallenge:class/support/armor/chest", \
+        legs:"hipochallenge:class/support/armor/legs", \
+        feet:"hipochallenge:class/support/armor/feet", \
+    }, \
     kits:[ \
         { \
             id:1, \
@@ -607,7 +627,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
         kit_color:"#cebae5", \
         perk_color:"#e3d8f0", \
     }, \
-    equip_armor_command:"function hipochallenge:equipment/armor/equip_recon_armor", \
+    armor_loot_tables:{ \
+        head:"hipochallenge:class/recon/armor/head", \
+        chest:"hipochallenge:class/recon/armor/chest", \
+        legs:"hipochallenge:class/recon/armor/legs", \
+        feet:"hipochallenge:class/recon/armor/feet", \
+    }, \
     kits:[ \
         { \
             id:1, \
@@ -711,7 +736,12 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
         kit_color:"#dc928e", \
         perk_color:"#dc928e", \
     }, \
-    equip_armor_command:"function hipochallenge:equipment/armor/equip_assault_armor", \
+    armor_loot_tables:{ \
+        head:"hipochallenge:class/assault/armor/head", \
+        chest:"hipochallenge:class/assault/armor/chest", \
+        legs:"hipochallenge:class/assault/armor/legs", \
+        feet:"hipochallenge:class/assault/armor/feet", \
+    }, \
     kits:[ \
         { \
             id:1, \
