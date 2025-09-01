@@ -649,7 +649,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
                 flare_arrow:{\
                     max_amount:1, \
                     cooldown_ticks:120, \
-                    detection_aabb_size:[1.5, 1.5, 1.5], \
+                    detection_aabb_size:[2.2, 2.2, 2.2], \
                     explosion:{ \
                         radius:6, \
                         effects_info:{ \
