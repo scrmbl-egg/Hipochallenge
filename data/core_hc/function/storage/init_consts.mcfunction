@@ -7,8 +7,9 @@
 # TODO: stop using minecraft:hipochallenge namespace
 # TODO: Complete the list of constants
 
-function hipochallenge:msg/debug/send_info \
-    {text:"\"Initialising datapack constants...\""}
+function hipochallenge:msg/debug/send_info { \
+    text:"\"Initialising datapack constants...\"", \
+}
 
 # reset
 data remove storage minecraft:hipochallenge consts
@@ -457,7 +458,10 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
                     }, \
                     on_enemy_when_parried:{ \
                         modifiers: [], \
-                        effects_info: {suppression_ticks:0,effects:[]}, \
+                        effects_info: { \
+                            suppression_ticks:0, \
+                            effects:[], \
+                        }, \
                     }, \
                 }, \
             }, \
