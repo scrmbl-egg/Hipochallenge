@@ -338,7 +338,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             equip_command:"say marksman kit 1 equip command called", \
             data_type:"marksman_k1_data", \
             marksman_k1_data:{ \
-                projectiles:{ \
+                arrows:{ \
                     max_amount:6, \
                     new_first_cooldown_ticks:60, \
                     new_rest_cooldown_ticks:20, \
@@ -351,7 +351,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             equip_command:"say marksman kit 2 equip command called", \
             data_type:"marksman_k2_data", \
             marksman_k2_data:{ \
-                projectiles:{ \
+                arrows:{ \
                     max_amount:5, \
                     new_first_cooldown_ticks:80, \
                     new_rest_cooldown_ticks:30, \
@@ -364,13 +364,13 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             equip_command:"say marksman kit 3 equip command called", \
             data_type:"marksman_k3_data", \
             marksman_k3_data:{ \
-                projectiles:{ \
+                bullets:{ \
                     max_amount:6, \
                     new_first_cooldown_ticks:80, \
                     new_rest_cooldown_ticks:40, \
                 }, \
                 revolver:{ \
-                    max_loaded_projectile_amount:6, \
+                    max_loaded_bullet_amount:6, \
                     recoil_pitch_rotation:-20, \
                     per_shot_cooldown_ticks:10, \
                 }, \
