@@ -1,4 +1,4 @@
-#>hipochallenge:mechanics/suppression/remove
+#>hipochallenge:mechanic/suppression/remove
 #
 # Removes the suppression state from the executing player.
 #

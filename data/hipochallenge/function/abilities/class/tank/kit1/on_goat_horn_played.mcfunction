@@ -15,7 +15,7 @@ execute as @s unless predicate hipochallenge:team/is_in_pvp_team run \
     }
 
 # silenced guard clause
-execute as @s if predicate hipochallenge:mechanics/is_silenced run \
+execute as @s if predicate hipochallenge:mechanic/is_silenced run \
     return run function hipochallenge:msg/private/send \
     {text: \
         { \

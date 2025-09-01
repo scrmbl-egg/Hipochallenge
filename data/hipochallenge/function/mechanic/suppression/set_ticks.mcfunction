@@ -1,4 +1,4 @@
-#>hipochallenge:mechanics/suppression/set_ticks
+#>hipochallenge:mechanic/suppression/set_ticks
 #
 # Attempts to set the duration in ticks of the suppression state. Will be
 # ignored if the current suppression score ticks are greater than the specified

@@ -11,7 +11,7 @@
 #       Text component for the perk name.
 
 # hide kit and perk if player is not detected
-$execute unless predicate hipochallenge:mechanics/is_detected \
+$execute unless predicate hipochallenge:mechanic/is_detected \
     run \
     scoreboard players display numberformat @s player_list_info fixed [ \
         "", \
@@ -32,7 +32,7 @@ $execute unless predicate hipochallenge:mechanics/is_detected \
     ]
 
 # show kit and perk if player is detected
-$execute if predicate hipochallenge:mechanics/is_detected \
+$execute if predicate hipochallenge:mechanic/is_detected \
     run \
     scoreboard players display numberformat @s player_list_info fixed [ \
         "", \
