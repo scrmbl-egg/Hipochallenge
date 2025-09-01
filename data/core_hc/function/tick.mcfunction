@@ -8,27 +8,19 @@ recipe take @a *
 # mute vanilla music
 function core_hc:music/mute_vanilla
 
-# game state logic
-# TODO: uncomment this command when game states are done
-#function hipochallenge:game_states/state_logic
+# game state handling
+# TODO: when classes are done, implement game state updates and logic
 
 # deaths
 execute as @a[scores={is_dead=1..}] at @s \
     run \
     function core_hc:death/tick
 
-# vfx
-function hipochallenge:vfx/tick
-
-    # TODO: Move level functions to a level/tick function
-    # map vfx
-        # map0
-            # pipes
-                function hipochallenge:vfx/maps/map0/pipe_particles
+# fx
+function #core_hc:fx/tick
 
 # projectiles
-# TODO: move to core_hc
-function hipochallenge:projectiles/tick
+function core_hc:projectile/tick
 
 # abilities
 function #core_hc:ability/tick
