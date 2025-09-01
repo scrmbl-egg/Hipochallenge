@@ -517,11 +517,6 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
         }, \
     ], \
 }
-#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.summon_distance set value 0.5
-#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.global_y_offset set value -0.9
-#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.height set value 1.25
-#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.width set value 0.54
-#data modify storage minecraft:hipochallenge consts.classes.assassin.kit1.parry.interaction.lifetime_ticks set value 10
 
 # support -> classes[3]
 data modify storage minecraft:hipochallenge consts.classes append value { \
