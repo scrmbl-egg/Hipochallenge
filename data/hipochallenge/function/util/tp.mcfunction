@@ -1,4 +1,4 @@
-#>core_hc:util/tp
+#>hipochallenge:util/tp
 #
 # Teleports a player to a location, and displays the associated effects.
 #
