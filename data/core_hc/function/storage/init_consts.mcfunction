@@ -240,7 +240,11 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
                     radius:8.0, \
                 }, \
                 spirit:{ \
-                    selection:{forward_distance:5.0,sphere_radius:5.0}, \
+                    selection:{ \
+                        target_mode:"allies_only", \
+                        max_distance:5.0f, \
+                        on_selected_command:"say selected!", \
+                    }, \
                     buff: { \
                         modifiers:[ \
                             {id:"tank_k3_spirit_buff_armor",attribute:"minecraft:armor",value:6,operation:"add_value"}, \

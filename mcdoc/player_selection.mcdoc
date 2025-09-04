@@ -1,20 +1,20 @@
 
 /// Struct for data related to selecting a player.
 struct PlayerSelectionInfo {
-    /// Selection mode.
+    /// Target mode, which specifies which players will be selected.
     target_mode: PlayerSelectionTargetMode,
-    /// Max distance the targets
-    max_distance: double @ 0..,
-    /// Radius of the sphere.
-    sphere_radius: double @ 0..,
+    /// Maximum amount of distance the target can be from the executing player to be selected.
+    max_distance: float @ 0..,
+    /// Command that the selected player will execute.
+    on_selected_command: #[command(max_length=32500)] string
 }
 
-/// Enum representing the modes available for
-enum(int) PlayerSelectionTargetMode {
+/// Enum representing the modes available for targetting players.
+enum(string) PlayerSelectionTargetMode {
     /// Targets all players.
-    TargetAll = 0,
+    TargetAll = "all",
     /// Targets only allies.
-    TargetAlliesOnly = 1,
+    TargetAlliesOnly = "allies_only",
     /// Targets only enemies.
-    TargetEnemiesOnly = 2,
+    TargetEnemiesOnly = "enemies_only",
 }
