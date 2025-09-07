@@ -1,6 +1,9 @@
 #>core_hc:storage/init_vars
 #
 # Initialises all global variables in the datapack.
+#
+# @returns
+#   Result: 1 if all variables are initialised
 
 # WARNING: Unsafe function!
 # This function initializes all variables in the game. This is a dangerous
@@ -61,3 +64,7 @@ data modify storage minecraft:hipochallenge vars.team_contexts set value { \
         players:[], \
     }, \
 }
+
+## __KEEP AT BOTTOM OF FILE__
+# return 1 for success
+return 1

@@ -1,6 +1,9 @@
 #>core_hc:score/init_all
 #
 # Initialises all scores in the datapack
+#
+# @returns
+#   Result: 1 if all scores are initialised
 
 # TODO: put distinctive prefix in score to prevent collisions
 # IDEAS: "hc." "__hc_"
@@ -124,3 +127,6 @@ scoreboard players add @a has_killed 0
 
 # init extension scores
 function #extension_hc:score/init
+
+# return 1 for success
+return 1

@@ -3,6 +3,9 @@
 # This function is executed every reload, or 'load.mcfunction' call.
 # This file is meant to be changed only by the developers, or a user who might
 # want to change properties of the game.
+#
+# @returns
+#   Result: 1 if all constants are initialised
 
 # TODO: stop using minecraft:hipochallenge namespace
 # TODO: Complete the list of constants
@@ -832,3 +835,8 @@ execute store result storage minecraft:hipochallenge consts.team_preset_count \
     int 1 \
     run \
     data get storage minecraft:hipochallenge consts.team_presets
+
+
+## __KEEP AT BOTTOM OF FILE__
+# return 1 for success
+return 1

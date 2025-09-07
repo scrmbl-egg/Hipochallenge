@@ -1,6 +1,9 @@
 #>core_hc:team/init_all
 #
 # Initialises the teams in the minigame.
+#
+# @returns
+#   Result: 1 if all teams are initialised
 
 # TODO: put distinctive prefix to prevent collisions
 # IDEAS: "hc.", "__hc_"
@@ -98,3 +101,7 @@ team modify no_collision_entity seeFriendlyInvisibles false
 team modify no_collision_entity color white
 team modify no_collision_entity displayName "no_collision_entity"
 team modify no_collision_entity prefix "[no_collision_entity] "
+
+## __KEEP AT BOTTOM OF FILE__
+# return 1 for success
+return 1
