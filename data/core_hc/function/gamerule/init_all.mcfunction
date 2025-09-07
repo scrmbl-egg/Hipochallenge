@@ -1,6 +1,9 @@
 #>core_hc:gamerule/init_all
 #
 # Initialises all gamerules in the minigame.
+#
+# @returns
+#   Result: 1 if all gamerules are properly set.
 
 function hipochallenge:msg/debug/send_info {text:"\"Setting gamerules...\""}
 
@@ -44,7 +47,6 @@ gamerule logAdminCommands false
 gamerule maxCommandChainLength 65536
 gamerule maxCommandForkCount 65536
 gamerule maxEntityCramming 24
-gamerule minecartMaxSpeed 8
 gamerule mobExplosionDropDecay false
 gamerule mobGriefing false
 gamerule naturalRegeneration false
