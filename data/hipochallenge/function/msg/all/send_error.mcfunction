@@ -17,7 +17,7 @@ $tellraw @a [ \
     }, \
     { \
         bold:true, \
-        color:"write", \
+        color:"white", \
         text:">> ", \
     }, \
     { \
