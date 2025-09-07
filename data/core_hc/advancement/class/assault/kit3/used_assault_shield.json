@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assault_k3_assault_shield}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "assault_k3_assault_shield"
+                        }
                     }
                 }
             }

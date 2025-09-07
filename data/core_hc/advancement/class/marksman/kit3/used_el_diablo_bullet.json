@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:marksman_k3_el_diablo_bullet}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "marksman_k3_el_diablo_bullet"
+                        }
                     }
                 }
             }

@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:recon_k1_low_visibility_area}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "recon_k1_low_visibility_area"
+                        }
                     }
                 }
             }

@@ -5,13 +5,15 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assault_k3_pushing_projectile}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "assault_k3_pushing_projectile"
+                        }
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assault/kit3/on_assault_shield_used"
+        "function": "hipochallenge:abilities/class/assault/kit3/on_pushing_projectile_thrown"
     }
 }

@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assassin_k3_magic_feather}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "assassin_k3_magic_feather"
+                        }
                     }
                 }
             }

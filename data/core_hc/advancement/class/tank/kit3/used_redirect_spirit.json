@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:tank_k3_redirect_spirit}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "tank_k3_redirect_spirit"
+                        }
                     }
                 }
             }

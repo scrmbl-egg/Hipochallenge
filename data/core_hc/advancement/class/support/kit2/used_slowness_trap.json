@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:support_k2_slowness_trap}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "support_k2_slowness_trap"
+                        }
                     }
                 }
             }

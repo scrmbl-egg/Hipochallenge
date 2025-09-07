@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:assault_k2_harpoon}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "assault_k2_harpoon"
+                        }
                     }
                 }
             }

@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:recon_k1_flash_bomb}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "recon_k1_flash_bomb"
+                        }
                     }
                 }
             }

@@ -5,7 +5,9 @@
             "conditions": {
                 "item": {
                     "predicates": {
-                        "minecraft:custom_data": "{item_id:recon_k1_blindness_sentinel}"
+                        "minecraft:custom_data": {
+                            "hc:item_id": "recon_k1_blindness_sentinel"
+                        }
                     }
                 }
             }
