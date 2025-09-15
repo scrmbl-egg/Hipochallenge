@@ -478,7 +478,18 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
             name:{translate:"hc.class.assassin.kit2",fallback:"II Phantom"}, \
             equip_command:"say assassin kit 2 equip command called", \
             data_type:"assassin_k2_data", \
-            assassin_k2_data:{}, \
+            assassin_k2_data:{ \
+                stun_mechanism:{ \
+                    radius:3.0, \
+                    effects_info:{ \
+                        suppression_ticks:40, \
+                        effects:[ \
+                            {effect:"minecraft:slowness",seconds:2,amplifier:2,hide_particles:"false"}, \
+                            {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:"false"}, \
+                        ], \
+                    }, \
+                }, \
+            }, \
         }, \
         { \
             id:3, \

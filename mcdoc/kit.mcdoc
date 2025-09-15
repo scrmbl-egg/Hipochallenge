@@ -197,7 +197,12 @@ type Kit = (
         id: 2,
         data_type: "assassin_k2_data",
         /// Assassin's kit 2 variant data.
-        assassin_k2_data: struct {}
+        assassin_k2_data: struct {
+            stun_mechanism: struct {
+                radius: double @ 0..,
+                effects_info: AbilityEffects,
+            }
+        }
     } |
     struct AssassinKit3 {
         ...KitBase,
