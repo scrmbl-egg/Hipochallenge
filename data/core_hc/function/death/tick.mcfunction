@@ -14,7 +14,7 @@
 data modify storage hc:temp death.victim_uuid set from entity @s UUID
 
 # if a killer is detected the same tick, get their UUID
-execute if entity @p[scores={has_killed=1..}] \
+execute if entity @p[scores={hc.HasKilled=1..}] \
     run \
     data modify storage hc:temp death.attacker_uuid set from entity @s UUID
 
@@ -33,6 +33,6 @@ execute if data storage hc:temp death.attacker_uuid \
 #tag @s add dead
 
 # reset scores and free memory
-scoreboard players set @s is_dead 0
-scoreboard players set @p[scores={has_killed=1..}] has_killed 0
+scoreboard players set @s hc.IsDead 0
+scoreboard players set @p[scores={hc.HasKilled=1..}] hc.HasKilled 0
 data remove storage hc:temp death

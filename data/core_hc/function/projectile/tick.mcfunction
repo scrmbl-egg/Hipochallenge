@@ -7,7 +7,11 @@
 # this tag is later used for other entities that may not be projectiles
 # themselves, but they MAY REPRESENT projectiles, for example: an invisible
 # armor stand with a specified motion that explodes on contact.
-tag @e[type=#hipochallenge:vanilla_projectiles,tag=!projectile] add projectile
+tag @e[ \
+    type=#hipochallenge:vanilla_projectiles, \
+    tag=!hc.Projectile \
+] \
+    add hc.Projectile
 
 # TODO: tag specific armor_stands and markers too
 

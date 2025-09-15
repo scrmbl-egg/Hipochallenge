@@ -6,7 +6,7 @@
 #   value: int
 #       Integer value of the selected perk.
 
-$scoreboard players set @s perk $(value)
+$scoreboard players set @s hc.Perk $(value)
 
 $function hipochallenge:msg/debug/send_info { \
     text:[ \

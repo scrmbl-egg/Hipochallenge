@@ -5,128 +5,151 @@
 # @returns
 #   Result: 1 if all scores are initialised
 
-# TODO: put distinctive prefix in score to prevent collisions
-# IDEAS: "hc." "__hc_"
-
 function hipochallenge:msg/debug/send_info { \
     text:"\"Initialising score objectives...\"", \
 }
 
-# TODO: check if this score is necessary at all.
-# player unique id's
-scoreboard objectives add id dummy
+## UNIQUE PLAYER ID
+scoreboard objectives add hc.Id dummy
 
-# score for entity lifetimes
-scoreboard objectives add life_timer dummy
+## ENTITY LIFETIMES
+scoreboard objectives add hc.LifeTimer dummy
 
-# scores for timed mechanics
-scoreboard objectives add silence_timer dummy
-#scoreboard objectives add detection_timer dummy
-scoreboard objectives add in_combat_timer dummy
-scoreboard objectives add suppression_timer dummy
+## TIMED MECHANICS
+scoreboard objectives add hc.SilenceTimer dummy
+#scoreboard objectives add hc.DetectionTimer dummy
+scoreboard objectives add hc.InCombatTimer dummy
+scoreboard objectives add hc.SuppressionTimer dummy
 
-# FIXME: this score isn't used enough to keep in the code
-scoreboard objectives add value dummy
+## (PLAYER) LIST INFORMATION
+scoreboard objectives add hc.ListInfo dummy
 
-# player list info score. no value must be stored here.
-scoreboard objectives add player_list_info dummy
+## CLASS, KIT & PERK
+scoreboard objectives add hc.Class dummy
+scoreboard objectives add hc.Kit dummy
+scoreboard objectives add hc.Perk dummy
 
-# class, kit and perk scores
-scoreboard objectives add class dummy
-scoreboard objectives add kit dummy
-scoreboard objectives add perk dummy
+## LOGIN/LEAVING
+scoreboard objectives add hc.HasLeft minecraft.custom:minecraft.leave_game
 
-# score to check if the player has left the game.
-scoreboard objectives add has_left minecraft.custom:minecraft.leave_game
+## HEALTH, DEATH & KILLS
+scoreboard objectives add hc.Health health {text:"\u2764",color:"#db0000"}
+scoreboard objectives add hc.PlayerKillCount playerKillCount {text:"\ud83d\udde1",color:"white"}
+scoreboard objectives add hc.DeathCount deathCount {text:"\u2620",color:"white"}
+scoreboard objectives add hc.Points dummy {text:"\u2605",color:"gold"}
+scoreboard objectives add hc.IsDead deathCount
+scoreboard objectives add hc.HasKilled playerKillCount
 
-# scores related to death, kills, and health
-scoreboard objectives add player_health health
-scoreboard objectives add player_kill_count playerKillCount
-scoreboard objectives add death_count deathCount
-scoreboard objectives add points dummy
-scoreboard objectives add is_dead deathCount
-scoreboard objectives add has_killed playerKillCount
+## ITEMS AND ABILITIES
+scoreboard objectives add hc.TankKit1GoatHornCooldown dummy
+scoreboard objectives add hc.TankKit1CastleCooldown dummy
+scoreboard objectives add hc.TankKit2GoatHornCooldown dummy
+scoreboard objectives add hc.TankKit2GoatHornNearbyEnemies dummy
+scoreboard objectives add hc.TankKit2GoatHornRecoveryTicks dummy
+scoreboard objectives add hc.TankKit2TridentCooldown dummy
+scoreboard objectives add hc.TankKit3GoatHornCooldown dummy
+scoreboard objectives add hc.TankKit3BubbleShieldCooldown dummy
+scoreboard objectives add hc.TankKit3RedirectSpiritCooldown dummy
+scoreboard objectives add hc.TankPerk1NutritiousMealCooldown dummy
+scoreboard objectives add hc.MarksmanKit1NewProjectileCooldown dummy
+scoreboard objectives add hc.MarksmanKit1ArchersPotionCooldown dummy
+scoreboard objectives add hc.MarksmanKit1SmokeArrowCrossbowCooldown dummy
+scoreboard objectives add hc.MarksmanKit2NewProjectileCooldown dummy
+scoreboard objectives add hc.MarksmanKit3NewProjectileCooldown dummy
+scoreboard objectives add hc.MarksmanKit3PistolCooldown dummy
+scoreboard objectives add hc.MarksmanKit3ElDiabloBulletCooldown dummy
+scoreboard objectives add hc.AssassinKit1DuelistSwordParryCooldown dummy
+scoreboard objectives add hc.AssassinKit1ParryInteractionRelativePosX dummy
+scoreboard objectives add hc.AssassinKit1ParryInteractionRelativePosY dummy
+scoreboard objectives add hc.AssassinKit1ParryInteractionRelativePosZ dummy
+scoreboard objectives add hc.AssassinKit1EnhancedDuelistSwordCooldown dummy
+scoreboard objectives add hc.AssassinKit1CrystalAmuletCooldown dummy
+scoreboard objectives add hc.AssassinKit2StunMechanismCooldown dummy
+scoreboard objectives add hc.AssassinKit3RepulsingRodCooldown dummy
+scoreboard objectives add hc.AssassinKit3MagicFeatherCooldown dummy
+scoreboard objectives add hc.AssassinKit3TeleportationMarkCooldown dummy
+scoreboard objectives add hc.SupportKit1SnowSentinelCooldown dummy
+scoreboard objectives add hc.SupportKit1LevitationBombCooldown dummy
+scoreboard objectives add hc.SupportKit1GravityWellCooldown dummy
+scoreboard objectives add hc.SupportKit2HealingRodCooldown dummy
+scoreboard objectives add hc.SupportKit2CleansingProjectileCooldown dummy
+scoreboard objectives add hc.SupportKit2SlownessTrapCooldown dummy
+scoreboard objectives add hc.SupportKit3UnstableTotemCooldown dummy
+scoreboard objectives add hc.SupportKit3EvilEyeCooldown dummy
+scoreboard objectives add hc.ReconKit1BlindnessSentinelCooldown dummy
+scoreboard objectives add hc.ReconKit1FlashBombCooldown dummy
+scoreboard objectives add hc.ReconKit1LowVisibilityAreaCooldown dummy
+scoreboard objectives add hc.ReconKit2FlareArrowCooldown dummy
+scoreboard objectives add hc.ReconKit2TrackersPotionCooldown dummy
+scoreboard objectives add hc.ReconKit2RevealingSentinelCooldown dummy
+scoreboard objectives add hc.ReconKit3PortalCooldown dummy
+scoreboard objectives add hc.ReconKit3DeceptionEffigyCooldown dummy
+scoreboard objectives add hc.AssaultKit1TickingBombCooldown dummy
+scoreboard objectives add hc.AssaultKit1KnockbackBombCooldown dummy
+scoreboard objectives add hc.AssaultKit1SmokeBombCooldown dummy
+scoreboard objectives add hc.AssaultKit2HarpoonCooldown dummy
+scoreboard objectives add hc.AssaultKit2VoidArrowCooldown dummy
+scoreboard objectives add hc.AssaultKit3AssaultShieldCooldown dummy
+scoreboard objectives add hc.AssaultKit3PushingProjectileCooldown dummy
 
-# trigger scores
-scoreboard objectives add goto trigger
-scoreboard objectives add menu trigger
+## ITEM USAGE
+scoreboard objectives add hc.BowShot minecraft.used:minecraft.bow
+
+## TRIGGERS
+
+## NOTE:
+# Triggers don't have the "hc." prefix. This is so that they can be typed with
+# ease for users.
+
+scoreboard objectives add warp trigger
 scoreboard objectives add leave trigger
-
 scoreboard objectives add join trigger
 
-# items and ability cooldowns
-scoreboard objectives add tank_kit1_goat_horn_cd dummy
-scoreboard objectives add tank_kit1_castle_cd dummy
-scoreboard objectives add tank_kit2_goat_horn_cd dummy
-scoreboard objectives add tank_kit2_goat_horn_nearby_enemies dummy
-scoreboard objectives add tank_kit2_goat_horn_recovery_ticks dummy
-scoreboard objectives add tank_kit2_trident_cd dummy
-scoreboard objectives add tank_kit3_goat_horn_cd dummy
-scoreboard objectives add tank_kit3_bubble_shield_cd dummy
-scoreboard objectives add tank_kit3_redirect_spirit_cd dummy
-scoreboard objectives add tank_perk1_nutritious_meal_cd dummy
-scoreboard objectives add marksman_kit1_new_projectile_cd dummy
-scoreboard objectives add marksman_kit1_archers_potion_cd dummy
-scoreboard objectives add marksman_kit1_smoke_arrow_crossbow_cd dummy
-scoreboard objectives add marksman_kit2_new_projectile_cd dummy
-scoreboard objectives add marksman_kit3_new_projectile_cd dummy
-scoreboard objectives add marksman_kit3_pistol_cd dummy
-scoreboard objectives add marksman_kit3_el_diablo_bullet_cd dummy
-scoreboard objectives add assassin_kit1_duelist_sword_parry_cd dummy
-scoreboard objectives add assassin_kit1_parry_interaction_relative_pos_x dummy
-scoreboard objectives add assassin_kit1_parry_interaction_relative_pos_y dummy
-scoreboard objectives add assassin_kit1_parry_interaction_relative_pos_z dummy
-scoreboard objectives add assassin_kit1_enhanced_duelist_sword_cd dummy
-scoreboard objectives add assassin_kit1_crystal_amulet_cd dummy
-scoreboard objectives add assassin_kit2_stun_mechanism_cd dummy
-scoreboard objectives add assassin_kit3_repulsing_rod_cd dummy
-scoreboard objectives add assassin_kit3_magic_feather_cd dummy
-scoreboard objectives add assassin_kit3_teleportation_mark_cd dummy
-scoreboard objectives add support_kit1_snow_sentinel_cd dummy
-scoreboard objectives add support_kit1_levitation_bomb_cd dummy
-scoreboard objectives add support_kit1_gravity_well_cd dummy
-scoreboard objectives add support_kit2_healing_rod_cd dummy
-scoreboard objectives add support_kit2_cleansing_projectile_cd dummy
-scoreboard objectives add support_kit2_slowness_trap_cd dummy
-scoreboard objectives add support_kit3_unstable_totem_cd dummy
-scoreboard objectives add support_kit3_evil_eye_cd dummy
-scoreboard objectives add recon_kit1_blindness_sentinel_cd dummy
-scoreboard objectives add recon_kit1_flash_bomb_cd dummy
-scoreboard objectives add recon_kit1_low_visibility_area_cd dummy
-scoreboard objectives add recon_kit2_flare_arrow_cd dummy
-scoreboard objectives add recon_kit2_trackers_potion_cd dummy
-scoreboard objectives add recon_kit2_revealing_sentinel_cd dummy
-scoreboard objectives add recon_kit3_portal_cd dummy
-scoreboard objectives add recon_kit3_deception_effigy_cd dummy
-scoreboard objectives add assault_kit1_ticking_bomb_cd dummy
-scoreboard objectives add assault_kit1_knockback_bomb_cd dummy
-scoreboard objectives add assault_kit1_smoke_bomb_cd dummy
-scoreboard objectives add assault_kit2_harpoon_cd dummy
-scoreboard objectives add assault_kit2_void_arrow_cd dummy
-scoreboard objectives add assault_kit3_assault_shield_cd dummy
-scoreboard objectives add assault_kit3_pushing_projectile_cd dummy
+## MODIFY DISPLAY NAMES
 
-# item scores
-# bow shot can't be detected with achievements
-scoreboard objectives add bow_shot minecraft.used:minecraft.bow
+## NOTE:
+# Display names are added after creation, so that existing scoreboards during
+# reload are properly updated.
 
-## __ KEEP AT BOTTOM OF FILE __
-# init score values (refresh counters)
-scoreboard players add @a player_list_info 0
+scoreboard objectives modify hc.Health displayname {text:"\u2764",color:"#db0000"}
+scoreboard objectives modify hc.PlayerKillCount displayname {text:"\ud83d\udde1",color:"white"}
+scoreboard objectives modify hc.DeathCount displayname {text:"\u2620",color:"white"}
+scoreboard objectives modify hc.Points displayname {text:"\u2605",color:"gold"}
 
-scoreboard players add @a class 0
-scoreboard players add @a kit 0
-scoreboard players add @a perk 0
+## INITIALISE SCORES
+scoreboard players add @a hc.ListInfo 0
+scoreboard players add @a hc.Class 0
+scoreboard players add @a hc.Kit 0
+scoreboard players add @a hc.Perk 0
+#scoreboard players add @a hc.Health 0 (read-only, doesn't work)
+scoreboard players add @a hc.PlayerKillCount 0
+scoreboard players add @a hc.DeathCount 0
+scoreboard players add @a hc.Points 0
+scoreboard players add @a hc.IsDead 0
+scoreboard players add @a hc.HasKilled 0
 
-scoreboard players add @a player_health 0
-scoreboard players add @a player_kill_count 0
-scoreboard players add @a death_count 0
-scoreboard players add @a points 0
-scoreboard players add @a is_dead 0
-scoreboard players add @a has_killed 0
+# init hc.Health score, for those that don't have a registered score value
+execute as @a \
+    unless entity @s[scores={hc.Health=-2147483648..2147483647}] \
+    run \
+    gamemode adventure
+execute as @a \
+    unless entity @s[scores={hc.Health=-2147483648..2147483647}] \
+    run \
+    damage @s 0.00001 minecraft:magic
+execute as @a \
+    unless entity @s[scores={hc.Health=-2147483648..2147483647}] \
+    run \
+    effect give @s minecraft:instant_health \
+    1 1 false
 
-# init extension scores
+## ASSIGN/SET DISPLAYS
+scoreboard objectives setdisplay list hc.ListInfo
+scoreboard objectives setdisplay below_name hc.Health
+
+## EXTENSION SCORES
 function #extension_hc:score/init
 
+## __ KEEP AT BOTTOM OF FILE __
 # return 1 for success
 return 1

@@ -3,6 +3,6 @@
     "entity": "this",
     "predicate": {
         "type": "minecraft:player",
-        "nbt": "{Tags:[detected]}"
+        "nbt": "{Tags:[hc.Detected]}"
     }
 }

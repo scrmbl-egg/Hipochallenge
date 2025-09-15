@@ -42,7 +42,7 @@ execute store result storage \
     hc:temp equip_armor.get_loot_tables_params.class_id \
     int 1 \
     run \
-    scoreboard players get @s class
+    scoreboard players get @s hc.Class
 
 function core_hc:class/get_data_member \
     with storage hc:temp equip_armor.get_loot_tables_params

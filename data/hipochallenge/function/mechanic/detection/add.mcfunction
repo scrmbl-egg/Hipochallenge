@@ -4,4 +4,4 @@
 #
 # @context player
 
-tag @s add detected
+tag @s add hc.Detected

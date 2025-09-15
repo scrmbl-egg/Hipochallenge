@@ -6,7 +6,7 @@
 #   value: int
 #       Integer value of the selected kit.
 
-$scoreboard players set @s kit $(value)
+$scoreboard players set @s hc.Kit $(value)
 
 $function hipochallenge:msg/debug/send_info { \
     text:[ \

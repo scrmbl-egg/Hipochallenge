@@ -2,102 +2,101 @@
 #
 # Removes all scores in the datapack
 
-function hipochallenge:msg/debug/send_info {text:"\"Removing score objectives...\""}
+function hipochallenge:msg/debug/send_info { \
+    text:"\"Removing score objectives...\"", \
+}
 
-# TODO: check if this score is necessary at all.
-# player unique id's
-scoreboard objectives remove id
+scoreboard objectives remove hc.Id
 
-# score for entity lifetimes
-scoreboard objectives remove life_timer
+## ENTITY LIFETIMES
+scoreboard objectives remove hc.LifeTimer
 
-# scores for timed mechanics
-scoreboard objectives remove silence_timer
-#scoreboard objectives remove detection_timer
-scoreboard objectives remove in_combat_timer
-scoreboard objectives remove suppression_timer
+## TIMED MECHANICS
+scoreboard objectives remove hc.SilenceTimer
+#scoreboard objectives remove hc.DetectionTimer
+scoreboard objectives remove hc.InCombatTimer
+scoreboard objectives remove hc.SuppressionTimer
 
-# FIXME: this score isn't used enough to keep in the code
-scoreboard objectives remove value
+## (PLAYER) LIST INFORMATION
+scoreboard objectives remove hc.ListInfo
 
-# player list info score. no value must be stored here.
-scoreboard objectives remove player_list_info
+## CLASS, KIT & PERK
+scoreboard objectives remove hc.Class
+scoreboard objectives remove hc.Kit
+scoreboard objectives remove hc.Perk
 
-# class, kit and perk scores
-scoreboard objectives remove class
-scoreboard objectives remove kit
-scoreboard objectives remove perk
+## LOGIN/LEAVING
+scoreboard objectives remove hc.HasLeft
 
-# score to check if the player has left the game.
-scoreboard objectives remove has_left
+## HEALTH, DEATH & KILLS
+scoreboard objectives remove hc.Health
+scoreboard objectives remove hc.PlayerKillCount
+scoreboard objectives remove hc.DeathCount
+scoreboard objectives remove hc.Points
+scoreboard objectives remove hc.IsDead
+scoreboard objectives remove hc.HasKilled
 
-# scores related to death, kills, and health
-scoreboard objectives remove player_health
-scoreboard objectives remove player_kill_count
-scoreboard objectives remove death_count
-scoreboard objectives remove points
-scoreboard objectives remove is_dead
-scoreboard objectives remove has_killed
+## ITEMS AND ABILITIES
+scoreboard objectives remove hc.TankKit1GoatHornCooldown
+scoreboard objectives remove hc.TankKit1CastleCooldown
+scoreboard objectives remove hc.TankKit2GoatHornCooldown
+scoreboard objectives remove hc.TankKit2GoatHornNearbyEnemies
+scoreboard objectives remove hc.TankKit2GoatHornRecoveryTicks
+scoreboard objectives remove hc.TankKit2TridentCooldown
+scoreboard objectives remove hc.TankKit3GoatHornCooldown
+scoreboard objectives remove hc.TankKit3BubbleShieldCooldown
+scoreboard objectives remove hc.TankKit3RedirectSpiritCooldown
+scoreboard objectives remove hc.TankPerk1NutritiousMealCooldown
+scoreboard objectives remove hc.MarksmanKit1NewProjectileCooldown
+scoreboard objectives remove hc.MarksmanKit1ArchersPotionCooldown
+scoreboard objectives remove hc.MarksmanKit1SmokeArrowCrossbowCooldown
+scoreboard objectives remove hc.MarksmanKit2NewProjectileCooldown
+scoreboard objectives remove hc.MarksmanKit3NewProjectileCooldown
+scoreboard objectives remove hc.MarksmanKit3PistolCooldown
+scoreboard objectives remove hc.MarksmanKit3ElDiabloBulletCooldown
+scoreboard objectives remove hc.AssassinKit1DuelistSwordParryCooldown
+scoreboard objectives remove hc.AssassinKit1ParryInteractionRelativePosX
+scoreboard objectives remove hc.AssassinKit1ParryInteractionRelativePosY
+scoreboard objectives remove hc.AssassinKit1ParryInteractionRelativePosZ
+scoreboard objectives remove hc.AssassinKit1EnhancedDuelistSwordCooldown
+scoreboard objectives remove hc.AssassinKit1CrystalAmuletCooldown
+scoreboard objectives remove hc.AssassinKit2StunMechanismCooldown
+scoreboard objectives remove hc.AssassinKit3RepulsingRodCooldown
+scoreboard objectives remove hc.AssassinKit3MagicFeatherCooldown
+scoreboard objectives remove hc.AssassinKit3TeleportationMarkCooldown
+scoreboard objectives remove hc.SupportKit1SnowSentinelCooldown
+scoreboard objectives remove hc.SupportKit1LevitationBombCooldown
+scoreboard objectives remove hc.SupportKit1GravityWellCooldown
+scoreboard objectives remove hc.SupportKit2HealingRodCooldown
+scoreboard objectives remove hc.SupportKit2CleansingProjectileCooldown
+scoreboard objectives remove hc.SupportKit2SlownessTrapCooldown
+scoreboard objectives remove hc.SupportKit3UnstableTotemCooldown
+scoreboard objectives remove hc.SupportKit3EvilEyeCooldown
+scoreboard objectives remove hc.ReconKit1BlindnessSentinelCooldown
+scoreboard objectives remove hc.ReconKit1FlashBombCooldown
+scoreboard objectives remove hc.ReconKit1LowVisibilityAreaCooldown
+scoreboard objectives remove hc.ReconKit2FlareArrowCooldown
+scoreboard objectives remove hc.ReconKit2TrackersPotionCooldown
+scoreboard objectives remove hc.ReconKit2RevealingSentinelCooldown
+scoreboard objectives remove hc.ReconKit3PortalCooldown
+scoreboard objectives remove hc.ReconKit3DeceptionEffigyCooldown
+scoreboard objectives remove hc.AssaultKit1TickingBombCooldown
+scoreboard objectives remove hc.AssaultKit1KnockbackBombCooldown
+scoreboard objectives remove hc.AssaultKit1SmokeBombCooldown
+scoreboard objectives remove hc.AssaultKit2HarpoonCooldown
+scoreboard objectives remove hc.AssaultKit2VoidArrowCooldown
+scoreboard objectives remove hc.AssaultKit3AssaultShieldCooldown
+scoreboard objectives remove hc.AssaultKit3PushingProjectileCooldown
 
-# trigger scores
-scoreboard objectives remove goto
-scoreboard objectives remove menu
+## ITEM USAGE
+scoreboard objectives remove hc.BowShot
+
+## TRIGGERS
+
+## NOTE:
+# Triggers don't have the "hc." prefix. This is so that they can be typed with
+# ease for users.
+
+scoreboard objectives remove warp
 scoreboard objectives remove leave
-
 scoreboard objectives remove join
-
-# items and ability cooldowns
-scoreboard objectives remove tank_kit1_goat_horn_cd
-scoreboard objectives remove tank_kit1_castle_cd
-scoreboard objectives remove tank_kit2_goat_horn_cd
-scoreboard objectives remove tank_kit2_goat_horn_nearby_enemies
-scoreboard objectives remove tank_kit2_goat_horn_recovery_ticks
-scoreboard objectives remove tank_kit2_trident_cd
-scoreboard objectives remove tank_kit3_goat_horn_cd
-scoreboard objectives remove tank_kit3_bubble_shield_cd
-scoreboard objectives remove tank_kit3_redirect_spirit_cd
-scoreboard objectives remove tank_perk1_nutritious_meal_cd
-scoreboard objectives remove marksman_kit1_new_projectile_cd
-scoreboard objectives remove marksman_kit1_archers_potion_cd
-scoreboard objectives remove marksman_kit1_smoke_arrow_crossbow_cd
-scoreboard objectives remove marksman_kit2_new_projectile_cd
-scoreboard objectives remove marksman_kit3_new_projectile_cd
-scoreboard objectives remove marksman_kit3_pistol_cd
-scoreboard objectives remove marksman_kit3_el_diablo_bullet_cd
-scoreboard objectives remove assassin_kit1_duelist_sword_parry_cd
-scoreboard objectives remove assassin_kit1_parry_interaction_relative_pos_x
-scoreboard objectives remove assassin_kit1_parry_interaction_relative_pos_y
-scoreboard objectives remove assassin_kit1_parry_interaction_relative_pos_z
-scoreboard objectives remove assassin_kit1_enhanced_duelist_sword_cd
-scoreboard objectives remove assassin_kit1_crystal_amulet_cd
-scoreboard objectives remove assassin_kit2_stun_mechanism_cd
-scoreboard objectives remove assassin_kit3_repulsing_rod_cd
-scoreboard objectives remove assassin_kit3_magic_feather_cd
-scoreboard objectives remove assassin_kit3_teleportation_mark_cd
-scoreboard objectives remove support_kit1_snow_sentinel_cd
-scoreboard objectives remove support_kit1_levitation_bomb_cd
-scoreboard objectives remove support_kit1_gravity_well_cd
-scoreboard objectives remove support_kit2_healing_rod_cd
-scoreboard objectives remove support_kit2_cleansing_projectile_cd
-scoreboard objectives remove support_kit2_slowness_trap_cd
-scoreboard objectives remove support_kit3_unstable_totem_cd
-scoreboard objectives remove support_kit3_evil_eye_cd
-scoreboard objectives remove recon_kit1_blindness_sentinel_cd
-scoreboard objectives remove recon_kit1_flash_bomb_cd
-scoreboard objectives remove recon_kit1_low_visibility_area_cd
-scoreboard objectives remove recon_kit2_flare_arrow_cd
-scoreboard objectives remove recon_kit2_trackers_potion_cd
-scoreboard objectives remove recon_kit2_revealing_sentinel_cd
-scoreboard objectives remove recon_kit3_portal_cd
-scoreboard objectives remove recon_kit3_deception_effigy_cd
-scoreboard objectives remove assault_kit1_ticking_bomb_cd
-scoreboard objectives remove assault_kit1_knockback_bomb_cd
-scoreboard objectives remove assault_kit1_smoke_bomb_cd
-scoreboard objectives remove assault_kit2_harpoon_cd
-scoreboard objectives remove assault_kit2_void_arrow_cd
-scoreboard objectives remove assault_kit3_assault_shield_cd
-scoreboard objectives remove assault_kit3_pushing_projectile_cd
-
-# item scores
-# bow shot can't be detected with achievements
-scoreboard objectives remove bow_shot

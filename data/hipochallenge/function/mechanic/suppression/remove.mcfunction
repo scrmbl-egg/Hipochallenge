@@ -4,4 +4,4 @@
 #
 # @context player
 
-scoreboard players set @s suppression_timer 0
+scoreboard players set @s hc.SuppressionTimer 0

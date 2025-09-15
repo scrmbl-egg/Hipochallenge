@@ -6,7 +6,7 @@
 # @input
 #   class_id: int @ 1..
 #       ID of the class whose data member is going to be accessed. Can be
-#       obtained through the player's 'class' score.
+#       obtained through the player's 'hc.Class' score.
 #   member_name: string
 #       Name of the data member that is going to be obtained.
 #   out_storage: #[id="storage"] string

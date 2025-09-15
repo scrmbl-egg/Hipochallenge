@@ -4,4 +4,4 @@
 #
 # @context player
 
-tag @s remove silenced
+scoreboard players set @s hc.SilenceTimer 0

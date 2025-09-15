@@ -5,7 +5,7 @@
 # @context player
 
 # change class score
-execute store result score @s class \
+execute store result score @s hc.Class \
     run \
     data get storage \
     minecraft:hipochallenge consts.classes[{internal_name:"marksman"}].id

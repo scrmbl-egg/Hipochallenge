@@ -6,10 +6,10 @@
 # @input
 #   class_id: int @ 1..
 #       ID of the class whose kit structure is going to be accessed. Can be
-#       obtained through the player's 'class' score.
+#       obtained through the player's 'hc.Class' score.
 #   kit_id: int @ 1..
 #       ID of the kit whose data member is going to be accessed. Can be
-#       obtained through the player's 'kit' score.
+#       obtained through the player's 'hc.Kit' score.
 #   member_name: string
 #       Name of the data member that is going to be obtained.
 #   out_storage: #[id="storage"] string

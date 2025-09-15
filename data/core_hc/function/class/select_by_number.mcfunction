@@ -7,7 +7,7 @@
 #       Integer value of the selected class.
 
 # set class score
-$scoreboard players set @s class $(value)
+$scoreboard players set @s hc.Class $(value)
 
 # construct debug message
 data modify storage hc:temp dbg_msg.text set value [ \

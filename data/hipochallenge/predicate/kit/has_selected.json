@@ -2,7 +2,7 @@
     "condition": "minecraft:entity_scores",
     "entity": "this",
     "scores": {
-        "kit": {
+        "hc.Kit": {
             "min": 1,
             "max": 3
         }

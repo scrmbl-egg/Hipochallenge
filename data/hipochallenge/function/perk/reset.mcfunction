@@ -4,7 +4,7 @@
 #
 # @context player
 
-scoreboard players set @s perk 0
+scoreboard players set @s hc.Perk 0
 function hipochallenge:msg/debug/send_info { \
     text:[ \
         "", \

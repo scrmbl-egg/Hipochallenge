@@ -2,6 +2,8 @@
     "condition": "minecraft:entity_scores",
     "entity": "this",
     "scores": {
-        "hc.Class": 1
+        "hc.InCombatTimer": {
+            "min": 1
+        }
     }
 }

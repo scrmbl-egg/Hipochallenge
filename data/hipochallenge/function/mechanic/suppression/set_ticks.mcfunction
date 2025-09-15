@@ -9,6 +9,6 @@
 #   ticks: int @ 0..
 #       Desired duration of the suppression state in ticks.
 
-$execute unless score @s suppression_timer matches $(ticks).. \
+$execute unless score @s hc.SuppressionTimer matches $(ticks).. \
     run \
-    scoreboard players set @s suppression_timer $(ticks)
+    scoreboard players set @s hc.SuppressionTimer $(ticks)
