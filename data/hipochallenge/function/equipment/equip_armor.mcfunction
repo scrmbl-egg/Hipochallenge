@@ -102,7 +102,7 @@ item modify entity @s armor.legs core_hc:equipment/no_armor_modifiers
 item modify entity @s armor.feet core_hc:equipment/no_armor_modifiers
 
 # apply attributes
-function core_hc:attribute/class/apply_attributes \
+function core_hc:util/attribute/class/apply_attributes \
     with storage hc:temp equip_armor.attributes
 
 # show fx (with team's dust color)

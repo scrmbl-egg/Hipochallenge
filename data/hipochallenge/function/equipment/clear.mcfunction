@@ -1,9 +1,11 @@
 #>hipochallenge:equipment/clear
 #
 # Clears all the player's equipment, attributes, and leftover entities.
+#
+# @context player
 
 clear @s *
-function hipochallenge:attribute/reset_all
+function hipochallenge:util/attribute/reset_all
 
 # cleanup
 ## NOTE:
