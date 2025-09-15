@@ -1,22 +1,26 @@
 advancement revoke @s \
     only core_hc:class/tank/kit1/used_goat_horn
 
-function hipochallenge:msg/debug/send_info {text:"used kit1 horn"}
+function hipochallenge:msg/debug/send_info { \
+    text:"\"goat horn used\"", \
+}
 
 # team with no abilities guard clause
-execute as @s unless predicate hipochallenge:team/is_in_pvp_team run \
+execute as @s unless predicate hipochallenge:team/is_in_pvp_team \
+    run \
     return run \
-    function hipochallenge:msg/private/send_error \
-    {text: \
-        { \
+    function hipochallenge:msg/private/send_error { \
+        text:{ \
             translate:"hc.msg.private.error.not_belonging_to_team_with_abilities", \
             fallback:"You don't belong in a team that is allowed to use this ability", \
         } \
     }
 
 # silenced guard clause
-execute as @s if predicate hipochallenge:mechanic/is_silenced run \
-    return run function hipochallenge:msg/private/send \
+execute as @s if predicate hipochallenge:mechanic/is_silenced \
+    run \
+    return run \
+    function hipochallenge:msg/private/send \
     {text: \
         { \
             color:"red", \
@@ -27,25 +31,43 @@ execute as @s if predicate hipochallenge:mechanic/is_silenced run \
 
 # no cooldown, item must be deleted due to it being a goat horn
 # score: tank_kit1_goat_horn_cd
-clear @s *[custom_data={item_id:tank_k1_goat_horn}] 1
+clear @s *[custom_data={"hc:item_id":"tank_k1_goat_horn"}] 1
+
+data modify storage hc:temp tank_k1_goat_horn set value { \
+    team:"", \
+    radius:0, \
+    player_limit:0, \
+}
 
 # get team
 function core_hc:team/get_self_team { \
-    out_storage:"minecraft:hipochallenge", \
-    out_nbt:"local_give_buffs_params.team", \
+    out_storage:"hc:temp", \
+    out_nbt:"tank_k1_goat_horn.team", \
 }
-# gives ownership of:
-    # local_self_team
+#>_
+# @out
+#   hc:temp tank_k1_goat_horn
+#       team
 
-# give buffs to team
-# in:
-    # local_self_team
-function hipochallenge:abilities/class/tank/kit1/goat_horn/give_buffs_st with storage minecraft:hipochallenge
+# get radius
+data modify storage hc:temp tank_k1_goat_horn.radius \
+    set from storage minecraft:hipochallenge \
+    consts.classes[{internal_name:"tank"}].\
+    kits[{id:1}].tank_k1_data.horn.radius
 
-# vfx
+# get player limit
+data modify storage hc:temp tank_k1_goat_horn.player_limit \
+    set from storage minecraft:hipochallenge \
+    consts.game.team_size
+
+# give all effect info effects
+function core_hc:ability/tank/kit1/goat_horn/give_effects \
+    with storage hc:temp tank_k1_goat_horn
+
+# fx
 execute at @s \
     run \
-    function hipochallenge:vfx/abilities/class/tank/kit1/goat_horn_use
+    function core_hc:fx/ability/tank/kit1/used_goat_horn
 
 # free memory and remove tags
-data remove storage minecraft:hipochallenge local_self_team
+data remove storage hc:temp tank_k1_goat_horn

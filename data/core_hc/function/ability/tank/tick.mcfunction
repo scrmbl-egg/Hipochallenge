@@ -4,32 +4,31 @@
 
 # TODO: change and format following commands
 
-# kit 1
-    # castle
-    execute as @a[scores={tank_kit1_castle_cd=1}] run function hipochallenge:replace_item/replace {custom_data:"{item_id:tank_k1_castle_cd}",item_modifier:"hipochallenge:weapons/class/tank/kit1/castle"}
+## kit 1
+# castle
+# TODO: handle castle cooldown
 
-    # goat horn
-    execute as @a if items entity @s weapon.* *[minecraft:custom_data={item_id:tank_k1_goat_horn}] run function hipochallenge:abilities/class/tank/kit1/goat_horn/show_targets
-    execute as @a[scores={tank_kit1_goat_horn_cd=1}] run function hipochallenge:replace_item/replace {custom_data:"{item_id:tank_k1_goat_horn_cd}",item_modifier:"hipochallenge:weapons/class/tank/kit1/goat_horn"}
+# goat horn targets
+execute as @a \
+    if items entity @s weapon.* *[ \
+        minecraft:custom_data={ \
+            "hc:item_id":"tank_k1_goat_horn", \
+        } \
+    ] \
+    run \
+    function core_hc:ability/tank/kit1/goat_horn/show_targets
 
-# kit 2
-    # trident
-    # TODO: Move this function to the \projectiles folder
-    execute as @e[type=trident] at @s run function hipochallenge:abilities/class/tank/kit2/trident
-    execute as @a[scores={tank_kit2_trident_cd=1},gamemode=!creative] at @s run function hipochallenge:abilities/class/tank/kit2/trident/return
+## kit 2
+# trident
+# TODO: handle trident return
 
-    # goat horn
-    execute as @a[scores={tank_kit2_goat_horn_cd=1}] run function hipochallenge:replace_item/replace {custom_data:"{item_id:tank_k2_goat_horn_cd}",item_modifier:"hipochallenge:weapons/class/tank/kit2/goat_horn"}
+# goat horn
+# TODO: handle tank kit 2 goat horn cooldown
+# TODO: play sounds depending on the amount of recovery ticks
 
-    # goat horn detection
-    execute as @a[tag=tank_kit2_goat_horn_detecting,scores={tank_kit2_goat_horn_recovery_ticks=1..}] at @s run function hipochallenge:abilities/class/tank/kit2/goat_horn/detect_enemy_players
+## kit 3
+# spirit
+# TODO: handle spirit behaviour
 
-    # TODO: play sounds depending on the amount of recovery ticks
-
-# kit 3
-    # spirit
-    execute as @a run function hipochallenge:attribute/class/modifiers/tank/kit3/spirit/remove_buff
-    execute as @e[type=marker,tag=spirit_marker] run function hipochallenge:abilities/class/tank/kit3/spirit/tick
-
-    # bubble shield
-    # execute as @e[type=marker,tag=bubble_shield] at @s run function hipochallenge:abilities/class/tank/kit3/bubble_shield/tick with storage minecraft:hipochallenge consts.classes.tank.kit3.bubble_shield
+# bubble shield
+# TODO: handle bubble shield tick
