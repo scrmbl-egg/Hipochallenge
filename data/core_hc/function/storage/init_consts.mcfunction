@@ -201,7 +201,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
                     effects_info:{ \
                         suppression_ticks:0, \
                         effects:[ \
-                            {effect:"minecraft:absorption",seconds:2,amplifier:1,hide_particles:"false"}, \
+                            {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
                         ], \
                     }, \
                     radius:7.0, \
