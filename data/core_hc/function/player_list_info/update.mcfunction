@@ -12,7 +12,7 @@
 # filter out from the ones whose information they would need to care about.
 
 # clear info if player if player doesn't meet the following conditions
-execute unless predicate hipochallenge:team/is_in_match_team \
+execute unless predicate hipochallenge:team/is_in_match_pvp_team \
     run \
     return run \
     function core_hc:player_list_info/clear

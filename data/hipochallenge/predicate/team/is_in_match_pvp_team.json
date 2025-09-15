@@ -14,13 +14,6 @@
             "predicate": {
                 "team": "team2"
             }
-        },
-        {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "team": "spectators"
-            }
         }
     ]
 }

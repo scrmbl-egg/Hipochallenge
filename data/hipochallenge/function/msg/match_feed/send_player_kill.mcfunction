@@ -9,7 +9,7 @@
 #   victim_uuid: #[uuid] int[] @ 4
 #       UUID of the player that was killed by another player.
 
-$tellraw @s [ \
+$tellraw @a[predicate=hipochallenge:team/is_in_match_team] [ \
     { \
         text:"", \
         hover_event:{ \
