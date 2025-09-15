@@ -6,26 +6,31 @@
 # @input
 #   radius: double @ 0..
 #       Radius of the explosion.
-#   entity_selector: int @ 0..
-#       Amount of ticks
-#   effects_info: [::Hipochallenge::mcdoc::effect::AbilityEffects]
-#       Information about the effects that are going to be given to the
-#       selected players.
+#   entity_selector: #[entity] #[selector] string
+#       Entities that are going to be detected by the explosion. (Re-used from
+#       flare_arrow entity selector)
 
 # fx
 execute at @s \
     run \
     function core_hc:fx/projectile/class/recon/flare_arrow/explosion
 
-# TODO: implement explosion effects
-function hipochallenge:msg/debug/send_info { \
-    text:"\"TODO: give flare arrow explosion effects\"", \
-}
-
+# explosion effects
 $execute at @s \
     as $(entity_selector) \
     if entity @s[distance=..$(radius)] \
     run \
-    say i was detected by a flare arrow!
+    function hipochallenge:util/effect/give_ability_effects \
+    with storage minecraft:hipochallenge \
+    consts.classes[{internal_name:"recon"}].\
+    kits[{id:2}].recon_k2_data.flare_arrow.explosion.effects_info
 
-kill @s
+# add detection
+$execute at @s \
+    as $(entity_selector) \
+    if entity @s[distance=..$(radius)] \
+    run \
+    function hipochallenge:mechanic/detection/add
+
+# kill arrow
+function std:entity/kill_self_and_passengers
