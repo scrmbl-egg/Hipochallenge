@@ -1,0 +1,26 @@
+/// Custom item ID component.
+dispatch mcdoc:custom_data[hc:item_id] to #[match_regex="\\b[a-zA-Z_]\\w*\\b"] string
+
+dispatch mcdoc:custom_data[hc:cooldown_item] to (
+dispatch mcdoc:custom_data[hc:flare_arrow] to struct FlareArrowComponent {
+    /// UUID of the player/entity that shot the flare arrow.
+    owner_uuid: #[uuid] int[] @ 4,
+    /// Team that is going to be detected by the flare arrow.
+    detected_team: #[team] string,
+    /// Parameters for the arrow's AABB casting.
+    aabb_params: struct {
+        /// Entities that are going to be detected by the AABB.
+        entity_selector: #[entity] #[selector] string,
+        /// Command that the detected entity will run when detected.
+        on_detection_command: #[command(max_length=32500,empty="allowed")] string,
+        /// Size of the AABB.
+        size: [double] @ 3,
+    },
+    /// Flare arrow explosion data.
+    explosion: struct {
+        /// Explosion radius.
+        radius: double @ 0..,
+        /// Entities that are going to be affected by the explosion.
+        entity_selector: #[entity] #[selector] string,
+    }
+}
