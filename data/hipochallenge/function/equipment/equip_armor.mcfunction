@@ -26,10 +26,10 @@ execute as @s unless predicate hipochallenge:class/has_selected \
     }
 
 # clear armor items
-item replace entity @s armor.head with air 1
-item replace entity @s armor.chest with air 1
-item replace entity @s armor.legs with air 1
-item replace entity @s armor.feet with air 1
+item replace entity @s armor.head with minecraft:air 1
+item replace entity @s armor.chest with minecraft:air 1
+item replace entity @s armor.legs with minecraft:air 1
+item replace entity @s armor.feet with minecraft:air 1
 
 ## setup getters and get class and team data
 # class armor loot tables
@@ -106,7 +106,10 @@ function core_hc:util/attribute/class/apply_attributes \
     with storage hc:temp equip_armor.attributes
 
 # show fx (with team's dust color)
-function core_hc:fx/equipment/equip_armor with storage hc:temp equip_armor.fx
+execute at @s \
+    run \
+    function core_hc:fx/equipment/equip_armor \
+    with storage hc:temp equip_armor.fx
 
 # free memory
 data remove storage hc:temp equip_armor
