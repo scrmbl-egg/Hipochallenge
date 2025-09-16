@@ -28,9 +28,6 @@ tellraw @a [ \
 
 
 ## STORAGE CONSTANTS
-# TODO: remove first function when all constants are replaced
-function hipochallenge:storage/init_consts
-
 execute store result score __$hc_init_consts __hc.InitError \
     run \
     function core_hc:storage/init_consts
