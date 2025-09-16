@@ -132,16 +132,8 @@ scoreboard players add @a hc.HasKilled 0
 execute as @a \
     unless entity @s[scores={hc.Health=-2147483648..2147483647}] \
     run \
-    gamemode adventure
-execute as @a \
-    unless entity @s[scores={hc.Health=-2147483648..2147483647}] \
-    run \
-    damage @s 0.00001 minecraft:magic
-execute as @a \
-    unless entity @s[scores={hc.Health=-2147483648..2147483647}] \
-    run \
-    effect give @s minecraft:instant_health \
-    1 1 false
+    effect give @s minecraft:absorption \
+    1 0 true
 
 ## ASSIGN/SET DISPLAYS
 scoreboard objectives setdisplay list hc.ListInfo
