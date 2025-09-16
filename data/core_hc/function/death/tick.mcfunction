@@ -28,6 +28,11 @@ execute if data storage hc:temp death.attacker_uuid \
     function hipochallenge:msg/match_feed/send_player_kill \
     with storage hc:temp death
 
+# clear dead people in match pvp teams
+execute if predicate hipochallenge:team/is_in_match_pvp_team \
+    run \
+    function #core_hc:equipment/on_death
+
 # tag
 # TODO: this must be uncommented when a proper game state system is implemented
 #tag @s add hc.Dead
