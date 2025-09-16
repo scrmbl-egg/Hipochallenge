@@ -38,6 +38,8 @@ dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
     },
     /// Global variables of the datapack.
     vars: struct MainVars {
+        /// Amount of times the datapack has been reloaded.
+        reload_count: int @ 0..,
         /// Current game context/global variables.
         game_context: GameContext,
         /// Team global variables.
