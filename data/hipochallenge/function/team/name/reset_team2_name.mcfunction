@@ -7,7 +7,7 @@ data remove storage minecraft:hipochallenge vars.team_contexts.team2.custom_name
 
 # get set name function parameters
 data modify storage hc:temp reset_name set value { \
-    team:"team2", \
+    team:"hc.Team2", \
     text:{}, \
     prefix_color:"", \
     team_color:"", \

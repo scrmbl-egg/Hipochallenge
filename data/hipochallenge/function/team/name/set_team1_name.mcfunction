@@ -24,7 +24,7 @@ execute store result score $strlen local_set_team_name \
 execute unless score $strlen local_set_team_name matches 1..12 \
     run \
     function hipochallenge:msg/team/send_error { \
-        team:"team1", \
+        team:"hc.Team1", \
         text:{ \
             translate:"hc.msg.team.error.incorrect_custom_name_length", \
             fallback:"The custom team's name must be between %1$s and %2$s characters long. (Detected length: %3$s)", \
@@ -54,7 +54,7 @@ data modify storage \
 
 # set team prefix and displayName
 data modify storage hc:temp set_name.team \
-    set value "team1"
+    set value "hc.Team1"
 data modify storage hc:temp set_name.text \
     set from storage \
     minecraft:hipochallenge vars.team_contexts.team1.custom_name

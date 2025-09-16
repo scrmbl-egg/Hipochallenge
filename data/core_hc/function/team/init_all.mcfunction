@@ -13,17 +13,17 @@ function hipochallenge:msg/debug/send_info {text:"\"Initialising teams...\""}
 ## PLAYER TEAMS
 
 # admins
-team add admins
-team modify admins collisionRule never
-team modify admins friendlyFire false
-team modify admins nametagVisibility always
-team modify admins seeFriendlyInvisibles true
-team modify admins color yellow
-team modify admins displayName [ \
+team add hc.Admins
+team modify hc.Admins collisionRule never
+team modify hc.Admins friendlyFire false
+team modify hc.Admins nametagVisibility always
+team modify hc.Admins seeFriendlyInvisibles true
+team modify hc.Admins color yellow
+team modify hc.Admins displayName [ \
     {text:"",color:"#ff9148"}, \
     {translate:"hc.teams.admins.name",fallback:"Admins"}, \
 ]
-team modify admins prefix [ \
+team modify hc.Admins prefix [ \
     {text:"",color:"#ff9148"}, \
     "[", \
     {translate:"hc.teams.admins.name",fallback:"Admins"}, \
@@ -31,31 +31,31 @@ team modify admins prefix [ \
 ]
 
 # team 1 (name is not initialised, as it can be changed)
-team add team1
-team modify team1 collisionRule always
-team modify team1 friendlyFire false
-team modify team1 nametagVisibility hideForOtherTeams
-team modify team1 seeFriendlyInvisibles true
+team add hc.Team1
+team modify hc.Team1 collisionRule always
+team modify hc.Team1 friendlyFire false
+team modify hc.Team1 nametagVisibility hideForOtherTeams
+team modify hc.Team1 seeFriendlyInvisibles true
 
 # team 2 (name is not initialised, as it can be changed)
-team add team2
-team modify team2 collisionRule always
-team modify team2 friendlyFire false
-team modify team2 nametagVisibility hideForOtherTeams
-team modify team2 seeFriendlyInvisibles true
+team add hc.Team2
+team modify hc.Team2 collisionRule always
+team modify hc.Team2 friendlyFire false
+team modify hc.Team2 nametagVisibility hideForOtherTeams
+team modify hc.Team2 seeFriendlyInvisibles true
 
 # neutral (only available in training)
-team add neutral
-team modify neutral collisionRule pushOwnTeam
-team modify neutral friendlyFire true
-team modify neutral nametagVisibility always
-team modify neutral seeFriendlyInvisibles false
-team modify neutral color white
-team modify neutral displayName [ \
+team add hc.Neutral
+team modify hc.Neutral collisionRule pushOwnTeam
+team modify hc.Neutral friendlyFire true
+team modify hc.Neutral nametagVisibility always
+team modify hc.Neutral seeFriendlyInvisibles false
+team modify hc.Neutral color white
+team modify hc.Neutral displayName [ \
     {text:"",color:"#88ffff"}, \
     {translate:"hc.teams.neutral.name",fallback:"Neutral"}, \
 ]
-team modify neutral prefix [ \
+team modify hc.Neutral prefix [ \
     {text:"",color:"#88ffff"}, \
     "[", \
     {translate:"hc.teams.neutral.name",fallback:"Neutral"}, \
@@ -63,44 +63,43 @@ team modify neutral prefix [ \
 ]
 
 # spectators
-team add spectators
-team modify spectators collisionRule never
-team modify spectators friendlyFire false
-team modify spectators nametagVisibility hideForOtherTeams
-team modify spectators seeFriendlyInvisibles true
-team modify spectators color gray
-team modify spectators displayName [ \
+team add hc.Spectators
+team modify hc.Spectators collisionRule never
+team modify hc.Spectators friendlyFire false
+team modify hc.Spectators nametagVisibility hideForOtherTeams
+team modify hc.Spectators seeFriendlyInvisibles true
+team modify hc.Spectators color gray
+team modify hc.Spectators displayName [ \
     {translate:"hc.teams.spectators.name",fallback:"Spectators"}, \
 ]
-team modify spectators prefix [ \
+team modify hc.Spectators prefix [ \
     "[", \
     {translate:"hc.teams.spectators.name",fallback:"Spectators"}, \
     "] ", \
 ]
 
 # not playing (not playing game and not in training)
-team add not_playing
-team modify not_playing collisionRule pushOwnTeam
-team modify not_playing friendlyFire false
-team modify not_playing nametagVisibility always
-team modify not_playing seeFriendlyInvisibles false
-team modify not_playing color white
-team modify not_playing displayName [ \
+team add hc.NotPlaying
+team modify hc.NotPlaying collisionRule pushOwnTeam
+team modify hc.NotPlaying friendlyFire false
+team modify hc.NotPlaying nametagVisibility always
+team modify hc.NotPlaying seeFriendlyInvisibles false
+team modify hc.NotPlaying color white
+team modify hc.NotPlaying displayName [ \
     {translate:"hc.teams.not_playing.name",fallback:"Not playing"}, \
 ]
-team modify not_playing prefix ""
+team modify hc.NotPlaying prefix ""
 
 ## OTHER
 
 # entities with no collision
-team add no_collision_entity
-team modify no_collision_entity collisionRule never
-team modify no_collision_entity friendlyFire true
-team modify no_collision_entity nametagVisibility never
-team modify no_collision_entity seeFriendlyInvisibles false
-team modify no_collision_entity color white
-team modify no_collision_entity displayName "no_collision_entity"
-team modify no_collision_entity prefix "[no_collision_entity] "
+team add hc.NoCollisionEntity
+team modify hc.NoCollisionEntity collisionRule never
+team modify hc.NoCollisionEntity friendlyFire true
+team modify hc.NoCollisionEntity nametagVisibility never
+team modify hc.NoCollisionEntity seeFriendlyInvisibles false
+team modify hc.NoCollisionEntity color white
+team modify hc.NoCollisionEntity prefix "[hc.NoCollisionEntity] "
 
 ## __KEEP AT BOTTOM OF FILE__
 # return 1 for success

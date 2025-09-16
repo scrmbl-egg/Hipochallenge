@@ -53,11 +53,11 @@ data modify storage hc:temp equip_armor.get_attributes_params set value { \
     out_storage:"hc:temp", \
     out_nbt:"equip_armor.attributes", \
 }
-execute store result storage \
-    hc:temp equip_armor.get_attributes_params.class_id \
+execute store result \
+    storage hc:temp equip_armor.get_attributes_params.class_id \
     int 1 \
     run \
-    scoreboard players get @s class
+    scoreboard players get @s hc.Class
 
 function core_hc:class/get_data_member \
     with storage hc:temp equip_armor.get_attributes_params

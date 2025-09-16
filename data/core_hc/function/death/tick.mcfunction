@@ -30,7 +30,7 @@ execute if data storage hc:temp death.attacker_uuid \
 
 # tag
 # TODO: this must be uncommented when a proper game state system is implemented
-#tag @s add dead
+#tag @s add hc.Dead
 
 # reset scores and free memory
 scoreboard players set @s hc.IsDead 0

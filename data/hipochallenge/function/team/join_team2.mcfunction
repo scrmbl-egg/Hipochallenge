@@ -38,7 +38,7 @@ data modify storage hc:temp msg_params.text.with[1].color \
 function hipochallenge:msg/all/send with storage hc:temp msg_params
 
 # join team
-team join team2 @s
+team join hc.Team2 @s
 
 # play sound
 execute as @a at @s \

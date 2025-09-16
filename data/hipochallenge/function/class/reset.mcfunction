@@ -4,7 +4,7 @@
 #
 # @context player
 
-scoreboard players set @s class 0
+scoreboard players set @s hc.Class 0
 function hipochallenge:msg/debug/send_info { \
     text:[ \
         "", \

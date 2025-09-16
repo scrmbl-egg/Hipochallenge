@@ -5,21 +5,21 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "team": "team1"
+                "team": "hc.Team1"
             }
         },
         {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "team": "team2"
+                "team": "hc.Team2"
             }
         },
         {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "team": "spectators"
+                "team": "hc.Spectators"
             }
         }
     ]

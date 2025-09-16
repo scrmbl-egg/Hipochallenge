@@ -164,27 +164,27 @@ tellraw @a [ \
 ]
 
 # sound
-execute as @a[tag=!dario_update] \
+execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
     playsound minecraft:entity.player.levelup \
     master @s ~ ~ ~ 0.25 0 0.25
-execute as @a[tag=!dario_update] \
+execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
     playsound minecraft:entity.player.levelup \
     master @s ~ ~ ~ 0.25 1.5 0.25
-execute as @a[tag=!dario_update] \
+execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
     playsound minecraft:entity.player.levelup \
     master @s ~ ~ ~ 0.25 1.2 0.25
-execute as @a[tag=!dario_update] \
+execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
     playsound minecraft:entity.player.levelup \
     master @s ~ ~ ~ 0.25 1 0.25
-execute as @a[tag=dario_update] \
+execute as @a[tag=hc.DarioUpdate] \
     at @s \
     run \
     playsound hipochallenge:dario.dario_update \

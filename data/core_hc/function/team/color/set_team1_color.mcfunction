@@ -70,7 +70,7 @@ execute unless \
     minecraft:hipochallenge vars.team_contexts.team1.preset.default_name
 
 data modify storage hc:temp set_color.name.team \
-    set value "team1"
+    set value "hc.Team1"
 data modify storage hc:temp set_color.name.prefix_color \
     set from storage \
     minecraft:hipochallenge vars.team_contexts.team1.preset.name_color

@@ -6,7 +6,7 @@
 #   text: ::java::util::text::Text
 #       Text component that will be printed.
 
-$tellraw @a[tag=debug] [ \
+$tellraw @a[tag=hc.Debug] [ \
     { \
         text:"", \
         color:"gray", \

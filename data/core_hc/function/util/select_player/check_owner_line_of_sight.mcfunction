@@ -19,7 +19,7 @@
 #       Enemy's team name.
 
 # tag self, as current checked target
-tag @s add select_player_me
+tag @s add hc.SelectPlayerMe
 
 # check if self (current checked target) is in owner line of sight
 $execute as @p[nbt={UUID:$(owner_uuid)}] if predicate { \
@@ -31,14 +31,14 @@ $execute as @p[nbt={UUID:$(owner_uuid)}] if predicate { \
             type: "minecraft:player", \
             looking_at: { \
                 type: "minecraft:player", \
-                nbt: "{Tags:[\"select_player_me\"]}", \
+                nbt: "{Tags:[\"hc.SelectPlayerMe\"]}", \
             }, \
         }, \
     }, \
 } \
-    as @p[tag=select_player_me] \
+    as @p[tag=hc.SelectPlayerMe] \
     run \
     $(on_selected_command)
 
 # remove temporary tag
-tag @s remove select_player_me
+tag @s remove hc.SelectPlayerMe

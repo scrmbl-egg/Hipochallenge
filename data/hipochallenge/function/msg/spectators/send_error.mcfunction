@@ -6,7 +6,7 @@
 #   text: ::java::util::text::Text
 #       Text component that will be printed.
 
-$tellraw @a[team=spectators] [ \
+$tellraw @a[team=hc.Spectators] [ \
     { \
         text:"", \
         color:"red", \

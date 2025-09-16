@@ -33,9 +33,9 @@ clear @s *[custom_data={item_id:tank_k2_goat_horn}] 1
 # TANK_K2_HORN_SLOWNESS_DURATION_SECONDS
 
 # give tag to player
-tag @s add tank_kit2_goat_horn_detecting
+tag @s add hc.TankKit2GoatHornDetecting
 
-execute store result score @s tank_kit2_goat_horn_recovery_ticks run data get storage minecraft:hipochallenge TANK_K2_HORN_RECOVERY_TICKS
+execute store result score @s hc.TankKit2GoatHornRecoveryTicks run data get storage minecraft:hipochallenge TANK_K2_HORN_RECOVERY_TICKS
 
 # handle cooldown
 function hipochallenge:abilities/cooldown/handle_item_cd {item_id:tank_k2_goat_horn,cd_item_modifier:"hipochallenge:weapons/class/tank/kit2/goat_horn_cd",cd_score:tank_kit2_goat_horn_cd,cd_const:TANK_K2_HORN_CD_TICKS}
