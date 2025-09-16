@@ -13,7 +13,7 @@
 # hide kit and perk if player is not detected
 $execute unless predicate hipochallenge:mechanic/is_detected \
     run \
-    scoreboard players display numberformat @s player_list_info fixed [ \
+    scoreboard players display numberformat @s hc.ListInfo fixed [ \
         "", \
         $(class_text), \
         {text:" :: ",color:"gray"}, \
@@ -21,20 +21,20 @@ $execute unless predicate hipochallenge:mechanic/is_detected \
         {text:" :: ",color:"gray"}, \
         {text:"?",color:"gray"}, \
         {text:" - ",color:"gray"}, \
-        {score:{name:"@s",objective:"player_kill_count"},color:"yellow"}, \
+        {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
         {text:" \ud83d\udde1",color:"green"}, \
         {text:" :: ",color:"gray"}, \
-        {score:{name:"@s",objective:"death_count"},color:"yellow"}, \
+        {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
         {text:" \u2620",color:"red"}, \
         {text:" :: ",color:"gray"}, \
-        {score:{name:"@s",objective:"points"},color:"yellow"}, \
+        {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
         {text:" \u2605 ",color:"gold"}, \
     ]
 
 # show kit and perk if player is detected
 $execute if predicate hipochallenge:mechanic/is_detected \
     run \
-    scoreboard players display numberformat @s player_list_info fixed [ \
+    scoreboard players display numberformat @s hc.ListInfo fixed [ \
         "", \
         $(class_text), \
         {text:" :: ",color:"gray"}, \
@@ -42,12 +42,12 @@ $execute if predicate hipochallenge:mechanic/is_detected \
         {text:" :: ",color:"gray"}, \
         $(perk_text), \
         {text:" - ",color:"gray"}, \
-        {score:{name:"@s",objective:"player_kill_count"},color:"yellow"}, \
+        {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
         {text:" \ud83d\udde1",color:"green"}, \
         {text:" :: ",color:"gray"}, \
-        {score:{name:"@s",objective:"death_count"},color:"yellow"}, \
+        {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
         {text:" \u2620",color:"red"}, \
         {text:" :: ",color:"gray"}, \
-        {score:{name:"@s",objective:"points"},color:"yellow"}, \
+        {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
         {text:" \u2605 ",color:"gold"}, \
     ]

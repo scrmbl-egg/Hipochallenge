@@ -15,11 +15,11 @@
 execute unless predicate hipochallenge:team/is_in_match_pvp_team \
     run \
     return run \
-    function core_hc:player_list_info/clear
+    function core_hc:list_info/clear
 execute unless predicate hipochallenge:has_all_options_selected \
     run \
     return run \
-    function core_hc:player_list_info/clear
+    function core_hc:list_info/clear
 
 # prepare all function parameters
 data modify storage hc:temp update_list_info.get_members set value { \
@@ -34,17 +34,17 @@ execute store result \
     storage hc:temp update_list_info.get_members.class_id \
     int 1 \
     run \
-    scoreboard players get @s class
+    scoreboard players get @s hc.Class
 execute store result \
     storage hc:temp update_list_info.get_members.kit_id \
     int 1 \
     run \
-    scoreboard players get @s kit
+    scoreboard players get @s hc.Kit
 execute store result \
     storage hc:temp update_list_info.get_members.perk_id \
     int 1 \
     run \
-    scoreboard players get @s perk
+    scoreboard players get @s hc.Perk
 
 ## get translated names
 data modify storage hc:temp update_list_info.get_members.member_name \
@@ -95,7 +95,7 @@ function core_hc:class/get_data_member \
 
 
 # now that every parameter is set, call display function
-function core_hc:player_list_info/display \
+function core_hc:list_info/display \
     with storage hc:temp update_list_info.display
 
 
