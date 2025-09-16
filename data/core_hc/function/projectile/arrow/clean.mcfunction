@@ -4,5 +4,8 @@
 #
 # @context minecraft:arrow
 
+# fx
 function core_hc:fx/projectile/arrow/clean
-kill @s
+
+# kill
+function std:entity/kill_self_and_passengers
