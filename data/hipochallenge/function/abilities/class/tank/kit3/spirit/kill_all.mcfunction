@@ -1,1 +1,0 @@
-execute as @a run function hipochallenge:abilities/class/tank/kit3/spirit/kill_player_spirit
