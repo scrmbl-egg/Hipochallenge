@@ -29,6 +29,9 @@ execute as @a \
 ## kit 3
 # spirit
 # TODO: handle spirit behaviour
+execute as @e[type=minecraft:allay,tag=hc.TankKit3Spirit] \
+    run \
+    function core_hc:ability/tank/kit3/spirit/tick
 
 # bubble shield
 # TODO: handle bubble shield tick
