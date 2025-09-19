@@ -20,34 +20,34 @@ tag @e[ \
 # the NoGravity property, instead of being false, it's unset, so instead of
 # checking for NoGravity being false, it's necessary to check if it's not
 # present
-execute as @e[\
-        type=minecraft:arrow,\
-        nbt={\
-            weapon:{\
-                components:{\
-                    "minecraft:custom_data":{\
-                        item_id:"marksman_k2_crossbow",\
-                    },\
-                },\
-            },\
-        },\
-        nbt=!{NoGravity:true},\
+execute as @e[ \
+        type=minecraft:arrow, \
+        nbt={ \
+            weapon:{ \
+                components:{ \
+                    "minecraft:custom_data":{ \
+                        "hc:item_id":"marksman_k2_crossbow", \
+                    }, \
+                }, \
+            }, \
+        }, \
+        nbt=!{NoGravity:true} \
     ] \
     run \
     function core_hc:projectile/set_no_gravity
 
 # recon flare arrows tick call
-execute as @e[\
-        type=minecraft:spectral_arrow,\
-        nbt={\
-            weapon:{\
-                components:{\
-                    "minecraft:custom_data":{\
-                        item_id:"recon_k2_flare_arrow_crossbow",\
-                    },\
-                },\
-            },\
-        },\
+execute as @e[ \
+        type=minecraft:spectral_arrow, \
+        nbt={ \
+            weapon:{ \
+                components:{ \
+                    "minecraft:custom_data":{ \
+                        "hc:item_id":"recon_k2_flare_arrow_crossbow", \
+                    }, \
+                }, \
+            }, \
+        } \
     ] \
     run \
     function core_hc:projectile/class/recon/flare_arrow/tick

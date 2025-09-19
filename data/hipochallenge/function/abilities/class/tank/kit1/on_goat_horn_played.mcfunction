@@ -1,9 +1,12 @@
+#>hipochallenge:abilities/class/tank/kit1/on_goat_horn_played
+#
+# Executes all commands when the player uses the tank's kit 1 goat horn.
+#
+# @context player
+
+# revoke detection advancement
 advancement revoke @s \
     only core_hc:class/tank/kit1/used_goat_horn
-
-function hipochallenge:msg/debug/send_info { \
-    text:"\"goat horn used\"", \
-}
 
 # team with no abilities guard clause
 execute as @s unless predicate hipochallenge:team/is_in_pvp_team \
@@ -28,6 +31,10 @@ execute as @s if predicate hipochallenge:mechanic/is_silenced \
             fallback:"You are silenced!", \
         } \
     }
+
+function hipochallenge:msg/debug/send_info { \
+    text:"\"goat horn used\"", \
+}
 
 # no cooldown, item must be deleted due to it being a goat horn
 # score: tank_kit1_goat_horn_cd

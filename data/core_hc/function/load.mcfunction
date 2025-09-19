@@ -14,7 +14,7 @@ scoreboard players set __$hc_init_gamerules __hc.InitError 0
 # loading message
 tellraw @a [ \
     "", \
-    {color:"white",bold:true,text:"HIPOCHALLENGE: "}, \
+    {color:"white",bold:true,text:"[HIPOCHALLENGE: "}, \
     {color:"#ff493b",text:"P"}, \
     {color:"#ff5538",text:"h"}, \
     {color:"#ff6035",text:"o"}, \
@@ -22,7 +22,7 @@ tellraw @a [ \
     {color:"#ff762e",text:"n"}, \
     {color:"#ff822b",text:"i"}, \
     {color:"#ff8d28",text:"x"}, \
-    ": ", \
+    {color:"white",bold:true,text:"]: "}, \
     {translate:"commands.reload.success",fallback:"Reloading!"}, \
 ]
 
@@ -129,7 +129,7 @@ execute store result storage minecraft:hipochallenge vars.reload_count \
 # reload success message
 tellraw @a [ \
     "", \
-    {color:"white",bold:true,text:"HIPOCHALLENGE: "}, \
+    {color:"white",bold:true,text:"[HIPOCHALLENGE: "}, \
     {color:"#ff493b",text:"P"}, \
     {color:"#ff5538",text:"h"}, \
     {color:"#ff6035",text:"o"}, \
@@ -137,6 +137,7 @@ tellraw @a [ \
     {color:"#ff762e",text:"n"}, \
     {color:"#ff822b",text:"i"}, \
     {color:"#ff8d28",text:"x"}, \
+    {color:"white",bold:true,text:"]: "}, \
     "\n", \
     {text:"- "}, \
     { \

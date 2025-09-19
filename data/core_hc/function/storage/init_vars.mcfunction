@@ -5,14 +5,16 @@
 # @returns
 #   Result: 1 if all variables are initialised
 
-# WARNING: Unsafe function!
+## WARNING:
+# Unsafe function!
+#
 # This function initializes all variables in the game. This is a dangerous
 # function to execute because these values are changed during the game, and
 # resetting them in this function may cause A LOT of unexpected behaviour.
 
-# TODO: Initialise minecraft:hipochallenge variables here.
-
-function hipochallenge:msg/debug/send_info {text:"\"Initialising datapack global variables...\""}
+function hipochallenge:msg/debug/send_info { \
+    text:"\"Initialising datapack global variables...\"", \
+}
 
 # reset
 data remove storage minecraft:hipochallenge vars
@@ -37,8 +39,8 @@ data remove storage minecraft:hipochallenge vars.team_contexts.team1.custom_name
 data remove storage minecraft:hipochallenge vars.team_contexts.team2.custom_name
 
 data modify storage minecraft:hipochallenge vars.team_contexts set value { \
-    team1: { \
-        preset: { \
+    team1:{ \
+        preset:{ \
             internal_name:"red", \
             id:1, \
             default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
@@ -46,12 +48,12 @@ data modify storage minecraft:hipochallenge vars.team_contexts set value { \
             text_color:"red", \
             dust_color:[1.0f,0.0f,0.0f], \
             armor_color:11546150, \
-            trim_material:"redstone", \
+            trim_material:"minecraft:redstone", \
         }, \
         players:[], \
     }, \
-    team2: { \
-        preset: { \
+    team2:{ \
+        preset:{ \
             internal_name:"blue", \
             id:4, \
             default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
@@ -59,7 +61,7 @@ data modify storage minecraft:hipochallenge vars.team_contexts set value { \
             text_color:"blue", \
             dust_color:[0.0f,0.0f,1.0f], \
             armor_color:3949738, \
-            trim_material:"lapis", \
+            trim_material:"minecraft:lapis", \
         }, \
         players:[], \
     }, \

@@ -12,7 +12,8 @@ function core_hc:music/mute_vanilla
 # TODO: when classes are done, implement game state updates and logic
 
 # deaths
-execute as @a[scores={is_dead=1..}] at @s \
+execute as @a[scores={hc.IsDead=1..}] \
+    at @s \
     run \
     function core_hc:death/tick
 

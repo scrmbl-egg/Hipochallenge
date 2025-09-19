@@ -8,7 +8,9 @@
 #$tellraw @a {"text":"pos:[$(x_pos),$(y_pos),$(z_pos)]\nfut_pos:[$(x_future_pos),$(y_future_pos),$(z_future_pos)]\nmot:[$(x_motion),$(y_motion),$(z_motion)]\n---"}
 
 # create a temporal marker to check if arrow needs to be killed
-$execute positioned $(x_future_pos) $(y_future_pos) $(z_future_pos) run summon marker ~ ~ ~ {Tags:["kill_checker","kill_at_end_of_round"]}
+
+# FIXME: deprecate
+#$execute positioned $(x_future_pos) $(y_future_pos) $(z_future_pos) run summon marker ~ ~ ~ {Tags:["kill_checker","kill_at_end_of_round"]}
 
 # add to bubble shield's lifetime on impact
 $execute \

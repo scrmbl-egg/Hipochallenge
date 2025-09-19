@@ -64,6 +64,6 @@ gamerule tntExplosionDropDecay false
 gamerule universalAnger false
 gamerule waterSourceConversion true
 
-# __KEEP AT BOTTOM OF FILE__
+## __KEEP AT BOTTOM OF FILE__
 # return 1 for success
 return 1
