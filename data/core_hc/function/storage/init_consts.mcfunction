@@ -20,7 +20,7 @@ data remove storage minecraft:hipochallenge consts
 ## GAME CONSTANTS
 
 data modify storage minecraft:hipochallenge consts.game set value { \
-    map_version: "pre-alpha", \
+    map_version: "Pre-Alpha", \
     team_size:3, \
     necessary_players_for_game:6, \
     match_request_duration_ticks:1200, \
