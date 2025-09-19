@@ -725,15 +725,6 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
     ], \
 }
 
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.max_flare_arrow_amount set value 1
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.new_flare_arrow_first_cooldown_ticks set value 120
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.new_flare_arrow_rest_cooldown_ticks set value -1
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dx set value 2.2
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dy set value 2.2
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.detection_dz set value 2.2
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_range set value 6
-#data modify storage minecraft:hipochallenge consts.classes.recon.kit2.flare_arrow.explosion_effects set value [{id:"glowing",duration_seconds:5,amplifier:0,hide_particles:false},{id:"blindness",duration_seconds:2,amplifier:0,hide_particles:false}]
-
 # assault -> classes[5]
 data modify storage minecraft:hipochallenge consts.classes append value { \
     internal_name:"assault", \
@@ -833,7 +824,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 
 ## POST-SETUP CALCULATIONS
 # the constants that are calculated here are mainly used for predicates that
-# the perform checks of constant values.
+# perform checks of constant values.
 
 # class count
 execute store result storage minecraft:hipochallenge consts.class_count \
