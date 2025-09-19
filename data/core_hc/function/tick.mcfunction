@@ -2,6 +2,15 @@
 #
 # Datapack function that executes each tick (20 times per second).
 
+# handle players that just logged back
+execute as @a[scores={hc.HasLeft=1..}] \
+    at @s \
+    run \
+    function core_hc:fx/util/login
+execute as @a[scores={hc.HasLeft=1..}] \
+    run \
+    scoreboard players set @s hc.HasLeft 0
+
 # remove recipes
 recipe take @a *
 
