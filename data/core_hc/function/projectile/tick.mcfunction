@@ -56,7 +56,22 @@ execute as @e[ \
 function #extension_hc:projectile/tick
 
 ## __ KEEP AT BOTTOM OF FILE __
-# clean all arrows
-execute as @e[type=#minecraft:arrows,nbt={shake:1b}] at @s \
+# clean all projectiles that have no lifetime left
+execute as @e[ \
+    type=#hipochallenge:game_projectiles, \
+    tag=hc.Projectile, \
+    scores={hc.LifeTimer=..1} \
+] \
+    at @s \
+    run \
+    function std:entity/kill_self_and_passengers
+
+# clean all arrows that that have landed
+execute as @e[ \
+    type=#minecraft:arrows, \
+    tag=hc.Projectile, \
+    nbt={shake:1b} \
+] \
+    at @s \
     run \
     function core_hc:projectile/arrow/clean
