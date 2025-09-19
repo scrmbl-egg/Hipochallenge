@@ -99,7 +99,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
     name_color:"#fffb0a", \
     text_color:"yellow", \
     dust_color:[1.0f,1.0f,0.0f], \
-    armor_color:16108323, \
+    armor_color:16766252, \
     trim_material:"minecraft:gold", \
 }
 
