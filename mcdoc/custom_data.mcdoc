@@ -1,7 +1,16 @@
+use ::Hipochallenge::mcdoc::effect::AbilityEffects
+
 /// Custom item ID component.
 dispatch mcdoc:custom_data[hc:item_id] to #[match_regex="\\b[a-zA-Z_]\\w*\\b"] string
 
-dispatch mcdoc:custom_data[hc:cooldown_item] to (
+/// Component for Tank Kit 3 spirit.
+dispatch mcdoc:custom_data[hc:spirit] to struct Spirit {
+    owner_uuid: #[uuid] int[] @ 4,
+    target_uuid: #[uuid] int[] @ 4,
+    goal_uuid: #[uuid] int[] @ 4,
+}
+
+/// Component for Recon Kit 2 flare arrows.
 dispatch mcdoc:custom_data[hc:flare_arrow] to struct FlareArrowComponent {
     /// UUID of the player/entity that shot the flare arrow.
     owner_uuid: #[uuid] int[] @ 4,
