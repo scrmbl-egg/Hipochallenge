@@ -750,8 +750,8 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
     }, \
     list_info:{ \
         class_color:"#dc928e", \
-        kit_color:"#dc928e", \
-        perk_color:"#dc928e", \
+        kit_color:"#e7b3b0", \
+        perk_color:"#f1d3d2", \
     }, \
     armor_loot_tables:{ \
         head:"hipochallenge:class/assault/armor/head", \
