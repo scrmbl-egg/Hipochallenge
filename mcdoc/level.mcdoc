@@ -22,7 +22,7 @@ struct Level {
         overtime_command: #[id="function"] string,
         /// Command ran when the round ends.
         round_end_command: #[id="function"] string,
-        /// Command ran when teh match ends.
+        /// Command ran when the match ends.
         match_end_command: #[id="function"] string,
         /// Command ran each tick.
         tick_command: #[id="function"] string,
@@ -42,7 +42,7 @@ struct Callout {
 }
 
 enum(int) LevelId {
-    TrainingArea = 0,
+    PracticeArea = 0,
     SubterraneanDecay = 1,
     FroggylandPlayplace2 = 2,
     SepulchredSacrifice2 = 3,
