@@ -11,4 +11,4 @@ function hipochallenge:util/attribute/reset_all
 ## NOTE:
 # the following function tag encapsulates all functions that dispose resources
 # or kill temporary entities owned by the player.
-function #core_hc:equipment/cleanup
+function #core_hc:equipment/on_round_end
