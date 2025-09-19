@@ -19,6 +19,9 @@ function hipochallenge:msg/debug/send_info { \
 # reset
 data remove storage minecraft:hipochallenge vars
 
+## RELOAD COUNT
+data modify storage minecraft:hipochallenge vars.reload_count set value 0
+
 ## GAME CONTEXTS
 data modify storage minecraft:hipochallenge vars.game_context set value { \
     current_state:1b, \
