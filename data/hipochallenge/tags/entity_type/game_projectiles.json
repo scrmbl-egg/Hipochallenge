@@ -1,7 +1,7 @@
 {
     "values": [
         "#hipochallenge:vanilla_projectiles",
-        "marker",
-        "armor_stand"
+        "minecraft:marker",
+        "minecraft:armor_stand"
     ]
 }
