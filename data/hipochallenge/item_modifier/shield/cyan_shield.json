@@ -20,39 +20,19 @@
                 "hc:item_id": "tank_shield"
             },
             "minecraft:unbreakable": {},
-            "minecraft:base_color": "black",
+            "minecraft:base_color": "light_blue",
             "minecraft:banner_patterns": [
                 {
-                    "pattern": "minecraft:stripe_downleft",
-                    "color": "white"
-                },
-                {
-                    "pattern": "minecraft:rhombus",
+                    "pattern": "minecraft:gradient_up",
                     "color": "blue"
-                },
-                {
-                    "pattern": "minecraft:stripe_downleft",
-                    "color": "black"
                 },
                 {
                     "pattern": "minecraft:circle",
-                    "color": "blue"
+                    "color": "light_blue"
                 },
                 {
-                    "pattern": "minecraft:flower",
-                    "color": "black"
-                },
-                {
-                    "pattern": "minecraft:triangles_top",
-                    "color": "blue"
-                },
-                {
-                    "pattern": "minecraft:triangles_bottom",
-                    "color": "blue"
-                },
-                {
-                    "pattern": "minecraft:border",
-                    "color": "black"
+                    "pattern": "minecraft:globe",
+                    "color": "white"
                 }
             ],
             "minecraft:tooltip_display": {
