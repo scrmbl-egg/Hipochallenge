@@ -15,10 +15,11 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k2_goat_horn}",
+            "minecraft:custom_data": {
+                "hc:item_id": "tank_k2_goat_horn"
+            },
             "minecraft:rarity": "epic",
-            "minecraft:instrument": "minecraft:sing_goat_horn",
-            "minecraft:hide_additional_tooltip": {}
+            "minecraft:instrument": "minecraft:sing_goat_horn"
         }
     }
 ]

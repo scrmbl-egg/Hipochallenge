@@ -6,12 +6,8 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:assassin_k3_heavy_core}",
-            "minecraft:food": {
-                "nutrition": 0,
-                "saturation": 0,
-                "can_always_eat": true,
-                "eat_seconds": 1000000
+            "minecraft:custom_data": {
+                "hc:item_id": "assassin_k3_heavy_core"
             }
         }
     }

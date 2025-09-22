@@ -15,10 +15,10 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k1_castle}",
-            "minecraft:unbreakable": {
-                "show_in_tooltip": false
+            "minecraft:custom_data": {
+                "hc:item_id": "tank_k1_castle"
             },
+            "minecraft:unbreakable": {},
             "minecraft:rarity": "uncommon",
             "minecraft:consumable": {
                 "consume_seconds": 0.0,
@@ -28,16 +28,23 @@
             },
             "minecraft:use_cooldown": {
                 "seconds": 20.0,
-                "cooldown_group": "hipochallenge:tank_k1_castle_cd"
+                "cooldown_group": "hc:tank_k1_castle"
             },
             "minecraft:use_remainder": {
                 "id": "minecraft:armor_stand",
                 "components": {
-                    "minecraft:custom_data": "{item_id:tank_k1_castle_cd}",
-                    "minecraft:unbreakable": {"show_in_tooltip": false},
+                    "minecraft:custom_data": {
+                        "hc:item_id": "tank_k1_castle_cooldown"
+                    },
+                    "minecraft:unbreakable": {},
                     "minecraft:use_cooldown": {
                         "seconds": 20.0,
-                        "cooldown_group": "hipochallenge:tank_k1_castle_cd"
+                        "cooldown_group": "hc:tank_k1_castle"
+                    },
+                    "minecraft:tooltip_display": {
+                        "hidden_components": [
+                            "minecraft:unbreakable"
+                        ]
                     }
                 }
             }

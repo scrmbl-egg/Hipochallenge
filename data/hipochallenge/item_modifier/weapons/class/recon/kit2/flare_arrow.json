@@ -15,8 +15,10 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:recon_k2_flare_arrow}",
-            "minecraft:custom_model_data": 0
+            "minecraft:custom_data": {
+                "hc:item_id": "recon_k2_flare_arrow"
+            },
+            "minecraft:custom_model_data": {}
         }
     }
 ]

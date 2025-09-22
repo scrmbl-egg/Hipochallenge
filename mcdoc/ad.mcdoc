@@ -1,0 +1,16 @@
+use ::java::util::text::Text
+
+struct Advert {
+    id: int,
+    /// Text of the ad.
+    text: Text,
+    /// Publisher
+    publisher: Publisher[[internal_name]]
+}
+
+struct Publisher {
+    internal_name: enum(string) {
+        HipoCorp = "hipocorp"
+    },
+    name: Text
+}

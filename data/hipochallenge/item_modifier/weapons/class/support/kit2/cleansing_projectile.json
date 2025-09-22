@@ -15,13 +15,15 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:support_k2_cleansing_projectile}",
-            "minecraft:custom_model_data": 0,
-            "minecraft:food": {
-                "nutrition": 0,
-                "saturation": 0,
-                "can_always_eat": true,
-                "eat_seconds": 1000000
+            "minecraft:custom_data": {
+                "hc:item_id": "support_k2_cleansing_projectile"
+            },
+            "minecraft:custom_model_data": {},
+            "minecraft:consumable": {
+                "animation": "spear",
+                "consume_seconds": 0.0,
+                "has_consume_particles": false,
+                "on_consume_effects": []
             }
         }
     }

@@ -11,3 +11,13 @@ struct AttributeModifierCommmandParameters {
     /// Modifier value.
     value: double
 }
+
+struct TimedAttributeModifier {
+    ...AttributeModifierCommmandParameters,
+    ticks: int @ 1..,
+}
+
+struct AbilityAttributes {
+    permanent: [AttributeModifierCommmandParameters],
+    timed: [TimedAttributeModifier]
+}

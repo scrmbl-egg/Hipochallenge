@@ -6,29 +6,26 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k2_sword}",
-            "minecraft:unbreakable": {
-                "show_in_tooltip": false
+            "minecraft:custom_data": {
+                "hc:item_id": "tank_k2_sword"
             },
-            "minecraft:attribute_modifiers": {
-                "modifiers": [
-                    {
-                        "id": "tank_k2_sword_attack_damage",
-                        "type": "minecraft:attack_damage",
-                        "amount": 4,
-                        "operation": "add_value",
-                        "slot": "mainhand"
-                    },
-                    {
-                        "id": "tank_k2_sword_attack_speed",
-                        "type": "minecraft:attack_speed",
-                        "amount": -2.4,
-                        "operation": "add_value",
-                        "slot": "mainhand"
-                    }
-                ],
-                "show_in_tooltip": false
-            }
+            "minecraft:unbreakable": {},
+            "minecraft:attribute_modifiers": [
+                {
+                    "id": "hc:tank_k2_sword_attack_damage",
+                    "type": "minecraft:attack_damage",
+                    "amount": 4,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                },
+                {
+                    "id": "hc:tank_k2_sword_attack_speed",
+                    "type": "minecraft:attack_speed",
+                    "amount": -2.4,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                }
+            ]
         }
     }
 ]

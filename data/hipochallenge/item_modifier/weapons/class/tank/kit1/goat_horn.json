@@ -15,7 +15,9 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:tank_k1_goat_horn}",
+            "minecraft:custom_data": {
+                "hc:item_id": "tank_k1_goat_horn"
+            },
             "minecraft:rarity": "epic",
             "minecraft:instrument": "minecraft:ponder_goat_horn"
         }

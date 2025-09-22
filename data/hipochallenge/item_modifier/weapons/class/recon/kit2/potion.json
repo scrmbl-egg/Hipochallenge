@@ -15,19 +15,22 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_data": "{item_id:recon_k2_potion}",
-            "minecraft:custom_model_data": 0,
+            "minecraft:custom_data": {
+                "hc:item_id": "recon_k2_potion"
+            },
+            "minecraft:custom_model_data": {},
             "minecraft:potion_contents": {
                 "custom_effects": [
                     {
                         "id": "minecraft:speed",
                         "amplifier": 1,
                         "duration": 300,
-                        "show_icon": true
+                        "show_icon": true,
+                        "ambient": true,
+                        "show_particles": true
                     }
                 ]
-            },
-            "minecraft:hide_additional_tooltip": {}
+            }
         }
     }
 ]
