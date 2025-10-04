@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/tank/kit1/on_goat_horn_played"
+        "function": "hc:abilities/class/tank/kit1/on_goat_horn_played"
     }
 }

@@ -21,7 +21,7 @@
 $execute at @s \
     if data storage hc:temp select_player{target_mode:"all"} \
     as @a[\
-        predicate=hipochallenge:team/is_in_pvp_team, \
+        predicate=hc:team/is_in_pvp_team, \
         nbt=!{UUID:$(owner_uuid)}, \
         distance=..$(max_distance) \
     ] \

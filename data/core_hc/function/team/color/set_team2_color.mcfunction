@@ -47,7 +47,7 @@ $data modify storage \
     consts.team_presets[{internal_name:$(color_internal_name)}].text_color
 
 # send message
-function hipochallenge:msg/all/send with storage hc:temp set_color.msg
+function hc:msg/all/send with storage hc:temp set_color.msg
 
 ## set team context preset
 $data modify storage hc:main vars.team_contexts.team2.preset \
@@ -107,7 +107,7 @@ execute unless \
 execute unless \
     data storage hc:main vars.team_contexts.team2.custom_name \
     run \
-    function hipochallenge:msg/all/send with storage hc:temp set_color.name_msg
+    function hc:msg/all/send with storage hc:temp set_color.name_msg
 
 # play sound
 execute as @a at @s run \

@@ -1,0 +1,38 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:cake",
+            "count": 1
+        },
+        "title": {
+            "translate": "hc.not_translated",
+            "fallback": "Classic Combo"
+        },
+        "description": {
+            "translate": "hc.not_translated",
+            "fallback": "As a team, select the three legacy classes (%1$s, %2$s & %3$s) in %4$s",
+            "with": [
+                {"translate":"hc.class.tank","fallback":"Tank"},
+                {"translate":"hc.class.recon","fallback":"Recon"},
+                {"translate":"hc.class.marksman","fallback":"Marksman"},
+                {"translate":"hc.levels.level0.name","fallback":"Subterranean Decay"}
+            ]
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "hc:combat/team/root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

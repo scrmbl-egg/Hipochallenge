@@ -13,7 +13,7 @@ title @s title [{bold:true,color:"#ebeeff",text:"HIPOCHALLENGE"}]
 title @s subtitle {bold:true,color:"red",text:"PHOENIX"}
 
 # play little jingle for the new player! :D
-playsound hipochallenge:notification.welcome \
+playsound hc:notification.welcome \
     music @s ~ ~ ~ 1 1
 # TODO: sound name should probably be changed
 

@@ -5,7 +5,7 @@
 # @returns
 #   Result: 1 if all scores are initialised
 
-function hipochallenge:msg/debug/send_info { \
+function hc:msg/debug/send_info { \
     text:"\"Initialising score objectives...\"", \
 }
 

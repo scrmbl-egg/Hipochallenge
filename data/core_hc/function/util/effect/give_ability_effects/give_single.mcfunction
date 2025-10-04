@@ -7,4 +7,4 @@
 #   current_effect: ::Hipochallenge::mcdoc::effect::EffectCommandParameters
 #       Effect struct instance that is going to serve as a function parameter.
 
-$function hipochallenge:util/effect/give $(current_effect)
+$function hc:util/effect/give $(current_effect)

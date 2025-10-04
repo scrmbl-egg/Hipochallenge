@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/support/kit1/on_gravity_well_placed"
+        "function": "hc:abilities/class/support/kit1/on_gravity_well_placed"
     }
 }

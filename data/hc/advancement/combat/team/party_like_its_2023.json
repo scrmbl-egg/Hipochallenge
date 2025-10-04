@@ -1,0 +1,35 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:netherite_axe",
+            "count": 1
+        },
+        "title": {
+            "translate": "hc.not_translated",
+            "fallback": "\"Time to party like it's 2023\""
+        },
+        "description": {
+            "translate": "hc.not_translated",
+            "fallback": "Finish a game where both teams followed the requirements of the %s advancement.",
+            "with": [
+                {"translate":"hc.advancement.combat.team.classic_combo","fallback":"Classic Combo"}
+            ]
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "parent": "hc:combat/team/classic_combo",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

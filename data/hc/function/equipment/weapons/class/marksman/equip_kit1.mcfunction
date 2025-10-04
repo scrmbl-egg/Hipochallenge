@@ -1,0 +1,19 @@
+# bow
+item replace entity @s hotbar.0 with paper
+item modify entity @s hotbar.0 hc:weapons/class/marksman/kit1/bow
+
+# archer's sickle
+item replace entity @s hotbar.1 with paper
+item modify entity @s hotbar.1 hc:weapons/class/marksman/kit1/sickle
+
+# archer's potion
+item replace entity @s hotbar.2 with paper
+item modify entity @s hotbar.2 hc:weapons/class/marksman/kit1/potion
+
+# smoke crossbow
+item replace entity @s hotbar.3 with paper
+item modify entity @s hotbar.3 hc:weapons/class/marksman/kit1/smoke_arrow_crossbow
+
+# arrows
+item replace entity @s hotbar.4 with paper 6
+item modify entity @s hotbar.4 hc:weapons/class/marksman/kit1/arrow

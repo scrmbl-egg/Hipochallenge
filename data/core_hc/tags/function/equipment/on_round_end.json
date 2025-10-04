@@ -1,6 +1,6 @@
 {
     "values": [
-        "hipochallenge:abilities/class/tank/kit3/spirit/kill",
+        "hc:abilities/class/tank/kit3/spirit/kill",
 
         "#extension_hc:equipment/on_round_end"
     ]

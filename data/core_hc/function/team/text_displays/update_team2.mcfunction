@@ -3,7 +3,7 @@
 # Updates all text displays which display the second team's name.
 
 # TODO: create team2 text displays
-function hipochallenge:msg/debug/send_info { \
+function hc:msg/debug/send_info { \
     text:[ \
         "TODO! implement team2 text displays update function" \
     ], \

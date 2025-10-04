@@ -12,7 +12,7 @@
 # function to execute because these values are changed during the game, and
 # resetting them in this function may cause A LOT of unexpected behaviour.
 
-function hipochallenge:msg/debug/send_info { \
+function hc:msg/debug/send_info { \
     text:"\"Initialising datapack global variables...\"", \
 }
 

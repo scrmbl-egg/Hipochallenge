@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:potion",
+            "count": 1,
+            "components": {
+                "minecraft:potion_contents": {
+                    "potion": "minecraft:healing"
+                }
+            }
+        },
+        "title": {
+            "translate": "hc.advancements.combat.support.root.name",
+            "fallback": "Support"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.support.root.description",
+            "fallback": "Select the Support class"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "hc:combat/root",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

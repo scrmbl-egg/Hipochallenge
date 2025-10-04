@@ -21,11 +21,11 @@ $execute at @s \
     ] \
     as @s \
     run \
-    function hipochallenge:util/effect/give_ability_effects \
+    function hc:util/effect/give_ability_effects \
     with storage hc:main \
     consts.classes[{internal_name:"assassin"}].\
     kits[{id:2}].assassin_k2_data.stun_mechanism.effects_info
 
-function hipochallenge:msg/debug/send_info { \
+function hc:msg/debug/send_info { \
     text:"\"TODO: Root effect (through temporary attribute modifiers)\"", \
 }

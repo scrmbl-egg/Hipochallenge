@@ -5,7 +5,7 @@
 # @returns
 #   Result: 1 if all gamerules are properly set.
 
-function hipochallenge:msg/debug/send_info {text:"\"Setting gamerules...\""}
+function hc:msg/debug/send_info {text:"\"Setting gamerules...\""}
 
 ## TODO: uncomment all commented gamerules when the minigame is released
 

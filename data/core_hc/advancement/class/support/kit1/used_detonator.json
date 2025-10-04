@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/support/kit1/on_levitation_bomb_detonator_used"
+        "function": "hc:abilities/class/support/kit1/on_levitation_bomb_detonator_used"
     }
 }

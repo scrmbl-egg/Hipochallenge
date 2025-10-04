@@ -22,7 +22,7 @@ $data modify storage hc:temp dbg_msg.text[3] \
     hc:main consts.classes[{id:$(value)}].name.fallback
 
 # print message
-function hipochallenge:msg/debug/send_info with storage hc:temp dbg_msg
+function hc:msg/debug/send_info with storage hc:temp dbg_msg
 
 # free memory
 data remove storage hc:temp dbg_msg

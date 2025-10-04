@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/assassin/kit3/on_magic_feather_used"
+        "function": "hc:abilities/class/assassin/kit3/on_magic_feather_used"
     }
 }

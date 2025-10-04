@@ -4,21 +4,21 @@
         "minecraft:attribute_modifiers": [
             {
                 "type": "minecraft:armor",
-                "id": "hipochallenge:no_armor",
+                "id": "hc:no_armor",
                 "amount": 0,
                 "operation": "add_value",
                 "slot": "armor"
             },
             {
                 "type": "minecraft:armor_toughness",
-                "id": "hipochallenge:no_armor_toughness",
+                "id": "hc:no_armor_toughness",
                 "amount": 0,
                 "operation": "add_value",
                 "slot": "armor"
             },
             {
                 "type": "minecraft:knockback_resistance",
-                "id": "hipochallenge:no_knockback_resistance",
+                "id": "hc:no_knockback_resistance",
                 "amount": 0,
                 "operation": "add_value",
                 "slot": "armor"

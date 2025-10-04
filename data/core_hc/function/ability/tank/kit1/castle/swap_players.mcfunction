@@ -32,11 +32,11 @@ $execute as @p[nbt={UUID:$(other_uuid)}] \
     positioned $(self_pos_x) $(self_pos_y) $(self_pos_z) \
     rotated $(self_yaw) $(self_pitch) \
     run \
-    function hipochallenge:util/tp
+    function hc:util/tp
 
 # self to other
 $execute as @s \
     positioned $(other_pos_x) $(other_pos_y) $(other_pos_z) \
     rotated $(other_yaw) $(other_pitch) \
     run \
-    function hipochallenge:util/tp
+    function hc:util/tp

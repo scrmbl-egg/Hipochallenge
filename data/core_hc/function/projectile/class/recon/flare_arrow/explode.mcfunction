@@ -20,7 +20,7 @@ $execute at @s \
     as $(entity_selector) \
     if entity @s[distance=..$(radius)] \
     run \
-    function hipochallenge:util/effect/give_ability_effects \
+    function hc:util/effect/give_ability_effects \
     with storage hc:main \
     consts.classes[{internal_name:"recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.explosion.effects_info
@@ -30,7 +30,7 @@ $execute at @s \
     as $(entity_selector) \
     if entity @s[distance=..$(radius)] \
     run \
-    function hipochallenge:mechanic/detection/add
+    function hc:mechanic/detection/add
 
 # kill arrow
 function std:entity/kill_self_and_passengers

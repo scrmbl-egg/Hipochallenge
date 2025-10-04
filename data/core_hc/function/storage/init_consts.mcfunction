@@ -9,7 +9,7 @@
 
 # TODO: Complete the list of constants
 
-function hipochallenge:msg/debug/send_info { \
+function hc:msg/debug/send_info { \
     text:"\"Initialising datapack constants...\"", \
 }
 
@@ -184,10 +184,10 @@ data modify storage hc:main consts.classes append value { \
         perk_color:"#cce7d9", \
     }, \
     armor_loot_tables:{ \
-        head:"hipochallenge:class/tank/armor/head", \
-        chest:"hipochallenge:class/tank/armor/chest", \
-        legs:"hipochallenge:class/tank/armor/legs", \
-        feet:"hipochallenge:class/tank/armor/feet", \
+        head:"hc:class/tank/armor/head", \
+        chest:"hc:class/tank/armor/chest", \
+        legs:"hc:class/tank/armor/legs", \
+        feet:"hc:class/tank/armor/feet", \
     }, \
     kits: [ \
         { \
@@ -332,10 +332,10 @@ data modify storage hc:main consts.classes append value { \
         perk_color:"#f2e3c9", \
     }, \
     armor_loot_tables:{ \
-        head:"hipochallenge:class/marksman/armor/head", \
-        chest:"hipochallenge:class/marksman/armor/chest", \
-        legs:"hipochallenge:class/marksman/armor/legs", \
-        feet:"hipochallenge:class/marksman/armor/feet", \
+        head:"hc:class/marksman/armor/head", \
+        chest:"hc:class/marksman/armor/chest", \
+        legs:"hc:class/marksman/armor/legs", \
+        feet:"hc:class/marksman/armor/feet", \
     }, \
     kits:[ \
         { \
@@ -440,10 +440,10 @@ data modify storage hc:main consts.classes append value { \
         perk_color:"#ccdff4", \
     }, \
     armor_loot_tables: { \
-        head:"hipochallenge:class/assassin/armor/head", \
-        chest:"hipochallenge:class/assassin/armor/chest", \
-        legs:"hipochallenge:class/assassin/armor/legs", \
-        feet:"hipochallenge:class/assassin/armor/feet", \
+        head:"hc:class/assassin/armor/head", \
+        chest:"hc:class/assassin/armor/chest", \
+        legs:"hc:class/assassin/armor/legs", \
+        feet:"hc:class/assassin/armor/feet", \
     }, \
     kits:[ \
         { \
@@ -555,10 +555,10 @@ data modify storage hc:main consts.classes append value { \
         perk_color:"#f7decb", \
     }, \
     armor_loot_tables:{ \
-        head:"hipochallenge:class/support/armor/head", \
-        chest:"hipochallenge:class/support/armor/chest", \
-        legs:"hipochallenge:class/support/armor/legs", \
-        feet:"hipochallenge:class/support/armor/feet", \
+        head:"hc:class/support/armor/head", \
+        chest:"hc:class/support/armor/chest", \
+        legs:"hc:class/support/armor/legs", \
+        feet:"hc:class/support/armor/feet", \
     }, \
     kits:[ \
         { \
@@ -644,10 +644,10 @@ data modify storage hc:main consts.classes append value { \
         perk_color:"#e3d8f0", \
     }, \
     armor_loot_tables:{ \
-        head:"hipochallenge:class/recon/armor/head", \
-        chest:"hipochallenge:class/recon/armor/chest", \
-        legs:"hipochallenge:class/recon/armor/legs", \
-        feet:"hipochallenge:class/recon/armor/feet", \
+        head:"hc:class/recon/armor/head", \
+        chest:"hc:class/recon/armor/chest", \
+        legs:"hc:class/recon/armor/legs", \
+        feet:"hc:class/recon/armor/feet", \
     }, \
     kits:[ \
         { \
@@ -744,10 +744,10 @@ data modify storage hc:main consts.classes append value { \
         perk_color:"#f1d3d2", \
     }, \
     armor_loot_tables:{ \
-        head:"hipochallenge:class/assault/armor/head", \
-        chest:"hipochallenge:class/assault/armor/chest", \
-        legs:"hipochallenge:class/assault/armor/legs", \
-        feet:"hipochallenge:class/assault/armor/feet", \
+        head:"hc:class/assault/armor/head", \
+        chest:"hc:class/assault/armor/chest", \
+        legs:"hc:class/assault/armor/legs", \
+        feet:"hc:class/assault/armor/feet", \
     }, \
     kits:[ \
         { \

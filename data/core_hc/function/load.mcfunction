@@ -35,7 +35,7 @@ execute store result score __$hc_init_consts __hc.InitError \
 # error msg
 execute if score __$hc_init_consts __hc.InitError matches 0 \
     run \
-    function hipochallenge:msg/all/send_error { \
+    function hc:msg/all/send_error { \
         text:{ \
             translate:"hc.msg.all.error.consts_not_initialised", \
             fallback:"The datapack constants couldn't be initialised. Contact a developer if you see this message", \
@@ -46,7 +46,7 @@ execute if score __$hc_init_consts __hc.InitError matches 0 \
 # skip step if already initialised
 execute if data storage hc:main vars \
     run \
-    function hipochallenge:msg/debug/send_info { \
+    function hc:msg/debug/send_info { \
         text:"\"Datapack variables already initialised...\"", \
     }
 
@@ -64,7 +64,7 @@ execute store result score __$hc_init_scores __hc.InitError \
 # error msg
 execute if score __$hc_init_scores __hc.InitError matches 0 \
     run \
-    function hipochallenge:msg/all/send_error { \
+    function hc:msg/all/send_error { \
         text:{ \
             translate:"hc.msg.all.error.scores_not_initialised", \
             fallback:"The datapack score objectives couldn't be initialised. Contact a developer if you see this message", \
@@ -79,7 +79,7 @@ execute store result score __$hc_init_teams __hc.InitError \
 # error msg
 execute if score __$hc_init_teams __hc.InitError matches 0 \
     run \
-    function hipochallenge:msg/all/send_error { \
+    function hc:msg/all/send_error { \
         text:{ \
             translate:"hc.msg.all.error.teams_not_initialised", \
             fallback:"The datapack teams couldn't be initialised. Contact a developer if you see this message", \
@@ -94,7 +94,7 @@ execute store result score __$hc_init_gamerules __hc.InitError \
 # error msg
 execute if score __$hc_init_gamerules __hc.InitError matches 0 \
     run \
-    function hipochallenge:msg/all/send_error { \
+    function hc:msg/all/send_error { \
         text:{ \
             translate:"hc.msg.all.error.gamerules_not_initialised", \
             fallback:"The datapack gamerules couldn't be initialised. Contact a developer if you see this message", \
@@ -104,7 +104,7 @@ execute if score __$hc_init_gamerules __hc.InitError matches 0 \
 ## __KEEP AT BOTTOM OF FILE__
 
 ## schedule main functions
-function hipochallenge:msg/debug/send_info { \
+function hc:msg/debug/send_info { \
     text:"\"Scheduling tick functions...\"", \
 }
 
@@ -185,7 +185,7 @@ execute as @a[tag=!hc.DarioUpdate] \
 execute as @a[tag=hc.DarioUpdate] \
     at @s \
     run \
-    playsound hipochallenge:dario.dario_update \
+    playsound hc:dario.dario_update \
     master @s ~ ~ ~ 1 1 1
 
 # free memory

@@ -17,7 +17,7 @@
 #       Explosion_knockback_resistance attribute value.
 
 # for security, reset attributes and modifiers (also heals the player)
-function hipochallenge:util/attribute/reset_all
+function hc:util/attribute/reset_all
 
 # set attributes
 $attribute @s minecraft:max_health base \

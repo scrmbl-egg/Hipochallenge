@@ -8,7 +8,7 @@
 
 $scoreboard players set @s hc.Perk $(value)
 
-$function hipochallenge:msg/debug/send_info { \
+$function hc:msg/debug/send_info { \
     text:[ \
         "", \
         {selector:"@s"}, \

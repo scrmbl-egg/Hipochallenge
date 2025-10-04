@@ -2,7 +2,7 @@
 #
 # Removes all scores in the datapack
 
-function hipochallenge:msg/debug/send_info { \
+function hc:msg/debug/send_info { \
     text:"\"Removing score objectives...\"", \
 }
 

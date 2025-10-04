@@ -8,7 +8,7 @@
 # themselves, but they MAY REPRESENT projectiles, for example: an invisible
 # armor stand with a specified motion that explodes on contact.
 tag @e[ \
-    type=#hipochallenge:vanilla_projectiles, \
+    type=#hc:vanilla_projectiles, \
     tag=!hc.Projectile \
 ] \
     add hc.Projectile
@@ -58,7 +58,7 @@ function #extension_hc:projectile/tick
 ## __ KEEP AT BOTTOM OF FILE __
 # clean all projectiles that have no lifetime left
 execute as @e[ \
-    type=#hipochallenge:game_projectiles, \
+    type=#hc:game_projectiles, \
     tag=hc.Projectile, \
     scores={hc.LifeTimer=..1} \
 ] \

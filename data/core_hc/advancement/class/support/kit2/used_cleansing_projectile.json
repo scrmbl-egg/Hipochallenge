@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hipochallenge:abilities/class/support/kit2/on_cleansing_projectile_thrown"
+        "function": "hc:abilities/class/support/kit2/on_cleansing_projectile_thrown"
     }
 }
