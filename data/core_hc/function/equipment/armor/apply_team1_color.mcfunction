@@ -31,34 +31,34 @@ data modify storage hc:temp set_color set value { \
 # copy team's armor color
 data modify storage hc:temp set_color.head.dyed_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.armor_color
+    hc:main vars.team_contexts.team1.preset.armor_color
 data modify storage hc:temp set_color.chest.dyed_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.armor_color
+    hc:main vars.team_contexts.team1.preset.armor_color
 data modify storage hc:temp set_color.legs.dyed_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.armor_color
+    hc:main vars.team_contexts.team1.preset.armor_color
 data modify storage hc:temp set_color.feet.dyed_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.armor_color
+    hc:main vars.team_contexts.team1.preset.armor_color
 
 # copy team's trim material
 data modify storage \
     hc:temp set_color.head.trim.material \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.trim_material
+    hc:main vars.team_contexts.team1.preset.trim_material
 data modify storage \
     hc:temp set_color.chest.trim.material \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.trim_material
+    hc:main vars.team_contexts.team1.preset.trim_material
 data modify storage \
     hc:temp set_color.legs.trim.material \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.trim_material
+    hc:main vars.team_contexts.team1.preset.trim_material
 data modify storage \
     hc:temp set_color.feet.trim.material \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team1.preset.trim_material
+    hc:main vars.team_contexts.team1.preset.trim_material
 # copy armor's trim pattern
 execute if data entity @s equipment.head.components."minecraft:trim" \
     run \

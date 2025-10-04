@@ -13,4 +13,4 @@ effect give @a minecraft:saturation infinite 0 true
     # maps
         # map0
             # pipes
-                function hipochallenge:vfx/maps/map0/pipe_sounds
+                #function hipochallenge:vfx/maps/map0/pipe_sounds

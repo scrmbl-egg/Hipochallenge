@@ -44,13 +44,13 @@ execute if score __$hc_init_consts __hc.InitError matches 0 \
 
 ## STORAGE VARIABLES
 # skip step if already initialised
-execute if data storage minecraft:hipochallenge vars \
+execute if data storage hc:main vars \
     run \
     function hipochallenge:msg/debug/send_info { \
         text:"\"Datapack variables already initialised...\"", \
     }
 
-execute unless data storage minecraft:hipochallenge vars \
+execute unless data storage hc:main vars \
     store result score __$hc_init_vars __hc.InitError \
     run \
     function core_hc:storage/init_vars
@@ -117,11 +117,11 @@ schedule function core_hc:second 1s
 # add one to reload count
 execute store result score __$hc_reload_count __hc.ReloadCount \
     run \
-    data get storage minecraft:hipochallenge vars.reload_count
+    data get storage hc:main vars.reload_count
 
 scoreboard players add __$hc_reload_count __hc.ReloadCount 1
 
-execute store result storage minecraft:hipochallenge vars.reload_count \
+execute store result storage hc:main vars.reload_count \
     int 1 \
     run \
     scoreboard players get __$hc_reload_count __hc.ReloadCount
@@ -145,7 +145,7 @@ tellraw @a [ \
         fallback:"Version: %s", \
         with:[ \
             { \
-                storage:"minecraft:hipochallenge", \
+                storage:"hc:main", \
                 nbt:"consts.game.map_version", \
                 color:"green", \
             }, \
@@ -155,7 +155,7 @@ tellraw @a [ \
     {text:"- "}, \
     {text:"Reload count: "}, \
     { \
-        storage:"minecraft:hipochallenge", \
+        storage:"hc:main", \
         nbt:"vars.reload_count", \
         color:"green" \
     }, \

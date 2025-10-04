@@ -44,8 +44,8 @@ tag @s add hc.TankKit2GoatHornDetecting
 
 execute store result score @s hc.TankKit2GoatHornRecoveryTicks \
     run \
-    data get storage minecraft:hipochallenge \
-    consts.classes[{internal_name:"tank"}].\
+    data get storage hc:main consts.\
+    classes[{internal_name:"tank"}].\
     kits[{id:2}].tank_k2_data.horn.recovery_ticks
 
 # handle cooldown

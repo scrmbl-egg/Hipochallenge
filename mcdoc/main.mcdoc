@@ -6,7 +6,7 @@ use ::Hipochallenge::mcdoc::game::AvailableGameStates
 use ::Hipochallenge::mcdoc::game::GameContext
 use ::Hipochallenge::mcdoc::level::Level
 
-dispatch minecraft:storage[minecraft:hipochallenge] to struct MainStorage {
+dispatch minecraft:storage[hc:main] to struct MainStorage {
     /// Global constants of the datapack.
     consts: struct MainConsts {
         /// Game related constants.

@@ -47,7 +47,7 @@ function core_hc:team/get_enemy_team { \
 
 # get radius
 data modify storage hc:temp stun_mechanism.radius \
-    set from storage minecraft:hipochallenge \
+    set from storage hc:main \
     consts.classes[{internal_name:"assassin"}].\
     kits[{id:2}].assassin_k2_data.stun_mechanism.radius
 

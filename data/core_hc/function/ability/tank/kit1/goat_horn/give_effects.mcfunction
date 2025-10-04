@@ -19,6 +19,6 @@ $execute as @a[ \
     ] \
     run \
     function hipochallenge:util/effect/give_ability_effects \
-    with storage minecraft:hipochallenge \
+    with storage hc:main \
     consts.classes[{internal_name:"tank"}].\
     kits[{id:1}].tank_k1_data.horn.effects_info

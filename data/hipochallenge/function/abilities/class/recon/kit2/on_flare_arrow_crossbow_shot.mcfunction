@@ -10,6 +10,6 @@ advancement revoke @s \
 execute if entity @s[gamemode=!creative] \
     store result score @s hc.ReconKit2FlareArrowCooldown \
     run \
-    data get storage minecraft:hipochallenge \
+    data get storage hc:main \
     consts.classes[{internal_name:"recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.cooldown_ticks

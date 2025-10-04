@@ -7,7 +7,6 @@
 # @returns
 #   Result: 1 if all constants are initialised
 
-# TODO: stop using minecraft:hipochallenge namespace
 # TODO: Complete the list of constants
 
 function hipochallenge:msg/debug/send_info { \
@@ -15,11 +14,11 @@ function hipochallenge:msg/debug/send_info { \
 }
 
 # reset
-data remove storage minecraft:hipochallenge consts
+data remove storage hc:main consts
 
 ## GAME CONSTANTS
 
-data modify storage minecraft:hipochallenge consts.game set value { \
+data modify storage hc:main consts.game set value { \
     map_version: "Pre-Alpha", \
     team_size:3, \
     necessary_players_for_game:6, \
@@ -61,14 +60,14 @@ data modify storage minecraft:hipochallenge consts.game set value { \
 
 ## LIMITS
 
-data modify storage minecraft:hipochallenge consts.limits set value { \
+data modify storage hc:main consts.limits set value { \
     no_gravity_projectiles_lifetime_ticks:200, \
 }
 
 ## TEAMS
 
 # neutral -> team_presets[0]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"neutral", \
     id:0, \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
@@ -80,7 +79,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 }
 
 # red -> team_presets[1]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"red", \
     id:1, \
     default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
@@ -92,7 +91,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 }
 
 # yellow -> team_presets[2]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"yellow", \
     id:2, \
     default_name:{translate:"hc.teams.colors.yellow",fallback:"YELLOW"}, \
@@ -104,7 +103,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 }
 
 # green -> team_presets[3]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"green", \
     id:3, \
     default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
@@ -116,7 +115,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 }
 
 # blue -> team_presets[4]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"blue", \
     id:4, \
     default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
@@ -128,7 +127,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 }
 
 # purple -> team_presets[5]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"purple", \
     id:5, \
     default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
@@ -140,7 +139,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 }
 
 # orange -> team_presets[6]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"orange", \
     id:6, \
     default_name:{translate:"hc.teams.colors.orange",fallback:"ORANGE"}, \
@@ -152,7 +151,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 }
 
 # cyan -> team_presets[7]
-data modify storage minecraft:hipochallenge consts.team_presets append value { \
+data modify storage hc:main consts.team_presets append value { \
     internal_name:"cyan", \
     id:7, \
     default_name:{translate:"hc.teams.colors.cyan",fallback:"CYAN"}, \
@@ -166,7 +165,7 @@ data modify storage minecraft:hipochallenge consts.team_presets append value { \
 ## CLASSES
 
 # tank -> classes[0]
-data modify storage minecraft:hipochallenge consts.classes append value { \
+data modify storage hc:main consts.classes append value { \
     internal_name:"tank", \
     id:1, \
     name:{translate:"hc.class.tank",fallback:"Tank"}, \
@@ -314,7 +313,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 }
 
 # marksman -> classes[1]
-data modify storage minecraft:hipochallenge consts.classes append value { \
+data modify storage hc:main consts.classes append value { \
     internal_name:"marksman", \
     id:2, \
     name:{translate:"hc.class.marksman",fallback:"Marksman"}, \
@@ -422,7 +421,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 }
 
 # assassin -> classes[2]
-data modify storage minecraft:hipochallenge consts.classes append value { \
+data modify storage hc:main consts.classes append value { \
     internal_name:"assassin", \
     id:3, \
     name:{translate:"hc.class.assassin",fallback:"Assassin"}, \
@@ -537,7 +536,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 }
 
 # support -> classes[3]
-data modify storage minecraft:hipochallenge consts.classes append value { \
+data modify storage hc:main consts.classes append value { \
     internal_name:"support", \
     id:4, \
     name:{translate:"hc.class.support",fallback:"Support"}, \
@@ -626,7 +625,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 }
 
 # recon -> classes[4]
-data modify storage minecraft:hipochallenge consts.classes append value { \
+data modify storage hc:main consts.classes append value { \
     internal_name:"recon", \
     id:5, \
     name:{translate:"hc.class.recon",fallback:"Recon"}, \
@@ -726,7 +725,7 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 }
 
 # assault -> classes[5]
-data modify storage minecraft:hipochallenge consts.classes append value { \
+data modify storage hc:main consts.classes append value { \
     internal_name:"assault", \
     id:6, \
     name:{translate:"hc.class.assault",fallback:"Assault"}, \
@@ -827,16 +826,16 @@ data modify storage minecraft:hipochallenge consts.classes append value { \
 # perform checks of constant values.
 
 # class count
-execute store result storage minecraft:hipochallenge consts.class_count \
+execute store result storage hc:main consts.class_count \
     int 1 \
     run \
-    data get storage minecraft:hipochallenge consts.classes
+    data get storage hc:main consts.classes
 
 # team preset count
-execute store result storage minecraft:hipochallenge consts.team_preset_count \
+execute store result storage hc:main consts.team_preset_count \
     int 1 \
     run \
-    data get storage minecraft:hipochallenge consts.team_presets
+    data get storage hc:main consts.team_presets
 
 
 ## __KEEP AT BOTTOM OF FILE__

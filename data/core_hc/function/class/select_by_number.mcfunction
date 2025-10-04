@@ -19,7 +19,7 @@ data modify storage hc:temp dbg_msg.text set value [ \
 ]
 $data modify storage hc:temp dbg_msg.text[3] \
     set from storage \
-    minecraft:hipochallenge consts.classes[{id:$(value)}].name.fallback
+    hc:main consts.classes[{id:$(value)}].name.fallback
 
 # print message
 function hipochallenge:msg/debug/send_info with storage hc:temp dbg_msg

@@ -9,19 +9,19 @@
 #   Success: if the team's name was successfully changed.
 
 # create assertion score
-scoreboard objectives add local_set_team_name dummy
+scoreboard objectives add __hc.SetTeamName dummy
 
 # save input
 $data modify storage hc:temp set_name.input_str \
     set value "$(name)"
 
 # get input length
-execute store result score $strlen local_set_team_name \
+execute store result score $strlen __hc.SetTeamName \
     run \
     data get storage hc:temp set_name.input_str
 
 # assert input string length is within range.
-execute unless score $strlen local_set_team_name matches 1..12 \
+execute unless score $strlen __hc.SetTeamName matches 1..12 \
     run \
     function hipochallenge:msg/team/send_error { \
         team:"hc.Team2", \
@@ -31,15 +31,15 @@ execute unless score $strlen local_set_team_name matches 1..12 \
             with:[ \
                 "1", \
                 "12", \
-                {score:{objective:"local_set_team_name",name:"$strlen"}}, \
+                {score:{objective:"__hc.SetTeamName",name:"$strlen"}}, \
             ], \
         }, \
     }
-execute unless score $strlen local_set_team_name matches 1..12 \
+execute unless score $strlen __hc.SetTeamName matches 1..12 \
     run \
     return run \
     function std:fail { \
-        score_objectives:["local_set_team_name"], \
+        score_objectives:["__hc.SetTeamName"], \
         nbt_paths:[ \
             {storage:"hc:temp",nbt:"set_name"}, \
         ], \
@@ -47,26 +47,19 @@ execute unless score $strlen local_set_team_name matches 1..12 \
     }
 
 # save new custom name in team context
-data modify storage \
-    minecraft:hipochallenge vars.team_contexts.team2.custom_name.text \
-    set from storage \
-    hc:temp set_name.input_str
+data modify storage hc:main vars.team_contexts.team2.custom_name.text \
+    set from storage hc:temp set_name.input_str
 
 # set team prefix and displayName
-data modify storage hc:temp set_name.team \
-    set value "hc.Team2"
+data modify storage hc:temp set_name.team set value "hc.Team2"
 data modify storage hc:temp set_name.text \
-    set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.custom_name
+    set from storage hc:main vars.team_contexts.team2.custom_name
 data modify storage hc:temp set_name.prefix_color \
-    set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.name_color
+    set from storage hc:main vars.team_contexts.team2.preset.name_color
 data modify storage hc:temp set_name.team_color \
-    set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.text_color
+    set from storage hc:main vars.team_contexts.team2.preset.text_color
 
-function core_hc:team/name/set \
-    with storage hc:temp set_name
+function core_hc:team/name/set with storage hc:temp set_name
 
 # send message
 function hipochallenge:msg/all/send { \
@@ -78,7 +71,7 @@ function hipochallenge:msg/all/send { \
                 {text:"",color:"gray"}, \
                 "\"", \
                 { \
-                    storage:"minecraft:hipochallenge", \
+                    storage:"hc:main", \
                     nbt:"vars.team_contexts.team2.custom_name.text", \
                 }, \
                 "\"", \
@@ -91,7 +84,7 @@ function hipochallenge:msg/all/send { \
 function core_hc:team/text_displays/update_team2
 
 # free memory
-scoreboard objectives remove local_set_team_name
+scoreboard objectives remove __hc.SetTeamName
 data remove storage hc:temp set_name
 
 # return success

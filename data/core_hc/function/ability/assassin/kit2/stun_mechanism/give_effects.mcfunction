@@ -22,7 +22,7 @@ $execute at @s \
     as @s \
     run \
     function hipochallenge:util/effect/give_ability_effects \
-    with storage minecraft:hipochallenge \
+    with storage hc:main \
     consts.classes[{internal_name:"assassin"}].\
     kits[{id:2}].assassin_k2_data.stun_mechanism.effects_info
 

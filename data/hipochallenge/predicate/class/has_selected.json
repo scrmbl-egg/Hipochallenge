@@ -6,7 +6,7 @@
             "min": 1,
             "max": {
                 "type": "minecraft:storage",
-                "storage": "minecraft:hipochallenge",
+                "storage": "hc:main",
                 "path": "consts.class_count"
             }
         }

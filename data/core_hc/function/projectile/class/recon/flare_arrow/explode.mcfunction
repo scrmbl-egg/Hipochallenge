@@ -21,7 +21,7 @@ $execute at @s \
     if entity @s[distance=..$(radius)] \
     run \
     function hipochallenge:util/effect/give_ability_effects \
-    with storage minecraft:hipochallenge \
+    with storage hc:main \
     consts.classes[{internal_name:"recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.explosion.effects_info
 

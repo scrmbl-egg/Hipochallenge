@@ -8,17 +8,17 @@
 
 # get custom or default team name
 execute if \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp set_color.team_name \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.custom_name
+    hc:main vars.team_contexts.team2.custom_name
 execute unless \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp set_color.team_name \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.default_name
+    hc:main vars.team_contexts.team2.preset.default_name
 
 # construct msg initial parameters
 data modify storage hc:temp set_color.msg.text set value { \
@@ -38,52 +38,52 @@ data modify storage hc:temp set_color.msg.text.with[0].color \
 # set name of the selected color
 $data modify storage hc:temp set_color.msg.text.with[1] \
     set from storage \
-    minecraft:hipochallenge \
+    hc:main \
     consts.team_presets[{internal_name:$(color_internal_name)}].default_name
 $data modify storage \
     hc:temp set_color.msg.text.with[1].color \
     set from storage \
-    minecraft:hipochallenge \
+    hc:main \
     consts.team_presets[{internal_name:$(color_internal_name)}].text_color
 
 # send message
 function hipochallenge:msg/all/send with storage hc:temp set_color.msg
 
 ## set team context preset
-$data modify storage minecraft:hipochallenge vars.team_contexts.team2.preset \
-    set from storage minecraft:hipochallenge \
+$data modify storage hc:main vars.team_contexts.team2.preset \
+    set from storage hc:main \
     consts.team_presets[{internal_name:$(color_internal_name)}]
 
 # set team name
 # if it's custom, obtain it from team_name data
 # otherwise, get it again after the preset change
 execute if \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp set_color.name.text \
     set from storage hc:temp set_color.team_name
 execute unless \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp set_color.name.text \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.default_name
+    hc:main vars.team_contexts.team2.preset.default_name
 
 data modify storage hc:temp set_color.name.team \
     set value "hc.Team2"
 data modify storage hc:temp set_color.name.prefix_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.name_color
+    hc:main vars.team_contexts.team2.preset.name_color
 data modify storage hc:temp set_color.name.team_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.text_color
+    hc:main vars.team_contexts.team2.preset.text_color
 
 function core_hc:team/name/set \
     with storage hc:temp set_color.name
 
 # if custom name didn't exist, send an extra change name message
 execute unless \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp set_color.name_msg.text set value { \
         translate:"hc.msg.all.team2_changed_name_to", \
@@ -97,15 +97,15 @@ execute unless \
         ], \
     }
 execute unless \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage \
     hc:temp set_color.name_msg.text.with[0] \
     insert 2 \
-    from storage minecraft:hipochallenge \
+    from storage hc:main \
     vars.team_contexts.team2.preset.default_name
 execute unless \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     function hipochallenge:msg/all/send with storage hc:temp set_color.name_msg
 

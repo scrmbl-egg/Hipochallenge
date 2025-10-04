@@ -11,4 +11,4 @@ data modify entity @s NoGravity set value true
 execute store result score @s hc.LifeTimer \
     run \
     data get storage \
-    minecraft:hipochallenge consts.limits.no_gravity_projectiles_lifetime_ticks
+    hc:main consts.limits.no_gravity_projectiles_lifetime_ticks

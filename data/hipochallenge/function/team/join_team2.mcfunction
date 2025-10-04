@@ -17,22 +17,22 @@ data modify storage hc:temp msg_params.text set value { \
 
 # put custom name or default team name
 execute if \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp msg_params.text.with[1] \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.custom_name
+    hc:main vars.team_contexts.team2.custom_name
 execute unless \
-    data storage minecraft:hipochallenge vars.team_contexts.team2.custom_name \
+    data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp msg_params.text.with[1] \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.default_name
+    hc:main vars.team_contexts.team2.preset.default_name
 
 # put color in name text component
 data modify storage hc:temp msg_params.text.with[1].color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.name_color
+    hc:main vars.team_contexts.team2.preset.name_color
 
 # print message
 function hipochallenge:msg/all/send with storage hc:temp msg_params

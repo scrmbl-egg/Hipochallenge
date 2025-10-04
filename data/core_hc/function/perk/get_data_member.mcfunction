@@ -19,7 +19,7 @@
 
 $data modify storage $(out_storage) $(out_nbt) \
     set from storage \
-    minecraft:hipochallenge \
+    hc:main \
     consts.\
     classes[{id:$(class_id)}].\
     perks[{id:$(perk_id)}].$(member_name)

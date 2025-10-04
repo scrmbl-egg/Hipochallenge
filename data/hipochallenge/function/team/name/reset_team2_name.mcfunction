@@ -3,7 +3,7 @@
 # Resets the second team's name.
 
 # remove team's custom name NBT
-data remove storage minecraft:hipochallenge vars.team_contexts.team2.custom_name
+data remove storage hc:main vars.team_contexts.team2.custom_name
 
 # get set name function parameters
 data modify storage hc:temp reset_name set value { \
@@ -14,13 +14,13 @@ data modify storage hc:temp reset_name set value { \
 }
 data modify storage hc:temp reset_name.text \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.default_name
+    hc:main vars.team_contexts.team2.preset.default_name
 data modify storage hc:temp reset_name.prefix_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.name_color
+    hc:main vars.team_contexts.team2.preset.name_color
 data modify storage hc:temp reset_name.team_color \
     set from storage \
-    minecraft:hipochallenge vars.team_contexts.team2.preset.text_color
+    hc:main vars.team_contexts.team2.preset.text_color
 
 # set preset name as new team name
 function core_hc:team/name/set \

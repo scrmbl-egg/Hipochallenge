@@ -69,17 +69,17 @@ data modify storage hc:temp equip_armor.fx set value { \
 execute if predicate hipochallenge:team/is_in_team1 \
     run \
     data modify storage hc:temp equip_armor.fx.dust_color \
-    set from storage minecraft:hipochallenge \
+    set from storage hc:main \
     vars.team_contexts.team1.preset.dust_color
 execute if predicate hipochallenge:team/is_in_team2 \
     run \
     data modify storage hc:temp equip_armor.fx.dust_color \
-    set from storage minecraft:hipochallenge \
+    set from storage hc:main \
     vars.team_contexts.team2.preset.dust_color
 execute if predicate hipochallenge:team/is_in_neutral_team \
     run \
     data modify storage hc:temp equip_armor.fx.dust_color \
-    set from storage minecraft:hipochallenge \
+    set from storage hc:main \
     consts.team_presets[{internal_name:"neutral"}].dust_color
 
 ## equip and show fx

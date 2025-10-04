@@ -8,7 +8,7 @@
 execute store result score @s hc.Class \
     run \
     data get storage \
-    minecraft:hipochallenge consts.classes[{internal_name:"assault"}].id
+    hc:main consts.classes[{internal_name:"assault"}].id
 
 # construct debug message parameters
 data modify storage hc:temp msg_params.text set value { \
@@ -18,7 +18,7 @@ data modify storage hc:temp msg_params.text set value { \
 }
 data modify storage hc:temp msg_params.text.with[1] \
     set from storage \
-    minecraft:hipochallenge consts.classes[{internal_name:"assault"}].name
+    hc:main consts.classes[{internal_name:"assault"}].name
 
 # send debug msg
 function hipochallenge:msg/debug/send_info with storage hc:temp msg_params

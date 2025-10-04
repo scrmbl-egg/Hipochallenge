@@ -58,13 +58,13 @@ function core_hc:team/get_self_team { \
 
 # get radius
 data modify storage hc:temp tank_k1_goat_horn.radius \
-    set from storage minecraft:hipochallenge \
+    set from storage hc:main \
     consts.classes[{internal_name:"tank"}].\
     kits[{id:1}].tank_k1_data.horn.radius
 
 # get player limit
 data modify storage hc:temp tank_k1_goat_horn.player_limit \
-    set from storage minecraft:hipochallenge \
+    set from storage hc:main \
     consts.game.team_size
 
 # give all effect info effects

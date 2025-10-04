@@ -12,12 +12,14 @@
     execute as @a[scores={hc.BowShot=1..}] run scoreboard players set @s hc.BowShot 0
 
     # arrows
-    execute as @a[scores={hc.MarksmanKit1NewProjectileCooldown=1},gamemode=!creative] run function hipochallenge:abilities/class/marksman/kit1/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
+    # TODO: deprecate
+    #execute as @a[scores={hc.MarksmanKit1NewProjectileCooldown=1},gamemode=!creative] run function hipochallenge:abilities/class/marksman/kit1/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
 
 # kit 2
 
     # arrows
-    execute as @a[scores={hc.MarksmanKit2NewProjectileCooldown=1},gamemode=!creative] run function hipochallenge:abilities/class/marksman/kit2/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
+    # TODO: deprecate
+    #execute as @a[scores={hc.MarksmanKit2NewProjectileCooldown=1},gamemode=!creative] run function hipochallenge:abilities/class/marksman/kit2/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
 
 
 # kit 3

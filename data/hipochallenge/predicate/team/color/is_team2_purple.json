@@ -2,7 +2,7 @@
     "condition": "minecraft:value_check",
     "value": {
         "type": "minecraft:storage",
-        "storage": "minecraft:hipochallenge",
+        "storage": "hc:main",
         "path": "vars.team_contexts.team2.preset.id"
     },
     "range": 5

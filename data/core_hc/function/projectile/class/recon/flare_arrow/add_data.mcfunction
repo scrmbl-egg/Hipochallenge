@@ -74,7 +74,7 @@ data modify entity @s data."hc:flare_arrow".aabb_params.entity_selector \
 ## get aabb's size
 data modify entity @s data."hc:flare_arrow".aabb_params.size \
     set from storage \
-    minecraft:hipochallenge \
+    hc:main \
     consts.classes[{internal_name:"recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.detection_aabb_size
 
@@ -82,7 +82,7 @@ data modify entity @s data."hc:flare_arrow".aabb_params.size \
 # radius
 data modify entity @s data."hc:flare_arrow".explosion.radius \
     set from storage \
-    minecraft:hipochallenge \
+    hc:main \
     consts.classes[{internal_name:"recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.explosion.radius
 

@@ -22,13 +22,13 @@ function core_hc:team/get_self_team { \
 
 # get radius
 data modify storage hc:temp tank_k1_horn_targetting.radius \
-    set from storage minecraft:hipochallenge \
+    set from storage hc:main \
     consts.classes[{internal_name:"tank"}].\
     kits[{id:2}].tank_k1_data.horn.radius
 
 # get player limit
 data modify storage hc:temp tank_k1_horn_targetting.radius \
-    set from storage minecraft:hipochallenge consts.game.team_size
+    set from storage hc:main consts.game.team_size
 
 # call display target particles func
 function core_hc:ability/tank/kit1/goat_horn/display_target_particles \

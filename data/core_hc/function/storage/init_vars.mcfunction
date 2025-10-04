@@ -17,13 +17,13 @@ function hipochallenge:msg/debug/send_info { \
 }
 
 # reset
-data remove storage minecraft:hipochallenge vars
+data remove storage hc:main vars
 
 ## RELOAD COUNT
-data modify storage minecraft:hipochallenge vars.reload_count set value 0
+data modify storage hc:main vars.reload_count set value 0
 
 ## GAME CONTEXTS
-data modify storage minecraft:hipochallenge vars.game_context set value { \
+data modify storage hc:main vars.game_context set value { \
     current_state:1b, \
     current_game_mode_id:0b, \
     current_level_id:0b, \
@@ -38,10 +38,10 @@ data modify storage minecraft:hipochallenge vars.game_context set value { \
 # NOTE: for presets, copy team presets
 
 # delete custom names
-data remove storage minecraft:hipochallenge vars.team_contexts.team1.custom_name
-data remove storage minecraft:hipochallenge vars.team_contexts.team2.custom_name
+data remove storage hc:main vars.team_contexts.team1.custom_name
+data remove storage hc:main vars.team_contexts.team2.custom_name
 
-data modify storage minecraft:hipochallenge vars.team_contexts set value { \
+data modify storage hc:main vars.team_contexts set value { \
     team1:{ \
         preset:{ \
             internal_name:"red", \

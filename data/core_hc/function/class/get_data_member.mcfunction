@@ -16,4 +16,4 @@
 
 $data modify storage $(out_storage) $(out_nbt) \
     set from storage \
-    minecraft:hipochallenge consts.classes[{id:$(class_id)}].$(member_name)
+    hc:main consts.classes[{id:$(class_id)}].$(member_name)
