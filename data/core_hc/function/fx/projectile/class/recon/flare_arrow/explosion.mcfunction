@@ -7,6 +7,10 @@ playsound minecraft:entity.shulker_bullet.hit \
     player @a ~ ~ ~ 1.5 2
 playsound minecraft:block.enchantment_table.use \
     player @a ~ ~ ~ 3 2
+playsound minecraft:entity.firework_rocket.blast \
+    player @a[distance=..10] ~ ~ ~ 2 1.33
+playsound minecraft:entity.firework_rocket.blast_far \
+    player @a[distance=10..] ~ ~ ~ 2 1.33
 
 # particles
 particle minecraft:end_rod \
