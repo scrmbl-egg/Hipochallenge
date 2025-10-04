@@ -14,4 +14,5 @@ particle minecraft:end_rod \
 particle minecraft:firework \
     ~ ~ ~ 2 2 2 0.1 20 force
 # TODO: check if this particle is safe for people with photosensitivity
-particle minecraft:flash ~ ~ ~ 0.5 0.5 0.5 1 3 force
+particle minecraft:flash{color:[1, 1, 1, 1]} \
+    ~ ~ ~ 0.5 0.5 0.5 1 3 force
