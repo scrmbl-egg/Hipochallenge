@@ -9,9 +9,12 @@ function hipochallenge:msg/debug/send_info {text:"\"Setting gamerules...\""}
 
 ## TODO: uncomment all commented gamerules when the minigame is released
 
+# java 1.21.9 / pack 88.0
+gamerule allowEnteringNetherUsingPortals false
 gamerule allowFireTicksAwayFromPlayer false
-gamerule announceAdvancements false
+gamerule announceAdvancements true
 gamerule blockExplosionDropDecay false
+gamerule commandBlocksEnabled true
 #gamerule commandBlockOutput false
 gamerule commandModificationBlockLimit 32768
 gamerule disableElytraMovementCheck false
@@ -50,16 +53,22 @@ gamerule maxEntityCramming 24
 gamerule mobExplosionDropDecay false
 gamerule mobGriefing false
 gamerule naturalRegeneration false
+gamerule playersNetherPortalCreativeDelay 0
+gamerule playersNetherPortalDefaultDelay 80
 gamerule playersSleepingPercentage 200
 gamerule projectilesCanBreakBlocks false
+gamerule pvp true
 gamerule randomTickSpeed 0
 #gamerule reducedDebugInfo true
 #gamerule sendCommandFeedback false
 gamerule showDeathMessages false
 gamerule snowAccumulationHeight 1
-gamerule spawnChunkRadius 0
+## NOTE: don't know if the following one has a use case if set to true
+#gamerule spawnerBlocksEnabled false
+gamerule spawnMonsters false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks true
+gamerule tntExplodes false
 gamerule tntExplosionDropDecay false
 gamerule universalAnger false
 gamerule waterSourceConversion true
