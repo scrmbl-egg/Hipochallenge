@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:abilities/class/assassin/kit2/on_stun_mechanism_triggered"
+        "function": "hc:ability/class/assassin/kit2/on_stun_mechanism_triggered"
     }
 }

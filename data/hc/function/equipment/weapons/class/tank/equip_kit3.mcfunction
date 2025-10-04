@@ -15,4 +15,4 @@ execute unless predicate hc:perk/is_perk3 run item replace entity @s hotbar.2 wi
 execute unless predicate hc:perk/is_perk3 run item modify entity @s hotbar.2 hc:weapons/class/tank/kit3/goat_horn
 
 # spirit
-execute as @s run function hc:abilities/class/tank/kit3/spirit/summon
+execute as @s run function hc:ability/class/tank/kit3/spirit/summon

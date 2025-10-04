@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:abilities/class/tank/kit1/on_castle_used"
+        "function": "hc:ability/class/tank/kit1/on_castle_used"
     }
 }

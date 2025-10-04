@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:abilities/class/recon/kit2/on_flare_arrow_crossbow_shot"
+        "function": "hc:ability/class/recon/kit2/on_flare_arrow_crossbow_shot"
     }
 }
