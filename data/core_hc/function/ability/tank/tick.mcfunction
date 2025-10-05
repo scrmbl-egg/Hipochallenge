@@ -1,4 +1,4 @@
-#>core_hc/ability/tank/tick
+#>core_hc:ability/tank/tick
 #
 # Tick function for the tank class abilities.
 

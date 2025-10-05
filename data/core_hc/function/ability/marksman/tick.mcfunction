@@ -1,4 +1,4 @@
-#>core_hc/ability/marksman/tick
+#>core_hc:ability/marksman/tick
 #
 # Tick function for the marksman class abilities.
 

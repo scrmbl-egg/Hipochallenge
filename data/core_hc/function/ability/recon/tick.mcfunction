@@ -1,4 +1,4 @@
-#>core_hc/ability/recon/tick
+#>core_hc:ability/recon/tick
 #
 # Tick function for the recon class abilities.
 
