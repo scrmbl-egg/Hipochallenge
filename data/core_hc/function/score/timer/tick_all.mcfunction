@@ -22,7 +22,7 @@ execute as @e[type=!minecraft:player,scores={hc.LifeTimer=1..}] \
 execute as @a[scores={hc.InCombatTimer=1..}] run scoreboard players remove @s hc.InCombatTimer 1
 execute as @a[scores={hc.SilenceTimer=1..}] run scoreboard players remove @s hc.SilenceTimer 1
 execute as @a[scores={hc.InCombatTimer=1..}] run scoreboard players remove @s hc.InCombatTimer 1
-execute as @a[scores={suppression_timer=1..}] run scoreboard players remove @s suppression_timer 1
+execute as @a[scores={hc.SuppressionTimer=1..}] run scoreboard players remove @s hc.SuppressionTimer 1
 
 # cooldown timers
 
