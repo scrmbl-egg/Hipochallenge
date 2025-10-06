@@ -10,7 +10,12 @@ struct KitBase {
     /// Translated text for the kit name.
     name: TranslatedText,
     /// Command for equipping the kit.
-    equip_command: #[command(max_length=32500)] string,
+    item_loot_tables: struct {
+        /// Loot table that will be given across the player's hotbar.
+        hotbar: #[id="loot_table"] string,
+        /// Loot table that will be given in the player's offhand slot.
+        offhand: #[id="loot_table"] string,
+    },
     /// Type of data this kit holds. This is used to identify the union variant of the kit data.
     data_type: string,
 }

@@ -193,7 +193,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.tank.kit1",fallback:"I Guardian"}, \
-            equip_command:"say tank kit 1 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/tank/item/kit1/hotbar", \
+                offhand:"hc:class/tank/item/kit1/offhand", \
+            }, \
             data_type:"tank_k1_data", \
             tank_k1_data:{ \
                 horn:{ \
@@ -211,7 +214,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.tank.kit2",fallback:"II Triton"}, \
-            equip_command:"say tank kit 2 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/tank/item/kit2/hotbar", \
+                offhand:"hc:class/tank/item/kit2/offhand", \
+            }, \
             data_type:"tank_k2_data", \
             tank_k2_data:{ \
                 horn:{ \
@@ -232,7 +238,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.tank.kit3",fallback:"III Druid"}, \
-            equip_command:"say tank kit 3 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/tank/item/kit3/hotbar", \
+                offhand:"hc:class/tank/item/kit3/offhand", \
+            }, \
             data_type:"tank_k3_data", \
             tank_k3_data:{ \
                 horn:{ \
@@ -341,7 +350,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.marksman.kit1",fallback:"I Archer"}, \
-            equip_command:"say marksman kit 1 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/marksman/item/kit1/hotbar", \
+                offhand:"hc:class/marksman/item/kit1/offhand", \
+            }, \
             data_type:"marksman_k1_data", \
             marksman_k1_data:{ \
                 arrows:{ \
@@ -354,7 +366,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.marksman.kit2",fallback:"II Sniper"}, \
-            equip_command:"say marksman kit 2 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/marksman/item/kit2/hotbar", \
+                offhand:"hc:class/marksman/item/kit2/offhand", \
+            }, \
             data_type:"marksman_k2_data", \
             marksman_k2_data:{ \
                 arrows:{ \
@@ -367,7 +382,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.marksman.kit3",fallback:"III Gunslinger"}, \
-            equip_command:"say marksman kit 3 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/marksman/item/kit3/hotbar", \
+                offhand:"hc:class/marksman/item/kit3/offhand", \
+            }, \
             data_type:"marksman_k3_data", \
             marksman_k3_data:{ \
                 bullets:{ \
@@ -449,7 +467,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.assassin.kit1",fallback:"I Duelist"}, \
-            equip_command:"say assassin kit 1 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/assassin/item/kit1/hotbar", \
+                offhand:"hc:class/assassin/item/kit1/offhand", \
+            }, \
             data_type:"assassin_k1_data", \
             assassin_k1_data:{ \
                 parry:{ \
@@ -475,7 +496,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.assassin.kit2",fallback:"II Phantom"}, \
-            equip_command:"say assassin kit 2 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/assassin/item/kit2/hotbar", \
+                offhand:"hc:class/assassin/item/kit2/offhand", \
+            }, \
             data_type:"assassin_k2_data", \
             assassin_k2_data:{ \
                 stun_mechanism:{ \
@@ -493,7 +517,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.assassin.kit3",fallback:"III Mercenary"}, \
-            equip_command:"say assassin kit 3 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/assassin/item/kit3/hotbar", \
+                offhand:"hc:class/assassin/item/kit3/offhand", \
+            }, \
             data_type:"assassin_k3_data", \
             assassin_k3_data:{}, \
         }, \
@@ -564,21 +591,30 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.support.kit1",fallback:"I Trapper"}, \
-            equip_command:"say support kit 1 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/support/item/kit1/hotbar", \
+                offhand:"hc:class/support/item/kit1/offhand", \
+            }, \
             data_type:"support_k1_data", \
             support_k1_data:{}, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.support.kit2",fallback:"II Doctor"}, \
-            equip_command:"say support kit 2 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/support/item/kit2/hotbar", \
+                offhand:"hc:class/support/item/kit2/offhand", \
+            }, \
             data_type:"support_k2_data", \
             support_k2_data:{}, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.support.kit3",fallback:"II Doctor"}, \
-            equip_command:"say support kit 3 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/support/item/kit3/hotbar", \
+                offhand:"hc:class/support/item/kit3/offhand", \
+            }, \
             data_type:"support_k3_data", \
             support_k3_data:{}, \
         }, \
@@ -653,14 +689,20 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.recon.kit1",fallback:"I Spec. ops"}, \
-            equip_command:"say recon kit 1 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/recon/item/kit1/hotbar", \
+                offhand:"hc:class/recon/item/kit1/offhand", \
+            }, \
             data_type:"recon_k1_data", \
             recon_k1_data: {}, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.recon.kit2",fallback:"II Tracker"}, \
-            equip_command:"say recon kit 2 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/recon/item/kit2/hotbar", \
+                offhand:"hc:class/recon/item/kit2/offhand", \
+            }, \
             data_type:"recon_k2_data", \
             recon_k2_data: { \
                 flare_arrow:{\
@@ -683,7 +725,10 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.recon.kit3",fallback:"III Anomaly"}, \
-            equip_command:"say recon kit 3 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/recon/item/kit3/hotbar", \
+                offhand:"hc:class/recon/item/kit3/offhand", \
+            }, \
             data_type:"recon_k3_data", \
             recon_k3_data: {}, \
         }, \
@@ -753,21 +798,30 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.assault.kit1",fallback:"I Explosives expert"}, \
-            equip_command:"say assault kit 1 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/assault/item/kit1/hotbar", \
+                offhand:"hc:class/assault/item/kit1/offhand", \
+            }, \
             data_type:"assault_k1_data", \
             assault_k1_data:{}, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.assault.kit2",fallback:"II Harpooner"}, \
-            equip_command:"say assault kit 2 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/assault/item/kit2/hotbar", \
+                offhand:"hc:class/assault/item/kit2/offhand", \
+            }, \
             data_type:"assault_k2_data", \
             assault_k2_data:{}, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.assault.kit3",fallback:"III Commander"}, \
-            equip_command:"say assault kit 3 equip command called", \
+            item_loot_tables:{ \
+                hotbar:"hc:class/assault/item/kit3/hotbar", \
+                offhand:"hc:class/assault/item/kit3/offhand", \
+            }, \
             data_type:"assault_k3_data", \
             assault_k3_data:{}, \
         }, \
