@@ -6,6 +6,9 @@ dispatch mcdoc:custom_data[hc:item_id] to #[match_regex="\\b[a-zA-Z_]\\w*\\b"] s
 /// Component for items that must be cleared instantly.
 dispatch mcdoc:custom_data[hc:clear_instantly] to struct {}
 
+/// Component for items that will maximize the `PickupDelay` data parameter when dropped.
+dispatch mcdoc:custom_data[hc:no_pickup] to struct {}
+
 /// Component for Tank Kit 3 spirit.
 dispatch mcdoc:custom_data[hc:spirit] to struct Spirit {
     owner_uuid: #[uuid] int[] @ 4,

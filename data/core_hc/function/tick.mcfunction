@@ -17,6 +17,15 @@ recipe take @a *
 # clear items with the "hc:clear_instantly" custom data
 clear @a *[minecraft:custom_data={"hc:clear_instantly":{}}]
 
+# set pickup delay for items with the "hc:no_pickup" component
+execute as @e[\
+    type=minecraft:item,\
+    nbt={Item:{components:{"minecraft:custom_data":{"hc:no_pickup":{}}}}}, \
+    nbt=!{PickupDelay:32767s} \
+] \
+    run \
+    data merge entity @s {PickupDelay:32767s}
+
 # mute vanilla music
 function core_hc:music/mute_vanilla
 
