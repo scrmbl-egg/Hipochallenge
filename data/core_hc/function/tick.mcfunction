@@ -14,6 +14,9 @@ execute as @a[scores={hc.HasLeft=1..}] \
 # remove recipes
 recipe take @a *
 
+# clear items with the "hc:clear_instantly" custom data
+clear @a *[minecraft:custom_data={"hc:clear_instantly":{}}]
+
 # mute vanilla music
 function core_hc:music/mute_vanilla
 
