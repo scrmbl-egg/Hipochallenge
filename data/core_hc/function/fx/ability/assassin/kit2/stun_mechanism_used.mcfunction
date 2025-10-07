@@ -8,7 +8,8 @@
 #       UUID of the owner.
 
 # particles
-particle minecraft:end_rod ~ ~1 ~ 0 0.5 0 0.3 15 force @a
+particle minecraft:end_rod \
+    ~ ~1 ~ 0 0.5 0 0.3 15 force @a
 $particle minecraft:flash \
     ~ ~1 ~ 0.1 0.1 0.1 0 1 force @a[nbt=!{UUID:$(owner_uuid)}]
 
