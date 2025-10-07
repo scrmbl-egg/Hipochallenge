@@ -118,6 +118,7 @@ type Kit = (
         data_type: "marksman_k1_data",
         /// Marksman's kit 1 variant data.
         marksman_k1_data: struct {
+            /// Arrow related data.
             arrows: struct {
                 /// Maximum amount of arrows the owner can have.
                 max_amount: int @ 1..,
