@@ -46,13 +46,13 @@ struct Class {
     /// Loot tables for the class's armor.
     armor_loot_tables: struct ArmorLootTables {
         /// Loot table for the player's head slot item.
-        head: #[id(registry="loot_table")] string,
+        head: #[id="loot_table"] string,
         /// Loot table for the player's chest slot item.
-        chest: #[id(registry="loot_table")] string,
+        chest: #[id="loot_table"] string,
         /// Loot table for the player's legs slot item.
-        legs: #[id(registry="loot_table")] string,
+        legs: #[id="loot_table"] string,
         /// Loot table for the player's feet slot item.
-        feet: #[id(registry="loot_table")] string,
+        feet: #[id="loot_table"] string,
     },
     /// List of class kits.
     kits: [::Hipochallenge::mcdoc::kit::Kit] @ 3,
