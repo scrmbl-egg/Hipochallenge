@@ -27,9 +27,8 @@ execute as @a[ \
 ## kit 2
 
 # arrows
-execute as @a[\
-    gamemode=!creative,\
-    scores={hc.MarksmanKit2NewProjectileCooldown=1}\
+execute as @a[ \
+    scores={hc.MarksmanKit2NewProjectileCooldown=1} \
 ] \
     run \
     function hc:ability/class/marksman/kit2/give_projectile_and_set_cooldown
@@ -37,9 +36,8 @@ execute as @a[\
 ## kit 3
 
 # bullets
-execute as @a[\
-    gamemode=!creative,\
-    scores={hc.MarksmanKit3NewProjectileCooldown=1}\
+execute as @a[ \
+    scores={hc.MarksmanKit3NewProjectileCooldown=1} \
 ] \
     run \
     function hc:ability/class/marksman/kit3/give_projectile_and_set_cooldown
