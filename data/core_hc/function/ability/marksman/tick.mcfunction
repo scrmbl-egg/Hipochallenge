@@ -2,28 +2,44 @@
 #
 # Tick function for the marksman class abilities.
 
-# TODO: change and format following commands
-# kit 1
+## kit 1
 
-    # bow
-    # the bow can't have a proper "used" advancement, so the shot detection is
-    # done here
-    execute as @a[scores={hc.BowShot=1..}] if items entity @s weapon.* *[custom_data={item_id:marksman_k1_bow}] run function hc:ability/class/marksman/kit1/on_bow_shot
-    execute as @a[scores={hc.BowShot=1..}] run scoreboard players set @s hc.BowShot 0
+# bow (shot bow detection must be done here since there is no advancement)
+execute as @a[scores={hc.BowShot=1..}] \
+    if items entity @s weapon.* *[\
+        minecraft:custom_data={"hc:item_id":"marksman_k1_bow"}\
+    ] \
+    run \
+    function hc:ability/class/marksman/kit1/on_bow_shot
 
-    # arrows
-    # TODO: deprecate
-    #execute as @a[scores={hc.MarksmanKit1NewProjectileCooldown=1},gamemode=!creative] run function hc:ability/class/marksman/kit1/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
+# TODO: move this to another function
+execute as @a[scores={hc.BowShot=1..}] \
+    run \
+    scoreboard players set @s hc.BowShot 0
 
-# kit 2
+# arrows (give even if in creative mode)
+execute as @a[ \
+    scores={hc.MarksmanKit1NewProjectileCooldown=1} \
+] \
+    run \
+    function hc:ability/class/marksman/kit1/give_projectile_and_set_cooldown
 
-    # arrows
-    # TODO: deprecate
-    #execute as @a[scores={hc.MarksmanKit2NewProjectileCooldown=1},gamemode=!creative] run function hc:ability/class/marksman/kit2/arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
+## kit 2
 
+# arrows
+execute as @a[\
+    gamemode=!creative,\
+    scores={hc.MarksmanKit2NewProjectileCooldown=1}\
+] \
+    run \
+    function hc:ability/class/marksman/kit2/give_projectile_and_set_cooldown
 
-# kit 3
+## kit 3
 
-    # bullets
-    # HACK: this command must be changed to a proper give with item modifier
-    execute as @a[scores={hc.MarksmanKit3NewProjectileCooldown=1},gamemode=!creative] run give @s arrow
+# bullets
+execute as @a[\
+    gamemode=!creative,\
+    scores={hc.MarksmanKit3NewProjectileCooldown=1}\
+] \
+    run \
+    function hc:ability/class/marksman/kit3/give_projectile_and_set_cooldown

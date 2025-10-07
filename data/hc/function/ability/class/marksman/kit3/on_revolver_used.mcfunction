@@ -1,6 +1,14 @@
+#>hc:ability/class/marksman/kit3/on_revolver_used
+#
+# Executes all commands when the player shoots the marksman revolver.
+
+# revoke detection advancement
 advancement revoke @s \
     only core_hc:class/marksman/kit3/used_revolver
 
-# set bullet cooldown
-# TODO: deprecate
-#function hc:ability/class/marksman/kit3/bullets/set_bullet_cooldown_st with storage minecraft:hipochallenge
+# set new projectile cooldown
+execute store result score @s hc.MarksmanKit3NewProjectileCooldown \
+    run \
+    data get storage hc:main consts.\
+    classes[{internal_name:"marksman"}].\
+    kits[{id:3}].marksman_k3_data.bullets.new_first_cooldown_ticks
