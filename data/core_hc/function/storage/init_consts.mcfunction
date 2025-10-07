@@ -183,6 +183,7 @@ data modify storage hc:main consts.classes append value { \
         kit_color:"#a6d5bd", \
         perk_color:"#cce7d9", \
     }, \
+    death_loot_table:"hc:class/tank/death", \
     armor_loot_tables:{ \
         head:"hc:class/tank/armor/head", \
         chest:"hc:class/tank/armor/chest", \
@@ -340,6 +341,7 @@ data modify storage hc:main consts.classes append value { \
         kit_color:"#e9cea0", \
         perk_color:"#f2e3c9", \
     }, \
+    death_loot_table:"hc:class/marksman/death", \
     armor_loot_tables:{ \
         head:"hc:class/marksman/armor/head", \
         chest:"hc:class/marksman/armor/chest", \
@@ -457,6 +459,7 @@ data modify storage hc:main consts.classes append value { \
         kit_color:"#a6c8ec", \
         perk_color:"#ccdff4", \
     }, \
+    death_loot_table:"hc:class/assassin/death", \
     armor_loot_tables: { \
         head:"hc:class/assassin/armor/head", \
         chest:"hc:class/assassin/armor/chest", \
@@ -581,6 +584,7 @@ data modify storage hc:main consts.classes append value { \
         kit_color:"#f0c5a3", \
         perk_color:"#f7decb", \
     }, \
+    death_loot_table:"hc:class/support/death", \
     armor_loot_tables:{ \
         head:"hc:class/support/armor/head", \
         chest:"hc:class/support/armor/chest", \
@@ -679,6 +683,7 @@ data modify storage hc:main consts.classes append value { \
         kit_color:"#cebae5", \
         perk_color:"#e3d8f0", \
     }, \
+    death_loot_table:"hc:class/recon/death", \
     armor_loot_tables:{ \
         head:"hc:class/recon/armor/head", \
         chest:"hc:class/recon/armor/chest", \
@@ -788,6 +793,7 @@ data modify storage hc:main consts.classes append value { \
         kit_color:"#e7b3b0", \
         perk_color:"#f1d3d2", \
     }, \
+    death_loot_table:"hc:class/assault/death", \
     armor_loot_tables:{ \
         head:"hc:class/assault/armor/head", \
         chest:"hc:class/assault/armor/chest", \

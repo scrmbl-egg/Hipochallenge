@@ -1,0 +1,163 @@
+{
+    "type": "minecraft:generic",
+    "functions": [
+        {
+            "function": "minecraft:set_components",
+            "components": {
+                "minecraft:custom_data": {
+                    "hc:no_pickup": {}
+                }
+            }
+        }
+    ],
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:orange_bundle"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:orange_dye",
+                    "weight": 5
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:glow_berries",
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:orange_candle"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:copper_nugget"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:copper_ingot"
+                }
+            ],
+            "rolls": 0.5
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:empty",
+                    "weight": 80
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:waxed_copper_golem_statue",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:resin_brick",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:music_disc_blocks",
+                    "weight": 5
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:pufferfish"
+                }
+            ],
+            "rolls": 1,
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "enchantment_glint_override": true
+                    }
+                }
+            ]
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stick",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:bone",
+                    "weight": 7
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:bone_meal",
+                    "weight": 6
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:flower_pot",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:decorated_pot",
+                    "weight": 2
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "weight": 7
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "weight": 3,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": {
+                                    "custom_color": 15153751
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "weight": 2,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": {
+                                    "custom_color": 2322448
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:suspicious_stew"
+                }
+            ],
+            "rolls": {
+                "type": "minecraft:uniform",
+                "min": 1.1,
+                "max": 2.5
+            }
+        }
+    ]
+}
+
+
+

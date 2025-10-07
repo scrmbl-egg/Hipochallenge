@@ -1,0 +1,155 @@
+{
+    "type": "minecraft:generic",
+    "functions": [
+        {
+            "function": "minecraft:set_components",
+            "components": {
+                "minecraft:custom_data": {
+                    "hc:no_pickup": {}
+                }
+            }
+        }
+    ],
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:blue_bundle"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:blue_dye",
+                    "weight": 5
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:cornflower",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:blue_candle"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:lapis_lazuli"
+                }
+            ],
+            "rolls": 0.5
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:empty",
+                    "weight": 80
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:carrot_on_a_stick",
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "weight": 3,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": {
+                                    "custom_color": 10931402
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:music_disc_wait",
+                    "weight": 5
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:pufferfish"
+                }
+            ],
+            "rolls": 1,
+            "functions": [
+                {
+                    "function": "minecraft:set_components",
+                    "components": {
+                        "minecraft:enchantment_glint_override": true
+                    }
+                }
+            ]
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stick",
+                    "weight": 10
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:feather",
+                    "weight": 7
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:bamboo",
+                    "weight": 6
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:sugar_cane",
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:porkchop",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:cooked_porkchop",
+                    "weight": 3
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:salmon",
+                    "weight": 4
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:cooked_salmon",
+                    "weight": 2
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:salmon_bucket",
+                    "weight": 2
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:carrot"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:prismarine_shard"
+                }
+            ],
+            "rolls": {
+                "type": "minecraft:uniform",
+                "min": 1.1,
+                "max": 2.5
+            }
+        }
+    ]
+}
