@@ -19,7 +19,7 @@ type Perk = (
     struct TankPerk1 {
         ...PerkBase,
         id: 1,
-        data_type?: "tank_p1_data",
+        data_type: "tank_p1_data",
         /// Tank's perk 1 variant data.
         tank_p1_data: struct {
             /// Food item related data.
