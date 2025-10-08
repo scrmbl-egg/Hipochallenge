@@ -48,9 +48,8 @@
                             "count": {
                                 "type": "minecraft:storage",
                                 "storage": "hc:main",
-                                "path": "consts.classes[{internal_name:\"marksman\"}].kits[{id:2}].marksman_k2_data.arrows.max_amount"
-                            },
-                            "add": true
+                                "path": "consts.classes[{internal_name:\"marksman\"}].kits[{id:1}].marksman_k1_data.arrows.max_amount"
+                            }
                         }
                     ]
                 }
