@@ -23,12 +23,25 @@ execute store result score __$hc_max __hc.NewProjectile \
     classes[{internal_name:"marksman"}].\
     kits[{id:2}].marksman_k2_data.arrows.max_amount
 
-# get current amount of arrows
+# get current amount of arrows (+1 if charged in crossbow)
 execute store result score __$hc_arrows __hc.NewProjectile \
     run \
     clear @s *[ \
         minecraft:custom_data={"hc:item_id":"marksman_k2_arrow"} \
     ] 0
+execute if items entity @s container.* *[ \
+    minecraft:custom_data={"hc:item_id":"marksman_k2_crossbow"}, \
+    minecraft:charged_projectiles=[ \
+        { \
+            id:"minecraft:arrow", \
+            components:{ \
+                "minecraft:custom_data":{"hc:item_id":"marksman_k2_arrow"}, \
+            }, \
+        }, \
+    ] \
+] \
+    run \
+    scoreboard players add __$hc_arrows __hc.NewProjectile 1
 
 # give new (smaller) cooldown if player can have more arrows
 execute if score \
