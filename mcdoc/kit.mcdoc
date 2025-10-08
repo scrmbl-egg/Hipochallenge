@@ -9,7 +9,7 @@ struct KitBase {
     id: int @ 1..3,
     /// Translated text for the kit name.
     name: TranslatedText,
-    /// Command for equipping the kit.
+    /// Loot tables for kit equipment.
     item_loot_tables: struct KitItemLootTables {
         /// Loot table that will be given across the player's hotbar.
         hotbar: #[id="loot_table"] string,
