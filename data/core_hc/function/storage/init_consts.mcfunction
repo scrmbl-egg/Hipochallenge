@@ -376,7 +376,7 @@ data modify storage hc:main consts.classes append value { \
             marksman_k2_data:{ \
                 arrows:{ \
                     max_amount:5, \
-                    new_first_cooldown_ticks:80, \
+                    new_first_cooldown_ticks:60, \
                     new_rest_cooldown_ticks:30, \
                 }, \
             }, \
