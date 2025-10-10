@@ -18,7 +18,7 @@ $summon minecraft:allay ~ ~ ~ { \
     CanPickUpLoot:false, \
     Tags:["hc.TankKit3Spirit","hc.KillOnRoundEnd"], \
     data:{ \
-        "hc:spirit":{ \
+        "hc:entity/spirit":{ \
             owner_uuid:$(owner_uuid), \
             target_uuid:$(owner_uuid), \
             goal_uuid:[I; 0, 0, 0, 0], \

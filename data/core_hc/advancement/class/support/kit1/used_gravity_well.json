@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item_id": "support_k1_gravity_well"
+                            "hc:item/id": "support_k1_gravity_well"
                         }
                     }
                 }

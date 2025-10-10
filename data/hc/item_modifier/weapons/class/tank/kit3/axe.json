@@ -7,7 +7,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "tank_k3_axe"
+                "hc:item/id": "tank_k3_axe"
             },
             "minecraft:unbreakable": {},
             "minecraft:attribute_modifiers": [

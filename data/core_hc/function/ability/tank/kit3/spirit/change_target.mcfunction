@@ -15,11 +15,12 @@ $execute as @e[ \
     tag=hc.TankKit3Spirit, \
     nbt={ \
         data:{ \
-            "hc:spirit":{ \
+            "hc:entity/spirit":{ \
                 owner_uuid:$(owner_uuid), \
             }, \
         }, \
     } \
 ] \
     run \
-    data modify entity @s data."hc:spirit".target set value $(target_uuid)
+    data modify entity @s data."hc:entity/spirit".target_uuid \
+    set value $(target_uuid)

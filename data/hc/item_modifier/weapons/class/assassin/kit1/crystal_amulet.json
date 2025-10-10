@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "assassin_k1_crystal_amulet"
+                "hc:item/id": "assassin_k1_crystal_amulet"
             },
             "minecraft:custom_model_data": {},
             "minecraft:enchantment_glint_override": false,

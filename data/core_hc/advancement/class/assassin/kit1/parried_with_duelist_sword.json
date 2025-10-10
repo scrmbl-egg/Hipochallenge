@@ -11,7 +11,7 @@
                         "mainhand": {
                             "predicates": {
                                 "minecraft:custom_data": {
-                                    "hc:item_id": "assassin_k1_duelist_sword"
+                                    "hc:item/id": "assassin_k1_duelist_sword"
                                 }
                             }
                         }

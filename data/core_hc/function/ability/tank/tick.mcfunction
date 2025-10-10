@@ -12,7 +12,7 @@
 execute as @a \
     if items entity @s weapon.* *[ \
         minecraft:custom_data={ \
-            "hc:item_id":"tank_k1_goat_horn", \
+            "hc:item/id":"tank_k1_goat_horn", \
         } \
     ] \
     run \

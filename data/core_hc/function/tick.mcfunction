@@ -20,7 +20,7 @@ clear @a *[minecraft:custom_data={"hc:clear_instantly":{}}]
 # set pickup delay for items with the "hc:no_pickup" component
 execute as @e[\
     type=minecraft:item,\
-    nbt={Item:{components:{"minecraft:custom_data":{"hc:no_pickup":{}}}}}, \
+    nbt={Item:{components:{"minecraft:custom_data":{"hc:item/no_pickup":{}}}}}, \
     nbt=!{PickupDelay:32767s} \
 ] \
     run \

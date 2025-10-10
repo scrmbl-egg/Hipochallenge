@@ -26,7 +26,7 @@ execute as @e[ \
             weapon:{ \
                 components:{ \
                     "minecraft:custom_data":{ \
-                        "hc:item_id":"marksman_k2_crossbow", \
+                        "hc:item/id":"marksman_k2_crossbow", \
                     }, \
                 }, \
             }, \
@@ -43,7 +43,7 @@ execute as @e[ \
             weapon:{ \
                 components:{ \
                     "minecraft:custom_data":{ \
-                        "hc:item_id":"recon_k2_flare_arrow_crossbow", \
+                        "hc:item/id":"recon_k2_flare_arrow_crossbow", \
                     }, \
                 }, \
             }, \

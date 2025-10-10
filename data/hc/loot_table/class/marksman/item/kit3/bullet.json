@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_data": {
-                                    "hc:item_id": "marksman_k3_bullet"
+                                    "hc:item/id": "marksman_k3_bullet"
                                 }
                             }
                         }

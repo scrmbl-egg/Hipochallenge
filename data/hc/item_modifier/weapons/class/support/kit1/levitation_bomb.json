@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "support_k1_levitation_bomb"
+                "hc:item/id": "support_k1_levitation_bomb"
             },
             "minecraft:custom_model_data": {},
             "minecraft:consumable":{
@@ -39,7 +39,7 @@
                         ]
                     },
                     "minecraft:custom_data": {
-                        "hc:item_id": "support_k1_detonator"
+                        "hc:item/id": "support_k1_detonator"
                     },
                     "minecraft:consumable":{
                         "animation": "block",

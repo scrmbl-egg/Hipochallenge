@@ -7,7 +7,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "assassin_k2_sword"
+                "hc:item/id": "assassin_k2_sword"
             },
             "minecraft:unbreakable": {},
             "minecraft:custom_model_data": {},

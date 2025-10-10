@@ -18,5 +18,5 @@ $execute as @p[nbt={UUID:$(target_uuid)}] \
     }
 
 # store uuid in spirit data
-data modify entity @s data."hc:spirit".goal_uuid \
+data modify entity @s data."hc:entity/spirit".goal_uuid \
     set from entity @n[tag=hc.TankKit3SpiritGoal,type=minecraft:marker] UUID

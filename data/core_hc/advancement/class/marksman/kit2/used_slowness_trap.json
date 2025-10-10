@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item_id": "marksman_k2_slowness_trap"
+                            "hc:item/id": "marksman_k2_slowness_trap"
                         }
                     }
                 }

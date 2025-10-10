@@ -15,7 +15,7 @@
                                     "fallback": "Archer's Sickle"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item_id": "marksman_k1_sickle"
+                                    "hc:item/id": "marksman_k1_sickle"
                                 },
                                 "minecraft:unbreakable": {},
                                 "minecraft:tooltip_display": {

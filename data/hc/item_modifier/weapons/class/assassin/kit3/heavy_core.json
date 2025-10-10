@@ -7,7 +7,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "assassin_k3_heavy_core"
+                "hc:item/id": "assassin_k3_heavy_core"
             }
         }
     }

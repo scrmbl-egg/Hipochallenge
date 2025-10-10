@@ -27,7 +27,8 @@ $execute at @s if entity @n[nbt={UUID:$(goal_uuid)},type=marker,distance=50..] \
 # align spirit rotation to target player
 $execute as @s at @s if entity @n[nbt={UUID:$(target_uuid)},type=marker,distance=0..1] \
     run \
-    function core_hc:ability/tank/kit3/spirit/align with entity @s data."hc:spirit"
+    function core_hc:ability/tank/kit3/spirit/align \
+    with entity @s data."hc:entity/spirit"
 
 # Remove existing goal markers
 $execute at @s as @e[nbt={UUID:$(goal_uuid)},type=marker,limit=2,sort=nearest] \

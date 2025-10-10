@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "assassin_k2_stun_mechanism"
+                "hc:item/id": "assassin_k2_stun_mechanism"
             },
             "minecraft:custom_model_data": {},
             "minecraft:unbreakable": {},
@@ -36,7 +36,7 @@
                 "id": "minecraft:stone_pickaxe",
                 "components": {
                     "minecraft:custom_data": {
-                        "hc:item_id": "assassin_k2_stun_mechanism_cooldown"
+                        "hc:item/id": "assassin_k2_stun_mechanism_cooldown"
                     },
                     "minecraft:use_cooldown": {
                         "seconds": 16,

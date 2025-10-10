@@ -5,7 +5,7 @@
             "function": "minecraft:set_components",
             "components": {
                 "minecraft:custom_data": {
-                    "hc:no_pickup": {}
+                    "hc:item/no_pickup": {}
                 }
             }
         }

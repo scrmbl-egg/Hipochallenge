@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "recon_k2_flare_arrow_crossbow"
+                "hc:item/id": "recon_k2_flare_arrow_crossbow"
             },
             "minecraft:custom_model_data": {},
             "minecraft:enchantment_glint_override": false,

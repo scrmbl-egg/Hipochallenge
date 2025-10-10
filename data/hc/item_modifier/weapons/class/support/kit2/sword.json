@@ -7,7 +7,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "support_k2_sword"
+                "hc:item/id": "support_k2_sword"
             },
             "minecraft:custom_model_data": {},
             "minecraft:unbreakable": {},

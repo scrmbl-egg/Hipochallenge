@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "recon_k1_blindness_sentinel"
+                "hc:item/id": "recon_k1_blindness_sentinel"
             },
             "minecraft:custom_model_data": {}
         }

@@ -7,7 +7,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "recon_k1_low_visibility_area"
+                "hc:item/id": "recon_k1_low_visibility_area"
             },
             "minecraft:custom_model_data": {},
             "minecraft:rarity": "uncommon",

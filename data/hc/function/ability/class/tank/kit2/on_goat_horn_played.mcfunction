@@ -35,7 +35,7 @@ function hc:msg/debug/send_info {text:"\"used kit2 horn\""}
 
 # no cooldown, item must be deleted due to it being a goat horn
 # score: tank_kit2_goat_horn_cd
-clear @s *[custom_data={"hc:item_id":"tank_k2_goat_horn"}] 1
+clear @s *[custom_data={"hc:item/id":"tank_k2_goat_horn"}] 1
 
 # TODO: give slowness to enemies at the start, a single time
 

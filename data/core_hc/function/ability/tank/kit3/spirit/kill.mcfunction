@@ -12,7 +12,7 @@ $execute \
     type=minecraft:allay, \
     nbt={ \
         data:{ \
-            "hc:spirit":{ \
+            "hc:entity/spirit":{ \
                 owner_uuid:$(owner_uuid), \
                 }, \
             }, \

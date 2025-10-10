@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "support_k1_snow_sentinel"
+                "hc:item/id": "support_k1_snow_sentinel"
             },
             "minecraft:custom_model_data": {},
             "minecraft:consumable": {

@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "recon_k1_flash_bomb"
+                "hc:item/id": "recon_k1_flash_bomb"
             },
             "minecraft:custom_model_data": {},
             "minecraft:consumable": {

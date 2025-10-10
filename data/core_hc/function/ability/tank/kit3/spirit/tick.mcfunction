@@ -11,7 +11,7 @@ execute as @s at @s run function core_hc:fx/ability/tank/kit3/spirit_ambient
 execute at @s \
     run \
     function core_hc:ability/tank/kit3/spirit/summon_goal \
-    with entity @s data."hc:spirit"
+    with entity @s data."hc:entity/spirit"
 #>_
 # @out
 #   Summons a marker at the spirit's goal location with the tag
@@ -24,4 +24,4 @@ execute at @s \
 execute at @s \
     run \
     function core_hc:ability/tank/kit3/spirit/move \
-    with entity @s data."hc:spirit"
+    with entity @s data."hc:entity/spirit"

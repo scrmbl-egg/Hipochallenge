@@ -17,7 +17,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "tank_shield"
+                "hc:item/id": "tank_shield"
             },
             "minecraft:unbreakable": {},
             "minecraft:base_color": "black",

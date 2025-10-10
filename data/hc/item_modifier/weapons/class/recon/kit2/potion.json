@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "recon_k2_potion"
+                "hc:item/id": "recon_k2_potion"
             },
             "minecraft:custom_model_data": {},
             "minecraft:potion_contents": {

@@ -16,7 +16,7 @@
         "function": "minecraft:set_components",
         "components": {
             "minecraft:custom_data": {
-                "hc:item_id": "tank_k1_castle"
+                "hc:item/id": "tank_k1_castle"
             },
             "minecraft:unbreakable": {},
             "minecraft:rarity": "uncommon",
@@ -34,7 +34,7 @@
                 "id": "minecraft:armor_stand",
                 "components": {
                     "minecraft:custom_data": {
-                        "hc:item_id": "tank_k1_castle_cooldown"
+                        "hc:item/id": "tank_k1_castle_cooldown"
                     },
                     "minecraft:unbreakable": {},
                     "minecraft:use_cooldown": {

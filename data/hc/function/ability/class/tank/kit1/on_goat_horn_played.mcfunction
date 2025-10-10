@@ -38,7 +38,7 @@ function hc:msg/debug/send_info { \
 
 # no cooldown, item must be deleted due to it being a goat horn
 # score: tank_kit1_goat_horn_cd
-clear @s *[custom_data={"hc:item_id":"tank_k1_goat_horn"}] 1
+clear @s *[custom_data={"hc:item/id":"tank_k1_goat_horn"}] 1
 
 data modify storage hc:temp tank_k1_goat_horn set value { \
     team:"", \
