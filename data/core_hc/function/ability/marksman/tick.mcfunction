@@ -6,7 +6,7 @@
 
 # bow (shot bow detection must be done here since there is no advancement)
 execute as @a[scores={hc.BowShot=1..}] \
-    if items entity @s weapon.* *[\
+    if items entity @s weapon.* *[ \
         minecraft:custom_data={"hc:item/id":"marksman_k1_bow"}\
     ] \
     run \
@@ -17,7 +17,7 @@ execute as @a[scores={hc.BowShot=1..}] \
     run \
     scoreboard players set @s hc.BowShot 0
 
-# arrows (give even if in creative mode)
+# arrows
 execute as @a[ \
     scores={hc.MarksmanKit1NewProjectileCooldown=1} \
 ] \
