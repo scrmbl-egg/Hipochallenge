@@ -31,7 +31,7 @@
                                     "id": "minecraft:glass_bottle",
                                     "components": {
                                         "minecraft:custom_data": {
-                                            "hc:clear_instantly": {}
+                                            "hc:item/clear_instantly": {}
                                         }
                                     }
                                 }
