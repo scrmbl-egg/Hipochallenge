@@ -21,6 +21,7 @@
                                         {
                                             "id": "minecraft:speed",
                                             "amplifier": 1,
+                                            "ambient": false,
                                             "duration": 160,
                                             "show_icon": true,
                                             "show_particles": true
