@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stone_pickaxe",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.marksman.kit2.sickle",
+                                    "fallback": "Sniper's Sickle"
+                                },
+                                "minecraft:item_model": "minecraft:wooden_hoe",
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "marksman_k2_sickle"
+                                },
+                                "minecraft:unbreakable": {},
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:unbreakable"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

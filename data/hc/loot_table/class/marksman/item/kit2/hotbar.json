@@ -1,1 +1,61 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit2/crossbow"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit2/sickle"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit2/potion"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit2/slowness_trap"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit2/arrow",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "type": "minecraft:storage",
+                                "storage": "hc:main",
+                                "path": "consts.classes[{internal_name:\"marksman\"}].kits[{id:2}].marksman_k2_data.arrows.max_amount"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
+

@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:stone_pickaxe",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.marksman.kit2.slowness_trap",
+                                    "fallback": "Slowness Trap"
+                                },
+                                "minecraft:item_model": "minecraft:flint",
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "marksman_k2_slowness_trap"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "brush",
+                                    "consume_seconds": 1.6,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
