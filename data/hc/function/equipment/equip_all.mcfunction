@@ -21,4 +21,4 @@ function hc:equipment/clear
 
 # equip stuff
 function hc:equipment/equip_armor
-function hc:equipment/equip_weapons
+function hc:equipment/equip_items
