@@ -2,14 +2,13 @@
 #
 # Tick function for the recon class abilities.
 
-# TODO: change and format following commands
-# kit 1
+## kit 1
 
 
-# kit 2
-    # flare arrow
-    # TODO: deprecate
-    # execute as @a[scores={recon_kit2_flare_arrow_cd=1},gamemode=!creative] run function hc:ability/class/recon/kit2/flare_arrows/give_projectile_and_reset_cd_st with storage minecraft:hipochallenge
+## kit 2
+execute as @a[scores={hc.ReconKit2FlareArrowCooldown=1}] \
+    run \
+    function hc:ability/class/recon/kit2/give_flare_arrow_and_reset_cooldown
 
 
-# kit 3
+## kit 3
