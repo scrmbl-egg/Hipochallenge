@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:glow_ink_sac",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.tank.kit3.redirect_spirit",
+                                    "fallback": "Redirect Spirit"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "tank_k3_redirect_spirit"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

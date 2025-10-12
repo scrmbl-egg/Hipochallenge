@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:goat_horn",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.tank.kit1.goat_horn",
+                                    "fallback": "Guardian's Horn"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "tank_k1_goat_horn"
+                                },
+                                "minecraft:rarity": "epic",
+                                "minecraft:instrument": "minecraft:ponder_goat_horn"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

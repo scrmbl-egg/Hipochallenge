@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:heart_of_the_sea",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.tank.kit3.bubble_shield",
+                                    "fallback": "Bubble Shield"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "tank_k3_bubble_shield"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

@@ -1,1 +1,14 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/tank/item/kit3/bubble_shield"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
