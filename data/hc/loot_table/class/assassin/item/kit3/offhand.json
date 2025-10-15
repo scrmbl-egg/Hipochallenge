@@ -1,1 +1,14 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/assassin/item/kit3/magic_feather"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

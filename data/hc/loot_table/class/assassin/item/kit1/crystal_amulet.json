@@ -1,0 +1,39 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:nether_star",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.assassin.kit1.crystal_amulet",
+                                    "fallback": "Crystal Amulet"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "assassin_k1_crystal_amulet"
+                                },
+                                "minecraft:enchantment_glint_override": false,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:attribute_modifiers": [
+                                    {
+                                        "id": "hc:assassin_k1_crystal_amulet_movement_speed",
+                                        "type": "minecraft:movement_speed",
+                                        "amount": 0.4,
+                                        "operation": "add_multiplied_total",
+                                        "slot": "hand"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

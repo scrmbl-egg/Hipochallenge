@@ -1,1 +1,23 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/assassin/item/kit1/duelist_sword"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/assassin/item/kit1/crystal_amulet"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

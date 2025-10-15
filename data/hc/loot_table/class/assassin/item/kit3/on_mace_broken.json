@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "hc:class/assassin/item/kit3/mace"
+                    "value": "hc:class/assassin/item/kit3/heavy_core"
                 }
             ],
             "rolls": 1
@@ -14,7 +14,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "hc:class/assassin/item/kit3/teleportation_mark"
+                    "value": "hc:class/assassin/item/kit3/repulsing_rod"
                 }
             ],
             "rolls": 1

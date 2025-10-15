@@ -1,0 +1,42 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:feather",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.assassin.kit3.magic_feather",
+                                    "fallback": "Magic Feather"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "assassin_k3_magic_feather"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 0,
+                                    "has_consume_particles": true,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                },
+                                "minecraft:use_cooldown": {
+                                    "seconds": 11,
+                                    "cooldown_group": "hc:assassin_k3_magic_feather"
+                                },
+                                "minecraft:use_remainder": {
+                                    "id": "minecraft:feather"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

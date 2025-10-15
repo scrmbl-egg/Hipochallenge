@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.assassin.kit3.teleportation_mark",
+                                    "fallback": "Teleportation Mark"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "assassin_k3_teleportation_mark"
+                                },
+                                "minecraft:item_model": "minecraft:ender_pearl",
+                                "minecraft:rarity": "rare"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
