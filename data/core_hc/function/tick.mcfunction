@@ -31,6 +31,8 @@ execute as @e[ \
 # mute vanilla music
 function core_hc:music/mute_vanilla
 
+## CORE GAME LOOP REGION
+
 # game state handling
 # TODO: when classes are done, implement game state updates and logic
 
@@ -39,6 +41,9 @@ execute as @a[scores={hc.IsDead=1..}] \
     at @s \
     run \
     function core_hc:death/tick
+
+# triggers
+function core_hc:trigger/tick
 
 # fx
 function #core_hc:fx/tick
