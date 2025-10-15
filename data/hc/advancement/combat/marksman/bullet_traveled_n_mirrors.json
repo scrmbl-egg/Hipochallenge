@@ -3,24 +3,27 @@
         "icon": {
             "id": "minecraft:black_dye",
             "count": 1,
-            "components": {
-                "custom_model_data": 1
-            }
+            "components": {}
         },
         "title": [
+            "",
             {
                 "text": "SSS",
-                "color": "red",
+                "color": "#ff2f2f",
                 "italic": true
             },
             {
-                "text": "hitstorm",
-                "color": "white"
+                "text": "--tstorm",
+                "color": "white",
+                "italic": true
             }
         ],
         "description": {
-            "translate": "hc.advancements.combat.marksman.kit3.bullet_traveled_4_mirrors.description",
-            "fallback": "Make a bullet from the V-445 Revolver travel through 4 mirrors"
+            "translate": "hc.advancements.combat.marksman.kit3.bullet_traveled_n_mirrors.description",
+            "fallback": "Make a bullet from the V-445 Revolver travel through %s mirrors",
+            "with": [
+                "4"
+            ]
         },
         "frame": "challenge",
         "show_toast": false,
@@ -37,6 +40,5 @@
         [
             "impossible"
         ]
-    ],
-    "rewards": {}
+    ]
 }
