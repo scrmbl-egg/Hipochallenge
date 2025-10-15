@@ -2,7 +2,7 @@
     "pack": {
         "description": [
             {
-                "text": "HIPOCHALLENGE:",
+                "text": "HIPOCHALLENGE: ",
                 "color": "white",
                 "bold": true
             },
