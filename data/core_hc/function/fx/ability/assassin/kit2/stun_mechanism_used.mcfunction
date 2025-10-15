@@ -8,9 +8,14 @@
 #       UUID of the owner.
 
 # particles
-particle minecraft:end_rod \
-    ~ ~1 ~ 0 0.5 0 0.3 15 force @a
-$particle minecraft:flash \
+execute anchored eyes \
+    positioned ^ ^ ^1 \
+    run \
+    particle minecraft:end_rod ~ ~ ~ 0 0 0 0.3 15 force @a
+$execute anchored eyes \
+    positioned ^ ^ ^1 \
+    run \
+    particle minecraft:flash{color:-1644826} \
     ~ ~1 ~ 0.1 0.1 0.1 0 1 force @a[nbt=!{UUID:$(owner_uuid)}]
 
 # sound
