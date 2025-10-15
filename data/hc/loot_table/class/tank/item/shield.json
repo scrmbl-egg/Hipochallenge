@@ -16,11 +16,229 @@
                                     "italic": false
                                 },
                                 "minecraft:unbreakable": {},
+                                "minecraft:base_color": "gray",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:gradient",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:skull",
+                                        "color": "white"
+                                    }
+                                ],
                                 "minecraft:tooltip_display": {
                                     "hidden_components": [
-                                        "minecraft:unbreakable"
+                                        "minecraft:unbreakable",
+                                        "minecraft:banner_patterns"
                                     ]
                                 }
+                            }
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "hc:team/color/is_in_red_team"
+                                }
+                            ],
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:base_color": "red",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:mojang",
+                                        "color": "white"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "hc:team/color/is_in_yellow_team"
+                                }
+                            ],
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:base_color": "yellow",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:straight_cross",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:border",
+                                        "color": "yellow"
+                                    },
+                                    {
+                                        "pattern": "minecraft:flower",
+                                        "color": "yellow"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "hc:team/color/is_in_green_team"
+                                }
+                            ],
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:base_color": "green",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:gradient",
+                                        "color": "lime"
+                                    },
+                                    {
+                                        "pattern": "minecraft:creeper",
+                                        "color": "black"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "hc:team/color/is_in_blue_team"
+                                }
+                            ],
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:base_color": "black",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:stripe_downleft",
+                                        "color": "white"
+                                    },
+                                    {
+                                        "pattern": "minecraft:rhombus",
+                                        "color": "blue"
+                                    },
+                                    {
+                                        "pattern": "minecraft:stripe_downleft",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:circle",
+                                        "color": "blue"
+                                    },
+                                    {
+                                        "pattern": "minecraft:flower",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:triangles_top",
+                                        "color": "blue"
+                                    },
+                                    {
+                                        "pattern": "minecraft:triangles_bottom",
+                                        "color": "blue"
+                                    },
+                                    {
+                                        "pattern": "minecraft:border",
+                                        "color": "black"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "hc:team/color/is_in_purple_team"
+                                }
+                            ],
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:base_color": "purple",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:half_horizontal_bottom",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:skull",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:triangle_bottom",
+                                        "color": "purple"
+                                    },
+                                    {
+                                        "pattern": "minecraft:stripe_middle",
+                                        "color" :"black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:border",
+                                        "color": "purple"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "hc:team/color/is_in_orange_team"
+                                }
+                            ],
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:base_color": "orange",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:bricks",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:border",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:circle",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:stripe_middle",
+                                        "color": "black"
+                                    },
+                                    {
+                                        "pattern": "minecraft:piglin",
+                                        "color": "orange"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "hc:team/color/is_in_cyan_team"
+                                }
+                            ],
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:base_color": "light_blue",
+                                "minecraft:banner_patterns": [
+                                    {
+                                        "pattern": "minecraft:gradient_up",
+                                        "color": "blue"
+                                    },
+                                    {
+                                        "pattern": "minecraft:circle",
+                                        "color": "light_blue"
+                                    },
+                                    {
+                                        "pattern": "minecraft:globe",
+                                        "color": "white"
+                                    }
+                                ]
                             }
                         }
                     ]
