@@ -4,6 +4,8 @@
 
 # create local scoreboard for initialisation errors
 scoreboard objectives add __hc.InitError dummy
+
+# temp score for increasing reload count
 scoreboard objectives add __hc.ReloadCount dummy
 
 scoreboard players set __$hc_init_consts __hc.InitError 0
@@ -14,7 +16,7 @@ scoreboard players set __$hc_init_gamerules __hc.InitError 0
 # loading message
 tellraw @a [ \
     "", \
-    {color:"white",bold:true,text:"[HIPOCHALLENGE: "}, \
+    {color:"#ebeeff",bold:true,text:"[HIPOCHALLENGE: "}, \
     {color:"#ff493b",text:"P"}, \
     {color:"#ff5538",text:"h"}, \
     {color:"#ff6035",text:"o"}, \
@@ -22,7 +24,7 @@ tellraw @a [ \
     {color:"#ff762e",text:"n"}, \
     {color:"#ff822b",text:"i"}, \
     {color:"#ff8d28",text:"x"}, \
-    {color:"white",bold:true,text:"]: "}, \
+    {color:"#ebeeff",bold:true,text:"]: "}, \
     {translate:"commands.reload.success",fallback:"Reloading!"}, \
 ]
 
@@ -190,28 +192,23 @@ tellraw @a [ \
 execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
-    playsound minecraft:entity.player.levelup \
-    master @s ~ ~ ~ 0.25 0 0.25
+    playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 0 0.25
 execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
-    playsound minecraft:entity.player.levelup \
-    master @s ~ ~ ~ 0.25 1.5 0.25
+    playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1.5 0.25
 execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
-    playsound minecraft:entity.player.levelup \
-    master @s ~ ~ ~ 0.25 1.2 0.25
+    playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1.2 0.25
 execute as @a[tag=!hc.DarioUpdate] \
     at @s \
     run \
-    playsound minecraft:entity.player.levelup \
-    master @s ~ ~ ~ 0.25 1 0.25
+    playsound minecraft:entity.player.levelup master @s ~ ~ ~ 0.25 1 0.25
 execute as @a[tag=hc.DarioUpdate] \
     at @s \
     run \
-    playsound hc:dario.dario_update \
-    master @s ~ ~ ~ 1 1 1
+    playsound hc:dario.dario_update master @s ~ ~ ~ 1 1 1
 
 # free memory
 scoreboard objectives remove __hc.InitError
