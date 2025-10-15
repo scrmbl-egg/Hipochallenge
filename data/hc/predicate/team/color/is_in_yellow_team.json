@@ -1,0 +1,31 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hc:team/is_in_team1"
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hc:team/color/is_team1_yellow"
+                }
+            ]
+        },
+        {
+            "condition": "minecraft:all_of",
+            "terms": [
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hc:team/is_in_team2"
+                },
+                {
+                    "condition": "minecraft:reference",
+                    "name": "hc:team/color/is_team2_yellow"
+                }
+            ]
+        }
+    ]
+}
