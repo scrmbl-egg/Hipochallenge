@@ -3,9 +3,7 @@
         "icon": {
             "id": "minecraft:black_dye",
             "count": 1,
-            "components": {
-                "custom_model_data": 2
-            }
+            "components": {}
         },
         "title": {
             "translate": "hc.advancements.rest.room.obtained_figurine.name",
