@@ -42,7 +42,7 @@ data modify storage hc:main consts.game set value { \
         { \
             internal_name:"casual", \
             id:0, \
-            name:{translate:"",fallback:"CASUAL"}, \
+            name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
             necessary_wins:5, \
             minimum_win_lead_for_victory:1, \
             round_duration_ticks:2400, \
@@ -50,7 +50,7 @@ data modify storage hc:main consts.game set value { \
         { \
             internal_name:"competitive", \
             id:1, \
-            name:{translate:"",fallback:"COMPETITIVE"}, \
+            name:{translate:"hc.gamemode.casual",fallback:"Competitive"}, \
             necessary_wins:5, \
             minimum_win_lead_for_victory:2, \
             round_duration_ticks:2400, \
