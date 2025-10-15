@@ -95,16 +95,6 @@ scoreboard objectives add hc.AssaultKit3PushingProjectileCooldown dummy
 ## ITEM USAGE
 scoreboard objectives add hc.BowShot minecraft.used:minecraft.bow
 
-## TRIGGERS
-
-## NOTE:
-# Triggers don't have the "hc." prefix. This is so that they can be typed with
-# ease for users.
-
-scoreboard objectives add warp trigger
-scoreboard objectives add leave trigger
-scoreboard objectives add join trigger
-
 ## MODIFY DISPLAY NAMES
 
 ## NOTE:

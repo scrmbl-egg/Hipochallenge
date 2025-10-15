@@ -55,6 +55,16 @@ execute unless data storage hc:main vars \
     run \
     function core_hc:storage/init_vars
 
+# error msg
+execute if score __$hc_init_vars __hc.InitError matches 0 \
+    run \
+    function hc:msg/all/send_error { \
+        text:{ \
+            translate:"hc.msg.all.error.vars_not_initialised", \
+            fallback:"The datapack global variables couldn't be initialised. Contact a developer if you see this message", \
+        }, \
+    }
+
 
 ## SCORE OBJETIVES
 execute store result score __$hc_init_scores __hc.InitError \
@@ -68,6 +78,21 @@ execute if score __$hc_init_scores __hc.InitError matches 0 \
         text:{ \
             translate:"hc.msg.all.error.scores_not_initialised", \
             fallback:"The datapack score objectives couldn't be initialised. Contact a developer if you see this message", \
+        }, \
+    }
+
+## TRIGGERS (SCORE TRIGGER TYPES)
+execute store result score __$hc_init_triggers __hc.InitError \
+    run \
+    function core_hc:trigger/init_all
+
+# error msg
+execute if score __$hc_init_triggers __hc.InitError matches 0 \
+    run \
+    function hc:msg/all/send_error { \
+        text:{ \
+            translate:"hc.msg.all.error.triggers_not_initialised", \
+            fallback:"The datapack triggers couldn't be initialised. Contact a developer if you see this message", \
         }, \
     }
 
