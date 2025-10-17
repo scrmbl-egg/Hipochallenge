@@ -21,6 +21,7 @@ scoreboard objectives remove leave
 
 ## TRAINING TOOLS
 scoreboard objectives remove warp_plaza
+scoreboard objectives remove training_gui
 scoreboard objectives remove cl_tank
 scoreboard objectives remove cl_marksman
 scoreboard objectives remove cl_assassin

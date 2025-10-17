@@ -31,6 +31,7 @@ scoreboard objectives add leave trigger
 
 ## TRAINING TOOLS
 scoreboard objectives add warp_plaza trigger
+scoreboard objectives add training_gui trigger
 scoreboard objectives add cl_tank trigger
 scoreboard objectives add cl_marksman trigger
 scoreboard objectives add cl_assassin trigger
