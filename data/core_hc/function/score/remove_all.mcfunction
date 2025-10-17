@@ -90,13 +90,3 @@ scoreboard objectives remove hc.AssaultKit3PushingProjectileCooldown
 
 ## ITEM USAGE
 scoreboard objectives remove hc.BowShot
-
-## TRIGGERS
-
-## NOTE:
-# Triggers don't have the "hc." prefix. This is so that they can be typed with
-# ease for users.
-
-scoreboard objectives remove warp
-scoreboard objectives remove leave
-scoreboard objectives remove join
