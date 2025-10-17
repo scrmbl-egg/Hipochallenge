@@ -1,7 +1,7 @@
 {
     "values": [
-        "#air",
-        "light",
-        "structure_void"
+        "#minecraft:air",
+        "minecraft:light",
+        "minecraft:structure_void"
     ]
 }
