@@ -21,7 +21,11 @@ clear @a *[minecraft:custom_data={"hc:item/clear_instantly":{}}]
 execute as @e[ \
     type=minecraft:item, \
     nbt={ \
-        Item:{components:{"minecraft:custom_data":{"hc:item/no_pickup":{}}}}, \
+        Item:{ \
+            components:{ \
+                "minecraft:custom_data":{"hc:entity/item/no_pickup":{}}, \
+            }, \
+        }, \
     }, \
     nbt=!{PickupDelay:32767s} \
 ] \
