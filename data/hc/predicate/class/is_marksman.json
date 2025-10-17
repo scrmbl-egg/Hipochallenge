@@ -2,6 +2,17 @@
     "condition": "minecraft:entity_scores",
     "entity": "this",
     "scores": {
-        "hc.Class": 2
+        "hc.Class": {
+            "min": {
+                "type": "minecraft:storage",
+                "storage": "hc:main",
+                "path": "consts.classes[{internal_name:\"marksman\"}].id"
+            },
+            "max": {
+                "type": "minecraft:storage",
+                "storage": "hc:main",
+                "path": "consts.classes[{internal_name:\"marksman\"}].id"
+            }
+        }
     }
 }
