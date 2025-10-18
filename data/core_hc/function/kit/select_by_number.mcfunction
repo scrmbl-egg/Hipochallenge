@@ -6,7 +6,7 @@
 #   value: int
 #       Number of the kit that will be selected.
 
-$scoreboard players set @s hc.Perk $(value)
+$scoreboard players set @s hc.Kit $(value)
 
 # return early if class isn't selected
 execute unless predicate hc:class/has_selected \
