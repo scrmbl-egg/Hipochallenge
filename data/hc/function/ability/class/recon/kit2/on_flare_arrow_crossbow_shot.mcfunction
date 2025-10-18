@@ -8,8 +8,15 @@ advancement revoke @s \
 
 # set arrow cooldown ticks (except those in creative)
 execute if entity @s[gamemode=!creative] \
+    if predicate core_hc:util/is_projectile_cooldown_enabled \
     store result score @s hc.ReconKit2FlareArrowCooldown \
     run \
     data get storage hc:main \
     consts.classes[{internal_name:"recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.cooldown_ticks
+
+# give arrow instantly if proj_cooldown is triggered
+execute if entity @s[gamemode=!creative] \
+    unless predicate core_hc:util/is_projectile_cooldown_enabled \
+    run \
+    loot give @s loot hc:class/recon/item/kit2/flare_arrow
