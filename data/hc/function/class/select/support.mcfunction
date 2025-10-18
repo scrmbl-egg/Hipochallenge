@@ -4,24 +4,13 @@
 #
 # @context player
 
-# change class score
-execute store result score @s hc.Class \
-    run \
-    data get storage \
-    hc:main consts.classes[{internal_name:"support"}].id
+# construct params
+data modify storage hc:temp select_class_params.value \
+    set from storage hc:main consts.classes[{internal_name:"support"}].id
 
-# construct debug message parameters
-data modify storage hc:temp msg_params.text set value { \
-    translate:"hc.msg.all.player_selected_class", \
-    fallback:"%1$s has selected the %2$s class", \
-    with:[{selector:"@s"}, {}], \
-}
-data modify storage hc:temp msg_params.text.with[1] \
-    set from storage \
-    hc:main consts.classes[{internal_name:"support"}].name
-
-# send debug msg
-function hc:msg/debug/send_info with storage hc:temp msg_params
+# select
+function core_hc:class/select_by_number \
+    with storage hc:temp select_class_params
 
 # free memory
-data remove storage hc:temp msg_params
+data remove storage hc:temp select_class_params
