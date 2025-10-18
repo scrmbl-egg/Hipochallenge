@@ -55,3 +55,4 @@ scoreboard players enable @s proj_cooldown
 
 # free memory
 scoreboard objectives remove __hc.ProjCooldownSwitch
+data remove storage hc:temp proj_cooldown
