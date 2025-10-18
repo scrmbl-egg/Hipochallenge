@@ -13,7 +13,18 @@ $tellraw @a[tag=hc.Debug] [ \
         italic:true, \
         hover_event:{ \
             action:"show_text",\
-            value:{translate:"hc.msg.debug",fallback:"Debug"}, \
+            value:[ \
+                "", \
+                { \
+                    bold:true, \
+                    color:"green", \
+                    text:">> ", \
+                }, \
+                { \
+                    translate:"hc.msg.debug", \
+                    fallback:"Debug", \
+                }, \
+            ], \
         }, \
     }, \
     { \

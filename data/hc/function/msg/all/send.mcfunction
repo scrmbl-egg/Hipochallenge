@@ -11,7 +11,18 @@ $tellraw @a [ \
         text:"", \
         hover_event:{ \
             action:"show_text",\
-            value:{translate:"hc.msg.all",fallback:"Global message"} \
+            value:[ \
+                "", \
+                { \
+                    bold:true, \
+                    color:"white", \
+                    text:">> ", \
+                }, \
+                { \
+                    translate:"hc.msg.all", \
+                    fallback:"Global message", \
+                }, \
+            ], \
         }, \
     }, \
     { \

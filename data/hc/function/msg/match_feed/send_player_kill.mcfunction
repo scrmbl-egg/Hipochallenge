@@ -14,7 +14,18 @@ $tellraw @a[predicate=hc:team/is_in_match_team] [ \
         text:"", \
         hover_event:{ \
             action:"show_text",\
-            value:{translate:"hc.msg.match_feed",fallback:"Match feed"} \
+            value:[ \
+                "", \
+                { \
+                    bold:true, \
+                    color:"dark_red", \
+                    text:">> ", \
+                }, \
+                { \
+                    translate:"hc.msg.match_feed", \
+                    fallback:"Match feed", \
+                }, \
+            ], \
         }, \
     }, \
     { \

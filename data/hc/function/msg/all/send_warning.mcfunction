@@ -9,10 +9,21 @@
 $tellraw @a [ \
     { \
         text:"", \
-        color:"red", \
+        color:"gold", \
         hover_event:{ \
             action:"show_text",\
-            value:{translate:"hc.msg.all",fallback:"Global message"}, \
+            value:[ \
+                "", \
+                { \
+                    bold:true, \
+                    color:"white", \
+                    text:">> ", \
+                }, \
+                { \
+                    translate:"hc.msg.all", \
+                    fallback:"Global message", \
+                }, \
+            ], \
         }, \
     }, \
     { \
@@ -26,8 +37,8 @@ $tellraw @a [ \
     }, \
     { \
         bold:true, \
-        translate:"hc.msg.error", \
-        fallback:"ERROR", \
+        translate:"hc.msg.warning", \
+        fallback:"WARNING", \
     }, \
     { \
         bold:true, \

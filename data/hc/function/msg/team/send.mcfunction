@@ -13,7 +13,18 @@ $tellraw @a[team=$(team)] [ \
         text:"", \
         hover_event:{ \
             action:"show_text",\
-            value:{translate:"hc.msg.team",fallback:"Team message"} \
+            value:[ \
+                "", \
+                { \
+                    bold:true, \
+                    color:"yellow", \
+                    text:">> ", \
+                }, \
+                { \
+                    translate:"hc.msg.team", \
+                    fallback:"Team message", \
+                }, \
+            ], \
         }, \
     }, \
     { \

@@ -11,7 +11,18 @@ $tellraw @s [ \
         text:"", \
         hover_event:{ \
             action:"show_text",\
-            value:{translate:"hc.msg.private",fallback:"Private message"} \
+            value:[ \
+                "", \
+                { \
+                    bold:true, \
+                    color:"blue", \
+                    text:">> ", \
+                }, \
+                { \
+                    translate:"hc.msg.private", \
+                    fallback:"Private message", \
+                }, \
+            ], \
         }, \
     }, \
     { \
