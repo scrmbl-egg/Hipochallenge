@@ -10,6 +10,9 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
+                                "minecraft:custom_data": {
+                                    "hc:item/armor/apply_team_trim_material": {}
+                                },
                                 "minecraft:trim": {
                                     "material": "minecraft:quartz",
                                     "pattern": "minecraft:sentry"

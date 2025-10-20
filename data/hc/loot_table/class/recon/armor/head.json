@@ -10,6 +10,10 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
+                                "minecraft:custom_data": {
+                                    "hc:item/armor/apply_team_dye_color": {},
+                                    "hc:item/armor/apply_team_trim_material": {}
+                                },
                                 "minecraft:dyed_color": 15329769,
                                 "minecraft:trim": {
                                     "material": "minecraft:quartz",

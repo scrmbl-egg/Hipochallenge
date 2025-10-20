@@ -50,7 +50,7 @@ data modify storage hc:main vars.team_contexts set value { \
             name_color:"#ff0000", \
             text_color:"red", \
             dust_color:[1.0f,0.0f,0.0f], \
-            armor_color:11546150, \
+            armor_dye_color:11546150, \
             trim_material:"minecraft:redstone", \
         }, \
         players:[], \
@@ -63,7 +63,7 @@ data modify storage hc:main vars.team_contexts set value { \
             name_color:"blue", \
             text_color:"blue", \
             dust_color:[0.0f,0.0f,1.0f], \
-            armor_color:3949738, \
+            armor_dye_color:3949738, \
             trim_material:"minecraft:lapis", \
         }, \
         players:[], \

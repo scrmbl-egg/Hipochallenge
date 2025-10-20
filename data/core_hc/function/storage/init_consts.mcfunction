@@ -74,7 +74,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#09d8f3", \
     text_color:"white", \
     dust_color:[0.9f,0.9f,0.9f], \
-    armor_color:15329769, \
+    armor_dye_color:15329769, \
     trim_material:"minecraft:quartz", \
 }
 
@@ -86,7 +86,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#ff3030", \
     text_color:"red", \
     dust_color:[1.0f,0.0f,0.0f], \
-    armor_color:10952471, \
+    armor_dye_color:10952471, \
     trim_material:"minecraft:redstone", \
 }
 
@@ -98,7 +98,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#fffb0a", \
     text_color:"yellow", \
     dust_color:[1.0f,1.0f,0.0f], \
-    armor_color:16766252, \
+    armor_dye_color:16766252, \
     trim_material:"minecraft:gold", \
 }
 
@@ -110,7 +110,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#2ece49", \
     text_color:"green", \
     dust_color:[0.0f,1.0f,0.0f], \
-    armor_color:5162826, \
+    armor_dye_color:5162826, \
     trim_material:"minecraft:emerald", \
 }
 
@@ -122,7 +122,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#3f3bff", \
     text_color:"blue", \
     dust_color:[0.0f,0.0f,1.0f], \
-    armor_color:1977039, \
+    armor_dye_color:1977039, \
     trim_material:"minecraft:lapis", \
 }
 
@@ -134,7 +134,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#df2fdf", \
     text_color:"light_purple", \
     dust_color:[1.0f,0.0f,1.0f], \
-    armor_color:13061821, \
+    armor_dye_color:13061821, \
     trim_material:"minecraft:amethyst", \
 }
 
@@ -146,7 +146,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#ff811a", \
     text_color:"gold", \
     dust_color:[1.0f,0.455f,0.141f], \
-    armor_color:16739609, \
+    armor_dye_color:16739609, \
     trim_material:"minecraft:resin", \
 }
 
@@ -158,7 +158,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#34d5f1", \
     text_color:"aqua", \
     dust_color:[0.20f,0.83f,1.0f], \
-    armor_color:1953486, \
+    armor_dye_color:1953486, \
     trim_material:"minecraft:diamond", \
 }
 

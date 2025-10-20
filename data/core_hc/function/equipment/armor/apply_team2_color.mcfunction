@@ -31,16 +31,16 @@ data modify storage hc:temp set_color set value { \
 # copy team's armor color
 data modify storage hc:temp set_color.head.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_color
+    hc:main vars.team_contexts.team2.preset.armor_dye_color
 data modify storage hc:temp set_color.chest.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_color
+    hc:main vars.team_contexts.team2.preset.armor_dye_color
 data modify storage hc:temp set_color.legs.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_color
+    hc:main vars.team_contexts.team2.preset.armor_dye_color
 data modify storage hc:temp set_color.feet.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_color
+    hc:main vars.team_contexts.team2.preset.armor_dye_color
 
 # copy team's trim material
 data modify storage \
@@ -60,63 +60,87 @@ data modify storage \
     set from storage \
     hc:main vars.team_contexts.team2.preset.trim_material
 # copy armor's trim pattern
-execute if data entity @s equipment.head.components."minecraft:trim" \
+execute if items entity @s armor.head *[minecraft:trim] \
     run \
     data modify storage \
     hc:temp set_color.head.trim.pattern \
     set from entity @s equipment.head.components."minecraft:trim".pattern
-execute if data entity @s equipment.chest.components."minecraft:trim" \
+execute if items entity @s armor.chest *[minecraft:trim] \
     run \
     data modify storage \
     hc:temp set_color.chest.trim.pattern \
     set from entity @s equipment.chest.components."minecraft:trim".pattern
-execute if data entity @s equipment.legs.components."minecraft:trim" \
+execute if items entity @s armor.legs *[minecraft:trim] \
     run \
     data modify storage \
     hc:temp set_color.legs.trim.pattern \
     set from entity @s equipment.legs.components."minecraft:trim".pattern
-execute if data entity @s equipment.feet.components."minecraft:trim" \
+execute if items entity @s armor.feet *[minecraft:trim] \
     run \
     data modify storage \
     hc:temp set_color.feet.trim.pattern \
     set from entity @s equipment.feet.components."minecraft:trim".pattern
 
 ## apply head
-execute if data entity @s equipment.head.components."minecraft:trim" \
+execute if items entity @s armor.head *[ \
+    minecraft:trim, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_trim_material":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_trim \
     with storage hc:temp set_color.head
-execute if data entity @s equipment.head.components."minecraft:dyed_color" \
+execute if items entity @s armor.head *[ \
+    minecraft:dyed_color, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_dye_color":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_dyed_color \
     with storage hc:temp set_color.head
 
 ## apply chest
-execute if data entity @s equipment.chest.components."minecraft:trim" \
+execute if items entity @s armor.chest *[ \
+    minecraft:trim, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_trim_material":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_trim \
     with storage hc:temp set_color.chest
-execute if data entity @s equipment.chest.components."minecraft:dyed_color" \
+execute if items entity @s armor.chest *[ \
+    minecraft:dyed_color, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_dye_color":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_dyed_color \
     with storage hc:temp set_color.chest
 
 ## apply legs
-execute if data entity @s equipment.legs.components."minecraft:trim" \
+execute if items entity @s armor.legs *[ \
+    minecraft:trim, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_trim_material":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_trim \
     with storage hc:temp set_color.legs
-execute if data entity @s equipment.legs.components."minecraft:dyed_color" \
+execute if items entity @s armor.legs *[ \
+    minecraft:dyed_color, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_dye_color":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_dyed_color \
     with storage hc:temp set_color.legs
 
 ## apply feet
-execute if data entity @s equipment.feet.components."minecraft:trim" \
+execute if items entity @s armor.feet *[ \
+    minecraft:trim, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_trim_material":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_trim \
     with storage hc:temp set_color.feet
-execute if data entity @s equipment.feet.components."minecraft:dyed_color" \
+execute if items entity @s armor.feet *[ \
+    minecraft:dyed_color, \
+    minecraft:custom_data~{"hc:item/armor/apply_team_dye_color":{}} \
+] \
     run \
     function core_hc:equipment/armor/apply_dyed_color \
     with storage hc:temp set_color.feet

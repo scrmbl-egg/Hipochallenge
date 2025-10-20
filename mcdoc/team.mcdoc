@@ -17,7 +17,7 @@ struct TeamPreset {
     /// RGB of the dust particles for the team.
     dust_color: #[color="dec_rgb"] [float] @ 3,
     /// Team's leather armor color.
-    armor_color: (
+    armor_dye_color: (
 		#[canonical] #[color="composite_rgb"] int |
 		#[color="dec_rgb"] [float] @ 3 |
 	),

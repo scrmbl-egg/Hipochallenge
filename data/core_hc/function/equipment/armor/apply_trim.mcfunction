@@ -1,7 +1,8 @@
 #>core_hc:equipment/armor/apply_trim
 #
-# Modifies the player's armor trim. Only happens if the material of the loot
-# table trim is "quartz".
+# Modifies the player's armor trim. Only happens if the
+# "hc:item/armor/apply_team_trim_material" custom data component is present in
+# the item.
 #
 # @context player
 # @input
@@ -10,12 +11,9 @@
 #   trim: ::java::world::component::predicate::TrimPredicate
 #       Trim data that is going to be applied to the armor item.
 
-$execute if data entity @s \
-    equipment.$(slot).components."minecraft:trim"{material:"minecraft:quartz"} \
-    run \
-    item modify entity @s armor.$(slot) { \
-        function:"minecraft:set_components", \
-        components:{ \
-            "minecraft:trim":$(trim), \
-        }, \
-    }
+$item modify entity @s armor.$(slot) { \
+    function:"minecraft:set_components", \
+    components:{ \
+        "minecraft:trim":$(trim), \
+    }, \
+}
