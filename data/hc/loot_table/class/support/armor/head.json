@@ -5,12 +5,11 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:leather_helmet",
+                    "name": "minecraft:chainmail_helmet",
                     "functions": [
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:dyed_color": 15329769,
                                 "minecraft:trim": {
                                     "material": "minecraft:quartz",
                                     "pattern": "minecraft:sentry"
