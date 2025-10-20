@@ -10,7 +10,7 @@ advancement revoke @s \
 
 # set new projectile cooldown
 execute if entity @s[gamemode=!creative] \
-    if predicate core_hc:trigger/is_proj_cooldown_enabled \
+    if predicate core_hc:util/is_projectile_cooldown_enabled \
     store result score @s hc.MarksmanKit2NewProjectileCooldown \
     run \
     data get storage hc:main consts.\
@@ -19,6 +19,6 @@ execute if entity @s[gamemode=!creative] \
 
 # give arrow instantly if proj_cooldown is disabled
 execute if entity @s[gamemode=!creative] \
-    unless predicate core_hc:trigger/is_proj_cooldown_enabled \
+    unless predicate core_hc:util/is_projectile_cooldown_enabled \
     run \
     loot give @s loot hc:class/marksman/item/kit2/arrow
