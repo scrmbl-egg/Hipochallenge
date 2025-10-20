@@ -20,7 +20,8 @@ $execute unless predicate { \
     value:$(value), \
 } \
     run \
-    return fail
+    return run \
+    function std:empty
 
 $scoreboard players set @s hc.Class $(value)
 

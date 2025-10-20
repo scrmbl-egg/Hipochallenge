@@ -6,12 +6,26 @@
 #   value: int
 #       Number of the kit that will be selected.
 
+# return early if value doesn't correspond to kit
+$execute unless predicate { \
+    condition:"minecraft:value_check", \
+    range:{ \
+        min:1, \
+        max:3, \
+    }, \
+    value:$(value), \
+} \
+    run \
+    return run \
+    function std:empty
+
 $scoreboard players set @s hc.Kit $(value)
 
 # return early if class isn't selected
 execute unless predicate hc:class/has_selected \
     run \
-    return fail
+    return run \
+    function std:empty
 
 # setup message params depending if its in match team or not
 execute if predicate hc:team/is_in_match_pvp_team \
