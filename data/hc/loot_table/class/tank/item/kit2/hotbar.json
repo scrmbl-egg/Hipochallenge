@@ -14,7 +14,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "hc:class/tank/item/kit2/goat_horn"
+                    "value": "hc:class/tank/item/kit2/trident"
                 }
             ],
             "rolls": 1
@@ -23,7 +23,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "hc:class/tank/item/kit2/trident"
+                    "value": "hc:class/tank/item/kit2/goat_horn"
                 }
             ],
             "rolls": 1
