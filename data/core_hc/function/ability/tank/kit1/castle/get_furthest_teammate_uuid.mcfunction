@@ -15,4 +15,3 @@
 $execute as @a[limit=1,sort=furthest,team=$(team),tag=!hc.Dead] \
     run \
     data modify storage hc:temp castle.tp.other_uuid set from entity @s UUID
-

@@ -42,4 +42,3 @@ data modify storage hc:temp castle.tp.other_pitch \
 
 # free memory
 data remove storage hc:temp castle.other_data
-
