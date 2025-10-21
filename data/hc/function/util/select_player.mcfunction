@@ -37,18 +37,18 @@ execute as @s at @s \
     run \
     function core_hc:util/select_player/tag_potential_targets \
     with storage hc:temp select_player
-# targets tag: select_player_possible_target
+# targets tag: __hc.SelectPlayerPossibleTarget
 
 ## execute command on potential target that is on line of sight
-execute as @a[tag=select_player_possible_target] \
+execute as @a[tag=__hc.SelectPlayerPossibleTarget] \
     run \
     function core_hc:util/select_player/check_owner_line_of_sight \
     with storage hc:temp select_player
 
 # remove target tags
-execute as @a[tag=select_player_possible_target] \
+execute as @a[tag=__hc.SelectPlayerPossibleTarget] \
     run \
-    tag @s remove select_player_possible_target
+    tag @s remove __hc.SelectPlayerPossibleTarget
 
 # free memory
 data remove storage hc:temp select_player

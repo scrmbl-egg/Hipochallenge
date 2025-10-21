@@ -27,7 +27,7 @@ $execute at @s \
     ] \
     run \
     return run \
-    tag @s add select_player_possible_target
+    tag @s add __hc.SelectPlayerPossibleTarget
 
 # allies only check
 $execute at @s \
@@ -39,7 +39,7 @@ $execute at @s \
     ] \
     run \
     return run \
-    tag @s add select_player_possible_target
+    tag @s add __hc.SelectPlayerPossibleTarget
 
 # enemies only check
 $execute at @s \
@@ -51,4 +51,4 @@ $execute at @s \
     ] \
     run \
     return run \
-    tag @s add select_player_possible_target
+    tag @s add __hc.SelectPlayerPossibleTarget
