@@ -27,7 +27,7 @@ execute store result score __$hc_max __hc.NewProjectile \
 execute store result score __$hc_arrows __hc.NewProjectile \
     run \
     clear @s *[ \
-        minecraft:custom_data={"hc:item/id":"marksman_k1_arrow"} \
+        minecraft:custom_data~{"hc:item/id":"marksman_k1_arrow"} \
     ] 0
 
 # give new (smaller) cooldown if player can have more arrows

@@ -27,10 +27,10 @@ execute store result score __$hc_max __hc.NewProjectile \
 execute store result score __$hc_arrows __hc.NewProjectile \
     run \
     clear @s *[ \
-        minecraft:custom_data={"hc:item/id":"marksman_k2_arrow"} \
+        minecraft:custom_data~{"hc:item/id":"marksman_k2_arrow"} \
     ] 0
 execute if items entity @s container.* *[ \
-    minecraft:custom_data={"hc:item/id":"marksman_k2_crossbow"}, \
+    minecraft:custom_data~{"hc:item/id":"marksman_k2_crossbow"}, \
     minecraft:charged_projectiles=[ \
         { \
             id:"minecraft:arrow", \

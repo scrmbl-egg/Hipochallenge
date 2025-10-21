@@ -15,7 +15,7 @@ execute as @a[scores={hc.HasLeft=1..}] \
 recipe take @a *
 
 # clear items with the "hc:item/clear_instantly" custom data
-clear @a *[minecraft:custom_data={"hc:item/clear_instantly":{}}]
+clear @a *[minecraft:custom_data~{"hc:item/clear_instantly":{}}]
 
 # set pickup delay for items with the "hc:item/no_pickup" component
 execute as @e[ \

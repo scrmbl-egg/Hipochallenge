@@ -11,7 +11,7 @@
 # goat horn targets
 execute as @a \
     if items entity @s weapon.* *[ \
-        minecraft:custom_data={ \
+        minecraft:custom_data~{ \
             "hc:item/id":"tank_k1_goat_horn", \
         } \
     ] \
