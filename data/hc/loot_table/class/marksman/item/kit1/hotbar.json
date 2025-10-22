@@ -50,6 +50,30 @@
                                 "storage": "hc:main",
                                 "path": "consts.classes[{internal_name:\"marksman\"}].kits[{id:1}].marksman_k1_data.arrows.max_amount"
                             }
+                        },
+                        {
+                            "function": "minecraft:set_count",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:all_of",
+                                    "terms": [
+                                        {
+                                            "condition": "minecraft:reference",
+                                            "name": "hc:class/is_marksman"
+                                        },
+                                        {
+                                            "condition": "minecraft:reference",
+                                            "name": "hc:perk/is_perk3"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "count": {
+                                "type": "minecraft:storage",
+                                "storage": "hc:main",
+                                "path": "consts.classes[{internal_name:\"marksman\"}].perks[{id:3}].marksman_p3_data.added_projectiles"
+                            },
+                            "add": true
                         }
                     ]
                 }
