@@ -16,15 +16,15 @@ scoreboard players set __$hc_init_gamerules __hc.InitError 0
 # loading message
 tellraw @a [ \
     "", \
-    {color:"#ebeeff",bold:true,text:"[HIPOCHALLENGE: "}, \
-    {color:"#ff493b",text:"P"}, \
-    {color:"#ff5538",text:"h"}, \
-    {color:"#ff6035",text:"o"}, \
-    {color:"#ff6b31",text:"e"}, \
-    {color:"#ff762e",text:"n"}, \
-    {color:"#ff822b",text:"i"}, \
-    {color:"#ff8d28",text:"x"}, \
-    {color:"#ebeeff",bold:true,text:"]: "}, \
+    {text:"[HIPOCHALLENGE: ",color:"#ebeeff",bold:true}, \
+    {text:"P",color:"#ff493b"}, \
+    {text:"h",color:"#ff5538"}, \
+    {text:"o",color:"#ff6035"}, \
+    {text:"e",color:"#ff6b31"}, \
+    {text:"n",color:"#ff762e"}, \
+    {text:"i",color:"#ff822b"}, \
+    {text:"x",color:"#ff8d28"}, \
+    {text:"]: ",color:"#ebeeff",bold:true}, \
     {translate:"commands.reload.success",fallback:"Reloading!"}, \
 ]
 
@@ -156,19 +156,20 @@ execute store result storage hc:main vars.reload_count \
 # reload success message
 tellraw @a [ \
     "", \
-    {color:"white",bold:true,text:"[HIPOCHALLENGE: "}, \
-    {color:"#ff493b",text:"P"}, \
-    {color:"#ff5538",text:"h"}, \
-    {color:"#ff6035",text:"o"}, \
-    {color:"#ff6b31",text:"e"}, \
-    {color:"#ff762e",text:"n"}, \
-    {color:"#ff822b",text:"i"}, \
-    {color:"#ff8d28",text:"x"}, \
-    {color:"white",bold:true,text:"]: "}, \
+    {text:"[HIPOCHALLENGE: ",color:"#ebeeff",bold:true}, \
+    {text:"P",color:"#ff493b"}, \
+    {text:"h",color:"#ff5538"}, \
+    {text:"o",color:"#ff6035"}, \
+    {text:"e",color:"#ff6b31"}, \
+    {text:"n",color:"#ff762e"}, \
+    {text:"i",color:"#ff822b"}, \
+    {text:"x",color:"#ff8d28"}, \
+    {text:"]: ",color:"#ebeeff",bold:true}, \
+    {translate:"hc.reload_message.reloaded",fallback:"Reloaded!"}, \
     "\n", \
-    {text:"- "}, \
+    "- ", \
     { \
-        translate:"mco.version", \
+        translate:"hc.reload_message.version", \
         fallback:"Version: %s", \
         with:[ \
             { \
@@ -179,12 +180,17 @@ tellraw @a [ \
         ], \
     }, \
     "\n", \
-    {text:"- "}, \
-    {text:"Reload count: "}, \
+    "- ", \
     { \
-        storage:"hc:main", \
-        nbt:"vars.reload_count", \
-        color:"green" \
+        translate:"hc.reload_message.reload_count", \
+        fallback:"Reload count: %s", \
+        with:[ \
+            { \
+                storage:"hc:main", \
+                nbt:"vars.reload_count", \
+                color:"green" \
+            }, \
+        ], \
     }, \
 ]
 
