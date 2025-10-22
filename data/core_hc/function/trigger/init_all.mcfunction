@@ -12,6 +12,22 @@
 # have been defined before, they should be included in the context the region
 # references.
 
+# TODO: this should probably be done dynamically by declaring the trigger
+# objectives in a list, cycling through them to construct and detruct them, and
+# do a lookup for the proc/function name.
+# Kinda like this:
+# [
+#   {name:"ls",function:"core_hc:trigger/ls"},
+#   {name:"clear",function:"core_hc:trigger/clear"},
+# ]
+#
+# getting the function to execute would look something like this:
+# data get storage hc:main consts.triggers[{name:$(name)}].function
+#
+# then, std:function/call could be used to dynamically call the function when
+# triggered
+# - scrmbl-egg
+
 ## BASIC (available at all times)
 scoreboard objectives add ls trigger
 
@@ -32,18 +48,18 @@ scoreboard objectives add leave trigger
 ## TRAINING TOOLS
 scoreboard objectives add warp_plaza trigger
 scoreboard objectives add training_gui trigger
-scoreboard objectives add cl_tank trigger
-scoreboard objectives add cl_marksman trigger
-scoreboard objectives add cl_assassin trigger
-scoreboard objectives add cl_support trigger
-scoreboard objectives add cl_recon trigger
-scoreboard objectives add cl_assault trigger
-scoreboard objectives add kt_1 trigger
-scoreboard objectives add kt_2 trigger
-scoreboard objectives add kt_3 trigger
-scoreboard objectives add pk_1 trigger
-scoreboard objectives add pk_2 trigger
-scoreboard objectives add pk_3 trigger
+scoreboard objectives add ctank trigger
+scoreboard objectives add cmarksman trigger
+scoreboard objectives add cassassin trigger
+scoreboard objectives add csupport trigger
+scoreboard objectives add crecon trigger
+scoreboard objectives add cassault trigger
+scoreboard objectives add k1 trigger
+scoreboard objectives add k2 trigger
+scoreboard objectives add k3 trigger
+scoreboard objectives add p1 trigger
+scoreboard objectives add p2 trigger
+scoreboard objectives add p3 trigger
 scoreboard objectives add spawn_dummy_tank trigger
 scoreboard objectives add spawn_dummy_marksman trigger
 scoreboard objectives add spawn_dummy_assassin trigger
@@ -87,6 +103,9 @@ scoreboard objectives add vote_timeout trigger
 
 ## IN-GAME (spectators)
 scoreboard objectives add stop_spectating trigger
+
+## ENABLE TRIGGERS THAT ARE ALWAYS AVAILABLE
+scoreboard players enable @s ls
 
 # return 1 for success
 return 1

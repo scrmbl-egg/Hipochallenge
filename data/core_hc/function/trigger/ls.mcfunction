@@ -7,13 +7,14 @@
 # TODO: implement function!
 # TODO: detect if triggers can be used through predicates
 
-# ls is always available, no check necessary
-data modify storage hc:temp ls.text append value { \
-    text:"Function not implemented yet, sailor!", \
-}
-
 # send msg
-function hc:msg/private/send with storage hc:temp ls
+function hc:msg/debug/send_info { \
+    text:[ \
+        { \
+            text:"Function not implemented yet, sailor!", \
+        }, \
+    ] \
+}
 
 # reset and re-enable
 scoreboard players reset @s ls
