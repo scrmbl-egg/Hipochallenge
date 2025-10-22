@@ -1,0 +1,39 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.support.kit2.slowness_trap",
+                                    "fallback": "Slowness Trap"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "support_k2_slowness_trap"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 1.6,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                },
+                                "minecraft:use_cooldown": {
+                                    "seconds": 3,
+                                    "cooldown_group": "hc:support_k2_slowness_trap"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

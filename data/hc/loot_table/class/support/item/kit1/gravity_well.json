@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:netherite_ingot",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.support.kit1.gravity_well",
+                                    "fallback": "Gravity Well"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "support_k1_gravity_well"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 1.6,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

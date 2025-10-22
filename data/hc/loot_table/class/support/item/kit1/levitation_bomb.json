@@ -1,0 +1,60 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.support.kit1.levitation_bomb",
+                                    "fallback": "Levitation Bomb"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "support_k1_levitation_bomb"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "brush",
+                                    "consume_seconds": 1.6,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                },
+                                "minecraft:use_remainder": {
+                                    "id": "minecraft:tripwire_hook",
+                                    "components": {
+                                        "minecraft:item_name": {
+                                            "translate": "hc.items.support.kit1.detonator",
+                                            "fallback": "Detonator (%s)",
+                                            "with": [
+                                                {
+                                                    "translate": "hc.items.support.kit1.levitation_bomb",
+                                                    "fallback": "Levitation Bomb"
+                                                }
+                                            ]
+                                        },
+                                        "minecraft:custom_data": {
+                                            "hc:item/id": "support_k1_detonator"
+                                        },
+                                        "minecraft:consumable": {
+                                            "animation": "block",
+                                            "consume_seconds": 0.5,
+                                            "has_consume_particles": false,
+                                            "on_consume_effects": [],
+                                            "sound": "minecraft:ui.button.click"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
