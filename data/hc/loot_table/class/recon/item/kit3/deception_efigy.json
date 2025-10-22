@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.recon.kit3.deception_effigy",
+                                    "fallback": "Deception Effigy"
+                                },
+                                "minecraft:item_model": "minecraft:jack_o_lantern",
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "recon_k3_deception_effigy"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 1.6,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.recon.kit1.low_visibility_area",
+                                    "fallback": "Low Visibility Area"
+                                },
+                                "minecraft:item_model": "minecraft:eye_armor_trim_smithing_template",
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "recon_k1_low_visibility_area"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 0,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

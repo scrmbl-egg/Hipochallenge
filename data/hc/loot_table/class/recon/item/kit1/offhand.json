@@ -1,1 +1,14 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit1/wind_charge"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

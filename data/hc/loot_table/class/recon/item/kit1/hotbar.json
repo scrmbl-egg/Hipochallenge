@@ -1,1 +1,41 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit1/sword"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit1/blindness_sentinel"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit1/flash_bomb"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit1/low_visibility_area"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

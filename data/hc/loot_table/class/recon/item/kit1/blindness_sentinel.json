@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.recon.kit1.blindness_sentinel",
+                                    "fallback": "Blindness Sentinel"
+                                },
+                                "minecraft:item_model": "minecraft:anvil",
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "recon_k1_blindness_sentinel"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 0,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

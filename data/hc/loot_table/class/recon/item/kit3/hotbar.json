@@ -1,1 +1,32 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit3/sword"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit3/portal"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/recon/item/kit3/deception_efigy"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
