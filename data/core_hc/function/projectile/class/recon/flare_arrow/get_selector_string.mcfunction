@@ -15,4 +15,4 @@
 
 $data modify storage $(out_storage) $(out_nbt) \
     set value \
-    "@a[team=$(detected_team),nbt=!{UUID:$(owner_uuid)},gamemode=!spectator]"
+    "@e[type=#hc:player_like,team=$(detected_team),nbt=!{UUID:$(owner_uuid)},limit=10,sort=nearest]"

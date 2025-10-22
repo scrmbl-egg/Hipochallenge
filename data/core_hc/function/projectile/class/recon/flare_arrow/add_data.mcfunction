@@ -6,7 +6,7 @@
 # @context minecraft:spectral_arrow
 
 ## setup temporary memory schema
-data modify entity @s data."hc:flare_arrow" set value { \
+data modify entity @s data."hc:entity/flare_arrow" set value { \
     owner_uuid:[I; 0, 0, 0, 0], \
     detected_team:"", \
     aabb_params: { \
@@ -27,7 +27,8 @@ data merge entity @s { \
 }
 
 ## get owner uuid
-data modify entity @s data."hc:flare_arrow".owner_uuid set from entity @s Owner
+data modify entity @s data."hc:entity/flare_arrow".owner_uuid \
+    set from entity @s Owner
 
 ## get owner's enemy team
 execute on origin \
@@ -36,7 +37,7 @@ execute on origin \
         out_storage:"hc:temp", \
         out_nbt:"new_flare_arrow.detected_team" \
     }
-data modify entity @s data."hc:flare_arrow".detected_team \
+data modify entity @s data."hc:entity/flare_arrow".detected_team \
     set from storage hc:temp new_flare_arrow.detected_team
 
 ## get entity selectors
@@ -48,9 +49,9 @@ data modify storage hc:temp new_flare_arrow.get_selector_params set value { \
     out_nbt:"new_flare_arrow.entity_selector", \
 }
 data modify storage hc:temp new_flare_arrow.get_selector_params.owner_uuid \
-    set from entity @s data."hc:flare_arrow".owner_uuid
+    set from entity @s data."hc:entity/flare_arrow".owner_uuid
 data modify storage hc:temp new_flare_arrow.get_selector_params.detected_team \
-    set from entity @s data."hc:flare_arrow".detected_team
+    set from entity @s data."hc:entity/flare_arrow".detected_team
 
 # call func
 #>_
@@ -68,11 +69,11 @@ function core_hc:projectile/class/recon/flare_arrow/get_selector_string \
 #   hc:temp new_flare_arrow
 #       entity_selector
 
-data modify entity @s data."hc:flare_arrow".aabb_params.entity_selector \
+data modify entity @s data."hc:entity/flare_arrow".aabb_params.entity_selector \
     set from storage hc:temp new_flare_arrow.entity_selector
 
 ## get aabb's size
-data modify entity @s data."hc:flare_arrow".aabb_params.size \
+data modify entity @s data."hc:entity/flare_arrow".aabb_params.size \
     set from storage \
     hc:main \
     consts.classes[{internal_name:"recon"}].\
@@ -80,15 +81,15 @@ data modify entity @s data."hc:flare_arrow".aabb_params.size \
 
 ## get explosion data
 # radius
-data modify entity @s data."hc:flare_arrow".explosion.radius \
+data modify entity @s data."hc:entity/flare_arrow".explosion.radius \
     set from storage \
     hc:main \
     consts.classes[{internal_name:"recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.explosion.radius
 
 # entity selector (copy from aabb data)
-data modify entity @s data."hc:flare_arrow".explosion.entity_selector \
-    set from entity @s data."hc:flare_arrow".aabb_params.entity_selector
+data modify entity @s data."hc:entity/flare_arrow".explosion.entity_selector \
+    set from entity @s data."hc:entity/flare_arrow".aabb_params.entity_selector
 
 # free storage memory
 data remove storage hc:temp new_flare_arrow

@@ -11,7 +11,7 @@
 # later.
 
 # add custom data to the arrow's data if it hasn't been added before
-execute as @s unless data entity @s data."hc:flare_arrow" \
+execute as @s unless data entity @s data."hc:entity/flare_arrow" \
     run \
     return run \
     function core_hc:projectile/class/recon/flare_arrow/add_data
@@ -20,7 +20,7 @@ execute as @s unless data entity @s data."hc:flare_arrow" \
 execute at @s \
     run \
     function std:aabb/cast_centered \
-    with entity @s data."hc:flare_arrow".aabb_params
+    with entity @s data."hc:entity/flare_arrow".aabb_params
 #>_
 # @out
 #   hc:temp data
@@ -30,7 +30,8 @@ execute at @s \
 
 # if it never finds an enemy, mark explosion directly when arrow hits a surface
 data modify storage hc:temp flare_arrow.on_detection_command \
-    set from entity @s data."hc:flare_arrow".aabb_params.on_detection_command
+    set from entity @s \
+    data."hc:entity/flare_arrow".aabb_params.on_detection_command
 
 execute if entity @s[nbt={shake:1b}] \
     run \
@@ -43,7 +44,7 @@ execute if entity @s[nbt={shake:1b}] \
 execute if data storage hc:temp flare_arrow.explode \
     run \
     function core_hc:projectile/class/recon/flare_arrow/explode \
-    with entity @s data."hc:flare_arrow".explosion
+    with entity @s data."hc:entity/flare_arrow".explosion
 
 # free memory
 data remove storage hc:temp flare_arrow

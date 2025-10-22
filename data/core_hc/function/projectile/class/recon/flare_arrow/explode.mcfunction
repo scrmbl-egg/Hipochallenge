@@ -19,6 +19,7 @@ execute at @s \
 $execute at @s \
     as $(entity_selector) \
     if entity @s[distance=..$(radius)] \
+    unless entity @s[type=minecraft:player,gamemode=spectator] \
     run \
     function hc:util/effect/give_ability_effects \
     with storage hc:main \
@@ -29,6 +30,7 @@ $execute at @s \
 $execute at @s \
     as $(entity_selector) \
     if entity @s[distance=..$(radius)] \
+    unless entity @s[type=minecraft:player,gamemode=spectator] \
     run \
     function hc:mechanic/detection/add
 
