@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "hc:class/tank/item/kit3/bubble_shield"
+                    "value": "hc:class/tank/item/kit3/redirect_spirit"
                 }
             ],
             "rolls": 1

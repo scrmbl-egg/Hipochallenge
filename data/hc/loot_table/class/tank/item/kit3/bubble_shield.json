@@ -16,6 +16,13 @@
                                 },
                                 "minecraft:custom_data": {
                                     "hc:item/id": "tank_k3_bubble_shield"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 0,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:ui.button.click"
                                 }
                             }
                         }
