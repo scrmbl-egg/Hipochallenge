@@ -12,6 +12,12 @@
                             "components": {
                                 "minecraft:custom_data": {
                                    "hc:item/id": "recon_k2_sword"
+                                },
+                                "minecraft:unbreakable": {},
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:unbreakable"
+                                    ]
                                 }
                             }
                         }
