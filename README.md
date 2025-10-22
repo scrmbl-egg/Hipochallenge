@@ -1,2 +1,3 @@
 # HIPOCHALLENGE: Phoenix Datapack
-This is the MINECRAFT datapack for the *HIPOCHALLENGE: Phoenix* minigame.
+
+This is the Minecraft datapack for the *HIPOCHALLENGE: Phoenix* minigame.
