@@ -14,6 +14,24 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
+                    "conditions": [
+                        {
+                            "condition": "minecraft:inverted",
+                            "term": {
+                                "condition": "minecraft:all_of",
+                                "terms": [
+                                    {
+                                        "condition": "minecraft:reference",
+                                        "name": "hc:class/is_tank"
+                                    },
+                                    {
+                                        "condition": "minecraft:reference",
+                                        "name": "hc:perk/is_perk3"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
                     "value": "hc:class/tank/item/kit1/goat_horn"
                 }
             ],
