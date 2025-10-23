@@ -31,18 +31,19 @@ function hc:msg/private/send { \
                                 "", \
                                 { \
                                     translate:"hc.key_hint", \
-                                    fallback:"[%s]: ", \
+                                    fallback:"[%1$s]: %2$s", \
                                     with:[ \
                                         { \
                                             translate:"key.mouse.left", \
                                             fallback:"Left Button", \
                                         }, \
+                                        { \
+                                            translate:"multiplayer.confirm_command.suggest_command", \
+                                            fallback:"Copy to Chat Screen", \
+                                            color:"white", \
+                                        }, \
                                     ], \
                                     color:"gold", \
-                                }, \
-                                { \
-                                    translate:"multiplayer.confirm_command.suggest_command", \
-                                    fallback:"Copy to Chat Screen", \
                                 }, \
                             ] \
                         }, \
