@@ -1,9 +1,13 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:black_dye",
-            "count": 1,
-            "components": {}
+            "id": "minecraft:player_head",
+            "components": {
+                "minecraft:profile": {
+                    "id": [-1467167717,-587577923,-1560885350,-178015183]
+                }
+            },
+            "count": 1
         },
         "title": {
             "translate": "hc.advancements.rest.room.obtained_figurine.name",
