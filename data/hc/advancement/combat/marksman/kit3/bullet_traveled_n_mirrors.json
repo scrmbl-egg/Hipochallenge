@@ -1,8 +1,8 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:black_dye",
-            "count": 1,
+            "id": "minecraft:white_stained_glass_pane",
+            "count": 4,
             "components": {}
         },
         "title": [
@@ -30,7 +30,7 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "hc:combat/marksman/root",
+    "parent": "hc:combat/marksman/kit3/root",
     "criteria": {
         "impossible": {
             "trigger": "minecraft:impossible"

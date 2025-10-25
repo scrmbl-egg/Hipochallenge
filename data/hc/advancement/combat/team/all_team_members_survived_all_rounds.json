@@ -1,0 +1,32 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:rose_bush",
+            "count": 1
+        },
+        "title": {
+            "translate": "hc.advancements.combat.team.all_team_members_survived_all_rounds.name",
+            "fallback": "Flawless Victory!"
+        },
+        "description": {
+            "translate": "hc.advancements.combat.team.all_team_members_survived_all_rounds.description",
+            "fallback": "Win ALL rounds of a match in a row without suffering any casualties."
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "hc:combat/team/all_team_members_survived_n_rounds",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}

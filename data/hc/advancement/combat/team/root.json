@@ -12,11 +12,11 @@
             }
         },
         "title": {
-            "translate": "hc.not_translated",
+            "translate": "hc.advancements.combat.team.root.name",
             "fallback": "Team battle tactics"
         },
         "description": {
-            "translate": "hc.not_translated",
+            "translate": "hc.advancements.combat.team.root.description",
             "fallback": "Assemble your team!"
         },
         "frame": "task",
@@ -34,6 +34,5 @@
         [
             "impossible"
         ]
-    ],
-    "rewards": {}
+    ]
 }

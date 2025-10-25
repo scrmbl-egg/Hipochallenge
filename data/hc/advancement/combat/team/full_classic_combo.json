@@ -5,14 +5,17 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.not_translated",
+            "translate": "hc.advancements.combat.team.full_classic_combo.name",
             "fallback": "\"Time to party like it's 2023\""
         },
         "description": {
-            "translate": "hc.not_translated",
-            "fallback": "Finish a game where both teams followed the requirements of the %s advancement.",
+            "translate": "hc.advancements.combat.team.full_classic_combo.description",
+            "fallback": "Finish a match where both teams followed the requirements of the %s advancement",
             "with": [
-                {"translate":"hc.advancement.combat.team.classic_combo","fallback":"Classic Combo"}
+                {
+                    "translate":"hc.advancements.combat.team.classic_combo.name",
+                    "fallback":"Classic Combo"
+                }
             ]
         },
         "frame": "challenge",
