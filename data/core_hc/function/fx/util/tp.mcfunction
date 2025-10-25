@@ -4,7 +4,8 @@
 #
 # @context at teleport position
 
-particle minecraft:poof \
-    ~ ~1 ~ 0.25 0.5 0.25 0.1 50 normal
-playsound minecraft:entity.enderman.teleport \
-    player @s ~ ~ ~ 1 1
+# particle
+particle minecraft:poof ~ ~1 ~ 0.25 0.5 0.25 0.1 50 normal
+
+# sound
+playsound minecraft:entity.enderman.teleport player @s ~ ~ ~ 1 1
