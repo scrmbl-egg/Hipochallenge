@@ -2,6 +2,19 @@
     "display": {
         "icon": {
             "id": "minecraft:shield",
+            "components": {
+                "minecraft:base_color": "gray",
+                "minecraft:banner_patterns": [
+                    {
+                        "pattern": "minecraft:gradient",
+                        "color": "black"
+                    },
+                    {
+                        "pattern": "minecraft:skull",
+                        "color": "white"
+                    }
+                ]
+            },
             "count": 1
         },
         "title": {
