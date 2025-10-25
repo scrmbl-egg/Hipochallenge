@@ -1,6 +1,12 @@
-# FIXME: Handling smoke arrow crossbow's cooldown doesn't delete the item nor
-# trigger a cooldown state
+#>hc:ability/class/marksman/kit1/on_smoke_arrow_crossbow_shot
+#
+# Executes all commands when the player shoots the marksman smoke arrow
+# crossbow.
+#
+# @context player
+
+# revoke detection advancement
 advancement revoke @s \
     only core_hc:class/marksman/kit1/used_smoke_arrow_crossbow
 
-function hc:ability/cooldown/handle_item_cd {item_id:marksman_k1_smoke_arrow_crossbow,cd_item_modifier:"hc:weapons/class/marksman/smoke_arrow_crossbow_cd",cd_score:marksman_kit1_smoke_arrow_crossbow_cd,cd_const:MARKSMAN_K1_SMOKE_ARROW_CROSSBOW_CD_TICKS}
+function hc:msg/debug/send_info {text:"\"smoke arrow crossbow shot\""}

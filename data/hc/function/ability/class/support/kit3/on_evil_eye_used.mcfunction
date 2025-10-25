@@ -1,3 +1,11 @@
-advancement revoke @s only core_hc:class/support/kit3/used_evil_eye
+#>hc:ability/class/support/kit3/on_evil_eye_used
+#
+# Executes all commands when the player uses the support's evil eye.
+#
+# @context player
 
-function hc:msg/debug/send_info {text:"evil eye used"}
+# revoke detection advancement
+advancement revoke @s \
+    only core_hc:class/support/kit3/used_evil_eye
+
+function hc:msg/debug/send_info {text:"\"evil eye used\""}

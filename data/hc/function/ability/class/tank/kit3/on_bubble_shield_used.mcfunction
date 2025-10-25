@@ -32,5 +32,5 @@ execute as @s if predicate hc:mechanic/is_silenced \
     }
 
 function hc:msg/debug/send_info { \
-    text:"successfully placed bubble shield", \
+    text:"\"successfully placed bubble shield\"", \
 }

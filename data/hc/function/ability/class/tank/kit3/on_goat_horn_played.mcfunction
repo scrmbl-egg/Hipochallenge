@@ -8,6 +8,8 @@
 advancement revoke @s \
     only core_hc:class/tank/kit3/used_goat_horn
 
+function hc:msg/debug/send_info {text:"\"goat horn kit 3 used\""}
+
 # team with no abilities guard clause
 execute as @s unless predicate hc:team/is_in_pvp_team \
     run \

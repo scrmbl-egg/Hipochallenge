@@ -1,3 +1,11 @@
-advancement revoke @s only core_hc:class/support/kit3/used_unstable_totem
+#>hc:ability/class/support/kit3/on_unstable_totem_placed
+#
+# Executes all commands when the player places the support's unstable totem.
+#
+# @context player
 
-function hc:msg/debug/send_info {text:"unstable totem placed"}
+# revoke detection advancement
+advancement revoke @s \
+    only core_hc:class/support/kit3/used_unstable_totem
+
+function hc:msg/debug/send_info {text:"\"unstable totem placed\""}
