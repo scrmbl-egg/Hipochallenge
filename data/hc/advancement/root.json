@@ -27,5 +27,8 @@
         [
             "impossible"
         ]
-    ]
+    ],
+    "rewards": {
+        "function": "core_hc:util/login"
+    }
 }
