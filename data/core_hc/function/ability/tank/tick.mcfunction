@@ -20,7 +20,9 @@ execute as @a \
 
 ## kit 2
 # trident
-# TODO: handle trident return
+execute as @a[scores={hc.TankKit2TridentCooldown=1}] \
+    run \
+    function hc:ability/class/tank/kit2/give_trident
 
 # goat horn
 # TODO: handle tank kit 2 goat horn cooldown

@@ -15,6 +15,22 @@ tag @e[ \
 
 # TODO: tag specific armor_stands and markers too
 
+# tank trident
+execute as @e[ \
+    type=minecraft:trident, \
+    nbt={ \
+        item:{ \
+            components:{ \
+                "minecraft:custom_data":{"hc:item/id":"tank_k2_trident"}, \
+            }, \
+        }, \
+    } \
+] \
+    at @s \
+    run \
+    function core_hc:projectile/class/tank/trident/tick
+
+
 # marksman kit 2 arrows remove gravity
 ## NOTE:
 # the NoGravity property, instead of being false, it's unset, so instead of
