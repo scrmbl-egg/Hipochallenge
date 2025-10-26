@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:player_head",
+            "components": {
+                "minecraft:profile": {
+                    "id": [-336586247,604718780,-2041004766,-448986292]
+                }
+            },
+            "count": 1
+        },
+        "title": {
+            "translate": "hc.advancements.rest.room.obtained_special_figurine.name",
+            "fallback": "Collector's Edition"
+        },
+        "description": {
+            "translate": "hc.advancements.rest.room.obtained_special_figurine.description",
+            "fallback": "Get a special figurine for your room"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "hc:rest/room/obtained_figurine",
+    "criteria": {
+        "impossible": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": [
+        [
+            "impossible"
+        ]
+    ],
+    "rewards": {}
+}
