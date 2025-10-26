@@ -1,6 +1,8 @@
 #>core_hc:fx/projectile/class/recon/flare_arrow/explosion
 #
 # Runs the visual and sound effects for the flare arrow explosion.
+#
+# @context minecraft:flare_arrow
 
 # sounds
 playsound minecraft:entity.shulker_bullet.hit \
