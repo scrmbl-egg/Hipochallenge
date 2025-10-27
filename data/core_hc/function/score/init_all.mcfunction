@@ -118,6 +118,9 @@ scoreboard players add @a hc.Points 0
 scoreboard players add @a hc.IsDead 0
 scoreboard players add @a hc.HasKilled 0
 
+# init cooldown scores
+function core_hc:score/reset_all_class_scores
+
 # init hc.Health score, for those that don't have a registered score value
 execute as @a \
     unless entity @s[scores={hc.Health=-2147483648..2147483647}] \

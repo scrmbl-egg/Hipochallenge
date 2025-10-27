@@ -20,7 +20,7 @@ execute as @a \
 
 ## kit 2
 # trident
-execute as @a[scores={hc.TankKit2TridentCooldown=1}] \
+execute as @a[scores={hc.TankKit2TridentCooldown=0}] \
     run \
     function hc:ability/class/tank/kit2/give_trident
 
