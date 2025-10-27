@@ -22,13 +22,29 @@ $execute unless predicate hc:mechanic/is_detected \
         {text:"?",color:"gray"}, \
         {text:" - ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
-        {text:" \ud83d\udde1",color:"green"}, \
+        " ", \
+        { \
+            translate:"hc.list_info.player_kill_count_representation", \
+            fallback:"\ud83d\udde1", \
+            color:"green", \
+        }, \
         {text:" :: ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
-        {text:" \u2620",color:"red"}, \
+        " ", \
+        { \
+            translate:"hc.list_info.death_count_representation", \
+            fallback:"\u2620", \
+            color:"red", \
+        }, \
         {text:" :: ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
-        {text:" \u2605 ",color:"gold"}, \
+        " ", \
+        { \
+            translate:"hc.list_info.points_representation", \
+            fallback:"\u2605", \
+            color:"gold", \
+        }, \
+        " ", \
     ]
 
 # show kit and perk if player is detected
@@ -43,11 +59,27 @@ $execute if predicate hc:mechanic/is_detected \
         $(perk_text), \
         {text:" - ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
-        {text:" \ud83d\udde1",color:"green"}, \
+        " ", \
+        { \
+            translate:"hc.list_info.player_kill_count_representation", \
+            fallback:"\ud83d\udde1", \
+            color:"green", \
+        }, \
         {text:" :: ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
-        {text:" \u2620",color:"red"}, \
+        " ", \
+        { \
+            translate:"hc.list_info.death_count_representation", \
+            fallback:"\u2620", \
+            color:"red", \
+        }, \
         {text:" :: ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
-        {text:" \u2605 ",color:"gold"}, \
+        " ", \
+        { \
+            translate:"hc.list_info.points_representation", \
+            fallback:"\u2605", \
+            color:"gold", \
+        }, \
+        " ", \
     ]
