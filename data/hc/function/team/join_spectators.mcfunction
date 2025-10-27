@@ -14,7 +14,7 @@ function hc:msg/all/send { \
     ], \
 }
 
-team join spectators @s
+team join hc.Spectators @s
 
 function hc:class/reset
 function hc:kit/reset
