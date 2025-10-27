@@ -10,11 +10,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.rest.room.obtained_figurine.name",
+            "translate": "hc.advancement.rest.room.obtained_figurine.title",
             "fallback": "Small Soldiers"
         },
         "description": {
-            "translate": "hc.advancements.rest.room.obtained_figurine.description",
+            "translate": "hc.advancement.rest.room.obtained_figurine.description",
             "fallback": "Get a figurine for your room!"
         },
         "frame": "goal",

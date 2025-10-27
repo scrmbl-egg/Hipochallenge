@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.root.name",
+            "translate": "hc.advancement.combat.root.title",
             "fallback": "The Moment of Truth"
         },
         "description": {
-            "translate": "hc.advancements.combat.root.description",
+            "translate": "hc.advancement.combat.root.description",
             "fallback": "The core of the game"
         },
         "frame": "task",

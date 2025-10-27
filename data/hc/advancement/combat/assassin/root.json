@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.assassin.root.name",
+            "translate": "hc.advancement.combat.assassin.root.title",
             "fallback": "Assassin"
         },
         "description": {
-            "translate": "hc.advancements.combat.assassin.root.description",
+            "translate": "hc.advancement.combat.assassin.root.description",
             "fallback": "Select the Assassin class"
         },
         "frame": "task",

@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.rest.plaza.arcade.root.name",
+            "translate": "hc.advancement.rest.plaza.arcade.root.title",
             "fallback": "Pizza & Games"
         },
         "description": {
-            "translate": "hc.advancements.rest.plaza.arcade.root.description",
+            "translate": "hc.advancement.rest.plaza.arcade.root.description",
             "fallback": "Visit the arcade"
         },
         "frame": "task",

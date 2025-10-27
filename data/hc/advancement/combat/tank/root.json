@@ -18,11 +18,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.tank.root.name",
+            "translate": "hc.advancement.combat.tank.root.title",
             "fallback": "Tank"
         },
         "description": {
-            "translate": "hc.advancements.combat.tank.root.description",
+            "translate": "hc.advancement.combat.tank.root.description",
             "fallback": "Select the Tank class"
         },
         "frame": "task",

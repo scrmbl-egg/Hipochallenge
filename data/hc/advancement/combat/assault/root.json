@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.assault.root.name",
+            "translate": "hc.advancement.combat.assault.root.title",
             "fallback": "Assault"
         },
         "description": {
-            "translate": "hc.advancements.combat.assault.root.description",
+            "translate": "hc.advancement.combat.assault.root.description",
             "fallback": "Select the Assault class"
         },
         "frame": "task",

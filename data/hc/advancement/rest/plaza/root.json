@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.rest.plaza.root.name",
+            "translate": "hc.advancement.rest.plaza.root.title",
             "fallback": "Plaza"
         },
         "description": {
-            "translate": "hc.advancements.rest.plaza.root.description",
+            "translate": "hc.advancement.rest.plaza.root.description",
             "fallback": "Explore the plaza for the first time"
         },
         "frame": "task",

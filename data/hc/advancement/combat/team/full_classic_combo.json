@@ -5,15 +5,15 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.team.full_classic_combo.name",
+            "translate": "hc.advancement.combat.team.full_classic_combo.title",
             "fallback": "\"Time to party like it's 2023\""
         },
         "description": {
-            "translate": "hc.advancements.combat.team.full_classic_combo.description",
+            "translate": "hc.advancement.combat.team.full_classic_combo.description",
             "fallback": "Finish a match where both teams followed the requirements of the %s advancement",
             "with": [
                 {
-                    "translate":"hc.advancements.combat.team.classic_combo.name",
+                    "translate":"hc.advancement.combat.team.classic_combo.title",
                     "fallback":"Classic Combo"
                 }
             ]

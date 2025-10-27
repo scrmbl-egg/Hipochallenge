@@ -10,11 +10,11 @@
             }
         },
         "title": {
-            "translate": "hc.advancements.combat.support.root.name",
+            "translate": "hc.advancement.combat.support.root.title",
             "fallback": "Support"
         },
         "description": {
-            "translate": "hc.advancements.combat.support.root.description",
+            "translate": "hc.advancement.combat.support.root.description",
             "fallback": "Select the Support class"
         },
         "frame": "task",

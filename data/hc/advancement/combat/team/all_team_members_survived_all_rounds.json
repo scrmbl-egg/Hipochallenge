@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.team.all_team_members_survived_all_rounds.name",
+            "translate": "hc.advancement.combat.team.all_team_members_survived_all_rounds.title",
             "fallback": "Flawless Victory!"
         },
         "description": {
-            "translate": "hc.advancements.combat.team.all_team_members_survived_all_rounds.description",
+            "translate": "hc.advancement.combat.team.all_team_members_survived_all_rounds.description",
             "fallback": "Win ALL rounds of a match in a row without suffering any casualties."
         },
         "frame": "challenge",

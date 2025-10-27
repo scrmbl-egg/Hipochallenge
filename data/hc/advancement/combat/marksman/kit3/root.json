@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.marksman.kit3.root.name",
+            "translate": "hc.advancement.combat.marksman.kit3.root.title",
             "fallback": "Gunslinger"
         },
         "description": {
-            "translate": "hc.advancements.combat.marksman.kit3.root.description",
+            "translate": "hc.advancement.combat.marksman.kit3.root.description",
             "fallback": "Select the Gunslinger kit"
         },
         "frame": "task",

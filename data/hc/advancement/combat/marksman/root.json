@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.marksman.root.name",
+            "translate": "hc.advancement.combat.marksman.root.title",
             "fallback": "Marksman"
         },
         "description": {
-            "translate": "hc.advancements.combat.marksman.root.description",
+            "translate": "hc.advancement.combat.marksman.root.description",
             "fallback": "Select the Marksman class"
         },
         "frame": "task",

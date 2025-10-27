@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.assassin.kit1.root.name",
+            "translate": "hc.advancement.combat.assassin.kit1.root.title",
             "fallback": "Duelist"
         },
         "description": {
-            "translate": "hc.advancements.combat.assassin.kit1.root.description",
+            "translate": "hc.advancement.combat.assassin.kit1.root.description",
             "fallback": "Select the Duelist kit"
         },
         "frame": "task",

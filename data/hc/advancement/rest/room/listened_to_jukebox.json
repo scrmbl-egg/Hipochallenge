@@ -48,7 +48,7 @@
             }
         ],
         "description": {
-            "translate": "hc.advancements.rest.room.listened_to_jukebox.description",
+            "translate": "hc.advancement.rest.room.listened_to_jukebox.description",
             "fallback": "Enjoy your vinyl collection"
         },
         "frame": "task",

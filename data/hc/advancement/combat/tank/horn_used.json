@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.tank.horn_used.name",
+            "translate": "hc.advancement.combat.tank.horn_used.title",
             "fallback": "Magic Tone"
         },
         "description": {
-            "translate": "hc.advancements.combat.tank.horn_used.description",
+            "translate": "hc.advancement.combat.tank.horn_used.description",
             "fallback": "Play any of the Tank's horns for the first time"
         },
         "frame": "task",

@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.recon.root.name",
+            "translate": "hc.advancement.combat.recon.root.title",
             "fallback": "Recon"
         },
         "description": {
-            "translate": "hc.advancements.combat.recon.root.description",
+            "translate": "hc.advancement.combat.recon.root.description",
             "fallback": "Select the Recon class"
         },
         "frame": "task",

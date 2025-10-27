@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.rest.room.root.name",
+            "translate": "hc.advancement.rest.room.root.title",
             "fallback": "Serenity"
         },
         "description": {
-            "translate": "hc.advancements.rest.room.root.description",
+            "translate": "hc.advancement.rest.room.root.description",
             "fallback": "Enter your room for the first time"
         },
         "frame": "task",

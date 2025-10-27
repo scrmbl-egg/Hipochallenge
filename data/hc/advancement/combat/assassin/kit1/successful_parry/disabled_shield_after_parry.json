@@ -8,11 +8,11 @@
             }
         },
         "title": {
-            "translate": "hc.advancements.combat.assassin.kit1.successful_parry.disabled_shield.name",
+            "translate": "hc.advancement.combat.assassin.kit1.successful_parry.disabled_shield.title",
             "fallback": "Pressure"
         },
         "description": {
-            "translate": "hc.advancements.combat.assassin.kit1.successful_parry.disabled_shield.description",
+            "translate": "hc.advancement.combat.assassin.kit1.successful_parry.disabled_shield.description",
             "fallback": "Disable an enemy shield with the Enhanced Duelist Sword"
         },
         "frame": "goal",

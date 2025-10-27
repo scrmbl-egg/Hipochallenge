@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.team.all_team_members_survived_round.name",
+            "translate": "hc.advancement.combat.team.all_team_members_survived_round.title",
             "fallback": "Perfect!"
         },
         "description": {
-            "translate": "hc.advancements.combat.team.all_team_members_survived_round.description",
+            "translate": "hc.advancement.combat.team.all_team_members_survived_round.description",
             "fallback": "Win a round without suffering any casualties"
         },
         "frame": "task",

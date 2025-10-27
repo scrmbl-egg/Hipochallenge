@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.assassin.perk1.killed_contract_target.name",
+            "translate": "hc.advancement.combat.assassin.perk1.killed_contract_target.title",
             "fallback": "Target Neutralized"
         },
         "description": {
-            "translate": "hc.advancements.combat.assassin.perk1.killed_contract_target.description",
+            "translate": "hc.advancement.combat.assassin.perk1.killed_contract_target.description",
             "fallback": "Successfully kill the contract's target before any other ally"
         },
         "frame": "challenge",

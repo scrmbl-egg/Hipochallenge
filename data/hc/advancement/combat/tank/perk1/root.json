@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.combat.tank.perk1.root.name",
+            "translate": "hc.advancement.combat.tank.perk1.root.title",
             "fallback": "Where the fries at??"
         },
         "description": {
-            "translate": "hc.advancements.combat.tank.perk1.root.description",
+            "translate": "hc.advancement.combat.tank.perk1.root.description",
             "fallback": "Eat the Nutritious Meal"
         },
         "frame": "goal",

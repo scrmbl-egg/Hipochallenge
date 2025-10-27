@@ -16,11 +16,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.rest.plaza.masquerade_violation.name",
+            "translate": "hc.advancement.rest.plaza.masquerade_violation.title",
             "fallback": "Masquerade Violation"
         },
         "description": {
-            "translate": "hc.advancements.rest.plaza.masquerade_violation.description",
+            "translate": "hc.advancement.rest.plaza.masquerade_violation.description",
             "fallback": "Give in to your inner beast"
         },
         "frame": "challenge",

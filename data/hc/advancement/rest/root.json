@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.rest.root.name",
+            "translate": "hc.advancement.rest.root.title",
             "fallback": "Rest & Chill"
         },
         "description": {
-            "translate": "hc.advancements.rest.root.description",
+            "translate": "hc.advancement.rest.root.description",
             "fallback": "Not everything is about fighting!"
         },
         "frame": "task",

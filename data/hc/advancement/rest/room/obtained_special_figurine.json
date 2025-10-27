@@ -10,11 +10,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.rest.room.obtained_special_figurine.name",
+            "translate": "hc.advancement.rest.room.obtained_special_figurine.title",
             "fallback": "Collector's Edition"
         },
         "description": {
-            "translate": "hc.advancements.rest.room.obtained_special_figurine.description",
+            "translate": "hc.advancement.rest.room.obtained_special_figurine.description",
             "fallback": "Get a special figurine for your room"
         },
         "frame": "goal",

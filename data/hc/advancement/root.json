@@ -5,11 +5,11 @@
             "count": 1
         },
         "title": {
-            "translate": "hc.advancements.root.name",
+            "translate": "hc.advancement.root.title",
             "fallback": "HipoChallenge: Phoenix"
         },
         "description": {
-            "translate": "hc.advancements.root.description",
+            "translate": "hc.advancement.root.description",
             "fallback": "Your journey to the top starts here"
         },
         "background": "minecraft:block/amethyst_block",
