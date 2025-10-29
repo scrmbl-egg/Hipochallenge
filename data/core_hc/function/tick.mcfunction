@@ -58,6 +58,9 @@ function core_hc:projectile/tick
 # abilities
 function #core_hc:ability/tick
 
+# levels
+function #core_hc:level/tick
+
 ## __ KEEP AT BOTTOM OF FILE __
 # timers (must be deferred)
 function core_hc:score/timer/tick_all
