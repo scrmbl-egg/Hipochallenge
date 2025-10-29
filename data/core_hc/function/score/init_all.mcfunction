@@ -33,10 +33,10 @@ scoreboard objectives add hc.Perk dummy
 scoreboard objectives add hc.HasLeft minecraft.custom:minecraft.leave_game
 
 ## HEALTH, DEATH & KILLS
-scoreboard objectives add hc.Health health {text:"\u2764",color:"#db0000"}
-scoreboard objectives add hc.PlayerKillCount playerKillCount {text:"\ud83d\udde1",color:"white"}
-scoreboard objectives add hc.DeathCount deathCount {text:"\u2620",color:"white"}
-scoreboard objectives add hc.Points dummy {text:"\u2605",color:"gold"}
+scoreboard objectives add hc.Health health
+scoreboard objectives add hc.PlayerKillCount playerKillCount
+scoreboard objectives add hc.DeathCount deathCount
+scoreboard objectives add hc.Points dummy
 scoreboard objectives add hc.IsDead deathCount
 scoreboard objectives add hc.HasKilled playerKillCount
 
@@ -101,10 +101,33 @@ scoreboard objectives add hc.BowShot minecraft.used:minecraft.bow
 # Display names are added after creation, so that existing scoreboards during
 # reload are properly updated.
 
-scoreboard objectives modify hc.Health displayname {text:"\u2764",color:"#db0000"}
-scoreboard objectives modify hc.PlayerKillCount displayname {text:"\ud83d\udde1",color:"white"}
-scoreboard objectives modify hc.DeathCount displayname {text:"\u2620",color:"white"}
-scoreboard objectives modify hc.Points displayname {text:"\u2605",color:"gold"}
+# hc.Health
+scoreboard objectives modify hc.Health displayname { \
+    translate:"hc.score.health_representation", \
+    fallback:"\u2764", \
+    color:"#db0000", \
+}
+
+# hc.PlayerKillCount
+scoreboard objectives modify hc.PlayerKillCount displayname { \
+    translate:"hc.score.player_kill_count_representation", \
+    fallback:"\u2694", \
+    color:"white", \
+}
+
+# hc.DeathCount
+scoreboard objectives modify hc.DeathCount displayname { \
+    translate:"hc.score.death_count_representation", \
+    fallback:"\u2620", \
+    color:"white", \
+}
+
+# hc.Points
+scoreboard objectives modify hc.Points displayname { \
+    translate:"hc.score.points_representation", \
+    fallback:"\u2666", \
+    color:"gold", \
+}
 
 ## INITIALISE SCORES
 scoreboard players add @a hc.ListInfo 0
