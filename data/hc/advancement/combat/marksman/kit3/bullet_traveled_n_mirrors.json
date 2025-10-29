@@ -20,8 +20,12 @@
         ],
         "description": {
             "translate": "hc.advancement.combat.marksman.kit3.bullet_traveled_n_mirrors.description",
-            "fallback": "Make a bullet from the V-445 Revolver travel through %s mirrors",
+            "fallback": "Make a bullet from the %1$s travel through %2$s mirrors",
             "with": [
+                {
+                    "translate": "hc.items.marksman.kit3.revolver",
+                    "fallback": "V-445 Revolver"
+                },
                 "4"
             ]
         },
