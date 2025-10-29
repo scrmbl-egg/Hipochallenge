@@ -1,4 +1,4 @@
-#>core_hc:player_list_info/display
+#>core_hc:list_info/display
 #
 # Displays the player's updated list information.
 #

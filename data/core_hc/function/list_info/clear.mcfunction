@@ -1,4 +1,4 @@
-#>core_hc:player_list_info:clear
+#>core_hc:list_info:clear
 #
 # Clears the player list information.
 

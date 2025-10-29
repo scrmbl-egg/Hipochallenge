@@ -1,4 +1,4 @@
-#>core_hc:player_list_info/update
+#>core_hc:list_info/update
 #
 # Updates the player list information of the player and displays it, with their
 # selected class name, kit name, perk name, and match stats (kills, deaths,
