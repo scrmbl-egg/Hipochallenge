@@ -21,6 +21,14 @@ execute unless predicate hc:has_all_options_selected \
     return run \
     function core_hc:list_info/clear
 
+# setup text schemas
+data modify storage hc:temp update_list_info.display.class_text set value { \
+    translate:"hc.class.name_with_icon", \
+    fallback:"%2$s %1$s", \
+    with:[{}, {}], \
+    color:"", \
+}
+
 # prepare all function parameters
 data modify storage hc:temp update_list_info.get_members set value { \
     class_id:0, \
@@ -52,7 +60,7 @@ data modify storage hc:temp update_list_info.get_members.member_name \
 
 # class
 data modify storage hc:temp update_list_info.get_members.out_nbt \
-    set value "update_list_info.display.class_text"
+    set value "update_list_info.display.class_text.with[0]"
 function core_hc:class/get_data_member \
     with storage hc:temp update_list_info.get_members
 
@@ -66,6 +74,15 @@ function core_hc:kit/get_data_member \
 data modify storage hc:temp update_list_info.get_members.out_nbt \
     set value "update_list_info.display.perk_text"
 function core_hc:perk/get_data_member \
+    with storage hc:temp update_list_info.get_members
+
+## get class icon
+data modify storage hc:temp update_list_info.get_members.member_name \
+    set value "icon"
+
+data modify storage hc:temp update_list_info.get_members.out_nbt \
+    set value "update_list_info.display.class_text.with[1]"
+function core_hc:class/get_data_member \
     with storage hc:temp update_list_info.get_members
 
 ## get text component colors

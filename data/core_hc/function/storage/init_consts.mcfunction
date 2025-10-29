@@ -168,7 +168,8 @@ data modify storage hc:main consts.team_presets append value { \
 data modify storage hc:main consts.classes append value { \
     internal_name:"tank", \
     id:1, \
-    name:{translate:"hc.class.tank",fallback:"Tank"}, \
+    name:{translate:"hc.class.tank.name",fallback:"Tank"}, \
+    icon:{translate:"hc.class.tank.icon",fallback:"\u26e8"}, \
     dust_color: [0.176f,0.6f,0.392f], \
     attributes:{ \
         max_health:20, \
@@ -193,7 +194,7 @@ data modify storage hc:main consts.classes append value { \
     kits: [ \
         { \
             id:1, \
-            name:{translate:"hc.class.tank.kit1",fallback:"I Guardian"}, \
+            name:{translate:"hc.class.tank.kit1.name",fallback:"I Guardian"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/tank/item/kit1/hotbar", \
                 offhand:"hc:class/tank/item/kit1/offhand", \
@@ -214,7 +215,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.tank.kit2",fallback:"II Triton"}, \
+            name:{translate:"hc.class.tank.kit2.name",fallback:"II Triton"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/tank/item/kit2/hotbar", \
                 offhand:"hc:class/tank/item/kit2/offhand", \
@@ -238,7 +239,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.tank.kit3",fallback:"III Druid"}, \
+            name:{translate:"hc.class.tank.kit3.name",fallback:"III Druid"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/tank/item/kit3/hotbar", \
                 offhand:"hc:class/tank/item/kit3/offhand", \
@@ -282,7 +283,7 @@ data modify storage hc:main consts.classes append value { \
     perks:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.tank.perk1",fallback:"I Nutrition"}, \
+            name:{translate:"hc.class.tank.perk1.name",fallback:"I Nutrition"}, \
             equip_command:"say tank perk 1 equip command called", \
             data_type:"tank_p1_data", \
             tank_p1_data:{ \
@@ -291,7 +292,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.tank.perk2",fallback:"II Profound scars"}, \
+            name:{translate:"hc.class.tank.perk2.name",fallback:"II Profound scars"}, \
             equip_command:"say tank perk 2 equip command called", \
             data_type:"tank_p2_data", \
             tank_p2_data: { \
@@ -307,7 +308,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.tank.perk3",fallback:"III Inspiration"}, \
+            name:{translate:"hc.class.tank.perk3.name",fallback:"III Inspiration"}, \
             equip_command:"say tank perk 3 equip command called", \
             data_type:"tank_p3_data", \
             tank_p3_data: { \
@@ -326,7 +327,8 @@ data modify storage hc:main consts.classes append value { \
 data modify storage hc:main consts.classes append value { \
     internal_name:"marksman", \
     id:2, \
-    name:{translate:"hc.class.marksman",fallback:"Marksman"}, \
+    name:{translate:"hc.class.marksman.name",fallback:"Marksman"}, \
+    icon:{translate:"hc.class.marksman.icon",fallback:"\ud83c\udff9"}, \
     dust_color:[0.788f, 0.541f, 0.11f], \
     attributes:{ \
         max_health:20, \
@@ -351,7 +353,7 @@ data modify storage hc:main consts.classes append value { \
     kits:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.marksman.kit1",fallback:"I Archer"}, \
+            name:{translate:"hc.class.marksman.kit1.name",fallback:"I Archer"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/marksman/item/kit1/hotbar", \
                 offhand:"hc:class/marksman/item/kit1/offhand", \
@@ -367,7 +369,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.marksman.kit2",fallback:"II Sniper"}, \
+            name:{translate:"hc.class.marksman.kit2.name",fallback:"II Sniper"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/marksman/item/kit2/hotbar", \
                 offhand:"hc:class/marksman/item/kit2/offhand", \
@@ -383,7 +385,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.marksman.kit3",fallback:"III Gunslinger"}, \
+            name:{translate:"hc.class.marksman.kit3.name",fallback:"III Gunslinger"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/marksman/item/kit3/hotbar", \
                 offhand:"hc:class/marksman/item/kit3/offhand", \
@@ -406,7 +408,7 @@ data modify storage hc:main consts.classes append value { \
     perks:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.marksman.perk1",fallback:"I Bullseye"}, \
+            name:{translate:"hc.class.marksman.perk1.name",fallback:"I Bullseye"}, \
             equip_command:"say marksman perk 1 equip command called", \
             data_type:"marksman_p1_data", \
             marksman_p1_data: { \
@@ -415,7 +417,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.marksman.perk2",fallback:"II Lifesaver"}, \
+            name:{translate:"hc.class.marksman.perk2.name",fallback:"II Lifesaver"}, \
             equip_command:"say marksman perk 2 equip command called", \
             data_type:"marksman_p2_data", \
             marksman_p2_data:{ \
@@ -430,7 +432,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.marksman.perk3",fallback:"III Big pockets"}, \
+            name:{translate:"hc.class.marksman.perk3.name",fallback:"III Big pockets"}, \
             equip_command:"say marksman perk 3 equip command called", \
             data_type:"marksman_p3_data", \
             marksman_p3_data:{ \
@@ -444,7 +446,8 @@ data modify storage hc:main consts.classes append value { \
 data modify storage hc:main consts.classes append value { \
     internal_name:"assassin", \
     id:3, \
-    name:{translate:"hc.class.assassin",fallback:"Assassin"}, \
+    name:{translate:"hc.class.assassin.name",fallback:"Assassin"}, \
+    icon:{translate:"hc.class.assassin.icon",fallback:"\ud83d\udde1"}, \
     dust_color:[0.173f, 0.482f, 0.824f], \
     attributes:{ \
         max_health:20, \
@@ -469,7 +472,7 @@ data modify storage hc:main consts.classes append value { \
     kits:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.assassin.kit1",fallback:"I Duelist"}, \
+            name:{translate:"hc.class.assassin.kit1.name",fallback:"I Duelist"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/assassin/item/kit1/hotbar", \
                 offhand:"hc:class/assassin/item/kit1/offhand", \
@@ -498,7 +501,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.assassin.kit2",fallback:"II Phantom"}, \
+            name:{translate:"hc.class.assassin.kit2.name",fallback:"II Phantom"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/assassin/item/kit2/hotbar", \
                 offhand:"hc:class/assassin/item/kit2/offhand", \
@@ -519,7 +522,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.assassin.kit3",fallback:"III Mercenary"}, \
+            name:{translate:"hc.class.assassin.kit3.name",fallback:"III Mercenary"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/assassin/item/kit3/hotbar", \
                 offhand:"hc:class/assassin/item/kit3/offhand", \
@@ -531,7 +534,7 @@ data modify storage hc:main consts.classes append value { \
     perks:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.assassin.perk1",fallback:"I Contract"}, \
+            name:{translate:"hc.class.assassin.perk1.name",fallback:"I Contract"}, \
             equip_command:"say assassin perk 1 equip command called", \
             data_type:"assassin_p1_data", \
             assassin_p1_data:{ \
@@ -546,7 +549,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.assassin.perk2",fallback:"II Harvesting"}, \
+            name:{translate:"hc.class.assassin.perk2.name",fallback:"II Harvesting"}, \
             equip_command:"say assassin perk 2 equip command called", \
             data_type:"assassin_p2_data", \
             assassin_p2_data:{ \
@@ -555,7 +558,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.assassin.perk3",fallback:"III Acidity"}, \
+            name:{translate:"hc.class.assassin.perk3.name",fallback:"III Acidity"}, \
             equip_command:"say assassin perk 3 equip command called", \
             data_type:"assassin_p3_data", \
             assassin_p3_data:{ \
@@ -569,7 +572,8 @@ data modify storage hc:main consts.classes append value { \
 data modify storage hc:main consts.classes append value { \
     internal_name:"support", \
     id:4, \
-    name:{translate:"hc.class.support",fallback:"Support"}, \
+    name:{translate:"hc.class.support.name",fallback:"Support"}, \
+    icon:{translate:"hc.class.support.icon",fallback:"\u2795"}, \
     dust_color:[0.863f, 0.455f, 0.141f], \
     attributes:{ \
         max_health:20, \
@@ -594,7 +598,7 @@ data modify storage hc:main consts.classes append value { \
     kits:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.support.kit1",fallback:"I Trapper"}, \
+            name:{translate:"hc.class.support.kit1.name",fallback:"I Trapper"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/support/item/kit1/hotbar", \
                 offhand:"hc:class/support/item/kit1/offhand", \
@@ -604,7 +608,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.support.kit2",fallback:"II Doctor"}, \
+            name:{translate:"hc.class.support.kit2.name",fallback:"II Doctor"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/support/item/kit2/hotbar", \
                 offhand:"hc:class/support/item/kit2/offhand", \
@@ -614,7 +618,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.support.kit3",fallback:"II Doctor"}, \
+            name:{translate:"hc.class.support.kit3.name",fallback:"II Doctor"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/support/item/kit3/hotbar", \
                 offhand:"hc:class/support/item/kit3/offhand", \
@@ -626,7 +630,7 @@ data modify storage hc:main consts.classes append value { \
     perks:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.support.perk1",fallback:"I Overclock"}, \
+            name:{translate:"hc.class.support.perk1.name",fallback:"I Overclock"}, \
             equip_command:"say support perk 1 equip command called", \
             data_type:"support_p1_data", \
             support_p1_data: { \
@@ -635,7 +639,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.support.perk2",fallback:"II Personal space"}, \
+            name:{translate:"hc.class.support.perk2.name",fallback:"II Personal space"}, \
             equip_command:"say support perk 2 equip command called", \
             data_type:"support_p2_data", \
             support_p2_data: { \
@@ -654,7 +658,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.support.perk3",fallback:"III Supercharge"}, \
+            name:{translate:"hc.class.support.perk3.name",fallback:"III Supercharge"}, \
             equip_command:"say support perk 3 equip command called", \
             data_type:"support_p3_data", \
             support_p3_data: { \
@@ -668,7 +672,8 @@ data modify storage hc:main consts.classes append value { \
 data modify storage hc:main consts.classes append value { \
     internal_name:"recon", \
     id:5, \
-    name:{translate:"hc.class.recon",fallback:"Recon"}, \
+    name:{translate:"hc.class.recon.name",fallback:"Recon"}, \
+    icon:{translate:"hc.class.recon.icon",fallback:"\ud83d\udc41"}, \
     dust_color:[0.863f, 0.455f, 0.141f], \
     attributes:{ \
         max_health:20, \
@@ -693,7 +698,7 @@ data modify storage hc:main consts.classes append value { \
     kits:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.recon.kit1",fallback:"I Spec. ops"}, \
+            name:{translate:"hc.class.recon.kit1.name",fallback:"I Spec. ops"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/recon/item/kit1/hotbar", \
                 offhand:"hc:class/recon/item/kit1/offhand", \
@@ -703,7 +708,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.recon.kit2",fallback:"II Tracker"}, \
+            name:{translate:"hc.class.recon.kit2.name",fallback:"II Tracker"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/recon/item/kit2/hotbar", \
                 offhand:"hc:class/recon/item/kit2/offhand", \
@@ -729,7 +734,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.recon.kit3",fallback:"III Anomaly"}, \
+            name:{translate:"hc.class.recon.kit3.name",fallback:"III Anomaly"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/recon/item/kit3/hotbar", \
                 offhand:"hc:class/recon/item/kit3/offhand", \
@@ -741,7 +746,7 @@ data modify storage hc:main consts.classes append value { \
     perks:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.recon.perk1",fallback:"I Inhibitor"}, \
+            name:{translate:"hc.class.recon.perk1.name",fallback:"I Inhibitor"}, \
             equip_command:"say recon perk 1 equip command called", \
             data_type:"recon_p1_data", \
             recon_p1_data: { \
@@ -750,7 +755,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.recon.perk2",fallback:"II Assimilation"}, \
+            name:{translate:"hc.class.recon.perk2.name",fallback:"II Assimilation"}, \
             equip_command:"say recon perk 2 equip command called", \
             data_type:"recon_p2_data", \
             recon_p2_data: { \
@@ -764,7 +769,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.recon.perk3",fallback:"III Animal instinct"}, \
+            name:{translate:"hc.class.recon.perk3.name",fallback:"III Animal instinct"}, \
             equip_command:"say recon perk 3 equip command called", \
             data_type:"recon_p3_data", \
             recon_p3_data: { \
@@ -778,7 +783,8 @@ data modify storage hc:main consts.classes append value { \
 data modify storage hc:main consts.classes append value { \
     internal_name:"assault", \
     id:6, \
-    name:{translate:"hc.class.assault",fallback:"Assault"}, \
+    name:{translate:"hc.class.assault.name",fallback:"Assault"}, \
+    icon:{translate:"hc.class.assault.icon",fallback:"\u2605"}, \
     dust_color:[0.803f,0.286f,0.270f], \
     attributes:{ \
         max_health:20, \
@@ -803,7 +809,7 @@ data modify storage hc:main consts.classes append value { \
     kits:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.assault.kit1",fallback:"I Explosives expert"}, \
+            name:{translate:"hc.class.assault.kit1.name",fallback:"I Explosives expert"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/assault/item/kit1/hotbar", \
                 offhand:"hc:class/assault/item/kit1/offhand", \
@@ -813,7 +819,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.assault.kit2",fallback:"II Harpooner"}, \
+            name:{translate:"hc.class.assault.kit2.name",fallback:"II Harpooner"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/assault/item/kit2/hotbar", \
                 offhand:"hc:class/assault/item/kit2/offhand", \
@@ -823,7 +829,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.assault.kit3",fallback:"III Commander"}, \
+            name:{translate:"hc.class.assault.kit3.name",fallback:"III Commander"}, \
             item_loot_tables:{ \
                 hotbar:"hc:class/assault/item/kit3/hotbar", \
                 offhand:"hc:class/assault/item/kit3/offhand", \
@@ -835,7 +841,7 @@ data modify storage hc:main consts.classes append value { \
     perks:[ \
         { \
             id:1, \
-            name:{translate:"hc.class.assault.perk1",fallback:"I Engineering"}, \
+            name:{translate:"hc.class.assault.perk1.name",fallback:"I Engineering"}, \
             equip_command:"say assault perk 1 equip command called", \
             data_type:"assault_p1_data", \
             assault_p1_data: { \
@@ -844,7 +850,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:2, \
-            name:{translate:"hc.class.assault.perk2",fallback:"II Adaptable shell"}, \
+            name:{translate:"hc.class.assault.perk2.name",fallback:"II Adaptable shell"}, \
             equip_command:"say assault perk 2 equip command called", \
             data_type:"assault_p2_data", \
             assault_p2_data: { \
@@ -858,7 +864,7 @@ data modify storage hc:main consts.classes append value { \
         }, \
         { \
             id:3, \
-            name:{translate:"hc.class.assault.perk3",fallback:"III Chase"}, \
+            name:{translate:"hc.class.assault.perk3.name",fallback:"III Chase"}, \
             equip_command:"say assault perk 3 equip command called", \
             data_type:"assault_p3_data", \
             assault_p3_data: { \

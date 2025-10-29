@@ -35,6 +35,8 @@ struct Class {
     id: ClassId,
     /// Translated text for the class name.
     name: TranslatedText,
+    /// Translated text for the class's Unicode icon.
+    icon: TranslatedText,
     /// RGB of the dust particles for the class.
     dust_color: #[color="dec_rgb"] [float] @ 3,
     /// Class custom attributes.
