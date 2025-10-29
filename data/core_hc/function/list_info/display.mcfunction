@@ -24,15 +24,15 @@ $execute unless predicate hc:mechanic/is_detected \
         {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
         " ", \
         { \
-            translate:"hc.list_info.player_kill_count_representation", \
-            fallback:"\ud83d\udde1", \
+            translate:"hc.score.player_kill_count_representation", \
+            fallback:"\u2694", \
             color:"green", \
         }, \
         {text:" :: ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
         " ", \
         { \
-            translate:"hc.list_info.death_count_representation", \
+            translate:"hc.score.death_count_representation", \
             fallback:"\u2620", \
             color:"red", \
         }, \
@@ -40,8 +40,8 @@ $execute unless predicate hc:mechanic/is_detected \
         {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
         " ", \
         { \
-            translate:"hc.list_info.points_representation", \
-            fallback:"\u2605", \
+            translate:"hc.score.points_representation", \
+            fallback:"\u2666", \
             color:"gold", \
         }, \
         " ", \
@@ -61,15 +61,15 @@ $execute if predicate hc:mechanic/is_detected \
         {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
         " ", \
         { \
-            translate:"hc.list_info.player_kill_count_representation", \
-            fallback:"\ud83d\udde1", \
+            translate:"hc.score.player_kill_count_representation", \
+            fallback:"\u2694", \
             color:"green", \
         }, \
         {text:" :: ",color:"gray"}, \
         {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
         " ", \
         { \
-            translate:"hc.list_info.death_count_representation", \
+            translate:"hc.score.death_count_representation", \
             fallback:"\u2620", \
             color:"red", \
         }, \
@@ -77,8 +77,8 @@ $execute if predicate hc:mechanic/is_detected \
         {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
         " ", \
         { \
-            translate:"hc.list_info.points_representation", \
-            fallback:"\u2605", \
+            translate:"hc.score.points_representation", \
+            fallback:"\u2666", \
             color:"gold", \
         }, \
         " ", \
