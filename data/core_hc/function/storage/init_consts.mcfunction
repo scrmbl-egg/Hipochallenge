@@ -880,6 +880,7 @@ data modify storage hc:main consts.classes append value { \
 # TODO: add callout objects and lists
 
 ## EXTENSION CONSTANTS SETUP
+function #extension_hc:storage/init_consts
 
 ## POST-SETUP CALCULATIONS
 # the constants that are calculated here are mainly used for predicates that
