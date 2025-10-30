@@ -56,8 +56,7 @@ function core_hc:ability/assassin/kit2/stun_mechanism/give_effects \
     with storage hc:temp stun_mechanism
 
 # show fx
-function core_hc:fx/ability/assassin/kit2/stun_mechanism_used \
-    with storage hc:temp stun_mechanism
+function core_hc:fx/ability/assassin/kit2/stun_mechanism_used
 
 # free memory
 data remove storage hc:temp stun_mechanism
