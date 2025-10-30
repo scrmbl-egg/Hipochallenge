@@ -5,29 +5,11 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:golden_sword",
+                    "name": "minecraft:paper",
                     "functions": [
                         {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": {
-                                    "translate": "hc.items.assassin.kit1.duelist_sword",
-                                    "fallback": "Duelist's Sword"
-                                },
-                                "minecraft:custom_data": {
-                                    "hc:item/id": "assassin_k1_duelist_sword"
-                                },
-                                "minecraft:rarity": "rare",
-                                "minecraft:blocks_attacks": {
-                                    "block_delay_seconds": 0
-                                },
-                                "minecraft:unbreakable": {},
-                                "minecraft:tooltip_display": {
-                                    "hidden_components": [
-                                        "minecraft:unbreakable"
-                                    ]
-                                }
-                            }
+                            "function": "minecraft:reference",
+                            "name": "hc:item/class/assassin/kit1/duelist_sword"
                         }
                     ]
                 }
