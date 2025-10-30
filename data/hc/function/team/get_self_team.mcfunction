@@ -1,7 +1,8 @@
-#>core_hc:team/get_self_team
+#>hc:team/get_self_team
 #
 # Gets the team name of the player.
 #
+# @context player
 # @input
 #   out_storage: #[id="storage"] string
 #       Storage where the result will be stored.

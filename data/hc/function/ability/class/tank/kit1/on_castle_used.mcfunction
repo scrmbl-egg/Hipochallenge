@@ -54,7 +54,7 @@ data modify storage hc:temp castle set value { \
 }
 
 # get player team
-function core_hc:team/get_self_team { \
+function hc:team/get_self_team { \
     out_storage:"hc:temp", \
     out_nbt:"castle.get_uuid_params.team", \
 }

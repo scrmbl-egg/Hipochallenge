@@ -15,7 +15,7 @@ data modify storage hc:temp tank_k1_horn_targetting.owner_uuid \
     set from entity @s UUID
 
 # get team
-function core_hc:team/get_self_team { \
+function hc:team/get_self_team { \
     out_storage:"hc:temp", \
     out_nbt:"tank_k1_horn_targetting.team", \
 }

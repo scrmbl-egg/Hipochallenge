@@ -33,7 +33,7 @@ data modify entity @s data."hc:entity/flare_arrow".owner_uuid \
 ## get owner's enemy team
 execute on origin \
     run \
-    function core_hc:team/get_enemy_team { \
+    function hc:team/get_enemy_team { \
         out_storage:"hc:temp", \
         out_nbt:"new_flare_arrow.detected_team" \
     }

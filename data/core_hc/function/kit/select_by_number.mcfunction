@@ -47,7 +47,7 @@ execute unless predicate hc:team/is_in_match_pvp_team \
 # get team the message may be sent to
 execute if predicate hc:team/is_in_match_pvp_team \
     run \
-    function core_hc:team/get_self_team { \
+    function hc:team/get_self_team { \
         out_storage:"hc:temp", \
         out_nbt:"select_kit.msg_params.team", \
     }

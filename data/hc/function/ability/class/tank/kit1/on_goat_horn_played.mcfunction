@@ -47,7 +47,7 @@ data modify storage hc:temp tank_k1_goat_horn set value { \
 }
 
 # get team
-function core_hc:team/get_self_team { \
+function hc:team/get_self_team { \
     out_storage:"hc:temp", \
     out_nbt:"tank_k1_goat_horn.team", \
 }

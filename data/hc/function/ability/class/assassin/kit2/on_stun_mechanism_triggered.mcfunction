@@ -40,7 +40,7 @@ data modify storage hc:temp stun_mechanism set value { \
 data modify storage hc:temp stun_mechanism.owner_uuid set from entity @s UUID
 
 # get enemy team
-function core_hc:team/get_enemy_team { \
+function hc:team/get_enemy_team { \
     out_storage:"hc:temp", \
     out_nbt:"stun_mechanism.team", \
 }

@@ -23,11 +23,11 @@ $data modify storage hc:temp select_player set value { \
     enemy_team:"", \
 }
 data modify storage hc:temp select_player.owner_uuid set from entity @s UUID
-function core_hc:team/get_self_team { \
+function hc:team/get_self_team { \
     out_storage:"hc:temp", \
     out_nbt:"select_player.self_team", \
 }
-function core_hc:team/get_enemy_team { \
+function hc:team/get_enemy_team { \
     out_storage:"hc:temp", \
     out_nbt:"select_player.enemy_team", \
 }
