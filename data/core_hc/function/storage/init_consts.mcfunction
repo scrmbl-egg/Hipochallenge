@@ -170,7 +170,7 @@ data modify storage hc:main consts.classes append value { \
     id:1, \
     name:{translate:"hc.class.tank.name",fallback:"Tank"}, \
     icon:{translate:"hc.class.tank.icon",fallback:"\u26e8"}, \
-    dust_color: [0.176f,0.6f,0.392f], \
+    dust_color:[0.176f,0.6f,0.392f], \
     attributes:{ \
         max_health:20, \
         armor:20, \
