@@ -36,11 +36,6 @@ type Kit = (
                 /// Effects that will be given to allies.
                 effects_info: AbilityEffects
             },
-            /// Castling ability related data.
-            castling: struct {
-                /// Cooldown ticks after using the
-                cooldown_ticks: int @ 0..
-            }
         }
     } |
     // Second tank kit.

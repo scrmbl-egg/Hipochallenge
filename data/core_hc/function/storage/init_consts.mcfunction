@@ -210,7 +210,6 @@ data modify storage hc:main consts.classes append value { \
                     }, \
                     radius:7.0, \
                 }, \
-                castling:{cooldown_ticks:400}, \
             }, \
         }, \
         { \
