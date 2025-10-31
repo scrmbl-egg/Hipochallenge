@@ -57,7 +57,7 @@ type Kit = (
             /// Trident related data.
             trident: struct {
                 /// Cooldown after landing.
-                cooldown_ticks: int @ 0.. // TODO: cooldown should obtained from item's "consumable" data component
+                cooldown_ticks: int @ 0..
             }
         }
     } |
@@ -251,7 +251,7 @@ type Kit = (
                 /// Maximum amount of flare arrows the player can hold at a time.
                 max_amount: int @ 1..,
                 /// Amount of ticks it will take to get another flare arrow.
-                cooldown_ticks: int @ 2..,
+                cooldown_ticks: int @ 0..,
                 /// Size of the AABB's that detect enemy players.
                 detection_aabb_size: [double @ 0..] @ 3,
                 /// Explosion related data.
