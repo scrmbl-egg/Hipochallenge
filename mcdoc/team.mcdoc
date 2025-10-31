@@ -22,10 +22,7 @@ struct TeamPreset {
 		#[color="dec_rgb"] [float] @ 3 |
 	),
     /// Team's custom armor trim material.
-    trim_material: (
-        #[id(registry="trim_material",tags="allowed")] string |
-        [#[id="trim_material"] string]
-    ),
+    trim_material: #[id="trim_material"] string,
 }
 
 struct TeamContext {
