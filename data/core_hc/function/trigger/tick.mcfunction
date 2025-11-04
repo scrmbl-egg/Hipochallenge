@@ -95,3 +95,54 @@ execute as @a \
     if predicate core_hc:trigger/triggered_proj_cooldown \
     run \
     function core_hc:trigger/proj_cooldown
+
+## npc_*
+# tank
+execute as @a \
+    if predicate core_hc:trigger/triggered_npc_tank \
+    run \
+    function core_hc:trigger/npc_tank
+
+# marksman
+execute as @a \
+    if predicate core_hc:trigger/triggered_npc_marksman \
+    run \
+    function core_hc:trigger/npc_marksman
+
+# assassin
+execute as @a \
+    if predicate core_hc:trigger/triggered_npc_assassin \
+    run \
+    function core_hc:trigger/npc_assassin
+
+# support
+execute as @a \
+    if predicate core_hc:trigger/triggered_npc_support \
+    run \
+    function core_hc:trigger/npc_support
+
+# recon
+execute as @a \
+    if predicate core_hc:trigger/triggered_npc_recon \
+    run \
+    function core_hc:trigger/npc_recon
+
+# assault
+execute as @a \
+    if predicate core_hc:trigger/triggered_npc_assault \
+    run \
+    function core_hc:trigger/npc_assault
+
+## kill_nearby_npc
+execute as @a \
+    if predicate core_hc:trigger/triggered_kill_nearby_npc \
+    run \
+    function core_hc:trigger/kill_nearby_npc with entity @s
+# player.UUID is needed
+
+## kill_all_npcs
+execute as @a \
+    if predicate core_hc:trigger/triggered_kill_all_npcs \
+    run \
+    function core_hc:trigger/kill_all_npcs with entity @s
+# player.UUID is needed

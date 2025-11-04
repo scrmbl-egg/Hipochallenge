@@ -1,9 +1,16 @@
 dispatch mcdoc:custom_data[hc:entity/item/no_pickup] to ItemNoPickup
+dispatch mcdoc:custom_data[hc:entity/training_npc] to TrainingNpc
 dispatch mcdoc:custom_data[hc:entity/spirit] to TankSpirit
 dispatch mcdoc:custom_data[hc:entity/flare_arrow] to FlareArrow
 
 /// Component for items that will maximize the `PickupDelay` data parameter when dropped.
 struct ItemNoPickup {}
+
+/// Component for the NPCs available in training mode.
+struct TrainingNpc {
+    /// UUID of the entity that summoned the NPC.
+    owner_uuid: #[uuid] int[] @ 4,
+}
 
 /// Component for Tank Kit 3 spirit.
 struct TankSpirit {
