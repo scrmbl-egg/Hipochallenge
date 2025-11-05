@@ -8,7 +8,7 @@
 execute on origin \
     if entity @s[ \
         gamemode=!creative, \
-        predicate=core_hc:util/is_projectile_cooldown_enabled \
+        predicate=hc:trigger/is_projectile_cooldown_enabled \
     ] \
     store result score @s hc.TankKit2TridentCooldown \
     run \
@@ -20,7 +20,7 @@ execute on origin \
 execute on origin \
     if entity @s[ \
         gamemode=!creative, \
-        predicate=!core_hc:util/is_projectile_cooldown_enabled \
+        predicate=hc:trigger/is_projectile_cooldown_disabled \
     ] \
     run \
     function hc:ability/class/tank/kit2/give_trident
