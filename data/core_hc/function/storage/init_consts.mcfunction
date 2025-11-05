@@ -16,10 +16,11 @@ function hc:msg/debug/send_info { \
 # reset
 data remove storage hc:main consts
 
-## GAME CONSTANTS
+## MAP VERSION
+data modify storage hc:main consts.map_version set value "Pre-Alpha"
 
+## GAME CONSTANTS
 data modify storage hc:main consts.game set value { \
-    map_version: "Pre-Alpha", \
     team_size:3, \
     necessary_players_for_game:6, \
     match_request_duration_ticks:1200, \

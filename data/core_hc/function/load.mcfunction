@@ -174,7 +174,7 @@ tellraw @a [ \
         with:[ \
             { \
                 storage:"hc:main", \
-                nbt:"consts.game.map_version", \
+                nbt:"consts.map_version", \
                 color:"green", \
             }, \
         ], \

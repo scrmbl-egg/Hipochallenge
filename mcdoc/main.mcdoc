@@ -9,10 +9,10 @@ use ::Hipochallenge::mcdoc::level::Level
 dispatch minecraft:storage[hc:main] to struct MainStorage {
     /// Global constants of the datapack.
     consts: struct MainConsts {
+        /// Version of the map.
+        map_version: string,
         /// Game related constants.
         game: struct GameConstants {
-            /// Version of the map.
-            map_version: string,
             /// Size of a team.
             team_size: int @ 1..,
             /// Players necessary for starting a game.
