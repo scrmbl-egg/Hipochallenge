@@ -76,5 +76,5 @@ execute as @n[tag=__hc.NewNpc] \
     tag @s remove __hc.NewNpc
 
 # reset and re-enable
-scoreboard players reset @a npc_tank
-scoreboard players enable @a npc_tank
+scoreboard players reset @s npc_tank
+scoreboard players enable @s npc_tank
