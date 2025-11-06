@@ -53,7 +53,7 @@ data modify storage hc:main vars.team_contexts set value { \
             armor_dye_color:11546150, \
             trim_material:"minecraft:redstone", \
         }, \
-        players:[], \
+        player_profiles:[], \
     }, \
     team2:{ \
         preset:{ \
@@ -66,7 +66,7 @@ data modify storage hc:main vars.team_contexts set value { \
             armor_dye_color:3949738, \
             trim_material:"minecraft:lapis", \
         }, \
-        players:[], \
+        player_profiles:[], \
     }, \
 }
 

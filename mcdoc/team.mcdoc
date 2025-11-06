@@ -1,6 +1,7 @@
 use ::java::util::text::TextBase
 use ::java::util::text::TranslatedText
 use ::java::util::text::TextColor
+use ::java::util::avatar::Profile
 
 /// Struct for representing a team.
 struct TeamPreset {
@@ -33,8 +34,8 @@ struct TeamContext {
     },
     /// ID of the team presets array.
     preset: TeamPreset,
-    /// List of players in the team.
-    players: [#[uuid] int[] @ 4]
+    /// List of player profiles in the team.
+    player_profiles: [Profile] @ 0..3,
 }
 
 /// All possible team color names.
