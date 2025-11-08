@@ -24,7 +24,7 @@ data modify storage hc:main vars.reload_count set value 0
 
 ## GAME CONTEXTS
 data modify storage hc:main vars.game_context set value { \
-    current_state:1b, \
+    current_state:"not_playing", \
     current_game_mode_id:0b, \
     current_level_id:0b, \
     banned_level_ids:[], \

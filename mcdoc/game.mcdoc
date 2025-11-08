@@ -38,33 +38,33 @@ struct GameMode {
 }
 
 /// Game states of the game.
-enum(int) GameState {
+enum(string) GameState {
     /// State where the players are not playing.
-    NotPlaying = 0,
+    NotPlaying = "not_playing",
     /// State where a match is requested and is waiting for players.
-    WaitingForPlayers = 1,
+    WaitingForPlayers = "waiting_for_players",
     /// State where all players have joined and are selecting their team.
-    SelectingTeam = 2,
+    SelectingTeam = "selecting_team",
     /// State where the teams are decided, and a random player of the team decides the name.
-    NamingTeam = 3,
+    NamingTeam = "naming_team",
     /// State where the players decide on a color for the team.
-    SelectingTeamColor = 4,
+    SelectingTeamColor = "selecting_team_color",
     /// State where the players select their class for the game.
-    SelectingClasses = 5,
+    SelectingClasses = "selecting_classes",
     /// State where the players select/ban/decide on a level for the game.
-    SelectingLevel = 6,
+    SelectingLevel = "selecting_level",
     /// State where the players are shown the level they are going to play.
-    LevelIntro = 7,
+    LevelIntro = "level_intro",
     /// State where the players select the kit for the next round.
-    SelectingKit = 8,
+    SelectingKit = "selecting_kit",
     /// State where the players wait for the round to start.
-    StartingRound = 9,
+    StartingRound = "starting_round",
     /// State where the players are playing the round.
-    Playing = 10,
+    PlayingRound = "playing_round",
     /// State where the players have finished the round.
-    EndingRound = 11,
+    EndingRound = "ending_round",
     /// State where the players have finished the match and a winner is announced.
-    EndingMatch = 12
+    EndingMatch = "ending_match"
 }
 
 struct AvailableGameStates {

@@ -21,8 +21,6 @@ dispatch minecraft:storage[hc:main] to struct MainStorage {
             match_request_duration_ticks: int @ 1..,
             /// Available game modes.
             modes: [GameMode],
-            /// Available game states.
-            states: AvailableGameStates,
         },
         limits: struct Limits {
             no_gravity_projectiles_lifetime_ticks: int @ 0..

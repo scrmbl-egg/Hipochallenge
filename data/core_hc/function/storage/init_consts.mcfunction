@@ -24,21 +24,6 @@ data modify storage hc:main consts.game set value { \
     team_size:3, \
     necessary_players_for_game:6, \
     match_request_duration_ticks:1200, \
-    states:{ \
-        not_playing:0, \
-        waiting_for_players:1, \
-        selecting_team:2, \
-        naming_team:3, \
-        selecting_team_color:4, \
-        selecting_class:5, \
-        selecting_level:6, \
-        level_intro:7, \
-        selecting_kit:8, \
-        starting_round:9, \
-        playing:10, \
-        ending_round:11, \
-        ending_match:12, \
-    }, \
     modes:[ \
         { \
             internal_name:"casual", \
