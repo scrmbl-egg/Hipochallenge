@@ -5,9 +5,9 @@
 #
 # @context player
 # @input
-#   hotbar: #[id="loot_table"] string
+#   hotbar: (#[id="loot_table"] string | ::java::data::loot::LootTable)
 #       Loot table for items that will be equipped in the player's hotbar.
-#   offhand: #[id="loot_table"] string
+#   offhand: (#[id="loot_table"] string | ::java::data::loot::LootTable)
 #       Loot table for item which will be equipped in the player's offhand.
 
 # hotbar
