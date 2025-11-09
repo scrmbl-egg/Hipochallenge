@@ -1,4 +1,4 @@
-#>hc:mechanic/silence/add
+#>hc:mechanic/silence/remove
 #
 # Removes the silenced state from the executing player.
 #

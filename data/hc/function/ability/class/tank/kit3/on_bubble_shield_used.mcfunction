@@ -18,13 +18,7 @@ execute unless predicate hc:team/is_in_pvp_team \
 execute if predicate hc:mechanic/is_silenced \
     run \
     return run \
-    function hc:msg/private/send { \
-        text:{ \
-            color:"red", \
-            translate:"hc.msg.private.mechanics.silenced", \
-            fallback:"You are silenced!", \
-        } \
-    }
+    function hc:msg/private/send/silenced_message
 
 function hc:msg/debug/send_info { \
     text:"\"successfully placed bubble shield\"", \
