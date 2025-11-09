@@ -1,38 +1,38 @@
 use ::java::util::text::TextColor
 use ::java::util::text::TranslatedText
 
-/// Modifiable attributes of the available classes.
-struct ClassAttributes {
-    /// Maximum health attribute.
-    max_health: int @ 1..,
-    /// Armor attribute.
-    armor: int @ 0..,
-    /// Armor toughness attribute.
-    armor_toughness: int @ 0..,
-    /// Scale attribute.
-    scale: double @ 0.0625..16,
-    /// Burning time attribute.
-    burning_time: double @ 0.0..1024.0,
-    /// Explosion knockback resistance attribute.
-    explosion_knockback_resistance: double @ 0.0..1.0,
-}
-
-/// Player list information of the class.
-struct ClassListInfo {
-    /// Color for the player's class name in the player list.
-    class_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
-    /// Color for the player's kit name in the player list.
-    kit_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
-    /// Color for the player's perk name in the player list.
-    perk_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
-}
-
 /// Game class struct.
 struct Class {
     /// Internal name of the class.
-    internal_name: ClassName,
+    internal_name: enum(string) {
+        /// Tank class name.
+        Tank = "tank",
+        /// Marksman class name.
+        Marksman = "marksman",
+        /// Assassin class name.
+        Assassin = "assassin",
+        /// Support class name.
+        Support = "support",
+        /// Recon class name.
+        Recon = "recon",
+        /// Assault class name.
+        Assault = "assault",
+    },
     /// Internal numeric ID of the class.
-    id: ClassId,
+    id: enum(int) {
+        /// Tank class ID.
+        Tank = 1,
+        /// Marksman class ID.
+        Marksman = 2,
+        /// Assassin class ID.
+        Assassin = 3,
+        /// Support class ID.
+        Support = 4,
+        /// Recon class ID.
+        Recon = 5,
+        /// Assault class ID.
+        Assault = 6,
+    },
     /// Translated text for the class name.
     name: TranslatedText,
     /// Translated text for the class's Unicode icon.
@@ -40,9 +40,29 @@ struct Class {
     /// RGB of the dust particles for the class.
     dust_color: #[color="dec_rgb"] [float] @ 3,
     /// Class custom attributes.
-    attributes: ClassAttributes,
+    attributes: struct {
+        /// Maximum health attribute.
+        max_health: int @ 1..,
+        /// Armor attribute.
+        armor: int @ 0..,
+        /// Armor toughness attribute.
+        armor_toughness: int @ 0..,
+        /// Scale attribute.
+        scale: double @ 0.0625..16,
+        /// Burning time attribute.
+        burning_time: double @ 0..1024,
+        /// Explosion knockback resistance attribute.
+        explosion_knockback_resistance: double @ 0..1,
+    },
     /// Player list class information.
-    list_info: ClassListInfo,
+    list_info: struct ClassListInfo {
+        /// Color for the player's class name in the player list.
+        class_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+        /// Color for the player's kit name in the player list.
+        kit_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+        /// Color for the player's perk name in the player list.
+        perk_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+    },
     /// Spawned loot table on player's death.
     death_loot_table: (#[id="loot_table"] string | ::java::data::loot::LootTable),
     /// Loot tables for the class's armor.
@@ -60,36 +80,4 @@ struct Class {
     kits: [::Hipochallenge::mcdoc::kit::Kit] @ 3,
     /// List of class perks.
     perks: [::Hipochallenge::mcdoc::perk::Perk] @ 3
-}
-
-/// Enum of all class names.
-enum(string) ClassName {
-    /// Tank class name.
-    Tank = "tank",
-    /// Marksman class name.
-    Marksman = "marksman",
-    /// Assassin class name.
-    Assassin = "assassin",
-    /// Support class name.
-    Support = "support",
-    /// Recon class name.
-    Recon = "recon",
-    /// Assault class name.
-    Assault = "assault"
-}
-
-/// Enum of all class ID's.
-enum(int) ClassId {
-    /// Tank class ID.
-    Tank = 1,
-    /// Marksman class ID.
-    Marksman = 2,
-    /// Assassin class ID.
-    Assassin = 3,
-    /// Support class ID.
-    Support = 4,
-    /// Recon class ID.
-    Recon = 5,
-    /// Assault class ID.
-    Assault = 6
 }
