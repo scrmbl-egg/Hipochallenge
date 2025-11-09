@@ -9,12 +9,7 @@ execute as @s \
     unless predicate hc:has_all_options_selected \
     run \
     return run \
-    function hc:msg/private/send_error { \
-        text:{ \
-            translate:"hc.msg.private.error.not_all_options_selected", \
-            fallback:"You don't have all options selected (class, kit, or perk)", \
-        } \
-    }
+    function hc:msg/private/send_error/not_all_options_selected
 
 # clear equipment
 function hc:equipment/clear

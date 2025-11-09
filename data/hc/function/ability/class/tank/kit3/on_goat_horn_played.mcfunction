@@ -11,18 +11,13 @@ advancement revoke @s \
 function hc:msg/debug/send_info {text:"\"goat horn kit 3 used\""}
 
 # team with no abilities guard clause
-execute as @s unless predicate hc:team/is_in_pvp_team \
+execute unless predicate hc:team/is_in_pvp_team \
     run \
     return run \
-    function hc:msg/private/send_error { \
-        text:{ \
-            translate:"hc.msg.private.error.not_belonging_to_team_with_abilities", \
-            fallback:"You don't belong in a team that is allowed to use this ability", \
-        } \
-    }
+    function hc:msg/private/send_error/not_in_team_with_abilities
 
 # silenced guard clause
-execute as @s if predicate hc:mechanic/is_silenced \
+execute if predicate hc:mechanic/is_silenced \
     run \
     return run \
     function hc:msg/private/send {\

@@ -11,7 +11,7 @@
 # later.
 
 # add custom data to the arrow's data if it hasn't been added before
-execute as @s unless data entity @s data."hc:entity/flare_arrow" \
+execute unless data entity @s data."hc:entity/flare_arrow" \
     run \
     return run \
     function core_hc:projectile/class/recon/flare_arrow/add_data

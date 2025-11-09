@@ -5,25 +5,10 @@
 # @context player
 
 # guard clause
-execute as @s unless predicate hc:team/is_in_pvp_team \
+execute unless predicate hc:team/is_in_pvp_team \
     run \
     return run \
-    function hc:msg/private/send_error { \
-        text:{ \
-            translate:"hc.msg.private.error.not_belonging_to_team_with_armor", \
-            fallback:"You don't belong in a team that is allowed to equip armor", \
-        }, \
-    }
-execute as @s unless predicate hc:class/has_selected \
-    run \
-    return run \
-    function hc:msg/debug/send_error { \
-        text:[ \
-            "", \
-            {selector:"@s"}, \
-            " couldn't equip armor because they have no class selected.", \
-        ], \
-    }
+    function hc:msg/private/send_error/not_in_team_with_armor
 
 # clear armor items
 item replace entity @s armor.head with minecraft:air 1

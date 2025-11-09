@@ -7,12 +7,7 @@
 # all options selected guard clause
 execute unless predicate hc:has_all_options_selected \
     run \
-    function hc:msg/private/send_error { \
-        text:{ \
-            translate:"hc.msg.private.error.not_all_options_selected", \
-            fallback:"You don't have all options selected (class, kit, or perk)", \
-        }, \
-    }
+    function hc:msg/private/send_error/not_all_options_selected
 
 # get_data_member parameters
 data modify storage hc:temp equip_items.get_kit_loot_tables set value { \
