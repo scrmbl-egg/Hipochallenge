@@ -30,7 +30,7 @@ struct TeamContext {
     /// **(Nullable)** Custom name of the team.
     custom_name?: struct TeamNameText {
         ...TextBase,
-        text: string @ 1..12
+        text: string @ 1..16
     },
     /// ID of the team presets array.
     preset: TeamPreset,

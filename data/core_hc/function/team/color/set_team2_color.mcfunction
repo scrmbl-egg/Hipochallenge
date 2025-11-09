@@ -87,23 +87,22 @@ execute unless \
     run \
     data modify storage hc:temp set_color.name_msg.text set value { \
         translate:"hc.msg.all.team2_changed_name_to", \
-        fallback:"The first team is now called %s", \
+        fallback:"The first team is now called \"%s\"", \
         with:[ \
-            [ \
-                {text:"",color:"gray"}, \
-                "\"", \
-                "\"", \
-            ] \
+            {}, \
         ], \
     }
 execute unless \
     data storage hc:main vars.team_contexts.team2.custom_name \
     run \
-    data modify storage \
-    hc:temp set_color.name_msg.text.with[0] \
-    insert 2 \
-    from storage hc:main \
+    data modify storage hc:temp set_color.name_msg.text.with[0] \
+    set from storage hc:main \
     vars.team_contexts.team2.preset.default_name
+execute unless \
+    data storage hc:main vars.team_contexts.team2.custom_name \
+    run \
+    data modify storage hc:temp set_color.name_msg.text.with[0].color \
+    set value "gray"
 execute unless \
     data storage hc:main vars.team_contexts.team2.custom_name \
     run \
