@@ -174,7 +174,7 @@ data modify storage hc:main consts.classes append value { \
         legs:"hc:class/tank/armor/legs", \
         feet:"hc:class/tank/armor/feet", \
     }, \
-    kits: [ \
+    kits:[ \
         { \
             id:1, \
             name:{translate:"hc.class.tank.kit1.name",fallback:"I Guardian"}, \
@@ -240,7 +240,7 @@ data modify storage hc:main consts.classes append value { \
                         max_distance:5.0f, \
                         on_selected_command:"say selected!", \
                     }, \
-                    buff: { \
+                    buff:{ \
                         modifiers:[ \
                             {id:"hc:tank_k3_spirit_buff_armor",attribute:"minecraft:armor",value:6,operation:"add_value"}, \
                         ], \
@@ -277,7 +277,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.tank.perk2.name",fallback:"II Profound scars"}, \
             on_equip_command:"say tank perk 2 equip command called", \
             data_type:"tank_p2_data", \
-            tank_p2_data: { \
+            tank_p2_data:{ \
                 attack:{ \
                     effects_info:{ \
                         suppression_ticks:0, \
@@ -293,7 +293,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.tank.perk3.name",fallback:"III Inspiration"}, \
             on_equip_command:"say tank perk 3 equip command called", \
             data_type:"tank_p3_data", \
-            tank_p3_data: { \
+            tank_p3_data:{ \
                 close_ally_buff:{ \
                     radius:9, \
                     attributes:[ \
@@ -393,7 +393,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.marksman.perk1.name",fallback:"I Bullseye"}, \
             on_equip_command:"say marksman perk 1 equip command called", \
             data_type:"marksman_p1_data", \
-            marksman_p1_data: { \
+            marksman_p1_data:{ \
                 suppression_or_on_air_magic_damage:2, \
             }, \
         }, \
@@ -445,7 +445,7 @@ data modify storage hc:main consts.classes append value { \
         perk_color:"#ccdff4", \
     }, \
     death_loot_table:"hc:class/assassin/death", \
-    armor_loot_tables: { \
+    armor_loot_tables:{ \
         head:"hc:class/assassin/armor/head", \
         chest:"hc:class/assassin/armor/chest", \
         legs:"hc:class/assassin/armor/legs", \
@@ -463,17 +463,17 @@ data modify storage hc:main consts.classes append value { \
             assassin_k1_data:{ \
                 parry:{ \
                     on_owner_when_success:{ \
-                        modifiers: [], \
+                        modifiers:[], \
                     }, \
                     on_owner_when_fail:{ \
-                        modifiers: [ \
+                        modifiers:[ \
                             {id:"hc:assassin_k1_owner_failed_parry_entity_interaction_range",attribute:"minecraft:entity_interaction_range",value:-3,operation:"add_value"}, \
                             {id:"hc:assassin_k1_owner_failed_parry_attack_speed",attribute:"minecraft:attack_speed",value:-1.1,operation:"add_value"}, \
                         ], \
                     }, \
                     on_enemy_when_parried:{ \
-                        modifiers: [], \
-                        effects_info: { \
+                        modifiers:[], \
+                        effects_info:{ \
                             suppression_ticks:0, \
                             effects:[], \
                         }, \
@@ -615,7 +615,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.support.perk1.name",fallback:"I Overclock"}, \
             on_equip_command:"say support perk 1 equip command called", \
             data_type:"support_p1_data", \
-            support_p1_data: { \
+            support_p1_data:{ \
                 cooldown_multiplier:0.75, \
             }, \
         }, \
@@ -624,7 +624,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.support.perk2.name",fallback:"II Personal space"}, \
             on_equip_command:"say support perk 2 equip command called", \
             data_type:"support_p2_data", \
-            support_p2_data: { \
+            support_p2_data:{ \
                 on_hit_explosion:{ \
                     radius:3, \
                     delay_ticks:40, \
@@ -643,7 +643,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.support.perk3.name",fallback:"III Supercharge"}, \
             on_equip_command:"say support perk 3 equip command called", \
             data_type:"support_p3_data", \
-            support_p3_data: { \
+            support_p3_data:{ \
                 extra_area_ability_radius:2, \
             }, \
         }, \
@@ -686,7 +686,7 @@ data modify storage hc:main consts.classes append value { \
                 offhand:"hc:class/recon/item/kit1/offhand", \
             }, \
             data_type:"recon_k1_data", \
-            recon_k1_data: {}, \
+            recon_k1_data:{}, \
         }, \
         { \
             id:2, \
@@ -696,7 +696,7 @@ data modify storage hc:main consts.classes append value { \
                 offhand:"hc:class/recon/item/kit2/offhand", \
             }, \
             data_type:"recon_k2_data", \
-            recon_k2_data: { \
+            recon_k2_data:{ \
                 flare_arrow:{\
                     max_amount:1, \
                     cooldown_ticks:120, \
@@ -722,7 +722,7 @@ data modify storage hc:main consts.classes append value { \
                 offhand:"hc:class/recon/item/kit3/offhand", \
             }, \
             data_type:"recon_k3_data", \
-            recon_k3_data: {}, \
+            recon_k3_data:{}, \
         }, \
     ], \
     perks:[ \
@@ -731,7 +731,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.recon.perk1.name",fallback:"I Inhibitor"}, \
             on_equip_command:"say recon perk 1 equip command called", \
             data_type:"recon_p1_data", \
-            recon_p1_data: { \
+            recon_p1_data:{ \
                 glowing_max_duration_ticks:5, \
             }, \
         }, \
@@ -740,7 +740,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.recon.perk2.name",fallback:"II Assimilation"}, \
             on_equip_command:"say recon perk 2 equip command called", \
             data_type:"recon_p2_data", \
-            recon_p2_data: { \
+            recon_p2_data:{ \
                 on_glowing_enemy_hit_effects_info:{ \
                     suppression_ticks:0, \
                     effects:[\
@@ -754,7 +754,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.recon.perk3.name",fallback:"III Animal instinct"}, \
             on_equip_command:"say recon perk 3 equip command called", \
             data_type:"recon_p3_data", \
-            recon_p3_data: { \
+            recon_p3_data:{ \
                 enemy_trace_lifetime_ticks:10, \
             }, \
         }, \
@@ -826,7 +826,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.assault.perk1.name",fallback:"I Engineering"}, \
             on_equip_command:"say assault perk 1 equip command called", \
             data_type:"assault_p1_data", \
-            assault_p1_data: { \
+            assault_p1_data:{ \
                 trap_disabling_explosion_radius:6, \
             }, \
         }, \
@@ -835,7 +835,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.assault.perk2.name",fallback:"II Adaptable shell"}, \
             on_equip_command:"say assault perk 2 equip command called", \
             data_type:"assault_p2_data", \
-            assault_p2_data: { \
+            assault_p2_data:{ \
                 on_enemy_crowd_controlled:{ \
                     duration_ticks:40, \
                     attributes:[ \
@@ -849,7 +849,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.assault.perk3.name",fallback:"III Chase"}, \
             on_equip_command:"say assault perk 3 equip command called", \
             data_type:"assault_p3_data", \
-            assault_p3_data: { \
+            assault_p3_data:{ \
                 on_looking_at_enemy_effects_info:{ \
                     suppression_ticks:0, \
                     effects:[ \
