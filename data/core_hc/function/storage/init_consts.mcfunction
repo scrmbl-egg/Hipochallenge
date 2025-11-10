@@ -615,9 +615,7 @@ data modify storage hc:main consts.classes append value { \
             name:{translate:"hc.class.support.perk1.name",fallback:"I Overclock"}, \
             on_equip_command:"say support perk 1 equip command called", \
             data_type:"support_p1_data", \
-            support_p1_data:{ \
-                cooldown_multiplier:0.75, \
-            }, \
+            support_p1_data:{}, \
         }, \
         { \
             id:2, \

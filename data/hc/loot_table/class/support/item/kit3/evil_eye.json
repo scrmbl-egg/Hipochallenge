@@ -30,6 +30,30 @@
                                     "cooldown_group": "hc:support_k3_evil_eye"
                                 }
                             }
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:all_of",
+                                    "terms": [
+                                        {
+                                            "condition": "minecraft:reference",
+                                            "name": "hc:class/is_support"
+                                        },
+                                        {
+                                            "condition": "minecraft:reference",
+                                            "name": "hc:perk/is_perk1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "components": {
+                                "minecraft:use_cooldown": {
+                                    "seconds": 15,
+                                    "cooldown_group": "hc:support_k3_evil_eye"
+                                }
+                            }
                         }
                     ]
                 }

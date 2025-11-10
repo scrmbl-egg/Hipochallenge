@@ -124,10 +124,7 @@ type Perk = (
         id: 1,
         data_type: "support_p1_data",
         /// Support's perk 1 variant data.
-        support_p1_data: struct {
-            /// Value that will be multiplied by the items' consume cooldowns.
-            cooldown_multiplier: double @ 0.0..1.0
-        }
+        support_p1_data: struct {}
     } |
     struct SupportPerk2 {
         ...PerkBase,

@@ -29,6 +29,30 @@
                                     "cooldown_group": "hc:support_k2_slowness_trap"
                                 }
                             }
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:all_of",
+                                    "terms": [
+                                        {
+                                            "condition": "minecraft:reference",
+                                            "name": "hc:class/is_support"
+                                        },
+                                        {
+                                            "condition": "minecraft:reference",
+                                            "name": "hc:perk/is_perk1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "components": {
+                                "minecraft:use_cooldown": {
+                                    "seconds": 2.25,
+                                    "cooldown_group": "hc:support_k2_slowness_trap"
+                                }
+                            }
                         }
                     ]
                 }
