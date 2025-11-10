@@ -45,13 +45,11 @@ data modify storage hc:main consts.game set value { \
 }
 
 ## LIMITS
-
 data modify storage hc:main consts.limits set value { \
     no_gravity_projectiles_lifetime_ticks:200, \
 }
 
 ## TEAMS
-
 # neutral -> team_presets[0]
 data modify storage hc:main consts.team_presets append value { \
     internal_name:"neutral", \
@@ -149,7 +147,6 @@ data modify storage hc:main consts.team_presets append value { \
 }
 
 ## CLASSES
-
 # tank -> classes[0]
 data modify storage hc:main consts.classes append value { \
     internal_name:"tank", \
@@ -865,7 +862,6 @@ data modify storage hc:main consts.classes append value { \
 }
 
 ## LEVELS
-
 # callouts
 
 # TODO: add callout objects and lists
