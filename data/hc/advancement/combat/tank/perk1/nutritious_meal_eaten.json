@@ -1,0 +1,47 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:bread",
+            "count": 1
+        },
+        "title": {
+            "translate": "hc.advancement.combat.tank.perk1.nutritious_meal_eaten.title",
+            "fallback": "Where the fries at??"
+        },
+        "description": {
+            "translate": "hc.advancement.combat.tank.perk1.nutritious_meal_eaten.description",
+            "fallback": "Eat the %s",
+            "with": [
+                {
+                    "translate": "hc.items.tank.perk1.nutritious_meal",
+                    "fallback": "Nutritious Meal"
+                }
+            ]
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "hc:combat/tank/perk1/root",
+    "criteria": {
+        "eat_nutritious_meal": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "components": {
+                        "minecraft:custom_data": {
+                            "hc:item/id": "tank_p1_nutritious_meal"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "eat_nutritious_meal"
+        ]
+    ],
+    "rewards": {}
+}

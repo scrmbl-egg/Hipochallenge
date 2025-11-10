@@ -37,3 +37,9 @@ execute as @e[type=minecraft:allay,tag=hc.TankKit3Spirit] \
 
 # bubble shield
 # TODO: handle bubble shield tick
+
+## perk 1
+# nutritious meal
+execute as @a[scores={hc.TankPerk1NutritiousMealCooldown=0}] \
+    run \
+    function hc:ability/class/tank/perk1/give_nutritious_meal

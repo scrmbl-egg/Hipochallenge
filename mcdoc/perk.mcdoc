@@ -22,8 +22,8 @@ type Perk = (
         data_type: "tank_p1_data",
         /// Tank's perk 1 variant data.
         tank_p1_data: struct {
-            /// Food item related data.
-            food_item: struct {
+            /// Nutritious meal related data.
+            nutritious_meal: struct {
                 /// Amount of ticks the food item takes appear in the player's inventory.
                 give_delay_ticks: int @ 1..
             }

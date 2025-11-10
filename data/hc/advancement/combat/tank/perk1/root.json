@@ -6,11 +6,11 @@
         },
         "title": {
             "translate": "hc.advancement.combat.tank.perk1.root.title",
-            "fallback": "Where the fries at??"
+            "fallback": "Nutrition"
         },
         "description": {
             "translate": "hc.advancement.combat.tank.perk1.root.description",
-            "fallback": "Eat the Nutritious Meal"
+            "fallback": "Select the Nutrition perk"
         },
         "frame": "goal",
         "show_toast": false,

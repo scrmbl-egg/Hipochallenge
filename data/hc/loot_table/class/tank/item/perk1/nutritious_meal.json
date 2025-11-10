@@ -1,0 +1,53 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:bread",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.items.tank.perk1.nutritious_meal",
+                                    "fallback": "Nutritious Meal"
+                                },
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "tank_p1_nutritious_meal"
+                                },
+                                "minecraft:consumable": {
+                                    "animation": "eat",
+                                    "consume_seconds": 8,
+                                    "has_consume_particles": true,
+                                    "on_consume_effects": [
+                                        {
+                                            "type": "minecraft:apply_effects",
+                                            "effects": [
+                                                {
+                                                    "id": "minecraft:regeneration",
+                                                    "ambient": false,
+                                                    "amplifier": 3,
+                                                    "duration": 60,
+                                                    "show_icon": true,
+                                                    "show_particles": true
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "minecraft:food": {
+                                    "nutrition": 0,
+                                    "saturation": 0,
+                                    "can_always_eat": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
