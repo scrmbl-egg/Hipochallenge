@@ -269,16 +269,16 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.tank.perk1.name",fallback:"I Nutrition"}, \
-            equip_command:"say tank perk 1 equip command called", \
+            on_equip_command:"say tank perk 1 equip command called", \
             data_type:"tank_p1_data", \
             tank_p1_data:{ \
-                food_item:{give_delay_ticks:1200}, \
+                nutritious_meal:{give_delay_ticks:1200}, \
             }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.tank.perk2.name",fallback:"II Profound scars"}, \
-            equip_command:"say tank perk 2 equip command called", \
+            on_equip_command:"say tank perk 2 equip command called", \
             data_type:"tank_p2_data", \
             tank_p2_data: { \
                 attack:{ \
@@ -294,7 +294,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.tank.perk3.name",fallback:"III Inspiration"}, \
-            equip_command:"say tank perk 3 equip command called", \
+            on_equip_command:"say tank perk 3 equip command called", \
             data_type:"tank_p3_data", \
             tank_p3_data: { \
                 close_ally_buff:{ \
@@ -394,7 +394,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.marksman.perk1.name",fallback:"I Bullseye"}, \
-            equip_command:"say marksman perk 1 equip command called", \
+            on_equip_command:"say marksman perk 1 equip command called", \
             data_type:"marksman_p1_data", \
             marksman_p1_data: { \
                 suppression_or_on_air_magic_damage:2, \
@@ -403,7 +403,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.marksman.perk2.name",fallback:"II Lifesaver"}, \
-            equip_command:"say marksman perk 2 equip command called", \
+            on_equip_command:"say marksman perk 2 equip command called", \
             data_type:"marksman_p2_data", \
             marksman_p2_data:{ \
                 health_threshold:8, \
@@ -418,7 +418,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.marksman.perk3.name",fallback:"III Big pockets"}, \
-            equip_command:"say marksman perk 3 equip command called", \
+            on_equip_command:"say marksman perk 3 equip command called", \
             data_type:"marksman_p3_data", \
             marksman_p3_data:{ \
                 added_projectiles:3, \
@@ -520,7 +520,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.assassin.perk1.name",fallback:"I Contract"}, \
-            equip_command:"say assassin perk 1 equip command called", \
+            on_equip_command:"say assassin perk 1 equip command called", \
             data_type:"assassin_p1_data", \
             assassin_p1_data:{ \
                 contract_success_effects_info:{ \
@@ -535,7 +535,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.assassin.perk2.name",fallback:"II Harvesting"}, \
-            equip_command:"say assassin perk 2 equip command called", \
+            on_equip_command:"say assassin perk 2 equip command called", \
             data_type:"assassin_p2_data", \
             assassin_p2_data:{ \
                 enemy_true_health_threshold:3, \
@@ -544,7 +544,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.assassin.perk3.name",fallback:"III Acidity"}, \
-            equip_command:"say assassin perk 3 equip command called", \
+            on_equip_command:"say assassin perk 3 equip command called", \
             data_type:"assassin_p3_data", \
             assassin_p3_data:{ \
                 on_hit_by_owner_armor_toughness:0, \
@@ -616,7 +616,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.support.perk1.name",fallback:"I Overclock"}, \
-            equip_command:"say support perk 1 equip command called", \
+            on_equip_command:"say support perk 1 equip command called", \
             data_type:"support_p1_data", \
             support_p1_data: { \
                 cooldown_multiplier:0.75, \
@@ -625,7 +625,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.support.perk2.name",fallback:"II Personal space"}, \
-            equip_command:"say support perk 2 equip command called", \
+            on_equip_command:"say support perk 2 equip command called", \
             data_type:"support_p2_data", \
             support_p2_data: { \
                 on_hit_explosion:{ \
@@ -644,7 +644,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.support.perk3.name",fallback:"III Supercharge"}, \
-            equip_command:"say support perk 3 equip command called", \
+            on_equip_command:"say support perk 3 equip command called", \
             data_type:"support_p3_data", \
             support_p3_data: { \
                 extra_area_ability_radius:2, \
@@ -732,7 +732,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.recon.perk1.name",fallback:"I Inhibitor"}, \
-            equip_command:"say recon perk 1 equip command called", \
+            on_equip_command:"say recon perk 1 equip command called", \
             data_type:"recon_p1_data", \
             recon_p1_data: { \
                 glowing_max_duration_ticks:5, \
@@ -741,7 +741,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.recon.perk2.name",fallback:"II Assimilation"}, \
-            equip_command:"say recon perk 2 equip command called", \
+            on_equip_command:"say recon perk 2 equip command called", \
             data_type:"recon_p2_data", \
             recon_p2_data: { \
                 on_glowing_enemy_hit_effects_info:{ \
@@ -755,7 +755,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.recon.perk3.name",fallback:"III Animal instinct"}, \
-            equip_command:"say recon perk 3 equip command called", \
+            on_equip_command:"say recon perk 3 equip command called", \
             data_type:"recon_p3_data", \
             recon_p3_data: { \
                 enemy_trace_lifetime_ticks:10, \
@@ -827,7 +827,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.assault.perk1.name",fallback:"I Engineering"}, \
-            equip_command:"say assault perk 1 equip command called", \
+            on_equip_command:"say assault perk 1 equip command called", \
             data_type:"assault_p1_data", \
             assault_p1_data: { \
                 trap_disabling_explosion_radius:6, \
@@ -836,7 +836,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:2, \
             name:{translate:"hc.class.assault.perk2.name",fallback:"II Adaptable shell"}, \
-            equip_command:"say assault perk 2 equip command called", \
+            on_equip_command:"say assault perk 2 equip command called", \
             data_type:"assault_p2_data", \
             assault_p2_data: { \
                 on_enemy_crowd_controlled:{ \
@@ -850,7 +850,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.assault.perk3.name",fallback:"III Chase"}, \
-            equip_command:"say assault perk 3 equip command called", \
+            on_equip_command:"say assault perk 3 equip command called", \
             data_type:"assault_p3_data", \
             assault_p3_data: { \
                 on_looking_at_enemy_effects_info:{ \

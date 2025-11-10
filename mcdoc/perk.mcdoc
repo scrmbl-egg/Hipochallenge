@@ -9,7 +9,7 @@ struct PerkBase {
     /// Translated text for the perk name.
     name: TranslatedText,
     /// Command for equipping the perk.
-    equip_command: #[command(max_length=32500)] string,
+    on_equip_command: #[command(max_length=32500)] string,
     /// Type of data this perk holds. This is used to identify the union variant of the perk data.
     data_type: string,
 }
