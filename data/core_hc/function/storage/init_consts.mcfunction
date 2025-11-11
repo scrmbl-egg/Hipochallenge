@@ -36,7 +36,7 @@ data modify storage hc:main consts.game set value { \
         { \
             internal_name:"competitive", \
             id:1, \
-            name:{translate:"hc.gamemode.casual",fallback:"Competitive"}, \
+            name:{translate:"hc.gamemode.competitive",fallback:"Competitive"}, \
             necessary_wins:5, \
             minimum_win_lead_for_victory:2, \
             round_duration_ticks:2400, \
