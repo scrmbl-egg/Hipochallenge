@@ -415,7 +415,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:3, \
             name:{translate:"hc.class.marksman.perk3.name",fallback:"III Big pockets"}, \
-            on_equip_command:"say marksman perk 3 equip command called", \
+            on_equip_command:"function std:empty", \
             data_type:"marksman_p3_data", \
             marksman_p3_data:{ \
                 added_projectiles:3, \
