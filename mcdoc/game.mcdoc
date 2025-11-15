@@ -5,8 +5,8 @@ use ::Hipochallenge::mcdoc::level::LevelId
 struct GameContext {
     /// Current game state.
     current_state: GameState,
-    /// Current game mode index from the game modes array.
-    current_game_mode_id: GameModeId,
+    /// Current game mode structure.
+    current_game_mode: GameMode,
     /// Amount of players playing the game, doesn't count spectators.
     users_playing: int @ 0..,
     /// Current round number.
@@ -65,35 +65,6 @@ enum(string) GameState {
     EndingRound = "ending_round",
     /// State where the players have finished the match and a winner is announced.
     EndingMatch = "ending_match"
-}
-
-struct AvailableGameStates {
-    /// State where the players are not playing.
-    not_playing: GameState,
-    /// State where a match is requested and is waiting for players.
-    waiting_for_players: GameState,
-    /// State where all players have joined and are selecting their team.
-    selecting_team: GameState,
-    /// State where the teams are decided, and a random player of the team decides the name.
-    naming_team: GameState,
-    /// State where the players decide on a color for the team.
-    selecting_team_color: GameState,
-    /// State where the players select their class for the game.
-    selecting_class: GameState,
-    /// State where the players select/ban/decide on a level for the game.
-    selecting_level: GameState,
-    /// State where the players are shown the level they are going to play.
-    level_intro: GameState,
-    /// State where the players select the kit for the next round.
-    selecting_kit: GameState,
-    /// State where the players wait for the round to start.
-    starting_round: GameState,
-    /// State where the players are playing the round.
-    playing: GameState,
-    /// State where the players have finished the round.
-    ending_round: GameState,
-    /// State where the players have finished the match and a winner is announced.
-    ending_match: GameState
 }
 
 enum(string) GameModeName {
