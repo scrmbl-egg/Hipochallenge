@@ -40,6 +40,11 @@ function core_hc:music/mute_vanilla
 # game state handling
 # TODO: when classes are done, implement game state updates and logic
 
+# round_status
+execute if function core_hc:round_status/does_exist \
+    run \
+    function core_hc:round_status/tick
+
 # deaths
 execute as @a[scores={hc.IsDead=1..}] \
     at @s \
