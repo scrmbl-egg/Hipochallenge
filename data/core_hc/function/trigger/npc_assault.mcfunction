@@ -36,8 +36,8 @@ execute at @s \
             translate:"hc.class.name_with_icon", \
             fallback:"%2$s %1$s", \
             with:[ \
-                {translate:"hc.class.assault.name"}, \
-                {translate:"hc.class.assault.icon"}, \
+                {translate:"hc.class.assault.name",fallback:"Assault"}, \
+                {translate:"hc.class.assault.icon",fallback:"\u2605"}, \
             ], \
             color:"white", \
         }, \
