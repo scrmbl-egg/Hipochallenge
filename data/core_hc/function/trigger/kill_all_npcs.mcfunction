@@ -20,5 +20,5 @@ $execute at @s \
     function std:entity/kill_self_and_passengers
 
 # reset and re-enable
-scoreboard players reset @a kill_nearby_npc
-scoreboard players enable @a kill_nearby_npc
+scoreboard players reset @a kill_all_npcs
+scoreboard players enable @a kill_all_npcs
