@@ -2,7 +2,6 @@ use ::Hipochallenge::mcdoc::team::TeamPreset
 use ::Hipochallenge::mcdoc::team::TeamContext
 use ::Hipochallenge::mcdoc::class::Class
 use ::Hipochallenge::mcdoc::game::GameMode
-use ::Hipochallenge::mcdoc::game::AvailableGameStates
 use ::Hipochallenge::mcdoc::game::GameContext
 use ::Hipochallenge::mcdoc::level::Level
 
