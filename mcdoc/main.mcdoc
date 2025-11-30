@@ -5,7 +5,9 @@ use ::Hipochallenge::mcdoc::game::GameMode
 use ::Hipochallenge::mcdoc::game::GameContext
 use ::Hipochallenge::mcdoc::level::Level
 
-dispatch minecraft:storage[hc:main] to struct MainStorage {
+dispatch minecraft:storage[hc:main] to MainStorage
+
+struct MainStorage {
     /// Global constants of the datapack.
     consts: struct MainConsts {
         /// Version of the map.
