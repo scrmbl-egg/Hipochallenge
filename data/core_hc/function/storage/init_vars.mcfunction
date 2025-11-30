@@ -16,11 +16,16 @@ function hc:msg/debug/send_info { \
     text:"\"Initialising datapack global variables...\"", \
 }
 
+# reload_count is the only variable that must be kept, save temporarily
+data modify storage hc:temp init_vars.reload_count \
+    set from storage hc:main vars.reload_count
+
 # reset
 data remove storage hc:main vars
 
 ## RELOAD COUNT
-data modify storage hc:main vars.reload_count set value 0
+data modify storage hc:main vars.reload_count \
+    set from storage hc:temp init_vars.reload_count
 
 ## GAME CONTEXTS
 data modify storage hc:main vars.game_context set value { \
@@ -76,6 +81,9 @@ data modify storage hc:main vars.team_contexts set value { \
         player_profiles:[], \
     }, \
 }
+
+# free memory
+data remove storage hc:temp init_vars
 
 ## __KEEP AT BOTTOM OF FILE__
 # return 1 for success
