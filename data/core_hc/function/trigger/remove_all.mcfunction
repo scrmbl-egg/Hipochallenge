@@ -22,12 +22,12 @@ scoreboard objectives remove leave
 ## TRAINING TOOLS
 scoreboard objectives remove warp_plaza
 scoreboard objectives remove training_gui
-scoreboard objectives remove ctank
-scoreboard objectives remove cmarksman
-scoreboard objectives remove cassassin
-scoreboard objectives remove csupport
-scoreboard objectives remove crecon
-scoreboard objectives remove cassault
+scoreboard objectives remove tank
+scoreboard objectives remove marksman
+scoreboard objectives remove assassin
+scoreboard objectives remove support
+scoreboard objectives remove recon
+scoreboard objectives remove assault
 scoreboard objectives remove k1
 scoreboard objectives remove k2
 scoreboard objectives remove k3
@@ -68,12 +68,12 @@ scoreboard objectives remove vote_timeout
 #
 #scoreboard objectives remove vote_surrender
 #scoreboard objectives remove vote_timeout
-#scoreboard objectives remove kt_1
-#scoreboard objectives remove kt_2
-#scoreboard objectives remove kt_3
-#scoreboard objectives remove pk_1
-#scoreboard objectives remove pk_2
-#scoreboard objectives remove pk_3
+#scoreboard objectives remove k1
+#scoreboard objectives remove k2
+#scoreboard objectives remove k3
+#scoreboard objectives remove p1
+#scoreboard objectives remove p2
+#scoreboard objectives remove p3
 
 ## IN-GAME (spectators)
 scoreboard objectives remove stop_spectating

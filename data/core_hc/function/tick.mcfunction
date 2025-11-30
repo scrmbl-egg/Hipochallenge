@@ -52,7 +52,9 @@ execute as @a[scores={hc.IsDead=1..}] \
     function core_hc:death/tick
 
 # triggers
-function core_hc:trigger/tick
+execute as @a \
+    run \
+    function #core_hc:trigger/tick
 
 # fx
 function #core_hc:fx/tick
