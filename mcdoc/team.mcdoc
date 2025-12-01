@@ -32,7 +32,7 @@ struct TeamContext {
         ...TextBase,
         text: string @ 1..16
     },
-    /// ID of the team presets array.
+    /// Team preset.
     preset: TeamPreset,
     /// List of player profiles in the team.
     player_profiles: [Profile] @ 0..3,
