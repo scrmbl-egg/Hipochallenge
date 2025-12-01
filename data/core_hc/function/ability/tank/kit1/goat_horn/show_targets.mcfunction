@@ -7,7 +7,6 @@ data modify storage hc:temp tank_k1_horn_targetting set value { \
     owner_uuid:[I; 0, 0, 0, 0], \
     team:"", \
     radius:0, \
-    player_limit:0, \
 }
 
 # get uuid
@@ -25,10 +24,6 @@ data modify storage hc:temp tank_k1_horn_targetting.radius \
     set from storage hc:main \
     consts.classes[{internal_name:"tank"}].\
     kits[{id:2}].tank_k1_data.horn.radius
-
-# get player limit
-data modify storage hc:temp tank_k1_horn_targetting.radius \
-    set from storage hc:main consts.game.team_size
 
 # call display target particles func
 function core_hc:ability/tank/kit1/goat_horn/display_target_particles \

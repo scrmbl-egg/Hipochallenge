@@ -33,6 +33,8 @@ struct GameMode {
     round_duration_ticks: #[divisible_by=20] int @ 20..,
     /// Amount of rounds/points that must be won by default to win a game.
     necessary_wins: int @ 1..,
+    /// Size of the two teams in this game mode.
+    team_size: int @ 1..6,
     /// Minimum amount of rounds/points that the winning team must lead with to win the game.
     minimum_win_lead_for_victory: int @ 1..,
 }

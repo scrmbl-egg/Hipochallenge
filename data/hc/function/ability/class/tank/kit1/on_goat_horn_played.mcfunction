@@ -31,7 +31,6 @@ clear @s *[custom_data={"hc:item/id":"tank_k1_goat_horn"}] 1
 data modify storage hc:temp tank_k1_goat_horn set value { \
     team:"", \
     radius:0, \
-    player_limit:0, \
 }
 
 # get team
@@ -49,11 +48,6 @@ data modify storage hc:temp tank_k1_goat_horn.radius \
     set from storage hc:main \
     consts.classes[{internal_name:"tank"}].\
     kits[{id:1}].tank_k1_data.horn.radius
-
-# get player limit
-data modify storage hc:temp tank_k1_goat_horn.player_limit \
-    set from storage hc:main \
-    consts.game.team_size
 
 # give all effect info effects
 function core_hc:ability/tank/kit1/goat_horn/give_effects \
