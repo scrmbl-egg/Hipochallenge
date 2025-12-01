@@ -21,8 +21,7 @@ data modify storage hc:main consts.map_version set value "Pre-Alpha"
 
 ## GAME CONSTANTS
 data modify storage hc:main consts.game set value { \
-    necessary_players_for_game:6, \
-    match_request_duration_ticks:1200, \
+    match_request_duration_seconds:60, \
     modes:[ \
         { \
             internal_name:"casual", \
@@ -31,7 +30,7 @@ data modify storage hc:main consts.game set value { \
             necessary_wins:5, \
             team_size:3, \
             minimum_win_lead_for_victory:1, \
-            round_duration_ticks:2400, \
+            round_duration_seconds:120, \
         }, \
         { \
             internal_name:"competitive", \
@@ -40,7 +39,7 @@ data modify storage hc:main consts.game set value { \
             necessary_wins:5, \
             team_size:3, \
             minimum_win_lead_for_victory:2, \
-            round_duration_ticks:2400, \
+            round_duration_seconds:120, \
         }, \
     ], \
 }

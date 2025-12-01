@@ -4,15 +4,15 @@ use ::Hipochallenge::mcdoc::level::LevelId
 /// Game context/global variables struct.
 struct GameContext {
     /// Current game state.
-    current_state: GameState,
-    /// Current game mode structure.
-    current_game_mode: GameMode,
+    state: GameState,
+    /// Current game mode data.
+    mode: GameMode,
     /// Amount of players playing the game, doesn't count spectators.
     users_playing: int @ 0..,
     /// Current round number.
-    current_round: int @ 1..,
+    round: int @ 1..,
     /// ID of the current level being played.
-    current_level_id: LevelId,
+    level_id: LevelId,
     /// Amount of points/rounds won by Team 1.
     team1_wins: int @ 0..,
     /// Amount of points/rounds won by Team 2.
@@ -29,8 +29,8 @@ struct GameMode {
     id: GameModeId,
     /// Translated text for the game mode name.
     name: TranslatedText,
-    /// Duration of a game round in ticks.
-    round_duration_ticks: #[divisible_by=20] int @ 20..,
+    /// Duration of a game round in seconds.
+    round_duration_seconds: int @ 60..,
     /// Amount of rounds/points that must be won by default to win a game.
     necessary_wins: int @ 1..,
     /// Size of the two teams in this game mode.
@@ -80,4 +80,3 @@ enum(int) GameModeId {
     Competitive = 1,
     DeathMatch = 2
 }
-

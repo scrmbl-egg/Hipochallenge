@@ -1,34 +1,29 @@
 #>core_hc:round_status/init
 #
 # Initialises the game's round status bossbar.
-#
-# @input
-#   round_duration_ticks: #[divisible_by=20] int @ 20..
-#       Duration of a game round in ticks.
 
 # reset
-bossbar remove hc:round_status
+function core_hc:round_status/remove
 
 ## timer scoreboard setup
 # create time scoreboard holder
-scoreboard objectives add __hc.RoundTimer dummy
+scoreboard objectives add __hc.RoundStatusTimer dummy
 
-# tps
-scoreboard players set __$hc_ticks_per_sec __hc.RoundTimer 20
+# set tps
+scoreboard players set __$hc_tps __hc.RoundStatusTimer 20
 
 # get duration ticks from game mode data
-execute store result score __$hc_ticks __hc.RoundTimer \
+execute store result score __$hc_ticks __hc.RoundStatusTimer \
     run \
     data get storage hc:main \
-    vars.game_context.current_game_mode.round_duration_ticks
+    vars.game_context.mode.round_duration_seconds 20
 
 # get seconds (+1 to compensate int division decimal remainder)
-execute store result score __$hc_secs __hc.RoundTimer \
-    run \
-    scoreboard players get __$hc_ticks __hc.RoundTimer
 scoreboard players operation \
-    __$hc_secs __hc.RoundTimer /= __$hc_ticks_per_sec __hc.RoundTimer
-scoreboard players add __$hc_secs __hc.RoundTimer 1
+    __$hc_secs __hc.RoundStatusTimer = __$hc_ticks __hc.RoundStatusTimer
+scoreboard players operation \
+    __$hc_secs __hc.RoundStatusTimer /= __$hc_tps __hc.RoundStatusTimer
+scoreboard players add __$hc_secs __hc.RoundStatusTimer 1
 
 ## create bossbar
 bossbar add hc:round_status ""
@@ -39,9 +34,11 @@ bossbar set hc:round_status visible true
 bossbar set hc:round_status name { \
     translate:"hc.bossbar.round_status.name", \
     fallback:"\u231b %1$s | %2$s - %3$s", \
+    shadow_color:[0.0f, 0f, 0f, 1f], \
     with:[ \
         { \
-            score:{name:"__$hc_secs",objective:"__hc.RoundTimer"}, \
+            score:{name:"__$hc_secs",objective:"__hc.RoundStatusTimer"}, \
+            bold:true, \
         }, \
         {storage:"hc:main",nbt:"vars.game_context.team1_wins"}, \
         {storage:"hc:main",nbt:"vars.game_context.team2_wins"}, \
@@ -50,16 +47,9 @@ bossbar set hc:round_status name { \
 execute store result bossbar hc:round_status max \
     run \
     data get storage hc:main \
-    vars.game_context.current_game_mode.round_duration_ticks
-execute store result bossbar hc:round_status max \
-    run \
-    data get storage hc:main \
-    vars.game_context.current_game_mode.round_duration_ticks
+    vars.game_context.mode.round_duration_seconds
 
 # set value
-
-
-
-
-# free memory
-data remove storage hc:temp round_status_init
+execute store result bossbar hc:round_status value \
+    run \
+    scoreboard players get __$hc_secs __hc.RoundStatusTimer

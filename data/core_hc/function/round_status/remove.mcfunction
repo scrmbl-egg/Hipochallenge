@@ -3,7 +3,7 @@
 # Removes the round status bossbar.
 
 # remove scoreboard
-scoreboard objectives remove __hc.RoundTimer
+scoreboard objectives remove __hc.RoundStatusTimer
 
 # remove bossbar
 bossbar remove hc:round_status

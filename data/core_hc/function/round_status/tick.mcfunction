@@ -3,45 +3,48 @@
 # Ticks the round status bossbar, decreasing remaining time and updating text.
 
 # remove 1 from timer
-scoreboard players remove __$hc_ticks __hc.RoundTimer 1
+scoreboard players remove __$hc_ticks __hc.RoundStatusTimer 1
 
 # convert to seconds (+1 to compensate int division decimal remainder)
 scoreboard players operation \
-    __$hc_secs __hc.RoundTimer = __$hc_ticks __hc.RoundTimer
+    __$hc_secs __hc.RoundStatusTimer = __$hc_ticks __hc.RoundStatusTimer
 scoreboard players operation \
-    __$hc_secs __hc.RoundTimer /= __$hc_ticks_per_sec __hc.RoundTimer
-scoreboard players add __$hc_secs __hc.RoundTimer 1
+    __$hc_secs __hc.RoundStatusTimer /= __$hc_tps __hc.RoundStatusTimer
+scoreboard players add __$hc_secs __hc.RoundStatusTimer 1
 
 # update name
 bossbar set hc:round_status name { \
     translate:"hc.bossbar.round_status.name", \
-    fallback:"%1$s \u231b | %2$s - %3$s", \
+    fallback:"\u231b %1$s | %2$s - %3$s", \
+    shadow_color:[0.0f, 0f, 0f, 1f], \
     with:[ \
         { \
-            score:{name:"__$hc_secs",objective:"__hc.RoundTimer"}, \
+            score:{name:"__$hc_secs",objective:"__hc.RoundStatusTimer"}, \
+            bold:true, \
         }, \
         {storage:"hc:main",nbt:"vars.game_context.team1_wins"}, \
         {storage:"hc:main",nbt:"vars.game_context.team2_wins"}, \
     ], \
 }
 
-# set bossbar value
-data modify storage hc:temp round_status_tick.set_value set value { \
-    bossbar:"hc:round_status", \
-    value:0, \
-}
-execute store result storage hc:temp round_status_tick.set_value.value \
-    int 1 \
+## set colors
+## TODO: discuss if hardcoded values should be used for changing colors
+
+# yellow if 60 seconds left
+execute if score __$hc_secs __hc.RoundStatusTimer matches 60 \
     run \
-    scoreboard players get __$hc_ticks __hc.RoundTimer
+    bossbar set hc:round_status color yellow
+# red if 10 seconds left
+execute if score __$hc_secs __hc.RoundStatusTimer matches 10 \
+    run \
+    bossbar set hc:round_status color red
 
-function core_hc:util/bossbar/set_value \
-    with storage hc:temp round_status_tick.set_value
+## set bossbar value
+execute store result bossbar hc:round_status value \
+    run \
+    scoreboard players get __$hc_secs __hc.RoundStatusTimer
 
-# remove bossbar when timer ends
-execute if score __$hc_ticks __hc.RoundTimer matches ..0 \
+## remove bossbar when timer ends
+execute if score __$hc_ticks __hc.RoundStatusTimer matches ..0 \
     run \
     function core_hc:round_status/remove
-
-# free memory
-data remove storage hc:temp round_status_tick

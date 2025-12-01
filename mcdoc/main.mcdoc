@@ -14,10 +14,8 @@ struct MainStorage {
         map_version: string,
         /// Game related constants.
         game: struct GameConstants {
-            /// Players necessary for starting a game.
-            necessary_players_for_game: int @ 1..,
             /// Duration of the match request notification.
-            match_request_duration_ticks: int @ 1..,
+            match_request_duration_seconds: int @ 1..,
             /// Available game modes.
             modes: [GameMode],
         },

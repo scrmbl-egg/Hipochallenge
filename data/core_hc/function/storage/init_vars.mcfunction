@@ -29,19 +29,20 @@ data modify storage hc:main vars.reload_count \
 
 ## GAME CONTEXTS
 data modify storage hc:main vars.game_context set value { \
-    current_state:"not_playing", \
-    current_game_mode:{ \
+    state:"not_playing", \
+    mode:{ \
         internal_name:"casual", \
         id:0, \
         name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
         necessary_wins:5, \
+        team_size:3, \
         minimum_win_lead_for_victory:1, \
-        round_duration_ticks:2400, \
+        round_duration_seconds:120, \
     }, \
-    current_level_id:0b, \
+    level_id:0b, \
     banned_level_ids:[], \
     users_playing:0, \
-    current_round:1, \
+    round:1, \
     team1_wins:0, \
     team2_wins:0, \
 }
