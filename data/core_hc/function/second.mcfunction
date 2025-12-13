@@ -7,10 +7,3 @@ schedule function core_hc:second 1s
 
 # give infinite hunger
 effect give @a minecraft:saturation infinite 0 true
-
-# vfx
-    # FIXME: this should be moved to a levels/tick function
-    # maps
-        # map0
-            # pipes
-                #function hc:vfx/maps/map0/pipe_sounds
