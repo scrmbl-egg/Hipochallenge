@@ -6,7 +6,7 @@
 execute as @a[scores={hc.HasLeft=1..}] \
     at @s \
     run \
-    function core_hc:util/login
+    function core_hc:util/on_login
 execute as @a[scores={hc.HasLeft=1..}] \
     run \
     scoreboard players set @s hc.HasLeft 0

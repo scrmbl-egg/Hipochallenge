@@ -1,4 +1,4 @@
-#>core_hc:util/login
+#>core_hc:util/on_login
 #
 # Executes the functions for a player who just returned to the game.
 #
@@ -11,7 +11,7 @@
 #team join hc.NotPlaying
 
 # play fx
-function core_hc:fx/util/login
+function core_hc:fx/util/on_login
 
 # display message
 function hc:msg/private/send { \
@@ -45,7 +45,7 @@ function hc:msg/private/send { \
                                     ], \
                                     color:"gold", \
                                 }, \
-                            ] \
+                            ], \
                         }, \
                         click_event:{ \
                             action:"suggest_command", \

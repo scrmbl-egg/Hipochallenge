@@ -1,4 +1,4 @@
-#>core_hc:fx/util/login
+#>core_hc:fx/util/on_login
 #
 # Runs the titles and sound effects for when a player joins the game.
 #
