@@ -36,7 +36,7 @@ data modify storage hc:main vars.game_context set value { \
         name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
         necessary_wins:5, \
         team_size:3, \
-        minimum_win_lead_for_victory:1, \
+        min_win_lead_for_victory:1, \
         round_duration_seconds:120, \
     }, \
     level_id:0b, \

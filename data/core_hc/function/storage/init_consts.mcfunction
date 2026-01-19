@@ -29,7 +29,7 @@ data modify storage hc:main consts.game set value { \
             name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
             necessary_wins:5, \
             team_size:3, \
-            minimum_win_lead_for_victory:1, \
+            min_win_lead_for_victory:1, \
             round_duration_seconds:120, \
         }, \
         { \
@@ -38,7 +38,7 @@ data modify storage hc:main consts.game set value { \
             name:{translate:"hc.gamemode.competitive",fallback:"Competitive"}, \
             necessary_wins:5, \
             team_size:3, \
-            minimum_win_lead_for_victory:2, \
+            min_win_lead_for_victory:2, \
             round_duration_seconds:120, \
         }, \
     ], \
