@@ -5,9 +5,6 @@
 # @returns
 #   Result: 1 if all teams are initialised
 
-# TODO: put distinctive prefix to prevent collisions
-# IDEAS: "hc.", "__hc_"
-
 function hc:msg/debug/send_info {text:"\"Initialising teams...\""}
 
 ## PLAYER TEAMS
