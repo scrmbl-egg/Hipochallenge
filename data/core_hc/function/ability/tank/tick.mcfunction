@@ -43,3 +43,47 @@ execute as @e[type=minecraft:allay,tag=hc.TankKit3Spirit] \
 execute as @a[scores={hc.TankPerk1NutritiousMealCooldown=0}] \
     run \
     function hc:ability/class/tank/perk1/give_nutritious_meal
+
+## perk 2
+#function core_hc:ability/tank/perk2/on_damaged_by_tank_perk2
+
+
+
+# HACK: this next tag is used for the advancement detection (see
+# core_hc:class/tank/perk2/damaged_by_tank_perk2) because the
+# `minecraft:entity_hurt_player` trigger doesn't allow to check a list of
+# predicates of the damaging entity, and thus, only allows for nbt checking,
+# which means only tags are accessible, unlike in the
+# `minecraft:player_hurt_entity` trigger, which allows the entity to be checked
+# with a list of predicates.
+#
+# https://img.bgstatic.com/multiLang/web/605120c4719cc92a226e9ac6f3049631.jpg
+#
+# Thanks minecraft! :'''D
+#
+# - scrmbl-egg
+
+# give or remove secret tag for tank and perk 2. the performance of these is
+# garbage (in theory)
+#execute as @e[ \
+    tag=!__hc.IsTankPerk2, \
+    predicate=hc:class/is_tank, \
+    predicate=hc:perk/is_perk2 \
+] \
+    run \
+    tag @s add __hc.IsTankPerk2
+#execute as @e[ \
+    type=#hc:player_like, \
+    tag=__hc.IsTankPerk2 \
+] \
+    unless predicate { \
+        condition:"minecraft:all_of", \
+        terms:[ \
+            {condition:"minecraft:reference",name:"hc:class/is_tank"}, \
+            {condition:"minecraft:reference",name:"hc:perk/is_perk2"}, \
+        ], \
+    } \
+    run \
+    tag @s remove __hc.IsTankPerk2
+
+## perk 3

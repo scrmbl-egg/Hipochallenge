@@ -45,6 +45,12 @@ execute if function core_hc:round_status/does_exist \
     run \
     function core_hc:round_status/tick
 
+# damage
+#execute as @a[predicate=hc:was_just_damaged] \
+    at @s \
+    run \
+    function core_hc:damage/tick
+
 # deaths
 execute as @a[scores={hc.IsDead=1..}] \
     at @s \
