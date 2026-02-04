@@ -77,7 +77,7 @@ struct Class {
         feet: (#[id="loot_table"] string | ::java::data::loot::LootTable),
     },
     /// List of class kits.
-    kits: [::Hipochallenge::mcdoc::kit::Kit] @ 3,
+    kits: [super::kit::Kit] @ 3,
     /// List of class perks.
-    perks: [::Hipochallenge::mcdoc::perk::Perk] @ 3
+    perks: [super::perk::Perk] @ 3
 }

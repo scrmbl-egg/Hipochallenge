@@ -1,6 +1,6 @@
 use ::java::util::text::TranslatedText
-use ::Hipochallenge::mcdoc::effect::AbilityEffects
-use ::Hipochallenge::mcdoc::attribute::AttributeModifierCommmandParameters as AttributeModifier
+use super::effect::AbilityEffects
+use super::attribute::AttributeModifierCommmandParameters as AttributeModifier
 
 /// Base struct for perks.
 struct PerkBase {

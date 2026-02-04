@@ -1,9 +1,9 @@
-use ::Hipochallenge::mcdoc::team::TeamPreset
-use ::Hipochallenge::mcdoc::team::TeamContext
-use ::Hipochallenge::mcdoc::class::Class
-use ::Hipochallenge::mcdoc::game::GameMode
-use ::Hipochallenge::mcdoc::game::GameContext
-use ::Hipochallenge::mcdoc::level::Level
+use super::team::TeamPreset
+use super::team::TeamContext
+use super::class::Class
+use super::game::GameMode
+use super::game::GameContext
+use super::level::Level
 
 dispatch minecraft:storage[hc:main] to MainStorage
 

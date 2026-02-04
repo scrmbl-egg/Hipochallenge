@@ -1,5 +1,5 @@
 use ::java::util::text::TranslatedText
-use ::Hipochallenge::mcdoc::level::LevelId
+use super::level::LevelId
 
 /// Game context/global variables struct.
 struct GameContext {
