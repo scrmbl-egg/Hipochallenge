@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "tank_k3_portal"
+                            "hc:item/id": "recon_k3_portal"
                         }
                     }
                 }
