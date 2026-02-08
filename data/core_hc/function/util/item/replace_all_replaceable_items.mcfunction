@@ -216,5 +216,27 @@ execute if data entity @s \
     function core_hc:util/item/replace \
     with storage hc:temp replace_items.func_args
 
+# offhand
+execute if data entity @s \
+    equipment.offhand.components.\
+    "minecraft:custom_data"."hc:item/replace_with" \
+    run \
+    data modify storage hc:temp replace_items.func_args.slot \
+    set value "weapon.offhand"
+execute if data entity @s \
+    equipment.offhand.components.\
+    "minecraft:custom_data"."hc:item/replace_with" \
+    run \
+    data modify storage hc:temp replace_items.func_args.loot_table \
+    set from entity @s \
+    equipment.offhand.components.\
+    "minecraft:custom_data"."hc:item/replace_with"
+execute if data entity @s \
+    equipment.offhand.components.\
+    "minecraft:custom_data"."hc:item/replace_with" \
+    run \
+    function core_hc:util/item/replace \
+    with storage hc:temp replace_items.func_args
+
 # free memory
 data remove storage hc:temp replace_items
