@@ -66,5 +66,10 @@ function std:command/run \
 # show fx
 function core_hc:fx/equipment/equip_items
 
+## GIVE TRAINING TOOLS IF PLAYERS ARE IN hc.Neutral
+execute if entity @s[team=hc.Neutral] \
+    run \
+    loot give @s loot core_hc:training/tools
+
 # free memory
 data remove storage hc:temp equip_items
