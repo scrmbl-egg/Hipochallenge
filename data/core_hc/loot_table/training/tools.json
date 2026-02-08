@@ -13,30 +13,8 @@
         {
             "entries": [
                 {
-                    "type": "minecraft:item",
-                    "name": "minecraft:compass",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_components",
-                            "components": {
-                                "minecraft:item_name": {
-                                    "translate": "",
-                                    "fallback": "Training Menu"
-                                },
-                                "minecraft:custom_data": {
-                                    "hc:item/id": "training_menu"
-                                },
-                                "minecraft:rarity": "epic",
-                                "minecraft:consumable": {
-                                    "animation": "block",
-                                    "consume_seconds": 0,
-                                    "has_consume_particles": false,
-                                    "on_consume_effects": [],
-                                    "sound": "minecraft:ui.button.click"
-                                }
-                            }
-                        }
-                    ]
+                    "type": "minecraft:loot_table",
+                    "value": "core_hc:training/training_menu"
                 }
             ],
             "rolls": 1
