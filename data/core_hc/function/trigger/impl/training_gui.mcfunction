@@ -5,6 +5,14 @@
 # @context player
 
 ## execution guard
+
+# since the dialog can be "requested" through an item too, check if detection
+# advancement is true and bypass by doing the trigger
+
+execute if entity @s[advancements={core_hc:training/used_training_menu=true}] \
+    run \
+    trigger training_gui
+
 execute unless predicate { \
     condition:"minecraft:any_of", \
     terms:[ \
@@ -47,6 +55,11 @@ dialog show @s { \
             width:24, \
         }, \
     ], \
+    after_action:"close", \
+    can_close_with_escape:true, \
+    exit_action:{ \
+        label:{translate:"gui.done",fallback:"Done"}, \
+    }, \
 }
 
 # reset and re-enable
