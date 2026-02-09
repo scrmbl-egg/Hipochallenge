@@ -11,10 +11,8 @@ execute as @a[scores={hc.HasLeft=1..}] \
     run \
     scoreboard players set @s hc.HasLeft 0
 
-# if player has items that must be replaced, replace them all
+# replace all items that must be replaced
 execute as @a \
-    if data entity @s \
-    Inventory[].components."minecraft:custom_data"."hc:item/replace_with" \
     run \
     function core_hc:util/item/replace_all_replaceable_items
 
