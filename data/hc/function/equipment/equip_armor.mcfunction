@@ -16,61 +16,51 @@ item replace entity @s armor.chest with minecraft:air 1
 item replace entity @s armor.legs with minecraft:air 1
 item replace entity @s armor.feet with minecraft:air 1
 
-## setup getters and get class and team data
-# class armor loot tables
-data modify storage hc:temp equip_armor.get_loot_tables_params set value { \
-    member_name:"armor_loot_tables", \
+# setup data
+data modify storage hc:temp equip_armor set value { \
+    loot_class_armor_args:{}, \
+    apply_attributes_args:{}, \
+    fx_args:{ \
+        dust_color:[0, 0, 0], \
+    }, \
+}
+
+## get data
+# get class armor loot tables
+function core_hc:class/get_data_field { \
+    field:"armor_loot_tables", \
     out_storage:"hc:temp", \
-    out_nbt:"equip_armor.loot_tables", \
+    out_nbt:"equip_armor.loot_class_armor_args", \
 }
-execute store result storage \
-    hc:temp equip_armor.get_loot_tables_params.class_id \
-    int 1 \
-    run \
-    scoreboard players get @s hc.Class
 
-function core_hc:class/get_data_member \
-    with storage hc:temp equip_armor.get_loot_tables_params
-
-# class attributes
-data modify storage hc:temp equip_armor.get_attributes_params set value { \
-    member_name:"attributes", \
+# get class attributes
+function core_hc:class/get_data_field { \
+    field:"attributes", \
     out_storage:"hc:temp", \
-    out_nbt:"equip_armor.attributes", \
+    out_nbt:"equip_armor.apply_attributes_args", \
 }
-execute store result \
-    storage hc:temp equip_armor.get_attributes_params.class_id \
-    int 1 \
-    run \
-    scoreboard players get @s hc.Class
 
-function core_hc:class/get_data_member \
-    with storage hc:temp equip_armor.get_attributes_params
-
-# team's dust color
-data modify storage hc:temp equip_armor.fx set value { \
-    dust_color:[0.0, 0.0, 0.0], \
-}
+# get team's dust color
 execute if predicate hc:team/is_in_team1 \
     run \
-    data modify storage hc:temp equip_armor.fx.dust_color \
-    set from storage hc:main \
-    vars.team_contexts.team1.preset.dust_color
+    data modify storage hc:temp equip_armor.fx_args.dust_color \
+    set from storage \
+    hc:main vars.team_contexts.team1.preset.dust_color
 execute if predicate hc:team/is_in_team2 \
     run \
-    data modify storage hc:temp equip_armor.fx.dust_color \
-    set from storage hc:main \
-    vars.team_contexts.team2.preset.dust_color
+    data modify storage hc:temp equip_armor.fx_args.dust_color \
+    set from storage \
+    hc:main vars.team_contexts.team2.preset.dust_color
 execute if predicate hc:team/is_in_neutral_team \
     run \
-    data modify storage hc:temp equip_armor.fx.dust_color \
-    set from storage hc:main \
-    consts.team_presets[{internal_name:"neutral"}].dust_color
+    data modify storage hc:temp equip_armor.fx_args.dust_color \
+    set from storage \
+    hc:main consts.team_presets[{internal_name:"neutral"}].dust_color
 
-## equip and show fx
-# loot armor tables
+## equip armor
+# loot armor and color
 function core_hc:equipment/armor/loot_class_armor \
-    with storage hc:temp equip_armor.loot_tables
+    with storage hc:temp equip_armor.loot_class_armor_args
 
 # apply team color to armor
 execute if predicate hc:team/is_in_team1 \
@@ -86,15 +76,15 @@ item modify entity @s armor.chest core_hc:equipment/no_armor_modifiers
 item modify entity @s armor.legs core_hc:equipment/no_armor_modifiers
 item modify entity @s armor.feet core_hc:equipment/no_armor_modifiers
 
-# apply attributes
+## apply attributes
 function core_hc:util/attribute/class/apply_attributes \
-    with storage hc:temp equip_armor.attributes
+    with storage hc:temp equip_armor.apply_attributes_args
 
-# show fx (with team's dust color)
+## show fx (with team's dust color)
 execute at @s \
     run \
     function core_hc:fx/equipment/equip_armor \
-    with storage hc:temp equip_armor.fx
+    with storage hc:temp equip_armor.fx_args
 
 # free memory
 data remove storage hc:temp equip_armor

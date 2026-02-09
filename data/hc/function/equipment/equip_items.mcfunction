@@ -9,59 +9,29 @@ execute unless predicate hc:has_all_options_selected \
     run \
     function hc:msg/private/send_error/not_all_options_selected
 
-## setup temp data
-# get_data_member parameters for getting loot tables
-data modify storage hc:temp equip_items.get_kit_loot_tables set value { \
-    class_id:0, \
-    kit_id:0, \
-    member_name:"item_loot_tables", \
-    out_storage:"hc:temp", \
-    out_nbt:"equip_items.loot_tables", \
-}
-# get_data_member parameters for getting perk equip command
-data modify storage hc:temp equip_items.get_perk_equip_command set value { \
-    class_id:0, \
-    perk_id:0, \
-    member_name:"on_equip_command", \
-    out_storage:"hc:temp", \
-    out_nbt:"equip_items.on_perk_equip_command.command", \
+# setup temp data
+data modify storage hc:temp equip_items set value { \
+    loot_items_args:{}, \
+    run_command_args:{command:""}, \
 }
 
-## get player's class (twice), kit & perk
-execute store result storage hc:temp equip_items.get_kit_loot_tables.class_id \
-    int 1 \
-    run \
-    scoreboard players get @s hc.Class
-execute store result storage hc:temp equip_items.get_kit_loot_tables.kit_id \
-    int 1 \
-    run \
-    scoreboard players get @s hc.Kit
-execute store result \
-    storage hc:temp equip_items.get_perk_equip_command.class_id \
-    int 1 \
-    run \
-    scoreboard players get @s hc.Class
-execute store result \
-    storage hc:temp equip_items.get_perk_equip_command.perk_id \
-    int 1 \
-    run \
-    scoreboard players get @s hc.Perk
-
-## get loot tables
-function core_hc:kit/get_data_member \
-    with storage hc:temp equip_items.get_kit_loot_tables
-
-# loot items
+# get loot tables and loot
+function core_hc:kit/get_data_field { \
+    field:"item_loot_tables", \
+    out_storage:"hc:temp", \
+    out_nbt:"equip_items.loot_items_args", \
+}
 function core_hc:equipment/item/loot_items \
-    with storage hc:temp equip_items.loot_tables
+    with storage hc:temp equip_items.loot_items_args
 
-## get perk equip command
-function core_hc:perk/get_data_member \
-    with storage hc:temp equip_items.get_perk_equip_command
-
-# run perk equip command
+# get perk equip command and run
+function core_hc:perk/get_data_field { \
+    field:"on_equip_command", \
+    out_storage:"hc:temp", \
+    out_nbt:"equip_items.run_command_args", \
+}
 function std:command/run \
-    with storage hc:temp equip_items.on_perk_equip_command
+    with storage hc:temp equip_items.run_command_args
 
 # show fx
 function core_hc:fx/equipment/equip_items

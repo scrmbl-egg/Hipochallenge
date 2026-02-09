@@ -1,6 +1,6 @@
 #>core_hc:class/select_by_number
 #
-# Selects the Nth registered class.
+# Selects the Nth class of whatever class the player has selected.
 #
 # @input
 #   value: int
@@ -25,56 +25,62 @@ $execute unless predicate { \
 
 $scoreboard players set @s hc.Class $(value)
 
-# setup message params depending if its in match team or not
-execute if predicate hc:team/is_in_match_pvp_team \
+# return early if class isn't selected
+execute unless predicate hc:class/has_selected \
     run \
-    data modify storage hc:temp select_class.msg_params.text set value { \
-        translate:"hc.msg.all.player_selected_class", \
-        fallback:"%1$s has selected the %2$s class", \
-        with:[{selector:"@s"}, {}], \
-    }
-execute unless predicate hc:team/is_in_match_pvp_team \
-    run \
-    data modify storage hc:temp select_class.msg_params.text set value { \
-        translate:"hc.msg.private.player_selected_class", \
-        fallback:"You selected the %1$s class", \
-        with:["IF YOU SEE THIS, THIS IS A BUG!", {}], \
-    }
-# that funny text object will make sense later
+    return run \
+    function std:empty
+
+# setup data (one of these two text components will be selected)
+data modify storage hc:temp select_class set value { \
+    team_msg_args:{ \
+        team:"", \
+        text:{ \
+            translate:"hc.msg.private.player_selected_class", \
+            fallback:"%1$s has selected the %2$s class", \
+            with:[{selector:"@s"}, {}], \
+        }, \
+    }, \
+    priv_msg_args:{ \
+        text:{ \
+            translate:"hc.msg.private.player_selected_class", \
+            fallback:"You selected the %1$s class", \
+            with:[{}], \
+        }, \
+    }, \
+}
 
 # get team the message may be sent to
-execute if predicate hc:team/is_in_match_pvp_team \
-    run \
-    function hc:team/get_self_team { \
-        out_storage:"hc:temp", \
-        out_nbt:"select_class.msg_params.team", \
-    }
+function hc:team/get_self_team { \
+    out_storage:"hc:temp", \
+    out_nbt:"select_class.team_msg_args.team", \
+}
 
-# get class name
-$data modify storage hc:temp select_class.msg_params.text.with[1] \
+# get class name in both possible text components
+$data modify storage hc:temp select_class.priv_msg_args.text.with[0] \
+    set from storage hc:main consts.classes[{id:$(value)}].name
+$data modify storage hc:temp select_class.team_msg_args.text.with[1] \
     set from storage hc:main consts.classes[{id:$(value)}].name
 
-# get class name color
-$data modify storage hc:temp select_class.msg_params.text.with[1].color \
-    set from storage hc:main consts.classes[{id:$(value)}].list_info.class_color
-
-## NOTE:
-# the following op is super hacky and kinda unsafe, but i'm really not in the
-# mood to change this to make it more modular
-# - dani
-
-# remove first "with" text object in message text if not in match pvp
-execute unless predicate hc:team/is_in_match_pvp_team \
-    run \
-    data remove storage hc:temp select_class.msg_params.text.with[0]
+# get list info color for the class name
+$data modify storage \
+    hc:temp select_class.priv_msg_args.text.with[0].color \
+    set from storage \
+    hc:main consts.classes[{id:$(value)}].list_info.class_color
+$data modify storage \
+    hc:temp select_class.team_msg_args.text.with[1].color \
+    set from storage \
+    hc:main consts.classes[{id:$(value)}].list_info.class_color
 
 # send msg
 execute if predicate hc:team/is_in_match_pvp_team \
     run \
-    function hc:msg/team/send with storage hc:temp select_class.msg_params
+    function hc:msg/team/send \
+    with storage hc:temp select_class.team_msg_args
 execute unless predicate hc:team/is_in_match_pvp_team \
     run \
-    function hc:msg/private/send with storage hc:temp select_class.msg_params
+    function hc:msg/private/send \
+    with storage hc:temp select_class.priv_msg_args
 
 # free memory
 data remove storage hc:temp select_class
