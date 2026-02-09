@@ -2,6 +2,7 @@
 #
 # Applies all base attributes of a class to the player.
 #
+# @context player
 # @input
 #   max_health: double
 #       Max Health attribute value.
