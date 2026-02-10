@@ -12,11 +12,6 @@ execute as @a[scores={hc.BowShot=1..}] \
     run \
     function hc:ability/class/marksman/kit1/on_bow_shot
 
-# TODO: move this to another function
-execute as @a[scores={hc.BowShot=1..}] \
-    run \
-    scoreboard players set @s hc.BowShot 0
-
 # arrows
 execute as @a[ \
     scores={hc.MarksmanKit1NewProjectileCooldown=0} \
