@@ -53,24 +53,24 @@ function hc:team/get_self_team { \
 }
 
 # get kit name in both possible text components
-function core_hc:kit/get_data_field { \
+function hc:kit/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
     out_nbt:"select_kit.priv_msg_args.text.with[0]", \
 }
-function core_hc:kit/get_data_field { \
+function hc:kit/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
     out_nbt:"select_kit.team_msg_args.text.with[1]", \
 }
 
 # get list info color for the kit name
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"list_info.kit_color", \
     out_storage:"hc:temp", \
     out_nbt:"select_kit.priv_msg_args.text.with[0].color", \
 }
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"list_info.kit_color", \
     out_storage:"hc:temp", \
     out_nbt:"select_kit.team_msg_args.text.with[1].color", \

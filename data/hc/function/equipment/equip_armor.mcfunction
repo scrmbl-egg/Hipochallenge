@@ -27,14 +27,14 @@ data modify storage hc:temp equip_armor set value { \
 
 ## get data
 # get class armor loot tables
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"armor_loot_tables", \
     out_storage:"hc:temp", \
     out_nbt:"equip_armor.loot_class_armor_args", \
 }
 
 # get class attributes
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"attributes", \
     out_storage:"hc:temp", \
     out_nbt:"equip_armor.apply_attributes_args", \

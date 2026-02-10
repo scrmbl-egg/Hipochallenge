@@ -53,24 +53,24 @@ function hc:team/get_self_team { \
 }
 
 # get perk name in both possible text components
-function core_hc:perk/get_data_field { \
+function hc:perk/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
     out_nbt:"select_perk.priv_msg_args.text.with[0]", \
 }
-function core_hc:perk/get_data_field { \
+function hc:perk/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
     out_nbt:"select_perk.team_msg_args.text.with[1]", \
 }
 
 # get list info color for the perk name
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"list_info.perk_color", \
     out_storage:"hc:temp", \
     out_nbt:"select_perk.priv_msg_args.text.with[0].color", \
 }
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"list_info.perk_color", \
     out_storage:"hc:temp", \
     out_nbt:"select_perk.team_msg_args.text.with[1].color", \

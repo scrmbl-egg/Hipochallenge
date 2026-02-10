@@ -1,10 +1,11 @@
-#>core_hc:perk/get_data_field
+#>hc:perk/get_data_field
 #
 # Gets a data member from the class perk constants. This helper function allows
 # for getting class constants when the player's class and perk are unknown.
 #
+# @context player
 # @input
-#   field: string
+#   field: #[match_regex="^[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*)*$"] string
 #       Name of the data member that is going to be obtained.
 #   out_storage: #[id="storage"] string
 #       Storage where the result will be stored.
@@ -24,7 +25,7 @@ data modify storage hc:temp get_perk_field set value { \
 }
 
 # to get perk data, the class perk array must be obtained
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"perks", \
     out_storage:"hc:temp", \
     out_nbt:"get_perk_field.perk_array", \

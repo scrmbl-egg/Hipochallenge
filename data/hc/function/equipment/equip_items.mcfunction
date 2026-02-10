@@ -16,7 +16,7 @@ data modify storage hc:temp equip_items set value { \
 }
 
 # get loot tables and loot
-function core_hc:kit/get_data_field { \
+function hc:kit/get_data_field { \
     field:"item_loot_tables", \
     out_storage:"hc:temp", \
     out_nbt:"equip_items.loot_items_args", \
@@ -25,7 +25,7 @@ function core_hc:equipment/item/loot_items \
     with storage hc:temp equip_items.loot_items_args
 
 # get perk equip command and run
-function core_hc:perk/get_data_field { \
+function hc:perk/get_data_field { \
     field:"on_equip_command", \
     out_storage:"hc:temp", \
     out_nbt:"equip_items.run_command_args", \

@@ -37,43 +37,43 @@ data modify storage hc:temp update_list_info set value { \
 
 ## get class_text name and icon. once added, add color field
 # name
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
     out_nbt:"update_list_info.display_args.class_text.with[0]", \
 }
 # icon
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"icon", \
     out_storage:"hc:temp", \
     out_nbt:"update_list_info.display_args.class_text.with[1]", \
 }
 # color
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"list_info.class_color", \
     out_storage:"hc:temp", \
     out_nbt:"update_list_info.display_args.class_text.color", \
 }
 
 ## get kit_text. once added, add color field
-function core_hc:kit/get_data_field { \
+function hc:kit/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
     out_nbt:"update_list_info.display_args.kit_text", \
 }
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"list_info.kit_color", \
     out_storage:"hc:temp", \
     out_nbt:"update_list_info.display_args.kit_text.color", \
 }
 
 ## get perk_text. once added, add color field
-function core_hc:perk/get_data_field { \
+function hc:perk/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
     out_nbt:"update_list_info.display_args.perk_text", \
 }
-function core_hc:class/get_data_field { \
+function hc:class/get_data_field { \
     field:"list_info.perk_color", \
     out_storage:"hc:temp", \
     out_nbt:"update_list_info.display_args.perk_text.color", \
