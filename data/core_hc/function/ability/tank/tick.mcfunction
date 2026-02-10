@@ -2,12 +2,8 @@
 #
 # Tick function for the tank class abilities.
 
-# TODO: change and format following commands
-
 ## kit 1
 # castle
-# TODO: handle castle cooldown
-
 # goat horn targets
 execute as @a \
     if items entity @s weapon.* *[ \
