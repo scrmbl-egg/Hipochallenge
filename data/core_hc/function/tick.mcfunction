@@ -12,7 +12,7 @@ execute as @a[scores={hc.HasLeft=1..}] \
     scoreboard players set @s hc.HasLeft 0
 
 # replace all items that must be replaced
-execute as @a \
+execute as @a[gamemode=!creative] \
     run \
     function core_hc:util/item/replace_all_replaceable_items
 
