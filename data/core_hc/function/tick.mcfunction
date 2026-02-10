@@ -11,41 +11,16 @@ execute as @a[scores={hc.HasLeft=1..}] \
     run \
     scoreboard players set @s hc.HasLeft 0
 
-# replace all items that must be replaced
-execute as @a[gamemode=!creative] \
-    run \
-    function core_hc:util/item/replace_all_replaceable_items
-
 # remove recipes
 recipe take @a *
-
-# clear items with the "hc:item/clear_instantly" custom data
-clear @a *[minecraft:custom_data~{"hc:item/clear_instantly":{}}]
-
-# set pickup delay for items with the "hc:item/no_pickup" component
-execute as @e[ \
-    type=minecraft:item, \
-    nbt={ \
-        Item:{ \
-            components:{ \
-                "minecraft:custom_data":{"hc:entity/item/no_pickup":{}}, \
-            }, \
-        }, \
-    }, \
-    nbt=!{PickupDelay:32767s} \
-] \
-    run \
-    data merge entity @s {PickupDelay:32767s}
 
 # mute vanilla music
 function core_hc:music/mute_vanilla
 
-## CORE GAME LOOP REGION
+# tick custom data components
+function core_hc:custom_data/tick
 
-# game state handling
-# TODO: when classes are done, implement game state updates and logic
-
-# round_status
+# tick round status bossbar
 execute if function core_hc:round_status/does_exist \
     run \
     function core_hc:round_status/tick
