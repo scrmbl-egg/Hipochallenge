@@ -71,6 +71,10 @@ execute at @s \
         }, \
     }
 
+# reset and re-enable
+scoreboard players reset @s npc_assault
+scoreboard players enable @s npc_assault
+
 # set icon color to class list_info color
 data modify entity @n[tag=__hc.NewNpc] description.with[1].color \
     set from storage hc:main consts.\

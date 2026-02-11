@@ -31,7 +31,6 @@ execute unless predicate { \
 scoreboard players reset @s npc_support
 scoreboard players enable @s npc_support
 
-
 ## commands
 # summon
 execute at @s \
