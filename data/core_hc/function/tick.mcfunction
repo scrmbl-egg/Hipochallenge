@@ -42,14 +42,14 @@ execute as @a \
     run \
     function #core_hc:trigger/tick
 
-# fx
-function #core_hc:fx/tick
+# abilities
+function #core_hc:ability/tick
 
 # projectiles
 function core_hc:projectile/tick
 
-# abilities
-function #core_hc:ability/tick
+# fx
+function #core_hc:fx/tick
 
 # levels
 function #core_hc:level/tick
