@@ -31,8 +31,11 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
+# reset and re-enable
+scoreboard players reset @a kill_all_npcs
+scoreboard players enable @a kill_all_npcs
 
+## commands
 # setup function parameters
 data modify storage hc:temp kill_all_npcs set value { \
     owner_uuid:[I; 0, 0, 0, 0], \
@@ -42,10 +45,6 @@ data modify storage hc:temp kill_all_npcs.owner_uuid set from entity @s UUID
 # kill
 function core_hc:trigger/impl/kill_all_npcs/run \
     with storage hc:temp kill_all_npcs
-
-# reset and re-enable
-scoreboard players reset @a kill_all_npcs
-scoreboard players enable @a kill_all_npcs
 
 # free memory
 data remove storage hc:temp kill_all_npcs

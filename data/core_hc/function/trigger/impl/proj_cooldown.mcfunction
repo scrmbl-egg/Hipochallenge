@@ -27,57 +27,59 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
-
-# create local score (for branching)
-scoreboard objectives add __hc.ProjCooldownSwitch dummy
-
-# set score to 0
-scoreboard players set @s __hc.ProjCooldownSwitch 0
-
-# set to 1 if tag is present
-execute if entity @s[tag=hc.ProjectileCooldownDisabled] \
-    run \
-    scoreboard players set @s __hc.ProjCooldownSwitch 1
-
-# if tag is not present, add
-execute if score @s __hc.ProjCooldownSwitch matches 0 \
-    run \
-    tag @s add hc.ProjectileCooldownDisabled
-# otherwise, remove
-execute if score @s __hc.ProjCooldownSwitch matches 1 \
-    run \
-    tag @s remove hc.ProjectileCooldownDisabled
-
-# send msg
-data modify storage hc:temp proj_cooldown.msg.text set value [ \
-    { \
-        translate:"hc.not_translated", \
-        fallback:"Projectile Cooldown: %s", \
-        with:[ \
-            {}, \
-        ], \
-    }, \
-]
-execute if entity @s[tag=hc.ProjectileCooldownDisabled] \
-    run \
-    data modify storage hc:temp proj_cooldown.msg.text[0].with[0] set value { \
-        text:"disabled", \
-        color:"red", \
-    }
-execute if entity @s[tag=!hc.ProjectileCooldownDisabled] \
-    run \
-    data modify storage hc:temp proj_cooldown.msg.text[0].with[0] set value { \
-        text:"enabled", \
-        color:"green", \
-    }
-
-function hc:msg/private/send with storage hc:temp proj_cooldown.msg
-
 # reset and re-enable
 scoreboard players reset @s proj_cooldown
 scoreboard players enable @s proj_cooldown
 
+## commands
+# setup temp data
+data modify storage hc:temp proj_cooldown set value { \
+    is_disabled:false, \
+    msg_args:{ \
+        text:{ \
+            translate:"hc.not_translated", \
+            fallback:"Projectile Cooldown: %s", \
+            with:[{}], \
+        }, \
+    }, \
+}
+
+# store whether player already has cooldown disabled
+execute store \
+    result storage hc:temp proj_cooldown.is_disabled \
+    byte 1 \
+    if entity @s[tag=hc.ProjectileCooldownDisabled]
+
+# add or remove tag depending on result
+execute if data storage hc:temp proj_cooldown{is_disabled:false} \
+    run \
+    tag @s add hc.ProjectileCooldownDisabled
+execute if data storage hc:temp proj_cooldown{is_disabled:true} \
+    run \
+    tag @s remove hc.ProjectileCooldownDisabled
+
+# store "enabled" or "disabled" string in message with appropriate color
+execute if entity @s[tag=hc.ProjectileCooldownDisabled] \
+    run \
+    data modify storage hc:temp proj_cooldown.msg_args.text.with[0] \
+    set value { \
+        translate:"hc.not_translated", \
+        fallback:"Disabled", \
+        color:"red", \
+    }
+    # TODO: add translation
+execute unless entity @s[tag=hc.ProjectileCooldownDisabled] \
+    run \
+    data modify storage hc:temp proj_cooldown.msg_args.text.with[0] \
+    set value { \
+        ranslate:"hc.not_translated", \
+        fallback:"Enabled", \
+        color:"green", \
+    }
+    # TODO: add translation
+
+# send message
+function hc:msg/private/send with storage hc:temp proj_cooldown.msg_args
+
 # free memory
-scoreboard objectives remove __hc.ProjCooldownSwitch
 data remove storage hc:temp proj_cooldown

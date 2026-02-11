@@ -27,10 +27,10 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
-
-function hc:class/select/tank
-
 # reset and re-enable
 scoreboard players reset @a tank
 scoreboard players enable @a tank
+
+## commands
+function hc:class/select/tank
+

@@ -27,8 +27,11 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
+# reset and re-enable
+scoreboard players reset @s info
+scoreboard players enable @s info
 
+## commands
 # show dialog
 #dialog show @s core_hc:info
 dialog show @s { \
@@ -46,7 +49,3 @@ dialog show @s { \
     can_close_with_escape:true, \
     pause:true, \
 }
-
-# reset and re-enable
-scoreboard players reset @s info
-scoreboard players enable @s info

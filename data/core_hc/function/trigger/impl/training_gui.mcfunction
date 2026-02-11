@@ -5,10 +5,8 @@
 # @context player
 
 ## execution guard
-
 # since the dialog can be "requested" through an item too, check if detection
 # advancement is true and bypass by doing the trigger
-
 execute if entity @s[advancements={core_hc:training/used_training_menu=true}] \
     run \
     trigger training_gui
@@ -35,8 +33,11 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
+# reset and re-enable
+scoreboard players reset @s training_gui
+scoreboard players enable @s training_gui
 
+## commands
 # since this can be triggered from an item too, revoke detection advancement
 advancement revoke @s only core_hc:training/used_training_menu
 
@@ -61,7 +62,3 @@ dialog show @s { \
         label:{translate:"gui.done",fallback:"Done"}, \
     }, \
 }
-
-# reset and re-enable
-scoreboard players reset @s training_gui
-scoreboard players enable @s training_gui

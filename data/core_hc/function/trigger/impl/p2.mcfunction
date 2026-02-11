@@ -27,10 +27,9 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
-
-function hc:perk/select/2
-
 # reset and re-enable
 scoreboard players reset @a p2
 scoreboard players enable @a p2
+
+## commands
+function hc:perk/select/2

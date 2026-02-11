@@ -31,8 +31,11 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
+# reset and re-enable
+scoreboard players reset @a kill_nearby_npc
+scoreboard players enable @a kill_nearby_npc
 
+## commands
 # setup function parameters
 data modify storage hc:temp kill_nearby_npc set value { \
     owner_uuid:[I; 0, 0, 0, 0], \
@@ -42,10 +45,6 @@ data modify storage hc:temp kill_nearby_npc.owner_uuid set from entity @s UUID
 # kill
 function core_hc:trigger/impl/kill_nearby_npc/run \
     with storage hc:temp kill_nearby_npc
-
-# reset and re-enable
-scoreboard players reset @a kill_nearby_npc
-scoreboard players enable @a kill_nearby_npc
 
 # free memory
 data remove storage hc:temp kill_nearby_npc

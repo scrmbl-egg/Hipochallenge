@@ -27,10 +27,9 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
-
-function hc:class/select/recon
-
 # reset and re-enable
 scoreboard players reset @a recon
 scoreboard players enable @a recon
+
+## commands
+function hc:class/select/recon

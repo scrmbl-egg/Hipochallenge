@@ -27,8 +27,11 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
+# reset and re-enable
+scoreboard players reset @s npc_marksman
+scoreboard players enable @s npc_marksman
 
+## commands
 # summon
 execute at @s \
     run \
@@ -101,7 +104,3 @@ execute as @n[tag=__hc.NewNpc] \
 execute as @n[tag=__hc.NewNpc] \
     run \
     tag @s remove __hc.NewNpc
-
-# reset and re-enable
-scoreboard players reset @s npc_assault
-scoreboard players enable @s npc_assault

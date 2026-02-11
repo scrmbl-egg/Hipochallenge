@@ -27,8 +27,11 @@ execute unless predicate { \
     run \
     return fail
 
-## on triggered commands
+# reset and re-enable
+scoreboard players reset @s ls
+scoreboard players enable @s ls
 
+## commands
 # send msg
 function hc:msg/debug/send_info { \
     text:[ \
@@ -37,7 +40,3 @@ function hc:msg/debug/send_info { \
         }, \
     ] \
 }
-
-# reset and re-enable
-scoreboard players reset @s ls
-scoreboard players enable @s ls
