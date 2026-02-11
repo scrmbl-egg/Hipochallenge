@@ -31,11 +31,6 @@ execute if function core_hc:round_status/does_exist \
     run \
     function core_hc:damage/tick
 
-# reset bow detection
-execute as @a[scores={hc.BowShot=1..}] \
-    run \
-    scoreboard players set @s hc.BowShot 0
-
 # deaths
 execute as @a[scores={hc.IsDead=1..}] \
     at @s \

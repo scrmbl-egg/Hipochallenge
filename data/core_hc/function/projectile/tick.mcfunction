@@ -2,6 +2,18 @@
 #
 # Tick function for all projectiles in the minigame.
 
+# reset bow detection
+## HACK?:
+# When resetting bow detection, I decided to put it here because it is the most
+# logical place to put it in the many procedures the tick function is composed
+# of. However, the cost was moving projectile processing AFTER ability
+# processing. I don't remember why we had projectiles processed before
+# abilities, so I'm putting this note here in case of any issue.
+# - scrmbl-egg
+execute as @a[scores={hc.BowShot=1..}] \
+    run \
+    scoreboard players set @s hc.BowShot 0
+
 # tag all vanilla projectiles entities as game projectiles
 ## NOTE:
 # this tag is later used for other entities that may not be projectiles
