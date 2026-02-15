@@ -13,12 +13,9 @@ title @s title [ \
     {text:"HIPOCHALLENGE",color:"#ebeeff",bold:true}, \
 ]
 title @s subtitle [ \
-    {text:"P",color:"#ff493b"}, \
-    {text:"h",color:"#ff5538"}, \
-    {text:"o",color:"#ff6035"}, \
-    {text:"e",color:"#ff6b31"}, \
-    {text:"n",color:"#ff762e"}, \
-    {text:"i",color:"#ff822b"}, \
+    {text:"P",color:"#ff493b"}, {text:"h",color:"#ff5538"}, \
+    {text:"o",color:"#ff6035"}, {text:"e",color:"#ff6b31"}, \
+    {text:"n",color:"#ff762e"}, {text:"i",color:"#ff822b"}, \
     {text:"x",color:"#ff8d28"}, \
 ]
 
