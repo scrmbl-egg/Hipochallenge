@@ -11,12 +11,14 @@
 # name and stats would add visual noise the legitimate player would need to
 # filter out from the ones whose information they would need to care about.
 
-# clear info if player if player doesn't meet the following conditions
-execute unless predicate hc:team/is_in_match_pvp_team \
-    run \
-    return run \
-    function core_hc:list_info/clear
-execute unless predicate hc:has_all_options_selected \
+# clear info if player doesn't meet the following conditions
+execute unless predicate { \
+    condition:"minecraft:any_of", \
+    terms:[ \
+        {condition:"minecraft:reference",name:"hc:team/is_in_match_pvp_team"}, \
+        {condition:"minecraft:reference",name:"hc:has_all_options_selected"}, \
+    ], \
+} \
     run \
     return run \
     function core_hc:list_info/clear
@@ -32,7 +34,7 @@ data modify storage hc:temp update_list_info set value { \
         }, \
         kit_text:{}, \
         perk_text:{}, \
-    }, \ 
+    }, \
 }
 
 ## get class_text name and icon. once added, add color field
