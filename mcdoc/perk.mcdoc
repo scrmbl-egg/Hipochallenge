@@ -25,9 +25,9 @@ type Perk = (
             /// Nutritious meal related data.
             nutritious_meal: struct {
                 /// Amount of ticks the food item takes appear in the player's inventory.
-                give_delay_ticks: int @ 1..
-            }
-        }
+                give_delay_ticks: int @ 1..,
+            },
+        },
     } |
     struct TankPerk2 {
         ...PerkBase,
@@ -38,9 +38,9 @@ type Perk = (
             /// Attack related data.
             attack: struct {
                 /// Effects given to the enemy attacked by the player.
-                effects_info: AbilityEffects
-            }
-        }
+                effects_info: AbilityEffects,
+            },
+        },
     } |
     struct TankPerk3 {
         ...PerkBase,
@@ -53,9 +53,9 @@ type Perk = (
                 /// Radius in which
                 radius: double @ 0..,
                 /// Attributes, whose values will be divided into the amount of players in the radius.
-                attributes: [AttributeModifier]
-            }
-        }
+                attributes: [AttributeModifier],
+            },
+        },
     } |
     struct MarksmanPerk1 {
         ...PerkBase,
@@ -64,8 +64,8 @@ type Perk = (
         /// Marksman's perk 1 variant data.
         marksman_p1_data: struct {
             /// Magic/true damage done when the damaged enemy is suppressed or in the air.
-            suppression_or_on_air_magic_damage: int @ 0..
-        }
+            suppression_or_on_air_magic_damage: int @ 0..,
+        },
     } |
     struct MarksmanPerk2 {
         ...PerkBase,
@@ -77,7 +77,7 @@ type Perk = (
             health_threshold: int @ 1..20,
             /// Effects given to the player when the threshold is reached.
             effects_info: AbilityEffects,
-        }
+        },
     } |
     struct MarksmanPerk3 {
         ...PerkBase,
@@ -86,8 +86,8 @@ type Perk = (
         /// Marksman's perk 3 variant data.
         marksman_p3_data: struct {
             /// Amount of extra projectiles given to the player.
-            added_projectiles: int @ 1..
-        }
+            added_projectiles: int @ 1..,
+        },
     } |
     struct AssassinPerk1 {
         ...PerkBase,
@@ -97,7 +97,7 @@ type Perk = (
         assassin_p1_data: struct {
             /// Effects given to the player when they succeed the contract.
             contract_success_effects_info: AbilityEffects,
-        }
+        },
     } |
     struct AssassinPerk2 {
         ...PerkBase,
@@ -106,8 +106,8 @@ type Perk = (
         /// Assassin's perk 2 variant data.
         assassin_p2_data: struct {
             /// Health threshold (ignoring absorption) the enemy must be below to be prematurely killed.
-            enemy_true_health_threshold: int @ 1..
-        }
+            enemy_true_health_threshold: int @ 1..,
+        },
     } |
     struct AssassinPerk3 {
         ...PerkBase,
@@ -117,14 +117,14 @@ type Perk = (
         assassin_p3_data: struct {
             /// Armor toughness value set to the enemy when the owner/player hits them.
             on_hit_by_owner_armor_toughness: int @ 0..,
-        }
+        },
     } |
     struct SupportPerk1 {
         ...PerkBase,
         id: 1,
         data_type: "support_p1_data",
         /// Support's perk 1 variant data.
-        support_p1_data: struct {}
+        support_p1_data: struct {},
     } |
     struct SupportPerk2 {
         ...PerkBase,
@@ -140,8 +140,8 @@ type Perk = (
                 radius: double @ 0..,
                 /// Effects given to the enemies when the explosion occurs.
                 effects_info: AbilityEffects,
-            }
-        }
+            },
+        },
     } |
     struct SupportPerk3 {
         ...PerkBase,
@@ -151,7 +151,7 @@ type Perk = (
         support_p3_data: struct {
             /// Extra radius given to the abilties which
             extra_area_ability_radius: double @ 0..,
-        }
+        },
     } |
     struct ReconPerk1 {
         ...PerkBase,
@@ -160,8 +160,8 @@ type Perk = (
         /// Recon's perk 1 variant data.
         recon_p1_data: struct {
             /// Maximum duration of the glowing effect in ticks.
-            glowing_max_duration_ticks: int @ 1..
-        }
+            glowing_max_duration_ticks: int @ 1..,
+        },
     } |
     struct ReconPerk2 {
         ...PerkBase,
@@ -170,8 +170,8 @@ type Perk = (
         /// Recon's perk 2 variant data.
         recon_p2_data: struct {
             /// Effects given to the player when they hit a glowing enemy.
-            on_glowing_enemy_hit_effects_info: AbilityEffects
-        }
+            on_glowing_enemy_hit_effects_info: AbilityEffects,
+        },
     } |
     struct ReconPerk3 {
         ...PerkBase,
@@ -180,8 +180,8 @@ type Perk = (
         /// Recon's perk 3 variant data.
         recon_p3_data: struct {
             /// Amount of ticks the traces that enemy players leave live for.
-            enemy_trace_lifetime_ticks: int @ 1..
-        }
+            enemy_trace_lifetime_ticks: int @ 1..,
+        },
     } |
     struct AssaultPerk1 {
         ...PerkBase,
@@ -190,8 +190,8 @@ type Perk = (
         /// Assault's perk 1 variant data.
         assault_p1_data: struct {
             /// Radius of the explosion that disables other surrounding traps when one is disabled.
-            trap_disabling_explosion_radius: double @ 0..
-        }
+            trap_disabling_explosion_radius: double @ 0..,
+        },
     } |
     struct AssaultPerk2 {
         ...PerkBase,
@@ -205,8 +205,8 @@ type Perk = (
                 duration_ticks: int @ 1..,
                 /// Attributes given to the player.
                 attributes: [AttributeModifier],
-            }
-        }
+            },
+        },
     } |
     struct AssaultPerk3 {
         ...PerkBase,
@@ -215,7 +215,7 @@ type Perk = (
         /// Assault's perk 3 variant data.
         assault_p3_data: struct {
             /// Effects given when the player directly looks at an enemy.
-            on_looking_at_enemy_effects_info: AbilityEffects
-        }
+            on_looking_at_enemy_effects_info: AbilityEffects,
+        },
     } |
 )

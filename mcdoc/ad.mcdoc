@@ -5,12 +5,12 @@ struct Advert {
     /// Text of the ad.
     text: Text,
     /// Publisher
-    publisher: Publisher[[internal_name]]
+    publisher: Publisher[[internal_name]],
 }
 
 struct Publisher {
     internal_name: enum(string) {
         HipoCorp = "hipocorp"
     },
-    name: Text
+    name: Text,
 }

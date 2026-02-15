@@ -35,7 +35,7 @@ struct TeamContext {
     /// Team preset.
     preset: TeamPreset,
     /// List of player profiles in the team.
-    player_profiles: [Profile] @ 0..3,
+    player_profiles: [Profile] @ 0..6,
 }
 
 /// All possible team color names.

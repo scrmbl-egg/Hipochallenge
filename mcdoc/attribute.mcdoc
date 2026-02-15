@@ -9,7 +9,7 @@ struct AttributeModifierCommmandParameters {
     /// Modifier operation.
     operation: AttributeOperation,
     /// Modifier value.
-    value: double
+    value: double,
 }
 
 struct TimedAttributeModifier {
@@ -19,5 +19,5 @@ struct TimedAttributeModifier {
 
 struct AbilityAttributes {
     permanent: [AttributeModifierCommmandParameters],
-    timed: [TimedAttributeModifier]
+    timed: [TimedAttributeModifier],
 }

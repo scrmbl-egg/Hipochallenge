@@ -6,7 +6,7 @@ struct PlayerSelectionInfo {
     /// Maximum amount of distance the target can be from the executing player to be selected.
     max_distance: float @ 0..,
     /// Command that the selected player will execute.
-    on_selected_command: #[command(max_length=32500)] string
+    on_selected_command: #[command(max_length=32500)] string,
 }
 
 /// Enum representing the modes available for targetting players.

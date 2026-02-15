@@ -34,9 +34,9 @@ type Kit = (
                 /// Radius of the effects.
                 radius: double @ 0..,
                 /// Effects that will be given to allies.
-                effects_info: AbilityEffects
+                effects_info: AbilityEffects,
             },
-        }
+        },
     } |
     // Second tank kit.
     struct TankKit2 {
@@ -52,14 +52,14 @@ type Kit = (
                 /// Effects that will be given to enemies.
                 effects_info: AbilityEffects,
                 /// Amount of ticks that define the time frame the owner can recover their ability if the enemies are out of range.
-                recovery_ticks: int @ 0..
+                recovery_ticks: int @ 0..,
             },
             /// Trident related data.
             trident: struct {
                 /// Cooldown after landing.
-                cooldown_ticks: int @ 0..
-            }
-        }
+                cooldown_ticks: int @ 0..,
+            },
+        },
     } |
     struct TankKit3 {
         ...KitBase,
@@ -83,13 +83,13 @@ type Kit = (
                     /// Radius in which the spirit gives its buff.
                     radius: double @ 0..,
                     /// Modifiers that are applied to the target.
-                    modifiers: [AttributeModifier]
+                    modifiers: [AttributeModifier],
                 },
                 /// Data related to the de-buff that is given to the owner when targetting the spirit to other player.
                 owner_debuff: struct {
                     /// Modifiers that are applied to the owner.
-                    modifiers: [AttributeModifier]
-                }
+                    modifiers: [AttributeModifier],
+                },
             },
             /// Bubble shield related data.
             bubble_shield: struct {
@@ -104,8 +104,8 @@ type Kit = (
                 lifetime_ticks: int @ 0..,
                 /// Amount of ticks added to the bubble's lifetime when it successfully blocks a projectile.
                 lifetime_ticks_added_on_impact: int @ 0..,
-            }
-        }
+            },
+        },
     } |
     struct MarksmanKit1 {
         ...KitBase,
@@ -121,8 +121,8 @@ type Kit = (
                 new_first_cooldown_ticks: int @ 0..,
                 /// Cooldown of the rest of arrows right after the first new arrow is given.
                 new_rest_cooldown_ticks: int @ 0..
-            }
-        }
+            },
+        },
     } |
     struct MarksmanKit2 {
         ...KitBase,
@@ -137,9 +137,9 @@ type Kit = (
                 /// Cooldown of the first arrow given after shooting the last one.
                 new_first_cooldown_ticks: int @ 0..,
                 /// Cooldown of the rest of arrows right after the first new arrow is given.
-                new_rest_cooldown_ticks: int @ 0..
-            }
-        }
+                new_rest_cooldown_ticks: int @ 0..,
+            },
+        },
     } |
     struct MarksmanKit3 {
         ...KitBase,
@@ -154,7 +154,7 @@ type Kit = (
                 /// Cooldown of the first bullet given after shooting the last one.
                 new_first_cooldown_ticks: int @ 0..,
                 /// Cooldown of the rest of bullets right after the first new bullet is given.
-                new_rest_cooldown_ticks: int @ 0..
+                new_rest_cooldown_ticks: int @ 0..,
             },
             /// Revolver related data.
             revolver: struct {
@@ -163,9 +163,9 @@ type Kit = (
                 /// Cooldown ticks the next shot is going to take.
                 per_shot_cooldown_ticks: int @ 1.., // TODO: this should probably be moved to a consumable data component
                 /// Pitch rotation when the revolver is shot.
-                recoil_pitch_rotation: double @ -90.0..90.0
-            }
-        }
+                recoil_pitch_rotation: double @ -90.0..90.0,
+            },
+        },
     } |
     struct AssassinKit1 {
         ...KitBase,
@@ -177,21 +177,21 @@ type Kit = (
             parry: struct {
                 /// Modifiers applied to the owner when the parry fails.
                 on_owner_when_fail: struct {
-                    modifiers: [AttributeModifier]
+                    modifiers: [AttributeModifier],
                 },
                 /// Modifiers applied to the owner when the parry succeeds.
                 on_owner_when_success: struct {
-                    modifiers: [AttributeModifier]
+                    modifiers: [AttributeModifier],
                 },
                 /// Modifiers and effects applied to the enemy when they are parried.
                 on_enemy_when_parried: struct {
                     /// Effects that are going to be applied.
                     effects_info: AbilityEffects,
                     /// Modifiers that are going to be applied.
-                    modifiers: [AttributeModifier]
-                }
-            }
-        }
+                    modifiers: [AttributeModifier],
+                },
+            },
+        },
     } |
     struct AssassinKit2 {
         ...KitBase,
@@ -202,43 +202,43 @@ type Kit = (
             stun_mechanism: struct {
                 radius: double @ 0..,
                 effects_info: AbilityEffects,
-            }
-        }
+            },
+        },
     } |
     struct AssassinKit3 {
         ...KitBase,
         id: 3,
         data_type: "assassin_k3_data",
         /// Assassin's kit 3 variant data.
-        assassin_k3_data: struct {}
+        assassin_k3_data: struct {},
     } |
     struct SupportKit1 {
         ...KitBase,
         id: 1,
         data_type: "support_k1_data",
         /// Support's kit 1 variant data.
-        support_k1_data: struct {}
+        support_k1_data: struct {},
     } |
     struct SupportKit2 {
         ...KitBase,
         id: 2,
         data_type: "support_k2_data",
         /// Support's kit 2 variant data.
-        support_k2_data: struct {}
+        support_k2_data: struct {},
     } |
     struct SupportKit3 {
         ...KitBase,
         id: 3,
         data_type: "support_k3_data",
         /// Support's kit 3 variant data.
-        support_k3_data: struct {}
+        support_k3_data: struct {},
     } |
     struct ReconKit1 {
         ...KitBase,
         id: 1,
         data_type: "recon_k1_data",
         /// Recon's kit 1 variant data.
-        recon_k1_data: struct {}
+        recon_k1_data: struct {},
     } |
     struct ReconKit2 {
         ...KitBase,
@@ -260,36 +260,36 @@ type Kit = (
                     radius: double @ 0..,
                     /// Effects that will be given to the detected enemies.
                     effects_info: AbilityEffects
-                }
-            }
-        }
+                },
+            },
+        },
     } |
     struct ReconKit3 {
         ...KitBase,
         id: 3,
         data_type: "recon_k3_data",
         /// Recon's kit 3 variant data.
-        recon_k3_data: struct {}
+        recon_k3_data: struct {},
     } |
     struct AssaultKit1 {
         ...KitBase,
         id: 1,
         data_type: "assault_k1_data",
         /// Assault's kit 1 variant data.
-        assault_k1_data: struct {}
+        assault_k1_data: struct {},
     } |
     struct AssaultKit2 {
         ...KitBase,
         id: 2,
         data_type: "assault_k2_data",
         /// Assault's kit 2 variant data.
-        assault_k2_data: struct {}
+        assault_k2_data: struct {},
     } |
     struct AssaultKit3 {
         ...KitBase,
         id: 3,
         data_type: "assault_k3_data",
         /// Assault's kit 3 variant data.
-        assault_k3_data: struct {}
+        assault_k3_data: struct {},
     } |
 )

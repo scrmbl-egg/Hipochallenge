@@ -42,7 +42,7 @@ struct MainStorage {
             /// Team 1 global variables.
             team1: TeamContext,
             /// Team 2 global variables.
-            team2: TeamContext
-        }
-    }
+            team2: TeamContext,
+        },
+    },
 }

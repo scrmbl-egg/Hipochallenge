@@ -18,7 +18,7 @@ struct GameContext {
     /// Amount of points/rounds won by Team 2.
     team2_wins: int @ 0..,
     /// List of banned level IDs.
-    banned_level_ids: [LevelId]
+    banned_level_ids: [LevelId],
 }
 
 /// Game mode struct.
@@ -66,17 +66,17 @@ enum(string) GameState {
     /// State where the players have finished the round.
     EndingRound = "ending_round",
     /// State where the players have finished the match and a winner is announced.
-    EndingMatch = "ending_match"
+    EndingMatch = "ending_match",
 }
 
 enum(string) GameModeName {
     Casual = "casual",
     Competitive = "competitive",
-    Deathmatch = "deathmatch"
+    Deathmatch = "deathmatch",
 }
 
 enum(int) GameModeId {
     Casual = 0,
     Competitive = 1,
-    DeathMatch = 2
+    DeathMatch = 2,
 }

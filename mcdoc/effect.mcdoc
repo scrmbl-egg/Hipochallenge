@@ -8,7 +8,7 @@ struct EffectCommandParameters {
     /// `"infinite"` can be used to indicate infinite duration.
     seconds: (#[canonical] int @ 0.. | "infinite"),
     /// `true` if the particles of the effect are hidden.
-    hide_particles: ("true" | "false")
+    hide_particles: ("true" | "false"),
 }
 
 /// Struct for effect information inside game abilities.

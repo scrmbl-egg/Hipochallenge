@@ -79,5 +79,5 @@ struct Class {
     /// List of class kits.
     kits: [super::kit::Kit] @ 3,
     /// List of class perks.
-    perks: [super::perk::Perk] @ 3
+    perks: [super::perk::Perk] @ 3,
 }
