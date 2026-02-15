@@ -81,8 +81,6 @@ function hc:class/get_data_field { \
     out_nbt:"update_list_info.display_args.perk_text.color", \
 }
 
-#tellraw @a {storage:"hc:temp",nbt:"update_list_info.display_args"}
-
 ## now that every parameter is set, call display function
 function core_hc:list_info/display \
     with storage hc:temp update_list_info.display_args
