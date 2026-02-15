@@ -4,7 +4,7 @@
 # exists/is declared or not.
 #
 # @returns
-# Result: positive 32 bit integer if bossbar exists, 0 if it doesn't
+#   Result: positive 32 bit integer if bossbar exists, 0 if it doesn't
 
 return run \
     bossbar get hc:round_status max
