@@ -13,7 +13,7 @@
 
 # clear info if player doesn't meet the following conditions
 execute unless predicate { \
-    condition:"minecraft:any_of", \
+    condition:"minecraft:all_of", \
     terms:[ \
         {condition:"minecraft:reference",name:"hc:team/is_in_match_pvp_team"}, \
         {condition:"minecraft:reference",name:"hc:has_all_options_selected"}, \
