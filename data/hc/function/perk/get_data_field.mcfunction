@@ -42,7 +42,7 @@ execute store result storage hc:temp get_perk_field.func_args.source_path.id \
     scoreboard players get @s hc.Perk
 
 # get perk data
-function core_std:array/get_element_unsafe \
+function std:array/get_element_unsafe \
     with storage hc:temp get_perk_field.func_args
 
 ## get perk member

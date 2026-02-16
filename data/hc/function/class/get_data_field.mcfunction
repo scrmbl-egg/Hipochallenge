@@ -31,7 +31,7 @@ execute store result storage hc:temp get_class_field.func_args.source_path.id \
     scoreboard players get @s hc.Class
 
 # function call (use unsafe version)
-function core_std:array/get_element_unsafe \
+function std:array/get_element_unsafe \
     with storage hc:temp get_class_field.func_args
 #>_
 # @out
