@@ -17,14 +17,10 @@ scoreboard players set __$hc_init_gamerules __hc.InitError 0
 tellraw @a [ \
     "", \
     {text:"[HIPOCHALLENGE: ",color:"#ebeeff",bold:true}, \
-    {text:"P",color:"#ff493b"}, \
-    {text:"h",color:"#ff5538"}, \
-    {text:"o",color:"#ff6035"}, \
-    {text:"e",color:"#ff6b31"}, \
-    {text:"n",color:"#ff762e"}, \
-    {text:"i",color:"#ff822b"}, \
-    {text:"x",color:"#ff8d28"}, \
-    {text:"]: ",color:"#ebeeff",bold:true}, \
+    {text:"P",color:"#ff493b"}, {text:"h",color:"#ff5538"}, \
+    {text:"o",color:"#ff6035"}, {text:"e",color:"#ff6b31"}, \
+    {text:"n",color:"#ff762e"}, {text:"i",color:"#ff822b"}, \
+    {text:"x",color:"#ff8d28"}, {text:"]: ",color:"#ebeeff",bold:true}, \
     {translate:"commands.reload.success",fallback:"Reloading!"}, \
 ]
 
