@@ -1,8 +1,8 @@
 #>hc:mechanic/suppression/set_ticks
 #
-# Attempts to set the duration in ticks of the suppression state. Will be
-# ignored if the current suppression score ticks are greater than the specified
-# amount.
+# Sets the duration of the suppression state in the executing player. This
+# function will only work if the amount of already remaining ticks is less
+# than the specified value.
 #
 # @context player
 # @input
