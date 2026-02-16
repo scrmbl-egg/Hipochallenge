@@ -10,6 +10,7 @@
 #   radius: double @ 0..
 #       Radius of the sphere in which the player is going to apply effects.
 
+# FIXME: this just doesn't work... for some reason
 $execute as @a[ \
         nbt=!{UUID:$(owner_uuid)}, \
         limit=6, \
@@ -21,5 +22,3 @@ $execute as @a[ \
     function core_hc:fx/ability/tank/kit1/target { \
         owner_uuid:$(owner_uuid), \
     }
-
-$say execute as @a[nbt=!{UUID:$(owner_uuid)},limit=6,distance=..$(radius),team=$(team)] at @s run function core_hc:fx/ability/tank/kit1/target {owner_uuid:$(owner_uuid),}
