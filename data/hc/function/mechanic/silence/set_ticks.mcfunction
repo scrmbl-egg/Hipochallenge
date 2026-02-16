@@ -1,6 +1,8 @@
-#>hc:mechanic/silence/add
+#>hc:mechanic/silence/set_ticks
 #
-# Adds the silenced state in the executing player.
+# Sets the duration of the silenced state in the executing player. This
+# function will only work if the amount of already remaining ticks is less
+# than the specified value.
 #
 # @context player
 # @input
