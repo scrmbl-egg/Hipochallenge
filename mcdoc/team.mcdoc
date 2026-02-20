@@ -41,21 +41,21 @@ struct TeamContext {
 /// All possible team color names.
 enum(string) TeamPresetName {
     /// Neutral team color name (gray).
-    Neutral = "neutral",
+    Neutral = "hc:neutral",
     /// Red team color name.
-    Red = "red",
+    Red = "hc:red",
     /// Yellow team color name.
-    Yellow = "yellow",
+    Yellow = "hc:yellow",
     /// Green team color name.
-    Green = "green",
+    Green = "hc:green",
     /// Blue team color name.
-    Blue = "blue",
+    Blue = "hc:blue",
     /// Purple team color name.
-    Purple = "purple",
+    Purple = "hc:purple",
     /// Orange team color name.
-    Orange = "orange",
+    Orange = "hc:orange",
     /// Cyan team color name.
-    Cyan = "cyan",
+    Cyan = "hc:cyan",
 }
 
 /// Team color ID's, used for datapack predicates.

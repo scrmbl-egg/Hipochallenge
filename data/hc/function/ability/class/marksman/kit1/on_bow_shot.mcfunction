@@ -15,7 +15,7 @@ execute if entity @s[ \
     store result score @s hc.MarksmanKit1NewProjectileCooldown \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"marksman"}].\
+    classes[{internal_name:"hc:marksman"}].\
     kits[{id:1}].marksman_k1_data.arrows.new_first_cooldown_ticks
 
 # give arrow instantly if proj_cooldown is triggered

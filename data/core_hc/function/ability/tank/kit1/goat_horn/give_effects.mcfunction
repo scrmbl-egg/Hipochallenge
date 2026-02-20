@@ -18,5 +18,5 @@ $execute as @a[ \
     run \
     function hc:util/effect/give_ability_effects \
     with storage hc:main \
-    consts.classes[{internal_name:"tank"}].\
+    consts.classes[{internal_name:"hc:tank"}].\
     kits[{id:1}].tank_k1_data.horn.effects_info

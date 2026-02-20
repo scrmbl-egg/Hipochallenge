@@ -16,12 +16,12 @@ data modify storage hc:temp spirit set value { \
 
 data modify storage hc:temp spirit.target_mode \
     set from storage hc:main \
-    consts.classes[{internal_name:"tank"}].\
+    consts.classes[{internal_name:"hc:tank"}].\
     kits[{id:3}].tank_k3_data.spirit.selection.target_mode
 
 data modify storage hc:temp spirit.max_distance set from \
     storage hc:main \
-    consts.classes[{internal_name:"tank"}].\
+    consts.classes[{internal_name:"hc:tank"}].\
     kits[{id:3}].tank_k3_data.spirit.selection.max_distance
 
 data modify storage hc:temp spirit.owner_uuid set from entity @s UUID

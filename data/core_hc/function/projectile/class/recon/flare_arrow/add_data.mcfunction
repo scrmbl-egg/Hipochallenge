@@ -76,7 +76,7 @@ data modify entity @s data."hc:entity/flare_arrow".aabb_params.entity_selector \
 data modify entity @s data."hc:entity/flare_arrow".aabb_params.size \
     set from storage \
     hc:main \
-    consts.classes[{internal_name:"recon"}].\
+    consts.classes[{internal_name:"hc:recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.detection_aabb_size
 
 ## get explosion data
@@ -84,7 +84,7 @@ data modify entity @s data."hc:entity/flare_arrow".aabb_params.size \
 data modify entity @s data."hc:entity/flare_arrow".explosion.radius \
     set from storage \
     hc:main \
-    consts.classes[{internal_name:"recon"}].\
+    consts.classes[{internal_name:"hc:recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.explosion.radius
 
 # entity selector (copy from aabb data)

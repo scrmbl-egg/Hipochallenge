@@ -78,7 +78,7 @@ scoreboard players enable @s npc_assault
 # set icon color to class list_info color
 data modify entity @n[tag=__hc.NewNpc] description.with[1].color \
     set from storage hc:main consts.\
-    classes[{internal_name:"assault"}].list_info.class_color
+    classes[{internal_name:"hc:assault"}].list_info.class_color
 
 # set owner_uuid
 data modify entity @n[tag=__hc.NewNpc] \

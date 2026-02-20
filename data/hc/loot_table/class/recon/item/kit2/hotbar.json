@@ -39,7 +39,7 @@
                             "count": {
                                 "type": "minecraft:storage",
                                 "storage": "hc:main",
-                                "path": "consts.classes[{internal_name:\"recon\"}].kits[{id:2}].recon_k2_data.flare_arrow.max_amount"
+                                "path": "consts.classes[{internal_name:\"hc:recon\"}].kits[{id:2}].recon_k2_data.flare_arrow.max_amount"
                             }
                         }
                     ]

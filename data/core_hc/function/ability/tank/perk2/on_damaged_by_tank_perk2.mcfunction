@@ -10,5 +10,5 @@ advancement revoke @s \
 # give effects
 function hc:util/effect/give_ability_effects \
     with storage hc:main consts.\
-    classes[{internal_name:"tank"}].\
+    classes[{internal_name:"hc:tank"}].\
     perks[{id:2}].tank_p2_data.attack.effects_info

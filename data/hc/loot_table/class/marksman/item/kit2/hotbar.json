@@ -48,7 +48,7 @@
                             "count": {
                                 "type": "minecraft:storage",
                                 "storage": "hc:main",
-                                "path": "consts.classes[{internal_name:\"marksman\"}].kits[{id:2}].marksman_k2_data.arrows.max_amount"
+                                "path": "consts.classes[{internal_name:\"hc:marksman\"}].kits[{id:2}].marksman_k2_data.arrows.max_amount"
                             }
                         },
                         {
@@ -71,7 +71,7 @@
                             "count": {
                                 "type": "minecraft:storage",
                                 "storage": "hc:main",
-                                "path": "consts.classes[{internal_name:\"marksman\"}].perks[{id:3}].marksman_p3_data.added_projectiles"
+                                "path": "consts.classes[{internal_name:\"hc:marksman\"}].perks[{id:3}].marksman_p3_data.added_projectiles"
                             },
                             "add": true
                         }

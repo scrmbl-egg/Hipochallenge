@@ -55,7 +55,7 @@ execute if predicate hc:team/is_in_neutral_team \
     run \
     data modify storage hc:temp equip_armor.fx_args.dust_color \
     set from storage \
-    hc:main consts.team_presets[{internal_name:"neutral"}].dust_color
+    hc:main consts.team_presets[{internal_name:"hc:neutral"}].dust_color
 
 ## equip armor
 # loot armor and color

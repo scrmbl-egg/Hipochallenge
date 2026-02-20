@@ -46,7 +46,7 @@ function hc:team/get_self_team { \
 # get radius
 data modify storage hc:temp tank_k1_goat_horn.radius \
     set from storage hc:main \
-    consts.classes[{internal_name:"tank"}].\
+    consts.classes[{internal_name:"hc:tank"}].\
     kits[{id:1}].tank_k1_data.horn.radius
 
 # give all effect info effects

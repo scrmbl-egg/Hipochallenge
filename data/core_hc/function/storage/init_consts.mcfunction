@@ -64,7 +64,7 @@ data modify storage hc:main consts.team_presets append value { \
 
 # red -> team_presets[1]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"red", \
+    internal_name:"hc:red", \
     id:1, \
     default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
     name_color:"#ff3030", \
@@ -76,7 +76,7 @@ data modify storage hc:main consts.team_presets append value { \
 
 # yellow -> team_presets[2]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"yellow", \
+    internal_name:"hc:yellow", \
     id:2, \
     default_name:{translate:"hc.teams.colors.yellow",fallback:"YELLOW"}, \
     name_color:"#fffb0a", \
@@ -88,7 +88,7 @@ data modify storage hc:main consts.team_presets append value { \
 
 # green -> team_presets[3]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"green", \
+    internal_name:"hc:green", \
     id:3, \
     default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
     name_color:"#2ece49", \
@@ -100,7 +100,7 @@ data modify storage hc:main consts.team_presets append value { \
 
 # blue -> team_presets[4]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"blue", \
+    internal_name:"hc:blue", \
     id:4, \
     default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
     name_color:"#3f3bff", \
@@ -112,7 +112,7 @@ data modify storage hc:main consts.team_presets append value { \
 
 # purple -> team_presets[5]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"purple", \
+    internal_name:"hc:purple", \
     id:5, \
     default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
     name_color:"#df2fdf", \
@@ -124,7 +124,7 @@ data modify storage hc:main consts.team_presets append value { \
 
 # orange -> team_presets[6]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"orange", \
+    internal_name:"hc:orange", \
     id:6, \
     default_name:{translate:"hc.teams.colors.orange",fallback:"ORANGE"}, \
     name_color:"#ff811a", \
@@ -136,7 +136,7 @@ data modify storage hc:main consts.team_presets append value { \
 
 # cyan -> team_presets[7]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"cyan", \
+    internal_name:"hc:cyan", \
     id:7, \
     default_name:{translate:"hc.teams.colors.cyan",fallback:"CYAN"}, \
     name_color:"#34d5f1", \
@@ -149,7 +149,7 @@ data modify storage hc:main consts.team_presets append value { \
 ## CLASSES
 # tank -> classes[0]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"tank", \
+    internal_name:"hc:tank", \
     id:1, \
     name:{translate:"hc.class.tank.name",fallback:"Tank"}, \
     icon:{translate:"hc.class.tank.icon",fallback:"\u26e8"}, \
@@ -307,7 +307,7 @@ data modify storage hc:main consts.classes append value { \
 
 # marksman -> classes[1]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"marksman", \
+    internal_name:"hc:marksman", \
     id:2, \
     name:{translate:"hc.class.marksman.name",fallback:"Marksman"}, \
     icon:{translate:"hc.class.marksman.icon",fallback:"\ud83c\udff9"}, \
@@ -426,7 +426,7 @@ data modify storage hc:main consts.classes append value { \
 
 # assassin -> classes[2]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"assassin", \
+    internal_name:"hc:assassin", \
     id:3, \
     name:{translate:"hc.class.assassin.name",fallback:"Assassin"}, \
     icon:{translate:"hc.class.assassin.icon",fallback:"\ud83d\udde1"}, \
@@ -552,7 +552,7 @@ data modify storage hc:main consts.classes append value { \
 
 # support -> classes[3]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"support", \
+    internal_name:"hc:support", \
     id:4, \
     name:{translate:"hc.class.support.name",fallback:"Support"}, \
     icon:{translate:"hc.class.support.icon",fallback:"\u2795"}, \
@@ -650,7 +650,7 @@ data modify storage hc:main consts.classes append value { \
 
 # recon -> classes[4]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"recon", \
+    internal_name:"hc:recon", \
     id:5, \
     name:{translate:"hc.class.recon.name",fallback:"Recon"}, \
     icon:{translate:"hc.class.recon.icon",fallback:"\ud83d\udc41"}, \
@@ -761,7 +761,7 @@ data modify storage hc:main consts.classes append value { \
 
 # assault -> classes[5]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"assault", \
+    internal_name:"hc:assault", \
     id:6, \
     name:{translate:"hc.class.assault.name",fallback:"Assault"}, \
     icon:{translate:"hc.class.assault.icon",fallback:"\u2605"}, \

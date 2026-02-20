@@ -57,7 +57,7 @@ data remove storage hc:main vars.team_contexts.team2.custom_name
 data modify storage hc:main vars.team_contexts set value { \
     team1:{ \
         preset:{ \
-            internal_name:"red", \
+            internal_name:"hc:red", \
             id:1, \
             default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
             name_color:"#ff0000", \
@@ -70,7 +70,7 @@ data modify storage hc:main vars.team_contexts set value { \
     }, \
     team2:{ \
         preset:{ \
-            internal_name:"blue", \
+            internal_name:"hc:blue", \
             id:4, \
             default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
             name_color:"blue", \

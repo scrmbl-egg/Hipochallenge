@@ -10,5 +10,5 @@ advancement revoke @s \
 execute store result score @s hc.MarksmanKit3NewProjectileCooldown \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"marksman"}].\
+    classes[{internal_name:"hc:marksman"}].\
     kits[{id:3}].marksman_k3_data.bullets.new_first_cooldown_ticks

@@ -22,7 +22,7 @@ scoreboard objectives add __hc.NewProjectile dummy
 execute store result score __$hc_max __hc.NewProjectile \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"marksman"}].\
+    classes[{internal_name:"hc:marksman"}].\
     kits[{id:2}].marksman_k2_data.arrows.max_amount
 
 # add to max amount if perk 3 is equipped
@@ -38,7 +38,7 @@ execute if predicate { \
     store result score __$hc_added_projectiles __hc.NewProjectile \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"marksman"}].\
+    classes[{internal_name:"hc:marksman"}].\
     perks[{id:3}].marksman_p3_data.added_projectiles
 
 scoreboard players operation \
@@ -70,7 +70,7 @@ execute if score \
     store result score @s hc.MarksmanKit2NewProjectileCooldown \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"marksman"}].\
+    classes[{internal_name:"hc:marksman"}].\
     kits[{id:2}].marksman_k2_data.arrows.new_rest_cooldown_ticks
 
 # free memory

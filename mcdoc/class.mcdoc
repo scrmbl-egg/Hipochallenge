@@ -6,17 +6,17 @@ struct Class {
     /// Internal name of the class.
     internal_name: enum(string) {
         /// Tank class name.
-        Tank = "tank",
+        Tank = "hc:tank",
         /// Marksman class name.
-        Marksman = "marksman",
+        Marksman = "hc:marksman",
         /// Assassin class name.
-        Assassin = "assassin",
+        Assassin = "hc:assassin",
         /// Support class name.
-        Support = "support",
+        Support = "hc:support",
         /// Recon class name.
-        Recon = "recon",
+        Recon = "hc:recon",
         /// Assault class name.
-        Assault = "assault",
+        Assault = "hc:assault",
     },
     /// Internal numeric ID of the class.
     id: enum(int) {

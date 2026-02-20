@@ -23,7 +23,7 @@ $execute at @s \
     run \
     function hc:util/effect/give_ability_effects \
     with storage hc:main \
-    consts.classes[{internal_name:"recon"}].\
+    consts.classes[{internal_name:"hc:recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.explosion.effects_info
 
 # add detection
