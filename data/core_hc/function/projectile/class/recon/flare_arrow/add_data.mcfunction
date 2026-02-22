@@ -9,7 +9,7 @@
 data modify entity @s data."hc:entity/flare_arrow" set value { \
     owner_uuid:[I; 0, 0, 0, 0], \
     detected_team:"", \
-    aabb_params: { \
+    aabb_args: { \
         entity_selector:"", \
         on_detection_command:"data modify storage hc:temp flare_arrow.explode set value {}", \
         size:[0.0, 0.0, 0.0], \
@@ -69,11 +69,11 @@ function core_hc:projectile/class/recon/flare_arrow/get_selector_string \
 #   hc:temp new_flare_arrow
 #       entity_selector
 
-data modify entity @s data."hc:entity/flare_arrow".aabb_params.entity_selector \
+data modify entity @s data."hc:entity/flare_arrow".aabb_args.entity_selector \
     set from storage hc:temp new_flare_arrow.entity_selector
 
 ## get aabb's size
-data modify entity @s data."hc:entity/flare_arrow".aabb_params.size \
+data modify entity @s data."hc:entity/flare_arrow".aabb_args.size \
     set from storage \
     hc:main \
     consts.classes[{internal_name:"hc:recon"}].\
@@ -89,7 +89,7 @@ data modify entity @s data."hc:entity/flare_arrow".explosion.radius \
 
 # entity selector (copy from aabb data)
 data modify entity @s data."hc:entity/flare_arrow".explosion.entity_selector \
-    set from entity @s data."hc:entity/flare_arrow".aabb_params.entity_selector
+    set from entity @s data."hc:entity/flare_arrow".aabb_args.entity_selector
 
 # free storage memory
 data remove storage hc:temp new_flare_arrow

@@ -20,7 +20,7 @@ execute unless data entity @s data."hc:entity/flare_arrow" \
 execute at @s \
     run \
     function std:aabb/cast_centered \
-    with entity @s data."hc:entity/flare_arrow".aabb_params
+    with entity @s data."hc:entity/flare_arrow".aabb_args
 #>_
 # @out
 #   hc:temp data
@@ -31,7 +31,7 @@ execute at @s \
 # if it never finds an enemy, mark explosion directly when arrow hits a surface
 data modify storage hc:temp flare_arrow.on_detection_command \
     set from entity @s \
-    data."hc:entity/flare_arrow".aabb_params.on_detection_command
+    data."hc:entity/flare_arrow".aabb_args.on_detection_command
 
 execute if entity @s[nbt={shake:1b}] \
     run \
