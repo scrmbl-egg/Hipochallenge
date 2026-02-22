@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:compass",
+                    "name": "minecraft:paper",
                     "functions": [
                         {
                             "function": "minecraft:set_components",
@@ -14,6 +14,7 @@
                                     "translate": "",
                                     "fallback": "Training Menu"
                                 },
+                                "minecraft:item_model": "minecraft:knowledge_book",
                                 "minecraft:custom_data": {
                                     "hc:item/id": "training_menu"
                                 },
@@ -23,7 +24,7 @@
                                     "consume_seconds": 0,
                                     "has_consume_particles": false,
                                     "on_consume_effects": [],
-                                    "sound": "minecraft:ui.button.click"
+                                    "sound": "minecraft:item.book.page_turn"
                                 },
                                 "minecraft:use_remainder": {
                                     "id": "minecraft:compass",
