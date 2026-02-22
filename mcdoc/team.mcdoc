@@ -3,34 +3,38 @@ use ::java::util::text::TranslatedText
 use ::java::util::text::TextColor
 use ::java::util::avatar::Profile
 
-/// Struct for representing a team.
+/// Struct for representing a team preset.
 struct TeamPreset {
     /// Internal name of the team.
-    internal_name: TeamPresetName,
+    internal_name: (
+        #[canonical] TeamPresetInternalName |
+        #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
+    ),
     /// ID of the team preset.
-    id: TeamPresetId,
+    id: (#[canonical] TeamPresetId | int @ ..-1 | int @ 8..),
     /// Translated text of the team's default name.
     default_name: TranslatedText,
     /// Color of the team's name in team's prefix.
     name_color?: (#[color="hex_rgb"] string | #[color="named"] TextColor),
     /// Vanilla color of the team.
-    text_color?: TextColor,
+    text_color?: #[color="named"] TextColor,
     /// RGB of the dust particles for the team.
-    dust_color: #[color="dec_rgb"] [float] @ 3,
+    dust_color: #[color="dec_rgb"] [float @ 0..1] @ 3,
     /// Team's leather armor color.
     armor_dye_color: (
-		#[canonical] #[color="composite_rgb"] int |
-		#[color="dec_rgb"] [float] @ 3 |
-	),
+        #[canonical] #[color="composite_rgb"] int |
+        #[color="dec_rgb"] [float @ 0..1] @ 3 |
+    ),
     /// Team's custom armor trim material.
     trim_material: #[id="trim_material"] string,
 }
 
+/// Struct that represents the current context of a team.
 struct TeamContext {
     /// **(Nullable)** Custom name of the team.
     custom_name?: struct TeamNameText {
         ...TextBase,
-        text: string @ 1..16
+        text: string @ 1..16,
     },
     /// Team preset.
     preset: TeamPreset,
@@ -38,8 +42,8 @@ struct TeamContext {
     player_profiles: [Profile] @ 0..6,
 }
 
-/// All possible team color names.
-enum(string) TeamPresetName {
+/// Enum for team preset internal names
+enum(string) TeamPresetInternalName {
     /// Neutral team color name (gray).
     Neutral = "hc:neutral",
     /// Red team color name.
