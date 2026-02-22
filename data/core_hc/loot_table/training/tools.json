@@ -4,8 +4,8 @@
         {
             "entries": [
                 {
-                    "type": "minecraft:item",
-                    "name": "minecraft:spyglass"
+                    "type": "minecraft:loot_table",
+                    "value": "core_hc:training/training_menu"
                 }
             ],
             "rolls": 1
@@ -14,7 +14,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "core_hc:training/training_menu"
+                    "value": "core_hc:training/training_spyglass"
                 }
             ],
             "rolls": 1

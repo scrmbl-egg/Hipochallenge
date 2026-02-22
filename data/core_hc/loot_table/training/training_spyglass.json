@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:spyglass",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:lore": [
+                                    "",
+                                    "This item is only available in training mode"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
