@@ -52,7 +52,7 @@ data modify storage hc:main consts.limits set value { \
 ## TEAMS
 # neutral -> team_presets[0]
 data modify storage hc:main consts.team_presets append value { \
-    internal_name:"neutral", \
+    internal_name:"hc:neutral", \
     id:0, \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
     name_color:"#09d8f3", \
