@@ -16,7 +16,8 @@ struct KitBase {
         /// Loot table that will be given in the player's offhand slot.
         offhand: (#[id="loot_table"] string | ::java::data::loot::LootTable),
     },
-    /// Type of data this kit holds. This is used to identify the union variant of the kit data.
+    /// Type of data this kit holds. This is used to identify the union variant
+    /// of the kit data.
     data_type: string,
 }
 
@@ -51,7 +52,8 @@ type Kit = (
                 radius: double @ 0..,
                 /// Effects that will be given to enemies.
                 effects_info: AbilityEffects,
-                /// Amount of ticks that define the time frame the owner can recover their ability if the enemies are out of range.
+                /// Amount of ticks that define the time frame the owner can
+                /// recover their ability if the enemies are out of range.
                 recovery_ticks: int @ 0..,
             },
             /// Trident related data.
@@ -85,7 +87,8 @@ type Kit = (
                     /// Modifiers that are applied to the target.
                     modifiers: [AttributeModifier],
                 },
-                /// Data related to the de-buff that is given to the owner when targetting the spirit to other player.
+                /// Data related to the de-buff that is given to the owner when
+                /// targetting the spirit to other player.
                 owner_debuff: struct {
                     /// Modifiers that are applied to the owner.
                     modifiers: [AttributeModifier],
@@ -93,16 +96,20 @@ type Kit = (
             },
             /// Bubble shield related data.
             bubble_shield: struct {
-                /// Command that is executed on a random part of the bubble's surface for drawing.
+                /// Command that is executed on a random part of the bubble's
+                /// surface for drawing.
                 draw_command: #[command(max_length=32500)] string,
                 /// Radius of the bubble sphere.
                 radius: double @ 0..,
                 /// Radius for detecting high-speed arrows.
-                /// Used for guaranteeing that no fast arrows pass through the bubble.
+                ///
+                /// Used for guaranteeing that no fast arrows pass through the
+                /// bubble.
                 high_speed_arrow_detection_radius: double @ 0..,
                 /// Duration in ticks of the bubble's lifetime.
                 lifetime_ticks: int @ 0..,
-                /// Amount of ticks added to the bubble's lifetime when it successfully blocks a projectile.
+                /// Amount of ticks added to the bubble's lifetime when it
+                /// successfully blocks a projectile.
                 lifetime_ticks_added_on_impact: int @ 0..,
             },
         },
@@ -117,9 +124,11 @@ type Kit = (
             arrows: struct {
                 /// Maximum amount of arrows the owner can have.
                 max_amount: int @ 1..,
-                /// Cooldown of the first arrow given after shooting the last one.
+                /// Cooldown of the first arrow given after shooting the last
+                /// one.
                 new_first_cooldown_ticks: int @ 0..,
-                /// Cooldown of the rest of arrows right after the first new arrow is given.
+                /// Cooldown of the rest of arrows right after the first new
+                /// arrow is given.
                 new_rest_cooldown_ticks: int @ 0..
             },
         },
@@ -134,9 +143,11 @@ type Kit = (
             arrows: struct {
                 /// Maximum amount of arrows the owner can have.
                 max_amount: int @ 1..,
-                /// Cooldown of the first arrow given after shooting the last one.
+                /// Cooldown of the first arrow given after shooting the last
+                /// one.
                 new_first_cooldown_ticks: int @ 0..,
-                /// Cooldown of the rest of arrows right after the first new arrow is given.
+                /// Cooldown of the rest of arrows right after the first new
+                /// arrow is given.
                 new_rest_cooldown_ticks: int @ 0..,
             },
         },
@@ -151,9 +162,11 @@ type Kit = (
             bullets: struct {
                 /// Maximum amount of bullets the owner can have.
                 max_amount: int @ 1..,
-                /// Cooldown of the first bullet given after shooting the last one.
+                /// Cooldown of the first bullet given after shooting the last
+                /// one.
                 new_first_cooldown_ticks: int @ 0..,
-                /// Cooldown of the rest of bullets right after the first new bullet is given.
+                /// Cooldown of the rest of bullets right after the first new
+                /// bullet is given.
                 new_rest_cooldown_ticks: int @ 0..,
             },
             /// Revolver related data.
@@ -161,7 +174,8 @@ type Kit = (
                 /// Maximum amount of bullets that can be loaded into the gun.
                 max_loaded_bullet_amount: int @ 1..,
                 /// Cooldown ticks the next shot is going to take.
-                per_shot_cooldown_ticks: int @ 1.., // TODO: this should probably be moved to a consumable data component
+                // TODO: probably should be moved to a "consumable" component
+                per_shot_cooldown_ticks: int @ 1..,
                 /// Pitch rotation when the revolver is shot.
                 recoil_pitch_rotation: double @ -90.0..90.0,
             },
@@ -183,7 +197,8 @@ type Kit = (
                 on_owner_when_success: struct {
                     modifiers: [AttributeModifier],
                 },
-                /// Modifiers and effects applied to the enemy when they are parried.
+                /// Modifiers and effects applied to the enemy when they are
+                /// parried.
                 on_enemy_when_parried: struct {
                     /// Effects that are going to be applied.
                     effects_info: AbilityEffects,
@@ -200,7 +215,9 @@ type Kit = (
         /// Assassin's kit 2 variant data.
         assassin_k2_data: struct {
             stun_mechanism: struct {
+                /// Radius of the effects.
                 radius: double @ 0..,
+                /// Effects that will be given to enemies in range.
                 effects_info: AbilityEffects,
             },
         },
@@ -248,7 +265,8 @@ type Kit = (
         recon_k2_data: struct {
             /// Data for flare arrows.
             flare_arrow: struct {
-                /// Maximum amount of flare arrows the player can hold at a time.
+                /// Maximum amount of flare arrows the player can hold at a
+                /// time.
                 max_amount: int @ 1..,
                 /// Amount of ticks it will take to get another flare arrow.
                 cooldown_ticks: int @ 0..,

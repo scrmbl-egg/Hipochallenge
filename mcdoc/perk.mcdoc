@@ -10,7 +10,8 @@ struct PerkBase {
     name: TranslatedText,
     /// Command for equipping the perk.
     on_equip_command: #[command(max_length=32500)] string,
-    /// Type of data this perk holds. This is used to identify the union variant of the perk data.
+    /// Type of data this perk holds. This is used to identify the union
+    /// variant of the perk data.
     data_type: string,
 }
 
@@ -24,7 +25,8 @@ type Perk = (
         tank_p1_data: struct {
             /// Nutritious meal related data.
             nutritious_meal: struct {
-                /// Amount of ticks the food item takes appear in the player's inventory.
+                /// Amount of ticks the food item takes appear in the player's
+                /// inventory.
                 give_delay_ticks: int @ 1..,
             },
         },
@@ -52,7 +54,8 @@ type Perk = (
             close_ally_buff: struct {
                 /// Radius in which
                 radius: double @ 0..,
-                /// Attributes, whose values will be divided into the amount of players in the radius.
+                /// Attributes, whose values will be divided into the amount of
+                /// players in the radius.
                 attributes: [AttributeModifier],
             },
         },
@@ -63,7 +66,8 @@ type Perk = (
         data_type: "marksman_p1_data",
         /// Marksman's perk 1 variant data.
         marksman_p1_data: struct {
-            /// Magic/true damage done when the damaged enemy is suppressed or in the air.
+            /// Magic/true damage done when the damaged enemy is suppressed or
+            /// in the air.
             suppression_or_on_air_magic_damage: int @ 0..,
         },
     } |
@@ -105,7 +109,8 @@ type Perk = (
         data_type: "assassin_p2_data",
         /// Assassin's perk 2 variant data.
         assassin_p2_data: struct {
-            /// Health threshold (ignoring absorption) the enemy must be below to be prematurely killed.
+            /// Health threshold (ignoring absorption) the enemy must be below
+            /// to be prematurely killed.
             enemy_true_health_threshold: int @ 1..,
         },
     } |
@@ -115,7 +120,8 @@ type Perk = (
         data_type: "assassin_p3_data",
         /// Assassin's perk 3 variant data.
         assassin_p3_data: struct {
-            /// Armor toughness value set to the enemy when the owner/player hits them.
+            /// Armor toughness value set to the enemy when the owner/player
+            /// hits them.
             on_hit_by_owner_armor_toughness: int @ 0..,
         },
     } |
@@ -134,7 +140,8 @@ type Perk = (
         support_p2_data: struct {
             /// Data related to the explosion
             on_hit_explosion: struct {
-                /// Amount of ticks until the effect explosion appears after the player takes damage.
+                /// Amount of ticks until the effect explosion appears after
+                /// the player takes damage.
                 delay_ticks: int @ 1..,
                 /// Radius of the effect explosion.
                 radius: double @ 0..,
@@ -189,7 +196,8 @@ type Perk = (
         data_type: "assault_p1_data",
         /// Assault's perk 1 variant data.
         assault_p1_data: struct {
-            /// Radius of the explosion that disables other surrounding traps when one is disabled.
+            /// Radius of the explosion that disables other surrounding traps
+            /// when one is disabled.
             trap_disabling_explosion_radius: double @ 0..,
         },
     } |
@@ -199,7 +207,8 @@ type Perk = (
         data_type: "assault_p2_data",
         /// Assault's perk 2 variant data.
         assault_p2_data: struct {
-            /// Data related to the attributes of the enemy when the player successfully crowd-controls them via the class's abilities.
+            /// Data related to the attributes of the enemy when the player
+            /// successfully crowd-controls them via the class's abilities.
             on_enemy_crowd_controlled: struct {
                 /// Duration of the attributes given.
                 duration_ticks: int @ 1..,

@@ -2,23 +2,29 @@ dispatch mcdoc:custom_data[hc:item/id] to Id
 dispatch mcdoc:custom_data[hc:item/replace_with] to ReplaceItemLootTable
 dispatch mcdoc:custom_data[hc:item/clear_instantly] to ClearInstantly
 dispatch mcdoc:custom_data[hc:item/no_pickup] to NoPickup
-dispatch mcdoc:custom_data[hc:item/armor/apply_team_dye_color] to ApplyTeamDyeColor
-dispatch mcdoc:custom_data[hc:item/armor/apply_team_trim_material] to ApplyTeamTrimMaterial
+dispatch mcdoc:custom_data[hc:item/armor/apply_team_dye_color]
+    to ApplyTeamDyeColor
+dispatch mcdoc:custom_data[hc:item/armor/apply_team_trim_material]
+    to ApplyTeamTrimMaterial
 
 /// Custom item ID component.
 type Id = #[match_regex="\\b[a-zA-Z_]\\w*\\b"] string
 
-/// Component for `minecraft:use_remainder` items that must return to its original state.
+/// Component for `minecraft:use_remainder` items that must return to its
+/// original state.
 type ReplaceItemLootTable = #[id="loot_table"] string
 
 /// Component for items that must be cleared instantly from the inventory.
 struct ClearInstantly {}
 
-/// Component for items that will maximize the `PickupDelay` data parameter when dropped.
+/// Component for items that will maximize the `PickupDelay` data parameter
+/// when dropped.
 struct NoPickup {}
 
-/// Component for overriding the `minecraft:dyed_color` component with the player's team color.
+/// Component for overriding the `minecraft:dyed_color` component with the
+/// player's team color.
 struct ApplyTeamDyeColor {}
 
-/// Component for overriding the `"minecraft:trim".material` component with the player's team color.
+/// Component for overriding the `"minecraft:trim".material` component with the
+/// player's team color.
 struct ApplyTeamTrimMaterial {}

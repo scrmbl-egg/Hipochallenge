@@ -3,7 +3,8 @@ dispatch mcdoc:custom_data[hc:entity/training_npc] to TrainingNpc
 dispatch mcdoc:custom_data[hc:entity/spirit] to TankSpirit
 dispatch mcdoc:custom_data[hc:entity/flare_arrow] to FlareArrow
 
-/// Component for items that will maximize the `PickupDelay` data parameter when dropped.
+/// Component for items that will maximize the `PickupDelay` data parameter
+/// when dropped.
 struct ItemNoPickup {}
 
 /// Component for the NPCs available in training mode.
@@ -16,7 +17,8 @@ struct TrainingNpc {
 struct TankSpirit {
     /// UUID of the owner of the spirit.
     owner_uuid: #[uuid] int[] @ 4,
-    /// UUID of the target, to which the spirit will give its armor attribute modifier.
+    /// UUID of the target, to which the spirit will give its armor attribute
+    /// modifier.
     target_uuid: #[uuid] int[] @ 4,
     /// UUID of the marker that indicates the where the spirit should move to.
     goal_uuid: #[uuid] int[] @ 4,

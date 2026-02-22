@@ -5,6 +5,7 @@ struct EffectCommandParameters {
     /// Effect amplifier.
     amplifier: int @ 0..,
     /// Duration in seconds of the effect.
+    ///
     /// `"infinite"` can be used to indicate infinite duration.
     seconds: (#[canonical] int @ 0.. | "infinite"),
     /// `true` if the particles of the effect are hidden.
