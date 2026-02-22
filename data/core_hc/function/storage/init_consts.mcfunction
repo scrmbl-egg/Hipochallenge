@@ -58,8 +58,8 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#09d8f3", \
     text_color:"white", \
     dust_color:[0.9f,0.9f,0.9f], \
-    armor_dye_color:15329769, \
-    trim_material:"minecraft:quartz", \
+    armor_dye_color:10403008, \
+    trim_material:"minecraft:iron", \
 }
 
 # red -> team_presets[1]
@@ -82,7 +82,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#fffb0a", \
     text_color:"yellow", \
     dust_color:[1.0f,1.0f,0.0f], \
-    armor_dye_color:16766252, \
+    armor_dye_color:14662182, \
     trim_material:"minecraft:gold", \
 }
 
@@ -94,7 +94,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#2ece49", \
     text_color:"green", \
     dust_color:[0.0f,1.0f,0.0f], \
-    armor_dye_color:5162826, \
+    armor_dye_color:4104251, \
     trim_material:"minecraft:emerald", \
 }
 
@@ -118,7 +118,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#df2fdf", \
     text_color:"light_purple", \
     dust_color:[1.0f,0.0f,1.0f], \
-    armor_dye_color:13061821, \
+    armor_dye_color:11158177, \
     trim_material:"minecraft:amethyst", \
 }
 
@@ -130,7 +130,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#ff811a", \
     text_color:"gold", \
     dust_color:[1.0f,0.455f,0.141f], \
-    armor_dye_color:16739609, \
+    armor_dye_color:14967062, \
     trim_material:"minecraft:resin", \
 }
 
@@ -142,7 +142,7 @@ data modify storage hc:main consts.team_presets append value { \
     name_color:"#34d5f1", \
     text_color:"aqua", \
     dust_color:[0.20f,0.83f,1.0f], \
-    armor_dye_color:1953486, \
+    armor_dye_color:1819330, \
     trim_material:"minecraft:diamond", \
 }
 

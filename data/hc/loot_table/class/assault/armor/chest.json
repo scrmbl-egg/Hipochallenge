@@ -13,9 +13,9 @@
                                     "hc:item/armor/apply_team_dye_color": {},
                                     "hc:item/armor/apply_team_trim_material": {}
                                 },
-                                "minecraft:dyed_color": 15329769,
+                                "minecraft:dyed_color": 10403008,
                                 "minecraft:trim": {
-                                    "material": "minecraft:quartz",
+                                    "material": "minecraft:iron",
                                     "pattern": "minecraft:silence"
                                 }
                             }
