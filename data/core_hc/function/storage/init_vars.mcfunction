@@ -60,10 +60,10 @@ data modify storage hc:main vars.team_contexts set value { \
             internal_name:"hc:red", \
             id:1, \
             default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
-            name_color:"#ff0000", \
+            name_color:"#ff3030", \
             text_color:"red", \
             dust_color:[1.0f,0.0f,0.0f], \
-            armor_dye_color:11546150, \
+            armor_dye_color:10952471, \
             trim_material:"minecraft:redstone", \
         }, \
         player_profiles:[], \
@@ -73,10 +73,10 @@ data modify storage hc:main vars.team_contexts set value { \
             internal_name:"hc:blue", \
             id:4, \
             default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
-            name_color:"blue", \
+            name_color:"#3f3bff", \
             text_color:"blue", \
             dust_color:[0.0f,0.0f,1.0f], \
-            armor_dye_color:3949738, \
+            armor_dye_color:1977039, \
             trim_material:"minecraft:lapis", \
         }, \
         player_profiles:[], \
