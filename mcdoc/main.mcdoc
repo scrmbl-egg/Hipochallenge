@@ -1,7 +1,7 @@
 use super::team::TeamPreset
 use super::team::TeamContext
 use super::class::Class
-use super::game::GameMode
+use super::game::GameModePreset
 use super::game::GameContext
 use super::level::Level
 
@@ -17,7 +17,7 @@ struct MainStorage {
             /// Duration of the match request notification.
             match_request_duration_seconds: int @ 1..,
             /// Available game modes.
-            modes: [GameMode],
+            modes: [GameModePreset],
         },
         limits: struct Limits {
             no_gravity_projectiles_lifetime_ticks: int @ 0..

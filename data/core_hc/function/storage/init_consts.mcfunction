@@ -7,6 +7,7 @@
 # @returns
 #   Result: 1 if all constants are initialised
 
+# TODO: implement game state functions (current ones are placeholders)
 # TODO: Complete the list of constants
 
 function hc:msg/debug/send_info { \
@@ -24,22 +25,78 @@ data modify storage hc:main consts.game set value { \
     match_request_duration_seconds:60, \
     modes:[ \
         { \
-            internal_name:"casual", \
+            internal_name:"hc:casual", \
             id:0, \
             name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
-            necessary_wins:5, \
             team_size:3, \
-            min_win_lead_for_victory:1, \
-            round_duration_seconds:120, \
+            states:[ \
+                { \
+                    internal_name:"select_kit", \
+                    id:1, \
+                    enter_function:"std:empty", \
+                    tick_function:"std:empty", \
+                    exit_function:"std:empty", \
+                }, \
+                { \
+                    internal_name:"battle", \
+                    id:2, \
+                    enter_function:"std:empty", \
+                    tick_function:"std:empty", \
+                    exit_function:"std:empty", \
+                }, \
+            ], \
+            casual_data:{ \
+                rounds_to_win:5, \
+                round_duration_seconds:120, \
+                intermission_duration_seconds:30, \
+            }, \
         }, \
         { \
-            internal_name:"competitive", \
+            internal_name:"hc:competitive", \
             id:1, \
             name:{translate:"hc.gamemode.competitive",fallback:"Competitive"}, \
-            necessary_wins:5, \
             team_size:3, \
-            min_win_lead_for_victory:2, \
-            round_duration_seconds:120, \
+            states:[ \
+                { \
+                    internal_name:"select_kit", \
+                    id:1, \
+                    enter_function:"std:empty", \
+                    tick_function:"std:empty", \
+                    exit_function:"std:empty", \
+                }, \
+                { \
+                    internal_name:"battle", \
+                    id:1, \
+                    enter_function:"std:empty", \
+                    tick_function:"std:empty", \
+                    exit_function:"std:empty", \
+                }, \
+            ], \
+            competitive_data:{ \
+                rounds_to_win:5, \
+                min_winning_lead:2, \
+                round_duration_seconds:120, \
+                intermission_duration_seconds:20, \
+            }, \
+        }, \
+        { \
+            internal_name:"hc:deathmatch", \
+            id:2, \
+            name:{translate:"hc.gamemode.deathmatch",fallback:"Deathmatch"}, \
+            team_size:3, \
+            states:[ \
+                { \
+                    internal_name:"battle", \
+                    id:1, \
+                    enter_function:"std:empty", \
+                    tick_function:"std:empty", \
+                    exit_function:"std:empty", \
+                }, \
+            ], \
+            deathmatch_data:{ \
+                kills_to_win:30, \
+                duration_seconds:300, \
+            }, \
         }, \
     ], \
 }

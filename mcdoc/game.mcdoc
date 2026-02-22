@@ -3,10 +3,13 @@ use super::level::LevelId
 
 /// Game context/global variables struct.
 struct GameContext {
-    /// Current game state.
-    state: GameState,
     /// Current game mode data.
-    mode: GameMode,
+    mode: struct GameModeContext {
+        /// Current state of the game mode.
+        state: GameModeState,
+        /// Game mode preset.
+        preset: GameModePreset,
+    },
     /// Amount of players playing the game, doesn't count spectators.
     users_playing: int @ 0..,
     /// Current round number.
@@ -22,61 +25,97 @@ struct GameContext {
 }
 
 /// Game mode struct.
-struct GameMode {
-    /// Internal name of the game mode.
-    internal_name: GameModeName,
+struct GameModePresetBase {
+    /// Internal name of the game mode preset.
+    internal_name: #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string,
     /// Internal numeric ID of the game mode.
-    id: GameModeId,
+    id: (#[canonical] GameModeId | int @ ..-1 | int @ 3..),
     /// Translated text for the game mode name.
     name: TranslatedText,
-    /// Duration of a game round in seconds.
-    round_duration_seconds: int @ 60..,
-    /// Amount of rounds/points that must be won by default to win a game.
-    necessary_wins: int @ 1..,
     /// Size of the two teams in this game mode.
     team_size: int @ 1..6,
-    /// Minimum amount of rounds/points that the winning team must lead with to win the game.
-    min_win_lead_for_victory: int @ 1..,
+    /// All possible states.
+    states: [GameModeState],
 }
 
-/// Game states of the game.
-enum(string) GameState {
-    /// State where the players are not playing.
-    NotPlaying = "not_playing",
-    /// State where a match is requested and is waiting for players.
-    WaitingForPlayers = "waiting_for_players",
-    /// State where all players have joined and are selecting their team.
-    SelectingTeam = "selecting_team",
-    /// State where the teams are decided, and a random player of the team decides the name.
-    NamingTeam = "naming_team",
-    /// State where the players decide on a color for the team.
-    SelectingTeamColor = "selecting_team_color",
-    /// State where the players select their class for the game.
-    SelectingClasses = "selecting_classes",
-    /// State where the players select/ban/decide on a level for the game.
-    SelectingLevel = "selecting_level",
-    /// State where the players are shown the level they are going to play.
-    LevelIntro = "level_intro",
-    /// State where the players select the kit for the next round.
-    SelectingKit = "selecting_kit",
-    /// State where the players wait for the round to start.
-    StartingRound = "starting_round",
-    /// State where the players are playing the round.
-    PlayingRound = "playing_round",
-    /// State where the players have finished the round.
-    EndingRound = "ending_round",
-    /// State where the players have finished the match and a winner is announced.
-    EndingMatch = "ending_match",
+struct GameModeState {
+    /// Internal name of the game mode preset.
+    internal_name: string,
+    /// Numeric ID of the state.
+    ///
+    /// `0` is not allowed, since returning it in the specified `tick_function`
+    /// means ending the match.
+    id: (int @ ..-1 | int @ 1..),
+    /// Function that is run before the state is processed every tick.
+    enter_function: #[id="function"] string,
+    /// Function that is run every tick for processing the game mode's state.
+    ///
+    /// This function must return an `int` that represents the next state.
+    /// `0` is reserved for indicating the match has to end (and thus, stopping
+    /// the game state machine).
+    ///
+    /// Example:
+    /// ```mcfunction
+    /// # go to state with ID of 1
+    /// execute if predicate custom:example_predicate run return 1
+    ///
+    /// # stop the match
+    /// execute unless predicate custom:example_predicate run return 0
+    /// ```
+    tick_function: #[id="function"] string,
+    /// Function that is run just before the next state starts.
+    exit_function: #[id="function"] string,
 }
 
-enum(string) GameModeName {
-    Casual = "casual",
-    Competitive = "competitive",
-    Deathmatch = "deathmatch",
-}
-
+/// Game mode ID enum.
 enum(int) GameModeId {
+    /// Casual game mode.
     Casual = 0,
+    /// Competitive game mode.
     Competitive = 1,
+    /// Deathmatch game mode.
     DeathMatch = 2,
 }
+
+type GameModePreset = (
+    GameModePresetBase |
+    struct CasualGameMode {
+        ...GameModePresetBase,
+        internal_name: "hc:casual",
+        id:0,
+        /// Casual game mode data.
+        casual_data: struct {
+            ...struct RoundBasedData {
+                /// Amount of rounds a team must win to win the whole match.
+                rounds_to_win: int @ 1..,
+                /// Duration of a round in seconds.
+                round_duration_seconds: int @ 1..,
+                /// Duration of the kit and perk selection intermission.
+                intermission_duration_seconds: int @ 1..,
+            },
+        }
+    } |
+    struct CompetitiveGameMode {
+        ...GameModePresetBase,
+        internal_name: "hc:competitive",
+        id:1,
+        /// Competitive game mode data.
+        competitive_data: struct {
+            ...RoundBasedData,
+            /// Won round lead to win the match.
+            min_winning_lead: int @ 0..,
+        }
+    } |
+    struct DeathMatchGameMode {
+        ...GameModePresetBase,
+        internal_name: "hc:deathmatch",
+        id:2,
+        /// Deathmatch game mode data.
+        deathmatch_data: struct {
+            /// Amount of kills a team must do to win the match prematurely.
+            kills_to_win: int @ 1..,
+            /// Duration of the match in seconds.
+            duration_seconds: int @ 1..,
+        }
+    }
+)

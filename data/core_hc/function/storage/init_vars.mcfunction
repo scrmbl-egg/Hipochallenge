@@ -29,15 +29,41 @@ data modify storage hc:main vars.reload_count \
 
 ## GAME CONTEXTS
 data modify storage hc:main vars.game_context set value { \
-    state:"not_playing", \
     mode:{ \
-        internal_name:"casual", \
-        id:0, \
-        name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
-        necessary_wins:5, \
-        team_size:3, \
-        min_win_lead_for_victory:1, \
-        round_duration_seconds:120, \
+        state:{ \
+            internal_name:"select_kit", \
+            id:1, \
+            enter_function:"std:empty", \
+            tick_function:"std:empty", \
+            exit_function:"std:empty", \
+        }, \
+        preset:{ \
+            internal_name:"hc:casual", \
+            id:0, \
+            name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
+            team_size:3, \
+            states:[ \
+                { \
+                    internal_name:"select_kit", \
+                    id:1, \
+                    enter_function:"std:empty", \
+                    tick_function:"std:empty", \
+                    exit_function:"std:empty", \
+                }, \
+                { \
+                    internal_name:"battle", \
+                    id:2, \
+                    enter_function:"std:empty", \
+                    tick_function:"std:empty", \
+                    exit_function:"std:empty", \
+                }, \
+            ], \
+            casual_data:{ \
+                rounds_to_win:5, \
+                round_duration_seconds:120, \
+                intermission_duration_seconds:30, \
+            }, \
+        }, \
     }, \
     level_id:0b, \
     banned_level_ids:[], \
