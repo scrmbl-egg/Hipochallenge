@@ -27,8 +27,9 @@
                                     "sound": "minecraft:item.book.page_turn"
                                 },
                                 "minecraft:use_remainder": {
-                                    "id": "minecraft:compass",
+                                    "id": "minecraft:paper",
                                     "components": {
+                                        "minecraft:item_model": "minecraft:knowledge_book",
                                         "minecraft:custom_data": {
                                             "hc:item/replace_with": "core_hc:training/training_menu"
                                         }
