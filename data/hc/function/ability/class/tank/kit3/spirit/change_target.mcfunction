@@ -27,13 +27,13 @@ data modify storage hc:temp spirit.max_distance set from \
 data modify storage hc:temp spirit.owner_uuid set from entity @s UUID
 
 # if not sneaking, select a target player
-execute unless predicate std:input/sneak \
+execute unless predicate std:player/input/sneak \
     run \
     function hc:util/select_player \
     with storage hc:temp spirit
 
 # if sneaking, select self as target
-execute if predicate std:input/sneak \
+execute if predicate std:player/input/sneak \
     run \
     data modify storage hc:temp spirit.target_uuid set from entity @s UUID
 
