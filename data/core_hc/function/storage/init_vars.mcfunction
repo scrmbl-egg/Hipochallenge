@@ -30,13 +30,6 @@ data modify storage hc:main vars.reload_count \
 ## GAME CONTEXTS
 data modify storage hc:main vars.game_context set value { \
     mode:{ \
-        state:{ \
-            internal_name:"select_kit", \
-            id:1, \
-            enter_function:"std:empty", \
-            tick_function:"std:empty", \
-            exit_function:"std:empty", \
-        }, \
         preset:{ \
             internal_name:"hc:casual", \
             id:0, \
@@ -46,16 +39,16 @@ data modify storage hc:main vars.game_context set value { \
                 { \
                     internal_name:"select_kit", \
                     id:1, \
-                    enter_function:"std:empty", \
-                    tick_function:"std:empty", \
-                    exit_function:"std:empty", \
+                    on_enter_function:"std:empty", \
+                    on_tick_function:"std:empty", \
+                    on_exit_function:"std:empty", \
                 }, \
                 { \
                     internal_name:"battle", \
                     id:2, \
-                    enter_function:"std:empty", \
-                    tick_function:"std:empty", \
-                    exit_function:"std:empty", \
+                    on_enter_function:"std:empty", \
+                    on_tick_function:"std:empty", \
+                    on_exit_function:"std:empty", \
                 }, \
             ], \
             casual_data:{ \
@@ -65,12 +58,8 @@ data modify storage hc:main vars.game_context set value { \
             }, \
         }, \
     }, \
-    level_id:0b, \
     banned_level_ids:[], \
     users_playing:0, \
-    round:1, \
-    team1_wins:0, \
-    team2_wins:0, \
 }
 
 ## TEAM CONTEXTS

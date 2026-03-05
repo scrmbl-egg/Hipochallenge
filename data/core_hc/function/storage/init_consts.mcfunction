@@ -33,16 +33,17 @@ data modify storage hc:main consts.game set value { \
                 { \
                     internal_name:"select_kit", \
                     id:1, \
-                    enter_function:"std:empty", \
-                    tick_function:"std:empty", \
-                    exit_function:"std:empty", \
+                    on_enter_function:"std:empty", \
+                    on_tick_function:"std:empty", \
+                    on_exit_function:"std:empty", \
+                    start_state:{}, \
                 }, \
                 { \
                     internal_name:"battle", \
                     id:2, \
-                    enter_function:"std:empty", \
-                    tick_function:"std:empty", \
-                    exit_function:"std:empty", \
+                    on_enter_function:"std:empty", \
+                    on_tick_function:"std:empty", \
+                    on_exit_function:"std:empty", \
                 }, \
             ], \
             casual_data:{ \
@@ -60,16 +61,17 @@ data modify storage hc:main consts.game set value { \
                 { \
                     internal_name:"select_kit", \
                     id:1, \
-                    enter_function:"std:empty", \
-                    tick_function:"std:empty", \
-                    exit_function:"std:empty", \
+                    on_enter_function:"std:empty", \
+                    on_tick_function:"std:empty", \
+                    on_exit_function:"std:empty", \
+                    start_state:{}, \
                 }, \
                 { \
                     internal_name:"battle", \
-                    id:1, \
-                    enter_function:"std:empty", \
-                    tick_function:"std:empty", \
-                    exit_function:"std:empty", \
+                    id:2, \
+                    on_enter_function:"std:empty", \
+                    on_tick_function:"std:empty", \
+                    on_exit_function:"std:empty", \
                 }, \
             ], \
             competitive_data:{ \
@@ -88,9 +90,10 @@ data modify storage hc:main consts.game set value { \
                 { \
                     internal_name:"battle", \
                     id:1, \
-                    enter_function:"std:empty", \
-                    tick_function:"std:empty", \
-                    exit_function:"std:empty", \
+                    start_state:{}, \
+                    on_enter_function:"std:empty", \
+                    on_tick_function:"std:empty", \
+                    on_exit_function:"std:empty", \
                 }, \
             ], \
             deathmatch_data:{ \

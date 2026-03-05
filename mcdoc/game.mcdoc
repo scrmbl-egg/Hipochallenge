@@ -1,25 +1,21 @@
 use ::java::util::text::TranslatedText
+use ::java::util::text::TextColor
+use super::level::Level
 use super::level::LevelId
 
 /// Game context/global variables struct.
 struct GameContext {
     /// Current game mode data.
     mode: struct GameModeContext {
-        /// Current state of the game mode.
-        state: GameModeState,
+        /// **Nullable:** Current state of the game mode. If this field is
+        /// not present (i.e. null), it means there is no current state, and
+        /// thus, a match isn't being currently played.
+        state?: GameModeState,
         /// Game mode preset.
         preset: GameModePreset,
     },
     /// Amount of players playing the game, doesn't count spectators.
     users_playing: int @ 0..,
-    /// Current round number.
-    round: int @ 1..,
-    /// ID of the current level being played.
-    level_id: LevelId,
-    /// Amount of points/rounds won by Team 1.
-    team1_wins: int @ 0..,
-    /// Amount of points/rounds won by Team 2.
-    team2_wins: int @ 0..,
     /// List of banned level IDs.
     banned_level_ids: [LevelId],
 }
@@ -34,37 +30,64 @@ struct GameModePresetBase {
     name: TranslatedText,
     /// Size of the two teams in this game mode.
     team_size: int @ 1..6,
-    /// All possible states.
-    states: [GameModeState],
+    /// List of all possible states of the game mode.
+    ///
+    /// To specify which state goes first when the game mode state machine
+    /// starts, the `start_state` flag must be included (since it's a flag, the
+    /// value must be an empty struct `{}`).
+    ///
+    /// ## Note
+    /// If the `start_state` flag is not well set, the state machine will
+    /// decide the first state of the game mode in the following ways:
+    ///
+    /// - **If no state has the `start_state` flag:** the first state in the
+    /// list will be considered the first state.
+    /// - **If multiple states have the `start_state` flag:** the first state
+    /// in the list that specifies the flag will be considered the first state.
+    states: [GameModeState] @ 1..,
 }
 
+/// Struct for game modes.
 struct GameModeState {
     /// Internal name of the game mode preset.
     internal_name: string,
     /// Numeric ID of the state.
     ///
-    /// `0` is not allowed, since returning it in the specified `tick_function`
-    /// means ending the match.
+    /// `0` is not allowed, since returning it in the specified
+    /// `on_tick_function` means ending the match.
     id: (int @ ..-1 | int @ 1..),
-    /// Function that is run before the state is processed every tick.
-    enter_function: #[id="function"] string,
-    /// Function that is run every tick for processing the game mode's state.
+    /// Callback function that is called before the state is processed every
+    /// tick.
+    on_enter_function: #[id="function"] string,
+    /// Callback function that is called every tick for processing the game
+    /// mode's state.
     ///
-    /// This function must return an `int` that represents the next state.
-    /// `0` is reserved for indicating the match has to end (and thus, stopping
-    /// the game state machine).
+    /// The specified function must return an `int` that matches the `id` field
+    /// of the next state. `0` is reserved for indicating the match has to end
+    /// (and thus, stopping the game state machine). If no `int` value is
+    /// returned by the function, the state machine will interpret the current
+    /// state is still desired (same as if it returned its own `id`).
     ///
-    /// Example:
+    /// ### Example
     /// ```mcfunction
-    /// # go to state with ID of 1
+    /// #>custom:my_game_mode/select_kit/tick
+    ///
+    /// # go to current game mode's state with ID of 1
     /// execute if predicate custom:example_predicate run return 1
     ///
     /// # stop the match
     /// execute unless predicate custom:example_predicate run return 0
     /// ```
-    tick_function: #[id="function"] string,
-    /// Function that is run just before the next state starts.
-    exit_function: #[id="function"] string,
+    on_tick_function: #[id="function"] string,
+    /// Callback function that is called just before the next state starts.
+    on_exit_function: #[id="function"] string,
+    /// Flag that specifies this state is the first one when the game mode
+    /// starts.
+    ///
+    /// ### Note
+    /// If multiple states in the list have this flag, the first in the list
+    /// that specifies this flag will be the starting state.
+    start_state?: struct {},
 }
 
 /// Game mode ID enum.
@@ -77,12 +100,13 @@ enum(int) GameModeId {
     DeathMatch = 2,
 }
 
+/// Union type that encapsulates all game mode types.
 type GameModePreset = (
     GameModePresetBase |
     struct CasualGameMode {
         ...GameModePresetBase,
         internal_name: "hc:casual",
-        id:0,
+        id: 0,
         /// Casual game mode data.
         casual_data: struct {
             ...struct RoundBasedData {
@@ -93,29 +117,29 @@ type GameModePreset = (
                 /// Duration of the kit and perk selection intermission.
                 intermission_duration_seconds: int @ 1..,
             },
-        }
+        },
     } |
     struct CompetitiveGameMode {
         ...GameModePresetBase,
         internal_name: "hc:competitive",
-        id:1,
+        id: 1,
         /// Competitive game mode data.
         competitive_data: struct {
             ...RoundBasedData,
             /// Won round lead to win the match.
             min_winning_lead: int @ 0..,
-        }
+        },
     } |
     struct DeathMatchGameMode {
         ...GameModePresetBase,
         internal_name: "hc:deathmatch",
-        id:2,
+        id: 2,
         /// Deathmatch game mode data.
         deathmatch_data: struct {
             /// Amount of kills a team must do to win the match prematurely.
             kills_to_win: int @ 1..,
             /// Duration of the match in seconds.
             duration_seconds: int @ 1..,
-        }
+        },
     }
 )
