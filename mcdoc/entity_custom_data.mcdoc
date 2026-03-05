@@ -1,11 +1,16 @@
+use ::mc_std::mcdoc::aabb::AabbCastCenteredParameters
+
+
 dispatch mcdoc:custom_data[hc:entity/item/no_pickup] to ItemNoPickup
 dispatch mcdoc:custom_data[hc:entity/training_npc] to TrainingNpc
 dispatch mcdoc:custom_data[hc:entity/spirit] to TankSpirit
 dispatch mcdoc:custom_data[hc:entity/flare_arrow] to FlareArrow
 
+
 /// Component for items that will maximize the `PickupDelay` data parameter
 /// when dropped.
 struct ItemNoPickup {}
+
 
 /// Component for the NPCs available in training mode.
 struct TrainingNpc {
@@ -13,30 +18,38 @@ struct TrainingNpc {
     owner_uuid: #[uuid] int[] @ 4,
 }
 
+
 /// Component for Tank Kit 3 spirit.
 struct TankSpirit {
     /// UUID of the owner of the spirit.
     owner_uuid: #[uuid] int[] @ 4,
+
     /// UUID of the target, to which the spirit will give its armor attribute
     /// modifier.
     target_uuid: #[uuid] int[] @ 4,
+
     /// UUID of the marker that indicates the where the spirit should move to.
     goal_uuid: #[uuid] int[] @ 4,
 }
+
 
 /// Component for Recon Kit 2 flare arrows.
 struct FlareArrow {
     /// UUID of the player/entity that shot the flare arrow.
     owner_uuid: #[uuid] int[] @ 4,
+
     /// Team that is going to be detected by the flare arrow.
     detected_team: #[team] string,
+
     /// Arguments for the arrow's AABB casting.
-    aabb_args: super::aabb::AabbCastCenteredParameters,
+    aabb_args: AabbCastCenteredParameters,
+
     /// Flare arrow explosion data.
     explosion: struct {
         /// Explosion radius.
         radius: double @ 0..,
+
         /// Entities that are going to be affected by the explosion.
         entity_selector: #[entity] #[selector] string,
-    }
+    },
 }

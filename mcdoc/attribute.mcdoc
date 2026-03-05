@@ -1,23 +1,34 @@
 use ::java::util::attribute::AttributeOperation
 
+
 /// Struct for parameters of the attribute modifier command.
 struct AttributeModifierCommmandParameters {
     /// ID of the modifier.
     id: #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string,
+
     /// Attribute name.
     attribute: #[id=attribute] string,
+
     /// Modifier operation.
     operation: AttributeOperation,
+
     /// Modifier value.
     value: double,
 }
 
+
+/// Struct for time
 struct TimedAttributeModifier {
+    /// Duration in ticks of the attribute modifier.
+    duration_ticks: int @ 1..,
+
     ...AttributeModifierCommmandParameters,
-    ticks: int @ 1..,
 }
 
 struct AbilityAttributes {
+    /// List of permanent attribute modifiers.
     permanent: [AttributeModifierCommmandParameters],
+
+    /// List of
     timed: [TimedAttributeModifier],
 }

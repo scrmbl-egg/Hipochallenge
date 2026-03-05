@@ -1,6 +1,9 @@
 use ::java::util::text::TextColor
 use ::java::util::text::TranslatedText
 use ::java::data::loot::LootTable
+use super::kit::Kit
+use super::perk::Perk
+
 
 /// Game class struct.
 struct Class {
@@ -9,85 +12,117 @@ struct Class {
         #[canonical] ClassInternalName |
         #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
+
     /// Internal numeric ID of the class.
     id: (#[canonical] ClassId | int @ ..-1 | int @ 7..),
+
     /// Translated text for the class name.
     name: TranslatedText,
+
     /// Translated text for the class's Unicode icon.
     icon: TranslatedText,
+
     /// RGB of the dust particles for the class.
     dust_color: #[color="dec_rgb"] [float @ 0..1] @ 3,
+
     /// Class custom attributes.
     attributes: struct {
         /// Maximum health attribute.
         max_health: int @ 1..,
+
         /// Armor attribute.
         armor: int @ 0..,
+
         /// Armor toughness attribute.
         armor_toughness: int @ 0..,
+
         /// Scale attribute.
         scale: double @ 0.0625..16,
+
         /// Burning time attribute.
         burning_time: double @ 0..1024,
+
         /// Explosion knockback resistance attribute.
         explosion_knockback_resistance: double @ 0..1,
     },
+
     /// Player list class information.
     list_info: struct ClassListInfo {
         /// Color for the player's class name in the player list.
         class_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+
         /// Color for the player's kit name in the player list.
         kit_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+
         /// Color for the player's perk name in the player list.
         perk_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
     },
+
     /// Spawned loot table on player's death.
     death_loot_table: (#[id="loot_table"] string | LootTable),
+
     /// Loot tables for the class's armor.
     armor_loot_tables: struct ArmorLootTables {
         /// Loot table for the player's head slot item.
         head: (#[id="loot_table"] string | LootTable),
+
         /// Loot table for the player's chest slot item.
         chest: (#[id="loot_table"] string | LootTable),
+
         /// Loot table for the player's legs slot item.
         legs: (#[id="loot_table"] string | LootTable),
+
         /// Loot table for the player's feet slot item.
         feet: (#[id="loot_table"] string | LootTable),
     },
+
     /// List of class kits.
-    kits: [super::kit::Kit] @ 3,
+    kits: [Kit] @ 3,
+
     /// List of class perks.
-    perks: [super::perk::Perk] @ 3,
+    perks: [Perk] @ 3,
 }
+
 
 /// Enum for class internal names.
 enum(string) ClassInternalName {
     /// Tank class name.
     Tank = "hc:tank",
+
     /// Marksman class name.
     Marksman = "hc:marksman",
+
     /// Assassin class name.
     Assassin = "hc:assassin",
+
     /// Support class name.
     Support = "hc:support",
+
     /// Recon class name.
     Recon = "hc:recon",
+
     /// Assault class name.
     Assault = "hc:assault",
 }
+
 
 /// Enum for class numeric IDs.
 enum(int) ClassId {
     /// Tank class ID.
     Tank = 1,
+
     /// Marksman class ID.
     Marksman = 2,
+
     /// Assassin class ID.
     Assassin = 3,
+
     /// Support class ID.
     Support = 4,
+
     /// Recon class ID.
     Recon = 5,
+
     /// Assault class ID.
     Assault = 6,
 }

@@ -3,19 +3,23 @@ use ::java::util::text::TextColor
 use super::level::Level
 use super::level::LevelId
 
+
 /// Game context/global variables struct.
 struct GameContext {
     /// Current game mode data.
     mode: struct GameModeContext {
-        /// **Nullable:** Current state of the game mode. If this field is
-        /// not present (i.e. null), it means there is no current state, and
-        /// thus, a match isn't being currently played.
+        /// **Nullable:** Current state of the game mode. If this field is not
+        /// present (i.e. null), it means there is no current state, and thus,
+        /// a match isn't being currently played.
         state?: GameModeState,
+
         /// Game mode preset.
         preset: GameModePreset,
     },
+
     /// Amount of players playing the game, doesn't count spectators.
     users_playing: int @ 0..,
+
     /// List of banned level IDs.
     banned_level_ids: [LevelId],
 }
@@ -24,12 +28,16 @@ struct GameContext {
 struct GameModePresetBase {
     /// Internal name of the game mode preset.
     internal_name: #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string,
+
     /// Internal numeric ID of the game mode.
     id: (#[canonical] GameModeId | int @ ..-1 | int @ 3..),
+
     /// Translated text for the game mode name.
     name: TranslatedText,
+
     /// Size of the two teams in this game mode.
     team_size: int @ 1..6,
+
     /// List of all possible states of the game mode.
     ///
     /// To specify which state goes first when the game mode state machine
@@ -47,18 +55,22 @@ struct GameModePresetBase {
     states: [GameModeState] @ 1..,
 }
 
+
 /// Struct for game modes.
 struct GameModeState {
     /// Internal name of the game mode preset.
     internal_name: string,
+
     /// Numeric ID of the state.
     ///
     /// `0` is not allowed, since returning it in the specified
     /// `on_tick_function` means ending the match.
     id: (int @ ..-1 | int @ 1..),
+
     /// Callback function that is called before the state is processed every
     /// tick.
     on_enter_function: #[id="function"] string,
+
     /// Callback function that is called every tick for processing the game
     /// mode's state.
     ///
@@ -79,8 +91,10 @@ struct GameModeState {
     /// execute unless predicate custom:example_predicate run return 0
     /// ```
     on_tick_function: #[id="function"] string,
+
     /// Callback function that is called just before the next state starts.
     on_exit_function: #[id="function"] string,
+
     /// Flag that specifies this state is the first one when the game mode
     /// starts.
     ///
@@ -90,56 +104,70 @@ struct GameModeState {
     start_state?: struct {},
 }
 
+
 /// Game mode ID enum.
 enum(int) GameModeId {
     /// Casual game mode.
     Casual = 0,
+
     /// Competitive game mode.
     Competitive = 1,
+
     /// Deathmatch game mode.
     DeathMatch = 2,
 }
+
 
 /// Union type that encapsulates all game mode types.
 type GameModePreset = (
     GameModePresetBase |
     struct CasualGameMode {
-        ...GameModePresetBase,
         internal_name: "hc:casual",
         id: 0,
+
         /// Casual game mode data.
         casual_data: struct {
             ...struct RoundBasedData {
                 /// Amount of rounds a team must win to win the whole match.
                 rounds_to_win: int @ 1..,
+
                 /// Duration of a round in seconds.
                 round_duration_seconds: int @ 1..,
+
                 /// Duration of the kit and perk selection intermission.
                 intermission_duration_seconds: int @ 1..,
             },
         },
+
+        ...GameModePresetBase,
     } |
     struct CompetitiveGameMode {
-        ...GameModePresetBase,
         internal_name: "hc:competitive",
         id: 1,
+
         /// Competitive game mode data.
         competitive_data: struct {
             ...RoundBasedData,
+
             /// Won round lead to win the match.
             min_winning_lead: int @ 0..,
         },
+
+        ...GameModePresetBase,
     } |
     struct DeathMatchGameMode {
-        ...GameModePresetBase,
         internal_name: "hc:deathmatch",
         id: 2,
+
         /// Deathmatch game mode data.
         deathmatch_data: struct {
             /// Amount of kills a team must do to win the match prematurely.
             kills_to_win: int @ 1..,
+
             /// Duration of the match in seconds.
             duration_seconds: int @ 1..,
         },
+
+        ...GameModePresetBase,
     }
 )
