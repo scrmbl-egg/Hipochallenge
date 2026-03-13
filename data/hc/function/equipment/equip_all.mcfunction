@@ -6,7 +6,7 @@
 
 # guard clause
 execute as @s \
-    unless predicate hc:has_all_options_selected \
+    unless predicate hc:util/has_all_options_selected \
     run \
     return run \
     function hc:msg/private/send_error/not_all_options_selected

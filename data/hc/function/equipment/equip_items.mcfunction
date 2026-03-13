@@ -5,7 +5,7 @@
 # TODO: add support for custom perk behaviour and item equipping
 
 # all options selected guard clause
-execute unless predicate hc:has_all_options_selected \
+execute unless predicate hc:util/has_all_options_selected \
     run \
     function hc:msg/private/send_error/not_all_options_selected
 

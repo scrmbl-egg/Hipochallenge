@@ -15,8 +15,14 @@
 execute unless predicate { \
     condition:"minecraft:all_of", \
     terms:[ \
-        {condition:"minecraft:reference",name:"hc:team/is_in_match_pvp_team"}, \
-        {condition:"minecraft:reference",name:"hc:has_all_options_selected"}, \
+        { \
+            condition:"minecraft:reference", \
+            name:"hc:team/is_in_match_pvp_team", \
+        }, \
+        { \
+            condition:"minecraft:reference", \
+            name:"hc:util/has_all_options_selected", \
+        }, \
     ], \
 } \
     run \
