@@ -6,7 +6,7 @@
 
 # clear amulet when hit with it in hand
 execute as @a \
-    if predicate hc:was_just_damaged \
+    if predicate hc:entity/was_just_damaged \
     if items entity @s weapon.* *[ \
         minecraft:custom_data~{"hc:item/id":"assassin_k1_crystal_amulet"} \
     ] \
