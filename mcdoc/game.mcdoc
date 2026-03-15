@@ -1,17 +1,16 @@
 use ::java::util::text::TranslatedText
 use ::java::util::text::TextColor
 use super::level::Level
-use super::level::LevelId
 
 
 /// Game context/global variables struct.
 struct GameContext {
     /// Current game mode data.
     mode: struct GameModeContext {
-        /// **Nullable:** Current state of the game mode. If this field is not
-        /// present (i.e. null), it means there is no current state, and thus,
-        /// a match isn't being currently played.
-        state?: GameModeState,
+        /// Current state of the game mode. If this field is an empty struct
+        /// `{}`, it means there is no current state, and thus, a match isn't
+        /// being currently played.
+        state: (GameModeState | struct NullGameModeState {}),
 
         /// Game mode preset.
         preset: GameModePreset,
@@ -21,7 +20,7 @@ struct GameContext {
     users_playing: int @ 0..,
 
     /// List of banned level IDs.
-    banned_level_ids: [LevelId],
+    banned_level_ids: [Level[id]],
 }
 
 /// Game mode struct.
@@ -49,9 +48,9 @@ struct GameModePresetBase {
     /// decide the first state of the game mode in the following ways:
     ///
     /// - **If no state has the `start_state` flag:** the first state in the
-    /// list will be considered the first state.
+    /// list will be considered the start state.
     /// - **If multiple states have the `start_state` flag:** the first state
-    /// in the list that specifies the flag will be considered the first state.
+    /// in the list that specifies the flag will be considered the start state.
     states: [GameModeState] @ 1..,
 }
 

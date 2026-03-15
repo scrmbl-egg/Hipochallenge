@@ -54,6 +54,11 @@ function #core_hc:fx/tick
 # levels
 function #core_hc:level/tick
 
+# game mode state
+execute if predicate hc:mode/is_match_being_played \
+    run \
+    function core_hc:mode/tick
+
 ## __ KEEP AT BOTTOM OF FILE __
 # timers (must be deferred)
 function core_hc:score/timer/tick_all

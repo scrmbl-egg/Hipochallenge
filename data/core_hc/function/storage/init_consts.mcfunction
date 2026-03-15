@@ -31,19 +31,26 @@ data modify storage hc:main consts.game set value { \
             team_size:3, \
             states:[ \
                 { \
-                    internal_name:"select_kit", \
+                    internal_name:"level_intro", \
                     id:1, \
-                    on_enter_function:"std:empty", \
-                    on_tick_function:"std:empty", \
-                    on_exit_function:"std:empty", \
+                    on_enter_function:"core_hc:mode/casual/level_intro/on_enter", \
+                    on_tick_function:"core_hc:mode/casual/level_intro/on_tick", \
+                    on_exit_function:"core_hc:mode/casual/level_intro/on_exit", \
                     start_state:{}, \
                 }, \
                 { \
-                    internal_name:"battle", \
+                    internal_name:"intermission", \
                     id:2, \
-                    on_enter_function:"std:empty", \
-                    on_tick_function:"std:empty", \
-                    on_exit_function:"std:empty", \
+                    on_enter_function:"core_hc:mode/casual/intermission/on_enter", \
+                    on_tick_function:"core_hc:mode/casual/intermission/on_tick", \
+                    on_exit_function:"core_hc:mode/casual/intermission/on_exit", \
+                }, \
+                { \
+                    internal_name:"round", \
+                    id:3, \
+                    on_enter_function:"core_hc:mode/casual/round/on_enter", \
+                    on_tick_function:"core_hc:mode/casual/round/on_tick", \
+                    on_exit_function:"core_hc:mode/casual/round/on_exit", \
                 }, \
             ], \
             casual_data:{ \
@@ -59,19 +66,26 @@ data modify storage hc:main consts.game set value { \
             team_size:3, \
             states:[ \
                 { \
-                    internal_name:"select_kit", \
+                    internal_name:"level_intro", \
                     id:1, \
-                    on_enter_function:"std:empty", \
-                    on_tick_function:"std:empty", \
-                    on_exit_function:"std:empty", \
+                    on_enter_function:"core_hc:mode/competitive/level_intro/on_enter", \
+                    on_tick_function:"core_hc:mode/competitive/level_intro/on_tick", \
+                    on_exit_function:"core_hc:mode/competitive/level_intro/on_exit", \
                     start_state:{}, \
                 }, \
                 { \
-                    internal_name:"battle", \
+                    internal_name:"intermission", \
                     id:2, \
-                    on_enter_function:"std:empty", \
-                    on_tick_function:"std:empty", \
-                    on_exit_function:"std:empty", \
+                    on_enter_function:"core_hc:mode/competitive/intermission/on_enter", \
+                    on_tick_function:"core_hc:mode/competitive/intermission/on_tick", \
+                    on_exit_function:"core_hc:mode/competitive/intermission/on_exit", \
+                }, \
+                { \
+                    internal_name:"round", \
+                    id:3, \
+                    on_enter_function:"core_hc:mode/competitive/round/on_enter", \
+                    on_tick_function:"core_hc:mode/competitive/round/on_tick", \
+                    on_exit_function:"core_hc:mode/competitive/round/on_exit", \
                 }, \
             ], \
             competitive_data:{ \
