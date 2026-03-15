@@ -115,7 +115,7 @@ data modify storage hc:main consts.team_presets append value { \
     internal_name:"hc:neutral", \
     id:0, \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
-    name_color:"#09d8f3", \
+    name_color:"#98bdc2", \
     text_color:"white", \
     dust_color:[0.9f,0.9f,0.9f], \
     armor_dye_color:10403008, \

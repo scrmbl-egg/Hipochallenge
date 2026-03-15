@@ -49,11 +49,11 @@ team modify hc.Neutral nametagVisibility always
 team modify hc.Neutral seeFriendlyInvisibles false
 team modify hc.Neutral color white
 team modify hc.Neutral displayName [ \
-    {text:"",color:"#88ffff"}, \
+    {text:"",color:"#98bdc2"}, \
     {translate:"hc.teams.neutral.name",fallback:"Neutral"}, \
 ]
 team modify hc.Neutral prefix [ \
-    {text:"",color:"#88ffff"}, \
+    {text:"",color:"#98bdc2"}, \
     "[", \
     {translate:"hc.teams.neutral.name",fallback:"Neutral"}, \
     "] ", \
