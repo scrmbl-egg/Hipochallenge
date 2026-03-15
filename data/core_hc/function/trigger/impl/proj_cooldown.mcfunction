@@ -72,7 +72,7 @@ execute unless entity @s[tag=hc.ProjectileCooldownDisabled] \
     run \
     data modify storage hc:temp proj_cooldown.msg_args.text.with[0] \
     set value { \
-        ranslate:"hc.not_translated", \
+        translate:"hc.not_translated", \
         fallback:"Enabled", \
         color:"green", \
     }
