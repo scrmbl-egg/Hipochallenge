@@ -2,9 +2,6 @@ use ::java::util::text::TranslatedText
 use super::game::GameModePresetBase
 
 
-type LocalSpaceVolumeCoordinates = [[int[] @ 3] @ 2]
-
-
 /// Level information struct.
 struct Level {
     /// Numeric ID of the level.
