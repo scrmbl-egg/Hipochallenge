@@ -12,6 +12,18 @@
 # function to execute because these values are changed during the game, and
 # resetting them in this function may cause A LOT of unexpected behaviour.
 
+## NOTE:
+# This file doesn't expose the underlying structure of the global variables
+# (`vars`) structure very well, since it uses a combination of individual
+# assignments and setup functions.
+#
+# To actually see the underlying structure well, go to the `mcdoc/main.mcdoc`
+# file in this datapack.
+
+## NOTE:
+# Whenever a `data remove storage ...` command is seen, it serves as an
+# indicator of a value staying null.
+
 function hc:msg/debug/send_info { \
     text:"\"Initialising datapack global variables...\"", \
 }
@@ -27,85 +39,31 @@ data remove storage hc:main vars
 data modify storage hc:main vars.reload_count \
     set from storage hc:temp init_vars.reload_count
 
-## GAME CONTEXTS
-data modify storage hc:main vars.game_context set value { \
-    mode:{ \
-        state:{}, \
-        preset:{ \
-            internal_name:"hc:casual", \
-            id:0, \
-            name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
-            team_size:3, \
-            states:[ \
-                { \
-                    internal_name:"level_intro", \
-                    id:1, \
-                    on_enter_function:"core_hc:mode/casual/level_intro/on_enter", \
-                    on_tick_function:"core_hc:mode/casual/level_intro/on_tick", \
-                    on_exit_function:"core_hc:mode/casual/level_intro/on_exit", \
-                }, \
-                { \
-                    internal_name:"intermission", \
-                    id:2, \
-                    on_enter_function:"core_hc:mode/casual/intermission/on_enter", \
-                    on_tick_function:"core_hc:mode/casual/intermission/on_tick", \
-                    on_exit_function:"core_hc:mode/casual/intermission/on_exit", \
-                    start_state:{}, \
-                }, \
-                { \
-                    internal_name:"round", \
-                    id:3, \
-                    on_enter_function:"core_hc:mode/casual/round/on_enter", \
-                    on_tick_function:"core_hc:mode/casual/round/on_tick", \
-                    on_exit_function:"core_hc:mode/casual/round/on_exit", \
-                }, \
-            ], \
-            casual_data:{ \
-                rounds_to_win:5, \
-                round_duration_seconds:120, \
-                intermission_duration_seconds:30, \
-            }, \
-        }, \
-    }, \
-    banned_level_ids:[], \
-    users_playing:0, \
-}
+
+## GAME CONTEXT
+# mode
+function hc:mode/select {internal_name:"hc:casual"}
+
+# level
+data modify storage hc:main vars.game_context.level \
+    set from storage hc:main consts.levels[{internal_name:"hc:subdec"}]
+
+# users_playing
+data modify storage hc:main vars.game_context.users_playing set value 0
+
 
 ## TEAM CONTEXTS
-# NOTE: for presets, copy team presets
+# team1
+function hc:team/name/reset_team1_name
+function hc:team/color/set_team1_red
+data modify storage hc:main vars.team_contexts.team1.player_profiles \
+    set value []
 
-# delete custom names
-data remove storage hc:main vars.team_contexts.team1.custom_name
-data remove storage hc:main vars.team_contexts.team2.custom_name
-
-data modify storage hc:main vars.team_contexts set value { \
-    team1:{ \
-        preset:{ \
-            internal_name:"hc:red", \
-            id:1, \
-            default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
-            name_color:"#ff3030", \
-            text_color:"red", \
-            dust_color:[1.0f,0.0f,0.0f], \
-            armor_dye_color:10952471, \
-            trim_material:"minecraft:redstone", \
-        }, \
-        player_profiles:[], \
-    }, \
-    team2:{ \
-        preset:{ \
-            internal_name:"hc:blue", \
-            id:4, \
-            default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
-            name_color:"#3f3bff", \
-            text_color:"blue", \
-            dust_color:[0.0f,0.0f,1.0f], \
-            armor_dye_color:1977039, \
-            trim_material:"minecraft:lapis", \
-        }, \
-        player_profiles:[], \
-    }, \
-}
+# team2
+function hc:team/name/reset_team2_name
+function hc:team/color/set_team2_blue
+data modify storage hc:main vars.team_contexts.team2.player_profiles \
+    set value []
 
 # free memory
 data remove storage hc:temp init_vars
