@@ -1,9 +1,0 @@
-#>core_hc:round_status/remove
-#
-# Removes the round status bossbar.
-
-# remove scoreboard
-scoreboard objectives remove __hc.RoundStatusTimer
-
-# remove bossbar
-bossbar remove hc:round_status

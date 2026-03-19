@@ -20,11 +20,6 @@ function core_hc:music/mute_vanilla
 # tick custom data components
 function core_hc:custom_data/tick
 
-# tick round status bossbar
-execute if function core_hc:round_status/does_exist \
-    run \
-    function core_hc:round_status/tick
-
 # damage
 #execute as @a[predicate=hc:entity/was_just_damaged] \
     at @s \
