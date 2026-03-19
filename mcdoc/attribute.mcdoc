@@ -17,7 +17,7 @@ struct AttributeModifierCommmandParameters {
 }
 
 
-/// Struct for time
+/// Struct for timed attribute modifiers.
 struct TimedAttributeModifier {
     /// Duration in ticks of the attribute modifier.
     duration_ticks: int @ 1..,
@@ -25,6 +25,10 @@ struct TimedAttributeModifier {
     ...AttributeModifierCommmandParameters,
 }
 
+
+/// Main struct for ability attributes.
+// TODO: Make a general effect/attribute modifier struct. This thing is a bit
+// messy now.
 struct AbilityAttributes {
     /// List of permanent attribute modifiers.
     permanent: [AttributeModifierCommmandParameters],
