@@ -24,19 +24,19 @@ struct Level {
 /// Enum for level numeric IDs.
 enum(int) LevelId {
     /// Numeric ID for the Subterranean Decay level.
-    SubterraneanDecay = 1,
+    SubterraneanDecay = 0,
 
     /// Numeric ID for the Froggyland Playplace 2 level.
-    FroggylandPlayplace2 = 2,
+    FroggylandPlayplace2 = 1,
 
-    /// Numeric ID for the Sepulchred Sacrifice 2 level.
-    SepulchredSacrifice2 = 3,
-
-    /// Numeric ID for the Villager Factory level.
-    VillagerFactory = 4,
+    /// Numeric ID for the Sepulchral Sacrifice 2 level.
+    SepulchralSacrifice2 = 2,
 
     /// Numeric ID for the Villager Factory level.
-    CrazyTrains = 5,
+    VillagerFactory = 3,
+
+    /// Numeric ID for the Villager Factory level.
+    CrazyTrains = 4,
 }
 
 
@@ -49,8 +49,8 @@ enum(string) LevelInternalName {
     /// Internal name for the Froggyland Playplace 2 level.
     FroggylandPlayplace2 = "hc:froggy",
 
-    /// Internal name for the Sepulchred Sacrifice 2 level.
-    SepulchredSacrifice2 = "hc:sacrif",
+    /// Internal name for the Sepulchral Sacrifice 2 level.
+    SepulchralSacrifice2 = "hc:sacrif",
 
     /// Internal name for the Villager Factory level.
     VillagerFactory = "hc:vilfac",

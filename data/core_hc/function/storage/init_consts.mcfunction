@@ -937,35 +937,35 @@ data modify storage hc:main consts.classes append value { \
 # subterranean decay
 data modify storage hc:main consts.levels append value { \
     internal_name:"hc:subdec", \
-    id:1, \
+    id:0, \
     name:{translate:"hc.level.subdec.name",fallback:"Subterranean Decay"}, \
 }
 
 # froggyland playplace 2
 data modify storage hc:main consts.levels append value { \
     internal_name:"hc:froggy", \
-    id:2, \
+    id:1, \
     name:{translate:"hc.level.froggy.name",fallback:"Froggyland Playplace 2"}, \
 }
 
-# sepulchred sacrifice 2
+# sepulchral sacrifice 2
 data modify storage hc:main consts.levels append value { \
     internal_name:"hc:sacrif", \
-    id:3, \
-    name:{translate:"hc.level.sacrif.name",fallback:"Sepulchred Sacrifice 2"}, \
+    id:2, \
+    name:{translate:"hc.level.sacrif.name",fallback:"Sepulchral Sacrifice 2"}, \
 }
 
 # villager factory
 data modify storage hc:main consts.levels append value { \
     internal_name:"hc:vilfac", \
-    id:4, \
+    id:3, \
     name:{translate:"hc.level.vilfac.name",fallback:"Villager Factory"}, \
 }
 
 # crazy trains
 data modify storage hc:main consts.levels append value { \
     internal_name:"hc:ctrain", \
-    id:5, \
+    id:4, \
     name:{translate:"hc.level.ctrain.name",fallback:"Crazy Trains"}, \
 }
 
