@@ -1,4 +1,4 @@
-use ::java::util::text::TextColor
+use ::java::util::text::TextStyle
 use ::java::util::text::TranslatedText
 use ::java::data::loot::LootTable
 use super::kit::Kit
@@ -22,7 +22,7 @@ struct Class {
     /// Translated text for the class's Unicode icon.
     icon: TranslatedText,
 
-    /// RGB of the dust particles for the class.
+    /// Decimal RGB of the dust particles for the class.
     dust_color: #[color="dec_rgb"] [float @ 0..1] @ 3,
 
     /// Class custom attributes.
@@ -49,13 +49,13 @@ struct Class {
     /// Player list class information.
     list_info: struct ClassListInfo {
         /// Color for the player's class name in the player list.
-        class_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+        class_color: TextStyle[color],
 
         /// Color for the player's kit name in the player list.
-        kit_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+        kit_color: TextStyle[color],
 
         /// Color for the player's perk name in the player list.
-        perk_color: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+        perk_color: TextStyle[color],
     },
 
     /// Spawned loot table on player's death.

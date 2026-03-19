@@ -1,6 +1,7 @@
 use ::java::util::text::TextBase
 use ::java::util::text::TranslatedText
 use ::java::util::text::TextColor
+use ::java::util::text::TextStyle
 use ::java::util::avatar::Profile
 
 
@@ -19,7 +20,7 @@ struct TeamPreset {
     default_name: TranslatedText,
 
     /// Color of the team's name in team's prefix.
-    name_color?: (#[color="hex_rgb"] string | #[color="named"] TextColor),
+    name_color?: TextStyle[color],
 
     /// Vanilla color of the team.
     text_color?: #[color="named"] TextColor,
