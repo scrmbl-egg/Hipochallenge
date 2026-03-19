@@ -42,6 +42,12 @@ struct MainStorage {
 
         /// Amount of team presets.
         team_preset_count: int @ 0..,
+
+        /// Available levels.
+        levels: [Level],
+
+        /// Amount of levels.
+        level_count: int @ 0..,
     },
     /// Global variables of the datapack.
     vars: struct MainVars {

@@ -934,12 +934,45 @@ data modify storage hc:main consts.classes append value { \
 }
 
 ## LEVELS
-# callouts
+# subterranean decay
+data modify storage hc:main consts.levels append value { \
+    internal_name:"hc:subdec", \
+    id:1, \
+    name:{translate:"hc.level.subdec.name",fallback:"Subterranean Decay"}, \
+}
 
-# TODO: add callout objects and lists
+# froggyland playplace 2
+data modify storage hc:main consts.levels append value { \
+    internal_name:"hc:froggy", \
+    id:2, \
+    name:{translate:"hc.level.froggy.name",fallback:"Froggyland Playplace 2"}, \
+}
+
+# sepulchred sacrifice 2
+data modify storage hc:main consts.levels append value { \
+    internal_name:"hc:sacrif", \
+    id:3, \
+    name:{translate:"hc.level.sacrif.name",fallback:"Sepulchred Sacrifice 2"}, \
+}
+
+# villager factory
+data modify storage hc:main consts.levels append value { \
+    internal_name:"hc:vilfac", \
+    id:4, \
+    name:{translate:"hc.level.vilfac.name",fallback:"Villager Factory"}, \
+}
+
+# crazy trains
+data modify storage hc:main consts.levels append value { \
+    internal_name:"hc:ctrain", \
+    id:5, \
+    name:{translate:"hc.level.ctrain.name",fallback:"Crazy Trains"}, \
+}
+
 
 ## EXTENSION CONSTANTS SETUP
 function #extension_hc:storage/init_consts
+
 
 ## POST-SETUP CALCULATIONS
 # the constants that are calculated here are mainly used for predicates that
@@ -956,6 +989,12 @@ execute store result storage hc:main consts.team_preset_count \
     int 1 \
     run \
     data get storage hc:main consts.team_presets
+
+# level count
+execute store result storage hc:main consts.level_count \
+    int 1 \
+    run \
+    data get storage hc:main consts.levels
 
 
 ## __KEEP AT BOTTOM OF FILE__
