@@ -10,7 +10,7 @@ struct Class {
     /// Internal name of the class.
     internal_name: (
         #[canonical] ClassInternalName |
-        #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
+        #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
 
     /// Internal numeric ID of the class.

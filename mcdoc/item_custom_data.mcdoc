@@ -9,7 +9,7 @@ dispatch mcdoc:custom_data[hc:item/armor/apply_team_trim_material]
 
 
 /// Custom item ID component.
-type Id = #[match_regex="\\b[a-zA-Z_]\\w*\\b"] string
+type Id = #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string
 
 
 /// Component for `minecraft:use_remainder` items that must return to its

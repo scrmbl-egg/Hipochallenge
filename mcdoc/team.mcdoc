@@ -9,7 +9,7 @@ struct TeamPreset {
     /// Internal name of the team.
     internal_name: (
         #[canonical] TeamPresetInternalName |
-        #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
+        #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
 
     /// ID of the team preset.

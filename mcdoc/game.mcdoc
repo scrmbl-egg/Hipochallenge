@@ -26,7 +26,10 @@ struct GameContext {
 /// Game mode struct.
 struct GameModePresetBase {
     /// Internal name of the game mode preset.
-    internal_name: #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string,
+    internal_name: (
+        #[canonical] GameModeInternalName |
+        #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
+    ),
 
     /// Internal numeric ID of the game mode.
     id: (#[canonical] GameModeId | int @ ..-1 | int @ 3..),
@@ -114,6 +117,19 @@ enum(int) GameModeId {
 
     /// Deathmatch game mode.
     DeathMatch = 2,
+}
+
+
+/// Game mode internal name enum.
+enum(string) GameModeInternalName {
+    /// Casual game mode.
+    Casual = "hc:casual",
+
+    /// Competitive game mode.
+    Competitive = "hc:competitive",
+
+    /// Deathmatch game mode.
+    DeathMatch = "hc:deathmatch",
 }
 
 
