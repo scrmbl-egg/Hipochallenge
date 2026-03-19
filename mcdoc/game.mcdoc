@@ -5,7 +5,7 @@ use super::level::Level
 
 /// Game context/global variables struct.
 struct GameContext {
-    /// Current game mode data.
+    /// Current game mode's data.
     mode: struct GameModeContext {
         /// Current state of the game mode. If this field is an empty struct
         /// `{}`, it means there is no current state, and thus, a match isn't
@@ -16,11 +16,11 @@ struct GameContext {
         preset: GameModePreset,
     },
 
+    /// Current level's data.
+    level: Level,
+
     /// Amount of players playing the game, doesn't count spectators.
     users_playing: int @ 0..,
-
-    /// List of banned level IDs.
-    banned_level_ids: [Level[id]],
 }
 
 /// Game mode struct.
