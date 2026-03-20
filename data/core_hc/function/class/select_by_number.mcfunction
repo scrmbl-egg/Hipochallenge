@@ -33,10 +33,10 @@ execute unless predicate hc:class/has_selected \
 
 # setup data (one of these two text components will be selected)
 data modify storage hc:temp select_class set value { \
-    team_msg_args:{ \
+    match_msg_args:{ \
         team:"", \
         text:{ \
-            translate:"hc.msg.private.player_selected_class", \
+            translate:"hc.msg.match.player_selected_class", \
             fallback:"%1$s has selected the %2$s class", \
             with:[{selector:"@s"}, {}], \
         }, \
@@ -53,13 +53,13 @@ data modify storage hc:temp select_class set value { \
 # get team the message may be sent to
 function hc:team/get_self_team { \
     out_storage:"hc:temp", \
-    out_nbt:"select_class.team_msg_args.team", \
+    out_nbt:"select_class.match_msg_args.team", \
 }
 
 # get class name in both possible text components
 $data modify storage hc:temp select_class.priv_msg_args.text.with[0] \
     set from storage hc:main consts.classes[{id:$(value)}].name
-$data modify storage hc:temp select_class.team_msg_args.text.with[1] \
+$data modify storage hc:temp select_class.match_msg_args.text.with[1] \
     set from storage hc:main consts.classes[{id:$(value)}].name
 
 # get list info color for the class name
@@ -68,15 +68,15 @@ $data modify storage \
     set from storage \
     hc:main consts.classes[{id:$(value)}].list_info.class_color
 $data modify storage \
-    hc:temp select_class.team_msg_args.text.with[1].color \
+    hc:temp select_class.match_msg_args.text.with[1].color \
     set from storage \
     hc:main consts.classes[{id:$(value)}].list_info.class_color
 
 # send msg
 execute if predicate hc:team/is_in_match_pvp_team \
     run \
-    function hc:msg/team/send \
-    with storage hc:temp select_class.team_msg_args
+    function hc:msg/match/send \
+    with storage hc:temp select_class.match_msg_args
 execute unless predicate hc:team/is_in_match_pvp_team \
     run \
     function hc:msg/private/send \

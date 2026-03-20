@@ -15,39 +15,14 @@ $tellraw @a[tag=hc.Debug] [ \
             action:"show_text",\
             value:[ \
                 "", \
-                { \
-                    bold:true, \
-                    color:"green", \
-                    text:">> ", \
-                }, \
-                { \
-                    translate:"hc.msg.debug", \
-                    fallback:"Debug", \
-                }, \
+                {text:">> ",bold:true,color:"green"}, \
+                {translate:"hc.msg.debug",fallback:"Debug"}, \
             ], \
         }, \
     }, \
-    { \
-        bold:true, \
-        italic:false, \
-        color:"green", \
-        text:">> ", \
-    }, \
-    { \
-        bold:true, \
-        italic:false, \
-        text:"[", \
-    }, \
-    { \
-        bold:true, \
-        italic:false, \
-        translate:"hc.msg.warning", \
-        fallback:"WARNING", \
-    }, \
-    { \
-        bold:true, \
-        italic:false, \
-        text:"] ", \
-    }, \
+    {text:">> ",color:"green",italic:false,bold:true}, \
+    {text:"[",bold:true,italic:false}, \
+    {translate:"hc.msg.warning",fallback:"WARNING",bold:true,italic:false}, \
+    {text:"] ",bold:true,italic:false}, \
     $(text), \
 ]

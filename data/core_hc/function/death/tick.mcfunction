@@ -21,11 +21,11 @@ execute if entity @p[scores={hc.HasKilled=1..}] \
 # if there is no attacker/killer, run print death msg, otherwise, print kill msg
 execute unless data storage hc:temp death.attacker_uuid \
     run \
-    function hc:msg/match_feed/send_player_death \
+    function hc:msg/match/feed/send_player_death \
     with storage hc:temp death
 execute if data storage hc:temp death.attacker_uuid \
     run \
-    function hc:msg/match_feed/send_player_kill \
+    function hc:msg/match/feed/send_player_kill \
     with storage hc:temp death
 
 # clear dead people in match pvp teams

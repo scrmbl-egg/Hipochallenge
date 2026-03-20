@@ -13,22 +13,11 @@ $tellraw @a[team=hc.Spectators] [ \
             action:"show_text",\
             value:[ \
                 "", \
-                { \
-                    bold:true, \
-                    color:"gray", \
-                    text:">> ", \
-                }, \
-                { \
-                    translate:"hc.msg.spectators", \
-                    fallback:"Spectator message", \
-                }, \
+                {text:">> ",bold:true,color:"gray"}, \
+                {translate:"hc.msg.spectators",fallback:"Spectator message"}, \
             ], \
         }, \
     }, \
-    { \
-        bold:true, \
-        color:"gray", \
-        text:">> " \
-    }, \
+    {text:">> ",color:"gray",bold:true}, \
     $(text), \
 ]

@@ -13,22 +13,11 @@ $tellraw @a [ \
             action:"show_text",\
             value:[ \
                 "", \
-                { \
-                    bold:true, \
-                    color:"white", \
-                    text:">> ", \
-                }, \
-                { \
-                    translate:"hc.msg.all", \
-                    fallback:"Global message", \
-                }, \
+                {text:">> ",bold:true,color:"white"}, \
+                {translate:"hc.msg.all",fallback:"Global message"}, \
             ], \
         }, \
     }, \
-    { \
-        bold:true, \
-        color:"white", \
-        text:">> " \
-    }, \
+    {text:">> ",color:"white",bold:true}, \
     $(text), \
 ]

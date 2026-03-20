@@ -2,6 +2,7 @@
 #
 # Prints a warning message in the player's chat.
 #
+# @context player
 # @input
 #   text: ::java::util::text::Text
 #       Text component that will be printed.
@@ -14,35 +15,14 @@ $tellraw @s [ \
             action:"show_text",\
             value:[ \
                 "", \
-                { \
-                    bold:true, \
-                    color:"blue", \
-                    text:">> ", \
-                }, \
-                { \
-                    translate:"hc.msg.private", \
-                    fallback:"Private message", \
-                }, \
+                {text:">> ",bold:true,color:"blue"}, \
+                {translate:"hc.msg.private",fallback:"Private message"}, \
             ], \
         }, \
     }, \
-    { \
-        bold:true, \
-        color:"green", \
-        text:">> ", \
-    }, \
-    { \
-        bold:true, \
-        text:"[", \
-    }, \
-    { \
-        bold:true, \
-        translate:"hc.msg.warning", \
-        fallback:"WARNING", \
-    }, \
-    { \
-        bold:true, \
-        text:"] ", \
-    }, \
+    {text:">> ",color:"blue",bold:true}, \
+    {text:"[",bold:true}, \
+    {translate:"hc.msg.warning",fallback:"WARNING",bold:true}, \
+    {text:"] ",bold:true}, \
     $(text), \
 ]
