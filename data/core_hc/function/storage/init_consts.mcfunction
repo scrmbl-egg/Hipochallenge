@@ -54,9 +54,10 @@ data modify storage hc:main consts.game set value { \
                 }, \
             ], \
             casual_data:{ \
+                level_intro_duration_seconds:10, \
+                intermission_duration_seconds:30, \
                 rounds_to_win:5, \
                 round_duration_seconds:120, \
-                intermission_duration_seconds:30, \
             }, \
         }, \
         { \
@@ -89,10 +90,11 @@ data modify storage hc:main consts.game set value { \
                 }, \
             ], \
             competitive_data:{ \
+                level_intro_duration_seconds:10, \
+                intermission_duration_seconds:20, \
                 rounds_to_win:5, \
                 min_winning_lead:2, \
                 round_duration_seconds:120, \
-                intermission_duration_seconds:20, \
             }, \
         }, \
         { \

@@ -143,14 +143,17 @@ type GameModePreset = (
         /// Casual game mode data.
         casual_data: struct {
             ...struct RoundBasedData {
+                /// Duration of the level's intro.
+                level_intro_duration_seconds: int @ 1..,
+
+                /// Duration of the kit and perk selection intermission.
+                intermission_duration_seconds: int @ 1..,
+
                 /// Amount of rounds a team must win to win the whole match.
                 rounds_to_win: int @ 1..,
 
                 /// Duration of a round in seconds.
                 round_duration_seconds: int @ 1..,
-
-                /// Duration of the kit and perk selection intermission.
-                intermission_duration_seconds: int @ 1..,
             },
         },
 
@@ -162,10 +165,10 @@ type GameModePreset = (
 
         /// Competitive game mode data.
         competitive_data: struct {
-            ...RoundBasedData,
-
             /// Won round lead to win the match.
             min_winning_lead: int @ 0..,
+
+            ...RoundBasedData,
         },
 
         ...GameModePresetBase,
