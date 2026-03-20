@@ -7,6 +7,13 @@
 #       Name of the game mode.
 
 # TODO: function for completely stopping current match
+# HACK: to prevent leaks, try to execute the exit function of the running state
+execute if data storage hc:main vars.game_context.mode.state.on_exit_function \
+    run \
+    function std:function/call_from_nbt { \
+        function_storage:"hc:main", \
+        function_nbt:"vars.game_context.mode.state.on_exit_function", \
+    }
 
 # reset state
 data modify storage hc:main vars.game_context.mode.state set value {}
