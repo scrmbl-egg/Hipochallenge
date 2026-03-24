@@ -9,7 +9,7 @@
 #   out_nbt: #[nbt_path=minecraft:storage[[out_storage]]] string
 #       Storage NBT path where the result will be stored.
 # @returns
-#   Fail: when the player's team has no enemy team.
+#   Result: 0 when the player's team has no enemy team.
 
 execute if entity @s[team=hc.Admins] run return fail
 execute if entity @s[team=hc.NotPlaying] run return fail
