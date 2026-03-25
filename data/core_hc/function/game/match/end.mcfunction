@@ -1,12 +1,12 @@
-#>core_hc:mode/end
+#>core_hc:match/end
 #
 # Ends the current match and calls the proper functions to free all resources
 # made for the match.
 #
 # Only using this function assumes the match ended gracefully, from the game
 # mode's own states. If you wish to end the match prematurely, see the
-# `core_hc:mode/try_cancel` function and the `core_hc:mode/try_cancel/`
-# sub-module functions.
+# `core_hc:game/match/try_cancel` function and the
+# `core_hc:game/match/try_cancel/` sub-module functions.
 
 # send debug message
 function hc:msg/debug/send_info {text:"\"Ending match...\""}

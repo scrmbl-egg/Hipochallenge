@@ -29,30 +29,30 @@ data modify storage hc:main consts.game set value { \
             id:0, \
             name:{translate:"hc.mode.casual",fallback:"Casual"}, \
             team_size:3, \
-            on_start_function:"core_hc:mode/casual/on_start", \
-            on_end_function:"core_hc:mode/casual/on_end", \
+            on_start_function:"core_hc:game/mode/casual/on_start", \
+            on_end_function:"core_hc:game/mode/casual/on_end", \
             states:[ \
                 { \
                     internal_name:"level_intro", \
                     id:1, \
-                    on_enter_function:"core_hc:mode/casual/level_intro/on_enter", \
-                    on_tick_function:"core_hc:mode/casual/level_intro/on_tick", \
-                    on_exit_function:"core_hc:mode/casual/level_intro/on_exit", \
+                    on_enter_function:"core_hc:game/mode/casual/level_intro/on_enter", \
+                    on_tick_function:"core_hc:game/mode/casual/level_intro/on_tick", \
+                    on_exit_function:"core_hc:game/mode/casual/level_intro/on_exit", \
                     start_state:{}, \
                 }, \
                 { \
                     internal_name:"intermission", \
                     id:2, \
-                    on_enter_function:"core_hc:mode/casual/intermission/on_enter", \
-                    on_tick_function:"core_hc:mode/casual/intermission/on_tick", \
-                    on_exit_function:"core_hc:mode/casual/intermission/on_exit", \
+                    on_enter_function:"core_hc:game/mode/casual/intermission/on_enter", \
+                    on_tick_function:"core_hc:game/mode/casual/intermission/on_tick", \
+                    on_exit_function:"core_hc:game/mode/casual/intermission/on_exit", \
                 }, \
                 { \
                     internal_name:"round", \
                     id:3, \
-                    on_enter_function:"core_hc:mode/casual/round/on_enter", \
-                    on_tick_function:"core_hc:mode/casual/round/on_tick", \
-                    on_exit_function:"core_hc:mode/casual/round/on_exit", \
+                    on_enter_function:"core_hc:game/mode/casual/round/on_enter", \
+                    on_tick_function:"core_hc:game/mode/casual/round/on_tick", \
+                    on_exit_function:"core_hc:game/mode/casual/round/on_exit", \
                 }, \
             ], \
             casual_data:{ \
@@ -67,30 +67,30 @@ data modify storage hc:main consts.game set value { \
             id:1, \
             name:{translate:"hc.mode.competitive",fallback:"Competitive"}, \
             team_size:3, \
-            on_start_function:"core_hc:mode/competitive/on_start", \
-            on_end_function:"core_hc:mode/competitive/on_end", \
+            on_start_function:"core_hc:game/mode/competitive/on_start", \
+            on_end_function:"core_hc:game/mode/competitive/on_end", \
             states:[ \
                 { \
                     internal_name:"level_intro", \
                     id:1, \
-                    on_enter_function:"core_hc:mode/competitive/level_intro/on_enter", \
-                    on_tick_function:"core_hc:mode/competitive/level_intro/on_tick", \
-                    on_exit_function:"core_hc:mode/competitive/level_intro/on_exit", \
+                    on_enter_function:"core_hc:game/mode/competitive/level_intro/on_enter", \
+                    on_tick_function:"core_hc:game/mode/competitive/level_intro/on_tick", \
+                    on_exit_function:"core_hc:game/mode/competitive/level_intro/on_exit", \
                     start_state:{}, \
                 }, \
                 { \
                     internal_name:"intermission", \
                     id:2, \
-                    on_enter_function:"core_hc:mode/competitive/intermission/on_enter", \
-                    on_tick_function:"core_hc:mode/competitive/intermission/on_tick", \
-                    on_exit_function:"core_hc:mode/competitive/intermission/on_exit", \
+                    on_enter_function:"core_hc:game/mode/competitive/intermission/on_enter", \
+                    on_tick_function:"core_hc:game/mode/competitive/intermission/on_tick", \
+                    on_exit_function:"core_hc:game/mode/competitive/intermission/on_exit", \
                 }, \
                 { \
                     internal_name:"round", \
                     id:3, \
-                    on_enter_function:"core_hc:mode/competitive/round/on_enter", \
-                    on_tick_function:"core_hc:mode/competitive/round/on_tick", \
-                    on_exit_function:"core_hc:mode/competitive/round/on_exit", \
+                    on_enter_function:"core_hc:game/mode/competitive/round/on_enter", \
+                    on_tick_function:"core_hc:game/mode/competitive/round/on_tick", \
+                    on_exit_function:"core_hc:game/mode/competitive/round/on_exit", \
                 }, \
             ], \
             competitive_data:{ \

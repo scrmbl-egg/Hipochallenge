@@ -1,6 +1,6 @@
-#>hc:mode/start
+#>hc:game/match/start
 #
-# Starts the currently selected game mode.
+# Starts a match with the currently selected game mode.
 
 # check if start_state flag is present in the preset state array
 execute if data storage \

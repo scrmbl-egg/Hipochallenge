@@ -1,4 +1,4 @@
-#>core_hc:mode/tick
+#>core_hc:game/mode/tick
 #
 # Updates the current game mode.
 
@@ -67,7 +67,7 @@ execute store result storage hc:temp gm_tick.set_state_args.id \
     run \
     scoreboard players get __$hc_next_id __hc.GameModeTick
 # call function
-function core_hc:mode/state/set \
+function core_hc:game/mode/state/set \
     with storage hc:temp gm_tick.set_state_args
 
 # free storage

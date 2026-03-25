@@ -42,7 +42,7 @@ data modify storage hc:main vars.reload_count \
 
 ## GAME CONTEXT
 # mode
-function hc:mode/select_mode {internal_name:"hc:casual"}
+function hc:match/select_mode {internal_name:"hc:casual"}
 
 # level
 data modify storage hc:main vars.game_context.level \

@@ -50,9 +50,9 @@ function #core_hc:fx/tick
 function #core_hc:level/tick
 
 # game mode state
-execute if predicate hc:mode/is_match_being_played \
+execute if predicate hc:game/match/is_being_played \
     run \
-    function core_hc:mode/tick
+    function core_hc:game/mode/tick
 
 ## __ KEEP AT BOTTOM OF FILE __
 # timers (must be deferred)

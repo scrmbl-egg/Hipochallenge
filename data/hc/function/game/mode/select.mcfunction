@@ -1,4 +1,4 @@
-#>hc:mode/select_mode
+#>hc:game/mode/select
 #
 # Sets the current game mode preset from a specified name.
 #
@@ -7,7 +7,7 @@
 #       Internal name of the game mode.
 
 # cancel match (function result is ignored)
-function core_hc:mode/try_cancel
+function core_hc:game/match/try_cancel
 
 # get preset
 $data modify storage hc:main vars.game_context.mode.preset \

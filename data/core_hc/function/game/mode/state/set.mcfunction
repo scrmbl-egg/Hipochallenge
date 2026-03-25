@@ -1,4 +1,4 @@
-#>core_hc:mode/state/set
+#>core_hc:game/mode/state/set
 #
 # Sets the new state of a game mode, calling the proper callback functions.
 #
@@ -25,7 +25,7 @@ execute if data storage hc:main vars.game_context.mode.state.on_exit_function \
 # early
 execute if data storage hc:temp set_state{id:0} \
     run \
-    function core_hc:mode/end
+    function core_hc:game/match/end
 execute if data storage hc:temp set_state{id:0} \
     run \
     return run \
