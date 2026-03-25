@@ -9,7 +9,7 @@
 # set team context in global variables
 $data modify storage hc:main vars.team_contexts.team2.color_preset \
     set from storage hc:main \
-    consts.team_presets[{internal_name:"$(internal_name)"}]
+    consts.team_color_presets[{internal_name:"$(internal_name)"}]
 
 ## setup temp data
 data modify storage hc:temp set_color set value { \

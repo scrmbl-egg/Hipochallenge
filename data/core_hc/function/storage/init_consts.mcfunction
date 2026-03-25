@@ -126,8 +126,8 @@ data modify storage hc:main consts.limits set value { \
 }
 
 ## TEAM COLOR PRESETS
-# neutral -> team_presets[0]
-data modify storage hc:main consts.team_presets append value { \
+# neutral -> team_color_presets[0]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:neutral", \
     id:0, \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
@@ -138,8 +138,8 @@ data modify storage hc:main consts.team_presets append value { \
     trim_material:"minecraft:iron", \
 }
 
-# red -> team_presets[1]
-data modify storage hc:main consts.team_presets append value { \
+# red -> team_color_presets[1]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:red", \
     id:1, \
     default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
@@ -150,8 +150,8 @@ data modify storage hc:main consts.team_presets append value { \
     trim_material:"minecraft:redstone", \
 }
 
-# yellow -> team_presets[2]
-data modify storage hc:main consts.team_presets append value { \
+# yellow -> team_color_presets[2]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:yellow", \
     id:2, \
     default_name:{translate:"hc.teams.colors.yellow",fallback:"YELLOW"}, \
@@ -162,8 +162,8 @@ data modify storage hc:main consts.team_presets append value { \
     trim_material:"minecraft:gold", \
 }
 
-# green -> team_presets[3]
-data modify storage hc:main consts.team_presets append value { \
+# green -> team_color_presets[3]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:green", \
     id:3, \
     default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
@@ -174,8 +174,8 @@ data modify storage hc:main consts.team_presets append value { \
     trim_material:"minecraft:emerald", \
 }
 
-# blue -> team_presets[4]
-data modify storage hc:main consts.team_presets append value { \
+# blue -> team_color_presets[4]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:blue", \
     id:4, \
     default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
@@ -186,8 +186,8 @@ data modify storage hc:main consts.team_presets append value { \
     trim_material:"minecraft:lapis", \
 }
 
-# purple -> team_presets[5]
-data modify storage hc:main consts.team_presets append value { \
+# purple -> team_color_presets[5]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:purple", \
     id:5, \
     default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
@@ -198,8 +198,8 @@ data modify storage hc:main consts.team_presets append value { \
     trim_material:"minecraft:amethyst", \
 }
 
-# orange -> team_presets[6]
-data modify storage hc:main consts.team_presets append value { \
+# orange -> team_color_presets[6]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:orange", \
     id:6, \
     default_name:{translate:"hc.teams.colors.orange",fallback:"ORANGE"}, \
@@ -210,8 +210,8 @@ data modify storage hc:main consts.team_presets append value { \
     trim_material:"minecraft:resin", \
 }
 
-# cyan -> team_presets[7]
-data modify storage hc:main consts.team_presets append value { \
+# cyan -> team_color_presets[7]
+data modify storage hc:main consts.team_color_presets append value { \
     internal_name:"hc:cyan", \
     id:7, \
     default_name:{translate:"hc.teams.colors.cyan",fallback:"CYAN"}, \
@@ -987,10 +987,10 @@ execute store result storage hc:main consts.class_count \
     data get storage hc:main consts.classes
 
 # team preset count
-execute store result storage hc:main consts.team_preset_count \
+execute store result storage hc:main consts.team_color_preset_count \
     int 1 \
     run \
-    data get storage hc:main consts.team_presets
+    data get storage hc:main consts.team_color_presets
 
 # level count
 execute store result storage hc:main consts.level_count \

@@ -37,8 +37,8 @@ struct MainStorage {
         /// Amount of classes.
         class_count: int @ 0..,
 
-        /// List of available team presets.
-        team_presets: [TeamColorPreset],
+        /// List of available team color presets.
+        team_color_presets: [TeamColorPreset],
 
         /// Amount of team presets.
         team_preset_count: int @ 0..,
