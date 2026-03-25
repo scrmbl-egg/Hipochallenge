@@ -6,7 +6,7 @@ use ::java::util::avatar::Profile
 
 
 /// Struct for representing a team preset.
-struct TeamPreset {
+struct TeamColorPreset {
     /// Internal name of the team.
     internal_name: (
         #[canonical] TeamPresetInternalName |
@@ -19,11 +19,15 @@ struct TeamPreset {
     /// Translated text of the team's default name.
     default_name: TranslatedText,
 
-    /// Color of the team's name in team's prefix.
-    name_color?: TextStyle[color],
+    /// Color of the team name in player's name prefix.
+    name_color: TextStyle[color],
 
     /// Vanilla color of the team.
-    text_color?: #[color="named"] TextColor,
+    ///
+    /// Determines the color in which glowing players are rendered, the color
+    /// of the player names in the player list, and internally, the exclusive
+    /// sidebar display.
+    vanilla_color: #[color="named"] TextColor,
 
     /// RGB of the dust particles for the team.
     dust_color: #[color="dec_rgb"] [float @ 0..1] @ 3,

@@ -43,11 +43,11 @@ data modify storage hc:temp set_color.set_color_msg_args.text.with[0].color \
 data modify storage hc:temp set_color.set_color_msg_args.text.with[1] \
     set from storage hc:main vars.team_contexts.team1.preset.default_name
 data modify storage hc:temp set_color.set_color_msg_args.text.with[1].color \
-    set from storage hc:main vars.team_contexts.team1.preset.text_color
+    set from storage hc:main vars.team_contexts.team1.preset.vanilla_color
 
 # get set_vanilla_color_args data
 data modify storage hc:temp set_color.set_vanilla_color_args.color \
-    set from storage hc:main vars.team_contexts.team1.preset.text_color
+    set from storage hc:main vars.team_contexts.team1.preset.vanilla_color
 
 # get set_display_name_args data
 execute if data storage hc:main vars.team_contexts.team1.custom_name \

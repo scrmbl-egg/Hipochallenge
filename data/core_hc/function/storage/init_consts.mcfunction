@@ -125,14 +125,14 @@ data modify storage hc:main consts.limits set value { \
     no_gravity_projectiles_lifetime_ticks:200, \
 }
 
-## TEAMS
+## TEAM COLOR PRESETS
 # neutral -> team_presets[0]
 data modify storage hc:main consts.team_presets append value { \
     internal_name:"hc:neutral", \
     id:0, \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
     name_color:"#98bdc2", \
-    text_color:"white", \
+    vanilla_color:"white", \
     dust_color:[0.9f,0.9f,0.9f], \
     armor_dye_color:10403008, \
     trim_material:"minecraft:iron", \
@@ -144,7 +144,7 @@ data modify storage hc:main consts.team_presets append value { \
     id:1, \
     default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
     name_color:"#ff3030", \
-    text_color:"red", \
+    vanilla_color:"red", \
     dust_color:[1.0f,0.0f,0.0f], \
     armor_dye_color:10952471, \
     trim_material:"minecraft:redstone", \
@@ -156,7 +156,7 @@ data modify storage hc:main consts.team_presets append value { \
     id:2, \
     default_name:{translate:"hc.teams.colors.yellow",fallback:"YELLOW"}, \
     name_color:"#fffb0a", \
-    text_color:"yellow", \
+    vanilla_color:"yellow", \
     dust_color:[1.0f,1.0f,0.0f], \
     armor_dye_color:14662182, \
     trim_material:"minecraft:gold", \
@@ -168,7 +168,7 @@ data modify storage hc:main consts.team_presets append value { \
     id:3, \
     default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
     name_color:"#2ece49", \
-    text_color:"green", \
+    vanilla_color:"green", \
     dust_color:[0.0f,1.0f,0.0f], \
     armor_dye_color:4104251, \
     trim_material:"minecraft:emerald", \
@@ -180,7 +180,7 @@ data modify storage hc:main consts.team_presets append value { \
     id:4, \
     default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
     name_color:"#3f3bff", \
-    text_color:"blue", \
+    vanilla_color:"blue", \
     dust_color:[0.0f,0.0f,1.0f], \
     armor_dye_color:1977039, \
     trim_material:"minecraft:lapis", \
@@ -192,7 +192,7 @@ data modify storage hc:main consts.team_presets append value { \
     id:5, \
     default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
     name_color:"#df2fdf", \
-    text_color:"light_purple", \
+    vanilla_color:"light_purple", \
     dust_color:[1.0f,0.0f,1.0f], \
     armor_dye_color:11158177, \
     trim_material:"minecraft:amethyst", \
@@ -204,7 +204,7 @@ data modify storage hc:main consts.team_presets append value { \
     id:6, \
     default_name:{translate:"hc.teams.colors.orange",fallback:"ORANGE"}, \
     name_color:"#ff811a", \
-    text_color:"gold", \
+    vanilla_color:"gold", \
     dust_color:[1.0f,0.455f,0.141f], \
     armor_dye_color:14967062, \
     trim_material:"minecraft:resin", \
@@ -216,7 +216,7 @@ data modify storage hc:main consts.team_presets append value { \
     id:7, \
     default_name:{translate:"hc.teams.colors.cyan",fallback:"CYAN"}, \
     name_color:"#34d5f1", \
-    text_color:"aqua", \
+    vanilla_color:"aqua", \
     dust_color:[0.20f,0.83f,1.0f], \
     armor_dye_color:1819330, \
     trim_material:"minecraft:diamond", \

@@ -1,4 +1,4 @@
-use super::team::TeamPreset
+use super::team::TeamColorPreset
 use super::team::TeamContext
 use super::class::Class
 use super::game::GameModePreset
@@ -38,7 +38,7 @@ struct MainStorage {
         class_count: int @ 0..,
 
         /// List of available team presets.
-        team_presets: [TeamPreset],
+        team_presets: [TeamColorPreset],
 
         /// Amount of team presets.
         team_preset_count: int @ 0..,
