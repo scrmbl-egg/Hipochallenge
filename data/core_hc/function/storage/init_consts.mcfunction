@@ -27,7 +27,7 @@ data modify storage hc:main consts.game set value { \
         { \
             internal_name:"hc:casual", \
             id:0, \
-            name:{translate:"hc.gamemode.casual",fallback:"Casual"}, \
+            name:{translate:"hc.mode.casual",fallback:"Casual"}, \
             team_size:3, \
             states:[ \
                 { \
@@ -63,7 +63,7 @@ data modify storage hc:main consts.game set value { \
         { \
             internal_name:"hc:competitive", \
             id:1, \
-            name:{translate:"hc.gamemode.competitive",fallback:"Competitive"}, \
+            name:{translate:"hc.mode.competitive",fallback:"Competitive"}, \
             team_size:3, \
             states:[ \
                 { \
@@ -100,7 +100,7 @@ data modify storage hc:main consts.game set value { \
         { \
             internal_name:"hc:deathmatch", \
             id:2, \
-            name:{translate:"hc.gamemode.deathmatch",fallback:"Deathmatch"}, \
+            name:{translate:"hc.mode.deathmatch",fallback:"Deathmatch"}, \
             team_size:3, \
             states:[ \
                 { \
