@@ -40,6 +40,23 @@ struct GameModePresetBase {
     /// Size of the two teams in this game mode.
     team_size: int @ 1..6,
 
+    /// Callback function that is called when the game mode or match is started.
+    ///
+    /// It is recommended to use this function to create and set up resources
+    /// that will be checked and mutated throughout the match even when states
+    /// change.
+    ///
+    /// See the `on_end_function` field.
+    on_start_function: #[id="function"] string,
+
+    /// Callback function that is called when the game mode or match ends.
+    ///
+    /// It is recommended to use this function to free or destroy resources
+    /// that were set up at the start of the match.
+    ///
+    /// See the `on_start_function` field.
+    on_end_function: #[id="function"] string,
+
     /// List of all possible states of the game mode.
     ///
     /// To specify which state goes first when the game mode state machine

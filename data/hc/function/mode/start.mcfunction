@@ -16,6 +16,12 @@ execute unless data storage \
     data modify storage hc:main vars.game_context.mode.state \
     set from storage hc:main vars.game_context.mode.preset.states[0]
 
+# run start function
+function std:function/call_from_nbt { \
+    function_storage:"hc:main", \
+    function_nbt:"vars.game_context.mode.preset.on_start_function", \
+}
+
 # send debug message
 function hc:msg/debug/send_info { \
     text:[ \
@@ -36,7 +42,7 @@ function hc:msg/debug/send_info { \
     ], \
 }
 
-# run enter function
+# run state enter function
 function std:function/call_from_nbt { \
     function_storage:"hc:main", \
     function_nbt:"vars.game_context.mode.state.on_enter_function", \

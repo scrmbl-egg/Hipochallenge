@@ -25,14 +25,7 @@ execute if data storage hc:main vars.game_context.mode.state.on_exit_function \
 # early
 execute if data storage hc:temp set_state{id:0} \
     run \
-    data modify storage hc:main vars.game_context.mode.state set value {}
-execute if data storage hc:temp set_state{id:0} \
-    run \
-    function hc:msg/debug/send_info { \
-        text:[ \
-            "Stopping match...", \
-        ], \
-    }
+    function core_hc:mode/end
 execute if data storage hc:temp set_state{id:0} \
     run \
     return run \

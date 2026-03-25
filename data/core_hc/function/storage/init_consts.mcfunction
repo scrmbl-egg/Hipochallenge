@@ -29,6 +29,8 @@ data modify storage hc:main consts.game set value { \
             id:0, \
             name:{translate:"hc.mode.casual",fallback:"Casual"}, \
             team_size:3, \
+            on_start_function:"core_hc:mode/casual/on_start", \
+            on_end_function:"core_hc:mode/casual/on_end", \
             states:[ \
                 { \
                     internal_name:"level_intro", \
@@ -65,6 +67,8 @@ data modify storage hc:main consts.game set value { \
             id:1, \
             name:{translate:"hc.mode.competitive",fallback:"Competitive"}, \
             team_size:3, \
+            on_start_function:"core_hc:mode/competitive/on_start", \
+            on_end_function:"core_hc:mode/competitive/on_end", \
             states:[ \
                 { \
                     internal_name:"level_intro", \
@@ -102,6 +106,8 @@ data modify storage hc:main consts.game set value { \
             id:2, \
             name:{translate:"hc.mode.deathmatch",fallback:"Deathmatch"}, \
             team_size:3, \
+            on_start_function:"std:empty", \
+            on_end_function:"std:empty", \
             states:[ \
                 { \
                     internal_name:"battle", \
