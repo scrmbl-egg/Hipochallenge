@@ -54,14 +54,14 @@ data modify storage hc:main vars.game_context.users_playing set value 0
 
 ## TEAM CONTEXTS
 # team1
-function hc:team/name/reset_team1_name
-function hc:team/color/set_team1_red
+function hc:team/team1/custom_name/reset
+function hc:team/team1/color/set_red
 data modify storage hc:main vars.team_contexts.team1.player_profiles \
     set value []
 
 # team2
-function hc:team/name/reset_team2_name
-function hc:team/color/set_team2_blue
+function hc:team/team2/custom_name/reset
+function hc:team/team2/color/set_blue
 data modify storage hc:main vars.team_contexts.team2.player_profiles \
     set value []
 

@@ -31,34 +31,34 @@ data modify storage hc:temp set_color set value { \
 # copy team's armor color
 data modify storage hc:temp set_color.head.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_dye_color
+    hc:main vars.team_contexts.team2.color_preset.armor_dye_color
 data modify storage hc:temp set_color.chest.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_dye_color
+    hc:main vars.team_contexts.team2.color_preset.armor_dye_color
 data modify storage hc:temp set_color.legs.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_dye_color
+    hc:main vars.team_contexts.team2.color_preset.armor_dye_color
 data modify storage hc:temp set_color.feet.dyed_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.armor_dye_color
+    hc:main vars.team_contexts.team2.color_preset.armor_dye_color
 
 # copy team's trim material
 data modify storage \
     hc:temp set_color.head.trim.material \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.trim_material
+    hc:main vars.team_contexts.team2.color_preset.trim_material
 data modify storage \
     hc:temp set_color.chest.trim.material \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.trim_material
+    hc:main vars.team_contexts.team2.color_preset.trim_material
 data modify storage \
     hc:temp set_color.legs.trim.material \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.trim_material
+    hc:main vars.team_contexts.team2.color_preset.trim_material
 data modify storage \
     hc:temp set_color.feet.trim.material \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.trim_material
+    hc:main vars.team_contexts.team2.color_preset.trim_material
 # copy armor's trim pattern
 execute if items entity @s armor.head *[minecraft:trim] \
     run \

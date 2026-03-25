@@ -22,4 +22,4 @@ $execute if data storage hc:main vars.team_contexts.team2.custom_name \
 $execute unless data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage $(out_storage) $(out_nbt) \
-    set from storage hc:main vars.team_contexts.team2.preset.default_name
+    set from storage hc:main vars.team_contexts.team2.color_preset.default_name

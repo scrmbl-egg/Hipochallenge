@@ -51,8 +51,8 @@ struct TeamContext {
         text: string @ 1..16,
     },
 
-    /// Team preset.
-    preset: TeamPreset,
+    /// Team color preset.
+    color_preset: TeamColorPreset,
 
     /// List of player profiles in the team.
     player_profiles: [Profile] @ 0..6,

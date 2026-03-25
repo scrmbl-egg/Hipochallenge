@@ -33,14 +33,14 @@ function hc:team/team2/get_displayed_name_text { \
     out_nbt:"join_team2.match_msg_args.text.with[1]", \
 }
 data modify storage hc:temp join_team2.match_msg_args.text.with[1].color \
-    set from storage hc:main vars.team_contexts.team2.preset.vanilla_color
+    set from storage hc:main vars.team_contexts.team2.color_preset.vanilla_color
 
 function hc:team/team2/get_displayed_name_text { \
     out_storage:"hc:temp", \
     out_nbt:"join_team2.private_msg_args.text.with[0]", \
 }
 data modify storage hc:temp join_team2.private_msg_args.text.with[0].color \
-    set from storage hc:main vars.team_contexts.team2.preset.vanilla_color
+    set from storage hc:main vars.team_contexts.team2.color_preset.vanilla_color
 
 # print match message (player won't see this one!!)
 function hc:msg/match/send with storage hc:temp join_team2.match_msg_args

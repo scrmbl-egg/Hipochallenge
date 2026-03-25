@@ -15,13 +15,12 @@ scoreboard objectives add __hc.SetTeamName dummy
 $data modify storage hc:temp set_name set value { \
     input_str:"$(name)", \
     display_name_set_args:{ \
-        team:"hc.Team1", \
         text:{text:"$(name)"}, \
         prefix_color:"", \
     }, \
 }
 data modify storage hc:temp set_name.display_name_set_args.prefix_color \
-    set from storage hc:main vars.team_contexts.team1.preset.name_color
+    set from storage hc:main vars.team_contexts.team1.color_preset.name_color
 
 # get input string length
 execute store result score __$hc_strlen __hc.SetTeamName \
@@ -59,7 +58,7 @@ data modify storage hc:main vars.team_contexts.team1.custom_name.text \
     set from storage hc:temp set_name.input_str
 
 # set display name
-function core_hc:team/display_name/set \
+function core_hc:team/team1/display_name/set \
     with storage hc:temp set_name.display_name_set_args
 
 # send message

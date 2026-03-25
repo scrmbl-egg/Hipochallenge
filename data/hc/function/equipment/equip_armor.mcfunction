@@ -45,12 +45,12 @@ execute if predicate hc:team/is_in_team1 \
     run \
     data modify storage hc:temp equip_armor.fx_args.dust_color \
     set from storage \
-    hc:main vars.team_contexts.team1.preset.dust_color
+    hc:main vars.team_contexts.team1.color_preset.dust_color
 execute if predicate hc:team/is_in_team2 \
     run \
     data modify storage hc:temp equip_armor.fx_args.dust_color \
     set from storage \
-    hc:main vars.team_contexts.team2.preset.dust_color
+    hc:main vars.team_contexts.team2.color_preset.dust_color
 execute if predicate hc:team/is_in_neutral_team \
     run \
     data modify storage hc:temp equip_armor.fx_args.dust_color \

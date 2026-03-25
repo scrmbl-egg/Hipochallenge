@@ -7,7 +7,7 @@
 #       Internal name of the color that will replace the previous color.
 
 # set team context in global variables
-$data modify storage hc:main vars.team_contexts.team2.preset \
+$data modify storage hc:main vars.team_contexts.team2.color_preset \
     set from storage hc:main \
     consts.team_presets[{internal_name:"$(internal_name)"}]
 
@@ -41,13 +41,13 @@ function hc:team/team2/get_displayed_name_text { \
 data modify storage hc:temp set_color.set_color_msg_args.text.with[0].color \
     set value "gray"
 data modify storage hc:temp set_color.set_color_msg_args.text.with[1] \
-    set from storage hc:main vars.team_contexts.team2.preset.default_name
+    set from storage hc:main vars.team_contexts.team2.color_preset.default_name
 data modify storage hc:temp set_color.set_color_msg_args.text.with[1].color \
-    set from storage hc:main vars.team_contexts.team2.preset.vanilla_color
+    set from storage hc:main vars.team_contexts.team2.color_preset.vanilla_color
 
 # get set_vanilla_color_args data
 data modify storage hc:temp set_color.set_vanilla_color_args.color \
-    set from storage hc:main vars.team_contexts.team2.preset.vanilla_color
+    set from storage hc:main vars.team_contexts.team2.color_preset.vanilla_color
 
 # get set_display_name_args data
 execute if data storage hc:main vars.team_contexts.team2.custom_name \
@@ -57,13 +57,13 @@ execute if data storage hc:main vars.team_contexts.team2.custom_name \
 execute unless data storage hc:main vars.team_contexts.team2.custom_name \
     run \
     data modify storage hc:temp set_color.set_display_name_args.text \
-    set from storage hc:main vars.team_contexts.team2.preset.default_name
+    set from storage hc:main vars.team_contexts.team2.color_preset.default_name
 data modify storage hc:temp set_color.set_display_name_args.prefix_color \
-    set from storage hc:main vars.team_contexts.team2.preset.name_color
+    set from storage hc:main vars.team_contexts.team2.color_preset.name_color
 
 # get set_name_msg_args data
 data modify storage hc:temp set_color.set_name_msg_args.text.with[0] \
-    set from storage hc:main vars.team_contexts.team2.preset.default_name
+    set from storage hc:main vars.team_contexts.team2.color_preset.default_name
 data modify storage hc:temp set_color.set_name_msg_args.text.with[0].color \
     set value "gray"
 
