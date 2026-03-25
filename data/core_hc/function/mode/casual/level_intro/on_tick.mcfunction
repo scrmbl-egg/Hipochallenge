@@ -2,5 +2,13 @@
 #
 # Function called each tick of the level_intro state of the casual game mode.
 
-# go to intermission state
-return 2
+# get stopwatch seconds
+execute store result score __$hc_secs __hc.LevelIntro \
+    run \
+    stopwatch query hc:casual/level_intro 1
+
+# if intro duration reaches end, go to intermission state
+execute if score \
+    __$hc_secs __hc.LevelIntro >= __$hc_duration_secs __hc.LevelIntro \
+    run \
+    return 2
