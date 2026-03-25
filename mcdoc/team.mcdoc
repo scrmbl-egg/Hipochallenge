@@ -45,10 +45,13 @@ struct TeamColorPreset {
 
 /// Struct that represents the current context of a team.
 struct TeamContext {
-    /// **(Nullable)** Custom name of the team.
+    /// **(Nullable)**
+    /// Custom name text component of the team.
     custom_name?: struct TeamNameText {
-        ...TextBase,
+        /// Text of the custom name. Must be between 1 and 16 characters long.
         text: string @ 1..16,
+
+        ...TextBase,
     },
 
     /// Team color preset.
