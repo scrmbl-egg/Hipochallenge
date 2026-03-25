@@ -41,7 +41,7 @@ struct MainStorage {
         team_color_presets: [TeamColorPreset],
 
         /// Amount of team presets.
-        team_preset_count: int @ 0..,
+        team_color_preset_count: int @ 0..,
 
         /// Available levels.
         levels: [Level],
