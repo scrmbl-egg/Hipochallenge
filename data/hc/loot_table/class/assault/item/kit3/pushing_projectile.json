@@ -23,6 +23,18 @@
                                     "has_consume_particles": false,
                                     "on_consume_effects": [],
                                     "sound": "minecraft:ui.button.click"
+                                },
+                                "minecraft:use_cooldown": {
+                                    "seconds": 8.0,
+                                    "cooldown_group": "hc:assault_k3_pushing_projectile"
+                                },
+                                "minecraft:use_remainder": {
+                                    "id": "minecraft:paper",
+                                    "components": {
+                                        "minecraft:custom_data": {
+                                            "hc:item/replace_with": "hc:class/assault/item/kit3/pushing_projectile"
+                                        }
+                                    }
                                 }
                             }
                         }
