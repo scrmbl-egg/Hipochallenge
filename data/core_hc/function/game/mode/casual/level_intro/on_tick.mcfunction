@@ -1,4 +1,4 @@
-#>core_hc:mode/casual/level_intro/on_tick
+#>core_hc:game/mode/casual/level_intro/on_tick
 #
 # Function called each tick of the level_intro state of the casual game mode.
 

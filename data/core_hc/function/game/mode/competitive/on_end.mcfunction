@@ -1,4 +1,4 @@
-#>core_hc:mode/competitive/on_end
+#>core_hc:game/mode/competitive/on_end
 #
 # Function that is called at the end of the competitive mode.
 

@@ -1,4 +1,4 @@
-#>core_hc:mode/competitive/level_intro/on_tick
+#>core_hc:game/mode/competitive/level_intro/on_tick
 #
 # Function called each tick of the level_intro state of the competitive
 # game mode.

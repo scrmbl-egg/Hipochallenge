@@ -1,4 +1,4 @@
-#>core_hc:mode/casual/on_end
+#>core_hc:game/mode/casual/on_end
 #
 # Function that is called at the end of the casual mode.
 
