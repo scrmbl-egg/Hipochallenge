@@ -109,6 +109,25 @@ struct GameModeState {
     /// # stop the match
     /// execute unless predicate custom:example_predicate run return 0
     /// ```
+    ///
+    /// Since the next state is determined by the returned ID, here are some
+    /// tricks that can be performed:
+    ///
+    /// - You can switch to a random state:
+    ///  ```mcfunction
+    ///  execute if predicate custom:example_predicate \
+    ///     run \
+    ///     return run random value 1..6
+    ///  ```
+    /// - You can get the ID from storage instead of hardcoding it:
+    ///  ```mcfunction
+    ///  execute if predicate custom:example_predicate \
+    ///     run \
+    ///     return run \
+    ///     data get storage hc:main consts.game.\
+    ///     modes[{internal_name:"hc:casual"}].\
+    ///     states[{internal_name:"intermission"}].id
+    ///  ```
     on_tick_function: #[id="function"] string,
 
     /// Callback function that is called just before the next state starts.
