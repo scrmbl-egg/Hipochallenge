@@ -2,6 +2,12 @@
 #
 # Starts a match with the currently selected game mode.
 
+# if match is being played, don't execute the rest of this function
+execute if predicate hc:game/match/is_being_played \
+    run \
+    return run \
+    function std:empty
+
 # check if start_state flag is present in the preset state array
 execute if data storage \
     hc:main vars.game_context.mode.preset.states[{start_state:{}}] \
