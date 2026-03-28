@@ -7,22 +7,22 @@
 #       reserved for ending the match.
 
 # get stopwatch seconds
-execute store result score __$hc_secs __hc.Intermission \
+execute store result score __$hc_state_secs __hc.Casual \
     run \
     stopwatch query hc:casual/intermission 1
 
 # put difference in bossbar value and name
 scoreboard players operation \
-    __$hc_remaining __hc.Intermission = __$hc_duration_secs __hc.Intermission
+    __$hc_remaining_secs __hc.Casual = __$hc_state_duration_secs __hc.Casual
 execute store result bossbar hc:casual/intermission value \
     run \
     scoreboard players operation \
-    __$hc_remaining __hc.Intermission -= __$hc_secs __hc.Intermission
+    __$hc_remaining_secs __hc.Casual -= __$hc_state_secs __hc.Casual
 bossbar set hc:casual/intermission name { \
     translate:"", \
     fallback:"%1$s \u231b | %2$s", \
     with:[ \
-        {score:{name:"__$hc_remaining",objective:"__hc.Intermission"}}, \
+        {score:{name:"__$hc_remaining_secs",objective:"__hc.Casual"}}, \
         { \
             translate:"hc.selection.kit_and_perk", \
             fallback:"Select your kit & perk", \
@@ -30,8 +30,10 @@ bossbar set hc:casual/intermission name { \
     ], \
 }
 
-# if duration reaches end, go to round state
+# if duration reaches end, go to round_intro state
 execute if score \
-    __$hc_secs __hc.Intermission >= __$hc_duration_secs __hc.Intermission \
+    __$hc_state_secs __hc.Casual >= __$hc_state_duration_secs __hc.Casual \
     run \
-    return 3
+    return run \
+    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
+    states[{internal_name:"round_intro"}].id

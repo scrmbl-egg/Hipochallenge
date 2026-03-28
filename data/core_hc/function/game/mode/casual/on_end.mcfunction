@@ -2,6 +2,5 @@
 #
 # Function that is called at the end of the casual mode.
 
-function hc:msg/debug/send_info { \
-    text:"\"on_end hc:casual\"", \
-}
+# remove scoreboard
+scoreboard objectives remove __hc.Casual

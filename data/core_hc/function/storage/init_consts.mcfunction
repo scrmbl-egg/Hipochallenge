@@ -48,11 +48,32 @@ data modify storage hc:main consts.game set value { \
                     on_exit_function:"core_hc:game/mode/casual/intermission/on_exit", \
                 }, \
                 { \
-                    internal_name:"round", \
+                    internal_name:"round_intro", \
                     id:3, \
+                    on_enter_function:"core_hc:game/mode/casual/round_intro/on_enter", \
+                    on_tick_function:"core_hc:game/mode/casual/round_intro/on_tick", \
+                    on_exit_function:"core_hc:game/mode/casual/round_intro/on_exit", \
+                }, \
+                { \
+                    internal_name:"round", \
+                    id:4, \
                     on_enter_function:"core_hc:game/mode/casual/round/on_enter", \
                     on_tick_function:"core_hc:game/mode/casual/round/on_tick", \
                     on_exit_function:"core_hc:game/mode/casual/round/on_exit", \
+                }, \
+                { \
+                    internal_name:"round_sudden_death", \
+                    id:5, \
+                    on_enter_function:"core_hc:game/mode/casual/round_sudden_death/on_enter", \
+                    on_tick_function:"core_hc:game/mode/casual/round_sudden_death/on_tick", \
+                    on_exit_function:"core_hc:game/mode/casual/round_sudden_death/on_exit", \
+                }, \
+                { \
+                    internal_name:"round_outro", \
+                    id:6, \
+                    on_enter_function:"core_hc:game/mode/casual/round_outro/on_enter", \
+                    on_tick_function:"core_hc:game/mode/casual/round_outro/on_tick", \
+                    on_exit_function:"core_hc:game/mode/casual/round_outro/on_exit", \
                 }, \
             ], \
             casual_data:{ \
