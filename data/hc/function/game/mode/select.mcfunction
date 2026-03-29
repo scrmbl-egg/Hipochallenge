@@ -6,8 +6,16 @@
 #   internal_name: #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string
 #       Internal name of the game mode.
 
-# cancel match (function result is ignored)
-function core_hc:game/match/try_cancel
+# don't select if match isn't being played
+execute if predicate hc:game/match/is_being_played \
+    run \
+    return run \
+    function hc:msg/private/send_error { \
+        text:{ \
+            translate:"hc.msg.private.error.cannot_select_mode_when_match_is_being_played", \
+            fallback:"Can't select a different mode when a match is already being played", \
+        }, \
+    }
 
 # get preset
 $data modify storage hc:main vars.game_context.mode.preset \

@@ -6,7 +6,14 @@
 execute if predicate hc:game/match/is_being_played \
     run \
     return run \
-    function std:empty
+    function hc:msg/debug/send_warning { \
+        text:{ \
+            translate:"", \
+            fallback:"Attempted to start a match when one is already being played. Try calling the '%s' function.", \
+            with:["hc:game/match/try_cancel"], \
+        }, \
+    }
+# else...
 
 # check if start_state flag is present in the preset state array
 execute if data storage \
