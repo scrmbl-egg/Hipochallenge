@@ -105,7 +105,8 @@ scoreboard objectives add hc.BowShot minecraft.used:minecraft.bow
 scoreboard objectives modify hc.Health displayname { \
     translate:"hc.score.health_representation", \
     fallback:"\u2764", \
-    color:"#db0000", \
+    color:"#ed2626", \
+    shadow_color:[0.25f, 0f, 0f, 1f], \
 }
 
 # hc.PlayerKillCount
@@ -113,6 +114,7 @@ scoreboard objectives modify hc.PlayerKillCount displayname { \
     translate:"hc.score.player_kill_count_representation", \
     fallback:"\u2694", \
     color:"white", \
+    shadow_color:[0.25f, 0.25f, 0.25f, 0.8f], \
 }
 
 # hc.DeathCount
@@ -120,6 +122,7 @@ scoreboard objectives modify hc.DeathCount displayname { \
     translate:"hc.score.death_count_representation", \
     fallback:"\u2620", \
     color:"white", \
+    shadow_color:[0.25f, 0.25f, 0.25f, 0.8f], \
 }
 
 # hc.Points
@@ -127,6 +130,7 @@ scoreboard objectives modify hc.Points displayname { \
     translate:"hc.score.points_representation", \
     fallback:"\u2666", \
     color:"gold", \
+    shadow_color:[0.341f, 0.18f, 0.071f, 0.8f], \
 }
 
 ## INITIALISE SCORES
