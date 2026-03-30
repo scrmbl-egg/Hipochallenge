@@ -2,14 +2,8 @@
 #
 # Function called each tick of the level_intro state of the casual game mode.
 
-# get stopwatch seconds
-execute store result score __$hc_state_secs __hc.Casual \
-    run \
-    stopwatch query hc:casual/level_intro 1
-
 # if intro duration reaches end, go to intermission state
-execute if score \
-    __$hc_state_secs __hc.Casual >= __$hc_state_duration_secs __hc.Casual \
+execute if score __$hc_state_remaining_ticks __hc.Casual matches ..0 \
     run \
     return run \
     data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\

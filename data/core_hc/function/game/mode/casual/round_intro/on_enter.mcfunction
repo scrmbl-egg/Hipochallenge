@@ -2,9 +2,11 @@
 #
 # Function called when entering the round_intro state of the casual game mode.
 
-
-## CREATE STOPWATCH
-stopwatch create hc:casual/round_intro
+## INIT SCOREBOARD HOLDERS
+execute store result score __$hc_state_remaining_ticks __hc.Casual \
+    run \
+    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
+    casual_data.round_intro_duration_seconds 20
 
 
 # increment current round number

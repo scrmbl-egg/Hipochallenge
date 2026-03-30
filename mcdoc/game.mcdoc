@@ -49,12 +49,20 @@ struct GameModePresetBase {
     /// See the `on_end_function` field.
     on_start_function: #[id="function"] string,
 
+    /// Callback function that is called each tick of the game mode, regardless
+    /// of it's current state.
+    ///
+    /// It is recommended to use this function to update resources that will
+    /// be checked and mutated each tick of the match even when the states
+    /// change (best example: timer scores).
+    on_tick_function: #[id="function"] string,
+
     /// Callback function that is called when the game mode or match ends.
     ///
     /// It is recommended to use this function to free or destroy resources
     /// that were set up at the start of the match.
     ///
-    /// See the `on_start_function` field.
+    /// See the `on_start_function` and `on_tick_function` fields.
     on_end_function: #[id="function"] string,
 
     /// List of all possible states of the game mode.
@@ -178,19 +186,23 @@ type GameModePreset = (
 
         /// Casual game mode data.
         casual_data: struct {
-            ...struct RoundBasedData {
-                /// Duration of the level's intro.
-                level_intro_duration_seconds: int @ 1..,
+            /// Duration of the level's intro in seconds.
+            level_intro_duration_seconds: int @ 1..107374182,
 
-                /// Duration of the kit and perk selection intermission.
-                intermission_duration_seconds: int @ 1..,
+            /// Duration of the kit and perk selection intermission.
+            intermission_duration_seconds: int @ 1..107374182,
 
-                /// Amount of rounds a team must win to win the whole match.
-                rounds_to_win: int @ 1..,
+            /// Duration of the round's intro in seconds.
+            round_intro_duration_seconds: int @ 1..107374182,
 
-                /// Duration of a round in seconds.
-                round_duration_seconds: int @ 1..,
-            },
+            /// Duration of a round in seconds.
+            round_duration_seconds: int @ 1..107374182,
+
+            /// Duration of the round's outro in seconds.
+            round_outro_duration_seconds: int @ 1..107374182,
+
+            /// Amount of rounds a team must win to win the whole match.
+            rounds_to_win: int @ 1..,
         },
 
         ...GameModePresetBase,
@@ -201,10 +213,26 @@ type GameModePreset = (
 
         /// Competitive game mode data.
         competitive_data: struct {
+            /// Duration of the level's intro in seconds.
+            level_intro_duration_seconds: int @ 1..107374182,
+
+            /// Duration of the kit and perk selection intermission.
+            intermission_duration_seconds: int @ 1..107374182,
+
+            /// Duration of the round's intro in seconds.
+            round_intro_duration_seconds: int @ 1..107374182,
+
+            /// Duration of a round in seconds.
+            round_duration_seconds: int @ 1..107374182,
+
+            /// Duration of the round's outro in seconds.
+            round_outro_duration_seconds: int @ 1..107374182,
+
+            /// Amount of rounds a team must win to win the whole match.
+            rounds_to_win: int @ 1..,
+
             /// Won round lead to win the match.
             min_winning_lead: int @ 0..,
-
-            ...RoundBasedData,
         },
 
         ...GameModePresetBase,
@@ -219,7 +247,7 @@ type GameModePreset = (
             kills_to_win: int @ 1..,
 
             /// Duration of the match in seconds.
-            duration_seconds: int @ 1..,
+            duration_seconds: int @ 1..107374182,
         },
 
         ...GameModePresetBase,

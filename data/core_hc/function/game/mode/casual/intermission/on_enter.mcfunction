@@ -3,22 +3,23 @@
 # Function called when entering the intermission state of the casual game mode.
 
 ## INIT SCOREBOARD HOLDERS
-scoreboard players set __$hc_state_duration_secs __hc.Casual 0
-scoreboard players set __$hc_state_secs __hc.Casual 0
-scoreboard players set __$hc_remaining_secs __hc.Casual 0
-
-# store duration
-execute store result score __$hc_state_duration_secs __hc.Casual \
+execute store result score __$hc_state_remaining_ticks __hc.Casual \
     run \
-    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
-    casual_data.intermission_duration_seconds
-
-## SETUP STOPWATCH
-stopwatch create hc:casual/intermission
-
+    data get storage hc:main vars.game_context.mode.preset.\
+    casual_data.intermission_duration_seconds 20
 
 ## SETUP BOSSBAR
 bossbar add hc:casual/intermission ""
+
+execute store result bossbar hc:casual/intermission max \
+    run \
+    data get storage hc:main vars.game_context.mode.preset.\
+    casual_data.intermission_duration_seconds 20
+execute store result bossbar hc:casual/intermission value \
+    run \
+    data get storage hc:main vars.game_context.mode.preset.\
+    casual_data.intermission_duration_seconds 20
+
 bossbar set hc:casual/intermission color blue
 bossbar set hc:casual/intermission players \
     @a[predicate=hc:team/is_in_match_team]
@@ -27,7 +28,10 @@ bossbar set hc:casual/intermission name { \
     translate:"", \
     fallback:"%1$s \u231b | %2$s", \
     with:[ \
-        {score:{name:"__$hc_remaining_secs",objective:"__hc.Casual"}}, \
+        { \
+            storage:"hc:main", \
+            nbt:"vars.game_context.mode.preset.casual_data.intermission_duration_seconds", \
+        }, \
         { \
             translate:"hc.selection.kit_and_perk", \
             fallback:"Select your kit & perk", \
@@ -35,9 +39,6 @@ bossbar set hc:casual/intermission name { \
     ], \
 }
 bossbar set hc:casual/intermission visible true
-execute store result bossbar hc:casual/intermission max \
-    run \
-    scoreboard players get __$hc_state_duration_secs __hc.Casual
 
 
 ## DISPLAY TITLES

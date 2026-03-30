@@ -38,7 +38,13 @@ execute store result score __$hc_last_id __hc.GameModeTick \
     run \
     data get storage hc:main vars.game_context.mode.state.id
 
-## get next state ID by running current ON_TICK_FUNCTION
+## run game mode's own tick function (no result)
+function std:function/call_from_nbt { \
+    function_storage:"hc:main", \
+    function_nbt:"vars.game_context.mode.preset.on_tick_function", \
+}
+
+## get next state ID by running current state's ON_TICK_FUNCTION
 # save in score for comparison (use current ID as default)
 scoreboard players operation \
     __$hc_next_id __hc.GameModeTick = __$hc_last_id __hc.GameModeTick

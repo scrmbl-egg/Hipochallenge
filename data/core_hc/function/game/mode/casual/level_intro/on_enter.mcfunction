@@ -3,14 +3,11 @@
 # Function called when entering the level_intro state of the casual game mode.
 
 ## INIT SCOREBOARD HOLDERS
-scoreboard players set __$hc_state_duration_secs __hc.Casual 0
-scoreboard players set __$hc_state_secs __hc.Casual 0
-
-# store duration
-execute store result score __$hc_state_duration_secs __hc.Casual \
+# start timer
+execute store result score __$hc_state_remaining_ticks __hc.Casual \
     run \
     data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
-    casual_data.level_intro_duration_seconds
+    casual_data.level_intro_duration_seconds 20
 
 
 ## DATA

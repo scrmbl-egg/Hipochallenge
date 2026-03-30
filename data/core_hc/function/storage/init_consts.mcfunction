@@ -30,6 +30,7 @@ data modify storage hc:main consts.game set value { \
             name:{translate:"hc.mode.casual",fallback:"Casual"}, \
             team_size:3, \
             on_start_function:"core_hc:game/mode/casual/on_start", \
+            on_tick_function:"core_hc:game/mode/casual/on_tick", \
             on_end_function:"core_hc:game/mode/casual/on_end", \
             states:[ \
                 { \
@@ -78,9 +79,11 @@ data modify storage hc:main consts.game set value { \
             ], \
             casual_data:{ \
                 level_intro_duration_seconds:10, \
-                intermission_duration_seconds:45, \
+                intermission_duration_seconds:30, \
+                round_intro_duration_seconds:3, \
+                round_duration_seconds:60, \
+                round_outro_duration_seconds:5, \
                 rounds_to_win:5, \
-                round_duration_seconds:120, \
             }, \
         }, \
         { \
@@ -89,6 +92,7 @@ data modify storage hc:main consts.game set value { \
             name:{translate:"hc.mode.competitive",fallback:"Competitive"}, \
             team_size:3, \
             on_start_function:"core_hc:game/mode/competitive/on_start", \
+            on_tick_function:"core_hc:game/mode/competitive/on_tick", \
             on_end_function:"core_hc:game/mode/competitive/on_end", \
             states:[ \
                 { \
@@ -117,9 +121,11 @@ data modify storage hc:main consts.game set value { \
             competitive_data:{ \
                 level_intro_duration_seconds:10, \
                 intermission_duration_seconds:30, \
+                round_intro_duration_seconds:3, \
+                round_duration_seconds:120, \
+                round_outro_duration_seconds:5, \
                 rounds_to_win:5, \
                 min_winning_lead:2, \
-                round_duration_seconds:120, \
             }, \
         }, \
         { \
@@ -128,6 +134,7 @@ data modify storage hc:main consts.game set value { \
             name:{translate:"hc.mode.deathmatch",fallback:"Deathmatch"}, \
             team_size:3, \
             on_start_function:"std:empty", \
+            on_tick_function:"std:empty", \
             on_end_function:"std:empty", \
             states:[ \
                 { \
