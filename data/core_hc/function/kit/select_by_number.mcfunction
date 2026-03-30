@@ -32,7 +32,7 @@ data modify storage hc:temp select_kit set value { \
     team_msg_args:{ \
         team:"", \
         text:{ \
-            translate:"hc.msg.private.player_selected_kit", \
+            translate:"hc.msg.team.player_selected_kit", \
             fallback:"%1$s has selected the %2$s kit", \
             with:[{selector:"@s"}, {}], \
         }, \

@@ -32,7 +32,7 @@ data modify storage hc:temp select_perk set value { \
     team_msg_args:{ \
         team:"", \
         text:{ \
-            translate:"hc.msg.private.player_selected_perk", \
+            translate:"hc.msg.team.player_selected_perk", \
             fallback:"%1$s has selected the %2$s perk", \
             with:[{selector:"@s"}, {}], \
         }, \
