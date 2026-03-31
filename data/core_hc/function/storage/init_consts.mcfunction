@@ -240,7 +240,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     name_color:"#ff811a", \
     vanilla_color:"gold", \
     dust_color:[1.0f,0.455f,0.141f], \
-    armor_dye_color:14967062, \
+    armor_dye_color:16281118, \
     trim_material:"minecraft:resin", \
 }
 
