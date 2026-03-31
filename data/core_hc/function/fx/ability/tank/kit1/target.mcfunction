@@ -8,9 +8,9 @@
 #   owner_uuid: #[uuid] int[] @ 4
 #       UUID of the owner.
 
-$particle dust_color_transition{ \
-    from_color:[1.000,0.867,0.000], \
-    scale:0.5, \
-    to_color:[1.000,0.467,0.000], \
+$particle dust_color_transition{\
+    from_color:[1.000,0.867,0.000],\
+    scale:0.8,\
+    to_color:[1.000,0.467,0.000],\
 } \
     ~ ~1 ~ 0.25 0.5 0.25 1 15 force @p[nbt={UUID:$(owner_uuid)}]

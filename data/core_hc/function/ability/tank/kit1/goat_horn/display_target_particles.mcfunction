@@ -10,8 +10,8 @@
 #   radius: double @ 0..
 #       Radius of the sphere in which the player is going to apply effects.
 
-# FIXME: this just doesn't work... for some reason
-$execute as @a[ \
+$execute as @e[ \
+        type=#hc:player_like, \
         nbt=!{UUID:$(owner_uuid)}, \
         limit=6, \
         distance=..$(radius), \

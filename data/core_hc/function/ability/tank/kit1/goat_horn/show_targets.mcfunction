@@ -1,6 +1,8 @@
 #>core_hc:ability/tank/kit1/show_targets
 #
 # Shows all targets in range via particles.
+#
+# @context player
 
 # set temporary schema
 data modify storage hc:temp tank_k1_horn_targetting set value { \
@@ -21,9 +23,8 @@ function hc:team/get_self_team { \
 
 # get radius
 data modify storage hc:temp tank_k1_horn_targetting.radius \
-    set from storage hc:main \
-    consts.classes[{internal_name:"hc:tank"}].\
-    kits[{id:2}].tank_k1_data.horn.radius
+    set from storage hc:main consts.classes[{internal_name:"hc:tank"}].\
+    kits[{id:1}].tank_k1_data.horn.radius
 
 # call display target particles func
 function core_hc:ability/tank/kit1/goat_horn/display_target_particles \

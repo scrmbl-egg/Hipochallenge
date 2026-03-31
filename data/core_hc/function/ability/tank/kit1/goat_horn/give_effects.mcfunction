@@ -10,7 +10,8 @@
 #       Radius of the sphere in which the player is going to apply effects.
 
 # give ability effects
-$execute as @a[ \
+$execute as @e[ \
+    type=#hc:player_like, \
     limit=6, \
     distance=..$(radius), \
     team=$(team) \
