@@ -8,16 +8,16 @@ bossbar set hc:casual/round name { \
     translate:"", \
     fallback:"%1$s \u231b", \
     with:[ \
-        {score:{name:"__$hc_state_remaining_secs",objective:"__hc.Casual"}}, \
+        {score:{name:"hc:state_remaining_secs",objective:"__hc.Casual"}}, \
     ], \
 }
 execute store result bossbar hc:casual/round value \
     run \
-    scoreboard players get __$hc_state_remaining_ticks __hc.Casual
+    scoreboard players get hc:state_remaining_ticks __hc.Casual
 
 
 ## if time expires, go to sudden death
-execute if score __$hc_state_remaining_ticks __hc.Casual matches ..0 \
+execute if score hc:state_remaining_ticks __hc.Casual matches ..0 \
     run \
     return run \
     data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\

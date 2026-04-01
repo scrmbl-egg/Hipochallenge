@@ -6,6 +6,6 @@
 bossbar remove hc:casual/round
 
 # free memory
-scoreboard players reset __$hc_state_secs __hc.Casual
-scoreboard players reset __$hc_state_duration_secs __hc.Casual
-scoreboard players reset __$hc_remaining_secs __hc.Casual
+scoreboard players reset hc:state_secs __hc.Casual
+scoreboard players reset hc:state_duration_secs __hc.Casual
+scoreboard players reset hc:remaining_secs __hc.Casual

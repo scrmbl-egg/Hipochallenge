@@ -19,14 +19,14 @@ execute at @s \
 scoreboard objectives add __hc.NewProjectile dummy
 
 # get max amount of arrows the player can have
-execute store result score __$hc_max __hc.NewProjectile \
+execute store result score hc:max __hc.NewProjectile \
     run \
     data get storage hc:main consts.\
     classes[{internal_name:"hc:marksman"}].\
     kits[{id:1}].marksman_k1_data.arrows.max_amount
 
 # add to max amount if perk 3 is equipped
-scoreboard players set __$hc_added_projectiles __hc.NewProjectile 0
+scoreboard players set hc:added_projectiles __hc.NewProjectile 0
 
 execute if predicate { \
     condition:"minecraft:all_of", \
@@ -35,17 +35,17 @@ execute if predicate { \
         {condition:"minecraft:reference",name:"hc:perk/is_perk3"}, \
     ], \
 } \
-    store result score __$hc_added_projectiles __hc.NewProjectile \
+    store result score hc:added_projectiles __hc.NewProjectile \
     run \
     data get storage hc:main consts.\
     classes[{internal_name:"hc:marksman"}].\
     perks[{id:3}].marksman_p3_data.added_projectiles
 
 scoreboard players operation \
-    __$hc_max __hc.NewProjectile += __$hc_added_projectiles __hc.NewProjectile
+    hc:max __hc.NewProjectile += hc:added_projectiles __hc.NewProjectile
 
 # get current amount of arrows
-execute store result score __$hc_arrows __hc.NewProjectile \
+execute store result score hc:arrows __hc.NewProjectile \
     run \
     clear @s *[ \
         minecraft:custom_data~{"hc:item/id":"marksman_k1_arrow"} \
@@ -53,7 +53,7 @@ execute store result score __$hc_arrows __hc.NewProjectile \
 
 # give new (smaller) cooldown if player can have more arrows
 execute if score \
-    __$hc_arrows __hc.NewProjectile < __$hc_max __hc.NewProjectile \
+    hc:arrows __hc.NewProjectile < hc:max __hc.NewProjectile \
     store result score @s hc.MarksmanKit1NewProjectileCooldown \
     run \
     data get storage hc:main consts.\

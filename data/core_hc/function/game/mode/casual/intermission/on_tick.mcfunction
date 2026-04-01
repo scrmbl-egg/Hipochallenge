@@ -11,7 +11,7 @@ bossbar set hc:casual/intermission name { \
     translate:"", \
     fallback:"%1$s \u231b | %2$s", \
     with:[ \
-        {score:{name:"__$hc_state_remaining_secs",objective:"__hc.Casual"}}, \
+        {score:{name:"hc:state_remaining_secs",objective:"__hc.Casual"}}, \
         { \
             translate:"hc.selection.kit_and_perk", \
             fallback:"Select your kit & perk", \
@@ -20,10 +20,10 @@ bossbar set hc:casual/intermission name { \
 }
 execute store result bossbar hc:casual/intermission value \
     run \
-    scoreboard players get __$hc_state_remaining_ticks __hc.Casual
+    scoreboard players get hc:state_remaining_ticks __hc.Casual
 
 # if duration reaches end, go to round_intro state
-execute if score __$hc_state_remaining_ticks __hc.Casual matches ..0 \
+execute if score hc:state_remaining_ticks __hc.Casual matches ..0 \
     run \
     return run \
     data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\

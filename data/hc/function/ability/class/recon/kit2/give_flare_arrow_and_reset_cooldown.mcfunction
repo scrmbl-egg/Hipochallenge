@@ -17,14 +17,14 @@ execute at @s \
 scoreboard objectives add __hc.NewFlareArrow dummy
 
 # get max amount of arrows the player can have
-execute store result score __$hc_max __hc.NewFlareArrow \
+execute store result score hc:max __hc.NewFlareArrow \
     run \
     data get storage hc:main consts.\
     classes[{internal_name:"hc:recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.max_amount
 
 # get current amount of arrows (+1 if charged in crossbow)
-execute store result score __$hc_f_arrows __hc.NewFlareArrow \
+execute store result score hc:f_arrows __hc.NewFlareArrow \
     run \
     clear @s *[ \
         minecraft:custom_data~{"hc:item/id":"recon_k2_flare_arrow"} \
@@ -41,11 +41,11 @@ execute if items entity @s container.* *[ \
     ] \
 ] \
     run \
-    scoreboard players add __$hc_f_arrows __hc.NewFlareArrow 1
+    scoreboard players add hc:f_arrows __hc.NewFlareArrow 1
 
 # give new (smaller) cooldown if player can have more arrows
 execute if score \
-    __$hc_f_arrows __hc.NewFlareArrow < __$hc_max __hc.NewFlareArrow \
+    hc:f_arrows __hc.NewFlareArrow < hc:max __hc.NewFlareArrow \
     store result score @s hc.ReconKit2FlareArrowCooldown \
     run \
     data get storage hc:main consts.\

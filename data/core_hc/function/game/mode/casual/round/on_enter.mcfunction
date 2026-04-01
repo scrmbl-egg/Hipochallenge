@@ -4,7 +4,7 @@
 
 ## INIT SCOREBOARDS HOLDERS
 # store duration
-execute store result score __$hc_state_remaining_ticks __hc.Casual \
+execute store result score hc:state_remaining_ticks __hc.Casual \
     run \
     data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
     casual_data.round_duration_seconds 20

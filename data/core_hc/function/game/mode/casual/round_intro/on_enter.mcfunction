@@ -3,27 +3,27 @@
 # Function called when entering the round_intro state of the casual game mode.
 
 ## INIT SCOREBOARD HOLDERS
-execute store result score __$hc_state_remaining_ticks __hc.Casual \
+execute store result score hc:state_remaining_ticks __hc.Casual \
     run \
     data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
     casual_data.round_intro_duration_seconds 20
 
 
 # increment current round number
-scoreboard players add __$hc_round __hc.Casual 1
+scoreboard players add hc:round __hc.Casual 1
 
 
 # show round title ("round X" or "final round")
 title @a[predicate=hc:team/is_in_match_team] times 0.1s 3s 0.1s
 title @a[predicate=hc:team/is_in_match_team] title ""
-execute if score __$hc_round __hc.Casual < __$hc_max_rounds __hc.Casual \
+execute if score hc:round __hc.Casual < hc:max_rounds __hc.Casual \
     run \
     title @a[predicate=hc:team/is_in_match_team] subtitle { \
         translate:"hc.round.number", \
         fallback:"Round %s", \
-        with:[{score:{name:"__$hc_round",objective:"__hc.Casual"}}], \
+        with:[{score:{name:"hc:round",objective:"__hc.Casual"}}], \
     }
-execute if score __$hc_round __hc.Casual >= __$hc_max_rounds __hc.Casual \
+execute if score hc:round __hc.Casual >= hc:max_rounds __hc.Casual \
     run \
     title @a[predicate=hc:team/is_in_match_team] subtitle { \
         translate:"hc.round.final", \

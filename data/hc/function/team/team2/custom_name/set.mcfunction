@@ -23,12 +23,12 @@ data modify storage hc:temp set_name.display_name_set_args.prefix_color \
     set from storage hc:main vars.team_contexts.team2.color_preset.name_color
 
 # get input string length
-execute store result score __$hc_strlen __hc.SetTeamName \
+execute store result score hc:strlen __hc.SetTeamName \
     run \
     data get storage hc:temp set_name.input_str
 
 # assert input string length is within range.
-execute unless score __$hc_strlen __hc.SetTeamName matches 1..16 \
+execute unless score hc:strlen __hc.SetTeamName matches 1..16 \
     run \
     function hc:msg/team/send_error { \
         team:"hc.Team2", \
@@ -38,11 +38,11 @@ execute unless score __$hc_strlen __hc.SetTeamName matches 1..16 \
             with:[ \
                 "1", \
                 "16", \
-                {score:{objective:"__hc.SetTeamName",name:"__$hc_strlen"}}, \
+                {score:{objective:"__hc.SetTeamName",name:"hc:strlen"}}, \
             ], \
         }, \
     }
-execute unless score __$hc_strlen __hc.SetTeamName matches 1..16 \
+execute unless score hc:strlen __hc.SetTeamName matches 1..16 \
     run \
     return run \
     function std:fail { \

@@ -8,10 +8,10 @@ scoreboard objectives add __hc.InitError dummy
 # temp score for increasing reload count
 scoreboard objectives add __hc.ReloadCount dummy
 
-scoreboard players set __$hc_init_consts __hc.InitError 0
-scoreboard players set __$hc_init_scores __hc.InitError 0
-scoreboard players set __$hc_init_teams __hc.InitError 0
-scoreboard players set __$hc_init_gamerules __hc.InitError 0
+scoreboard players set hc:init_consts __hc.InitError 0
+scoreboard players set hc:init_scores __hc.InitError 0
+scoreboard players set hc:init_teams __hc.InitError 0
+scoreboard players set hc:init_gamerules __hc.InitError 0
 
 # loading message
 tellraw @a [ \
@@ -26,12 +26,12 @@ tellraw @a [ \
 
 
 ## STORAGE CONSTANTS
-execute store result score __$hc_init_consts __hc.InitError \
+execute store result score hc:init_consts __hc.InitError \
     run \
     function core_hc:storage/init_consts
 
 # error msg
-execute if score __$hc_init_consts __hc.InitError matches 0 \
+execute if score hc:init_consts __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -49,12 +49,12 @@ execute if data storage hc:main vars \
     }
 
 execute unless data storage hc:main vars \
-    store result score __$hc_init_vars __hc.InitError \
+    store result score hc:init_vars __hc.InitError \
     run \
     function core_hc:storage/init_vars
 
 # error msg
-execute if score __$hc_init_vars __hc.InitError matches 0 \
+execute if score hc:init_vars __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -65,12 +65,12 @@ execute if score __$hc_init_vars __hc.InitError matches 0 \
 
 
 ## SCORE OBJETIVES
-execute store result score __$hc_init_scores __hc.InitError \
+execute store result score hc:init_scores __hc.InitError \
     run \
     function core_hc:score/init_all
 
 # error msg
-execute if score __$hc_init_scores __hc.InitError matches 0 \
+execute if score hc:init_scores __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -80,12 +80,12 @@ execute if score __$hc_init_scores __hc.InitError matches 0 \
     }
 
 ## TRIGGERS (SCORE TRIGGER TYPES)
-execute store result score __$hc_init_triggers __hc.InitError \
+execute store result score hc:init_triggers __hc.InitError \
     run \
     function core_hc:trigger/init_all
 
 # error msg
-execute if score __$hc_init_triggers __hc.InitError matches 0 \
+execute if score hc:init_triggers __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -95,12 +95,12 @@ execute if score __$hc_init_triggers __hc.InitError matches 0 \
     }
 
 ## TEAMS
-execute store result score __$hc_init_teams __hc.InitError \
+execute store result score hc:init_teams __hc.InitError \
     run \
     function core_hc:team/init_all
 
 # error msg
-execute if score __$hc_init_teams __hc.InitError matches 0 \
+execute if score hc:init_teams __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -110,12 +110,12 @@ execute if score __$hc_init_teams __hc.InitError matches 0 \
     }
 
 ## GAMERULES
-execute store result score __$hc_init_gamerules __hc.InitError \
+execute store result score hc:init_gamerules __hc.InitError \
     run \
     function core_hc:gamerule/init_all
 
 # error msg
-execute if score __$hc_init_gamerules __hc.InitError matches 0 \
+execute if score hc:init_gamerules __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -138,16 +138,16 @@ schedule clear core_hc:second
 schedule function core_hc:second 1s
 
 # add one to reload count
-execute store result score __$hc_reload_count __hc.ReloadCount \
+execute store result score hc:reload_count __hc.ReloadCount \
     run \
     data get storage hc:main vars.reload_count
 
-scoreboard players add __$hc_reload_count __hc.ReloadCount 1
+scoreboard players add hc:reload_count __hc.ReloadCount 1
 
 execute store result storage hc:main vars.reload_count \
     int 1 \
     run \
-    scoreboard players get __$hc_reload_count __hc.ReloadCount
+    scoreboard players get hc:reload_count __hc.ReloadCount
 
 # reload success message
 tellraw @a [ \

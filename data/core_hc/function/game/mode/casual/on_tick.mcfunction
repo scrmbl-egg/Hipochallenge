@@ -3,14 +3,14 @@
 # Function that is called each tick of the casual mode.
 
 # decrement score whenever a duration is specified by another state
-execute if score __$hc_state_remaining_ticks __hc.Casual matches 0.. \
+execute if score hc:state_remaining_ticks __hc.Casual matches 0.. \
     run \
-    scoreboard players remove __$hc_state_remaining_ticks __hc.Casual 1
+    scoreboard players remove hc:state_remaining_ticks __hc.Casual 1
 
 # get remaining seconds (add 1 to round UP)
 scoreboard players operation \
-    __$hc_state_remaining_secs __hc.Casual = \
-    __$hc_state_remaining_ticks __hc.Casual
+    hc:state_remaining_secs __hc.Casual = \
+    hc:state_remaining_ticks __hc.Casual
 scoreboard players operation \
-    __$hc_state_remaining_secs __hc.Casual /= __$hc_tps __hc.Casual
-scoreboard players add __$hc_state_remaining_secs __hc.Casual 1
+    hc:state_remaining_secs __hc.Casual /= hc:tps __hc.Casual
+scoreboard players add hc:state_remaining_secs __hc.Casual 1

@@ -33,8 +33,8 @@
 scoreboard objectives add __hc.GameModeTick dummy
 
 ## get current game mode state ID (set to 0 just as an initial default)
-scoreboard players set __$hc_last_id __hc.GameModeTick 0
-execute store result score __$hc_last_id __hc.GameModeTick \
+scoreboard players set hc:last_id __hc.GameModeTick 0
+execute store result score hc:last_id __hc.GameModeTick \
     run \
     data get storage hc:main vars.game_context.mode.state.id
 
@@ -47,8 +47,8 @@ function std:function/call_from_nbt { \
 ## get next state ID by running current state's ON_TICK_FUNCTION
 # save in score for comparison (use current ID as default)
 scoreboard players operation \
-    __$hc_next_id __hc.GameModeTick = __$hc_last_id __hc.GameModeTick
-execute store result score __$hc_next_id __hc.GameModeTick \
+    hc:next_id __hc.GameModeTick = hc:last_id __hc.GameModeTick
+execute store result score hc:next_id __hc.GameModeTick \
     run \
     function std:function/call_from_nbt { \
         function_storage:"hc:main", \
@@ -57,7 +57,7 @@ execute store result score __$hc_next_id __hc.GameModeTick \
 
 ## compare (exit early if they are the same)
 execute if score \
-    __$hc_last_id __hc.GameModeTick = __$hc_next_id __hc.GameModeTick \
+    hc:last_id __hc.GameModeTick = hc:next_id __hc.GameModeTick \
     run \
     return run \
     scoreboard objectives remove __hc.GameModeTick
@@ -71,7 +71,7 @@ data modify storage hc:temp gm_tick set value { \
 execute store result storage hc:temp gm_tick.set_state_args.id \
     int 1 \
     run \
-    scoreboard players get __$hc_next_id __hc.GameModeTick
+    scoreboard players get hc:next_id __hc.GameModeTick
 # call function
 function core_hc:game/mode/state/set \
     with storage hc:temp gm_tick.set_state_args
