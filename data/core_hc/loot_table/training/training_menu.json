@@ -11,9 +11,50 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:item_name": {
-                                    "translate": "",
+                                    "translate": "hc.item.training_menu.name",
                                     "fallback": "Training Menu"
                                 },
+                                "minecraft:lore": [
+                                    {
+                                        "translate": "hc.item.training_menu.lore.0",
+                                        "fallback": "Displays all available training commands in a",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "hc.item.training_menu.lore.1",
+                                        "fallback": "user-friendly interface.",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.key_hint",
+                                        "fallback": "[%s]: %s",
+                                        "color": "gold",
+                                        "bold": true,
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "keybind": "key.use"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.use",
+                                                "fallback": "Use",
+                                                "color": "gray",
+                                                "italic": false,
+                                                "bold": false
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.item.generic_lore.training_mode_only",
+                                        "fallback": "Only available in training mode",
+                                        "color": "red",
+                                        "italic": false
+                                    }
+                                ],
                                 "minecraft:item_model": "minecraft:knowledge_book",
                                 "minecraft:custom_data": {
                                     "hc:item/id": "training_menu"
