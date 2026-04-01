@@ -111,14 +111,14 @@ struct GameModeState {
     /// ```mcfunction
     /// #>custom:my_game_mode/select_kit/tick
     ///
-    /// # go to current game mode's state with ID of 1
+    /// # go to current game mode's state with `id` of 1
     /// execute if predicate custom:example_predicate run return 1
     ///
     /// # stop the match
     /// execute unless predicate custom:example_predicate run return 0
     /// ```
     ///
-    /// Since the next state is determined by the returned ID, here are some
+    /// Since the next state is determined by the returned `id`, here are some
     /// tricks that can be performed:
     ///
     /// - You can switch to a random state:
@@ -127,7 +127,7 @@ struct GameModeState {
     ///     run \
     ///     return run random value 1..6
     ///  ```
-    /// - You can get the ID from storage instead of hardcoding it:
+    /// - You can get the `id` from storage instead of hardcoding it:
     ///  ```mcfunction
     ///  execute if predicate custom:example_predicate \
     ///     run \
