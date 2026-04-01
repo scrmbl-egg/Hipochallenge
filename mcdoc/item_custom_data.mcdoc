@@ -1,7 +1,6 @@
 dispatch mcdoc:custom_data[hc:item/id] to Id
 dispatch mcdoc:custom_data[hc:item/replace_with] to ReplaceItemLootTable
 dispatch mcdoc:custom_data[hc:item/clear_instantly] to ClearInstantly
-dispatch mcdoc:custom_data[hc:item/no_pickup] to NoPickup
 dispatch mcdoc:custom_data[hc:item/armor/apply_team_dye_color]
     to ApplyTeamDyeColor
 dispatch mcdoc:custom_data[hc:item/armor/apply_team_trim_material]
@@ -19,11 +18,6 @@ type ReplaceItemLootTable = #[id="loot_table"] string
 
 /// Component for items that must be cleared instantly from the inventory.
 struct ClearInstantly {}
-
-
-/// Component for items that will maximize the `PickupDelay` data parameter
-/// when dropped.
-struct NoPickup {}
 
 
 /// Component for overriding the `minecraft:dyed_color` component with the
