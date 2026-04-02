@@ -2,6 +2,7 @@
 #
 # Gets the furthest teammate's UUID.
 #
+# @context castling player
 # @input
 #   team: #[team] string
 #       Team of the teammate whose UUID is going to be obtained.
@@ -12,6 +13,13 @@
 # @writes
 #   hc:temp castle.tp.other_uuid
 
-$execute as @a[limit=1,sort=furthest,team=$(team),tag=!hc.Dead] \
+$execute as @e[ \
+    type=#hc:player_like, \
+    team=$(team), \
+    limit=1, \
+    distance=0.., \
+    sort=furthest, \
+    tag=!hc.Dead \
+] \
     run \
     data modify storage hc:temp castle.tp.other_uuid set from entity @s UUID

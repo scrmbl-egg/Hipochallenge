@@ -16,12 +16,13 @@
 # get position and rotation arrays
 
 ## NOTE:
-# This way we only evaluate the UUID twice instead of five times
-$execute as @p[nbt={UUID:$(other_uuid)}] \
+# This way we only evaluate the UUID twice instead of five times, one for every
+# component
+$execute as @n[nbt={UUID:$(other_uuid)}] \
     run \
     data modify storage hc:temp castle.other_data.pos \
     set from entity @s Pos
-$execute as @p[nbt={UUID:$(other_uuid)}] \
+$execute as @n[nbt={UUID:$(other_uuid)}] \
     run \
     data modify storage hc:temp castle.other_data.rot \
     set from entity @s Rotation

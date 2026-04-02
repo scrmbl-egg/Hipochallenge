@@ -28,7 +28,7 @@
 #       Teammate's pitch / X rotation.
 
 # other to self
-$execute as @p[nbt={UUID:$(other_uuid)}] \
+$execute as @n[nbt={UUID:$(other_uuid)}] \
     positioned $(self_pos_x) $(self_pos_y) $(self_pos_z) \
     rotated $(self_yaw) $(self_pitch) \
     run \
