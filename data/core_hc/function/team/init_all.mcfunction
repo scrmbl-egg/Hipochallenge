@@ -81,7 +81,7 @@ team modify hc.NotPlaying collisionRule pushOwnTeam
 team modify hc.NotPlaying friendlyFire false
 team modify hc.NotPlaying nametagVisibility always
 team modify hc.NotPlaying seeFriendlyInvisibles false
-team modify hc.NotPlaying color white
+team modify hc.NotPlaying color reset
 team modify hc.NotPlaying displayName [ \
     {translate:"hc.teams.not_playing.name",fallback:"Not playing"}, \
 ]
@@ -95,7 +95,7 @@ team modify hc.NoCollisionEntity collisionRule never
 team modify hc.NoCollisionEntity friendlyFire true
 team modify hc.NoCollisionEntity nametagVisibility never
 team modify hc.NoCollisionEntity seeFriendlyInvisibles false
-team modify hc.NoCollisionEntity color white
+team modify hc.NoCollisionEntity color reset
 team modify hc.NoCollisionEntity prefix "[hc.NoCollisionEntity] "
 
 ## __KEEP AT BOTTOM OF FILE__
