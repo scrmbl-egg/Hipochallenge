@@ -28,10 +28,10 @@ function hc:msg/private/send { \
                         hover_event:{ \
                             action:"show_text", \
                             value:[ \
-                                "", \
                                 { \
                                     translate:"hc.key_hint", \
                                     fallback:"[%1$s]: %2$s", \
+                                    bold:true, \
                                     with:[ \
                                         { \
                                             translate:"key.mouse.left", \
@@ -41,6 +41,7 @@ function hc:msg/private/send { \
                                             translate:"multiplayer.confirm_command.suggest_command", \
                                             fallback:"Copy to Chat Screen", \
                                             color:"white", \
+                                            bold:false, \
                                         }, \
                                     ], \
                                     color:"gold", \
