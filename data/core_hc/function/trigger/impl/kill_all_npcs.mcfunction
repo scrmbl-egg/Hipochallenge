@@ -32,8 +32,8 @@ execute unless predicate { \
     return fail
 
 # reset and re-enable
-scoreboard players reset @a kill_all_npcs
-scoreboard players enable @a kill_all_npcs
+scoreboard players reset @s kill_all_npcs
+scoreboard players enable @s kill_all_npcs
 
 ## commands
 # setup function parameters

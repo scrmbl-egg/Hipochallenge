@@ -32,8 +32,8 @@ execute unless predicate { \
     return fail
 
 # reset and re-enable
-scoreboard players reset @a kill_nearby_npc
-scoreboard players enable @a kill_nearby_npc
+scoreboard players reset @s kill_nearby_npc
+scoreboard players enable @s kill_nearby_npc
 
 ## commands
 # setup function parameters

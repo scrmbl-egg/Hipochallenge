@@ -28,8 +28,8 @@ execute unless predicate { \
     return fail
 
 # reset and re-enable
-scoreboard players reset @a assault
-scoreboard players enable @a assault
+scoreboard players reset @s assault
+scoreboard players enable @s assault
 
 ## commands
 function hc:class/select/assault

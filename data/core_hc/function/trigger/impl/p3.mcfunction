@@ -28,8 +28,8 @@ execute unless predicate { \
     return fail
 
 # reset and re-enable
-scoreboard players reset @a p3
-scoreboard players enable @a p3
+scoreboard players reset @s p3
+scoreboard players enable @s p3
 
 ## commands
 function hc:perk/select/3
