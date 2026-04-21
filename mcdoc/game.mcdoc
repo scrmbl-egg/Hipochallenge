@@ -165,7 +165,7 @@ struct GameModeState {
     /// ### Note
     /// If multiple states in the list have this flag, the first in the list
     /// that specifies this flag will be the starting state.
-    start_state?: struct {},
+    start_state?: struct StartStateFlag {},
 }
 
 
