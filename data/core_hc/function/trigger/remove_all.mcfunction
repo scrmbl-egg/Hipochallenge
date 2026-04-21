@@ -18,6 +18,7 @@ scoreboard objectives remove warp_training_ctrain
 ## MATCH REQUEST
 scoreboard objectives remove accept
 scoreboard objectives remove leave
+scoreboard objectives remove start
 
 ## TRAINING TOOLS
 scoreboard objectives remove warp_plaza

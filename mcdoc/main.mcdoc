@@ -18,8 +18,11 @@ struct MainStorage {
 
         /// Game related constants.
         game: struct GameConstants {
-            /// Duration of the match request notification.
-            match_request_duration_seconds: int @ 1..107374182,
+            /// Constants related to match requests.
+            match_request: struct MatchRequestConstants {
+                /// Duration in seconds of match requests.
+                duration_seconds: int @ 1..107374182,
+            },
 
             /// Available game modes.
             modes: [GameModePreset],

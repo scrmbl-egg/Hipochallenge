@@ -30,6 +30,7 @@ scoreboard objectives add warp_training_ctrain trigger
 ## MATCH REQUEST
 scoreboard objectives add accept trigger
 scoreboard objectives add leave trigger
+scoreboard objectives add start trigger
 
 ## TRAINING TOOLS
 scoreboard objectives add warp_plaza trigger

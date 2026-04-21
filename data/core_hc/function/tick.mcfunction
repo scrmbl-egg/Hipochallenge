@@ -49,6 +49,11 @@ function #core_hc:fx/tick
 # levels
 function #core_hc:level/tick
 
+# match request (i wish i could put this thing on a fucking predicate)
+execute if data storage hc:main vars.game_context.match_requested \
+    run \
+    function core_hc:game/match/request/tick
+
 # game mode state
 execute if predicate hc:game/match/is_being_played \
     run \

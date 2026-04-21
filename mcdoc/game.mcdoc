@@ -1,10 +1,14 @@
 use ::java::util::text::TranslatedText
 use ::java::util::text::TextColor
+use ::java::util::text::TextStyle
 use super::level::Level
 
 
 /// Game context/global variables struct.
 struct GameContext {
+    /// Flag that indicates whether a match is being currently requested.
+    match_requested: struct {},
+
     /// Current game mode's data.
     mode: struct GameModeContext {
         /// Current state of the game mode. If this field is an empty struct
@@ -37,8 +41,22 @@ struct GameModePresetBase {
     /// Translated text for the game mode name.
     name: TranslatedText,
 
-    /// Size of the two teams in this game mode.
-    team_size: int @ 1..6,
+    /// Sizes of the teams in this game mode. The size of this number array
+    /// also determines the amount of teams present in the game mode.
+    ///
+    /// - `team_sizes[0]`: First team's size.
+    /// - `team_sizes[1]`: Second team's size.
+    /// - ...
+    ///
+    /// TODO: maybe more teams could be supported in the future.
+    team_sizes: int @ 1..6[] @ 2,
+
+    /// Match request data for this game mode.
+    match_request: struct GameModeMatchRequestData {
+        /// Text style that will be applied to the mode's name when displayed in
+        /// the match request sidebar display.
+        name_text_style: TextStyle,
+    },
 
     /// Callback function that is called when the game mode or match is started.
     ///

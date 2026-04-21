@@ -7,6 +7,9 @@
 # @returns
 #   Result: 1 if all constants are initialised
 
+# TODO: those objects that have "internal_name" as an identifier, should use the
+# word "key" instead.
+
 # TODO: implement game state functions (current ones are placeholders)
 # TODO: Complete the list of constants
 
@@ -22,13 +25,18 @@ data modify storage hc:main consts.map_version set value "Pre-Alpha"
 
 ## GAME CONSTANTS
 data modify storage hc:main consts.game set value { \
-    match_request_duration_seconds:60, \
+    match_request:{ \
+        duration_seconds:120, \
+    }, \
     modes:[ \
         { \
             internal_name:"hc:casual", \
             id:0, \
             name:{translate:"hc.mode.casual",fallback:"Casual"}, \
-            team_size:3, \
+            team_sizes:[I; 3, 3], \
+            match_request:{ \
+                name_text_style:{color:"#59ff30"}, \
+            }, \
             on_start_function:"core_hc:game/mode/casual/on_start", \
             on_tick_function:"core_hc:game/mode/casual/on_tick", \
             on_end_function:"core_hc:game/mode/casual/on_end", \
@@ -90,7 +98,10 @@ data modify storage hc:main consts.game set value { \
             internal_name:"hc:competitive", \
             id:1, \
             name:{translate:"hc.mode.competitive",fallback:"Competitive"}, \
-            team_size:3, \
+            team_sizes:[I; 3, 3], \
+            match_request:{ \
+                name_text_style:{bold:true,color:"#42e486"}, \
+            }, \
             on_start_function:"core_hc:game/mode/competitive/on_start", \
             on_tick_function:"core_hc:game/mode/competitive/on_tick", \
             on_end_function:"core_hc:game/mode/competitive/on_end", \
@@ -132,7 +143,10 @@ data modify storage hc:main consts.game set value { \
             internal_name:"hc:deathmatch", \
             id:2, \
             name:{translate:"hc.mode.deathmatch",fallback:"Deathmatch"}, \
-            team_size:3, \
+            team_sizes:[I; 3, 3], \
+            match_request:{ \
+                name_text_style:{color:"yellow"}, \
+            }, \
             on_start_function:"std:empty", \
             on_tick_function:"std:empty", \
             on_end_function:"std:empty", \
