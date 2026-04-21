@@ -28,8 +28,8 @@ execute unless predicate { \
     return fail
 
 # reset and re-enable
-scoreboard players reset @a k1
-scoreboard players enable @a k1
+scoreboard players reset @s k1
+scoreboard players enable @s k1
 
 ## commands
 function hc:kit/select/1
