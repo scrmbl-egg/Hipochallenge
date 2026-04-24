@@ -50,11 +50,11 @@ function hc:msg/private/send { \
                         }, \
                         click_event:{ \
                             action:"suggest_command", \
-                            command:"/trigger ls", \
+                            command:"/trigger list", \
                         }, \
                     }, \
                     {text:"/trigger ",color:"gray"}, \
-                    {text:"ls",color:"aqua"}, \
+                    {text:"list",color:"aqua"}, \
                 ], \
             ], \
         }, \

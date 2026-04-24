@@ -1,6 +1,6 @@
 {
     "values": [
-        "core_hc:trigger/impl/ls",
+        "core_hc:trigger/impl/list",
         "core_hc:trigger/impl/info",
         "core_hc:trigger/impl/training_gui",
         "core_hc:trigger/impl/request",
@@ -26,8 +26,8 @@
         "core_hc:trigger/impl/npc_support",
         "core_hc:trigger/impl/npc_recon",
         "core_hc:trigger/impl/npc_assault",
-        "core_hc:trigger/impl/kill_all_npcs",
-        "core_hc:trigger/impl/kill_nearby_npc",
+        "core_hc:trigger/impl/npc_kill_all",
+        "core_hc:trigger/impl/npc_kill_nearest",
         "core_hc:trigger/impl/proj_cooldown"
     ]
 }
