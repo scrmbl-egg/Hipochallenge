@@ -94,7 +94,7 @@ scoreboard objectives add vote_timeout trigger
 scoreboard objectives add stop_spectating trigger
 
 ## ENABLE TRIGGERS THAT ARE ALWAYS AVAILABLE
-scoreboard players enable @s ls
+scoreboard players enable @s list
 
 # return 1 for success
 return 1
