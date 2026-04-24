@@ -7,7 +7,7 @@
 #       Text component that will be printed.
 
 $tellraw @a[tag=hc.Debug] [ \
-    {text:"",color:"gold",italic:true}, \
+    {text:"",color:"#ab7200",italic:true}, \
     { \
         text:">> ", \
         color:"green", \
