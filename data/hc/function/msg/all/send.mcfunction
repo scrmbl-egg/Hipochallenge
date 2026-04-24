@@ -7,8 +7,11 @@
 #       Text component that will be printed.
 
 $tellraw @a [ \
+    "", \
     { \
-        text:"", \
+        text:">> ", \
+        color:"white", \
+        bold:true, \
         hover_event:{ \
             action:"show_text",\
             value:[ \
@@ -18,6 +21,5 @@ $tellraw @a [ \
             ], \
         }, \
     }, \
-    {text:">> ",color:"white",bold:true}, \
     $(text), \
 ]

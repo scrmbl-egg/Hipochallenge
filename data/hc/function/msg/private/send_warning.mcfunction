@@ -8,9 +8,11 @@
 #       Text component that will be printed.
 
 $tellraw @s [ \
+    {text:"",color:"gold"}, \
     { \
-        text:"", \
-        color:"gold", \
+        text:">> ", \
+        color:"blue", \
+        bold:true, \
         hover_event:{ \
             action:"show_text",\
             value:[ \
@@ -20,7 +22,6 @@ $tellraw @s [ \
             ], \
         }, \
     }, \
-    {text:">> ",color:"blue",bold:true}, \
     {text:"[",bold:true}, \
     {translate:"hc.msg.warning",fallback:"WARNING",bold:true}, \
     {text:"] ",bold:true}, \

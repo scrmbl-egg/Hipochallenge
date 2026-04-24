@@ -8,17 +8,19 @@
 #       Text component that will be printed.
 
 $tellraw @a[predicate=hc:team/is_in_match_team] [ \
+    "", \
     { \
-        text:"", \
+        text:">> ", \
+        color:"dark_red", \
+        bold:true, \
         hover_event:{ \
             action:"show_text",\
             value:[ \
                 "", \
-                {text:">> ",color:"dark_red",bold:true}, \
+                {text:">> ",bold:true,color:"dark_red"}, \
                 {translate:"hc.msg.match",fallback:"Match message"}, \
             ], \
         }, \
     }, \
-    {text:">> ",color:"dark_red",bold:true}, \
     $(text), \
 ]

@@ -9,9 +9,11 @@
 #       Text component that will be printed.
 
 $tellraw @a[team=$(team)] [ \
+    {text:"",color:"red"}, \
     { \
-        text:"", \
-        color:"red", \
+        text:">> ", \
+        color:"yellow", \
+        bold:true, \
         hover_event:{ \
             action:"show_text",\
             value:[ \
@@ -21,7 +23,6 @@ $tellraw @a[team=$(team)] [ \
             ], \
         }, \
     }, \
-    {text:">> ",color:"yellow",bold:true}, \
     {text:"[",bold:true}, \
     {translate:"hc.msg.error",fallback:"ERROR",bold:true}, \
     {text:"] ",bold:true}, \
