@@ -28,7 +28,9 @@ scoreboard objectives add warp_training_vilfac trigger
 scoreboard objectives add warp_training_ctrain trigger
 
 ## MATCH REQUEST
-scoreboard objectives add accept trigger
+scoreboard objectives add request trigger
+scoreboard objectives add cancel trigger
+scoreboard objectives add join trigger
 scoreboard objectives add leave trigger
 scoreboard objectives add start trigger
 

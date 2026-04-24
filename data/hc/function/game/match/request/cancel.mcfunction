@@ -1,4 +1,4 @@
-#>hc:game/match/cancel_request
+#>hc:game/match/request/cancel
 #
 # Cancels the current match request.
 

@@ -5,8 +5,8 @@
 #
 # Only using this function assumes the match is ended gracefully from the game
 # mode's own states. If you wish to communicate the match has ended prematurely,
-# see the `hc:game/match/try_cancel` function and the
-# `hc:game/match/try_cancel/` sub-module functions.
+# see the `hc:game/match/cancel` function and the `hc:game/match/cancel/`
+# sub-module functions.
 #
 # @returns
 #   Result: 1 when match was ended, 0 if there was no match to end.

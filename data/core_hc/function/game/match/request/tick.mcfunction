@@ -24,6 +24,13 @@ execute as @a[predicate=hc:game/match/player_will_join] \
     run \
     scoreboard players add hc:joining_player_count __hc.MatchRequest 1
 
+## host handling
+# always try to assign a host from the joining players if the original host left
+execute unless entity @p[tag=hc.MatchHost] \
+    as @r[tag=hc.WillJoinMatch] \
+    run \
+    function core_hc:game/match/make_player_host
+
 ## enable or disable start trigger for match host
 execute if score \
     hc:joining_player_count __hc.MatchRequest >= \
@@ -34,7 +41,7 @@ execute unless score \
     hc:joining_player_count __hc.MatchRequest >= \
     hc:needed_player_count __hc.MatchRequest \
     run \
-    scoreboard players reset @a[tag=hc.MatchHost] start
+    scoreboard players reset @a start
 
 ## update display
 function core_hc:game/match/request/display/update

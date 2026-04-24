@@ -1,6 +1,6 @@
-#>core_hc:trigger/impl/leave
+#>core_hc:trigger/impl/cancel
 #
-# Trigger for leaving a match request.
+# Trigger for cancelling a match request.
 #
 # @context player
 
@@ -12,14 +12,14 @@ execute unless predicate { \
             condition:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                leave:{min:-2147483648,max:-1}, \
+                cancel:{min:-2147483648,max:-1}, \
             }, \
         }, \
         { \
             condition:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                leave:{min:1,max:2147483647}, \
+                cancel:{min:1,max:2147483647}, \
             }, \
         }, \
     ], \
@@ -27,8 +27,10 @@ execute unless predicate { \
     run \
     return fail
 
-# reset, but don't re-enable
-scoreboard players reset @s leave
+# reset trigger and allow requests again
+scoreboard players reset @s cancel
+scoreboard players enable @a request
 
 ## commands
-function hc:game/match/request/leave
+function hc:game/match/request/cancel
+

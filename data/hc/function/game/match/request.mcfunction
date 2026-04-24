@@ -35,3 +35,6 @@ function core_hc:game/match/request/init
 
 # play sound
 # TODO: play a notification sound
+
+# return 1 for success
+return 1

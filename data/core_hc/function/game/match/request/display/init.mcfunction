@@ -11,7 +11,7 @@ scoreboard objectives add __hc.MatchRequestDisplay dummy
 data modify storage hc:temp mreq_display set value { \
     set_r4_display_name_args:{ \
         score_objective:"__hc.MatchRequestDisplay", \
-        score_holder:"hc:r4", \
+        score_holder:"hc:r2", \
         text:{ \
             translate:"hc.match_request.mode", \
             fallback:"Mode: %s", \
@@ -54,26 +54,26 @@ scoreboard players display numberformat hc:r5 __hc.MatchRequestDisplay blank
 scoreboard players display numberformat hc:r6 __hc.MatchRequestDisplay blank
 
 scoreboard players display name hc:r0 __hc.MatchRequestDisplay { \
-    translate:"hc.match_request.from_player", \
-    fallback:"From: %s", \
-    with:[{selector:"@s",underlined:true}], \
+    translate:"hc.match_request.host", \
+    fallback:"Host: %s", \
+    with:[{selector:"@p[tag=hc.MatchHost]"}], \
 }
 scoreboard players display name hc:r1 __hc.MatchRequestDisplay ""
-scoreboard players display name hc:r2 __hc.MatchRequestDisplay { \
-    translate:"hc.match_request.accept_trigger_tip", \
-    fallback:"Type \"%s\" to accept!", \
+function core_hc:util/score_holder/set_display_name \
+    with storage hc:temp mreq_display.set_r4_display_name_args
+scoreboard players display name hc:r5 __hc.MatchRequestDisplay ""
+scoreboard players display name hc:r6 __hc.MatchRequestDisplay { \
+    translate:"hc.match_request.join_trigger_tip", \
+    fallback:"Type \"%s\" to join!", \
     with:[ \
         { \
             translate:"", \
             fallback:"/trigger %s", \
             color:"gray", \
-            with:[{text:"accept",color:"aqua"}], \
+            with:[{text:"join",color:"aqua"}], \
         }, \
     ], \
 }
-scoreboard players display name hc:r3 __hc.MatchRequestDisplay ""
-function core_hc:util/score_holder/set_display_name \
-    with storage hc:temp mreq_display.set_r4_display_name_args
 
 # update dynamic rows (a single time)
 function core_hc:game/match/request/display/update

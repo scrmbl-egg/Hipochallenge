@@ -1,6 +1,6 @@
-#>core_hc:trigger/impl/leave
+#>core_hc:trigger/impl/join
 #
-# Trigger for leaving a match request.
+# Trigger for accepting a match request.
 #
 # @context player
 
@@ -12,14 +12,14 @@ execute unless predicate { \
             condition:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                leave:{min:-2147483648,max:-1}, \
+                join:{min:-2147483648,max:-1}, \
             }, \
         }, \
         { \
             condition:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                leave:{min:1,max:2147483647}, \
+                join:{min:1,max:2147483647}, \
             }, \
         }, \
     ], \
@@ -28,7 +28,7 @@ execute unless predicate { \
     return fail
 
 # reset, but don't re-enable
-scoreboard players reset @s leave
+scoreboard players reset @s join
 
 ## commands
-function hc:game/match/request/leave
+function hc:game/match/request/join

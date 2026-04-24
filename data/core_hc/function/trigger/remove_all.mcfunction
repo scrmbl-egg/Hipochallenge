@@ -16,7 +16,9 @@ scoreboard objectives remove warp_training_vilfac
 scoreboard objectives remove warp_training_ctrain
 
 ## MATCH REQUEST
-scoreboard objectives remove accept
+scoreboard objectives remove request
+scoreboard objectives remove cancel
+scoreboard objectives remove join
 scoreboard objectives remove leave
 scoreboard objectives remove start
 

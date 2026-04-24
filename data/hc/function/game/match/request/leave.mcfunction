@@ -1,50 +1,29 @@
-#>core_hc:trigger/impl/accept
+#>hc:game/match/request/leave
 #
-# Trigger for accepting a match request.
+# Makes the player leave the match request.
 #
 # @context player
 
-## execution guard
-execute unless predicate { \
-    condition:"minecraft:any_of", \
-    terms:[ \
-        { \
-            condition:"minecraft:entity_scores", \
-            entity:"this", \
-            scores:{ \
-                accept:{min:-2147483648,max:-1}, \
-            }, \
-        }, \
-        { \
-            condition:"minecraft:entity_scores", \
-            entity:"this", \
-            scores:{ \
-                accept:{min:1,max:2147483647}, \
-            }, \
-        }, \
-    ], \
-} \
-    run \
-    return fail
-
-# the leave trigger is enabled
-scoreboard players reset @s accept
-scoreboard players enable @a leave
-
-## commands
 # play sound
-playsound minecraft:ui.cartography_table.take_result ui @s ~ ~1 ~ 0.5 1 0.5
+playsound minecraft:ui.stonecutter.take_result ui @s ~ ~1 ~ 0.5 1 0.5
 
+# remove tags (match host tag is removed too)
+tag @s remove hc.WillJoinMatch
+tag @s remove hc.MatchHost
 
-# tag player
-tag @s add hc.WillJoinMatch
+# disable ability to cancel request if you are host
+scoreboard players reset @s cancel
 
-# announce to everyone the player will join
+# enable `join` trigger
+scoreboard players enable @s join
+
+## msgs
+# announce to everyone the player will NOT join
 function hc:msg/all/send { \
     text:{ \
-        translate:"hc.msg.all.player_will_join_match", \
-        fallback:"%s will join the match!", \
-        color:"green", \
+        translate:"hc.msg.all.player_will_not_join_match", \
+        fallback:"%s will not join the match", \
+        color:"red", \
         with:[ \
             {selector:"@s"}, \
         ], \
@@ -54,14 +33,14 @@ function hc:msg/all/send { \
 # send tip for leaving
 function hc:msg/private/send { \
     text:{ \
-        translate:"hc.msg.private.match_request_accepted", \
-        fallback:"You accepted the match request. Type \"%s\" to leave.", \
+        translate:"hc.msg.private.player_will_not_join_match", \
+        fallback:"You will not join the match. You can type \"%s\" to join again", \
         with:[ \
             { \
                 translate:"", \
                 fallback:"/trigger %s", \
                 color:"gray", \
-                with:[{text:"leave",color:"aqua"}], \
+                with:[{text:"join",color:"aqua"}], \
                 hover_event:{ \
                     action:"show_text", \
                     value:[ \
@@ -87,7 +66,7 @@ function hc:msg/private/send { \
                 }, \
                 click_event:{ \
                     action:"suggest_command", \
-                    command:"/trigger leave", \
+                    command:"/trigger join", \
                 }, \
             }, \
         ], \

@@ -16,5 +16,7 @@ scoreboard objectives remove __hc.MatchRequest
 # reset triggers and tags
 tag @a remove hc.MatchHost
 tag @a remove hc.WillJoinMatch
-scoreboard players reset @a accept
+scoreboard players reset @a join
 scoreboard players reset @a leave
+scoreboard players reset @a cancel
+scoreboard players enable @a request

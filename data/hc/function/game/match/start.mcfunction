@@ -10,7 +10,7 @@ execute if predicate hc:game/match/is_being_played \
         text:{ \
             translate:"", \
             fallback:"Attempted to start a match when one is already being played. Try calling the '%s' function.", \
-            with:["hc:game/match/try_cancel"], \
+            with:["hc:game/match/cancel"], \
         }, \
     }
 # else...

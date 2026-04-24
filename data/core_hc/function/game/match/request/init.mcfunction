@@ -47,5 +47,5 @@ execute store result score hc:needed_player_count __hc.MatchRequest \
 function core_hc:game/match/request/display/init
 
 # enable triggers
-scoreboard players enable @a[tag=!hc.WillJoinMatch] accept
+scoreboard players enable @a[tag=!hc.WillJoinMatch] join
 scoreboard players enable @a[tag=hc.WillJoinMatch] leave
