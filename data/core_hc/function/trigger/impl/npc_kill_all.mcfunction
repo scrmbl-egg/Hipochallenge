@@ -1,6 +1,6 @@
-#>core_hc:trigger/impl/kill_nearby_npc
+#>core_hc:trigger/impl/npc_kill_all
 #
-# Trigger for killing the nearest training NPC spawned by the player.
+# Trigger for killing all the training NPC spawned by the player.
 #
 # @context player
 # @input
@@ -16,14 +16,14 @@ execute unless predicate { \
             condition:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                kill_nearby_npc:{min:-2147483648,max:-1}, \
+                npc_kill_all:{min:-2147483648,max:-1}, \
             }, \
         }, \
         { \
             condition:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                kill_nearby_npc:{min:1,max:2147483647}, \
+                npc_kill_all:{min:1,max:2147483647}, \
             }, \
         }, \
     ], \
@@ -32,19 +32,19 @@ execute unless predicate { \
     return fail
 
 # reset and re-enable
-scoreboard players reset @s kill_nearby_npc
-scoreboard players enable @s kill_nearby_npc
+scoreboard players reset @s npc_kill_all
+scoreboard players enable @s npc_kill_all
 
 ## commands
 # setup function parameters
-data modify storage hc:temp kill_nearby_npc set value { \
+data modify storage hc:temp npc_kill_all set value { \
     owner_uuid:[I; 0, 0, 0, 0], \
 }
-data modify storage hc:temp kill_nearby_npc.owner_uuid set from entity @s UUID
+data modify storage hc:temp npc_kill_all.owner_uuid set from entity @s UUID
 
 # kill
-function core_hc:trigger/impl/kill_nearby_npc/run \
-    with storage hc:temp kill_nearby_npc
+function core_hc:trigger/impl/npc_kill_all/run \
+    with storage hc:temp npc_kill_all
 
 # free memory
-data remove storage hc:temp kill_nearby_npc
+data remove storage hc:temp npc_kill_all

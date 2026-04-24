@@ -1,4 +1,4 @@
-#>core_hc:trigger/impl/kill_nearby_npc/run
+#>core_hc:trigger/impl/npc_kill_nearest/run
 #
 # Kills the closest NPC that belongs to the caller with the macro argument
 # specifying the necessary UUID.

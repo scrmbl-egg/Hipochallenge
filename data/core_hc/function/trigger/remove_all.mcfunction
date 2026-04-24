@@ -3,7 +3,7 @@
 # Removes all triggers in the datapack.
 
 ## BASIC (available at all times)
-scoreboard objectives remove ls
+scoreboard objectives remove list
 
 ## PLAZA / LOBBY
 scoreboard objectives remove info
@@ -43,8 +43,8 @@ scoreboard objectives remove npc_assassin
 scoreboard objectives remove npc_support
 scoreboard objectives remove npc_recon
 scoreboard objectives remove npc_assault
-scoreboard objectives remove kill_nearby_npc
-scoreboard objectives remove kill_all_npcs
+scoreboard objectives remove npc_kill_nearest
+scoreboard objectives remove npc_kill_all
 scoreboard objectives remove see_spawns
 scoreboard objectives remove see_dmg
 scoreboard objectives remove item_cooldown

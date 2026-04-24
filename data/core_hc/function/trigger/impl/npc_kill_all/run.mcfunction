@@ -1,4 +1,4 @@
-#>core_hc:trigger/impl/kill_all_npcs/run
+#>core_hc:trigger/impl/npc_kill_all/run
 #
 # Kills all NPCs that belong to the caller with the macro argument specifying
 # the necessary UUID.

@@ -15,7 +15,7 @@
 # - scrmbl-egg
 
 ## BASIC (available at all times)
-scoreboard objectives add ls trigger
+scoreboard objectives add list trigger
 
 ## PLAZA / LOBBY
 scoreboard objectives add info trigger
@@ -55,8 +55,8 @@ scoreboard objectives add npc_assassin trigger
 scoreboard objectives add npc_support trigger
 scoreboard objectives add npc_recon trigger
 scoreboard objectives add npc_assault trigger
-scoreboard objectives add kill_nearby_npc trigger
-scoreboard objectives add kill_all_npcs trigger
+scoreboard objectives add npc_kill_nearest trigger
+scoreboard objectives add npc_kill_all trigger
 scoreboard objectives add see_spawns trigger
 scoreboard objectives add see_dmg trigger
 scoreboard objectives add item_cooldown trigger
