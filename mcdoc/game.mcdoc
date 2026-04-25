@@ -1,5 +1,4 @@
 use ::java::util::text::TranslatedText
-use ::java::util::text::TextColor
 use ::java::util::text::TextStyle
 use super::level::Level
 
