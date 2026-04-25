@@ -9,11 +9,11 @@ scoreboard objectives remove list
 scoreboard objectives remove info
 scoreboard objectives remove warp_tutorial
 scoreboard objectives remove warp_training
-scoreboard objectives remove warp_training_subdec
-scoreboard objectives remove warp_training_frggy2
-scoreboard objectives remove warp_training_sacrf2
-scoreboard objectives remove warp_training_vilfac
-scoreboard objectives remove warp_training_ctrain
+scoreboard objectives remove warp_training_cnduit
+scoreboard objectives remove warp_training_froggy
+scoreboard objectives remove warp_training_sacrif
+scoreboard objectives remove warp_training_fctory
+scoreboard objectives remove warp_training_derail
 
 ## MATCH REQUEST
 scoreboard objectives remove request
@@ -23,8 +23,8 @@ scoreboard objectives remove leave
 scoreboard objectives remove start
 
 ## TRAINING TOOLS
-scoreboard objectives remove warp_plaza
-scoreboard objectives remove training_gui
+scoreboard objectives remove exit
+scoreboard objectives remove menu
 scoreboard objectives remove tank
 scoreboard objectives remove marksman
 scoreboard objectives remove assassin
@@ -52,11 +52,11 @@ scoreboard objectives remove proj_cooldown
 
 ## ADMIN
 scoreboard objectives remove lv_random
-scoreboard objectives remove lv_subdec
-scoreboard objectives remove lv_frggy2
-scoreboard objectives remove lv_sacrf2
-scoreboard objectives remove lv_vilfac
-scoreboard objectives remove lv_ctrain
+scoreboard objectives remove lv_cnduit
+scoreboard objectives remove lv_froggy
+scoreboard objectives remove lv_sacrif
+scoreboard objectives remove lv_fctory
+scoreboard objectives remove lv_derail
 
 ## IN-GAME (match players)
 scoreboard objectives remove vote_yes

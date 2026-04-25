@@ -32,11 +32,4 @@ scoreboard players reset @s list
 scoreboard players enable @s list
 
 ## commands
-# send msg
-execute if score @s list matches 0 \
-    run \
-    function hc:msg/private/send { \
-        text:{ \
-            text:"[list]: Prints all currently available triggers/commands", \
-        }, \
-    }
+function core_hc:trigger/print_available
