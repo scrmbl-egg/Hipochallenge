@@ -5,6 +5,12 @@
 # @context player
 
 ## execution guard
+# prevent disabling if player types `/trigger ... set 0`
+execute if score @s tank matches 0 \
+    run \
+    scoreboard players enable @s tank
+
+# don't run anything if it's 0 or uninitialised
 execute unless predicate { \
     condition:"minecraft:any_of", \
     terms:[ \

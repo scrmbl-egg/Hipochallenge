@@ -3,12 +3,14 @@
 # Trigger for killing the nearest training NPC spawned by the player.
 #
 # @context player
-# @input
-#   UUID: #[uuid] int[] @ 4
-#       UUID of the player that executes the function. Directly taken from the
-#       player's data.
 
 ## execution guard
+# prevent disabling if player types `/trigger ... set 0`
+execute if score @s npc_kill_nearest matches 0 \
+    run \
+    scoreboard players enable @s npc_kill_nearest
+
+# don't run anything if it's 0 or uninitialised
 execute unless predicate { \
     condition:"minecraft:any_of", \
     terms:[ \
