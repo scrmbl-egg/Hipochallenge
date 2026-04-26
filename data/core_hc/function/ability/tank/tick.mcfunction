@@ -8,9 +8,7 @@
 execute as @a \
     at @s \
     if items entity @s weapon.* *[ \
-        minecraft:custom_data~{ \
-            "hc:item/id":"tank_k1_goat_horn", \
-        } \
+        minecraft:custom_data~{"hc:item/id":"tank_k1_goat_horn"} \
     ] \
     run \
     function core_hc:ability/tank/kit1/goat_horn/show_targets
