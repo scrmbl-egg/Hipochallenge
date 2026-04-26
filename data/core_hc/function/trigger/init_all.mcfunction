@@ -36,7 +36,7 @@ scoreboard objectives add start trigger
 
 ## TRAINING TOOLS
 scoreboard objectives add warp_plaza trigger
-scoreboard objectives add training_gui trigger
+scoreboard objectives add menu trigger
 scoreboard objectives add tank trigger
 scoreboard objectives add marksman trigger
 scoreboard objectives add assassin trigger

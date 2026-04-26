@@ -2,7 +2,7 @@
     "values": [
         "core_hc:trigger/impl/list",
         "core_hc:trigger/impl/info",
-        "core_hc:trigger/impl/training_gui",
+        "core_hc:trigger/impl/menu",
         "core_hc:trigger/impl/request",
         "core_hc:trigger/impl/cancel",
         "core_hc:trigger/impl/join",
