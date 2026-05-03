@@ -28,13 +28,13 @@ struct Class {
     /// Class custom attributes.
     attributes: struct ClassAttributes {
         /// Maximum health attribute.
-        max_health: int @ 1..,
+        max_health: int @ 1..1024,
 
         /// Armor attribute.
-        armor: int @ 0..,
+        armor: int @ 0..30,
 
         /// Armor toughness attribute.
-        armor_toughness: int @ 0..,
+        armor_toughness: int @ 0..20,
 
         /// Scale attribute.
         scale: double @ 0.0625..16,
