@@ -442,7 +442,7 @@ data modify storage hc:main consts.classes append value { \
         armor_toughness:0, \
         scale:1, \
         burning_time:1, \
-        explosion_knockback_resistance:0.0 \
+        explosion_knockback_resistance:0, \
     }, \
     list_info:{ \
         class_color:"#dfb977", \
@@ -561,7 +561,7 @@ data modify storage hc:main consts.classes append value { \
         armor_toughness:4, \
         scale:1, \
         burning_time:1, \
-        explosion_knockback_resistance:0 \
+        explosion_knockback_resistance:0, \
     }, \
     list_info:{ \
         class_color:"#80b0e4", \
