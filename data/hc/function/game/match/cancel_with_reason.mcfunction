@@ -11,12 +11,10 @@
 $execute if function hc:game/match/cancel \
     run \
     function hc:msg/all/send { \
-        text:[ \
-            { \
-                translate:"hc.msg.all.match_was_cancelled", \
-                fallback:"Match cancelled: %s", \
-                color:"red", \
-                with:[[{text:"",color:"white"},$(reason)]], \
-            }, \
-        ], \
+        text:{ \
+            translate:"hc.msg.all.match_was_cancelled", \
+            fallback:"Match cancelled: %s", \
+            color:"red", \
+            with:[[{text:"",color:"white"},$(reason)]], \
+        }, \
     }
