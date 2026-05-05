@@ -50,7 +50,7 @@
                                     "",
                                     {
                                         "translate": "hc.item.generic_lore.finite_cooldown",
-                                        "fallback": "Reusable after %s seconds",
+                                        "fallback": "Cooldown: %s seconds",
                                         "color": "yellow",
                                         "italic": false,
                                         "with": [
