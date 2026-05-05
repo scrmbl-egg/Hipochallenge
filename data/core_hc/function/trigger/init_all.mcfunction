@@ -14,11 +14,11 @@
 #
 # - scrmbl-egg
 
-## BASIC (available at all times)
+## ESSENTIALS (available at all times)
 scoreboard objectives add list trigger
+scoreboard objectives add info trigger
 
 ## PLAZA / LOBBY
-scoreboard objectives add info trigger
 scoreboard objectives add warp_tutorial trigger
 scoreboard objectives add warp_training trigger
 scoreboard objectives add warp_training_subdec trigger
@@ -94,7 +94,8 @@ scoreboard objectives add vote_timeout trigger
 scoreboard objectives add stop_spectating trigger
 
 ## ENABLE TRIGGERS THAT ARE ALWAYS AVAILABLE
-scoreboard players enable @s list
+scoreboard players enable @a list
+scoreboard players enable @a info
 
 # return 1 for success
 return 1
