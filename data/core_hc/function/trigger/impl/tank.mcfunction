@@ -39,4 +39,3 @@ scoreboard players enable @s tank
 
 ## commands
 function hc:class/select/tank
-
