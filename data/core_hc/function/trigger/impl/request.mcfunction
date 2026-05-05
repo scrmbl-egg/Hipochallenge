@@ -31,9 +31,5 @@ execute unless predicate { \
     run \
     return fail
 
-# disable ability to make more requests, and enable cancel trigger for host
-scoreboard players reset @a request
-scoreboard players enable @s cancel
-
 ## commands
 function hc:game/match/request

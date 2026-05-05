@@ -26,6 +26,10 @@ execute if data storage hc:main vars.game_context.match_requested \
         }, \
     }
 
+# disable ability to make more requests, and enable cancel trigger for host
+scoreboard players reset @a request
+scoreboard players enable @s cancel
+
 # add match host tag to player (and also the will join match tag)
 tag @s add hc.MatchHost
 tag @s add hc.WillJoinMatch
