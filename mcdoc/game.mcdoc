@@ -63,7 +63,7 @@ struct GameModePresetBase {
     /// that will be checked and mutated throughout the match even when states
     /// change.
     ///
-    /// See the `on_end_function` field.
+    /// See the `on_tick_function` and `on_end_function` fields.
     on_start_function: #[id="function"] string,
 
     /// Callback function that is called each tick of the game mode, regardless
@@ -72,6 +72,8 @@ struct GameModePresetBase {
     /// It is recommended to use this function to update resources that will
     /// be checked and mutated each tick of the match even when the states
     /// change (best example: timer scores).
+    ///
+    /// See the `on_start_function` and `on_end_function` fields.
     on_tick_function: #[id="function"] string,
 
     /// Callback function that is called when the game mode or match ends.
