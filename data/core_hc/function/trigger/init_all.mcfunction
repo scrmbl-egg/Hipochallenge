@@ -19,13 +19,13 @@ scoreboard objectives add list trigger
 scoreboard objectives add info trigger
 
 ## PLAZA / LOBBY
-scoreboard objectives add warp_tutorial trigger
-scoreboard objectives add warp_training trigger
-scoreboard objectives add warp_training_cnduit trigger
-scoreboard objectives add warp_training_froggy trigger
-scoreboard objectives add warp_training_sacrif trigger
-scoreboard objectives add warp_training_fctory trigger
-scoreboard objectives add warp_training_derail trigger
+scoreboard objectives add tp_tutorial trigger
+scoreboard objectives add tp_training trigger
+scoreboard objectives add tp_training_cnduit trigger
+scoreboard objectives add tp_training_froggy trigger
+scoreboard objectives add tp_training_sacrif trigger
+scoreboard objectives add tp_training_fctory trigger
+scoreboard objectives add tp_training_derail trigger
 
 ## MATCH REQUEST
 scoreboard objectives add request trigger
@@ -35,7 +35,7 @@ scoreboard objectives add leave trigger
 scoreboard objectives add start trigger
 
 ## TRAINING TOOLS
-scoreboard objectives add warp_plaza trigger
+scoreboard objectives add exit trigger
 scoreboard objectives add menu trigger
 scoreboard objectives add tank trigger
 scoreboard objectives add marksman trigger
