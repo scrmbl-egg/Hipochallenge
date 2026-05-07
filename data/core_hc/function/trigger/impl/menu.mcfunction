@@ -87,7 +87,7 @@ dialog show @s { \
     "actions": [ \
         { \
             "label": { \
-                "translate": "hc.trigger.list.button_label", \
+                "translate": "hc.trigger.list.label", \
                 "fallback": "List Triggers" \
             }, \
             "action":{ \
