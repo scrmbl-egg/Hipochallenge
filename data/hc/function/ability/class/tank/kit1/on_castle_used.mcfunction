@@ -22,12 +22,21 @@ execute if predicate hc:mechanic/is_silenced \
 
 # set temporary schema
 data modify storage hc:temp castle set value { \
-    get_uuid_params:{ \
+    get_furthest_teammate_uuid_args:{ \
         team:"", \
         out_storage:"hc:temp", \
-        out_nbt:"castle.tp.other_uuid", \
+        out_nbt:"castle.get_uuid_transform_args.uuid", \
     }, \
-    tp:{ \
+    get_uuid_transform_args:{ \
+        uuid:[I; 0, 0, 0, 0], \
+        out_storage:"hc:temp", \
+        out_nbt:"castle.get_uuid_transform_result", \
+    }, \
+    get_uuid_transform_result:{ \
+        position:[0, 0, 0], \
+        rotation:[0, 0], \
+    }, \
+    swap_args:{ \
         self_pos_x:0.0, \
         self_pos_y:0.0, \
         self_pos_z:0.0, \
@@ -45,39 +54,57 @@ data modify storage hc:temp castle set value { \
 # get player team
 function hc:team/get_self_team { \
     out_storage:"hc:temp", \
-    out_nbt:"castle.get_uuid_params.team", \
+    out_nbt:"castle.get_furthest_teammate_uuid_args.team", \
 }
 
 # get self position and rotation
-data modify storage hc:temp castle.tp.self_pos_x set from entity @s Pos[0]
-data modify storage hc:temp castle.tp.self_pos_y set from entity @s Pos[1]
-data modify storage hc:temp castle.tp.self_pos_z set from entity @s Pos[2]
-data modify storage hc:temp castle.tp.self_yaw set from entity @s Rotation[0]
-data modify storage hc:temp castle.tp.self_pitch set from entity @s Rotation[1]
+data modify storage hc:temp castle.swap_args.self_pos_x \
+    set from entity @s Pos[0]
+data modify storage hc:temp castle.swap_args.self_pos_y \
+    set from entity @s Pos[1]
+data modify storage hc:temp castle.swap_args.self_pos_z \
+    set from entity @s Pos[2]
+data modify storage hc:temp castle.swap_args.self_yaw \
+    set from entity @s Rotation[0]
+data modify storage hc:temp castle.swap_args.self_pitch \
+    set from entity @s Rotation[1]
 
 # get furthest teammate UUID
 function core_hc:ability/tank/kit1/castle/get_furthest_teammate_uuid \
-    with storage hc:temp castle.get_uuid_params
+    with storage hc:temp castle.get_furthest_teammate_uuid_args
 #>_
 # @out
-#   hc:temp castle.tp
-#        other_uuid
+#   hc:temp castle.get_uuid_transform_args
+#       uuid
+
+# copy teammate's uuid in swap_args
+data modify storage hc:temp castle.swap_args.other_uuid \
+    set from storage hc:temp castle.get_uuid_transform_args.uuid
 
 # get furthest teammate position and rotation
-function core_hc:ability/tank/kit1/castle/get_furthest_teammate_transform \
-    with storage hc:temp castle.tp
+function core_hc:ability/tank/kit1/castle/get_uuid_transform \
+    with storage hc:temp castle.get_uuid_transform_args
 #>_
 # @out
-#   hc:temp castle.tp
-#        other_pos_x
-#        other_pos_y
-#        other_pos_x
-#        other_yaw
-#        other_pitch
+#   hc:temp castle.get_uuid_transform_result
+#       position
+#       rotation
+
+# decompose transform result in swap_args
+data modify storage hc:temp castle.swap_args.other_pos_x \
+    set from storage hc:temp castle.get_uuid_transform_result.position[0]
+data modify storage hc:temp castle.swap_args.other_pos_y \
+    set from storage hc:temp castle.get_uuid_transform_result.position[1]
+data modify storage hc:temp castle.swap_args.other_pos_z \
+    set from storage hc:temp castle.get_uuid_transform_result.position[2]
+data modify storage hc:temp castle.swap_args.other_yaw \
+    set from storage hc:temp castle.get_uuid_transform_result.rotation[0]
+data modify storage hc:temp castle.swap_args.other_pitch \
+    set from storage hc:temp castle.get_uuid_transform_result.rotation[1]
 
 # swap
 function core_hc:ability/tank/kit1/castle/swap_players \
-    with storage hc:temp castle.tp
+    with storage hc:temp castle.swap_args
 
 # free memory
 data remove storage hc:temp castle

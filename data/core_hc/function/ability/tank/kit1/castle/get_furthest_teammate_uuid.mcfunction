@@ -11,7 +11,7 @@
 #   out_nbt: #[nbt_path=minecraft:storage[[out_storage]]] string
 #       Storage NBT path where the result will be stored.
 # @writes
-#   hc:temp castle.tp.other_uuid
+#   Furthest teammate's UUID in specified location
 
 $execute as @e[ \
     type=#hc:player_like, \
@@ -22,4 +22,4 @@ $execute as @e[ \
     tag=!hc.Dead \
 ] \
     run \
-    data modify storage hc:temp castle.tp.other_uuid set from entity @s UUID
+    data modify storage $(out_storage) $(out_nbt) set from entity @s UUID
