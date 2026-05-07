@@ -40,6 +40,9 @@ scoreboard players enable @s info
 ## commands
 # show dialog
 #dialog show @s core_hc:info
+# TODO: this should probably go into the dialog/ directory instead of in-lined
+# in a function, but minecraft makes me restart the whole server if I want to
+# slightly update it, so it stays here for now
 dialog show @s { \
     type:"minecraft:notice", \
     title:{ \
@@ -48,10 +51,19 @@ dialog show @s { \
     }, \
     body:{ \
         type:"minecraft:plain_message", \
+        width:400, \
         contents:[ \
-            {text:"Information body here"}, \
+            { \
+                translate:"hc.trigger.info.dialog.body", \
+                fallback:"NOT TRANSLATED! args: %1$s", \
+                with:[ \
+                    "Hipochallenge: Phoenix", \
+                ], \
+            }, \
         ], \
     }, \
     can_close_with_escape:true, \
     pause:true, \
 }
+
+# TODO: Remember to use fallback text from en_US.json from the resource pack
