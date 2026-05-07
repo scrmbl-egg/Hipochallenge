@@ -47,8 +47,8 @@ scoreboard objectives remove npc_kill_nearest
 scoreboard objectives remove npc_kill_all
 scoreboard objectives remove see_spawns
 scoreboard objectives remove see_dmg
-scoreboard objectives remove item_cooldown
-scoreboard objectives remove proj_cooldown
+scoreboard objectives remove cd_item
+scoreboard objectives remove cd_projectile
 
 ## ADMIN
 scoreboard objectives remove lv_random

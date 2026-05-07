@@ -28,6 +28,7 @@
         "core_hc:trigger/impl/npc_assault",
         "core_hc:trigger/impl/npc_kill_all",
         "core_hc:trigger/impl/npc_kill_nearest",
-        "core_hc:trigger/impl/proj_cooldown"
+        "core_hc:trigger/impl/cd_item",
+        "core_hc:trigger/impl/cd_projectile"
     ]
 }

@@ -59,8 +59,8 @@ scoreboard objectives add npc_kill_nearest trigger
 scoreboard objectives add npc_kill_all trigger
 scoreboard objectives add see_spawns trigger
 scoreboard objectives add see_dmg trigger
-scoreboard objectives add item_cooldown trigger
-scoreboard objectives add proj_cooldown trigger
+scoreboard objectives add cd_item trigger
+scoreboard objectives add cd_projectile trigger
 
 ## ADMIN
 scoreboard objectives add lv_random trigger
