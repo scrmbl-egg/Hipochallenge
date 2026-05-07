@@ -1,0 +1,53 @@
+{
+    "type": "minecraft:multi_action",
+    "title": {
+        "translate": "hc.trigger.menu.dialog.title",
+        "fallback": "Training Menu"
+    },
+    "actions": [
+        {
+            "label": {
+                "translate": "hc.trigger.list.label",
+                "fallback": "List Triggers"
+            },
+            "action":{
+                "type":"minecraft:run_command",
+                "command":"trigger list"
+            },
+            "width": 280,
+            "tooltip": [
+                {
+                    "translate": "hc.trigger.button_tooltip",
+                    "fallback": "%1$s\n\nCommand: %2$s",
+                    "with": [
+                        {
+                            "translate": "hc.trigger.list.description",
+                            "fallback": "Prints all currently available triggers/commands in the chat",
+                            "color": "gray"
+                        },
+                        {
+                            "translate": "",
+                            "fallback": "/trigger %s",
+                            "color": "gray",
+                            "with": [
+                                {
+                                    "text": "list",
+                                    "color": "aqua"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "after_action": "none",
+    "pause": false,
+    "can_close_with_escape":true,
+    "exit_action": {
+        "label": {
+            "translate":"gui.back",
+            "fallback":"Back"
+        }
+    }
+}

@@ -76,7 +76,7 @@ advancement revoke @s only core_hc:training/used_training_menu
 # the "no" option actually closing the dialog. Adds friction in UX terms, but
 # it's better than the first option.
 
-dialog show @s core_hc:training/menu
+#dialog show @s core_hc:training/menu
 
 dialog show @s { \
     "type": "minecraft:multi_action", \
