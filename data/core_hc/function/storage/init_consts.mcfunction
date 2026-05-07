@@ -893,7 +893,7 @@ data modify storage hc:main consts.classes append value { \
     attributes:{ \
         max_health:20, \
         armor:12, \
-        armor_toughness:50, \
+        armor_toughness:20, \
         scale:1, \
         burning_time:1, \
         explosion_knockback_resistance:0, \
