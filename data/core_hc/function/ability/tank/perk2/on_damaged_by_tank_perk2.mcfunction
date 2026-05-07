@@ -4,7 +4,7 @@
 #
 # @context player
 
-advancement revoke @s \
+#advancement revoke @s \
     only core_hc:class/tank/perk2/damaged_by_tank_perk2
 
 # give effects
