@@ -2,6 +2,8 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "nbt": "{Tags:[hc.ProjectileCooldownDisabled]}"
+        "nbt": {
+            "Tags": ["hc.ProjectileCooldownDisabled"]
+        }
     }
 }
