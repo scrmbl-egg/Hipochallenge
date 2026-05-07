@@ -21,11 +21,11 @@ scoreboard objectives add info trigger
 ## PLAZA / LOBBY
 scoreboard objectives add warp_tutorial trigger
 scoreboard objectives add warp_training trigger
-scoreboard objectives add warp_training_subdec trigger
-scoreboard objectives add warp_training_frggy2 trigger
-scoreboard objectives add warp_training_sacrf2 trigger
-scoreboard objectives add warp_training_vilfac trigger
-scoreboard objectives add warp_training_ctrain trigger
+scoreboard objectives add warp_training_cnduit trigger
+scoreboard objectives add warp_training_froggy trigger
+scoreboard objectives add warp_training_sacrif trigger
+scoreboard objectives add warp_training_fctory trigger
+scoreboard objectives add warp_training_derail trigger
 
 ## MATCH REQUEST
 scoreboard objectives add request trigger
@@ -64,11 +64,11 @@ scoreboard objectives add proj_cooldown trigger
 
 ## ADMIN
 scoreboard objectives add lv_random trigger
-scoreboard objectives add lv_subdec trigger
-scoreboard objectives add lv_frggy2 trigger
-scoreboard objectives add lv_sacrf2 trigger
-scoreboard objectives add lv_vilfac trigger
-scoreboard objectives add lv_ctrain trigger
+scoreboard objectives add lv_cnduit trigger
+scoreboard objectives add lv_froggy trigger
+scoreboard objectives add lv_sacrif trigger
+scoreboard objectives add lv_fctory trigger
+scoreboard objectives add lv_derail trigger
 
 ## IN-GAME (match players)
 scoreboard objectives add vote_yes trigger

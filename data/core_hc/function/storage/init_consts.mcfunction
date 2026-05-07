@@ -986,37 +986,37 @@ data modify storage hc:main consts.classes append value { \
 ## LEVELS
 # subterranean decay
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:subdec", \
+    internal_name:"hc:cnduit", \
     id:0, \
-    name:{translate:"hc.level.subdec.name",fallback:"Subterranean Decay"}, \
+    name:{translate:"hc.level.cnduit.name",fallback:"Conduits"}, \
 }
 
 # froggyland playplace 2
 data modify storage hc:main consts.levels append value { \
     internal_name:"hc:froggy", \
     id:1, \
-    name:{translate:"hc.level.froggy.name",fallback:"Froggyland Playplace 2"}, \
+    name:{translate:"hc.level.froggy.name",fallback:"Froggyland"}, \
 }
 
 # sepulchral sacrifice 2
 data modify storage hc:main consts.levels append value { \
     internal_name:"hc:sacrif", \
     id:2, \
-    name:{translate:"hc.level.sacrif.name",fallback:"Sepulchral Sacrifice 2"}, \
+    name:{translate:"hc.level.sacrif.name",fallback:"Sacrifice"}, \
 }
 
 # villager factory
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:vilfac", \
+    internal_name:"hc:fctory", \
     id:3, \
-    name:{translate:"hc.level.vilfac.name",fallback:"Villager Factory"}, \
+    name:{translate:"hc.level.fctory.name",fallback:"Villager Factory"}, \
 }
 
 # crazy trains
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:ctrain", \
+    internal_name:"hc:derail", \
     id:4, \
-    name:{translate:"hc.level.ctrain.name",fallback:"Crazy Trains"}, \
+    name:{translate:"hc.level.derail.name",fallback:"Derailed"}, \
 }
 
 

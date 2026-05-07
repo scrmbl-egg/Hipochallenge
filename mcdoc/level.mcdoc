@@ -20,38 +20,38 @@ struct Level {
 
 /// Enum for level numeric IDs.
 enum(int) LevelId {
-    /// Numeric ID for the Subterranean Decay level.
-    SubterraneanDecay = 0,
+    /// Numeric ID for the Conduit level.
+    Conduits = 0,
 
-    /// Numeric ID for the Froggyland Playplace 2 level.
-    FroggylandPlayplace2 = 1,
+    /// Numeric ID for the Froggyland level.
+    FroggyLand = 1,
 
-    /// Numeric ID for the Sepulchral Sacrifice 2 level.
-    SepulchralSacrifice2 = 2,
+    /// Numeric ID for the Sepulchral level.
+    Sacrifice = 2,
 
     /// Numeric ID for the Villager Factory level.
     VillagerFactory = 3,
 
-    /// Numeric ID for the Villager Factory level.
-    CrazyTrains = 4,
+    /// Numeric ID for the Derailed level.
+    Derailed = 4,
 }
 
 
 /// Enum for level internal names. These are shortened names so they match
 /// their `trigger lv_*` commands.
 enum(string) LevelInternalName {
-    /// Internal name for the Subterranean Decay level.
-    SubterraneanDecay = "hc:subdec",
+    /// Internal name for the Conduit level.
+    Conduits = "hc:cnduit",
 
-    /// Internal name for the Froggyland Playplace 2 level.
-    FroggylandPlayplace2 = "hc:froggy",
+    /// Internal name for the Froggyland level.
+    FroggyLand = "hc:froggy",
 
-    /// Internal name for the Sepulchral Sacrifice 2 level.
-    SepulchralSacrifice2 = "hc:sacrif",
+    /// Internal name for the Sepulchral level.
+    Sacrifice = "hc:sacrif",
 
     /// Internal name for the Villager Factory level.
-    VillagerFactory = "hc:vilfac",
+    VillagerFactory = "hc:fctory",
 
-    /// Internal name for the Crazy Trains level.
-    CrazyTrains = "hc:ctrain",
+    /// Internal name for the Derailed level.
+    Derailed = "hc:derail",
 }
