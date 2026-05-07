@@ -181,7 +181,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
     name_color:"#98bdc2", \
     vanilla_color:"white", \
-    dust_color:[0.9f,0.9f,0.9f], \
+    dust_color:[0.9f, 0.9f, 0.9f], \
     armor_dye_color:10403008, \
     trim_material:"minecraft:iron", \
 }
@@ -193,7 +193,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
     name_color:"#ff3030", \
     vanilla_color:"red", \
-    dust_color:[1.0f,0.0f,0.0f], \
+    dust_color:[1.0f, 0.0f, 0.0f], \
     armor_dye_color:10952471, \
     trim_material:"minecraft:redstone", \
 }
@@ -205,7 +205,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.colors.yellow",fallback:"YELLOW"}, \
     name_color:"#fffb0a", \
     vanilla_color:"yellow", \
-    dust_color:[1.0f,1.0f,0.0f], \
+    dust_color:[1.0f, 1.0f, 0.0f], \
     armor_dye_color:14662182, \
     trim_material:"minecraft:gold", \
 }
@@ -217,7 +217,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
     name_color:"#2ece49", \
     vanilla_color:"green", \
-    dust_color:[0.0f,1.0f,0.0f], \
+    dust_color:[0.0f, 1.0f, 0.0f], \
     armor_dye_color:4104251, \
     trim_material:"minecraft:emerald", \
 }
@@ -229,7 +229,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
     name_color:"#3f3bff", \
     vanilla_color:"blue", \
-    dust_color:[0.0f,0.0f,1.0f], \
+    dust_color:[0.0f, 0.0f, 1.0f], \
     armor_dye_color:1977039, \
     trim_material:"minecraft:lapis", \
 }
@@ -241,7 +241,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
     name_color:"#df2fdf", \
     vanilla_color:"light_purple", \
-    dust_color:[1.0f,0.0f,1.0f], \
+    dust_color:[1.0f, 0.0f, 1.0f], \
     armor_dye_color:11158177, \
     trim_material:"minecraft:amethyst", \
 }
@@ -253,7 +253,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.colors.orange",fallback:"ORANGE"}, \
     name_color:"#ff811a", \
     vanilla_color:"gold", \
-    dust_color:[1.0f,0.455f,0.141f], \
+    dust_color:[1.0f, 0.455f, 0.141f], \
     armor_dye_color:16281118, \
     trim_material:"minecraft:resin", \
 }
@@ -265,7 +265,7 @@ data modify storage hc:main consts.team_color_presets append value { \
     default_name:{translate:"hc.teams.colors.cyan",fallback:"CYAN"}, \
     name_color:"#34d5f1", \
     vanilla_color:"aqua", \
-    dust_color:[0.20f,0.83f,1.0f], \
+    dust_color:[0.20f, 0.83f, 1.0f], \
     armor_dye_color:1819330, \
     trim_material:"minecraft:diamond", \
 }
@@ -277,7 +277,7 @@ data modify storage hc:main consts.classes append value { \
     id:1, \
     name:{translate:"hc.class.tank.name",fallback:"Tank"}, \
     icon:{translate:"hc.class.tank.icon",fallback:"\u26e8"}, \
-    dust_color:[0.176f,0.6f,0.392f], \
+    dust_color:[0.176f, 0.6f, 0.392f], \
     attributes:{ \
         max_health:20, \
         armor:20, \
@@ -377,7 +377,7 @@ data modify storage hc:main consts.classes append value { \
                     }, \
                 }, \
                 bubble_shield:{ \
-                    draw_command:"particle dust_color_transition{from_color:[0.000f,0.800f,1.000f],scale:2,to_color:[0.161f,0.255f,0.271f]} ~ ~ ~ 0 0 0 0 1 force", \
+                    draw_command:"particle dust_color_transition{from_color:[0.000f, 0.800f, 1.000f],scale:2,to_color:[0.161f, 0.255f, 0.271f]} ~ ~ ~ 0 0 0 0 1 force", \
                     radius:4.0, \
                     high_speed_arrow_detection_radius:10.0, \
                     lifetime_ticks:240, \
@@ -889,7 +889,7 @@ data modify storage hc:main consts.classes append value { \
     id:6, \
     name:{translate:"hc.class.assault.name",fallback:"Assault"}, \
     icon:{translate:"hc.class.assault.icon",fallback:"\u2605"}, \
-    dust_color:[0.803f,0.286f,0.270f], \
+    dust_color:[0.803f, 0.286f, 0.270f], \
     attributes:{ \
         max_health:20, \
         armor:12, \
