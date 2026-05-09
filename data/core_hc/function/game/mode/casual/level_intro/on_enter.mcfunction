@@ -20,9 +20,6 @@ data modify storage hc:temp level_intro set value { \
 data modify storage hc:temp level_intro.display_subtitle_args.text \
     set from storage hc:main vars.game_context.level.name
 
-## SETUP STOPWATCH
-stopwatch create hc:casual/level_intro
-
 
 ## DISPLAY MODE AND LEVEL TITLES
 title @a[predicate=hc:team/is_in_match_team] times 0s 6s 0.75s
