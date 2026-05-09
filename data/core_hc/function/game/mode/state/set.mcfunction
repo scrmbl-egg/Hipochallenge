@@ -19,6 +19,7 @@ execute if data storage hc:main vars.game_context.mode.state.on_exit_function \
     function std:function/call_from_nbt { \
         function_storage:"hc:main", \
         function_nbt:"vars.game_context.mode.state.on_exit_function", \
+        args:{}, \
     }
 
 # if specified ID is 0, set the current state to an empty struct and return
@@ -65,6 +66,7 @@ function hc:msg/debug/send_info { \
 function std:function/call_from_nbt { \
     function_storage:"hc:main", \
     function_nbt:"vars.game_context.mode.state.on_enter_function", \
+    args:{}, \
 }
 
 # free memory

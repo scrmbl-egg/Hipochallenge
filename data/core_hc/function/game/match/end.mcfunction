@@ -23,12 +23,14 @@ function hc:msg/debug/send_info {text:"\"Ending match...\""}
 function std:function/call_from_nbt { \
     function_storage:"hc:main", \
     function_nbt:"vars.game_context.mode.state.on_exit_function", \
+    args:{}, \
 }
 
 # call match/game mode end function
 function std:function/call_from_nbt { \
     function_storage:"hc:main", \
     function_nbt:"vars.game_context.mode.preset.on_end_function", \
+    args:{}, \
 }
 
 # set current state to an empty object (makes `hc:mode/is_match_being_played`

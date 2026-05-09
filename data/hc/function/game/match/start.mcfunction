@@ -36,6 +36,7 @@ execute unless data storage \
 function std:function/call_from_nbt { \
     function_storage:"hc:main", \
     function_nbt:"vars.game_context.mode.preset.on_start_function", \
+    args:{}, \
 }
 
 # send debug message
@@ -62,4 +63,5 @@ function hc:msg/debug/send_info { \
 function std:function/call_from_nbt { \
     function_storage:"hc:main", \
     function_nbt:"vars.game_context.mode.state.on_enter_function", \
+    args:{}, \
 }
