@@ -312,7 +312,7 @@ data modify storage hc:main consts.classes append value { \
                     effects_info:{ \
                         suppression_ticks:0, \
                         effects:[ \
-                            {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
+                            {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:false}, \
                         ], \
                     }, \
                     radius:7.0, \
@@ -332,7 +332,7 @@ data modify storage hc:main consts.classes append value { \
                     effects_info:{ \
                         suppression_ticks:0, \
                         effects:[ \
-                            {effect:"minecraft:slowness",seconds:2,amplifier:0,hide_particles:"false"}, \
+                            {effect:"minecraft:slowness",seconds:2,amplifier:0,hide_particles:false}, \
                         ], \
                     }, \
                     radius:5.0, \
@@ -406,7 +406,7 @@ data modify storage hc:main consts.classes append value { \
                     effects_info:{ \
                         suppression_ticks:0, \
                         effects:[ \
-                            {effect:"minecraft:slowness",seconds:1,amplifier:0,hide_particles:"false"}, \
+                            {effect:"minecraft:slowness",seconds:1,amplifier:0,hide_particles:false}, \
                         ], \
                     }, \
                 }, \
@@ -531,7 +531,7 @@ data modify storage hc:main consts.classes append value { \
                 effects_info:{ \
                     suppression_ticks:0, \
                     effects:[ \
-                        {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:"false"}, \
+                        {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:false}, \
                     ], \
                 }, \
             }, \
@@ -619,8 +619,8 @@ data modify storage hc:main consts.classes append value { \
                     effects_info:{ \
                         suppression_ticks:40, \
                         effects:[ \
-                            {effect:"minecraft:slowness",seconds:2,amplifier:2,hide_particles:"false"}, \
-                            {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:"false"}, \
+                            {effect:"minecraft:slowness",seconds:2,amplifier:2,hide_particles:false}, \
+                            {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:false}, \
                         ], \
                     }, \
                 }, \
@@ -647,8 +647,8 @@ data modify storage hc:main consts.classes append value { \
                 contract_success_effects_info:{ \
                     suppression_ticks:0, \
                     effects:[ \
-                        {effect:"minecraft:strength",seconds:"infinite",amplifier:0,hide_particles:"false"}, \
-                        {effect:"minecraft:instant_health",seconds:1,amplifier:0,hide_particles:"false"}, \
+                        {effect:"minecraft:strength",seconds:"infinite",amplifier:0,hide_particles:false}, \
+                        {effect:"minecraft:instant_health",seconds:1,amplifier:0,hide_particles:false}, \
                     ], \
                 }, \
             }, \
@@ -753,8 +753,8 @@ data modify storage hc:main consts.classes append value { \
                     effects_info:{ \
                         suppression_ticks:0, \
                         effects:[ \
-                            {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:"false"}, \
-                            {effect:"minecraft:jump_boost",seconds:2,amplifier:0,hide_particles:"true"}, \
+                            {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:false}, \
+                            {effect:"minecraft:jump_boost",seconds:2,amplifier:0,hide_particles:true}, \
                         ], \
                     }, \
                 }, \
@@ -828,8 +828,8 @@ data modify storage hc:main consts.classes append value { \
                         effects_info:{ \
                             suppression_ticks:0, \
                             effects:[ \
-                                {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:"false"}, \
-                                {effect:"minecraft:glowing",seconds:5,amplifier:0,hide_particles:"false"}, \
+                                {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:false}, \
+                                {effect:"minecraft:glowing",seconds:5,amplifier:0,hide_particles:false}, \
                             ], \
                         }, \
                     }, \
@@ -866,7 +866,7 @@ data modify storage hc:main consts.classes append value { \
                 on_glowing_enemy_hit_effects_info:{ \
                     suppression_ticks:0, \
                     effects:[\
-                        {effect:"minecraft:haste",seconds:3,amplifier:2,hide_particles:"false"}, \
+                        {effect:"minecraft:haste",seconds:3,amplifier:2,hide_particles:false}, \
                     ], \
                 }, \
             }, \
@@ -975,7 +975,7 @@ data modify storage hc:main consts.classes append value { \
                 on_looking_at_enemy_effects_info:{ \
                     suppression_ticks:0, \
                     effects:[ \
-                        {effect:"minecraft:speed",seconds:1,amplifier:0,hide_particles:"true"}, \
+                        {effect:"minecraft:speed",seconds:1,amplifier:0,hide_particles:true}, \
                     ], \
                 }, \
             }, \
