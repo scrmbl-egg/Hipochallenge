@@ -14,8 +14,8 @@
 #       Executing player's yaw / Y rotation.
 #   self_pitch: double @ -90..90
 #       Executing player's yaw / X rotation.
-#   other_uuid: #[uuid] int[] @ 4
-#       UUID of the teleported teammate.
+#   other_tag: #[uuid] int[] @ 4
+#       Tag of the teleported teammate.
 #   other_pos_x: double
 #       Teammate's X position coordinate.
 #   other_pos_y: double
@@ -28,7 +28,7 @@
 #       Teammate's pitch / X rotation.
 
 # other to self
-$execute as @n[nbt={UUID:$(other_uuid)}] \
+$execute as @n[tag=$(other_tag)] \
     positioned $(self_pos_x) $(self_pos_y) $(self_pos_z) \
     rotated $(self_yaw) $(self_pitch) \
     run \
