@@ -44,13 +44,12 @@ execute unless score hc:strlen __hc.SetTeamName matches 1..16 \
     }
 execute unless score hc:strlen __hc.SetTeamName matches 1..16 \
     run \
+    data remove storage hc:temp set_name
+execute unless score hc:strlen __hc.SetTeamName matches 1..16 \
+    run \
     return run \
-    function std:fail { \
-        score_objectives:["__hc.SetTeamName"], \
-        nbt_paths:[ \
-            {storage:"hc:temp",nbt:"set_name"}, \
-        ], \
-        entity_selectors:[], \
+    function std:scoreboard/remove_objective_and_fail { \
+        objective:"__hc.SetTeamName", \
     }
 
 # save new custom name in team context
