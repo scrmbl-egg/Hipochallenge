@@ -9,20 +9,16 @@ scoreboard objectives add __hc.MatchRequestDisplay dummy
 
 ## set up temp data
 data modify storage hc:temp mreq_display set value { \
-    set_r4_display_name_args:{ \
-        score_objective:"__hc.MatchRequestDisplay", \
-        score_holder:"hc:r2", \
-        text:{ \
-            translate:"hc.match_request.mode", \
-            fallback:"Mode: %s", \
-            with:[{}], \
-        }, \
+    r2_text:{ \
+        translate:"hc.match_request.mode", \
+        fallback:"Mode: %s", \
+        with:[{}], \
     }, \
 }
 # get mode translated name with specified style
-data modify storage hc:temp mreq_display.set_r4_display_name_args.text.with[0] \
+data modify storage hc:temp mreq_display.r2_text.with[0] \
     set from storage hc:main vars.game_context.mode.preset.name
-data modify storage hc:temp mreq_display.set_r4_display_name_args.text.with[0] \
+data modify storage hc:temp mreq_display.r2_text.with[0] \
     merge from storage \
     hc:main vars.game_context.mode.preset.match_request.name_text_style
 
@@ -59,8 +55,11 @@ scoreboard players display name hc:r0 __hc.MatchRequestDisplay { \
     with:[{selector:"@p[tag=hc.MatchHost]"}], \
 }
 scoreboard players display name hc:r1 __hc.MatchRequestDisplay ""
-function core_hc:util/score_holder/set_display_name \
-    with storage hc:temp mreq_display.set_r4_display_name_args
+scoreboard players display name hc:r2 __hc.MatchRequestDisplay { \
+    storage:"hc:temp", \
+    nbt:"mreq_display.r2_text", \
+    interpret:true, \
+}
 scoreboard players display name hc:r5 __hc.MatchRequestDisplay ""
 scoreboard players display name hc:r6 __hc.MatchRequestDisplay { \
     translate:"hc.match_request.join_trigger_tip", \
