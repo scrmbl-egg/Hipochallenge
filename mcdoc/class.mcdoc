@@ -48,14 +48,14 @@ struct Class {
 
     /// Player list class information.
     list_info: struct ClassListInfo {
-        /// Color for the player's class name in the player list.
-        class_color: TextStyle[color],
+        /// Text style for the player's class name in the player list.
+        class_text_style: TextStyle,
 
-        /// Color for the player's kit name in the player list.
-        kit_color: TextStyle[color],
+        /// Text style for the player's kit name in the player list.
+        kit_text_style: TextStyle,
 
-        /// Color for the player's perk name in the player list.
-        perk_color: TextStyle[color],
+        /// Text style for the player's perk name in the player list.
+        perk_text_style: TextStyle,
     },
 
     /// Spawned loot table on player's death.

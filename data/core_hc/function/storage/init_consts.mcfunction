@@ -287,9 +287,9 @@ data modify storage hc:main consts.classes append value { \
         explosion_knockback_resistance:0.0, \
     }, \
     list_info:{ \
-        class_color:"#80c3a1", \
-        kit_color:"#a6d5bd", \
-        perk_color:"#cce7d9", \
+        class_text_style:{color:"#80c3a1"}, \
+        kit_text_style:{color:"#a6d5bd"}, \
+        perk_text_style:{color:"#cce7d9"}, \
     }, \
     death_loot_table:"hc:class/tank/death", \
     armor_loot_tables:{ \
@@ -445,9 +445,9 @@ data modify storage hc:main consts.classes append value { \
         explosion_knockback_resistance:0, \
     }, \
     list_info:{ \
-        class_color:"#dfb977", \
-        kit_color:"#e9cea0", \
-        perk_color:"#f2e3c9", \
+        class_text_style:{color:"#dfb977"}, \
+        kit_text_style:{color:"#e9cea0"}, \
+        perk_text_style:{color:"#f2e3c9"}, \
     }, \
     death_loot_table:"hc:class/marksman/death", \
     armor_loot_tables:{ \
@@ -564,9 +564,9 @@ data modify storage hc:main consts.classes append value { \
         explosion_knockback_resistance:0, \
     }, \
     list_info:{ \
-        class_color:"#80b0e4", \
-        kit_color:"#a6c8ec", \
-        perk_color:"#ccdff4", \
+        class_text_style:{color:"#80b0e4"}, \
+        kit_text_style:{color:"#a6c8ec"}, \
+        perk_text_style:{color:"#ccdff4"}, \
     }, \
     death_loot_table:"hc:class/assassin/death", \
     armor_loot_tables:{ \
@@ -690,9 +690,9 @@ data modify storage hc:main consts.classes append value { \
         explosion_knockback_resistance:0, \
     }, \
     list_info:{ \
-        class_color:"#eaac7c", \
-        kit_color:"#f0c5a3", \
-        perk_color:"#f7decb", \
+        class_text_style:{color:"#eaac7c"}, \
+        kit_text_style:{color:"#f0c5a3"}, \
+        perk_text_style:{color:"#f7decb"}, \
     }, \
     death_loot_table:"hc:class/support/death", \
     armor_loot_tables:{ \
@@ -788,9 +788,9 @@ data modify storage hc:main consts.classes append value { \
         explosion_knockback_resistance:0, \
     }, \
     list_info:{ \
-        class_color:"#b99dda", \
-        kit_color:"#cebae5", \
-        perk_color:"#e3d8f0", \
+        class_text_style:{color:"#b99dda"}, \
+        kit_text_style:{color:"#cebae5"}, \
+        perk_text_style:{color:"#e3d8f0"}, \
     }, \
     death_loot_table:"hc:class/recon/death", \
     armor_loot_tables:{ \
@@ -899,9 +899,9 @@ data modify storage hc:main consts.classes append value { \
         explosion_knockback_resistance:0, \
     }, \
     list_info:{ \
-        class_color:"#dc928e", \
-        kit_color:"#e7b3b0", \
-        perk_color:"#f1d3d2", \
+        class_text_style:{color:"#dc928e"}, \
+        kit_text_style:{color:"#e7b3b0"}, \
+        perk_text_style:{color:"#f1d3d2"}, \
     }, \
     death_loot_table:"hc:class/assault/death", \
     armor_loot_tables:{ \

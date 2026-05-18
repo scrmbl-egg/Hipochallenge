@@ -34,16 +34,23 @@ data modify storage hc:temp select_kit set value { \
         text:{ \
             translate:"hc.msg.team.player_selected_kit", \
             fallback:"%1$s has selected the %2$s kit", \
-            with:[{selector:"@s"}, {}], \
+            with:[ \
+                {selector:"@s"}, \
+                {storage:"hc:temp",nbt:"select_kit.kit_text",interpret:true}, \
+            ], \
         }, \
     }, \
     priv_msg_args:{ \
         text:{ \
             translate:"hc.msg.private.player_selected_kit", \
             fallback:"You selected the %1$s kit", \
-            with:[{}], \
+            with:[ \
+                {storage:"hc:temp",nbt:"select_kit.kit_text",interpret:true}, \
+            ], \
         }, \
     }, \
+    kit_text:{}, \
+    kit_text_style:{}, \
 }
 
 # get team the message may be sent to
@@ -52,29 +59,21 @@ function hc:team/get_self_team { \
     out_nbt:"select_kit.team_msg_args.team", \
 }
 
-# get kit name in both possible text components
+# get kit name
 function hc:kit/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
-    out_nbt:"select_kit.priv_msg_args.text.with[0]", \
-}
-function hc:kit/get_data_field { \
-    field:"name", \
-    out_storage:"hc:temp", \
-    out_nbt:"select_kit.team_msg_args.text.with[1]", \
+    out_nbt:"select_kit.kit_text", \
 }
 
-# get list info color for the kit name
+# get list info style for the kit name and merge
 function hc:class/get_data_field { \
-    field:"list_info.kit_color", \
+    field:"list_info.kit_text_style", \
     out_storage:"hc:temp", \
-    out_nbt:"select_kit.priv_msg_args.text.with[0].color", \
+    out_nbt:"select_kit.kit_text_style", \
 }
-function hc:class/get_data_field { \
-    field:"list_info.kit_color", \
-    out_storage:"hc:temp", \
-    out_nbt:"select_kit.team_msg_args.text.with[1].color", \
-}
+data modify storage hc:temp select_kit.kit_text \
+    merge from storage hc:temp select_kit.kit_text_style
 
 # send msg
 execute if predicate hc:team/is_in_match_pvp_team \

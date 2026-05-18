@@ -31,65 +31,139 @@ execute unless predicate { \
 
 # setup temp data
 data modify storage hc:temp update_list_info set value { \
-    display_args:{ \
-        class_text:{ \
-            translate:"hc.class.name_with_icon", \
-            fallback:"%2$s %1$s", \
-            with:[{}, {}], \
-            color:"", \
-        }, \
-        kit_text:{}, \
-        perk_text:{}, \
+    detected_text:{ \
+        translate:"hc.class.list_info", \
+        fallback:"%1$s :: %2$s :: %3$s - %4$s %7$s :: %5$s %8$s :: %6$s %9$s", \
+        color:"gray", \
+        with:[ \
+            { \
+                storage:"hc:temp", \
+                nbt:"update_list_info.class_text", \
+                interpret:true, \
+            }, \
+            { \
+                storage:"hc:temp", \
+                nbt:"update_list_info.kit_text", \
+                interpret:true, \
+            }, \
+            { \
+                storage:"hc:temp", \
+                nbt:"update_list_info.perk_text", \
+                interpret:true, \
+            }, \
+            {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
+            {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
+            {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
+            { \
+                translate:"hc.score.player_kill_count_representation", \
+                fallback:"\u2694", \
+                color:"green", \
+            }, \
+            { \
+                translate:"hc.score.death_count_representation", \
+                fallback:"\u2620", \
+                color:"red", \
+            }, \
+            { \
+                translate:"hc.score.points_representation", \
+                fallback:"\u2666", \
+                color:"gold", \
+            }, \
+        ], \
     }, \
+    undetected_text:{ \
+        translate:"hc.class.list_info", \
+        fallback:"%1$s :: %2$s :: %3$s - %4$s %7$s :: %5$s %8$s :: %6$s %9$s", \
+        color:"gray", \
+        with:[ \
+            { \
+                storage:"hc:temp", \
+                nbt:"update_list_info.class_text", \
+                interpret:true, \
+            }, \
+            "?", \
+            "?", \
+            {score:{name:"@s",objective:"hc.PlayerKillCount"},color:"yellow"}, \
+            {score:{name:"@s",objective:"hc.DeathCount"},color:"yellow"}, \
+            {score:{name:"@s",objective:"hc.Points"},color:"yellow"}, \
+            { \
+                translate:"hc.score.player_kill_count_representation", \
+                fallback:"\u2694", \
+                color:"green", \
+            }, \
+            { \
+                translate:"hc.score.death_count_representation", \
+                fallback:"\u2620", \
+                color:"red", \
+            }, \
+            { \
+                translate:"hc.score.points_representation", \
+                fallback:"\u2666", \
+                color:"gold", \
+            }, \
+        ], \
+    }, \
+    class_text:{ \
+        translate:"hc.class.name_with_icon", \
+        fallback:"%2$s %1$s", \
+        with:[{},{}], \
+    }, \
+    kit_text:{}, \
+    perk_text:{}, \
+    styles:{}, \
 }
-
-## get class_text name and icon. once added, add color field
-# name
+# get class name with icon
 function hc:class/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
-    out_nbt:"update_list_info.display_args.class_text.with[0]", \
+    out_nbt:"update_list_info.class_text.with[0]", \
 }
-# icon
 function hc:class/get_data_field { \
     field:"icon", \
     out_storage:"hc:temp", \
-    out_nbt:"update_list_info.display_args.class_text.with[1]", \
+    out_nbt:"update_list_info.class_text.with[1]", \
 }
-# color
-function hc:class/get_data_field { \
-    field:"list_info.class_color", \
-    out_storage:"hc:temp", \
-    out_nbt:"update_list_info.display_args.class_text.color", \
-}
-
-## get kit_text. once added, add color field
+# get kit name
 function hc:kit/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
-    out_nbt:"update_list_info.display_args.kit_text", \
+    out_nbt:"update_list_info.kit_text", \
 }
-function hc:class/get_data_field { \
-    field:"list_info.kit_color", \
-    out_storage:"hc:temp", \
-    out_nbt:"update_list_info.display_args.kit_text.color", \
-}
-
-## get perk_text. once added, add color field
+# get perk name
 function hc:perk/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
-    out_nbt:"update_list_info.display_args.perk_text", \
-}
-function hc:class/get_data_field { \
-    field:"list_info.perk_color", \
-    out_storage:"hc:temp", \
-    out_nbt:"update_list_info.display_args.perk_text.color", \
+    out_nbt:"update_list_info.perk_text", \
 }
 
-## now that every parameter is set, call display function
-function core_hc:list_info/display \
-    with storage hc:temp update_list_info.display_args
+## get text styles and merge with class, kit and perk names
+function hc:class/get_data_field { \
+    field:"list_info", \
+    out_storage:"hc:temp", \
+    out_nbt:"update_list_info.styles", \
+}
+data modify storage hc:temp update_list_info.class_text \
+    merge from storage hc:temp update_list_info.styles.class_text_style
+data modify storage hc:temp update_list_info.kit_text \
+    merge from storage hc:temp update_list_info.styles.kit_text_style
+data modify storage hc:temp update_list_info.perk_text \
+    merge from storage hc:temp update_list_info.styles.perk_text_style
+
+## display composed text
+execute if predicate hc:mechanic/is_detected \
+    run \
+    scoreboard players display numberformat @s hc.ListInfo fixed { \
+        storage:"hc:temp", \
+        nbt:"update_list_info.detected_text", \
+        interpret:true, \
+    }
+execute unless predicate hc:mechanic/is_detected \
+    run \
+    scoreboard players display numberformat @s hc.ListInfo fixed { \
+        storage:"hc:temp", \
+        nbt:"update_list_info.undetected_text", \
+        interpret:true, \
+    }
 
 # free memory
 data remove storage hc:temp update_list_info

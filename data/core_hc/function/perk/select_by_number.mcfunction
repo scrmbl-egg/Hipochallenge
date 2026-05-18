@@ -34,16 +34,31 @@ data modify storage hc:temp select_perk set value { \
         text:{ \
             translate:"hc.msg.team.player_selected_perk", \
             fallback:"%1$s has selected the %2$s perk", \
-            with:[{selector:"@s"}, {}], \
+            with:[ \
+                {selector:"@s"}, \
+                { \
+                    storage:"hc:temp", \
+                    nbt:"select_perk.perk_text", \
+                    interpret:true, \
+                }, \
+            ], \
         }, \
     }, \
     priv_msg_args:{ \
         text:{ \
             translate:"hc.msg.private.player_selected_perk", \
             fallback:"You selected the %1$s perk", \
-            with:[{}], \
+            with:[ \
+                { \
+                    storage:"hc:temp", \
+                    nbt:"select_perk.perk_text", \
+                    interpret:true, \
+                }, \
+            ], \
         }, \
     }, \
+    perk_text:{}, \
+    perk_text_style:{}, \
 }
 
 # get team the message may be sent to
@@ -52,31 +67,24 @@ function hc:team/get_self_team { \
     out_nbt:"select_perk.team_msg_args.team", \
 }
 
-# get perk name in both possible text components
+# get perk name
 function hc:perk/get_data_field { \
     field:"name", \
     out_storage:"hc:temp", \
-    out_nbt:"select_perk.priv_msg_args.text.with[0]", \
-}
-function hc:perk/get_data_field { \
-    field:"name", \
-    out_storage:"hc:temp", \
-    out_nbt:"select_perk.team_msg_args.text.with[1]", \
+    out_nbt:"select_perk.perk_text", \
 }
 
-# get list info color for the perk name
+# get list info style for the perk name and merge
 function hc:class/get_data_field { \
-    field:"list_info.perk_color", \
+    field:"list_info.perk_text_style", \
     out_storage:"hc:temp", \
-    out_nbt:"select_perk.priv_msg_args.text.with[0].color", \
+    out_nbt:"select_perk.perk_text_style", \
 }
-function hc:class/get_data_field { \
-    field:"list_info.perk_color", \
-    out_storage:"hc:temp", \
-    out_nbt:"select_perk.team_msg_args.text.with[1].color", \
-}
+data modify storage hc:temp select_perk.perk_text \
+    merge from storage hc:temp select_perk.perk_text_style
 
 # send msg
+tellraw @a {storage:"hc:temp",nbt:"select_perk"}
 execute if predicate hc:team/is_in_match_pvp_team \
     run \
     function hc:msg/team/send \

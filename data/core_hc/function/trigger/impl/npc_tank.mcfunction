@@ -75,10 +75,10 @@ execute at @s \
         }, \
     }
 
-# set icon color to class list_info color
-data modify entity @n[tag=__hc.NewNpc] description.with[1].color \
-    set from storage hc:main consts.\
-    classes[{internal_name:"hc:tank"}].list_info.class_color
+# set icon style to class list_info style
+data modify entity @n[tag=__hc.NewNpc] description.with[1] \
+    merge from storage hc:main consts.\
+    classes[{internal_name:"hc:tank"}].list_info.class_text_style
 
 # set owner_uuid
 data modify entity @n[tag=__hc.NewNpc] \

@@ -38,16 +38,31 @@ data modify storage hc:temp select_class set value { \
         text:{ \
             translate:"hc.msg.match.player_selected_class", \
             fallback:"%1$s has selected the %2$s class", \
-            with:[{selector:"@s"}, {}], \
+            with:[ \
+                {selector:"@s"}, \
+                { \
+                    storage:"hc:temp", \
+                    nbt:"select_class.class_text", \
+                    interpret:true, \
+                }, \
+            ], \
         }, \
     }, \
     priv_msg_args:{ \
         text:{ \
             translate:"hc.msg.private.player_selected_class", \
             fallback:"You selected the %1$s class", \
-            with:[{}], \
+            with:[ \
+                { \
+                    storage:"hc:temp", \
+                    nbt:"select_class.class_text", \
+                    interpret:true, \
+                }, \
+            ], \
         }, \
     }, \
+    class_text:{}, \
+    class_text_style:{}, \
 }
 
 # get team the message may be sent to
@@ -56,21 +71,14 @@ function hc:team/get_self_team { \
     out_nbt:"select_class.match_msg_args.team", \
 }
 
-# get class name in both possible text components
-$data modify storage hc:temp select_class.priv_msg_args.text.with[0] \
-    set from storage hc:main consts.classes[{id:$(value)}].name
-$data modify storage hc:temp select_class.match_msg_args.text.with[1] \
+# get class name
+$data modify storage hc:temp select_class.class_text \
     set from storage hc:main consts.classes[{id:$(value)}].name
 
-# get list info color for the class name
-$data modify storage \
-    hc:temp select_class.priv_msg_args.text.with[0].color \
-    set from storage \
-    hc:main consts.classes[{id:$(value)}].list_info.class_color
-$data modify storage \
-    hc:temp select_class.match_msg_args.text.with[1].color \
-    set from storage \
-    hc:main consts.classes[{id:$(value)}].list_info.class_color
+# get list info style for the class name
+$data modify storage hc:temp select_class.class_text \
+    merge from storage \
+    hc:main consts.classes[{id:$(value)}].list_info.class_text_style
 
 # send msg
 execute if predicate hc:team/is_in_match_pvp_team \
