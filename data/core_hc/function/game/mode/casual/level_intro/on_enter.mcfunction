@@ -10,17 +10,6 @@ execute store result score hc:state_remaining_ticks __hc.Casual \
     casual_data.level_intro_duration_seconds 20
 
 
-## DATA
-data modify storage hc:temp level_intro set value { \
-    display_subtitle_args:{ \
-        text:{}, \
-    }, \
-}
-# get level name for subtitle
-data modify storage hc:temp level_intro.display_subtitle_args.text \
-    set from storage hc:main vars.game_context.level.name
-
-
 ## DISPLAY MODE AND LEVEL TITLES
 title @a[predicate=hc:team/is_in_match_team] times 0s 6s 0.75s
 # display mode name
@@ -30,11 +19,11 @@ title @a[predicate=hc:team/is_in_match_team] title { \
     color:"green", \
 }
 # display level name (subtitle)
-execute as @a[predicate=hc:team/is_in_match_team] \
-    run \
-    function hc:util/title/display_subtitle \
-    with storage hc:temp level_intro.display_subtitle_args
-
+title @a[predicate=hc:team/is_in_match_team] subtitle { \
+    storage:"hc:main", \
+    nbt:"vars.game_context.level.name", \
+    interpret:true, \
+}
 
 ## FX
 playsound minecraft:entity.player.levelup \
