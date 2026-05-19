@@ -47,5 +47,12 @@ attribute @s minecraft:water_movement_efficiency base reset
 attribute @s minecraft:waypoint_receive_range base reset
 attribute @s minecraft:waypoint_transmit_range base reset
 
+# TODO: check JE 26.2 attributes
+# attributes @s minecraft:bounciness base reset
+# attributes @s minecraft:friction_modifier base reset
+# attributes @s minecraft:air_drag_modifier base reset
+# attributes @s minecraft:name_tag_distance base reset
+# attributes @s minecraft:below_name_distance base reset
+
 # call all remove modifier
 function #core_hc:attribute/remove_modifiers
