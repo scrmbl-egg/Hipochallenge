@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:ability/class/recon/kit3/on_portal_placed"
+        "function": "hc:ability/recon/kit3/on_portal_placed"
     }
 }

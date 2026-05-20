@@ -17,7 +17,7 @@ execute as @a \
 # trident
 execute as @a[scores={hc.TankKit2TridentCooldown=0}] \
     run \
-    function hc:ability/class/tank/kit2/give_trident
+    function hc:ability/tank/kit2/give_trident
 
 # goat horn
 # TODO: handle tank kit 2 goat horn cooldown
@@ -37,7 +37,7 @@ execute as @e[type=minecraft:allay,tag=hc.TankKit3Spirit] \
 # nutritious meal
 execute as @a[scores={hc.TankPerk1NutritiousMealCooldown=0}] \
     run \
-    function hc:ability/class/tank/perk1/give_nutritious_meal
+    function hc:ability/tank/perk1/give_nutritious_meal
 
 ## perk 2
 #function core_hc:ability/tank/perk2/on_damaged_by_tank_perk2

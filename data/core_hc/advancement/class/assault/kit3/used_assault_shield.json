@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:ability/class/assault/kit3/on_assault_shield_used"
+        "function": "hc:ability/assault/kit3/on_assault_shield_used"
     }
 }

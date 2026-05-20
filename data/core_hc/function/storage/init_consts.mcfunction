@@ -390,7 +390,7 @@ data modify storage hc:main consts.classes append value { \
         { \
             id:1, \
             name:{translate:"hc.class.tank.perk1.name",fallback:"I Nutrition"}, \
-            on_equip_command:"function hc:ability/class/tank/perk1/on_equip", \
+            on_equip_command:"function hc:ability/tank/perk1/on_equip", \
             data_type:"tank_p1_data", \
             tank_p1_data:{ \
                 nutritious_meal:{give_delay_ticks:1200}, \

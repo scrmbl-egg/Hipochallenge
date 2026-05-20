@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:ability/class/support/kit3/on_evil_eye_used"
+        "function": "hc:ability/support/kit3/on_evil_eye_used"
     }
 }

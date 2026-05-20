@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:ability/class/marksman/kit1/on_smoke_arrow_crossbow_shot"
+        "function": "hc:ability/marksman/kit1/on_smoke_arrow_crossbow_shot"
     }
 }

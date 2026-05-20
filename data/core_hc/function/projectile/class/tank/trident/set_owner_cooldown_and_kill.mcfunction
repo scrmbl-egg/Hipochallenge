@@ -23,7 +23,7 @@ execute on origin \
         predicate=hc:trigger/is_projectile_cooldown_disabled \
     ] \
     run \
-    function hc:ability/class/tank/kit2/give_trident
+    function hc:ability/tank/kit2/give_trident
 
 # show vanish fx
 function core_hc:fx/projectile/class/tank/trident/vanish

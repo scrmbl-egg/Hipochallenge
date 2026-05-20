@@ -10,14 +10,14 @@ execute as @a[scores={hc.BowShot=1..}] \
         minecraft:custom_data~{"hc:item/id":"marksman_k1_bow"} \
     ] \
     run \
-    function hc:ability/class/marksman/kit1/on_bow_shot
+    function hc:ability/marksman/kit1/on_bow_shot
 
 # arrows
 execute as @a[ \
     scores={hc.MarksmanKit1NewProjectileCooldown=0} \
 ] \
     run \
-    function hc:ability/class/marksman/kit1/give_projectile_and_set_cooldown
+    function hc:ability/marksman/kit1/give_projectile_and_set_cooldown
 
 ## kit 2
 
@@ -26,7 +26,7 @@ execute as @a[ \
     scores={hc.MarksmanKit2NewProjectileCooldown=0} \
 ] \
     run \
-    function hc:ability/class/marksman/kit2/give_projectile_and_set_cooldown
+    function hc:ability/marksman/kit2/give_projectile_and_set_cooldown
 
 ## kit 3
 
@@ -35,4 +35,4 @@ execute as @a[ \
     scores={hc.MarksmanKit3NewProjectileCooldown=0} \
 ] \
     run \
-    function hc:ability/class/marksman/kit3/give_projectile_and_set_cooldown
+    function hc:ability/marksman/kit3/give_projectile_and_set_cooldown

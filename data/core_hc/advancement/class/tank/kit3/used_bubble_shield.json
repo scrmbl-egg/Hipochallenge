@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:ability/class/tank/kit3/on_bubble_shield_used"
+        "function": "hc:ability/tank/kit3/on_bubble_shield_used"
     }
 }

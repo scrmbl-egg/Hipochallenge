@@ -14,6 +14,6 @@
         }
     },
     "rewards": {
-        "function": "hc:ability/class/support/kit1/on_gravity_well_placed"
+        "function": "hc:ability/support/kit1/on_gravity_well_placed"
     }
 }
