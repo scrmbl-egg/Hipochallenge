@@ -11,8 +11,8 @@
                 "fallback": "List Triggers"
             },
             "action":{
-                "type":"minecraft:run_command",
-                "command":"trigger list"
+                "type": "minecraft:run_command",
+                "command": "trigger list"
             },
             "width": 280,
             "tooltip": [
@@ -43,11 +43,11 @@
     ],
     "after_action": "none",
     "pause": false,
-    "can_close_with_escape":true,
+    "can_close_with_escape": true,
     "exit_action": {
         "label": {
-            "translate":"gui.back",
-            "fallback":"Back"
+            "translate": "gui.back",
+            "fallback": "Back"
         }
     }
 }
