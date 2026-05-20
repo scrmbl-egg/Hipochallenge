@@ -84,7 +84,6 @@ data modify storage hc:temp select_perk.perk_text \
     merge from storage hc:temp select_perk.perk_text_style
 
 # send msg
-tellraw @a {storage:"hc:temp",nbt:"select_perk"}
 execute if predicate hc:team/is_in_match_pvp_team \
     run \
     function hc:msg/team/send \
