@@ -7,16 +7,9 @@
 #   owner_uuid: #[uuid] int[] @ 4
 #       UUID of the owner of the spirit(s) to kill.
 
-$execute \
-    as @e[ \
+$execute as @e[ \
     type=minecraft:allay, \
-    nbt={ \
-        data:{ \
-            "hc:entity/spirit":{ \
-                owner_uuid:$(owner_uuid), \
-                }, \
-            }, \
-        } \
-    ] \
+    nbt={data:{"hc:entity/spirit":{owner_uuid:$(owner_uuid)}} \
+] \
     run \
     function std:entity/kill_self_and_passengers
