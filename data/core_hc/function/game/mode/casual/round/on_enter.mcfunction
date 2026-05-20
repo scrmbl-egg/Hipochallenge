@@ -36,3 +36,4 @@ bossbar set hc:casual/round name { \
     ], \
 }
 bossbar set hc:casual/round visible true
+# TODO: add translation for round bossbar

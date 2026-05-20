@@ -8,9 +8,13 @@ scoreboard objectives add __hc.Casual dummy
 # TODO: remove this line at some point
 scoreboard objectives setdisplay sidebar __hc.Casual
 
-## STORE MODE VARIABLES
+## MODE VARIABLES
 # ticks per second
 scoreboard players set hc:tps __hc.Casual 20
+
+# team won rounds
+scoreboard players set hc:team1_wins __hc.Casual 0
+scoreboard players set hc:team2_wins __hc.Casual 0
 
 # current round
 scoreboard players set hc:round __hc.Casual 0
