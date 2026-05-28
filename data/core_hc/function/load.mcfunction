@@ -2,16 +2,16 @@
 #
 # Datapack entry point function.
 
-# create local scoreboard for initialisation errors
+# create local score objectives for initialisation errors and keeping reload
+# count
 scoreboard objectives add __hc.InitError dummy
-
-# temp score for increasing reload count
 scoreboard objectives add __hc.ReloadCount dummy
 
+# init all errors as
 scoreboard players set hc:init_consts __hc.InitError 0
-scoreboard players set hc:init_scores __hc.InitError 0
-scoreboard players set hc:init_teams __hc.InitError 0
-scoreboard players set hc:init_gamerules __hc.InitError 0
+scoreboard players set hc:add_score_objectives __hc.InitError 0
+scoreboard players set hc:add_teams __hc.InitError 0
+scoreboard players set hc:set_gamerules __hc.InitError 0
 
 # loading message
 tellraw @a [ \
@@ -45,7 +45,7 @@ execute if score hc:init_consts __hc.InitError matches 0 \
 execute if data storage hc:main vars \
     run \
     function hc:msg/debug/send_info { \
-        text:"\"Datapack variables already initialised...\"", \
+        text:"\"Datapack global variables already initialised. Skipping initialization...\"", \
     }
 
 execute unless data storage hc:main vars \
@@ -65,12 +65,12 @@ execute if score hc:init_vars __hc.InitError matches 0 \
 
 
 ## SCORE OBJETIVES
-execute store result score hc:init_scores __hc.InitError \
+execute store result score hc:add_score_objectives __hc.InitError \
     run \
-    function core_hc:score/init_all
+    function core_hc:score/add_all_objectives
 
 # error msg
-execute if score hc:init_scores __hc.InitError matches 0 \
+execute if score hc:add_score_objectives __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -82,7 +82,7 @@ execute if score hc:init_scores __hc.InitError matches 0 \
 ## TRIGGERS (SCORE TRIGGER TYPES)
 execute store result score hc:init_triggers __hc.InitError \
     run \
-    function core_hc:trigger/init_all
+    function core_hc:trigger/add_all
 
 # error msg
 execute if score hc:init_triggers __hc.InitError matches 0 \
@@ -95,12 +95,12 @@ execute if score hc:init_triggers __hc.InitError matches 0 \
     }
 
 ## TEAMS
-execute store result score hc:init_teams __hc.InitError \
+execute store result score hc:add_teams __hc.InitError \
     run \
-    function core_hc:team/init_all
+    function core_hc:team/add_all
 
 # error msg
-execute if score hc:init_teams __hc.InitError matches 0 \
+execute if score hc:add_teams __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
@@ -110,12 +110,12 @@ execute if score hc:init_teams __hc.InitError matches 0 \
     }
 
 ## GAMERULES
-execute store result score hc:init_gamerules __hc.InitError \
+execute store result score hc:set_gamerules __hc.InitError \
     run \
-    function core_hc:gamerule/init_all
+    function core_hc:gamerule/set_all
 
 # error msg
-execute if score hc:init_gamerules __hc.InitError matches 0 \
+execute if score hc:set_gamerules __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \

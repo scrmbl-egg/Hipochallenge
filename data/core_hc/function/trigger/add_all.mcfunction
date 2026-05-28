@@ -1,4 +1,4 @@
-#>core_hc:trigger/init_all
+#>core_hc:trigger/add_all
 #
 # Initialises all trigger scores in the datapack.
 #

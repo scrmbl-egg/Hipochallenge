@@ -1,11 +1,11 @@
-#>core_hc:team/init_all
+#>core_hc:team/add_all
 #
-# Initialises the teams in the minigame.
+# Adds all the teams in the minigame.
 #
 # @returns
-#   Result: 1 if all teams are initialised
+#   Result: 1 if all teams are added
 
-function hc:msg/debug/send_info {text:"\"Initialising teams...\""}
+function hc:msg/debug/send_info {text:"\"Adding teams...\""}
 
 ## PLAYER TEAMS
 

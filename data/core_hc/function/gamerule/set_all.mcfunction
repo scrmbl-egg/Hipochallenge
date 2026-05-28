@@ -1,6 +1,6 @@
-#>core_hc:gamerule/init_all
+#>core_hc:gamerule/set_all
 #
-# Initialises all gamerules in the minigame.
+# Sets all gamerules in the minigame.
 #
 # @returns
 #   Result: 1 if all gamerules are properly set.
