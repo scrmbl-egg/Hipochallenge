@@ -7,13 +7,13 @@ scoreboard objectives remove list
 
 ## PLAZA / LOBBY
 scoreboard objectives remove info
-scoreboard objectives remove warp_tutorial
-scoreboard objectives remove warp_training
-scoreboard objectives remove warp_training_cnduit
-scoreboard objectives remove warp_training_froggy
-scoreboard objectives remove warp_training_sacrif
-scoreboard objectives remove warp_training_fctory
-scoreboard objectives remove warp_training_derail
+scoreboard objectives remove tp_tutorial
+scoreboard objectives remove tp_training
+scoreboard objectives remove tp_training_cnduit
+scoreboard objectives remove tp_training_froggy
+scoreboard objectives remove tp_training_sacrif
+scoreboard objectives remove tp_training_fctory
+scoreboard objectives remove tp_training_derail
 
 ## MATCH REQUEST
 scoreboard objectives remove request
