@@ -226,6 +226,10 @@ type Kit = (
         assassin_k1_data: struct {
             /// Parry related information.
             parry: struct {
+                /// Max amount of ticks the player is allowed to hold the block
+                /// button before a hit is no longer registered as a parry.
+                window_duration_ticks: int @ 1..,
+
                 /// Modifiers applied to the owner when the parry fails.
                 on_owner_when_fail: struct {
                     /// Modifiers that are going to be applied.

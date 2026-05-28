@@ -586,6 +586,7 @@ data modify storage hc:main consts.classes append value { \
             data_type:"assassin_k1_data", \
             assassin_k1_data:{ \
                 parry:{ \
+                    window_duration_ticks:10, \
                     on_owner_when_success:{ \
                         modifiers:[], \
                     }, \
