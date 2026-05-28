@@ -6,10 +6,9 @@
 # @context player
 
 ## NOTE:
-# i don't like this approach, but there is really no better alternative.
-#
-# what happens is, if an item with the "hc:item/replace_with" component is
-# found, what is done
+# This only works in the HOTBAR. This component was specifically made for
+# cooldown items that we don't want to disappear when consumed. The remainer
+# item introduces the component we're going to be looking for
 
 data modify storage hc:temp replace_items set value { \
     func_args:{ \
