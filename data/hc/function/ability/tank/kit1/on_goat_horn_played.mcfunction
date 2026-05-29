@@ -4,6 +4,10 @@
 #
 # @context player
 
+# TODO: we should probably just use the `minecraft:consumable` component
+# instead of using the `clear` command. Horns were the first items to be
+# implemented and it shows.
+
 # revoke detection advancement
 advancement revoke @s \
     only core_hc:class/tank/kit1/used_goat_horn
@@ -26,7 +30,7 @@ function hc:msg/debug/send_info { \
 
 # no cooldown, item must be deleted due to it being a goat horn
 # score: tank_kit1_goat_horn_cd
-clear @s *[custom_data={"hc:item/id":"tank_k1_goat_horn"}] 1
+clear @s *[minecraft:custom_data={"hc:item/id":"hc:tank/kit1/goat_horn"}] 1
 
 data modify storage hc:temp tank_k1_goat_horn set value { \
     team:"", \

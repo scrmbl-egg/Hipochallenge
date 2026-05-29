@@ -60,7 +60,7 @@
                                 ],
                                 "minecraft:item_model": "minecraft:armor_stand",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "tank_k1_castle"
+                                    "hc:item/id": "hc:tank/kit1/castle"
                                 },
                                 "minecraft:rarity": "uncommon",
                                 "minecraft:consumable": {
@@ -72,7 +72,7 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 20.0,
-                                    "cooldown_group": "hc:tank_k1_castle"
+                                    "cooldown_group": "hc:tank/kit1/castle"
                                 },
                                 "minecraft:use_remainder": {
                                     "id": "minecraft:armor_stand",

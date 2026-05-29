@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "tank_k1_castle"
+                            "hc:item/id": "hc:tank/kit1/castle"
                         }
                     }
                 }

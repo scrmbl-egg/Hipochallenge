@@ -15,7 +15,7 @@
                                     "fallback": "Triton's Horn"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "tank_k2_goat_horn"
+                                    "hc:item/id": "hc:tank/kit2/goat_horn"
                                 },
                                 "minecraft:rarity": "epic",
                                 "minecraft:instrument": "minecraft:sing_goat_horn"

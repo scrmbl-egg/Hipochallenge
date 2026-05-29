@@ -33,7 +33,7 @@ execute as @e[ \
     nbt={ \
         item:{ \
             components:{ \
-                "minecraft:custom_data":{"hc:item/id":"tank_k2_trident"}, \
+                "minecraft:custom_data":{"hc:item/id":"hc:tank/kit2/trident"}, \
             }, \
         }, \
     } \

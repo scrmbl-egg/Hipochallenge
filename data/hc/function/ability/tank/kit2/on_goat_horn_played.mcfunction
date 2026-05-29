@@ -24,7 +24,7 @@ function hc:msg/debug/send_info {text:"\"used kit2 horn\""}
 
 # no cooldown, item must be deleted due to it being a goat horn
 # score: tank_kit2_goat_horn_cd
-clear @s *[custom_data={"hc:item/id":"tank_k2_goat_horn"}] 1
+clear @s *[minecraft:custom_data={"hc:item/id":"hc:tank/kit2/goat_horn"}] 1
 
 # TODO: give slowness to enemies at the start, a single time
 
@@ -36,7 +36,3 @@ execute store result score @s hc.TankKit2GoatHornRecoveryTicks \
     data get storage hc:main consts.\
     classes[{internal_name:"hc:tank"}].\
     kits[{id:2}].tank_k2_data.horn.recovery_ticks
-
-# handle cooldown
-# TODO: deprecate
-#function hc:ability/cooldown/handle_item_cd {item_id:tank_k2_goat_horn,cd_item_modifier:"hc:weapons/class/tank/kit2/goat_horn_cd",cd_score:tank_kit2_goat_horn_cd,cd_const:TANK_K2_HORN_CD_TICKS}

@@ -15,7 +15,7 @@
                                     "fallback": "Bubble Shield"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "tank_k3_bubble_shield"
+                                    "hc:item/id": "hc:tank/kit3/bubble_shield"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
