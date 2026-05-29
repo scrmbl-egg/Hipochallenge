@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "marksman_k1_smoke_arrow_crossbow"
+                            "hc:item/id": "hc:marksman/kit1/smoke_arrow_crossbow"
                         }
                     }
                 }

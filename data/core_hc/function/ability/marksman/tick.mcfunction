@@ -7,7 +7,7 @@
 # bow (shot bow detection must be done here since there is no advancement)
 execute as @a[scores={hc.BowShot=1..}] \
     if items entity @s weapon.* *[ \
-        minecraft:custom_data~{"hc:item/id":"marksman_k1_bow"} \
+        minecraft:custom_data~{"hc:item/id":"hc:marksman/kit1/bow"} \
     ] \
     run \
     function hc:ability/marksman/kit1/on_bow_shot

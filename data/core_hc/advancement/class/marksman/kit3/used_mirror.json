@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "marksman_k3_mirror"
+                            "hc:item/id": "hc:marksman/kit3/mirror"
                         }
                     }
                 }

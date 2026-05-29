@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:wooden_hoe",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "marksman_k2_sickle"
+                                    "hc:item/id": "hc:marksman/kit2/sickle"
                                 },
                                 "minecraft:unbreakable": {},
                                 "minecraft:tooltip_display": {

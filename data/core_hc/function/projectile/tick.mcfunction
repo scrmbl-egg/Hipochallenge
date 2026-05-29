@@ -54,7 +54,7 @@ execute as @e[ \
         weapon:{ \
             components:{ \
                 "minecraft:custom_data":{ \
-                    "hc:item/id":"marksman_k2_crossbow", \
+                    "hc:item/id":"hc:marksman/kit2/crossbow", \
                 }, \
             }, \
         }, \

@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:flint",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "marksman_k2_slowness_trap"
+                                    "hc:item/id": "hc:marksman/kit2/slowness_trap"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "brush",

@@ -40,9 +40,7 @@ scoreboard players operation \
 # get current amount of arrows
 execute store result score hc:bullets __hc.NewProjectile \
     run \
-    clear @s *[ \
-        minecraft:custom_data~{"hc:item/id":"marksman_k3_bullet"} \
-    ] 0
+    clear @s *[minecraft:custom_data~{"hc:item/id":"hc:marksman/kit3/bullet"}] 0
 
 # give new (smaller) cooldown if player can have more arrows
 execute if score \
