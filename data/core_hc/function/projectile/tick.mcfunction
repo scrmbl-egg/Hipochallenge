@@ -88,7 +88,7 @@ function #extension_hc:projectile/tick
 execute as @e[ \
     type=#hc:game_projectiles, \
     tag=hc.Projectile, \
-    scores={hc.LifeTimer=..1} \
+    scores={hc.LifeTimer=..0} \
 ] \
     at @s \
     run \
