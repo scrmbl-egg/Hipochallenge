@@ -6,6 +6,7 @@
 
 # kit 2
 scoreboard objectives add hc.TankKit2TridentCooldown dummy
+scoreboard objectives add hc.TankKit2GoatHornRecoveryTicks dummy
 
 # kit 3
 

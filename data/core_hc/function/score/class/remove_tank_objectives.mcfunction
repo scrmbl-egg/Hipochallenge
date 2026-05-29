@@ -6,6 +6,7 @@
 
 # kit 2
 scoreboard objectives remove hc.TankKit2TridentCooldown
+scoreboard objectives remove hc.TankKit2GoatHornRecoveryTicks
 
 # kit 3
 
