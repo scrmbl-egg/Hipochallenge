@@ -12,7 +12,8 @@
                             "components": {
                                 "minecraft:item_name": {
                                     "translate": "hc.item.training_menu.name",
-                                    "fallback": "Training Menu"
+                                    "fallback": "Training Menu",
+                                    "color": "#98bdc2"
                                 },
                                 "minecraft:lore": [
                                     {

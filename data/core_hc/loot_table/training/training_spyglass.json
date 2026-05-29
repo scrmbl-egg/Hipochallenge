@@ -10,6 +10,11 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
+                                "minecraft:item_name": {
+                                    "translate": "item.minecraft.spyglass",
+                                    "fallback": "Spyglass",
+                                    "color": "#98bdc2"
+                                },
                                 "minecraft:lore": [
                                     {
                                         "translate": "hc.key_hint",
