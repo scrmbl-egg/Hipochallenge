@@ -1,10 +1,10 @@
 {
     "values": [
-        "core_hc:score/class/add_tank_scores",
-        "core_hc:score/class/add_marksman_scores",
-        "core_hc:score/class/add_assassin_scores",
-        "core_hc:score/class/add_support_scores",
-        "core_hc:score/class/add_recon_scores",
-        "core_hc:score/class/add_assault_scores"
+        "core_hc:score/class/add_tank_objectives",
+        "core_hc:score/class/add_marksman_objectives",
+        "core_hc:score/class/add_assassin_objectives",
+        "core_hc:score/class/add_support_objectives",
+        "core_hc:score/class/add_recon_objectives",
+        "core_hc:score/class/add_assault_objectives"
     ]
 }
