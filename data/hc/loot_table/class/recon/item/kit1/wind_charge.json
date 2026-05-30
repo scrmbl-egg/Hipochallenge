@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "recon_k1_wind_charge"
+                                    "hc:item/id": "hc:recon/kit1/wind_charge"
                                 }
                             }
                         }

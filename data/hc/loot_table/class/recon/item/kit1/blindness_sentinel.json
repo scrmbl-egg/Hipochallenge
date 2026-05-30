@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:anvil",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "recon_k1_blindness_sentinel"
+                                    "hc:item/id": "hc:recon/kit3/blindness_sentinel"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",

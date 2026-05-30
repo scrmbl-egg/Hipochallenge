@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:jack_o_lantern",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "recon_k3_deception_effigy"
+                                    "hc:item/id": "hc:recon/kit3/deception_effigy"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",

@@ -16,7 +16,7 @@
                                     "italic": false
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "recon_k2_potion"
+                                    "hc:item/id": "hc:recon/kit2/potion"
                                 },
                                 "minecraft:potion_contents": {
                                     "custom_color": 2028000,

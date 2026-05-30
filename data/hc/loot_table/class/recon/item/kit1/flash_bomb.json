@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:glowstone_dust",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "recon_k1_flash_bomb"
+                                    "hc:item/id": "hc:recon/kit1/flash_bomb"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",

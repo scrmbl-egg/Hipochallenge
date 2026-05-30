@@ -15,7 +15,7 @@
                                     "fallback": "Flare Arrow"
                                 },
                                 "minecraft:custom_data": {
-                                   "hc:item/id": "recon_k2_flare_arrow"
+                                   "hc:item/id": "hc:recon/kit2/flare_arrow"
                                 }
                             }
                         }

@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:eye_armor_trim_smithing_template",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "recon_k1_low_visibility_area"
+                                    "hc:item/id": "hc:recon/kit1/low_visibility_area"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",

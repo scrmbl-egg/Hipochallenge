@@ -71,7 +71,7 @@ execute as @e[ \
         weapon:{ \
             components:{ \
                 "minecraft:custom_data":{ \
-                    "hc:item/id":"recon_k2_flare_arrow_crossbow", \
+                    "hc:item/id":"hc:recon/kit2/flare_arrow_crossbow", \
                 }, \
             }, \
         }, \

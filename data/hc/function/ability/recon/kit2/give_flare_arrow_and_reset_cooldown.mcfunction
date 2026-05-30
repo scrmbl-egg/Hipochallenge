@@ -27,15 +27,17 @@ execute store result score hc:max __hc.NewFlareArrow \
 execute store result score hc:f_arrows __hc.NewFlareArrow \
     run \
     clear @s *[ \
-        minecraft:custom_data~{"hc:item/id":"recon_k2_flare_arrow"} \
+        minecraft:custom_data~{"hc:item/id":"hc:recon/kit2/flare_arrow"} \
     ] 0
 execute if items entity @s container.* *[ \
-    minecraft:custom_data~{"hc:item/id":"recon_k2_flare_arrow_crossbow"}, \
+    minecraft:custom_data~{"hc:item/id":"hc:recon/kit2/flare_arrow_crossbow"}, \
     minecraft:charged_projectiles=[ \
         { \
             id:"minecraft:spectral_arrow", \
             components:{ \
-                "minecraft:custom_data":{"hc:item/id":"recon_k2_flare_arrow"}, \
+                "minecraft:custom_data":{ \
+                    "hc:item/id":"hc:recon/kit2/flare_arrow", \
+                }, \
             }, \
         }, \
     ] \
