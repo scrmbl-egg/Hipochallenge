@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:snowball",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "support_k1_snow_sentinel"
+                                    "hc:item/id": "hc:support/kit1/snow_sentinel"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "eat",
