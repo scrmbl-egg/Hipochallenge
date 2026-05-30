@@ -592,8 +592,8 @@ data modify storage hc:main consts.classes append value { \
                     }, \
                     on_owner_when_fail:{ \
                         modifiers:[ \
-                            {id:"hc:assassin_k1_owner_failed_parry_entity_interaction_range",attribute:"minecraft:entity_interaction_range",value:-3,operation:"add_value"}, \
-                            {id:"hc:assassin_k1_owner_failed_parry_attack_speed",attribute:"minecraft:attack_speed",value:-1.1,operation:"add_value"}, \
+                            {id:"hc:assassin/kit1/owner_failed_parry/entity_interaction_range",attribute:"minecraft:entity_interaction_range",value:-3,operation:"add_value"}, \
+                            {id:"hc:assassin/kit1/owner_failed_parry/attack_speed",attribute:"minecraft:attack_speed",value:-1.1,operation:"add_value"}, \
                         ], \
                     }, \
                     on_enemy_when_parried:{ \

@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "assassin_k3_magic_feather"
+                            "hc:item/id": "hc:assassin/kit3/magic_feather"
                         }
                     }
                 }

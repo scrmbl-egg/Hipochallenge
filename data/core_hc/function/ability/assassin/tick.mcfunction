@@ -49,7 +49,7 @@ execute as @a[scores={hc.AssassinKit1ParryWindowRemainingTicks=0}] \
 # clear amulet when hit with it in hand
 execute as @a[predicate=hc:entity/was_just_damaged] \
     if items entity @s weapon.* *[ \
-        minecraft:custom_data~{"hc:item/id":"assassin_k1_crystal_amulet"} \
+        minecraft:custom_data~{"hc:item/id":"hc:assassin/kit1/crystal_amulet"} \
     ] \
     run \
     function core_hc:ability/assassin/kit1/clear_crystal_amulet

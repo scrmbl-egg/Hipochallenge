@@ -13,8 +13,8 @@ scoreboard players set @s hc.AssassinKit1BlockRemainingTicks -1
 # modify item
 # TODO: this should maybe be data-driven
 function hc:util/item/modify_with_id { \
-    id:"assassin_k1_duelist_sword", \
-    modifier:"hc:item/class/assassin/kit1/disabled_duelist_sword", \
+    id:"hc:assassin/kit1/sword", \
+    modifier:"hc:item/class/assassin/kit1/sword/disabled", \
 }
 
 # fx

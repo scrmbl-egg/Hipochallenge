@@ -5,7 +5,9 @@
 # @context player
 
 # clear item
-clear @s *[minecraft:custom_data~{"hc:item/id":"assassin_k1_crystal_amulet"}] 1
+clear @s *[ \
+    minecraft:custom_data~{"hc:item/id":"hc:assassin/kit1/crystal_amulet"} \
+] 1
 
 # play fx
 execute at @s \

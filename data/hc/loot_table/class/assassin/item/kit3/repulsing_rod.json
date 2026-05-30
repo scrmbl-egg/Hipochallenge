@@ -15,7 +15,7 @@
                                     "fallback": "Repulsing Rod"
                                 },
                                 "minecraft:custom_data":{
-                                    "hc:item/id": "assassin_k3_repulsing_rod"
+                                    "hc:item/id": "hc:assassin/kit3/repulsing_rod"
                                 }
                             }
                         }

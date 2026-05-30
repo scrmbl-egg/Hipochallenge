@@ -15,7 +15,7 @@
                                     "fallback": "Magic Feather"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "assassin_k3_magic_feather"
+                                    "hc:item/id": "hc:assassin/kit3/magic_feather"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
@@ -26,7 +26,7 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 11,
-                                    "cooldown_group": "hc:assassin_k3_magic_feather"
+                                    "cooldown_group": "hc:assassin/kit3/magic_feather"
                                 },
                                 "minecraft:use_remainder": {
                                     "id": "minecraft:feather"

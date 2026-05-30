@@ -15,7 +15,7 @@
                                     "fallback": "Stun Mechanism"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "assassin_k2_stun_mechanism"
+                                    "hc:item/id": "hc:assassin/kit2/stun_mechanism"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
@@ -26,7 +26,7 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 16,
-                                    "cooldown_group": "hc:assassin_k2_stun_mechanism"
+                                    "cooldown_group": "hc:assassin/kit2/stun_mechanism"
                                 }
                             }
                         }

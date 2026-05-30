@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:reference",
-                            "name": "hc:item/class/assassin/kit1/duelist_sword"
+                            "name": "hc:item/class/assassin/kit1/sword"
                         }
                     ]
                 }

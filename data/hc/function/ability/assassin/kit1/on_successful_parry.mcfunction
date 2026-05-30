@@ -20,6 +20,6 @@ execute on attacker \
 
 # TODO: maybe this should be data driven.
 function hc:util/item/modify_with_id { \
-    id:"assassin_k1_duelist_sword", \
-    modifier:"hc:item/class/assassin/kit1/enhanced_duelist_sword", \
+    id:"hc:assassin/kit1/sword", \
+    modifier:"hc:item/class/assassin/kit1/sword/enhanced", \
 }
