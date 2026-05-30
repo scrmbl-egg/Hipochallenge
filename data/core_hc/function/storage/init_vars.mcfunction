@@ -1,9 +1,9 @@
 #>core_hc:storage/init_vars
 #
-# Initialises all global variables in the datapack.
+# Initializes all global variables in the datapack.
 #
 # @returns
-#   Result: 1 if all variables are initialised
+#   Result: 1 if all variables are initialized
 
 ## WARNING:
 # Unsafe function!
@@ -25,7 +25,7 @@
 # indicator of a value staying null.
 
 function hc:msg/debug/send_info { \
-    text:"\"Initialising datapack global variables...\"", \
+    text:"\"Initializing datapack global variables...\"", \
 }
 
 # reload_count is the only variable that must be kept, save temporarily

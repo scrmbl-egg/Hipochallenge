@@ -10,7 +10,7 @@ execute if score @s npc_kill_all matches 0 \
     run \
     scoreboard players enable @s npc_kill_all
 
-# don't run anything if it's 0 or uninitialised
+# don't run anything if it's 0 or uninitialized
 execute unless predicate { \
     condition:"minecraft:any_of", \
     terms:[ \

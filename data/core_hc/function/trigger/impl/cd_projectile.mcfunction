@@ -10,7 +10,7 @@ execute if score @s cd_projectile matches 0 \
     run \
     scoreboard players enable @s cd_projectile
 
-# don't run anything if it's 0 or uninitialised
+# don't run anything if it's 0 or uninitialized
 execute unless predicate { \
     condition:"minecraft:any_of", \
     terms:[ \

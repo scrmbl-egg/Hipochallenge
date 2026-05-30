@@ -1,6 +1,6 @@
 #>core_hc:game/match/request/display/init
 #
-# Initialises the match request display.
+# initializes the match request display.
 #
 # @context requesting player
 

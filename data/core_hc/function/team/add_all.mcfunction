@@ -27,14 +27,14 @@ team modify hc.Admins prefix [ \
     "] " \
 ]
 
-# team 1 (name is not initialised, as it can be changed)
+# team 1 (name is not initialized, as it can be changed)
 team add hc.Team1
 team modify hc.Team1 collisionRule always
 team modify hc.Team1 friendlyFire false
 team modify hc.Team1 nametagVisibility hideForOtherTeams
 team modify hc.Team1 seeFriendlyInvisibles true
 
-# team 2 (name is not initialised, as it can be changed)
+# team 2 (name is not initialized, as it can be changed)
 team add hc.Team2
 team modify hc.Team2 collisionRule always
 team modify hc.Team2 friendlyFire false

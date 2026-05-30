@@ -1,9 +1,9 @@
 #>core_hc:trigger/add_all
 #
-# Initialises all trigger scores in the datapack.
+# Initializes all trigger scores in the datapack.
 #
 # @returns
-#   Result: 1 if all triggers are initialised.
+#   Result: 1 if all triggers are initialized.
 
 ## NOTE:
 # - Triggers don't have the "hc." prefix. This is so that they can be typed with

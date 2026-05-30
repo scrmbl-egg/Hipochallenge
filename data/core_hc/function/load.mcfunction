@@ -2,7 +2,7 @@
 #
 # Datapack entry point function.
 
-# create local score objectives for initialisation errors and keeping reload
+# create local score objectives for initialization errors and keeping reload
 # count
 scoreboard objectives add __hc.InitError dummy
 scoreboard objectives add __hc.ReloadCount dummy
@@ -35,17 +35,17 @@ execute if score hc:init_consts __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
-            translate:"hc.msg.all.error.consts_not_initialised", \
-            fallback:"The datapack constants couldn't be initialised. Contact a developer if you see this message", \
+            translate:"hc.msg.all.error.consts_not_initialized", \
+            fallback:"The datapack constants couldn't be initialized. Contact a developer if you see this message", \
         }, \
     }
 
 ## STORAGE VARIABLES
-# skip step if already initialised
+# skip step if already initialized
 execute if data storage hc:main vars \
     run \
     function hc:msg/debug/send_info { \
-        text:"\"Datapack global variables already initialised. Skipping initialization...\"", \
+        text:"\"Datapack global variables already initialized. Skipping initialization...\"", \
     }
 
 execute unless data storage hc:main vars \
@@ -58,8 +58,8 @@ execute if score hc:init_vars __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
-            translate:"hc.msg.all.error.vars_not_initialised", \
-            fallback:"The datapack global variables couldn't be initialised. Contact a developer if you see this message", \
+            translate:"hc.msg.all.error.vars_not_initialized", \
+            fallback:"The datapack global variables couldn't be initialized. Contact a developer if you see this message", \
         }, \
     }
 
@@ -74,8 +74,8 @@ execute if score hc:add_score_objectives __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
-            translate:"hc.msg.all.error.scores_not_initialised", \
-            fallback:"The datapack score objectives couldn't be initialised. Contact a developer if you see this message", \
+            translate:"hc.msg.all.error.scores_not_initialized", \
+            fallback:"The datapack score objectives couldn't be initialized. Contact a developer if you see this message", \
         }, \
     }
 
@@ -89,8 +89,8 @@ execute if score hc:init_triggers __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
-            translate:"hc.msg.all.error.triggers_not_initialised", \
-            fallback:"The datapack triggers couldn't be initialised. Contact a developer if you see this message", \
+            translate:"hc.msg.all.error.triggers_not_initialized", \
+            fallback:"The datapack triggers couldn't be initialized. Contact a developer if you see this message", \
         }, \
     }
 
@@ -104,8 +104,8 @@ execute if score hc:add_teams __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
-            translate:"hc.msg.all.error.teams_not_initialised", \
-            fallback:"The datapack teams couldn't be initialised. Contact a developer if you see this message", \
+            translate:"hc.msg.all.error.teams_not_initialized", \
+            fallback:"The datapack teams couldn't be initialized. Contact a developer if you see this message", \
         }, \
     }
 
@@ -119,8 +119,8 @@ execute if score hc:set_gamerules __hc.InitError matches 0 \
     run \
     function hc:msg/all/send_error { \
         text:{ \
-            translate:"hc.msg.all.error.gamerules_not_initialised", \
-            fallback:"The datapack gamerules couldn't be initialised. Contact a developer if you see this message", \
+            translate:"hc.msg.all.error.gamerules_not_initialized", \
+            fallback:"The datapack gamerules couldn't be initialized. Contact a developer if you see this message", \
         }, \
     }
 

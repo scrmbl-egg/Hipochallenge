@@ -5,7 +5,7 @@
 # want to change properties of the game.
 #
 # @returns
-#   Result: 1 if all constants are initialised
+#   Result: 1 if all constants are initialized
 
 # TODO: those objects that have "internal_name" as an identifier, should use the
 # word "key" instead.
@@ -14,7 +14,7 @@
 # TODO: Complete the list of constants
 
 function hc:msg/debug/send_info { \
-    text:"\"Initialising datapack constants...\"", \
+    text:"\"Initializing datapack constants...\"", \
 }
 
 # reset

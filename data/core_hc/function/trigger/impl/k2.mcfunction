@@ -10,7 +10,7 @@ execute if score @s k2 matches 0 \
     run \
     scoreboard players enable @s k2
 
-# don't run anything if it's 0 or uninitialised
+# don't run anything if it's 0 or uninitialized
 execute unless predicate { \
     condition:"minecraft:any_of", \
     terms:[ \
