@@ -15,7 +15,7 @@
                                     "fallback": "Pushing Projectile"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "assault_k3_pushing_projectile"
+                                    "hc:item/id": "hc:assault/kit3/pushing_projectile"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
@@ -26,7 +26,7 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 8.0,
-                                    "cooldown_group": "hc:assault_k3_pushing_projectile"
+                                    "cooldown_group": "hc:assault/kit3/pushing_projectile"
                                 },
                                 "minecraft:use_remainder": {
                                     "id": "minecraft:paper",

@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "assault_k3_spear"
+                                    "hc:item/id": "hc:assault/kit3/spear"
                                 },
                                 "minecraft:unbreakable": {},
                                 "minecraft:tooltip_display": {

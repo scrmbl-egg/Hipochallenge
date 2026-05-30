@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "assault_k3_pushing_projectile"
+                            "hc:item/id": "hc:assault/kit3/pushing_projectile"
                         }
                     }
                 }

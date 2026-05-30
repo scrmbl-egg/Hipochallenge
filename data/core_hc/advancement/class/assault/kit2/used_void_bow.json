@@ -6,7 +6,7 @@
                 "item": {
                     "predicates": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "assault_k2_void_bow"
+                            "hc:item/id": "hc:assault/kit2/void_bow"
                         }
                     }
                 }
