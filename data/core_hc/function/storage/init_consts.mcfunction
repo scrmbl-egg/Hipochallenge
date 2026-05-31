@@ -20,8 +20,11 @@ function hc:msg/debug/send_info { \
 # reset
 data remove storage hc:main consts
 
-## MAP VERSION
-data modify storage hc:main consts.map_version set value "Pre-Alpha"
+## MAP CONSTANTS
+data modify storage hc:main consts.map set value { \
+    name:"HIPOCHALLENGE - Phoenix", \
+    version:"Pre-Alpha", \
+}
 
 ## GAME CONSTANTS
 data modify storage hc:main consts.game set value { \

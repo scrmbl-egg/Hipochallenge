@@ -162,7 +162,7 @@ tellraw @a [ \
     { \
         translate:"hc.reload_message.version", \
         fallback:"Version: %s", \
-        with:[{storage:"hc:main",nbt:"consts.map_version",color:"green"}], \
+        with:[{storage:"hc:main",nbt:"consts.map.version",color:"green"}], \
     }, \
     "\n- ", \
     { \

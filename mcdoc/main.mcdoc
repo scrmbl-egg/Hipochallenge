@@ -13,8 +13,14 @@ dispatch minecraft:storage[hc:main] to MainStorage
 struct MainStorage {
     /// Global constants of the datapack.
     consts: struct MainConsts {
-        /// Version of the map.
-        map_version: string,
+        /// Information regarding the map that contains the minigame.
+        map: struct MapConsts {
+            /// Name of the map/minigame.
+            name: string,
+
+            /// Version of the map.
+            version: string,
+        },
 
         /// Game related constants.
         game: struct GameConstants {
