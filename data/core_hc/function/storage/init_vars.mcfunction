@@ -41,15 +41,15 @@ data modify storage hc:main vars.reload_count \
 
 
 ## GAME CONTEXT
+# match requested
+data remove storage hc:main vars.game_context.match_requested
+
 # mode
 function hc:game/mode/select {internal_name:"hc:casual"}
 
 # level
 data modify storage hc:main vars.game_context.level \
     set from storage hc:main consts.levels[{internal_name:"hc:subdec"}]
-
-# users_playing
-data modify storage hc:main vars.game_context.users_playing set value 0
 
 
 ## TEAM CONTEXTS

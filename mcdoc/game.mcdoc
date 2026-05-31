@@ -6,7 +6,7 @@ use super::level::Level
 /// Game context/global variables struct.
 struct GameContext {
     /// Flag that indicates whether a match is being currently requested.
-    match_requested: struct {},
+    match_requested?: struct {},
 
     /// Current game mode's data.
     mode: struct GameModeContext {
@@ -21,9 +21,6 @@ struct GameContext {
 
     /// Current level's data.
     level: Level,
-
-    /// Amount of players playing the game, doesn't count spectators.
-    users_playing: int @ 0..,
 }
 
 /// Game mode struct.
