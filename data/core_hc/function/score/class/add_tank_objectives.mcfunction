@@ -28,6 +28,12 @@ execute as @a \
     scoreboard players set @s hc.TankKit2TridentCooldown -1
 execute as @a \
     unless entity @s[scores={ \
+        hc.TankKit2GoatHornRecoveryTicks=-2147483648..2147483647 \
+    }] \
+    run \
+    scoreboard players set @s hc.TankKit2GoatHornRecoveryTicks -1
+execute as @a \
+    unless entity @s[scores={ \
         hc.TankPerk1NutritiousMealCooldown=-2147483648..2147483647 \
     }] \
     run \
