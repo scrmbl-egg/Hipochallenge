@@ -49,12 +49,12 @@
                                     },
                                     "",
                                     {
-                                        "translate": "hc.item.generic_lore.finite_cooldown",
-                                        "fallback": "Cooldown: %s seconds",
-                                        "color": "yellow",
+                                        "translate": "hc.item.generic_lore.cooldown",
+                                        "fallback": "Cooldown: %s",
+                                        "color": "dark_green",
                                         "italic": false,
                                         "with": [
-                                            "20"
+                                            "00:20"
                                         ]
                                     }
                                 ],
