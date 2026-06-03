@@ -16,7 +16,8 @@
                                 "minecraft:unbreakable": {},
                                 "minecraft:tooltip_display": {
                                     "hidden_components": [
-                                        "minecraft:unbreakable"
+                                        "minecraft:unbreakable",
+                                        "minecraft:attribute_modifiers"
                                     ]
                                 }
                             }
