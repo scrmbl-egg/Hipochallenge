@@ -1,4 +1,4 @@
-#>hc:equipment/equip_armor
+#>hc:equipment/equip_class_armor
 #
 # Equips armor to the player depending on the player's class.
 #
@@ -9,6 +9,11 @@ execute unless predicate hc:team/is_in_pvp_team \
     run \
     return run \
     function hc:msg/private/send_error/not_in_team_with_armor
+
+execute unless predicate hc:class/has_selected \
+    run \
+    return run \
+    function hc:msg/private/send_error/not_all_options_selected
 
 # clear armor items
 item replace entity @s armor.head with minecraft:air 1

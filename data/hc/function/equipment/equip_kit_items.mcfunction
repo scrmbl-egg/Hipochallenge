@@ -1,8 +1,6 @@
-#>hc:equipment/equip_items
+#>hc:equipment/equip_kit_items
 #
-# Equips the items of a class depending on the kit and perk.
-
-# TODO: add support for custom perk behaviour and item equipping
+# Equips the items of the currently selected kit.
 
 # all options selected guard clause
 execute unless predicate hc:util/has_all_options_selected \
@@ -23,15 +21,6 @@ function hc:kit/get_data_field { \
 }
 function core_hc:equipment/item/loot_items \
     with storage hc:temp equip_items.loot_items_args
-
-# get perk equip command and run
-function hc:perk/get_data_field { \
-    field:"on_equip_command", \
-    out_storage:"hc:temp", \
-    out_nbt:"equip_items.run_command_args", \
-}
-function std:command/run \
-    with storage hc:temp equip_items.run_command_args
 
 # show fx
 function core_hc:fx/equipment/equip_items

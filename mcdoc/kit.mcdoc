@@ -59,8 +59,10 @@ type Kit = (
             horn: struct {
                 /// Radius of the effects.
                 radius: double @ 0..,
+
                 /// Effects that will be given to enemies.
                 effects_info: AbilityEffects,
+
                 /// Amount of ticks that define the time frame the owner can
                 /// recover their ability if the enemies are out of range.
                 recovery_ticks: int @ 0..,

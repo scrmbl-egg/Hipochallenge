@@ -11,8 +11,15 @@ struct PerkBase {
     /// Translated text for the perk name.
     name: TranslatedText,
 
-    /// Command for equipping the perk.
-    on_equip_command: #[command(max_length=32500)] string,
+    /// **(Nullable)**
+    /// Function called when the player equips the perk. This can be used for
+    /// setting up resources, scores... etc.
+    ///
+    /// ### Note
+    /// This function is called regardless of if the player is in a match team
+    /// or in training, so any special cases should be handled in the function
+    /// itself.
+    on_equip_function?: #[id="function"] string,
 
     /// Type of data this perk holds. This is used to identify the union
     /// variant of the perk data.

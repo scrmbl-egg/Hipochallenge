@@ -15,5 +15,6 @@ execute as @s \
 function hc:equipment/clear
 
 # equip stuff
-function hc:equipment/equip_armor
-function hc:equipment/equip_items
+function hc:equipment/equip_class_armor
+function hc:equipment/equip_kit_items
+function hc:equipment/equip_perk
