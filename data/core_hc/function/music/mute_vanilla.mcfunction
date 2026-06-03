@@ -4,6 +4,12 @@
 # This allows for custom tracks to play in the channel, while not allowing the
 # game to play its tracks through random chance.
 
+# FIXME: This works most of the time, however, there are small moments where
+# you can hear the first sample (or samples) of the coming track. While this is
+# a small thing that just happens once in a month at worst, it may be good to
+# make sure the resource pack overrides the music lookups for the game, leaving
+# them empty so the game can't access them.
+
 stopsound @a music minecraft:music.game
 stopsound @a music minecraft:music.creative
 stopsound @a music minecraft:music.menu
