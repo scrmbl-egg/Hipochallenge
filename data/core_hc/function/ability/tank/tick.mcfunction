@@ -3,7 +3,6 @@
 # Tick function for the tank class abilities.
 
 ## kit 1
-# castle
 # goat horn targets
 execute as @a \
     at @s \
