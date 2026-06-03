@@ -10,7 +10,13 @@
         },
         "description": {
             "translate": "hc.advancement.combat.assassin.kit1.successful_parry.root.description",
-            "fallback": "Successfully parry an attack with the Duelist's Sword"
+            "fallback": "Successfully parry an attack with the %s",
+            "with": [
+                {
+                    "translate": "hc.item.assassin.kit1.duelist_sword.name",
+                    "fallback": "Duelist's Sword"
+                }
+            ]
         },
         "frame": "challenge",
         "show_toast": true,
