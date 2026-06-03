@@ -1,4 +1,4 @@
-#>core_hc:score/class/add_support_objectives
+#>core_hc:score/class/support/add_objectives
 #
 # Adds all score objectives for the support class.
 

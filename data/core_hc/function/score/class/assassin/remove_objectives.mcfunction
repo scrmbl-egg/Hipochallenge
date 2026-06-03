@@ -1,6 +1,6 @@
-#>core_hc:score/class/remove_assassin_objectives
+#>core_hc:score/class/assassin/remove_objectives
 #
-# Removes all score objectives for the tank class.
+# Removes all score objectives for the assassin class.
 
 # kit 1
 scoreboard objectives remove hc.AssassinKit1BlockRemainingTicks

@@ -1,4 +1,4 @@
-#>core_hc:score/class/add_assault_objectives
+#>core_hc:score/class/assault/add_objectives
 #
 # Adds all score objectives for the assault class.
 
@@ -16,4 +16,3 @@
 
 ## INIT
 # (-1 is default state)
-

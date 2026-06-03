@@ -1,4 +1,4 @@
-#>core_hc:score/class/remove_recon_objectives
+#>core_hc:score/class/recon/remove_objectives
 #
 # Removes all score objectives for the recon class.
 

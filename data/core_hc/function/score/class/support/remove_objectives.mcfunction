@@ -1,4 +1,4 @@
-#>core_hc:score/class/remove_support_objectives
+#>core_hc:score/class/support/remove_objectives
 #
 # Removes all score objectives for the support class.
 

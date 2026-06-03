@@ -1,4 +1,4 @@
-#>core_hc:score/class/timer/tick_assassin
+#>core_hc:score/class/assassin/tick_timers
 #
 # Ticks all assassin timer score objectives.
 

@@ -1,6 +1,6 @@
-#>core_hc:score/class/add_assassin_objectives
+#>core_hc:score/class/assassin/add_objectives
 #
-# Adds all score objectives for the tank class.
+# Adds all score objectives for the assassin class.
 
 # kit 1
 scoreboard objectives add hc.AssassinKit1BlockRemainingTicks dummy

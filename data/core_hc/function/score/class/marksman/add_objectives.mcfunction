@@ -1,6 +1,6 @@
-#>core_hc:score/class/add_marksman_objectives
+#>core_hc:score/class/marksman/add_objectives
 #
-# Adds and initializes all score objectives for the markman class.
+# Adds all score objectives for the marksman class.
 
 # kit 1
 scoreboard objectives add hc.MarksmanKit1NewProjectileCooldown dummy

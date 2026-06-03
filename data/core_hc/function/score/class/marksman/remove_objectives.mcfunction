@@ -1,4 +1,4 @@
-#>core_hc:score/class/remove_marksman_objectives
+#>core_hc:score/class/marksman/remove_objectives
 #
 # Removes all score objectives for the marksman class.
 
@@ -16,4 +16,3 @@ scoreboard objectives remove hc.MarksmanKit3NewProjectileCooldown
 # perk 2
 
 # perk 3
-

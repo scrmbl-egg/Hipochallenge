@@ -22,7 +22,7 @@ execute as @a[scores={hc.SuppressionTimer=0..}] \
     scoreboard players remove @s hc.SuppressionTimer 1
 
 # tick class timers
-function #core_hc:score/timer/tick_classes
+function #core_hc:score/tick_class_timers
 
 # tick extension timers
-function #extension_hc:score/timer/tick
+function #extension_hc:score/tick_timers

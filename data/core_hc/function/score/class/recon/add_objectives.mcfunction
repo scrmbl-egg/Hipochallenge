@@ -1,4 +1,4 @@
-#>core_hc:score/class/add_recon_objectives
+#>core_hc:score/class/recon/add_objectives
 #
 # Adds all score objectives for the recon class.
 
@@ -16,7 +16,7 @@ scoreboard objectives add hc.ReconKit2FlareArrowCooldown dummy
 # perk 3
 
 ## INIT
-# (-1 is the default state)
+# (-1 is default state)
 
 execute as @a \
     unless entity @s[scores={ \

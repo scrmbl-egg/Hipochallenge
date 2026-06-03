@@ -1,4 +1,4 @@
-#>core_hc:score/class/timer/tick_support
+#>core_hc:score/class/support/tick_timers
 #
 # Ticks all support timer score objectives.
 

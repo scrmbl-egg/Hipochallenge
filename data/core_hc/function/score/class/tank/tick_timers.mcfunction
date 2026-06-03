@@ -1,4 +1,4 @@
-#>core_hc:score/class/timer/tick_tank
+#>core_hc:score/class/tank/tick_timers
 #
 # Ticks all tank timer score objectives.
 
@@ -8,6 +8,9 @@
 execute as @a[scores={hc.TankKit2TridentCooldown=0..}] \
     run \
     scoreboard players remove @s hc.TankKit2TridentCooldown 1
+execute as @a[scores={hc.TankKit2GoatHornRecoveryTicks=0..}] \
+    run \
+    scoreboard players remove @s hc.TankKit2GoatHornRecoveryTicks 1
 
 # kit 3
 

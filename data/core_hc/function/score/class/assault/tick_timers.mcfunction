@@ -1,4 +1,4 @@
-#>core_hc:score/class/timer/tick_assault
+#>core_hc:score/class/assault/tick_timers
 #
 # Ticks all assault timer score objectives.
 

@@ -1,4 +1,4 @@
-#>core_hc:score/class/remove_tank_objectives
+#>core_hc:score/class/tank/remove_objectives
 #
 # Removes all score objectives for the tank class.
 
@@ -16,3 +16,4 @@ scoreboard objectives remove hc.TankPerk1NutritiousMealCooldown
 # perk 2
 
 # perk 3
+

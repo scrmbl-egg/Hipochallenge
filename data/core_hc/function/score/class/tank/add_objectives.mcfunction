@@ -1,4 +1,4 @@
-#>core_hc:score/class/add_tank_objectives
+#>core_hc:score/class/tank/add_objectives
 #
 # Adds all score objectives for the tank class.
 

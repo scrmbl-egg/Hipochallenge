@@ -1,4 +1,4 @@
-#>core_hc:score/class/timer/tick_marksman
+#>core_hc:score/class/marksman/tick_timers
 #
 # Ticks all marksman timer score objectives.
 

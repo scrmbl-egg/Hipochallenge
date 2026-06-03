@@ -1,4 +1,4 @@
-#>core_hc:score/class/timer/tick_recon
+#>core_hc:score/class/recon/tick_timers
 #
 # Ticks all recon timer score objectives.
 
@@ -8,8 +8,6 @@
 execute as @a[scores={hc.ReconKit2FlareArrowCooldown=0..}] \
     run \
     scoreboard players remove @s hc.ReconKit2FlareArrowCooldown 1
-
-# kit 3
 
 # perk 1
 
