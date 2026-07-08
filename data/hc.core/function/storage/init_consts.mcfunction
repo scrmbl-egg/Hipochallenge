@@ -1008,7 +1008,7 @@ data modify storage hc:main consts.levels append value { \
 
 
 ## EXTENSION CONSTANTS SETUP
-function #extension_hc:storage/init_consts
+function #hc.extension:storage/init_consts
 
 
 ## POST-SETUP CALCULATIONS

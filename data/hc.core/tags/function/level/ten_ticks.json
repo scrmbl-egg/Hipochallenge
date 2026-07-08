@@ -1,6 +1,6 @@
 {
     "values": [
 
-        "#extension_hc:level/ten_ticks"
+        "#hc.extension:level/ten_ticks"
     ]
 }

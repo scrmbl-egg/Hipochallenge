@@ -25,4 +25,4 @@ execute as @a[scores={hc.SuppressionTimer=0..}] \
 function #hc.core:score/tick_class_timers
 
 # tick extension timers
-function #extension_hc:score/tick_timers
+function #hc.extension:score/tick_timers

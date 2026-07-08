@@ -106,7 +106,7 @@ scoreboard objectives setdisplay list hc.ListInfo
 scoreboard objectives setdisplay below_name hc.Health
 
 ## ADD EXTENSION SCORES
-function #extension_hc:score/add_objectives
+function #hc.extension:score/add_objectives
 
 ## __ KEEP AT BOTTOM OF FILE __
 # return 1 for success

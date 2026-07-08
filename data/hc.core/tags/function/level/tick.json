@@ -1,6 +1,6 @@
 {
     "values": [
 
-        "#extension_hc:level/tick"
+        "#hc.extension:level/tick"
     ]
 }

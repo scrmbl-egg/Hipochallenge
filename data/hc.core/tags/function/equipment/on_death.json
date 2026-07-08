@@ -2,6 +2,6 @@
     "values": [
         "hc:ability/tank/kit3/spirit/kill",
 
-        "#extension_hc:equipment/on_death"
+        "#hc.extension:equipment/on_death"
     ]
 }

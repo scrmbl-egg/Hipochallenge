@@ -7,6 +7,6 @@
         "hc.core:score/class/recon/reset_to_default",
         "hc.core:score/class/assault/reset_to_default",
 
-        "#extension_hc:score/reset_class_scores_to_default_values"
+        "#hc.extension:score/reset_class_scores_to_default_values"
     ]
 }

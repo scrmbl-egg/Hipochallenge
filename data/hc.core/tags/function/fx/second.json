@@ -1,6 +1,6 @@
 {
     "values": [
 
-        "#extension_hc:fx/second"
+        "#hc.extension:fx/second"
     ]
 }

@@ -1,6 +1,6 @@
 {
     "values": [
 
-        "#extension_hc:fx/ten_ticks"
+        "#hc.extension:fx/ten_ticks"
     ]
 }

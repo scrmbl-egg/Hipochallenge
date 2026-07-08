@@ -41,4 +41,4 @@ scoreboard objectives remove hc.BowShot
 function #hc.core:score/remove_class_objectives
 
 # EXTENSION OBJECTIVES
-function #extension_hc:score/remove_objectives
+function #hc.extension:score/remove_objectives

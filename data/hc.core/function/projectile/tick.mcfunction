@@ -81,7 +81,7 @@ execute as @e[ \
     function hc.core:projectile/class/recon/flare_arrow/tick
 
 # call tick function for any custom projectile implementation
-function #extension_hc:projectile/tick
+function #hc.extension:projectile/tick
 
 ## __ KEEP AT BOTTOM OF FILE __
 # clean all projectiles that have no lifetime left

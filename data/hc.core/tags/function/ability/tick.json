@@ -7,6 +7,6 @@
         "hc.core:ability/recon/tick",
         "hc.core:ability/assault/tick",
 
-        "#extension_hc:ability/tick"
+        "#hc.extension:ability/tick"
     ]
 }
