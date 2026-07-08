@@ -1,13 +1,4 @@
-use super::aabb::AabbCastCenteredParameters
-// HACK: This `use` statement would be an absolute path rather than relative
-// with the `super` keyword to clarify that this type comes from mc_std, but
-// Spyglass is weird and doesn't properly recognize it. What's worse is that the
-// absolute path didn't give me a warning on Windows, but it does on my Linux?
-// May have to do with how Spyglass caches symbols, and how resetting the cache
-// doesn't seem to properly work.
-//
-// I don't know, let's keep it with the `super` keyword for now and make sure
-// no other mcdoc directory or module is called "aabb".
+use ::std::aabb::AabbCastCenteredParameters
 
 
 dispatch mcdoc:custom_data[hc:entity/item/no_pickup] to ItemNoPickup
