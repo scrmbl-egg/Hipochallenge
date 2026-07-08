@@ -14,4 +14,4 @@ function hc:msg/debug/send_info { \
 }
 
 # reset all ability scores
-function core_hc:score/reset_all_class_scores
+function hc.core:score/reset_all_class_scores

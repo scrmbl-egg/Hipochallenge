@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {
+                            "hc:item/id": "hc:assassin/kit2/stun_mechanism"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hc:ability/assassin/kit2/on_stun_mechanism_triggered"
+    }
+}

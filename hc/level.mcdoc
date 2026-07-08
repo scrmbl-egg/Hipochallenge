@@ -1,0 +1,57 @@
+use ::java::util::text::TranslatedText
+use super::game::GameModePresetBase
+
+
+/// Level information struct.
+struct Level {
+    /// Numeric ID of the level.
+    id: LevelId,
+
+    /// Internal name of the level.
+    internal_name: (
+        #[canonical] LevelInternalName |
+        #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
+    ),
+
+    /// Translated text for the level name.
+    name: TranslatedText,
+}
+
+
+/// Enum for level numeric IDs.
+enum(int) LevelId {
+    /// Numeric ID for the Conduit level.
+    Conduits = 0,
+
+    /// Numeric ID for the Froggyland level.
+    FroggyLand = 1,
+
+    /// Numeric ID for the Sepulchral level.
+    Sacrifice = 2,
+
+    /// Numeric ID for the Villager Factory level.
+    VillagerFactory = 3,
+
+    /// Numeric ID for the Derailed level.
+    Derailed = 4,
+}
+
+
+/// Enum for level internal names. These are shortened names so they match
+/// their `trigger lv_*` commands.
+enum(string) LevelInternalName {
+    /// Internal name for the Conduit level.
+    Conduits = "hc:cnduit",
+
+    /// Internal name for the Froggyland level.
+    FroggyLand = "hc:froggy",
+
+    /// Internal name for the Sepulchral level.
+    Sacrifice = "hc:sacrif",
+
+    /// Internal name for the Villager Factory level.
+    VillagerFactory = "hc:fctory",
+
+    /// Internal name for the Derailed level.
+    Derailed = "hc:derail",
+}

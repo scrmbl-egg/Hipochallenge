@@ -9,28 +9,19 @@
 #       Text component that will be printed.
 
 $tellraw @a[team=$(team)] [ \
+    "", \
     { \
-        text:"", \
+        text:">> ", \
+        color:"yellow", \
+        bold:true, \
         hover_event:{ \
             action:"show_text",\
             value:[ \
                 "", \
-                { \
-                    bold:true, \
-                    color:"yellow", \
-                    text:">> ", \
-                }, \
-                { \
-                    translate:"hc.msg.team", \
-                    fallback:"Team message", \
-                }, \
+                {text:">> ",bold:true,color:"yellow"}, \
+                {translate:"hc.msg.team",fallback:"Team message"}, \
             ], \
         }, \
-    }, \
-    { \
-        bold:true, \
-        color:"yellow", \
-        text:">> " \
     }, \
     $(text), \
 ]

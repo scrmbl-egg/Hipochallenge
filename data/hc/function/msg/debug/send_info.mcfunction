@@ -7,47 +7,23 @@
 #       Text component that will be printed.
 
 $tellraw @a[tag=hc.Debug] [ \
+    {text:"",color:"gray",italic:true}, \
     { \
-        text:"", \
-        color:"gray", \
-        italic:true, \
+        text:">> ", \
+        color:"green", \
+        italic:false, \
+        bold:true, \
         hover_event:{ \
             action:"show_text",\
             value:[ \
                 "", \
-                { \
-                    bold:true, \
-                    color:"green", \
-                    text:">> ", \
-                }, \
-                { \
-                    translate:"hc.msg.debug", \
-                    fallback:"Debug", \
-                }, \
+                {text:">> ",bold:true,color:"green"}, \
+                {translate:"hc.msg.debug",fallback:"Debug"}, \
             ], \
         }, \
     }, \
-    { \
-        bold:true, \
-        italic:false, \
-        color:"green", \
-        text:">> ", \
-    }, \
-    { \
-        bold:true, \
-        italic:false, \
-        text:"[", \
-    }, \
-    { \
-        bold:true, \
-        italic:false, \
-        translate:"hc.msg.info", \
-        fallback:"INFO", \
-    }, \
-    { \
-        bold:true, \
-        italic:false, \
-        text:"] ", \
-    }, \
+    {text:"[",bold:true,italic:false}, \
+    {translate:"hc.msg.info",fallback:"INFO",bold:true,italic:false}, \
+    {text:"] ",bold:true,italic:false}, \
     $(text), \
 ]

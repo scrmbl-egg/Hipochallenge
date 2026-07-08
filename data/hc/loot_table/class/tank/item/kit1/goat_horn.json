@@ -11,14 +11,188 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:item_name": {
-                                    "translate": "hc.items.tank.kit1.goat_horn",
+                                    "translate": "hc.item.tank.kit1.goat_horn.name",
                                     "fallback": "Guardian's Horn"
                                 },
+                                "minecraft:lore": [
+                                    {
+                                        "translate": "hc.item.tank.kit1.goat_horn.lore.0",
+                                        "fallback": "Gives %1$s to the user and their",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "potion.withDuration",
+                                                        "color": "blue",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.absorption"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "00:03"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/absorption"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "text": "7",
+                                                "color": "aqua"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "translate": "hc.item.tank.kit1.goat_horn.lore.1",
+                                        "fallback": "allies in a %2$s block radius.",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "potion.withDuration",
+                                                        "color": "blue",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.absorption"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "00:03"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/absorption"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "text": "7",
+                                                "color": "aqua"
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.item.generic_lore.note",
+                                        "fallback": "- %s",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.ability_detail",
+                                                "fallback": "%1$s \u2192 %2$s",
+                                                "color": "gray",
+                                                "with": [
+                                                    {
+                                                        "translate": "hc.item.generic_lore.effect_with_icon",
+                                                        "fallback": "%2$s %1$s",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "color": "blue",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.absorption"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "atlas": "minecraft:gui",
+                                                                "sprite": "minecraft:mob_effect/absorption"
+                                                            }
+                                                        ]
+                                                    },
+                                                    [
+                                                        {
+                                                            "atlas": "minecraft:gui",
+                                                            "sprite": "minecraft:hud/heart/absorbing_full",
+                                                            "color": "white"
+                                                        },
+                                                        {
+                                                            "atlas": "minecraft:gui",
+                                                            "sprite": "minecraft:hud/heart/absorbing_full",
+                                                            "color": "white"
+                                                        },
+                                                        {
+                                                            "atlas": "minecraft:gui",
+                                                            "sprite": "minecraft:hud/heart/absorbing_full",
+                                                            "color": "white"
+                                                        },
+                                                        {
+                                                            "atlas": "minecraft:gui",
+                                                            "sprite": "minecraft:hud/heart/absorbing_full",
+                                                            "color": "white"
+                                                        }
+                                                    ]
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.key_hint",
+                                        "fallback": "[%s]: %s",
+                                        "color": "gold",
+                                        "bold": true,
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "keybind": "key.use"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.play",
+                                                "fallback": "Play",
+                                                "color": "gray",
+                                                "italic": false,
+                                                "bold": false
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.item.generic_lore.single_use",
+                                        "fallback": "Single use",
+                                        "color": "dark_green",
+                                        "italic": false
+                                    }
+                                ],
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "tank_k1_goat_horn"
+                                    "hc:item/id": "hc:tank/kit1/goat_horn"
                                 },
                                 "minecraft:rarity": "epic",
-                                "minecraft:instrument": "minecraft:ponder_goat_horn"
+                                "minecraft:instrument": "minecraft:ponder_goat_horn",
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:instrument"
+                                    ]
+                                }
                             }
                         }
                     ]

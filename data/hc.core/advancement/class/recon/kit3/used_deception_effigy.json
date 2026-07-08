@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {
+                            "hc:item/id": "hc:recon/kit3/deception_effigy"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hc:ability/recon/kit3/on_deception_effigy_placed"
+    }
+}

@@ -3,7 +3,7 @@
     "value": {
         "type": "minecraft:storage",
         "storage": "hc:main",
-        "path": "vars.team_contexts.team2.preset.id"
+        "path": "vars.team_contexts.team2.color_preset.id"
     },
     "range": 2
 }

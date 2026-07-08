@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {
+                            "hc:item/id": "hc:assault/kit2/void_bow"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hc:ability/assault/kit2/on_void_bow_shot"
+    }
+}

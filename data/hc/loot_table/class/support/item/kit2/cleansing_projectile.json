@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:slime_ball",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "support_k2_cleansing_projectile"
+                                    "hc:item/id": "hc:support/kit2/cleansing_projectile"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
@@ -27,7 +27,7 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 15,
-                                    "cooldown_group": "hc:support_k2_cleansing_projectile"
+                                    "cooldown_group": "hc:support/kit2/cleansing_projectile"
                                 }
                             }
                         },
@@ -51,7 +51,7 @@
                             "components": {
                                 "minecraft:use_cooldown": {
                                     "seconds": 11.25,
-                                    "cooldown_group": "hc:support_k2_cleansing_projectile"
+                                    "cooldown_group": "hc:support/kit2/cleansing_projectile"
                                 }
                             }
                         }

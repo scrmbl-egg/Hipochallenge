@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {
+                            "hc:item/id": "hc:assault/kit1/ticking_bomb"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hc:ability/assault/kit1/on_ticking_bomb_thrown"
+    }
+}

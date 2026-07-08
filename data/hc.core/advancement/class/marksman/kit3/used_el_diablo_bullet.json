@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {
+                            "hc:item/id": "hc:marksman/kit3/el_diablo_bullet"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "hc:ability/marksman/kit3/on_el_diablo_bullet_used"
+    }
+}

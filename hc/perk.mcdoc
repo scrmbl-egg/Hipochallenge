@@ -1,0 +1,282 @@
+use ::java::util::text::TranslatedText
+use super::effect::AbilityEffects
+use super::attribute::AttributeModifierCommmandParameters as AttributeModifier
+
+
+/// Base struct for perks.
+struct PerkBase {
+    /// ID of the perk.
+    id: int @ 1..3,
+
+    /// Translated text for the perk name.
+    name: TranslatedText,
+
+    /// **(Nullable)**
+    /// Function called when the player equips the perk. This can be used for
+    /// setting up resources, scores... etc.
+    ///
+    /// ### Note
+    /// This function is called regardless of if the player is in a match team
+    /// or in training, so any special cases should be handled in the function
+    /// itself.
+    on_equip_function?: #[id="function"] string,
+
+    /// Type of data this perk holds. This is used to identify the union
+    /// variant of the perk data.
+    data_type: string,
+}
+
+
+/// Union type that encapsulates all perk types.
+type Perk = (
+    struct TankPerk1 {
+        id: 1,
+        data_type: "tank_p1_data",
+
+        /// Tank's perk 1 variant data.
+        tank_p1_data: struct {
+            /// Nutritious meal related data.
+            nutritious_meal: struct {
+                /// Amount of ticks the food item takes appear in the player's
+                /// inventory.
+                give_delay_ticks: int @ 1..,
+            },
+        },
+
+        ...PerkBase,
+    } |
+    struct TankPerk2 {
+        id: 2,
+        data_type: "tank_p2_data",
+
+        /// Tank's perk 2 variant data.
+        tank_p2_data: struct {
+            /// Attack related data.
+            attack: struct {
+                /// Effects given to the enemy attacked by the player.
+                effects_info: AbilityEffects,
+            },
+        },
+
+        ...PerkBase,
+    } |
+    struct TankPerk3 {
+        id: 3,
+        data_type: "tank_p3_data",
+
+        /// Tank's perk 3 variant data.
+        tank_p3_data: struct {
+            /// Data related to the buff given to close-by allies.
+            close_ally_buff: struct {
+                /// Radius in which
+                radius: double @ 0..,
+
+                /// Attributes, whose values will be divided into the amount of
+                /// players in the radius.
+                attributes: [AttributeModifier],
+            },
+        },
+
+        ...PerkBase,
+    } |
+    struct MarksmanPerk1 {
+        id: 1,
+        data_type: "marksman_p1_data",
+
+        /// Marksman's perk 1 variant data.
+        marksman_p1_data: struct {
+            /// Magic/true damage done when the damaged enemy is suppressed or
+            /// in the air.
+            suppression_or_on_air_magic_damage: int @ 0..,
+        },
+
+        ...PerkBase,
+    } |
+    struct MarksmanPerk2 {
+        id: 2,
+        data_type: "marksman_p2_data",
+
+        /// Marksman's perk 2 variant data.
+        marksman_p2_data: struct {
+            /// Value the player's health must reach to activate the perk.
+            health_threshold: int @ 1..20,
+            /// Effects given to the player when the threshold is reached.
+            effects_info: AbilityEffects,
+        },
+
+        ...PerkBase,
+    } |
+    struct MarksmanPerk3 {
+        id: 3,
+        data_type: "marksman_p3_data",
+
+        /// Marksman's perk 3 variant data.
+        marksman_p3_data: struct {
+            /// Amount of extra projectiles given to the player.
+            added_projectiles: int @ 1..,
+        },
+
+        ...PerkBase,
+    } |
+    struct AssassinPerk1 {
+        id: 1,
+        data_type: "assassin_p1_data",
+
+        /// Assassin's perk 1 variant data.
+        assassin_p1_data: struct {
+            /// Effects given to the player when they succeed the contract.
+            contract_success_effects_info: AbilityEffects,
+        },
+
+        ...PerkBase,
+    } |
+    struct AssassinPerk2 {
+        id: 2,
+        data_type: "assassin_p2_data",
+
+        /// Assassin's perk 2 variant data.
+        assassin_p2_data: struct {
+            /// Health threshold (ignoring absorption) the enemy must be below
+            /// to be prematurely killed.
+            enemy_true_health_threshold: int @ 1..,
+        },
+
+        ...PerkBase,
+    } |
+    struct AssassinPerk3 {
+        id: 3,
+        data_type: "assassin_p3_data",
+
+        /// Assassin's perk 3 variant data.
+        assassin_p3_data: struct {
+            /// Armor toughness value set to the enemy when the owner/player
+            /// hits them.
+            on_hit_by_owner_armor_toughness: int @ 0..,
+        },
+
+        ...PerkBase,
+    } |
+    struct SupportPerk1 {
+        id: 1,
+        data_type: "support_p1_data",
+
+        /// Support's perk 1 variant data.
+        support_p1_data: struct {},
+
+        ...PerkBase,
+    } |
+    struct SupportPerk2 {
+        id: 2,
+        data_type: "support_p2_data",
+
+        /// Support's perk 2 variant data.
+        support_p2_data: struct {
+            /// Data related to the explosion
+            on_hit_explosion: struct {
+                /// Amount of ticks until the effect explosion appears after
+                /// the player takes damage.
+                delay_ticks: int @ 1..,
+
+                /// Radius of the effect explosion.
+                radius: double @ 0..,
+
+                /// Effects given to the enemies when the explosion occurs.
+                effects_info: AbilityEffects,
+            },
+        },
+
+        ...PerkBase,
+    } |
+    struct SupportPerk3 {
+        id: 3,
+        data_type: "support_p3_data",
+
+        /// Support's perk 3 variant data.
+        support_p3_data: struct {
+            /// Extra radius given to the abilties which
+            extra_area_ability_radius: double @ 0..,
+        },
+
+        ...PerkBase,
+    } |
+    struct ReconPerk1 {
+        id: 1,
+        data_type: "recon_p1_data",
+
+        /// Recon's perk 1 variant data.
+        recon_p1_data: struct {
+            /// Maximum duration of the glowing effect in ticks.
+            glowing_max_duration_ticks: int @ 1..,
+        },
+
+        ...PerkBase,
+    } |
+    struct ReconPerk2 {
+        id: 2,
+        data_type: "recon_p2_data",
+
+        /// Recon's perk 2 variant data.
+        recon_p2_data: struct {
+            /// Effects given to the player when they hit a glowing enemy.
+            on_glowing_enemy_hit_effects_info: AbilityEffects,
+        },
+
+        ...PerkBase,
+    } |
+    struct ReconPerk3 {
+        id: 3,
+        data_type: "recon_p3_data",
+
+        /// Recon's perk 3 variant data.
+        recon_p3_data: struct {
+            /// Amount of ticks the traces that enemy players leave live for.
+            enemy_trace_lifetime_ticks: int @ 1..,
+        },
+
+        ...PerkBase,
+    } |
+    struct AssaultPerk1 {
+        id: 1,
+        data_type: "assault_p1_data",
+
+        /// Assault's perk 1 variant data.
+        assault_p1_data: struct {
+            /// Radius of the explosion that disables other surrounding traps
+            /// when one is disabled.
+            trap_disabling_explosion_radius: double @ 0..,
+        },
+
+        ...PerkBase,
+    } |
+    struct AssaultPerk2 {
+        id: 2,
+        data_type: "assault_p2_data",
+
+        /// Assault's perk 2 variant data.
+        assault_p2_data: struct {
+            /// Data related to the attributes of the enemy when the player
+            /// successfully crowd-controls them via the class's abilities.
+            on_enemy_crowd_controlled: struct {
+                /// Duration of the attributes given.
+                duration_ticks: int @ 1..,
+
+                /// Attributes given to the player.
+                attributes: [AttributeModifier],
+            },
+        },
+
+        ...PerkBase,
+    } |
+    struct AssaultPerk3 {
+        id: 3,
+        data_type: "assault_p3_data",
+
+        /// Assault's perk 3 variant data.
+        assault_p3_data: struct {
+            /// Effects given when the player directly looks at an enemy.
+            on_looking_at_enemy_effects_info: AbilityEffects,
+        },
+
+        ...PerkBase,
+    } |
+)

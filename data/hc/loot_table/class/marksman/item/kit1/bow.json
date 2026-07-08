@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "marksman_k1_bow"
+                                    "hc:item/id": "hc:marksman/kit1/bow"
                                 },
                                 "minecraft:custom_model_data": {},
                                 "minecraft:rarity": "uncommon",

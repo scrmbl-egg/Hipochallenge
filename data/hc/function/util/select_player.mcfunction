@@ -35,14 +35,14 @@ function hc:team/get_enemy_team { \
 ## tag all potential targets within range
 execute as @s at @s \
     run \
-    function core_hc:util/select_player/tag_potential_targets \
+    function hc.core:util/select_player/tag_potential_targets \
     with storage hc:temp select_player
 # targets tag: __hc.SelectPlayerPossibleTarget
 
 ## execute command on potential target that is on line of sight
 execute as @a[tag=__hc.SelectPlayerPossibleTarget] \
     run \
-    function core_hc:util/select_player/check_owner_line_of_sight \
+    function hc.core:util/select_player/check_owner_line_of_sight \
     with storage hc:temp select_player
 
 # remove target tags

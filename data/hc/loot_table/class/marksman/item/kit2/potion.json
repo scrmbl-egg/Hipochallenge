@@ -16,7 +16,7 @@
                                     "italic": false
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "marksman_k2_potion"
+                                    "hc:item/id": "hc:marksman/kit2/potion"
                                 },
                                 "minecraft:potion_contents": {
                                     "custom_color": 7531330,

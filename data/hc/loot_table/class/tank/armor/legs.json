@@ -13,7 +13,7 @@
                                     "hc:item/armor/apply_team_trim_material": {}
                                 },
                                 "minecraft:trim": {
-                                    "material": "minecraft:quartz",
+                                    "material": "minecraft:iron",
                                     "pattern": "minecraft:vex"
                                 }
                             }

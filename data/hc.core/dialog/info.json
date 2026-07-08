@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:notice",
+    "title": {
+        "translate": "hc.trigger.info.dialog.title",
+        "fallback": "Information"
+    },
+    "body": {
+        "type": "minecraft:plain_message",
+        "width": 400,
+        "contents": [
+            {
+                "translate": "hc.trigger.info.dialog.body",
+                "fallback": "[[NOT TRANSLATED!]] args: %1$s",
+                "with": [
+                    "Hipochallenge: Phoenix"
+                ]
+            }
+        ]
+    },
+    "can_close_with_escape": true,
+    "pause": true
+}

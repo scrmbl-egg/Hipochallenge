@@ -6,12 +6,12 @@
             "min": {
                 "type": "minecraft:storage",
                 "storage": "hc:main",
-                "path": "consts.classes[{internal_name:\"assassin\"}].id"
+                "path": "consts.classes[{internal_name:\"hc:assassin\"}].id"
             },
             "max": {
                 "type": "minecraft:storage",
                 "storage": "hc:main",
-                "path": "consts.classes[{internal_name:\"assassin\"}].id"
+                "path": "consts.classes[{internal_name:\"hc:assassin\"}].id"
             }
         }
     }

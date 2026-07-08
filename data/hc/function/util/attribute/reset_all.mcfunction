@@ -6,18 +6,22 @@
 # @context player
 
 # heal player
-effect give @s minecraft:instant_health \
-    1 100 true
+effect give @s minecraft:instant_health 1 100 true
+
+# TODO: check JE 26.2 attributes
 
 # reset attributes
+#attribute @s minecraft:air_drag_modifier base reset (JE 26.2)
 attribute @s minecraft:armor base reset
 attribute @s minecraft:armor_toughness base reset
 attribute @s minecraft:attack_damage base reset
 attribute @s minecraft:attack_knockback base reset
 #attribute @s minecraft:attack_reach base reset (JE combat tests)
 attribute @s minecraft:attack_speed base reset
+#attribute @s minecraft:below_name_distance base reset (JE 26.2)
 attribute @s minecraft:block_break_speed base reset
 attribute @s minecraft:block_interaction_range base reset
+#attribute @s minecraft:bounciness base reset (JE 26.2)
 ## TODO: check if burning time may as well be always 0, or very small
 attribute @s minecraft:burning_time base reset
 attribute @s minecraft:camera_distance base reset
@@ -25,6 +29,7 @@ attribute @s minecraft:entity_interaction_range base reset
 attribute @s minecraft:explosion_knockback_resistance base reset
 attribute @s minecraft:flying_speed base reset
 attribute @s minecraft:follow_range base reset
+#attribute @s minecraft:friction_modifier base reset (JE 26.2)
 attribute @s minecraft:gravity base reset
 attribute @s minecraft:jump_strength base reset
 attribute @s minecraft:knockback_resistance base reset
@@ -34,6 +39,7 @@ attribute @s minecraft:max_health base reset
 attribute @s minecraft:mining_efficiency base reset
 attribute @s minecraft:movement_efficiency base reset
 attribute @s minecraft:movement_speed base reset
+#attribute @s minecraft:name_tag_distance base reset (JE 26.2)
 attribute @s minecraft:oxygen_bonus base reset
 attribute @s minecraft:safe_fall_distance base reset
 attribute @s minecraft:scale base reset
@@ -48,4 +54,4 @@ attribute @s minecraft:waypoint_receive_range base reset
 attribute @s minecraft:waypoint_transmit_range base reset
 
 # call all remove modifier
-function #core_hc:attribute/remove_modifiers
+function #hc.core:attribute/remove_modifiers

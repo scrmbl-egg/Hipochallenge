@@ -1,0 +1,118 @@
+use ::java::util::text::TextBase
+use ::java::util::text::TranslatedText
+use ::java::util::text::TextColor
+use ::java::util::text::TextStyle
+use ::java::util::avatar::Profile
+
+
+/// Struct for representing a team preset.
+struct TeamColorPreset {
+    /// Internal name of the team.
+    internal_name: (
+        #[canonical] TeamPresetInternalName |
+        #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
+    ),
+
+    /// ID of the team preset.
+    id: (#[canonical] TeamPresetId | int @ ..-1 | int @ 8..),
+
+    /// Translated text of the team's default name.
+    default_name: TranslatedText,
+
+    /// Color of the team name in player's name prefix.
+    name_color: TextStyle[color],
+
+    /// Vanilla color of the team.
+    ///
+    /// Determines the color in which glowing players are rendered, the color
+    /// of the player names in the player list, and internally, the exclusive
+    /// sidebar display.
+    vanilla_color: #[color="named"] TextColor,
+
+    /// RGB of the dust particles for the team.
+    dust_color: #[color="dec_rgb"] [float @ 0..1] @ 3,
+
+    /// Team's leather armor color.
+    armor_dye_color: (
+        #[canonical] #[color="composite_rgb"] int |
+        #[color="dec_rgb"] [float @ 0..1] @ 3 |
+    ),
+
+    /// Team's custom armor trim material.
+    trim_material: #[id="trim_material"] string,
+}
+
+
+/// Struct that represents the current context of a team.
+struct TeamContext {
+    /// **(Nullable)**
+    /// Custom name text component of the team.
+    custom_name?: struct TeamNameText {
+        /// Text of the custom name. Must be between 1 and 16 characters long.
+        text: string @ 1..16,
+
+        ...TextBase,
+    },
+
+    /// Team color preset.
+    color_preset: TeamColorPreset,
+
+    /// List of player profiles in the team.
+    player_profiles: [Profile] @ 0..6,
+}
+
+
+/// Enum for team preset internal names
+enum(string) TeamPresetInternalName {
+    /// Neutral team color name (gray).
+    Neutral = "hc:neutral",
+
+    /// Red team color name.
+    Red = "hc:red",
+
+    /// Yellow team color name.
+    Yellow = "hc:yellow",
+
+    /// Green team color name.
+    Green = "hc:green",
+
+    /// Blue team color name.
+    Blue = "hc:blue",
+
+    /// Purple team color name.
+    Purple = "hc:purple",
+
+    /// Orange team color name.
+    Orange = "hc:orange",
+
+    /// Cyan team color name.
+    Cyan = "hc:cyan",
+}
+
+
+/// Team color ID's, used for datapack predicates.
+enum(int) TeamPresetId {
+    /// Neutral team color ID.
+    Neutral = 0,
+
+    /// Red team color ID.
+    Red = 1,
+
+    /// Yellow team color ID.
+    Yellow = 2,
+
+    /// Green team color ID.
+    Green = 3,
+
+    /// Blue team color ID.
+    Blue = 4,
+
+    /// Purple team color ID.
+    Purple = 5,
+
+    /// Orange team color ID.
+    Orange = 6,
+
+    /// Cyan team color ID.
+    Cyan = 7,
+}

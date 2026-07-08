@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:warped_fungus_on_a_stick",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "support_k2_healing_rod"
+                                    "hc:item/id": "hc:support/kit2/healing_rod"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
@@ -27,18 +27,18 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 11,
-                                    "cooldown_group": "hc:support_k2_healing_rod"
+                                    "cooldown_group": "hc:support/kit2/healing_rod"
                                 },
                                 "minecraft:use_remainder": {
                                     "id": "minecraft:paper",
                                     "components": {
                                         "minecraft:item_model": "minecraft:warped_fungus_on_a_stick",
                                         "minecraft:custom_data": {
-                                            "hc:item/id": "support_k2_healing_rod"
+                                            "hc:item/id": "hc:support/kit2/healing_rod"
                                         },
                                         "minecraft:use_cooldown": {
                                             "seconds": 11,
-                                            "cooldown_group": "hc:support_k2_healing_rod"
+                                            "cooldown_group": "hc:support/kit2/healing_rod"
                                         }
                                     }
                                 }
@@ -64,7 +64,7 @@
                             "components": {
                                 "minecraft:use_cooldown": {
                                     "seconds": 8.25,
-                                    "cooldown_group": "hc:support_k2_healing_rod"
+                                    "cooldown_group": "hc:support/kit2/healing_rod"
                                 }
                             }
                         }

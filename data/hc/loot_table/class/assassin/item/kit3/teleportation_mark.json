@@ -15,7 +15,7 @@
                                     "fallback": "Teleportation Mark"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "assassin_k3_teleportation_mark"
+                                    "hc:item/id": "hc:assassin/kit3/teleportation_mark"
                                 },
                                 "minecraft:item_model": "minecraft:ender_pearl",
                                 "minecraft:rarity": "rare"

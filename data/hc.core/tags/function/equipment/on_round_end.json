@@ -1,0 +1,7 @@
+{
+    "values": [
+        "hc:ability/tank/kit3/spirit/kill",
+
+        "#hc.extension:equipment/on_round_end"
+    ]
+}

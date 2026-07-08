@@ -1,0 +1,21 @@
+{
+    "function": "minecraft:set_components",
+    "components": {
+        "minecraft:item_name": {
+            "translate": "hc.items.assassin.kit1.enhanced_duelist_sword",
+            "fallback": "Enhanced Duelist's Sword"
+        },
+        "minecraft:item_model": "minecraft:diamond_sword",
+        "minecraft:custom_data": {
+            "hc:item/id": "hc:assassin/kit1/sword/enhanced"
+        },
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:rarity": "epic",
+        "minecraft:weapon": {
+            "disable_blocking_for_seconds": 5.0,
+            "item_damage_per_attack": 0
+        },
+        "!minecraft:blocks_attacks": {}
+    }
+}
+

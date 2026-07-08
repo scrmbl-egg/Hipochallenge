@@ -1,0 +1,14 @@
+{
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+        "hc.AssassinKit1ParryWindowRemainingTicks": {
+            "min": 0,
+            "max": {
+                "type": "minecraft:storage",
+                "storage": "hc:main",
+                "path": "consts.classes[{internal_name:\"hc:assassin\"}].kits[{id:1}].assassin_k1_data.parry.window_duration_ticks"
+            }
+        }
+    }
+}

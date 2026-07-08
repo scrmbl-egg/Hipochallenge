@@ -11,12 +11,56 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:item_name": {
-                                    "translate": "hc.items.tank.kit1.castle",
+                                    "translate": "hc.item.tank.kit1.castle.name",
                                     "fallback": "Castle"
                                 },
+                                "minecraft:lore": [
+                                    {
+                                        "translate": "hc.item.tank.kit1.castle.lore.0",
+                                        "fallback": "Swaps places with the furthest ally.",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "hc.item.tank.kit1.castle.lore.1",
+                                        "fallback": "...",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.key_hint",
+                                        "fallback": "[%s]: %s",
+                                        "color": "gold",
+                                        "bold": true,
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "keybind": "key.use"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.use",
+                                                "fallback": "Use",
+                                                "color": "gray",
+                                                "italic": false,
+                                                "bold": false
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.item.generic_lore.cooldown",
+                                        "fallback": "Cooldown: %s",
+                                        "color": "dark_green",
+                                        "italic": false,
+                                        "with": [
+                                            "00:20"
+                                        ]
+                                    }
+                                ],
                                 "minecraft:item_model": "minecraft:armor_stand",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "tank_k1_castle"
+                                    "hc:item/id": "hc:tank/kit1/castle"
                                 },
                                 "minecraft:rarity": "uncommon",
                                 "minecraft:consumable": {
@@ -28,11 +72,16 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 20.0,
-                                    "cooldown_group": "hc:tank_k1_castle"
+                                    "cooldown_group": "hc:tank/kit1/castle"
                                 },
                                 "minecraft:use_remainder": {
                                     "id": "minecraft:armor_stand",
                                     "components": {
+                                        "minecraft:item_name": {
+                                            "translate": "hc.item.tank.kit1.castle.name",
+                                            "fallback": "Castle"
+                                        },
+                                        "minecraft:rarity": "uncommon",
                                         "minecraft:custom_data": {
                                             "hc:item/replace_with": "hc:class/tank/item/kit1/castle"
                                         }

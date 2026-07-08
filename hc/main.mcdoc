@@ -1,0 +1,78 @@
+use super::team::TeamColorPreset
+use super::team::TeamContext
+use super::class::Class
+use super::game::GameModePreset
+use super::game::GameModeState
+use super::game::GameContext
+use super::level::Level
+
+
+dispatch minecraft:storage[hc:main] to MainStorage
+
+
+struct MainStorage {
+    /// Global constants of the datapack.
+    consts: struct MainConsts {
+        /// Information regarding the map that contains the minigame.
+        map: struct MapConsts {
+            /// Name of the map/minigame.
+            name: string,
+
+            /// Version of the map.
+            version: string,
+        },
+
+        /// Game related constants.
+        game: struct GameConstants {
+            /// Constants related to match requests.
+            match_request: struct MatchRequestConstants {
+                /// Duration in seconds of match requests.
+                duration_seconds: int @ 1..107374182,
+            },
+
+            /// Available game modes.
+            modes: [GameModePreset],
+        },
+
+        /// Limits
+        limits: struct LimitConstants {
+            /// Lifetime in ticks of projectiles that have no gravity.
+            no_gravity_projectiles_lifetime_ticks: int @ 0..,
+        },
+
+        /// List of available classes, with their constants.
+        classes: [Class],
+
+        /// Amount of classes.
+        class_count: int @ 0..,
+
+        /// List of available team color presets.
+        team_color_presets: [TeamColorPreset],
+
+        /// Amount of team presets.
+        team_color_preset_count: int @ 0..,
+
+        /// Available levels.
+        levels: [Level],
+
+        /// Amount of levels.
+        level_count: int @ 0..,
+    },
+    /// Global variables of the datapack.
+    vars: struct MainVars {
+        /// Amount of times the datapack has been reloaded.
+        reload_count: int @ 0..,
+
+        /// Current game context/global variables.
+        game_context: GameContext,
+
+        /// Team global variables.
+        team_contexts: struct TeamContexts {
+            /// Team 1 global variables.
+            team1: TeamContext,
+
+            /// Team 2 global variables.
+            team2: TeamContext,
+        },
+    },
+}

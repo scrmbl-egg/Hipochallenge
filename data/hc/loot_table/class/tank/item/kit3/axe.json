@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "tank_k3_axe"
+                                    "hc:item/id": "hc:tank/kit3/axe"
                                 },
                                 "minecraft:unbreakable": {},
                                 "minecraft:tooltip_display": {

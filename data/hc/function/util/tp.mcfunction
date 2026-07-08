@@ -5,7 +5,7 @@
 # @context entity, in specified position and dimension
 
 # teleport (location is specified in execute context)
-tp @s ~ ~ ~
+tp @s ~ ~ ~ ~ ~
 
 # show fx
-function core_hc:fx/util/tp
+function hc.core:fx/util/tp

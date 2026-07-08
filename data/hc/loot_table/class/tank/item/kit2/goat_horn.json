@@ -11,14 +11,413 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:item_name": {
-                                    "translate": "hc.items.tank.kit2.goat_horn",
+                                    "translate": "hc.item.tank.kit2.goat_horn.name",
                                     "fallback": "Triton's Horn"
                                 },
+                                "minecraft:lore": [
+                                    {
+                                        "translate": "hc.item.tank.kit2.goat_horn.lore.0",
+                                        "fallback": "Gives %1$s to enemies in a %2$s block",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "potion.withDuration",
+                                                        "color": "dark_purple",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.slowness"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "00:02"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/slowness"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "text": "5",
+                                                "color": "aqua"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.resistance",
+                                                        "color": "blue"
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/resistance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "translate": "hc.item.tank.kit2.goat_horn.lore.1",
+                                        "fallback": "radius. The user gets %3$s with one level",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "potion.withDuration",
+                                                        "color": "dark_purple",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.slowness"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "00:02"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/slowness"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "text": "5",
+                                                "color": "aqua"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.resistance",
+                                                        "color": "blue"
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/resistance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "translate": "hc.item.tank.kit2.goat_horn.lore.2",
+                                        "fallback": "per enemy initially captured in the area, continuing",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "potion.withDuration",
+                                                        "color": "dark_purple",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.slowness"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "00:02"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/slowness"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "text": "5",
+                                                "color": "aqua"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.resistance",
+                                                        "color": "blue"
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/resistance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "translate": "hc.item.tank.kit2.goat_horn.lore.3",
+                                        "fallback": "until there are no enemies left inside.",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "potion.withDuration",
+                                                        "color": "dark_purple",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.slowness"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "00:02"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/slowness"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "text": "5",
+                                                "color": "aqua"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.resistance",
+                                                        "color": "blue"
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/resistance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "translate": "hc.item.tank.kit2.goat_horn.lore.4",
+                                        "fallback": "...",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "potion.withDuration",
+                                                        "color": "dark_purple",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.slowness"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "00:02"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/slowness"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "text": "5",
+                                                "color": "aqua"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.effect_with_icon",
+                                                "fallback": "%2$s %1$s",
+                                                "with": [
+                                                    {
+                                                        "translate": "effect.minecraft.resistance",
+                                                        "color": "blue"
+                                                    },
+                                                    {
+                                                        "atlas": "minecraft:gui",
+                                                        "sprite": "minecraft:mob_effect/resistance"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.item.generic_lore.note",
+                                        "fallback": "- %s",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.ability_detail",
+                                                "fallback": "%1$s \u2192 %2$s",
+                                                "color": "gray",
+                                                "with": [
+                                                    {
+                                                        "translate": "hc.item.generic_lore.effect_with_icon",
+                                                        "fallback": "%2$s %1$s",
+                                                        "with": [
+                                                            {
+                                                                "translate": "potion.withAmplifier",
+                                                                "color": "red",
+                                                                "with": [
+                                                                    {
+                                                                        "translate": "effect.minecraft.slowness"
+                                                                    },
+                                                                    {
+                                                                        "translate": "potion.potency.1"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "atlas": "minecraft:gui",
+                                                                "sprite": "minecraft:mob_effect/slowness"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "translate": "attribute.modifier.take.2",
+                                                        "color": "red",
+                                                        "with": [
+                                                            "30",
+                                                            {
+                                                                "translate": "attribute.name.movement_speed"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "translate": "hc.item.generic_lore.note",
+                                        "fallback": "- %s",
+                                        "color": "gray",
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "translate": "hc.item.generic_lore.ability_detail",
+                                                "fallback": "%1$s \u2192 %2$s",
+                                                "color": "gray",
+                                                "with": [
+                                                    {
+                                                        "translate": "hc.item.generic_lore.effect_with_icon",
+                                                        "fallback": "%2$s %1$s",
+                                                        "with": [
+                                                            {
+                                                                "translate": "effect.minecraft.resistance",
+                                                                "color": "blue"
+                                                            },
+                                                            {
+                                                                "atlas": "minecraft:gui",
+                                                                "sprite": "minecraft:mob_effect/resistance"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "translate": "hc.item.generic_lore.attribute_per_level",
+                                                        "fallback": "%s per level",
+                                                        "color": "blue",
+                                                        "with": [
+                                                            {
+                                                                "translate": "attribute.modifier.take.2",
+                                                                "with": [
+                                                                    "15",
+                                                                    {
+                                                                        "translate": "hc.item.generic_lore.damage_received",
+                                                                        "fallback": "Damage Received"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.key_hint",
+                                        "fallback": "[%s]: %s",
+                                        "color": "gold",
+                                        "bold": true,
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "keybind": "key.use"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.play",
+                                                "fallback": "Play",
+                                                "color": "gray",
+                                                "italic": false,
+                                                "bold": false
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.item.generic_lore.single_use",
+                                        "fallback": "Single use",
+                                        "color": "dark_green",
+                                        "italic": false
+                                    }
+                                ],
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "tank_k2_goat_horn"
+                                    "hc:item/id": "hc:tank/kit2/goat_horn"
                                 },
                                 "minecraft:rarity": "epic",
-                                "minecraft:instrument": "minecraft:sing_goat_horn"
+                                "minecraft:instrument": "minecraft:sing_goat_horn",
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:instrument"
+                                    ]
+                                }
                             }
                         }
                     ]

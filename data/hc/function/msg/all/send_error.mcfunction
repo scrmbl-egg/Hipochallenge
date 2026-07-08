@@ -7,42 +7,22 @@
 #       Text component that will be printed.
 
 $tellraw @a [ \
+    {text:"",color:"red"}, \
     { \
-        text:"", \
-        color:"red", \
+        text:">> ", \
+        color:"white", \
+        bold:true, \
         hover_event:{ \
             action:"show_text",\
             value:[ \
                 "", \
-                { \
-                    bold:true, \
-                    color:"white", \
-                    text:">> ", \
-                }, \
-                { \
-                    translate:"hc.msg.all", \
-                    fallback:"Global message", \
-                }, \
+                {text:">> ",bold:true,color:"white"}, \
+                {translate:"hc.msg.all",fallback:"Global message"}, \
             ], \
         }, \
     }, \
-    { \
-        bold:true, \
-        color:"white", \
-        text:">> ", \
-    }, \
-    { \
-        bold:true, \
-        text:"[", \
-    }, \
-    { \
-        bold:true, \
-        translate:"hc.msg.error", \
-        fallback:"ERROR", \
-    }, \
-    { \
-        bold:true, \
-        text:"] ", \
-    }, \
+    {text:"[",bold:true}, \
+    {translate:"hc.msg.error",fallback:"ERROR",bold:true}, \
+    {text:"] ",bold:true}, \
     $(text), \
 ]

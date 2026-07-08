@@ -15,7 +15,7 @@
                                     "fallback": "Levitation Bomb"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "support_k1_levitation_bomb"
+                                    "hc:item/id": "hc:support/kit1/levitation_bomb"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "brush",
@@ -38,7 +38,7 @@
                                             ]
                                         },
                                         "minecraft:custom_data": {
-                                            "hc:item/id": "support_k1_detonator"
+                                            "hc:item/id": "hc:support/kit1/detonator"
                                         },
                                         "minecraft:consumable": {
                                             "animation": "block",

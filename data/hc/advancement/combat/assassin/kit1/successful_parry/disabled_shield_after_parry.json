@@ -1,10 +1,10 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:golden_sword",
+            "id": "minecraft:diamond_sword",
             "count": 1,
             "components": {
-                "enchantment_glint_override": true
+                "minecraft:enchantment_glint_override": true
             }
         },
         "title": {
@@ -13,7 +13,13 @@
         },
         "description": {
             "translate": "hc.advancement.combat.assassin.kit1.successful_parry.disabled_shield.description",
-            "fallback": "Disable an enemy shield with the Enhanced Duelist Sword"
+            "fallback": "Disable an enemy shield with the %s",
+            "with": [
+                {
+                    "translate": "hc.item.assassin.kit1.enhanced_duelist_sword.name",
+                    "fallback": "Enhanced Duelist's Sword"
+                }
+            ]
         },
         "frame": "goal",
         "show_toast": true,

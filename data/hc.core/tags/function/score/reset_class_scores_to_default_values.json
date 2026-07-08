@@ -1,0 +1,12 @@
+{
+    "values": [
+        "hc.core:score/class/tank/reset_to_default",
+        "hc.core:score/class/marksman/reset_to_default",
+        "hc.core:score/class/assassin/reset_to_default",
+        "hc.core:score/class/support/reset_to_default",
+        "hc.core:score/class/recon/reset_to_default",
+        "hc.core:score/class/assault/reset_to_default",
+
+        "#hc.extension:score/reset_class_scores_to_default_values"
+    ]
+}

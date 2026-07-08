@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_data": {
-                                   "hc:item/id": "recon_k3_sword"
+                                   "hc:item/id": "hc:recon/kit3/sword"
                                 },
                                 "minecraft:unbreakable": {},
                                 "minecraft:tooltip_display": {

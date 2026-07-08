@@ -1,0 +1,10 @@
+{
+    "values": [
+        "hc.core:score/class/tank/add_objectives",
+        "hc.core:score/class/marksman/add_objectives",
+        "hc.core:score/class/assassin/add_objectives",
+        "hc.core:score/class/support/add_objectives",
+        "hc.core:score/class/recon/add_objectives",
+        "hc.core:score/class/assault/add_objectives"
+    ]
+}

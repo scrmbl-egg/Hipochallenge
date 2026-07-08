@@ -15,7 +15,7 @@
                                     "fallback": "Slowness Trap"
                                 },
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "support_k2_slowness_trap"
+                                    "hc:item/id": "hc:support/kit2/slowness_trap"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
@@ -26,7 +26,7 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 3,
-                                    "cooldown_group": "hc:support_k2_slowness_trap"
+                                    "cooldown_group": "hc:support/kit2/slowness_trap"
                                 }
                             }
                         },
@@ -50,7 +50,7 @@
                             "components": {
                                 "minecraft:use_cooldown": {
                                     "seconds": 2.25,
-                                    "cooldown_group": "hc:support_k2_slowness_trap"
+                                    "cooldown_group": "hc:support/kit2/slowness_trap"
                                 }
                             }
                         }

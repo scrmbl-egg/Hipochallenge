@@ -16,11 +16,15 @@
                                     "italic": false
                                 },
                                 "minecraft:unbreakable": {},
-                                "minecraft:base_color": "gray",
+                                "minecraft:base_color": "cyan",
                                 "minecraft:banner_patterns": [
                                     {
                                         "pattern": "minecraft:gradient",
-                                        "color": "black"
+                                        "color": "gray"
+                                    },
+                                    {
+                                        "pattern": "minecraft:gradient_up",
+                                        "color": "gray"
                                     },
                                     {
                                         "pattern": "minecraft:skull",

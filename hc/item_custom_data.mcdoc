@@ -1,0 +1,30 @@
+dispatch mcdoc:custom_data[hc:item/id] to Id
+dispatch mcdoc:custom_data[hc:item/replace_with] to ReplaceItemLootTable
+dispatch mcdoc:custom_data[hc:item/clear_instantly] to ClearInstantly
+dispatch mcdoc:custom_data[hc:item/armor/apply_team_dye_color]
+    to ApplyTeamDyeColor
+dispatch mcdoc:custom_data[hc:item/armor/apply_team_trim_material]
+    to ApplyTeamTrimMaterial
+
+
+/// Custom item ID component.
+type Id = #[match_regex="^[a-z0-9_]+(:[a-z0-9_/]+)?$"] string
+
+
+/// Component for `minecraft:use_remainder` items that must return to its
+/// original state.
+type ReplaceItemLootTable = #[id="loot_table"] string
+
+
+/// Component for items that must be cleared instantly from the inventory.
+struct ClearInstantly {}
+
+
+/// Component for overriding the `minecraft:dyed_color` component with the
+/// player's team color.
+struct ApplyTeamDyeColor {}
+
+
+/// Component for overriding the `"minecraft:trim".material` component with the
+/// player's team color.
+struct ApplyTeamTrimMaterial {}

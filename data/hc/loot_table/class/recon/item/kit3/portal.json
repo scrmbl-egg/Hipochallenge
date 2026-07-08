@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:end_portal_frame",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "recon_k3_portal"
+                                    "hc:item/id": "hc:recon/kit3/portal"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",

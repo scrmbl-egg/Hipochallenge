@@ -15,6 +15,9 @@
                                     "fallback": "Revealing Sentinel"
                                 },
                                 "minecraft:item_model": "minecraft:ender_eye",
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "hc:recon/kit2/revealing_sentinel"
+                                },
                                 "minecraft:consumable": {
                                     "animation": "brush",
                                     "consume_seconds": 1.6,

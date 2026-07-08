@@ -12,7 +12,7 @@
 #   seconds: (#[canonical] int @ 0.. | "infinite")
 #       Duration in seconds of the effect. `"infinite"` can be used to indicate
 #       infinite duration.
-#   hide_particles: ("true" | "false")
+#   hide_particles: boolean
 #       `true` if the particles of the effect are hidden.
 
 $effect clear @s $(effect)
@@ -22,5 +22,5 @@ $execute as @s \
         effect:"$(effect)", \
         amplifier:$(amplifier), \
         seconds:"$(seconds)", \
-        hide_particles:"$(hide_particles)", \
+        hide_particles:$(hide_particles), \
     }

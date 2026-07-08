@@ -1,0 +1,10 @@
+{
+    "values": [
+        "hc.core:score/class/tank/remove_objectives",
+        "hc.core:score/class/marksman/remove_objectives",
+        "hc.core:score/class/assassin/remove_objectives",
+        "hc.core:score/class/support/remove_objectives",
+        "hc.core:score/class/recon/remove_objectives",
+        "hc.core:score/class/assault/remove_objectives"
+    ]
+}

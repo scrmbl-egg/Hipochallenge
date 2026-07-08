@@ -16,7 +16,7 @@
                                 },
                                 "minecraft:item_model": "minecraft:spider_eye",
                                 "minecraft:custom_data": {
-                                    "hc:item/id": "support_k3_evil_eye"
+                                    "hc:item/id": "hc:support/kit3/evil_eye"
                                 },
                                 "minecraft:consumable": {
                                     "animation": "block",
@@ -27,7 +27,7 @@
                                 },
                                 "minecraft:use_cooldown": {
                                     "seconds": 20,
-                                    "cooldown_group": "hc:support_k3_evil_eye"
+                                    "cooldown_group": "hc:support/kit3/evil_eye"
                                 }
                             }
                         },
@@ -51,7 +51,7 @@
                             "components": {
                                 "minecraft:use_cooldown": {
                                     "seconds": 15,
-                                    "cooldown_group": "hc:support_k3_evil_eye"
+                                    "cooldown_group": "hc:support/kit3/evil_eye"
                                 }
                             }
                         }

@@ -1,1 +1,23 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/assault/item/kit3/spear"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/assault/item/kit3/pushing_projectile"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
