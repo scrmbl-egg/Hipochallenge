@@ -6,7 +6,7 @@
 # @context player
 
 # revoke detection advancement
-advancement revoke @s only core_hc:class/assassin/kit1/parried_with_sword
+advancement revoke @s only hc.core:class/assassin/kit1/parried_with_sword
 
 # reset scores back to their original state
 scoreboard players set @s hc.AssassinKit1ParryWindowRemainingTicks -1

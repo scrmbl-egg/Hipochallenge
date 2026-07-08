@@ -12,7 +12,7 @@
 $execute unless score @s hc.SuppressionTimer matches $(ticks).. \
     at @s \
     run \
-    function core_hc:fx/mechanic/suppressed
+    function hc.core:fx/mechanic/suppressed
 $execute unless score @s hc.SuppressionTimer matches $(ticks).. \
     run \
     scoreboard players set @s hc.SuppressionTimer $(ticks)

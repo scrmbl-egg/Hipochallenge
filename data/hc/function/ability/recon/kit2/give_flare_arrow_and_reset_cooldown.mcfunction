@@ -11,7 +11,7 @@ loot give @s loot hc:class/recon/item/kit2/flare_arrow
 # play fx
 execute at @s \
     run \
-    function core_hc:fx/ability/recon/kit2/flare_arrow_given
+    function hc.core:fx/ability/recon/kit2/flare_arrow_given
 
 # create local scoreboard
 scoreboard objectives add __hc.NewFlareArrow dummy

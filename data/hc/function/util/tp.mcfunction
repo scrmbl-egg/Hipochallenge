@@ -8,4 +8,4 @@
 tp @s ~ ~ ~ ~ ~
 
 # show fx
-function core_hc:fx/util/tp
+function hc.core:fx/util/tp

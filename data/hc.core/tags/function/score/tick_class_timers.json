@@ -1,0 +1,10 @@
+{
+    "values": [
+        "hc.core:score/class/tank/tick_timers",
+        "hc.core:score/class/marksman/tick_timers",
+        "hc.core:score/class/assassin/tick_timers",
+        "hc.core:score/class/support/tick_timers",
+        "hc.core:score/class/recon/tick_timers",
+        "hc.core:score/class/assault/tick_timers"
+    ]
+}

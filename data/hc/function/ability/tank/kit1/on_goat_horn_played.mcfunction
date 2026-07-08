@@ -10,7 +10,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/tank/kit1/used_goat_horn
+    only hc.core:class/tank/kit1/used_goat_horn
 
 # team with no abilities guard clause
 execute unless predicate hc:team/is_in_pvp_team \
@@ -54,13 +54,13 @@ data modify storage hc:temp tank_k1_goat_horn.radius \
     kits[{id:1}].tank_k1_data.horn.radius
 
 # give all effect info effects
-function core_hc:ability/tank/kit1/goat_horn/give_effects \
+function hc.core:ability/tank/kit1/goat_horn/give_effects \
     with storage hc:temp tank_k1_goat_horn
 
 # fx
 execute at @s \
     run \
-    function core_hc:fx/ability/tank/kit1/used_goat_horn
+    function hc.core:fx/ability/tank/kit1/used_goat_horn
 
 # free memory and remove tags
 data remove storage hc:temp tank_k1_goat_horn

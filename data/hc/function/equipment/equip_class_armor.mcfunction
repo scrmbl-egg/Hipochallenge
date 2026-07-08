@@ -64,31 +64,31 @@ execute if predicate hc:team/is_in_neutral_team \
 
 ## equip armor
 # loot armor and color
-function core_hc:equipment/armor/loot_class_armor \
+function hc.core:equipment/armor/loot_class_armor \
     with storage hc:temp equip_armor.loot_class_armor_args
 
 # apply team color to armor
 execute if predicate hc:team/is_in_team1 \
     run \
-    function core_hc:equipment/armor/apply_team1_color
+    function hc.core:equipment/armor/apply_team1_color
 execute if predicate hc:team/is_in_team2 \
     run \
-    function core_hc:equipment/armor/apply_team2_color
+    function hc.core:equipment/armor/apply_team2_color
 
 # modify armor, removing attribute modifiers
-item modify entity @s armor.head core_hc:equipment/no_armor_modifiers
-item modify entity @s armor.chest core_hc:equipment/no_armor_modifiers
-item modify entity @s armor.legs core_hc:equipment/no_armor_modifiers
-item modify entity @s armor.feet core_hc:equipment/no_armor_modifiers
+item modify entity @s armor.head hc.core:equipment/no_armor_modifiers
+item modify entity @s armor.chest hc.core:equipment/no_armor_modifiers
+item modify entity @s armor.legs hc.core:equipment/no_armor_modifiers
+item modify entity @s armor.feet hc.core:equipment/no_armor_modifiers
 
 ## apply attributes
-function core_hc:util/attribute/class/apply_attributes \
+function hc.core:util/attribute/class/apply_attributes \
     with storage hc:temp equip_armor.apply_attributes_args
 
 ## show fx (with team's dust color)
 execute at @s \
     run \
-    function core_hc:fx/equipment/equip_armor \
+    function hc.core:fx/equipment/equip_armor \
     with storage hc:temp equip_armor.fx_args
 
 # free memory

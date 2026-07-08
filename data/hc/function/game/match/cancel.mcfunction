@@ -7,7 +7,7 @@
 #   Result: 0 if no match was cancelled, 1 if it was successfully cancelled.
 
 # end match. on failure, just return early
-execute unless function core_hc:game/match/end \
+execute unless function hc.core:game/match/end \
     run \
     return fail
 

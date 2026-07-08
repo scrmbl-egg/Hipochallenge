@@ -12,7 +12,7 @@
 #       Storage NBT path where the result will be stored.
 
 # get player head
-loot replace entity @s enderchest.26 loot core_hc:util/player_head
+loot replace entity @s enderchest.26 loot hc.core:util/player_head
 
 # get data
 $data modify storage $(out_storage) $(out_nbt) \

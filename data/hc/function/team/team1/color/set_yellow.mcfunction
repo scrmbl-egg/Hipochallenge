@@ -2,4 +2,4 @@
 #
 # Sets the first team's color to yellow.
 
-function core_hc:team/team1/color/set {internal_name:"hc:yellow"}
+function hc.core:team/team1/color/set {internal_name:"hc:yellow"}

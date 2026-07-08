@@ -12,7 +12,7 @@ loot give @s loot hc:class/marksman/item/kit1/arrow
 # play fx
 execute at @s \
     run \
-    function core_hc:fx/ability/marksman/projectile_given
+    function hc.core:fx/ability/marksman/projectile_given
 
 ## get new cooldown
 # create local scoreboard

@@ -6,7 +6,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/tank/kit3/used_goat_horn
+    only hc.core:class/tank/kit3/used_goat_horn
 
 function hc:msg/debug/send_info {text:"\"goat horn kit 3 used\""}
 

@@ -6,6 +6,6 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/recon/kit1/used_flash_bomb
+    only hc.core:class/recon/kit1/used_flash_bomb
 
 function hc:msg/debug/send_info {text:"\"flash bomb thrown\""}

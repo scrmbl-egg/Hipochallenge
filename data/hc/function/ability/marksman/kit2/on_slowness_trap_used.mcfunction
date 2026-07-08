@@ -6,6 +6,6 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/marksman/kit2/used_slowness_trap
+    only hc.core:class/marksman/kit2/used_slowness_trap
 
 function hc:msg/debug/send_info {text:"\"used slowness trap\""}

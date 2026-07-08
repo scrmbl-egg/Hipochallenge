@@ -15,7 +15,7 @@ set from entity @s UUID
 execute as @s \
     at @s \
     run \
-    function core_hc:ability/tank/kit3/spirit/summon \
+    function hc.core:ability/tank/kit3/spirit/summon \
     with storage hc:temp spirit
 
 # debuff user

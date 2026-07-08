@@ -10,4 +10,4 @@ function hc:util/attribute/reset_all
 # remove class
 
 # reset class scores
-function #core_hc:score/reset_class_scores_to_default_values
+function #hc.core:score/reset_class_scores_to_default_values

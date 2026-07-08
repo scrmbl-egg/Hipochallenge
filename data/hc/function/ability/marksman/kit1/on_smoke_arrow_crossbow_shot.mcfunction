@@ -7,6 +7,6 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/marksman/kit1/used_smoke_arrow_crossbow
+    only hc.core:class/marksman/kit1/used_smoke_arrow_crossbow
 
 function hc:msg/debug/send_info {text:"\"smoke arrow crossbow shot\""}

@@ -112,7 +112,7 @@ $execute store result storage \
 execute unless data storage \
     hc:temp modify_item_with_id.modify_item_in_container_args{index:-1} \
     run \
-    function core_hc:util/item/modify_in_container \
+    function hc.core:util/item/modify_in_container \
     with storage hc:temp modify_item_with_id.modify_item_in_container_args
 
 ## otherwise, try each of the leftover slots

@@ -11,4 +11,4 @@ loot give @s loot hc:class/tank/item/kit2/trident
 # play fx
 execute at @s \
     run \
-    function core_hc:fx/ability/tank/kit2/trident_given
+    function hc.core:fx/ability/tank/kit2/trident_given

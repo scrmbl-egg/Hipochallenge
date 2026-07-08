@@ -6,7 +6,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/marksman/kit2/used_crossbow
+    only hc.core:class/marksman/kit2/used_crossbow
 
 # set new projectile cooldown
 execute if entity @s[ \

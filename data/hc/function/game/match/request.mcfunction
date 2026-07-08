@@ -35,7 +35,7 @@ tag @s add hc.MatchHost
 tag @s add hc.WillJoinMatch
 
 # init match request logic (this also handles the display)
-function core_hc:game/match/request/init
+function hc.core:game/match/request/init
 
 # play sound
 # TODO: play a notification sound

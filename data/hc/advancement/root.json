@@ -29,6 +29,6 @@
         ]
     ],
     "rewards": {
-        "function": "core_hc:util/on_login"
+        "function": "hc.core:util/on_login"
     }
 }

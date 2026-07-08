@@ -57,7 +57,7 @@ data modify storage hc:main vars.team_contexts.team1.custom_name.text \
     set from storage hc:temp set_name.input_str
 
 # set display name
-function core_hc:team/team1/display_name/set \
+function hc.core:team/team1/display_name/set \
     with storage hc:temp set_name.display_name_set_args
 
 # send message
@@ -76,7 +76,7 @@ function hc:msg/match/send { \
 }
 
 # update text displays
-function core_hc:team/text_displays/update_team1
+function hc.core:team/text_displays/update_team1
 
 # free memory
 scoreboard objectives remove __hc.SetTeamName

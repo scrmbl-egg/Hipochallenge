@@ -8,4 +8,4 @@
 loot give @s loot hc:class/tank/item/perk1/nutritious_meal
 
 # fx
-function core_hc:fx/ability/tank/perk1/nutritious_meal_given
+function hc.core:fx/ability/tank/perk1/nutritious_meal_given

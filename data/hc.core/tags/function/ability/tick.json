@@ -1,0 +1,12 @@
+{
+    "values": [
+        "hc.core:ability/tank/tick",
+        "hc.core:ability/marksman/tick",
+        "hc.core:ability/assassin/tick",
+        "hc.core:ability/support/tick",
+        "hc.core:ability/recon/tick",
+        "hc.core:ability/assault/tick",
+
+        "#extension_hc:ability/tick"
+    ]
+}

@@ -54,4 +54,4 @@ attribute @s minecraft:waypoint_receive_range base reset
 attribute @s minecraft:waypoint_transmit_range base reset
 
 # call all remove modifier
-function #core_hc:attribute/remove_modifiers
+function #hc.core:attribute/remove_modifiers

@@ -7,7 +7,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/support/kit2/used_cleansing_projectile
+    only hc.core:class/support/kit2/used_cleansing_projectile
 
 function hc:msg/debug/send_info {text:"\"cleansing projectile thrown\""}
 

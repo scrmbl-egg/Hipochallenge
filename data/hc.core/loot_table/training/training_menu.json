@@ -1,0 +1,89 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:paper",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_name": {
+                                    "translate": "hc.item.training_menu.name",
+                                    "fallback": "Training Menu",
+                                    "color": "#98bdc2"
+                                },
+                                "minecraft:lore": [
+                                    {
+                                        "translate": "hc.item.training_menu.lore.0",
+                                        "fallback": "Displays all available training commands in a",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "hc.item.training_menu.lore.1",
+                                        "fallback": "user-friendly interface.",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.key_hint",
+                                        "fallback": "[%s]: %s",
+                                        "color": "gold",
+                                        "bold": true,
+                                        "italic": false,
+                                        "with": [
+                                            {
+                                                "keybind": "key.use"
+                                            },
+                                            {
+                                                "translate": "hc.item.generic_lore.use",
+                                                "fallback": "Use",
+                                                "color": "gray",
+                                                "italic": false,
+                                                "bold": false
+                                            }
+                                        ]
+                                    },
+                                    "",
+                                    {
+                                        "translate": "hc.item.generic_lore.training_mode_only",
+                                        "fallback": "Only available in training mode",
+                                        "color": "red",
+                                        "italic": false
+                                    }
+                                ],
+                                "minecraft:item_model": "minecraft:knowledge_book",
+                                "minecraft:custom_data": {
+                                    "hc:item/id": "training_menu"
+                                },
+                                "minecraft:rarity": "epic",
+                                "minecraft:consumable": {
+                                    "animation": "block",
+                                    "consume_seconds": 0,
+                                    "has_consume_particles": false,
+                                    "on_consume_effects": [],
+                                    "sound": "minecraft:item.book.page_turn"
+                                },
+                                "minecraft:use_remainder": {
+                                    "id": "minecraft:paper",
+                                    "components": {
+                                        "minecraft:item_model": "minecraft:knowledge_book",
+                                        "minecraft:custom_data": {
+                                            "hc:item/replace_with": "hc.core:training/training_menu"
+                                        }
+                                    },
+                                    "count": 1
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

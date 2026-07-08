@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc.core:training/training_menu"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc.core:training/training_spyglass"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

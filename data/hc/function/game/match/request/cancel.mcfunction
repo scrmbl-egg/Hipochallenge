@@ -11,7 +11,7 @@ execute unless data storage hc:main vars.game_context.match_requested \
 data remove storage hc:main vars.game_context.match_requested
 
 # end request ticking
-function core_hc:game/match/request/end
+function hc.core:game/match/request/end
 
 # remove tag from players
 tag @a[predicate=hc:game/match/player_will_join] remove hc.WillJoinMatch

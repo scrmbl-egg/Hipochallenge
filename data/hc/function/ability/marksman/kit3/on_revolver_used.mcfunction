@@ -4,7 +4,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/marksman/kit3/used_revolver
+    only hc.core:class/marksman/kit3/used_revolver
 
 # set new projectile cooldown
 execute store result score @s hc.MarksmanKit3NewProjectileCooldown \

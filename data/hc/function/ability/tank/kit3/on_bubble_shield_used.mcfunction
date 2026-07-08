@@ -6,7 +6,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/tank/kit3/used_bubble_shield
+    only hc.core:class/tank/kit3/used_bubble_shield
 
 # team with no abilities guard clause
 execute unless predicate hc:team/is_in_pvp_team \

@@ -4,7 +4,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/recon/kit2/used_flare_arrow_crossbow
+    only hc.core:class/recon/kit2/used_flare_arrow_crossbow
 
 # set arrow cooldown ticks (except those in creative)
 execute if entity @s[ \

@@ -40,7 +40,7 @@ execute if predicate std:player/input/sneak \
 # redirect spirit using temporary memory (UUID to set target)
 execute if data storage hc:temp spirit.summon.recall \
     run \
-    function core_hc:ability/tank/kit3/spirit/change_target \
+    function hc.core:ability/tank/kit3/spirit/change_target \
     with storage hc:temp spirit
 
 # clear temporary memory

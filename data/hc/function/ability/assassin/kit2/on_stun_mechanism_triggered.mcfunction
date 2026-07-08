@@ -4,7 +4,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/assassin/kit2/used_stun_mechanism
+    only hc.core:class/assassin/kit2/used_stun_mechanism
 
 # team with no abilities guard clause
 execute unless predicate hc:team/is_in_pvp_team \
@@ -41,11 +41,11 @@ data modify storage hc:temp stun_mechanism.radius \
     kits[{id:2}].assassin_k2_data.stun_mechanism.radius
 
 # give effects to targets
-function core_hc:ability/assassin/kit2/stun_mechanism/give_effects \
+function hc.core:ability/assassin/kit2/stun_mechanism/give_effects \
     with storage hc:temp stun_mechanism
 
 # show fx
-function core_hc:fx/ability/assassin/kit2/stun_mechanism_used
+function hc.core:fx/ability/assassin/kit2/stun_mechanism_used
 
 # free memory
 data remove storage hc:temp stun_mechanism

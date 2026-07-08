@@ -7,7 +7,7 @@
 # TODO: rename this item to poisonous_trap
 
 # revoke detection advancement
-advancement revoke @s only core_hc:class/support/kit2/used_slowness_trap
+advancement revoke @s only hc.core:class/support/kit2/used_slowness_trap
 
 function hc:msg/debug/send_info {text:"slowness trap placed"}
 

@@ -13,7 +13,7 @@ data modify storage hc:temp spirit.owner_uuid set from entity @s UUID
 execute as @s \
     at @s \
     run \
-    function core_hc:ability/tank/kit3/spirit/kill with storage hc:temp spirit
+    function hc.core:ability/tank/kit3/spirit/kill with storage hc:temp spirit
 
 # cleanse debuff
 function hc:ability/tank/kit3/spirit/attribute_modifiers/owner_cleanse

@@ -6,6 +6,6 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/marksman/kit3/used_mirror
+    only hc.core:class/marksman/kit3/used_mirror
 
 function hc:msg/debug/send_info {text:"\"place mirror\""}

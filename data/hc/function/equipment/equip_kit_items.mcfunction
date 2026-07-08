@@ -19,16 +19,16 @@ function hc:kit/get_data_field { \
     out_storage:"hc:temp", \
     out_nbt:"equip_items.loot_items_args", \
 }
-function core_hc:equipment/item/loot_items \
+function hc.core:equipment/item/loot_items \
     with storage hc:temp equip_items.loot_items_args
 
 # show fx
-function core_hc:fx/equipment/equip_items
+function hc.core:fx/equipment/equip_items
 
 ## GIVE TRAINING TOOLS IF PLAYERS ARE IN hc.Neutral
 execute if entity @s[team=hc.Neutral] \
     run \
-    loot give @s loot core_hc:training/tools
+    loot give @s loot hc.core:training/tools
 
 # free memory
 data remove storage hc:temp equip_items

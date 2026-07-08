@@ -6,7 +6,7 @@
 
 # revoke detection advancement
 advancement revoke @s \
-    only core_hc:class/tank/kit1/used_castle
+    only hc.core:class/tank/kit1/used_castle
 
 # team with no abilities guard clause
 execute unless predicate hc:team/is_in_pvp_team \
@@ -60,7 +60,7 @@ data modify storage hc:temp castle.swap_args.self_pitch \
     set from entity @s Rotation[1]
 
 # tag furthest teammate: "__hc.TankKit1CastledEntity"
-function core_hc:ability/tank/kit1/castle/tag_furthest_teammate \
+function hc.core:ability/tank/kit1/castle/tag_furthest_teammate \
     with storage hc:temp castle.tag_furthest_teammate_args
 
 # decompose transform result in swap_args
@@ -76,7 +76,7 @@ data modify storage hc:temp castle.swap_args.other_pitch \
     set from entity @n[tag=__hc.TankKit1CastledEntity] Rotation[1]
 
 # swap
-function core_hc:ability/tank/kit1/castle/swap_players \
+function hc.core:ability/tank/kit1/castle/swap_players \
     with storage hc:temp castle.swap_args
 
 # remove tag from other player/entity

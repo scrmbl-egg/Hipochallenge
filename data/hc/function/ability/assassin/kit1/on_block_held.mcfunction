@@ -5,11 +5,11 @@
 # @context player
 
 # revoke detection advancement
-advancement revoke @s only core_hc:class/assassin/kit1/blocked_with_sword
+advancement revoke @s only hc.core:class/assassin/kit1/blocked_with_sword
 
 # if the player wasn't already in any parrying window, set the parrying window
 # ticks (this makes the `is_in_parry_window` predicate true)
-execute unless predicate core_hc:class/assassin/kit1/is_in_parry_window \
+execute unless predicate hc.core:class/assassin/kit1/is_in_parry_window \
     store result score @s hc.AssassinKit1ParryWindowRemainingTicks \
     run \
     data get storage hc:main \

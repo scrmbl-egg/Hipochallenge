@@ -35,7 +35,7 @@ data modify storage hc:temp reset_name.msg_args.text.with[0].color \
     set value "gray"
 
 # set preset name as new team name
-function core_hc:team/team2/display_name/set \
+function hc.core:team/team2/display_name/set \
     with storage hc:temp reset_name.display_name_set_args
 
 # send message

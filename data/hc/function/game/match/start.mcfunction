@@ -16,7 +16,7 @@ execute if predicate hc:game/match/is_being_played \
 # else...
 
 # just in case, end the current match request
-function core_hc:game/match/request/end
+function hc.core:game/match/request/end
 
 # check if start_state flag is present in the preset state array
 execute if data storage \
