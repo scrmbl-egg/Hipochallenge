@@ -23,7 +23,7 @@ function hc:team/get_self_team { \
 
 # get radius
 data modify storage hc:temp tank_k1_horn_targetting.radius \
-    set from storage hc:main consts.classes[{internal_name:"hc:tank"}].\
+    set from storage hc:main consts.classes[{key:"hc:tank"}].\
     kits[{id:1}].tank_k1_data.horn.radius
 
 # call display target particles func

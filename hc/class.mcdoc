@@ -7,9 +7,9 @@ use super::perk::Perk
 
 /// Game class struct.
 struct Class {
-    /// Internal name of the class.
-    internal_name: (
-        #[canonical] ClassInternalName |
+    /// Key of the class.
+    key: (
+        #[canonical] ClassKey |
         #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
 
@@ -84,8 +84,8 @@ struct Class {
 }
 
 
-/// Enum for class internal names.
-enum(string) ClassInternalName {
+/// Enum for class keys.
+enum(string) ClassKey {
     /// Tank class name.
     Tank = "hc:tank",
 

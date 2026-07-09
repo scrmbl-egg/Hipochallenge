@@ -3,8 +3,8 @@
 # Sets the current game mode preset from a specified name.
 #
 # @input
-#   internal_name: #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string
-#       Internal name of the game mode.
+#   key: #[match_regex="^[a-z0-9_]+(:[a-z0-9_]+)?$"] string
+#       Key of the game mode.
 
 # don't select if match isn't being played
 execute if predicate hc:game/match/is_being_played \
@@ -20,7 +20,7 @@ execute if predicate hc:game/match/is_being_played \
 # get preset
 $data modify storage hc:main vars.game_context.mode.preset \
     set from storage \
-    hc:main consts.game.modes[{internal_name:"$(internal_name)"}]
+    hc:main consts.game.modes[{key:"$(key)"}]
 
 # debug message
 function hc:msg/debug/send_info { \
@@ -35,7 +35,7 @@ function hc:msg/debug/send_info { \
                 }, \
                 { \
                     storage:"hc:main", \
-                    nbt:"vars.game_context.mode.preset.internal_name", \
+                    nbt:"vars.game_context.mode.preset.key", \
                 }, \
             ], \
         }, \

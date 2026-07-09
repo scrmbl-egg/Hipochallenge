@@ -26,6 +26,6 @@ scoreboard players set hc:state_remaining_secs __hc.Casual 0
 # max amount of rounds (double rounds_to_win and subtract 1)
 execute store result score hc:max_rounds __hc.Casual \
     run \
-    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
+    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
     casual_data.rounds_to_win 2
 scoreboard players remove hc:max_rounds __hc.Casual 1

@@ -6,7 +6,7 @@
 
 # construct params
 data modify storage hc:temp select_class_params.value \
-    set from storage hc:main consts.classes[{internal_name:"hc:assassin"}].id
+    set from storage hc:main consts.classes[{key:"hc:assassin"}].id
 
 # select
 function hc.core:class/select_by_number \

@@ -6,5 +6,5 @@
 execute if score hc:state_remaining_ticks __hc.Casual matches ..0 \
     run \
     return run \
-    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
-    states[{internal_name:"intermission"}].id
+    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
+    states[{key:"intermission"}].id

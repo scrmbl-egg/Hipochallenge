@@ -78,7 +78,7 @@ execute at @s \
 # set icon style to class list_info style
 data modify entity @n[tag=__hc.NewNpc] description.with[1] \
     merge from storage hc:main consts.\
-    classes[{internal_name:"hc:recon"}].list_info.class_text_style
+    classes[{key:"hc:recon"}].list_info.class_text_style
 
 # set owner_uuid
 data modify entity @n[tag=__hc.NewNpc] \

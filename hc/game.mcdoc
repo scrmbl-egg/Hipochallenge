@@ -25,9 +25,9 @@ struct GameContext {
 
 /// Game mode struct.
 struct GameModePresetBase {
-    /// Internal name of the game mode preset.
-    internal_name: (
-        #[canonical] GameModeInternalName |
+    /// Key of the game mode preset.
+    key: (
+        #[canonical] GameModeKey |
         #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
 
@@ -40,8 +40,8 @@ struct GameModePresetBase {
     /// Sizes of the teams in this game mode. The size of this number array
     /// also determines the amount of teams present in the game mode.
     ///
-    /// - `team_sizes[0]`: First team's size.
-    /// - `team_sizes[1]`: Second team's size.
+    /// - `team_sizes[0]`: First team's size (1 to 6 players).
+    /// - `team_sizes[1]`: Second team's size (1 to 6 players).
     /// - ...
     ///
     /// TODO: maybe more teams could be supported in the future.
@@ -99,12 +99,18 @@ struct GameModePresetBase {
 }
 
 
-/// Struct for game modes.
+/// Struct for game mode states.
 struct GameModeState {
-    /// Internal name of the game mode preset.
-    internal_name: string,
+    /// **(Nullable)**
+    /// Key of the game mode state. This field is not strictly necessary for
+    /// the state machine, but it helps for not using magic or hardcoded values.
+    ///
+    /// See the last trick in the `on_tick_function` field documentation for
+    /// an example on how a state string key can be used.
+    key?: string,
 
-    /// Numeric ID of the state.
+    /// Numeric ID of the state. This is the number any `on_tick_function` must
+    /// return in order to transition to this state.
     ///
     /// `0` is not allowed, since returning it in the specified
     /// `on_tick_function` means ending the match.
@@ -148,9 +154,8 @@ struct GameModeState {
     ///  execute if predicate custom:example_predicate \
     ///     run \
     ///     return run \
-    ///     data get storage hc:main consts.game.\
-    ///     modes[{internal_name:"hc:casual"}].\
-    ///     states[{internal_name:"intermission"}].id
+    ///     data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
+    ///     states[{key:"intermission"}].id
     ///  ```
     on_tick_function: #[id="function"] string,
 
@@ -180,8 +185,8 @@ enum(int) GameModeId {
 }
 
 
-/// Game mode internal name enum.
-enum(string) GameModeInternalName {
+/// Game mode key enum.
+enum(string) GameModeKey {
     /// Casual game mode.
     Casual = "hc:casual",
 
@@ -197,7 +202,7 @@ enum(string) GameModeInternalName {
 type GameModePreset = (
     GameModePresetBase |
     struct CasualGameMode {
-        internal_name: "hc:casual",
+        key: "hc:casual",
         id: 0,
 
         /// Casual game mode data.
@@ -224,7 +229,7 @@ type GameModePreset = (
         ...GameModePresetBase,
     } |
     struct CompetitiveGameMode {
-        internal_name: "hc:competitive",
+        key: "hc:competitive",
         id: 1,
 
         /// Competitive game mode data.
@@ -254,7 +259,7 @@ type GameModePreset = (
         ...GameModePresetBase,
     } |
     struct DeathMatchGameMode {
-        internal_name: "hc:deathmatch",
+        key: "hc:deathmatch",
         id: 2,
 
         /// Deathmatch game mode data.

@@ -84,7 +84,7 @@ scoreboard players enable @s npc_assault
 # set icon style to class list_info style
 data modify entity @n[tag=__hc.NewNpc] description.with[1] \
     merge from storage hc:main consts.\
-    classes[{internal_name:"hc:assault"}].list_info.class_text_style
+    classes[{key:"hc:assault"}].list_info.class_text_style
 
 # set owner_uuid
 data modify entity @n[tag=__hc.NewNpc] \

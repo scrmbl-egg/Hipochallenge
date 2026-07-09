@@ -7,9 +7,6 @@
 # @returns
 #   Result: 1 if all constants are initialized
 
-# TODO: those objects that have "internal_name" as an identifier, should use the
-# word "key" instead.
-
 # TODO: implement game state functions (current ones are placeholders)
 # TODO: Complete the list of constants
 
@@ -33,7 +30,7 @@ data modify storage hc:main consts.game set value { \
     }, \
     modes:[ \
         { \
-            internal_name:"hc:casual", \
+            key:"hc:casual", \
             id:0, \
             name:{translate:"hc.mode.casual",fallback:"Casual"}, \
             team_sizes:[I; 3, 3], \
@@ -45,7 +42,7 @@ data modify storage hc:main consts.game set value { \
             on_end_function:"hc.core:game/mode/casual/on_end", \
             states:[ \
                 { \
-                    internal_name:"level_intro", \
+                    key:"level_intro", \
                     id:1, \
                     on_enter_function:"hc.core:game/mode/casual/level_intro/on_enter", \
                     on_tick_function:"hc.core:game/mode/casual/level_intro/on_tick", \
@@ -53,35 +50,35 @@ data modify storage hc:main consts.game set value { \
                     start_state:{}, \
                 }, \
                 { \
-                    internal_name:"intermission", \
+                    key:"intermission", \
                     id:2, \
                     on_enter_function:"hc.core:game/mode/casual/intermission/on_enter", \
                     on_tick_function:"hc.core:game/mode/casual/intermission/on_tick", \
                     on_exit_function:"hc.core:game/mode/casual/intermission/on_exit", \
                 }, \
                 { \
-                    internal_name:"round_intro", \
+                    key:"round_intro", \
                     id:3, \
                     on_enter_function:"hc.core:game/mode/casual/round_intro/on_enter", \
                     on_tick_function:"hc.core:game/mode/casual/round_intro/on_tick", \
                     on_exit_function:"hc.core:game/mode/casual/round_intro/on_exit", \
                 }, \
                 { \
-                    internal_name:"round", \
+                    key:"round", \
                     id:4, \
                     on_enter_function:"hc.core:game/mode/casual/round/on_enter", \
                     on_tick_function:"hc.core:game/mode/casual/round/on_tick", \
                     on_exit_function:"hc.core:game/mode/casual/round/on_exit", \
                 }, \
                 { \
-                    internal_name:"round_sudden_death", \
+                    key:"round_sudden_death", \
                     id:5, \
                     on_enter_function:"hc.core:game/mode/casual/round_sudden_death/on_enter", \
                     on_tick_function:"hc.core:game/mode/casual/round_sudden_death/on_tick", \
                     on_exit_function:"hc.core:game/mode/casual/round_sudden_death/on_exit", \
                 }, \
                 { \
-                    internal_name:"round_outro", \
+                    key:"round_outro", \
                     id:6, \
                     on_enter_function:"hc.core:game/mode/casual/round_outro/on_enter", \
                     on_tick_function:"hc.core:game/mode/casual/round_outro/on_tick", \
@@ -98,7 +95,7 @@ data modify storage hc:main consts.game set value { \
             }, \
         }, \
         { \
-            internal_name:"hc:competitive", \
+            key:"hc:competitive", \
             id:1, \
             name:{translate:"hc.mode.competitive",fallback:"Competitive"}, \
             team_sizes:[I; 3, 3], \
@@ -110,7 +107,7 @@ data modify storage hc:main consts.game set value { \
             on_end_function:"hc.core:game/mode/competitive/on_end", \
             states:[ \
                 { \
-                    internal_name:"level_intro", \
+                    key:"level_intro", \
                     id:1, \
                     on_enter_function:"hc.core:game/mode/competitive/level_intro/on_enter", \
                     on_tick_function:"hc.core:game/mode/competitive/level_intro/on_tick", \
@@ -118,14 +115,14 @@ data modify storage hc:main consts.game set value { \
                     start_state:{}, \
                 }, \
                 { \
-                    internal_name:"intermission", \
+                    key:"intermission", \
                     id:2, \
                     on_enter_function:"hc.core:game/mode/competitive/intermission/on_enter", \
                     on_tick_function:"hc.core:game/mode/competitive/intermission/on_tick", \
                     on_exit_function:"hc.core:game/mode/competitive/intermission/on_exit", \
                 }, \
                 { \
-                    internal_name:"round", \
+                    key:"round", \
                     id:3, \
                     on_enter_function:"hc.core:game/mode/competitive/round/on_enter", \
                     on_tick_function:"hc.core:game/mode/competitive/round/on_tick", \
@@ -143,7 +140,7 @@ data modify storage hc:main consts.game set value { \
             }, \
         }, \
         { \
-            internal_name:"hc:deathmatch", \
+            key:"hc:deathmatch", \
             id:2, \
             name:{translate:"hc.mode.deathmatch",fallback:"Deathmatch"}, \
             team_sizes:[I; 3, 3], \
@@ -155,7 +152,7 @@ data modify storage hc:main consts.game set value { \
             on_end_function:"std:empty", \
             states:[ \
                 { \
-                    internal_name:"battle", \
+                    key:"battle", \
                     id:1, \
                     start_state:{}, \
                     on_enter_function:"std:empty", \
@@ -179,7 +176,7 @@ data modify storage hc:main consts.limits set value { \
 ## TEAM COLOR PRESETS
 # neutral -> team_color_presets[0]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:neutral", \
+    key:"hc:neutral", \
     id:0, \
     default_name:{translate:"hc.teams.neutral.name",fallback:"NEUTRAL"}, \
     name_color:"#98bdc2", \
@@ -191,7 +188,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 
 # red -> team_color_presets[1]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:red", \
+    key:"hc:red", \
     id:1, \
     default_name:{translate:"hc.teams.colors.red",fallback:"RED"}, \
     name_color:"#ff3030", \
@@ -203,7 +200,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 
 # yellow -> team_color_presets[2]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:yellow", \
+    key:"hc:yellow", \
     id:2, \
     default_name:{translate:"hc.teams.colors.yellow",fallback:"YELLOW"}, \
     name_color:"#fffb0a", \
@@ -215,7 +212,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 
 # green -> team_color_presets[3]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:green", \
+    key:"hc:green", \
     id:3, \
     default_name:{translate:"hc.teams.colors.green",fallback:"GREEN"}, \
     name_color:"#2ece49", \
@@ -227,7 +224,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 
 # blue -> team_color_presets[4]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:blue", \
+    key:"hc:blue", \
     id:4, \
     default_name:{translate:"hc.teams.colors.blue",fallback:"BLUE"}, \
     name_color:"#3f3bff", \
@@ -239,7 +236,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 
 # purple -> team_color_presets[5]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:purple", \
+    key:"hc:purple", \
     id:5, \
     default_name:{translate:"hc.teams.colors.purple",fallback:"PURPLE"}, \
     name_color:"#df2fdf", \
@@ -251,7 +248,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 
 # orange -> team_color_presets[6]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:orange", \
+    key:"hc:orange", \
     id:6, \
     default_name:{translate:"hc.teams.colors.orange",fallback:"ORANGE"}, \
     name_color:"#ff811a", \
@@ -263,7 +260,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 
 # cyan -> team_color_presets[7]
 data modify storage hc:main consts.team_color_presets append value { \
-    internal_name:"hc:cyan", \
+    key:"hc:cyan", \
     id:7, \
     default_name:{translate:"hc.teams.colors.cyan",fallback:"CYAN"}, \
     name_color:"#34d5f1", \
@@ -276,7 +273,7 @@ data modify storage hc:main consts.team_color_presets append value { \
 ## CLASSES
 # tank -> classes[0]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"hc:tank", \
+    key:"hc:tank", \
     id:1, \
     name:{translate:"hc.class.tank.name",fallback:"Tank"}, \
     icon:{translate:"hc.class.tank.icon",fallback:"\u26e8"}, \
@@ -432,7 +429,7 @@ data modify storage hc:main consts.classes append value { \
 
 # marksman -> classes[1]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"hc:marksman", \
+    key:"hc:marksman", \
     id:2, \
     name:{translate:"hc.class.marksman.name",fallback:"Marksman"}, \
     icon:{translate:"hc.class.marksman.icon",fallback:"\ud83c\udff9"}, \
@@ -548,7 +545,7 @@ data modify storage hc:main consts.classes append value { \
 
 # assassin -> classes[2]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"hc:assassin", \
+    key:"hc:assassin", \
     id:3, \
     name:{translate:"hc.class.assassin.name",fallback:"Assassin"}, \
     icon:{translate:"hc.class.assassin.icon",fallback:"\ud83d\udde1"}, \
@@ -672,7 +669,7 @@ data modify storage hc:main consts.classes append value { \
 
 # support -> classes[3]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"hc:support", \
+    key:"hc:support", \
     id:4, \
     name:{translate:"hc.class.support.name",fallback:"Support"}, \
     icon:{translate:"hc.class.support.icon",fallback:"\u2795"}, \
@@ -767,7 +764,7 @@ data modify storage hc:main consts.classes append value { \
 
 # recon -> classes[4]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"hc:recon", \
+    key:"hc:recon", \
     id:5, \
     name:{translate:"hc.class.recon.name",fallback:"Recon"}, \
     icon:{translate:"hc.class.recon.icon",fallback:"\ud83d\udc41"}, \
@@ -875,7 +872,7 @@ data modify storage hc:main consts.classes append value { \
 
 # assault -> classes[5]
 data modify storage hc:main consts.classes append value { \
-    internal_name:"hc:assault", \
+    key:"hc:assault", \
     id:6, \
     name:{translate:"hc.class.assault.name",fallback:"Assault"}, \
     icon:{translate:"hc.class.assault.icon",fallback:"\u2605"}, \
@@ -973,35 +970,35 @@ data modify storage hc:main consts.classes append value { \
 ## LEVELS
 # subterranean decay
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:cnduit", \
+    key:"hc:cnduit", \
     id:0, \
     name:{translate:"hc.level.cnduit.name",fallback:"Conduits"}, \
 }
 
 # froggyland playplace 2
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:froggy", \
+    key:"hc:froggy", \
     id:1, \
     name:{translate:"hc.level.froggy.name",fallback:"Froggyland"}, \
 }
 
 # sepulchral sacrifice 2
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:sacrif", \
+    key:"hc:sacrif", \
     id:2, \
     name:{translate:"hc.level.sacrif.name",fallback:"Sacrifice"}, \
 }
 
 # villager factory
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:fctory", \
+    key:"hc:fctory", \
     id:3, \
     name:{translate:"hc.level.fctory.name",fallback:"Villager Factory"}, \
 }
 
 # crazy trains
 data modify storage hc:main consts.levels append value { \
-    internal_name:"hc:derail", \
+    key:"hc:derail", \
     id:4, \
     name:{translate:"hc.level.derail.name",fallback:"Derailed"}, \
 }

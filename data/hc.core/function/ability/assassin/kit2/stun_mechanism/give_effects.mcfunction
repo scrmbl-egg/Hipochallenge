@@ -23,7 +23,7 @@ $execute at @s \
     run \
     function hc:util/effect/give_ability_effects \
     with storage hc:main \
-    consts.classes[{internal_name:"hc:assassin"}].\
+    consts.classes[{key:"hc:assassin"}].\
     kits[{id:2}].assassin_k2_data.stun_mechanism.effects_info
 
 function hc:msg/debug/send_info { \

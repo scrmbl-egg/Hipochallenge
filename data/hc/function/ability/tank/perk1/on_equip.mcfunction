@@ -13,7 +13,7 @@ execute if entity @s[ \
     run \
     return run \
     data get storage hc:main consts.\
-    classes[{internal_name:"hc:tank"}].\
+    classes[{key:"hc:tank"}].\
     perks[{id:1}].tank_p1_data.nutritious_meal.give_delay_ticks
 
 # give directly if in creative (implicit) or in neutral/training team

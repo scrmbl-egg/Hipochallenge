@@ -26,5 +26,5 @@ execute store result bossbar hc:casual/intermission value \
 execute if score hc:state_remaining_ticks __hc.Casual matches ..0 \
     run \
     return run \
-    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
-    states[{internal_name:"round_intro"}].id
+    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
+    states[{key:"round_intro"}].id

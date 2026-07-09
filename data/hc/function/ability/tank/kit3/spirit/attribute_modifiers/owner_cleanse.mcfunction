@@ -6,5 +6,5 @@
 
 function hc:util/attribute/remove_modifier_array \
     with storage hc:main \
-    consts.classes[{internal_name:"hc:tank"}].\
+    consts.classes[{key:"hc:tank"}].\
     kits[{id:3}].tank_k3_data.spirit.owner_debuff.modifiers

@@ -3,13 +3,13 @@
 # Sets the first team's color, and does all necessary updates.
 #
 # @input
-#   internal_name: string
-#       Internal name of the color that will replace the previous color.
+#   key: string
+#       Key of the color that will replace the previous color.
 
 # set team context in global variables
 $data modify storage hc:main vars.team_contexts.team1.color_preset \
     set from storage hc:main \
-    consts.team_color_presets[{internal_name:"$(internal_name)"}]
+    consts.team_color_presets[{key:"$(key)"}]
 
 ## setup temp data
 data modify storage hc:temp set_color set value { \

@@ -7,9 +7,9 @@ struct Level {
     /// Numeric ID of the level.
     id: LevelId,
 
-    /// Internal name of the level.
-    internal_name: (
-        #[canonical] LevelInternalName |
+    /// Key the level.
+    key: (
+        #[canonical] LevelKey |
         #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
 
@@ -37,21 +37,21 @@ enum(int) LevelId {
 }
 
 
-/// Enum for level internal names. These are shortened names so they match
-/// their `trigger lv_*` commands.
-enum(string) LevelInternalName {
-    /// Internal name for the Conduit level.
+/// Enum for level keys. These are shortened names so they match
+/// their `trigger lv_*` command names.
+enum(string) LevelKey {
+    /// Key for the Conduit level.
     Conduits = "hc:cnduit",
 
-    /// Internal name for the Froggyland level.
+    /// Key for the Froggyland level.
     FroggyLand = "hc:froggy",
 
-    /// Internal name for the Sepulchral level.
+    /// Key for the Sepulchral level.
     Sacrifice = "hc:sacrif",
 
-    /// Internal name for the Villager Factory level.
+    /// Key for the Villager Factory level.
     VillagerFactory = "hc:fctory",
 
-    /// Internal name for the Derailed level.
+    /// Key for the Derailed level.
     Derailed = "hc:derail",
 }

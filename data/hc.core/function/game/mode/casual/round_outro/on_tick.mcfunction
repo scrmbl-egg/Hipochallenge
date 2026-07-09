@@ -3,5 +3,5 @@
 # Function called each tick of the round_outro state of the casual game mode.
 
 return run \
-    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
-    states[{internal_name:"intermission"}].id
+    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
+    states[{key:"intermission"}].id

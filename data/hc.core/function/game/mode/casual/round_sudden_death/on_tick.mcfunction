@@ -6,5 +6,5 @@
 execute if stopwatch hc:casual/round_overtime 5.. \
     run \
     return run \
-    data get storage hc:main consts.game.modes[{internal_name:"hc:casual"}].\
-    states[{internal_name:"round_outro"}].id
+    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
+    states[{key:"round_outro"}].id

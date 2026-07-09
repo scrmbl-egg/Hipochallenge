@@ -7,9 +7,9 @@ use ::java::util::avatar::Profile
 
 /// Struct for representing a team preset.
 struct TeamColorPreset {
-    /// Internal name of the team.
-    internal_name: (
-        #[canonical] TeamPresetInternalName |
+    /// Key of the team.
+    key: (
+        #[canonical] TeamPresetKey |
         #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
 
@@ -62,8 +62,8 @@ struct TeamContext {
 }
 
 
-/// Enum for team preset internal names
-enum(string) TeamPresetInternalName {
+/// Enum for team preset keys.
+enum(string) TeamPresetKey {
     /// Neutral team color name (gray).
     Neutral = "hc:neutral",
 

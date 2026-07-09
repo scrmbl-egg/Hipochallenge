@@ -20,7 +20,7 @@ scoreboard objectives add __hc.NewFlareArrow dummy
 execute store result score hc:max __hc.NewFlareArrow \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"hc:recon"}].\
+    classes[{key:"hc:recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.max_amount
 
 # get current amount of arrows (+1 if charged in crossbow)
@@ -51,7 +51,7 @@ execute if score \
     store result score @s hc.ReconKit2FlareArrowCooldown \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"hc:recon"}].\
+    classes[{key:"hc:recon"}].\
     kits[{id:2}].recon_k2_data.flare_arrow.cooldown_ticks
 
 # free memory

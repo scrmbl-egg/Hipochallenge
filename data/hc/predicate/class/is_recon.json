@@ -6,12 +6,12 @@
             "min": {
                 "type": "minecraft:storage",
                 "storage": "hc:main",
-                "path": "consts.classes[{internal_name:\"hc:recon\"}].id"
+                "path": "consts.classes[{key:\"hc:recon\"}].id"
             },
             "max": {
                 "type": "minecraft:storage",
                 "storage": "hc:main",
-                "path": "consts.classes[{internal_name:\"hc:recon\"}].id"
+                "path": "consts.classes[{key:\"hc:recon\"}].id"
             }
         }
     }

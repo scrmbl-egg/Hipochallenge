@@ -2,4 +2,4 @@
 #
 # Sets the second team's color to orange.
 
-function hc.core:team/team2/color/set {internal_name:"hc:orange"}
+function hc.core:team/team2/color/set {key:"hc:orange"}

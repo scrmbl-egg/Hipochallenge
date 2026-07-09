@@ -7,7 +7,7 @@
             "max": {
                 "type": "minecraft:storage",
                 "storage": "hc:main",
-                "path": "consts.classes[{internal_name:\"hc:assassin\"}].kits[{id:1}].assassin_k1_data.parry.window_duration_ticks"
+                "path": "consts.classes[{key:\"hc:assassin\"}].kits[{id:1}].assassin_k1_data.parry.window_duration_ticks"
             }
         }
     }

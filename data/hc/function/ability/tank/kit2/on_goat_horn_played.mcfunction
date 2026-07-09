@@ -34,5 +34,5 @@ tag @s add hc.TankKit2GoatHornDetecting
 execute store result score @s hc.TankKit2GoatHornRecoveryTicks \
     run \
     data get storage hc:main consts.\
-    classes[{internal_name:"hc:tank"}].\
+    classes[{key:"hc:tank"}].\
     kits[{id:2}].tank_k2_data.horn.recovery_ticks

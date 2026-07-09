@@ -51,11 +51,11 @@ function hc:msg/debug/send_info { \
             with:[ \
                 { \
                     storage:"hc:main", \
-                    nbt:"vars.game_context.mode.state.internal_name", \
+                    nbt:"vars.game_context.mode.state.key", \
                 }, \
                 { \
                     storage:"hc:main", \
-                    nbt:"vars.game_context.mode.preset.internal_name", \
+                    nbt:"vars.game_context.mode.preset.key", \
                 }, \
             ], \
         }, \
