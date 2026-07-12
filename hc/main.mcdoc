@@ -34,28 +34,34 @@ struct MainStorage {
             modes: [GameModePreset],
         },
 
-        /// Limits
+        /// Limit related constants.
+        ///
+        /// These constants are meant to prevent systems in the datapack from
+        /// running indefinitely or causing performance issues.
         limits: struct LimitConstants {
             /// Lifetime in ticks of projectiles that have no gravity.
             no_gravity_projectiles_lifetime_ticks: int @ 0..,
         },
 
-        /// List of available classes, with their constants.
+        /// List of available classes.
         classes: [Class],
 
-        /// Amount of classes.
+        /// Amount of classes defined in the `classes` list. This constant is
+        /// defined for datapack predicates.
         class_count: int @ 0..,
 
         /// List of available team color presets.
         team_color_presets: [TeamColorPreset],
 
-        /// Amount of team presets.
+        /// Amount of team color presets defined in the `team_color_presets`
+        /// list. This constant is defined for datapack predicates.
         team_color_preset_count: int @ 0..,
 
-        /// Available levels.
+        /// List of available levels.
         levels: [Level],
 
-        /// Amount of levels.
+        /// Amount of levels defined in the `levels` list. This constant is
+        /// defined for datapack predicates.
         level_count: int @ 0..,
     },
     /// Global variables of the datapack.
