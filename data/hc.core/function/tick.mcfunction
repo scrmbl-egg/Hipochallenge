@@ -50,7 +50,7 @@ function #hc.core:fx/tick
 function #hc.core:level/tick
 
 # match request (i wish i could put this thing on a fucking predicate)
-execute if data storage hc:main vars.game_context.match_requested \
+execute if predicate hc:game/match/is_being_requested \
     run \
     function hc.core:game/match/request/tick
 

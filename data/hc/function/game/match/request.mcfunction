@@ -17,7 +17,7 @@ execute if predicate hc:game/match/is_being_played \
             fallback:"A match can't be requested because a match is already being played", \
         }, \
     }
-execute if data storage hc:main vars.game_context.match_requested \
+execute if predicate hc:game/match/is_being_requested \
     run \
     function hc:msg/private/send_error { \
         text:{ \

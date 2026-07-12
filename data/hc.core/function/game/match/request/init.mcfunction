@@ -4,8 +4,8 @@
 #
 # @context player
 
-## set global variable flag
-data modify storage hc:main vars.game_context.match_requested set value {}
+## set global variable to true
+data modify storage hc:main vars.game_context.requesting_match set value true
 
 ## create temp match request scoreboard
 scoreboard objectives add __hc.MatchRequest dummy

@@ -41,8 +41,8 @@ data modify storage hc:main vars.reload_count \
 
 
 ## GAME CONTEXT
-# match requested
-data remove storage hc:main vars.game_context.match_requested
+# if a match is being requested, cancel it
+function hc:game/match/request/cancel
 
 # mode
 function hc:game/mode/select {key:"hc:casual"}

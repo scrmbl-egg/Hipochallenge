@@ -5,8 +5,11 @@ use super::level::Level
 
 /// Game context/global variables struct.
 struct GameContext {
-    /// Flag that indicates whether a match is being currently requested.
-    match_requested?: struct {},
+    /// Indicates whether a match is currently being requested.
+    ///
+    /// It is recommended to check if a match is being requested by using the
+    /// `hc:game/match/is_being_requested` predicate.
+    requesting_match: boolean,
 
     /// Current game mode's data.
     mode: struct GameModeContext {

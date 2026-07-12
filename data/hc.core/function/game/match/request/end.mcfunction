@@ -7,8 +7,8 @@
 # remove display
 function hc.core:game/match/request/display/remove
 
-# remove global flag
-data remove storage hc:main vars.game_context.match_requested
+# set requesting_match to false
+data modify storage hc:main vars.game_context.requesting_match set value false
 
 # remove scoreboard
 scoreboard objectives remove __hc.MatchRequest
