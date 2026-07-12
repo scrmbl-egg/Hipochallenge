@@ -10,10 +10,14 @@ struct GameContext {
 
     /// Current game mode's data.
     mode: struct GameModeContext {
-        /// Current state of the game mode. If this field is an empty struct
-        /// `{}`, it means there is no current state, and thus, a match isn't
-        /// being currently played.
-        state: (GameModeState | struct NullGameModeState {}),
+        /// **(Nullable)**
+        /// Current state of the game mode.
+        ///
+        /// If this field isn't present, it means there is no current state,
+        /// and thus, a match isn't being currently played. If you want to check
+        /// if a match is being played, it is recommended to use the
+        /// `hc:game/match/is_being_played` predicate.
+        state?: GameModeState,
 
         /// Game mode preset.
         preset: GameModePreset,
