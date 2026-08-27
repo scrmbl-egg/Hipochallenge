@@ -6,9 +6,9 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:heart_of_the_sea",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:item_name": {
                                     "translate": "hc.items.tank.kit3.bubble_shield",

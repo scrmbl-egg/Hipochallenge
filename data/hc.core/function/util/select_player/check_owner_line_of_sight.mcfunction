@@ -4,7 +4,7 @@
 #
 # @context player (possible selection target)
 # @input
-#   target_mode: ::Hipochallenge::mcdoc::player_selection::PlayerSelectionTargetMode
+#   target_mode: ::hc::player_selection::PlayerSelectionTargetMode
 #       Target mode, which specifies which players will be selected.
 #   max_distance: float @ 0..
 #       Maximum amount of distance the target can be from the executing player
@@ -23,15 +23,14 @@ tag @s add hc.SelectPlayerMe
 
 # check if self (current checked target) is in owner line of sight
 $execute as @p[nbt={UUID:$(owner_uuid)}] if predicate { \
-    condition: "minecraft:entity_properties", \
-    entity: "this", \
-    predicate: { \
-        type: "minecraft:player", \
-        type_specific: { \
-            type: "minecraft:player", \
-            looking_at: { \
-                type: "minecraft:player", \
-                nbt: "{Tags:[\"hc.SelectPlayerMe\"]}", \
+    type:"minecraft:entity_properties", \
+    entity:"this", \
+    predicate:{ \
+        "minecraft:entity_type":"minecraft:player", \
+        "minecraft:type_specific/player":{ \
+            looking_at:{ \
+                "minecraft:entity_type":"minecraft:player", \
+                "minecraft:nbt":"{Tags:[\"hc.SelectPlayerMe\"]}", \
             }, \
         }, \
     }, \

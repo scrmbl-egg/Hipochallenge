@@ -6,9 +6,9 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:stone_hoe",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:item_name": {
                                     "translate": "hc.items.marksman.kit1.sickle",

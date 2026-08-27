@@ -1,68 +1,71 @@
-[
-    {
-        "function": "minecraft:set_item",
-        "item": "minecraft:shield"
-    },
-    {
-        "function": "minecraft:set_name",
-        "entity": "this",
-        "target": "custom_name",
-        "name": {
-            "translate": "item.minecraft.shield",
-            "fallback": "Shield",
-            "italic": false
-        }
-    },
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:custom_data": {
-                "hc:item/id": "tank_shield"
-            },
-            "minecraft:unbreakable": {},
-            "minecraft:base_color": "black",
-            "minecraft:banner_patterns": [
-                {
-                    "pattern": "minecraft:stripe_downleft",
-                    "color": "white"
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "type": "minecraft:set_item",
+            "item": "minecraft:shield"
+        },
+        {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "target": "custom_name",
+            "name": {
+                "translate": "item.minecraft.shield",
+                "fallback": "Shield",
+                "italic": false
+            }
+        },
+        {
+            "type": "minecraft:set_components",
+            "components": {
+                "minecraft:custom_data": {
+                    "hc:item/id": "tank_shield"
                 },
-                {
-                    "pattern": "minecraft:rhombus",
-                    "color": "blue"
-                },
-                {
-                    "pattern": "minecraft:stripe_downleft",
-                    "color": "black"
-                },
-                {
-                    "pattern": "minecraft:circle",
-                    "color": "blue"
-                },
-                {
-                    "pattern": "minecraft:flower",
-                    "color": "black"
-                },
-                {
-                    "pattern": "minecraft:triangles_top",
-                    "color": "blue"
-                },
-                {
-                    "pattern": "minecraft:triangles_bottom",
-                    "color": "blue"
-                },
-                {
-                    "pattern": "minecraft:border",
-                    "color": "black"
+                "minecraft:unbreakable": {},
+                "minecraft:base_color": "black",
+                "minecraft:banner_patterns": [
+                    {
+                        "pattern": "minecraft:stripe_downleft",
+                        "color": "white"
+                    },
+                    {
+                        "pattern": "minecraft:rhombus",
+                        "color": "blue"
+                    },
+                    {
+                        "pattern": "minecraft:stripe_downleft",
+                        "color": "black"
+                    },
+                    {
+                        "pattern": "minecraft:circle",
+                        "color": "blue"
+                    },
+                    {
+                        "pattern": "minecraft:flower",
+                        "color": "black"
+                    },
+                    {
+                        "pattern": "minecraft:triangles_top",
+                        "color": "blue"
+                    },
+                    {
+                        "pattern": "minecraft:triangles_bottom",
+                        "color": "blue"
+                    },
+                    {
+                        "pattern": "minecraft:border",
+                        "color": "black"
+                    }
+                ],
+                "minecraft:tooltip_display": {
+                    "hidden_components": [
+                        "minecraft:custom_data",
+                        "minecraft:unbreakable",
+                        "minecraft:base_color",
+                        "minecraft:banner_patterns"
+                    ]
                 }
-            ],
-            "minecraft:tooltip_display": {
-                "hidden_components": [
-                    "minecraft:custom_data",
-                    "minecraft:unbreakable",
-                    "minecraft:base_color",
-                    "minecraft:banner_patterns"
-                ]
             }
         }
-    }
-]
+    ]
+}

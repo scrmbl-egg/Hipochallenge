@@ -13,17 +13,17 @@ execute if score @s npc_assassin matches 0 \
 # don't run anything if it's 0 or uninitialized
 
 execute unless predicate { \
-    condition:"minecraft:any_of", \
+    type:"minecraft:any_of", \
     terms:[ \
         { \
-            condition:"minecraft:entity_scores", \
+            type:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
                 npc_assassin:{min:-2147483648,max:-1}, \
             }, \
         }, \
         { \
-            condition:"minecraft:entity_scores", \
+            type:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
                 npc_assassin:{min:1,max:2147483647}, \

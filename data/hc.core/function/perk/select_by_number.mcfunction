@@ -8,7 +8,7 @@
 
 # return early if value doesn't correspond to kit
 $execute unless predicate { \
-    condition:"minecraft:value_check", \
+    type:"minecraft:value_check", \
     range:{ \
         min:1, \
         max:3, \

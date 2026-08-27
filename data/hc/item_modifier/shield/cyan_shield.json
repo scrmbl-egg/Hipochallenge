@@ -1,48 +1,51 @@
-[
-    {
-        "function": "minecraft:set_item",
-        "item": "minecraft:shield"
-    },
-    {
-        "function": "minecraft:set_name",
-        "entity": "this",
-        "target": "custom_name",
-        "name": {
-            "translate": "item.minecraft.shield",
-            "fallback": "Shield",
-            "italic": false
-        }
-    },
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:custom_data": {
-                "hc:item/id": "tank_shield"
-            },
-            "minecraft:unbreakable": {},
-            "minecraft:base_color": "light_blue",
-            "minecraft:banner_patterns": [
-                {
-                    "pattern": "minecraft:gradient_up",
-                    "color": "blue"
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "type": "minecraft:set_item",
+            "item": "minecraft:shield"
+        },
+        {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "target": "custom_name",
+            "name": {
+                "translate": "item.minecraft.shield",
+                "fallback": "Shield",
+                "italic": false
+            }
+        },
+        {
+            "type": "minecraft:set_components",
+            "components": {
+                "minecraft:custom_data": {
+                    "hc:item/id": "tank_shield"
                 },
-                {
-                    "pattern": "minecraft:circle",
-                    "color": "light_blue"
-                },
-                {
-                    "pattern": "minecraft:globe",
-                    "color": "white"
+                "minecraft:unbreakable": {},
+                "minecraft:base_color": "light_blue",
+                "minecraft:banner_patterns": [
+                    {
+                        "pattern": "minecraft:gradient_up",
+                        "color": "blue"
+                    },
+                    {
+                        "pattern": "minecraft:circle",
+                        "color": "light_blue"
+                    },
+                    {
+                        "pattern": "minecraft:globe",
+                        "color": "white"
+                    }
+                ],
+                "minecraft:tooltip_display": {
+                    "hidden_components": [
+                        "minecraft:custom_data",
+                        "minecraft:unbreakable",
+                        "minecraft:base_color",
+                        "minecraft:banner_patterns"
+                    ]
                 }
-            ],
-            "minecraft:tooltip_display": {
-                "hidden_components": [
-                    "minecraft:custom_data",
-                    "minecraft:unbreakable",
-                    "minecraft:base_color",
-                    "minecraft:banner_patterns"
-                ]
             }
         }
-    }
-]
+    ]
+}

@@ -6,11 +6,8 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:paper",
-                    "functions": [
-                        {
-                            "function": "minecraft:reference",
-                            "name": "hc:item/class/assassin/kit1/sword"
-                        }
+                    "modifier": [
+                        "hc:item/class/assassin/kit1/sword"
                     ]
                 }
             ],

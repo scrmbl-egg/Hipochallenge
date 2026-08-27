@@ -1,8 +1,8 @@
 {
     "type": "minecraft:generic",
-    "functions": [
+    "modifier": [
         {
-            "function": "minecraft:set_components",
+            "type": "minecraft:set_components",
             "components": {
                 "minecraft:custom_data": {
                     "hc:entity/item/no_pickup": {}
@@ -58,9 +58,9 @@
                     "type": "minecraft:item",
                     "name": "minecraft:potion",
                     "weight": 3,
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:potion_contents": {
                                     "custom_color": 10931402
@@ -80,9 +80,9 @@
                 }
             ],
             "rolls": 1,
-            "functions": [
+            "modifier": [
                 {
-                    "function": "minecraft:set_components",
+                    "type": "minecraft:set_components",
                     "components": {
                         "minecraft:enchantment_glint_override": true
                     }

@@ -1,12 +1,10 @@
-[
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:custom_data": {
-                "hc:item/id": "hc:assassin/kit1/sword/disabled"
-            },
-            "minecraft:enchantment_glint_override": false,
-            "!minecraft:blocks_attacks": {}
-        }
+{
+    "type": "minecraft:set_components",
+    "components": {
+        "minecraft:custom_data": {
+            "hc:item/id": "hc:assassin/kit1/sword/disabled"
+        },
+        "minecraft:enchantment_glint_override": false,
+        "!minecraft:blocks_attacks": {}
     }
-]
+}

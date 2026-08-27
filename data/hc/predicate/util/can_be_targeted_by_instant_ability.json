@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:all_of",
+    "terms": [
+        {
+            "type": "minecraft:inverted",
+            "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": {
+                        "Tags": ["hc.Dead"]
+                    }
+                }
+            }
+        },
+        "hc:team/is_in_pvp_team",
+        {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "minecraft:entity_type": "#hc:player_like"
+            }
+        },
+        {
+            "type": "minecraft:inverted",
+            "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "minecraft:type_specific/player": {
+                        "gamemode": ["spectator"]
+                    }
+                }
+            }
+        }
+    ]
+}

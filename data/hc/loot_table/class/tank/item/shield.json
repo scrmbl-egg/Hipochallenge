@@ -6,9 +6,9 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:shield",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_name": {
                                     "translate": "item.minecraft.shield",
@@ -40,13 +40,8 @@
                             }
                         },
                         {
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "hc:team/color/is_in_red_team"
-                                }
-                            ],
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
+                            "condition": "hc:team/color/is_in_red_team",
                             "components": {
                                 "minecraft:base_color": "red",
                                 "minecraft:banner_patterns": [
@@ -58,13 +53,8 @@
                             }
                         },
                         {
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "hc:team/color/is_in_yellow_team"
-                                }
-                            ],
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
+                            "condition": "hc:team/color/is_in_yellow_team",
                             "components": {
                                 "minecraft:base_color": "yellow",
                                 "minecraft:banner_patterns": [
@@ -84,13 +74,8 @@
                             }
                         },
                         {
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "hc:team/color/is_in_green_team"
-                                }
-                            ],
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
+                            "condition": "hc:team/color/is_in_green_team",
                             "components": {
                                 "minecraft:base_color": "green",
                                 "minecraft:banner_patterns": [
@@ -106,13 +91,8 @@
                             }
                         },
                         {
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "hc:team/color/is_in_blue_team"
-                                }
-                            ],
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
+                            "condition": "hc:team/color/is_in_blue_team",
                             "components": {
                                 "minecraft:base_color": "black",
                                 "minecraft:banner_patterns": [
@@ -152,13 +132,8 @@
                             }
                         },
                         {
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "hc:team/color/is_in_purple_team"
-                                }
-                            ],
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
+                            "condition": "hc:team/color/is_in_purple_team",
                             "components": {
                                 "minecraft:base_color": "purple",
                                 "minecraft:banner_patterns": [
@@ -186,13 +161,8 @@
                             }
                         },
                         {
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "hc:team/color/is_in_orange_team"
-                                }
-                            ],
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
+                            "condition": "hc:team/color/is_in_orange_team",
                             "components": {
                                 "minecraft:base_color": "orange",
                                 "minecraft:banner_patterns": [
@@ -220,13 +190,8 @@
                             }
                         },
                         {
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "hc:team/color/is_in_cyan_team"
-                                }
-                            ],
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
+                            "condition": "hc:team/color/is_in_cyan_team",
                             "components": {
                                 "minecraft:base_color": "light_blue",
                                 "minecraft:banner_patterns": [

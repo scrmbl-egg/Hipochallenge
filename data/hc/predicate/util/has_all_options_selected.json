@@ -1,17 +1,8 @@
 {
-    "condition": "minecraft:all_of",
+    "type": "minecraft:all_of",
     "terms": [
-        {
-            "condition": "minecraft:reference",
-            "name": "hc:class/has_selected"
-        },
-        {
-            "condition": "minecraft:reference",
-            "name": "hc:kit/has_selected"
-        },
-        {
-            "condition": "minecraft:reference",
-            "name": "hc:perk/has_selected"
-        }
+        "hc:class/has_selected",
+        "hc:kit/has_selected",
+        "hc:perk/has_selected"
     ]
 }

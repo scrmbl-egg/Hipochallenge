@@ -6,24 +6,22 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:player_head",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:fill_player_head",
+                            "type": "minecraft:fill_player_head",
                             "entity": "this"
                         }
                     ]
                 }
             ],
             "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "minecraft:entity_properties",
-                    "entity": "this",
-                    "predicate": {
-                        "type": "minecraft:player"
-                    }
+            "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "minecraft:entity_type": "minecraft:player"
                 }
-            ]
+            }
         }
     ]
 }

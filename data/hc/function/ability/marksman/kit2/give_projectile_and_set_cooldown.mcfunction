@@ -29,10 +29,10 @@ execute store result score hc:max __hc.NewProjectile \
 scoreboard players set hc:added_projectiles __hc.NewProjectile 0
 
 execute if predicate { \
-    condition:"minecraft:all_of", \
+    type:"minecraft:all_of", \
     terms:[ \
-        {condition:"minecraft:reference",name:"hc:class/is_marksman"}, \
-        {condition:"minecraft:reference",name:"hc:perk/is_perk3"}, \
+        "hc:class/is_marksman", \
+        "hc:perk/is_perk3", \
     ], \
 } \
     store result score hc:added_projectiles __hc.NewProjectile \

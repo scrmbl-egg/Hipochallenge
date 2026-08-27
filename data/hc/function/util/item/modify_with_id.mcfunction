@@ -18,14 +18,20 @@
 #
 # this predicate helps us catch the entity in every possible slot of the
 # player inventory
+
+# TODO: this function can be deprecated or changed entirely with the following
+# command
+#item override entity @s {...} with minecraft:abandoned_camp_map
+
+
 $execute unless predicate { \
-    condition:"minecraft:any_of", \
+    type:"minecraft:any_of", \
     terms:[ \
         { \
-            condition:"minecraft:entity_properties", \
+            type:"minecraft:entity_properties", \
             entity:"this", \
             predicate:{ \
-                slots:{ \
+                "minecraft:slots":{ \
                     "container.*":{ \
                         components:{ \
                             "minecraft:custom_data":{ \
@@ -37,10 +43,10 @@ $execute unless predicate { \
             }, \
         }, \
         { \
-            condition:"minecraft:entity_properties", \
+            type:"minecraft:entity_properties", \
             entity:"this", \
             predicate:{ \
-                slots:{ \
+                "minecraft:slots":{ \
                     "player.crafting.*":{ \
                         components:{ \
                             "minecraft:custom_data":{ \
@@ -52,10 +58,10 @@ $execute unless predicate { \
             }, \
         }, \
         { \
-            condition:"minecraft:entity_properties", \
+            type:"minecraft:entity_properties", \
             entity:"this", \
             predicate:{ \
-                slots:{ \
+                "minecraft:slots":{ \
                     "armor.*":{ \
                         components:{ \
                             "minecraft:custom_data":{ \
@@ -67,10 +73,10 @@ $execute unless predicate { \
             }, \
         }, \
         { \
-            condition:"minecraft:entity_properties", \
+            type:"minecraft:entity_properties", \
             entity:"this", \
             predicate:{ \
-                slots:{ \
+                "minecraft:slots":{ \
                     "player.cursor":{ \
                         components:{ \
                             "minecraft:custom_data":{ \

@@ -4,10 +4,10 @@
 execute as @s \
     on attacker \
     unless predicate { \
-        condition:"minecraft:all_of", \
+        type:"minecraft:all_of", \
         terms:[ \
-            {condition:"minecraft:reference",name:"hc:class/is_tank"}, \
-            {condition:"minecraft:reference",name:"hc:perk/is_perk2"}, \
+            "hc:class/is_tank", \
+            "hc:perk/is_perk2", \
         ], \
     } \
     run \

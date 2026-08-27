@@ -6,52 +6,47 @@
                 "damage": {
                     "blocked": true
                 },
-                "player": [
-                    {
-                        "condition": "minecraft:all_of",
-                        "terms": [
-                            {
-                                "condition": "minecraft:reference",
-                                "name": "hc.core:class/assassin/kit1/is_in_parry_window"
-                            },
-                            {
-                                "condition": "minecraft:any_of",
-                                "terms": [
-                                    {
-                                        "condition": "minecraft:entity_properties",
-                                        "entity": "this",
-                                        "predicate": {
-                                            "equipment": {
-                                                "mainhand": {
-                                                    "components": {
-                                                        "minecraft:custom_data": {
-                                                            "hc:item/id": "hc:assassin/kit1/sword"
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    },
-                                    {
-                                        "condition": "minecraft:entity_properties",
-                                        "entity": "this",
-                                        "predicate": {
-                                            "equipment": {
-                                                "offhand": {
-                                                    "components": {
-                                                        "minecraft:custom_data": {
-                                                            "hc:item/id": "hc:assassin/kit1/sword"
-                                                        }
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        "hc.core:class/assassin/kit1/is_in_parry_window",
+                        {
+                            "type": "minecraft:any_of",
+                            "terms": [
+                                {
+                                    "type": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "equipment": {
+                                            "mainhand": {
+                                                "components": {
+                                                    "minecraft:custom_data": {
+                                                        "hc:item/id": "hc:assassin/kit1/sword"
                                                     }
                                                 }
                                             }
                                         }
                                     }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                                },
+                                {
+                                    "type": "minecraft:entity_properties",
+                                    "entity": "this",
+                                    "predicate": {
+                                        "equipment": {
+                                            "offhand": {
+                                                "components": {
+                                                    "minecraft:custom_data": {
+                                                        "hc:item/id": "hc:assassin/kit1/sword"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         }
     },

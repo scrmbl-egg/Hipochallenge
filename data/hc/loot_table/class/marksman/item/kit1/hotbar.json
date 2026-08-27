@@ -42,9 +42,9 @@
                 {
                     "type": "minecraft:loot_table",
                     "value": "hc:class/marksman/item/kit1/arrow",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": {
                                 "type": "minecraft:storage",
                                 "storage": "hc:main",
@@ -52,22 +52,14 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_count",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:all_of",
-                                    "terms": [
-                                        {
-                                            "condition": "minecraft:reference",
-                                            "name": "hc:class/is_marksman"
-                                        },
-                                        {
-                                            "condition": "minecraft:reference",
-                                            "name": "hc:perk/is_perk3"
-                                        }
-                                    ]
-                                }
-                            ],
+                            "type": "minecraft:set_count",
+                            "condition": {
+                                "type": "minecraft:all_of",
+                                "terms": [
+                                    "hc:class/is_marksman",
+                                    "hc:perk/is_perk3"
+                                ]
+                            },
                             "count": {
                                 "type": "minecraft:storage",
                                 "storage": "hc:main",

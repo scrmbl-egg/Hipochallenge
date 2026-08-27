@@ -33,9 +33,9 @@
                 {
                     "type": "minecraft:loot_table",
                     "value": "hc:class/recon/item/kit2/flare_arrow",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": {
                                 "type": "minecraft:storage",
                                 "storage": "hc:main",

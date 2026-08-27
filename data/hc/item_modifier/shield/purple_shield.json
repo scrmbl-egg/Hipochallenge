@@ -1,56 +1,59 @@
-[
-    {
-        "function": "minecraft:set_item",
-        "item": "minecraft:shield"
-    },
-    {
-        "function": "minecraft:set_name",
-        "entity": "this",
-        "target": "custom_name",
-        "name": {
-            "translate": "item.minecraft.shield",
-            "fallback": "Shield",
-            "italic": false
-        }
-    },
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:custom_data": {
-                "hc:item/id": "tank_shield"
-            },
-            "minecraft:unbreakable": {},
-            "minecraft:base_color": "purple",
-            "minecraft:banner_patterns": [
-                {
-                    "pattern": "minecraft:half_horizontal_bottom",
-                    "color": "black"
+{
+    "type": "minecraft:sequence",
+    "functions": [
+        {
+            "type": "minecraft:set_item",
+            "item": "minecraft:shield"
+        },
+        {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "target": "custom_name",
+            "name": {
+                "translate": "item.minecraft.shield",
+                "fallback": "Shield",
+                "italic": false
+            }
+        },
+        {
+            "type": "minecraft:set_components",
+            "components": {
+                "minecraft:custom_data": {
+                    "hc:item/id": "tank_shield"
                 },
-                {
-                    "pattern": "minecraft:skull",
-                    "color": "black"
-                },
-                {
-                    "pattern": "minecraft:triangle_bottom",
-                    "color": "purple"
-                },
-                {
-                    "pattern": "minecraft:stripe_middle",
-                    "color" :"black"
-                },
-                {
-                    "pattern": "minecraft:border",
-                    "color": "purple"
+                "minecraft:unbreakable": {},
+                "minecraft:base_color": "purple",
+                "minecraft:banner_patterns": [
+                    {
+                        "pattern": "minecraft:half_horizontal_bottom",
+                        "color": "black"
+                    },
+                    {
+                        "pattern": "minecraft:skull",
+                        "color": "black"
+                    },
+                    {
+                        "pattern": "minecraft:triangle_bottom",
+                        "color": "purple"
+                    },
+                    {
+                        "pattern": "minecraft:stripe_middle",
+                        "color" :"black"
+                    },
+                    {
+                        "pattern": "minecraft:border",
+                        "color": "purple"
+                    }
+                ],
+                "minecraft:tooltip_display": {
+                    "hidden_components": [
+                        "minecraft:custom_data",
+                        "minecraft:unbreakable",
+                        "minecraft:base_color",
+                        "minecraft:banner_patterns"
+                    ]
                 }
-            ],
-            "minecraft:tooltip_display": {
-                "hidden_components": [
-                    "minecraft:custom_data",
-                    "minecraft:unbreakable",
-                    "minecraft:base_color",
-                    "minecraft:banner_patterns"
-                ]
             }
         }
-    }
-]
+    ]
+}
