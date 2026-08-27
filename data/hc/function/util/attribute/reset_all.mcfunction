@@ -1,9 +1,9 @@
-#>hc:attribute/reset_all
+#>hc:util/attribute/reset_all
 #
 # Resets all attributes of a player. Heals the player before applying
 # attributes.
 #
-# @context player
+# @context entity
 
 # heal player
 effect give @s minecraft:instant_health 1 100 true
@@ -43,15 +43,15 @@ attribute @s minecraft:movement_speed base reset
 attribute @s minecraft:oxygen_bonus base reset
 attribute @s minecraft:safe_fall_distance base reset
 attribute @s minecraft:scale base reset
-#attribute @s minecraft:spawn_reinforcements base reset (not player related)
+attribute @s minecraft:spawn_reinforcements base reset
 attribute @s minecraft:sneaking_speed base reset
 attribute @s minecraft:step_height base reset
 attribute @s minecraft:submerged_mining_speed base reset
 attribute @s minecraft:sweeping_damage_ratio base reset
-#attribute @s minecraft:tempt_range base reset (not player related)
+attribute @s minecraft:tempt_range base reset
 attribute @s minecraft:water_movement_efficiency base reset
 attribute @s minecraft:waypoint_receive_range base reset
 attribute @s minecraft:waypoint_transmit_range base reset
 
 # call all remove modifier
-function #hc.core:attribute/remove_modifiers
+function hc:util/attribute/remove_all_modifiers

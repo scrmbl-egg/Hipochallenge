@@ -1,8 +1,8 @@
-#>hc:attribute/remove_modifier
+#>hc:util/attribute/remove_modifier
 #
 # Removes an attribute modifier from the player.
 #
-# @context player
+# @context entity
 # @input
 #   id: string
 #       ID of the modifier.

@@ -1,7 +1,6 @@
 use ::java::util::text::TranslatedText
 use ::java::data::loot::LootTable
 use super::effect::AbilityEffects
-use super::attribute::AttributeModifierCommmandParameters as AttributeModifier
 use super::player_selection::PlayerSelectionInfo
 
 

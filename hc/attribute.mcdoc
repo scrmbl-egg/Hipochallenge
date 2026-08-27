@@ -2,12 +2,12 @@ use ::java::util::attribute::AttributeOperation
 
 
 /// Struct for parameters of the attribute modifier command.
-struct AttributeModifierCommmandParameters {
+struct Modifier {
     /// ID of the modifier.
     id: #[match_regex="^[a-z0-9_]+(:[a-z0-9_/]+)?$"] string,
 
     /// Attribute name.
-    attribute: #[id=attribute] string,
+    attribute: #[id="attribute"] string,
 
     /// Modifier operation.
     operation: AttributeOperation,
@@ -17,22 +17,21 @@ struct AttributeModifierCommmandParameters {
 }
 
 
-/// Struct for timed attribute modifiers.
-struct TimedAttributeModifier {
-    /// Duration in ticks of the attribute modifier.
-    duration_ticks: int @ 1..,
+/// Struct for a modifier reference. Locating an attribute modifier requires the
+/// `attribute` it modifies and its `id`.
+struct ModifierRef {
+    /// ID of the modifier.
+    id: Modifier[id],
 
-    ...AttributeModifierCommmandParameters,
+    /// Attribute name.
+    attribute: Modifier[attribute],
 }
 
 
-/// Main struct for ability attributes.
-// TODO: Make a general effect/attribute modifier struct. This thing is a bit
-// messy now.
-struct AbilityAttributes {
-    /// List of permanent attribute modifiers.
-    permanent: [AttributeModifierCommmandParameters],
+/// Struct for temporary attribute modifiers.
+struct TempModifier {
+    /// Duration in ticks of the attribute modifier.
+    duration_ticks: int @ 1..,
 
-    /// List of
-    timed: [TimedAttributeModifier],
+    ...Modifier,
 }
