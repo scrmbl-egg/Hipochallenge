@@ -17,8 +17,8 @@
                 "bold": false
             }
         ],
-        "min_format":[94,1],
-        "max_format":[94,1]
+        "min_format": [117, 0],
+        "max_format": [118, 0]
     },
     "filter": {
         "block": [
