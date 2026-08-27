@@ -9,7 +9,7 @@
 #       Effect name.
 #   amplifier: int @ 0..
 #       Effect amplifier.
-#   seconds: (#[canonical] int @ 0.. | "infinite")
+#   seconds: (#[canonical] int @ 1.. | "infinite")
 #       Duration in seconds of the effect. `"infinite"` can be used to indicate
 #       infinite duration.
 #   hide_particles: boolean

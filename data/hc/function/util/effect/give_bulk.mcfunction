@@ -1,9 +1,10 @@
-#>hc:util/effect/give
+#>hc:util/effect/give_bulk
 #
-# Gives an effect to the calling entity.
+# Gives one effect to the specified target entities.
 #
-# @context entity
 # @input
+#   targets: #[entity] #[selector] string
+#       Selector of entities that will obtain the effect.
 #   effect: #[id="mob_effect"] string
 #       Effect name.
 #   amplifier: int @ 0..
@@ -17,17 +18,17 @@
 # hide particles is a macro from a boolean (which is actually a byte),
 # so 0 represents false, and non-zero number between -128 and 127 will
 # represent true.
-$data modify storage hc:temp give_effect set value { \
+$data modify storage hc:temp give_effect_bulk set value { \
     hide_particles:$(hide_particles), \
 }
 
 # give effect
-$execute unless data storage hc:temp give_effect{hide_particles:0} \
+$execute unless data storage hc:temp give_effect_bulk{hide_particles:0} \
     run \
-    effect give @s $(effect) $(seconds) $(amplifier) true
-$execute if data storage hc:temp give_effect{hide_particles:0} \
+    effect give $(targets) $(effect) $(seconds) $(amplifier) true
+$execute if data storage hc:temp give_effect_bulk{hide_particles:0} \
     run \
-    effect give @s $(effect) $(seconds) $(amplifier) false
+    effect give $(targets) $(effect) $(seconds) $(amplifier) false
 
 # free memory
-data remove storage hc:temp give_effect
+data remove storage hc:temp give_effect_bulk

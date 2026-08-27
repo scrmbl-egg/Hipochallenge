@@ -1,6 +1,6 @@
-/// Struct for parameters of the effect command.
-struct EffectCommandParameters {
-    /// Effect name.
+/// Struct for parameters of the `effect` command.
+struct MobEffect {
+    /// Effect resource name.
     effect: #[id="mob_effect"] string,
 
     /// Effect amplifier.
@@ -9,18 +9,8 @@ struct EffectCommandParameters {
     /// Duration in seconds of the effect.
     ///
     /// `"infinite"` can be used to indicate infinite duration.
-    seconds: (#[canonical] int @ 0.. | "infinite"),
+    seconds: (#[canonical] int @ 1.. | "infinite"),
 
     /// `true` if the particles of the effect are hidden.
     hide_particles: boolean,
-}
-
-
-/// Struct for effect information inside game abilities.
-struct AbilityEffects {
-    /// Amount of ticks the targets will be suppressed for.
-    suppression_ticks: int @ 0..,
-
-    /// List of effects the ability will give.
-    effects: [EffectCommandParameters],
 }

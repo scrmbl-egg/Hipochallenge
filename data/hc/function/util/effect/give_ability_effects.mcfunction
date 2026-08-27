@@ -8,6 +8,8 @@
 #   effects: [::Hipochallenge::mcdoc::effect::EffectCommandParameters]
 #       List of effects that will be applied to the player
 
+# TODO: deprecate this function
+
 # save args
 $data modify storage hc:temp ability_effects set value { \
     set_suppression_ticks_args:{ticks:$(suppression_ticks)}, \
