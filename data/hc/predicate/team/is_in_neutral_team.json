@@ -2,6 +2,6 @@
     "type": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "team": "hc.Neutral"
+        "minecraft:team": "hc.Neutral"
     }
 }

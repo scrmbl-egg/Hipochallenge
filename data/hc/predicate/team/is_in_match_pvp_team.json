@@ -5,14 +5,14 @@
             "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "team": "hc.Team1"
+                "minecraft:team": "hc.Team1"
             }
         },
         {
             "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "team": "hc.Team2"
+                "minecraft:team": "hc.Team2"
             }
         }
     ]
