@@ -12,7 +12,7 @@
 #       Trim data that is going to be applied to the armor item.
 
 $item modify entity @s armor.$(slot) { \
-    function:"minecraft:set_components", \
+    type:"minecraft:set_components", \
     components:{ \
         "minecraft:trim":$(trim), \
     }, \
