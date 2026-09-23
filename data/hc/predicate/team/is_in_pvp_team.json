@@ -1,26 +1,8 @@
 {
     "type": "minecraft:any_of",
     "terms": [
-        {
-            "type": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "minecraft:team": "hc.Team1"
-            }
-        },
-        {
-            "type": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "minecraft:team": "hc.Team2"
-            }
-        },
-        {
-            "type": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "minecraft:team": "hc.Neutral"
-            }
-        }
+        "hc:team/is_in_team1",
+        "hc:team/is_in_team2",
+        "hc:team/is_in_neutral_team"
     ]
 }
