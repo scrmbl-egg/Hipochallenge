@@ -6,7 +6,7 @@
 # @input
 #   slot: ::java::world::entity::mob::player::PlayerEquipmentSlot
 #       Equipment slot where the item will be replaced.
-#   loot_table: (#[id="loot_table"] string | ::java::data::loot::LootTable)
+#   loot_table: ::java::data::loot::LootTableRef
 #       Loot table that will be inserted in the slot.
 
 $loot replace entity @s $(slot) loot $(loot_table)

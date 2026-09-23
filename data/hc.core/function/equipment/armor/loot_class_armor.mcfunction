@@ -4,13 +4,13 @@
 #
 # @context player
 # @input
-#   head: (#[id="loot_table"] string | ::java::data::loot::LootTable)
+#   head: ::java::data::loot::LootTableRef
 #       Loot table of the player's head slot item.
-#   chest: (#[id="loot_table"] string | ::java::data::loot::LootTable)
+#   chest: ::java::data::loot::LootTableRef
 #       Loot table of the player's chest slot item.
-#   legs: (#[id="loot_table"] string | ::java::data::loot::LootTable)
+#   legs: ::java::data::loot::LootTableRef
 #       Loot table of the player's legs slot item.
-#   feet: (#[id="loot_table"] string | ::java::data::loot::LootTable)
+#   feet: ::java::data::loot::LootTableRef
 #       Loot table of the player's feet slot item.
 
 # head item

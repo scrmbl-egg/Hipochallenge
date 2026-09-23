@@ -1,5 +1,5 @@
 use ::java::util::text::TranslatedText
-use ::java::data::loot::LootTable
+use ::java::data::loot::LootTableRef
 use super::effect::AbilityEffects
 use super::player_selection::PlayerSelectionInfo
 
@@ -15,10 +15,10 @@ struct KitBase {
     /// Loot tables for kit equipment.
     item_loot_tables: struct KitItemLootTables {
         /// Loot table that will be given across the player's hotbar.
-        hotbar: (#[id="loot_table"] string | LootTable),
+        hotbar: LootTableRef,
 
         /// Loot table that will be given in the player's offhand slot.
-        offhand: (#[id="loot_table"] string | LootTable),
+        offhand: LootTableRef,
     },
 
     /// Type of data this kit holds. This is used to identify the union variant
