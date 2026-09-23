@@ -31,7 +31,7 @@
                 "item": {
                     "components": {
                         "minecraft:custom_data": {
-                            "hc:item/id": "tank_p1_nutritious_meal"
+                            "hc:item/id": "hc:tank/perk1/nutritious_meal"
                         }
                     }
                 }
