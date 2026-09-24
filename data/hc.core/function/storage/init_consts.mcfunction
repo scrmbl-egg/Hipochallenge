@@ -11,6 +11,7 @@
 
 # TODO: implement game state functions (current ones are placeholders)
 # TODO: Complete the list of constants
+# TODO: Many constants should be moved to number providers
 
 function hc:msg/debug/send_info { \
     text:"\"Initializing datapack constants...\"", \

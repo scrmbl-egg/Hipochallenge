@@ -14,9 +14,8 @@ execute if entity @s[ \
 ] \
     store result score @s hc.MarksmanKit1NewProjectileCooldown \
     run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:marksman"}].\
-    kits[{id:1}].marksman_k1_data.arrows.new_first_cooldown_ticks
+    compute entity @s \
+    integer hc:class/marksman/kit1/first_projectile_cooldown_ticks
 
 # give arrow instantly if proj_cooldown is triggered
 execute if entity @s[ \

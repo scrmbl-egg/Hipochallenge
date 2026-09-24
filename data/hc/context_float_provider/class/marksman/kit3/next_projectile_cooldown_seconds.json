@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:div",
+    "left": {
+        "type": "minecraft:max",
+        "inputs": [
+            0,
+            {
+                "type": "minecraft:from_int",
+                "input": {
+                    "type": "minecraft:score",
+                    "score": "hc.MarksmanKit3NewProjectileCooldown",
+                    "target": "this",
+                    "fallback": 0
+                }
+            }
+        ]
+    },
+    "right": 20
+}

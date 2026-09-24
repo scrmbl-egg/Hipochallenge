@@ -19,37 +19,15 @@ execute at @s \
 scoreboard objectives add __hc.NewProjectile dummy
 
 # get max amount of arrows the player can have
+# (the number provider handles the perk3 case too)
 execute store result score hc:max __hc.NewProjectile \
     run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:marksman"}].\
-    kits[{id:2}].marksman_k2_data.arrows.max_amount
-
-# add to max amount if perk 3 is equipped
-scoreboard players set hc:added_projectiles __hc.NewProjectile 0
-
-execute if predicate { \
-    type:"minecraft:all_of", \
-    terms:[ \
-        "hc:class/is_marksman", \
-        "hc:perk/is_perk3", \
-    ], \
-} \
-    store result score hc:added_projectiles __hc.NewProjectile \
-    run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:marksman"}].\
-    perks[{id:3}].marksman_p3_data.added_projectiles
-
-scoreboard players operation \
-    hc:max __hc.NewProjectile += hc:added_projectiles __hc.NewProjectile
+    compute entity @s integer hc:class/marksman/kit2/max_projectiles
 
 # get current amount of arrows (+1 if charged in crossbow)
 execute store result score hc:arrows __hc.NewProjectile \
     run \
-    clear @s *[ \
-        minecraft:custom_data~{"hc:item/id":"hc:marksman/kit2/arrow"} \
-    ] 0
+    clear @s *[minecraft:custom_data~{"hc:item/id":"hc:marksman/kit2/arrow"}] 0
 execute if items entity @s container.* *[ \
     minecraft:custom_data~{"hc:item/id":"hc:marksman/kit2/crossbow"}, \
     minecraft:charged_projectiles=[ \
@@ -67,13 +45,11 @@ execute if items entity @s container.* *[ \
     scoreboard players add hc:arrows __hc.NewProjectile 1
 
 # give new (smaller) cooldown if player can have more arrows
-execute if score \
-    hc:arrows __hc.NewProjectile < hc:max __hc.NewProjectile \
+execute if score hc:arrows __hc.NewProjectile < hc:max __hc.NewProjectile \
     store result score @s hc.MarksmanKit2NewProjectileCooldown \
     run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:marksman"}].\
-    kits[{id:2}].marksman_k2_data.arrows.new_rest_cooldown_ticks
+    compute entity @s \
+    integer hc:class/marksman/kit2/other_projectile_cooldown_ticks
 
 # free memory
 scoreboard objectives remove __hc.NewProjectile

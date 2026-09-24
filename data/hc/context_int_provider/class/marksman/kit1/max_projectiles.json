@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:add",
+    "inputs": [
+        "hc:class/marksman/kit1/base_max_projectiles",
+        {
+            "type": "minecraft:conditional",
+            "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                    "hc:class/is_marksman",
+                    "hc:perk/is_perk3"
+                ]
+            },
+            "on_true": "hc:class/marksman/perk3/added_projectiles",
+            "on_false": 0
+        }
+    ]
+}

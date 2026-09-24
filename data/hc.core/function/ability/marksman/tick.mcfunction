@@ -13,26 +13,20 @@ execute as @a[scores={hc.BowShot=1..}] \
     function hc:ability/marksman/kit1/on_bow_shot
 
 # arrows
-execute as @a[ \
-    scores={hc.MarksmanKit1NewProjectileCooldown=0} \
-] \
+execute as @a[scores={hc.MarksmanKit1NewProjectileCooldown=0}] \
     run \
     function hc:ability/marksman/kit1/give_projectile_and_set_cooldown
 
 ## kit 2
 
 # arrows
-execute as @a[ \
-    scores={hc.MarksmanKit2NewProjectileCooldown=0} \
-] \
+execute as @a[scores={hc.MarksmanKit2NewProjectileCooldown=0}] \
     run \
     function hc:ability/marksman/kit2/give_projectile_and_set_cooldown
 
 ## kit 3
 
 # bullets
-execute as @a[ \
-    scores={hc.MarksmanKit3NewProjectileCooldown=0} \
-] \
+execute as @a[scores={hc.MarksmanKit3NewProjectileCooldown=0}] \
     run \
     function hc:ability/marksman/kit3/give_projectile_and_set_cooldown

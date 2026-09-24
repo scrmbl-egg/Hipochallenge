@@ -9,6 +9,5 @@ advancement revoke @s \
 # set new projectile cooldown
 execute store result score @s hc.MarksmanKit3NewProjectileCooldown \
     run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:marksman"}].\
-    kits[{id:3}].marksman_k3_data.bullets.new_first_cooldown_ticks
+    compute entity @s \
+    integer hc:class/marksman/kit3/first_projectile_cooldown_ticks
