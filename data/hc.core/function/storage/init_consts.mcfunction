@@ -1,5 +1,7 @@
 #>hc.core:storage/init_consts
 #
+# Initializes all global constants in the datapack.
+#
 # This function is executed every reload, or 'load.mcfunction' call.
 # This file is meant to be changed only by the developers, or a user who might
 # want to change properties of the game.
