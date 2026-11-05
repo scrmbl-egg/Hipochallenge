@@ -10,11 +10,12 @@
         },
         "description": {
             "translate": "hc.advancement.combat.team.full_classic_combo.description",
-            "fallback": "Finish a match where both teams followed the requirements of the %s advancement",
+            "fallback": "Start a match where both teams follow of the %s advancement",
             "with": [
                 {
-                    "translate":"hc.advancement.combat.team.classic_combo.title",
-                    "fallback":"Classic Combo"
+                    "translate": "hc.advancement.combat.team.classic_combo.title",
+                    "fallback": "Classic Combo",
+                    "italic": true
                 }
             ]
         },
