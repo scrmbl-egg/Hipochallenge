@@ -1,3 +1,6 @@
+use ::java::data::loot::LootTableRef
+
+
 dispatch mcdoc:custom_data[hc:item/id] to Id
 dispatch mcdoc:custom_data[hc:item/replace_with] to ReplaceItemLootTable
 dispatch mcdoc:custom_data[hc:item/clear_instantly] to ClearInstantly
@@ -11,9 +14,22 @@ dispatch mcdoc:custom_data[hc:item/armor/apply_team_trim_material]
 type Id = #[match_regex="^[a-z0-9_]+(:[a-z0-9_/]+)?$"] string
 
 
-/// Component for `minecraft:use_remainder` items that must return to its
-/// original state.
-type ReplaceItemLootTable = #[id="loot_table"] string
+/// This component works as a work-around for the `minecraft:use_remainder`
+/// component limitations (can't apply item modifiers, or make an infinitely
+/// consumable item). When this component is detected in an item, it is
+/// replaced a tick after detection.
+///
+/// # TODO:
+/// This replacement must be deferred or scheduled one tick after because
+/// same tick replacement causes them to be BUGGED!. No animations, no cooldown
+/// indicator... etc.
+///
+/// # FIXME:
+/// if the aforementioned bug is ever fixed by Mojang, return to the old
+/// system, or a simplier one.
+struct ReplaceItemLootTable {
+    loot_table?: LootTableRef,
+}
 
 
 /// Component for items that must be cleared instantly from the inventory.

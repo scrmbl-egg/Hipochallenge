@@ -6,9 +6,10 @@
 # @context player
 
 ## NOTE:
-# This only works in the HOTBAR. This component was specifically made for
-# cooldown items that we don't want to disappear when consumed. The remainer
-# item introduces the component we're going to be looking for
+# This only works in the HOTBAR & OFFHAND slots. This component was specifically
+# made for cooldown items that we don't want to disappear when consumed. The
+# `minecraft:use_remainder` item will contain the custom data component that
+# will determine which loot table the item is replaced with.
 
 data modify storage hc:temp replace_items set value { \
     func_args:{ \
@@ -31,7 +32,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:0b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:0b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -53,7 +54,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:1b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:1b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -75,7 +76,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:2b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:2b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -97,7 +98,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:3b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:3b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -119,7 +120,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:4b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:4b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -141,7 +142,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:5b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:5b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -163,7 +164,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:6b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:6b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -185,7 +186,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:7b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:7b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -207,7 +208,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     Inventory[{Slot:8b}].components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     Inventory[{Slot:8b}].components.\
     "minecraft:custom_data"."hc:item/replace_with" \
@@ -229,7 +230,7 @@ execute if data entity @s \
     data modify storage hc:temp replace_items.func_args.loot_table \
     set from entity @s \
     equipment.offhand.components.\
-    "minecraft:custom_data"."hc:item/replace_with"
+    "minecraft:custom_data"."hc:item/replace_with".loot_table
 execute if data entity @s \
     equipment.offhand.components.\
     "minecraft:custom_data"."hc:item/replace_with" \

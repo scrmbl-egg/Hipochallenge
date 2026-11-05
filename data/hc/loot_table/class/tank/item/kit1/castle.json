@@ -83,7 +83,9 @@
                                         },
                                         "minecraft:rarity": "uncommon",
                                         "minecraft:custom_data": {
-                                            "hc:item/replace_with": "hc:class/tank/item/kit1/castle"
+                                            "hc:item/replace_with": {
+                                                "loot_table": "hc:class/tank/item/kit1/castle"
+                                            }
                                         }
                                     }
                                 }
