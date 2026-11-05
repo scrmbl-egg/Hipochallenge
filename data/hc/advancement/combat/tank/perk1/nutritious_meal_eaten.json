@@ -28,6 +28,7 @@
         "eat_nutritious_meal": {
             "trigger": "minecraft:consume_item",
             "conditions": {
+                "player": "hc:team/is_in_match_pvp_team",
                 "item": {
                     "components": {
                         "minecraft:custom_data": {
