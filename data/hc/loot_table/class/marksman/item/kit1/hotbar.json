@@ -45,27 +45,7 @@
                     "modifier": [
                         {
                             "type": "minecraft:set_count",
-                            "count": {
-                                "type": "minecraft:storage",
-                                "storage": "hc:main",
-                                "path": "consts.classes[{key:\"hc:marksman\"}].kits[{id:1}].marksman_k1_data.arrows.max_amount"
-                            }
-                        },
-                        {
-                            "type": "minecraft:set_count",
-                            "condition": {
-                                "type": "minecraft:all_of",
-                                "terms": [
-                                    "hc:class/is_marksman",
-                                    "hc:perk/is_perk3"
-                                ]
-                            },
-                            "count": {
-                                "type": "minecraft:storage",
-                                "storage": "hc:main",
-                                "path": "consts.classes[{key:\"hc:marksman\"}].perks[{id:3}].marksman_p3_data.added_projectiles"
-                            },
-                            "add": true
+                            "count": "hc:class/marksman/kit1/max_projectiles"
                         }
                     ]
                 }

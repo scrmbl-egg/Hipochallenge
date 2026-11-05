@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:add",
+    "inputs": [
+        "hc:game/mode/casual/base_payout",
+        {
+            "type": "minecraft:max",
+            "inputs": [
+                0,
+                {
+                    "type": "minecraft:from_float",
+                    "input": {
+                        "type": "minecraft:mul",
+                        "inputs": [
+                            "hc:game/points_to_money_conversion",
+                            {
+                                "type": "minecraft:from_int",
+                                "input": {
+                                    "type": "minecraft:score",
+                                    "score": "hc.Points",
+                                    "target": "this",
+                                    "fallback": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

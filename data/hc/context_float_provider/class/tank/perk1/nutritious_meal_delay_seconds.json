@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:div",
+    "left": {
+        "type": "minecraft:from_int",
+        "input": {
+            "type": "minecraft:score",
+            "score": "hc.TankPerk1NutritiousMealCooldown",
+            "target": "this",
+            "fallback": 0
+        }
+    },
+    "right": 20
+}

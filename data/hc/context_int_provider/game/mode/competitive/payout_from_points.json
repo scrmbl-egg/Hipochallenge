@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:add",
+    "inputs": [
+        "hc:game/mode/competitive/base_payout",
+        {
+            "type": "minecraft:max",
+            "inputs": [
+                {
+                    "type": "minecraft:negate",
+                    "input": "hc:game/mode/competitive/base_payout"
+                },
+                {
+                    "type": "minecraft:from_float",
+                    "input": {
+                        "type": "minecraft:mul",
+                        "inputs": [
+                            "hc:game/points_to_money_conversion",
+                            {
+                                "type": "minecraft:from_int",
+                                "input": {
+                                    "type": "minecraft:score",
+                                    "score": "hc.Points",
+                                    "target": "this",
+                                    "fallback": 0
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

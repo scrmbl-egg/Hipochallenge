@@ -1,0 +1,7 @@
+{
+    "type": "minecraft:max",
+    "inputs": [
+        10,
+        "hc:class/tank/kit3/bubble_shield/radius"
+    ]
+}
