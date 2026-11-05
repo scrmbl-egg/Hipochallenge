@@ -1,1 +1,38 @@
-{}
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit3/revolver"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit3/bullet",
+                    "modifier": [
+                        {
+                            "type": "minecraft:set_count",
+                            "count": "hc:class/marksman/kit3/max_projectiles"
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "hc:class/marksman/item/kit3/el_diablo_bullet"
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
