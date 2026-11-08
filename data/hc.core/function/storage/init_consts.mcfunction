@@ -309,17 +309,15 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/tank/item/kit1/hotbar", \
                 offhand:"hc:class/tank/item/kit1/offhand", \
             }, \
-            data_type:"tank_k1_data", \
-            tank_k1_data:{ \
-                horn:{ \
-                    effects_info:{ \
-                        suppression_ticks:0, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"horn", \
                         effects:[ \
                             {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:false}, \
                         ], \
                     }, \
-                    radius:7.0, \
-                }, \
+                ], \
             }, \
         }, \
         { \
@@ -329,21 +327,15 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/tank/item/kit2/hotbar", \
                 offhand:"hc:class/tank/item/kit2/offhand", \
             }, \
-            data_type:"tank_k2_data", \
-            tank_k2_data:{ \
-                horn:{ \
-                    effects_info:{ \
-                        suppression_ticks:0, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"horn", \
                         effects:[ \
                             {effect:"minecraft:slowness",seconds:2,amplifier:0,hide_particles:false}, \
                         ], \
                     }, \
-                    radius:5.0, \
-                    recovery_ticks:20, \
-                }, \
-                trident:{ \
-                    cooldown_ticks:30, \
-                }, \
+                ], \
             }, \
         }, \
         { \
@@ -353,39 +345,29 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/tank/item/kit3/hotbar", \
                 offhand:"hc:class/tank/item/kit3/offhand", \
             }, \
-            data_type:"tank_k3_data", \
-            tank_k3_data:{ \
-                horn:{ \
-                    modifiers:[ \
-                        {id:"hc:tank_k3_horn_armor",attribute:"minecraft:armor",value:-6,operation:"add_value"}, \
-                    ], \
-                    radius:8.0, \
-                }, \
-                spirit:{ \
-                    selection:{ \
-                        target_mode:"allies_only", \
-                        max_distance:5.0f, \
-                        on_selected_command:"say selected!", \
-                    }, \
-                    buff:{ \
+            data:{ \
+                "hc:modifier_table":[ \
+                    { \
+                        key:"horn", \
                         modifiers:[ \
-                            {id:"hc:tank_k3_spirit_buff_armor",attribute:"minecraft:armor",value:6,operation:"add_value"}, \
-                        ], \
-                        radius:6, \
-                    }, \
-                    owner_debuff:{ \
-                        modifiers:[ \
-                            {id:"hc:tank_k3_spirit_debuff_armor",attribute:"minecraft:armor",value:-6,operation:"add_value"}, \
+                            {id:"hc:tank/kit3/armor",attribute:"minecraft:armor",value:-6,operation:"add_value"}, \
                         ], \
                     }, \
-                }, \
-                bubble_shield:{ \
-                    draw_command:"particle dust_color_transition{from_color:[0.000f, 0.800f, 1.000f],scale:2,to_color:[0.161f, 0.255f, 0.271f]} ~ ~ ~ 0 0 0 0 1 force", \
-                    radius:4.0, \
-                    high_speed_arrow_detection_radius:10.0, \
-                    lifetime_ticks:240, \
-                    lifetime_ticks_added_on_impact:60, \
-                }, \
+                    { \
+                        key:"spirit_buff", \
+                        modifiers:[ \
+                            {id:"hc:tank/kit3/spirit_buff_armor",attribute:"minecraft:armor",value:6,operation:"add_value"}, \
+                        ], \
+                    }, \
+                ], \
+                "hc:modifier_ref_table":[ \
+                    { \
+                        key:"remove_spirit_buff", \
+                        modifiers:[ \
+                            {id:"hc:tank/kit3/spirit_buff_armor",attribute:"minecraft:armor"}, \
+                        ], \
+                    }, \
+                ], \
             }, \
         }, \
     ], \
@@ -394,37 +376,33 @@ data modify storage hc:main consts.classes append value { \
             id:1, \
             name:{translate:"hc.class.tank.perk1.name",fallback:"I Nutrition"}, \
             on_equip_function:"hc:ability/tank/perk1/on_equip", \
-            data_type:"tank_p1_data", \
-            tank_p1_data:{ \
-                nutritious_meal:{give_delay_ticks:1200}, \
-            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.tank.perk2.name",fallback:"II Profound scars"}, \
-            data_type:"tank_p2_data", \
-            tank_p2_data:{ \
-                attack:{ \
-                    effects_info:{ \
-                        suppression_ticks:0, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"profound_scars", \
                         effects:[ \
                             {effect:"minecraft:slowness",seconds:1,amplifier:0,hide_particles:false}, \
                         ], \
                     }, \
-                }, \
+                ], \
             }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.tank.perk3.name",fallback:"III Inspiration"}, \
-            data_type:"tank_p3_data", \
-            tank_p3_data:{ \
-                close_ally_buff:{ \
-                    radius:9, \
-                    attributes:[ \
-                        {id:"hc:tank_p3_inspiration_armor",attribute:"minecraft:armor",value:10,operation:"add_value"}, \
-                    ], \
-                }, \
+            data:{ \
+                "hc:modifier_table":[ \
+                    { \
+                        key:"", \
+                        modifiers:[ \
+                            {id:"hc:tank/perk3/armor",attribute:"minecraft:armor",value:10,operation:"add_value"}, \
+                        ], \
+                    }, \
+                ], \
             }, \
         }, \
     ], \
@@ -465,14 +443,6 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/marksman/item/kit1/hotbar", \
                 offhand:"hc:class/marksman/item/kit1/offhand", \
             }, \
-            data_type:"marksman_k1_data", \
-            marksman_k1_data:{ \
-                arrows:{ \
-                    max_amount:6, \
-                    new_first_cooldown_ticks:60, \
-                    new_rest_cooldown_ticks:20, \
-                }, \
-            }, \
         }, \
         { \
             id:2, \
@@ -480,14 +450,6 @@ data modify storage hc:main consts.classes append value { \
             item_loot_tables:{ \
                 hotbar:"hc:class/marksman/item/kit2/hotbar", \
                 offhand:"hc:class/marksman/item/kit2/offhand", \
-            }, \
-            data_type:"marksman_k2_data", \
-            marksman_k2_data:{ \
-                arrows:{ \
-                    max_amount:5, \
-                    new_first_cooldown_ticks:60, \
-                    new_rest_cooldown_ticks:30, \
-                }, \
             }, \
         }, \
         { \
@@ -497,51 +459,30 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/marksman/item/kit3/hotbar", \
                 offhand:"hc:class/marksman/item/kit3/offhand", \
             }, \
-            data_type:"marksman_k3_data", \
-            marksman_k3_data:{ \
-                bullets:{ \
-                    max_amount:6, \
-                    new_first_cooldown_ticks:80, \
-                    new_rest_cooldown_ticks:40, \
-                }, \
-                revolver:{ \
-                    max_loaded_bullet_amount:6, \
-                    recoil_pitch_rotation:-20, \
-                    per_shot_cooldown_ticks:10, \
-                }, \
-            }, \
         }, \
     ], \
     perks:[ \
         { \
             id:1, \
             name:{translate:"hc.class.marksman.perk1.name",fallback:"I Bullseye"}, \
-            data_type:"marksman_p1_data", \
-            marksman_p1_data:{ \
-                suppression_or_on_air_magic_damage:2, \
-            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.marksman.perk2.name",fallback:"II Lifesaver"}, \
-            data_type:"marksman_p2_data", \
-            marksman_p2_data:{ \
-                health_threshold:8, \
-                effects_info:{ \
-                    suppression_ticks:0, \
-                    effects:[ \
-                        {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:false}, \
-                    ], \
-                }, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"lifesaver", \
+                        effects:[ \
+                            {effect:"minecraft:absorption",seconds:3,amplifier:1,hide_particles:false}, \
+                        ], \
+                    }, \
+                ], \
             }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.marksman.perk3.name",fallback:"III Big pockets"}, \
-            data_type:"marksman_p3_data", \
-            marksman_p3_data:{ \
-                added_projectiles:3, \
-            }, \
         }, \
     ], \
 }
@@ -581,28 +522,6 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/assassin/item/kit1/hotbar", \
                 offhand:"hc:class/assassin/item/kit1/offhand", \
             }, \
-            data_type:"assassin_k1_data", \
-            assassin_k1_data:{ \
-                parry:{ \
-                    window_duration_ticks:10, \
-                    on_owner_when_success:{ \
-                        modifiers:[], \
-                    }, \
-                    on_owner_when_fail:{ \
-                        modifiers:[ \
-                            {id:"hc:assassin/kit1/owner_failed_parry/entity_interaction_range",attribute:"minecraft:entity_interaction_range",value:-3,operation:"add_value"}, \
-                            {id:"hc:assassin/kit1/owner_failed_parry/attack_speed",attribute:"minecraft:attack_speed",value:-1.1,operation:"add_value"}, \
-                        ], \
-                    }, \
-                    on_enemy_when_parried:{ \
-                        modifiers:[], \
-                        effects_info:{ \
-                            suppression_ticks:0, \
-                            effects:[], \
-                        }, \
-                    }, \
-                }, \
-            }, \
         }, \
         { \
             id:2, \
@@ -611,18 +530,16 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/assassin/item/kit2/hotbar", \
                 offhand:"hc:class/assassin/item/kit2/offhand", \
             }, \
-            data_type:"assassin_k2_data", \
-            assassin_k2_data:{ \
-                stun_mechanism:{ \
-                    radius:3.0, \
-                    effects_info:{ \
-                        suppression_ticks:40, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"stun_mechanism", \
                         effects:[ \
                             {effect:"minecraft:slowness",seconds:2,amplifier:2,hide_particles:false}, \
                             {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:false}, \
                         ], \
                     }, \
-                }, \
+                ], \
             }, \
         }, \
         { \
@@ -632,40 +549,31 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/assassin/item/kit3/hotbar", \
                 offhand:"hc:class/assassin/item/kit3/offhand", \
             }, \
-            data_type:"assassin_k3_data", \
-            assassin_k3_data:{}, \
         }, \
     ], \
     perks:[ \
         { \
             id:1, \
             name:{translate:"hc.class.assassin.perk1.name",fallback:"I Contract"}, \
-            data_type:"assassin_p1_data", \
-            assassin_p1_data:{ \
-                contract_success_effects_info:{ \
-                    suppression_ticks:0, \
-                    effects:[ \
-                        {effect:"minecraft:strength",seconds:"infinite",amplifier:0,hide_particles:false}, \
-                        {effect:"minecraft:instant_health",seconds:1,amplifier:0,hide_particles:false}, \
-                    ], \
-                }, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"contract_success", \
+                        effects:[ \
+                            {effect:"minecraft:strength",seconds:"infinite",amplifier:0,hide_particles:false}, \
+                            {effect:"minecraft:instant_health",seconds:1,amplifier:0,hide_particles:false}, \
+                        ], \
+                    }, \
+                ], \
             }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.assassin.perk2.name",fallback:"II Harvesting"}, \
-            data_type:"assassin_p2_data", \
-            assassin_p2_data:{ \
-                enemy_true_health_threshold:3, \
-            }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.assassin.perk3.name",fallback:"III Acidity"}, \
-            data_type:"assassin_p3_data", \
-            assassin_p3_data:{ \
-                on_hit_by_owner_armor_toughness:0, \
-            }, \
         }, \
     ], \
 }
@@ -705,8 +613,6 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/support/item/kit1/hotbar", \
                 offhand:"hc:class/support/item/kit1/offhand", \
             }, \
-            data_type:"support_k1_data", \
-            support_k1_data:{}, \
         }, \
         { \
             id:2, \
@@ -715,8 +621,6 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/support/item/kit2/hotbar", \
                 offhand:"hc:class/support/item/kit2/offhand", \
             }, \
-            data_type:"support_k2_data", \
-            support_k2_data:{}, \
         }, \
         { \
             id:3, \
@@ -725,42 +629,31 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/support/item/kit3/hotbar", \
                 offhand:"hc:class/support/item/kit3/offhand", \
             }, \
-            data_type:"support_k3_data", \
-            support_k3_data:{}, \
         }, \
     ], \
     perks:[ \
         { \
             id:1, \
             name:{translate:"hc.class.support.perk1.name",fallback:"I Overclock"}, \
-            data_type:"support_p1_data", \
-            support_p1_data:{}, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.support.perk2.name",fallback:"II Personal space"}, \
-            data_type:"support_p2_data", \
-            support_p2_data:{ \
-                on_hit_explosion:{ \
-                    radius:3, \
-                    delay_ticks:40, \
-                    effects_info:{ \
-                        suppression_ticks:0, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"explosion", \
                         effects:[ \
                             {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:false}, \
                             {effect:"minecraft:jump_boost",seconds:2,amplifier:0,hide_particles:true}, \
                         ], \
                     }, \
-                }, \
+                ], \
             }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.support.perk3.name",fallback:"III Supercharge"}, \
-            data_type:"support_p3_data", \
-            support_p3_data:{ \
-                extra_area_ability_radius:2, \
-            }, \
         }, \
     ], \
 }
@@ -800,8 +693,6 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/recon/item/kit1/hotbar", \
                 offhand:"hc:class/recon/item/kit1/offhand", \
             }, \
-            data_type:"recon_k1_data", \
-            recon_k1_data:{}, \
         }, \
         { \
             id:2, \
@@ -810,23 +701,16 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/recon/item/kit2/hotbar", \
                 offhand:"hc:class/recon/item/kit2/offhand", \
             }, \
-            data_type:"recon_k2_data", \
-            recon_k2_data:{ \
-                flare_arrow:{\
-                    max_amount:1, \
-                    cooldown_ticks:120, \
-                    detection_aabb_size:[1.5, 1.5, 1.5], \
-                    explosion:{ \
-                        radius:6, \
-                        effects_info:{ \
-                            suppression_ticks:0, \
-                            effects:[ \
-                                {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:false}, \
-                                {effect:"minecraft:glowing",seconds:5,amplifier:0,hide_particles:false}, \
-                            ], \
-                        }, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"flare_arrow", \
+                        effects:[ \
+                            {effect:"minecraft:blindness",seconds:2,amplifier:0,hide_particles:false}, \
+                            {effect:"minecraft:glowing",seconds:5,amplifier:0,hide_particles:false}, \
+                        ], \
                     }, \
-                }, \
+                ], \
             }, \
         }, \
         { \
@@ -836,39 +720,30 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/recon/item/kit3/hotbar", \
                 offhand:"hc:class/recon/item/kit3/offhand", \
             }, \
-            data_type:"recon_k3_data", \
-            recon_k3_data:{}, \
         }, \
     ], \
     perks:[ \
         { \
             id:1, \
             name:{translate:"hc.class.recon.perk1.name",fallback:"I Inhibitor"}, \
-            data_type:"recon_p1_data", \
-            recon_p1_data:{ \
-                glowing_max_duration_ticks:5, \
-            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.recon.perk2.name",fallback:"II Assimilation"}, \
-            data_type:"recon_p2_data", \
-            recon_p2_data:{ \
-                on_glowing_enemy_hit_effects_info:{ \
-                    suppression_ticks:0, \
-                    effects:[\
-                        {effect:"minecraft:haste",seconds:3,amplifier:2,hide_particles:false}, \
-                    ], \
-                }, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"on_glowing_enemy_hit", \
+                        effects:[ \
+                            {effect:"minecraft:haste",seconds:3,amplifier:2,hide_particles:false}, \
+                        ], \
+                    }, \
+                ], \
             }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.recon.perk3.name",fallback:"III Animal instinct"}, \
-            data_type:"recon_p3_data", \
-            recon_p3_data:{ \
-                enemy_trace_lifetime_ticks:10, \
-            }, \
         }, \
     ], \
 }
@@ -908,8 +783,6 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/assault/item/kit1/hotbar", \
                 offhand:"hc:class/assault/item/kit1/offhand", \
             }, \
-            data_type:"assault_k1_data", \
-            assault_k1_data:{}, \
         }, \
         { \
             id:2, \
@@ -918,8 +791,6 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/assault/item/kit2/hotbar", \
                 offhand:"hc:class/assault/item/kit2/offhand", \
             }, \
-            data_type:"assault_k2_data", \
-            assault_k2_data:{}, \
         }, \
         { \
             id:3, \
@@ -928,43 +799,29 @@ data modify storage hc:main consts.classes append value { \
                 hotbar:"hc:class/assault/item/kit3/hotbar", \
                 offhand:"hc:class/assault/item/kit3/offhand", \
             }, \
-            data_type:"assault_k3_data", \
-            assault_k3_data:{}, \
         }, \
     ], \
     perks:[ \
         { \
             id:1, \
             name:{translate:"hc.class.assault.perk1.name",fallback:"I Engineering"}, \
-            data_type:"assault_p1_data", \
-            assault_p1_data:{ \
-                trap_disabling_explosion_radius:6, \
-            }, \
         }, \
         { \
             id:2, \
             name:{translate:"hc.class.assault.perk2.name",fallback:"II Adaptable shell"}, \
-            data_type:"assault_p2_data", \
-            assault_p2_data:{ \
-                on_enemy_crowd_controlled:{ \
-                    duration_ticks:40, \
-                    attributes:[ \
-                        {id:"hc:assault_p2_crowd_control_armor",attribute:"minecraft:armor",value:20,operation:"add_value"}, \
-                    ], \
-                }, \
-            }, \
         }, \
         { \
             id:3, \
             name:{translate:"hc.class.assault.perk3.name",fallback:"III Chase"}, \
-            data_type:"assault_p3_data", \
-            assault_p3_data:{ \
-                on_looking_at_enemy_effects_info:{ \
-                    suppression_ticks:0, \
-                    effects:[ \
-                        {effect:"minecraft:speed",seconds:1,amplifier:0,hide_particles:true}, \
-                    ], \
-                }, \
+            data:{ \
+                "hc:effect_table":[ \
+                    { \
+                        key:"looking_at_enemy", \
+                        effects:[ \
+                            {effect:"minecraft:speed",seconds:1,amplifier:0,hide_particles:true}, \
+                        ], \
+                    }, \
+                ], \
             }, \
         }, \
     ], \

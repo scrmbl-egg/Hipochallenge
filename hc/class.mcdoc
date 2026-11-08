@@ -13,7 +13,8 @@ struct Class {
         #[match_regex="^(?!hc$|hc:)[a-z0-9_]+(:[a-z0-9_]+)?$"] string |
     ),
 
-    /// Internal numeric ID of the class.
+    /// ID of the class, i.e. the value `hc.Class` objective must match to
+    /// select this class.
     id: (#[canonical] ClassId | int @ ..-1 | int @ 7..),
 
     /// Translated text for the class name.
