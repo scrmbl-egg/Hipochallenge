@@ -1,0 +1,29 @@
+/// Generic type for a key-value pair table.
+///
+/// A table, in this context, is a **non-empty** list of compound NBT entries
+/// that contain a `key` field, which is used to access a value through
+/// something other than an integer index.
+///
+/// # Generic arguments
+///
+/// - `K`: type of the key.
+/// - `V`: type of the value.
+/// - `VFieldName`: `string` that indicates how the value field is going to
+/// be called. This helps with clarity when accessing the table through the
+/// `data` command.
+///
+/// # Mcdoc example
+///
+/// To create a table type where rows are accessed with a `string` key, and
+/// where the value type is a list of effects called "effects", we can use:
+///
+/// ```mcdoc
+/// type EffectTable = Table<string, [#[id="mob_effect"] string], "effects">
+/// ```
+type Table<K, V, VFieldName> = [struct {
+    /// Key used for accessing this table row.
+    key: K,
+
+    /// Value of this table row.
+    [VFieldName]: V,
+}] @ 1..
