@@ -12,8 +12,8 @@ data modify storage hc:temp rm_mods set value { \
 # TODO: check JE 26.2 attributes
 
 ## CHECK EVERY ATTRIBUTE
-# minecraft:air_drag_modifier (JE 26.2)
-#execute if data entity @s \
+# minecraft:air_drag_modifier
+execute if data entity @s \
     attributes[{id:"minecraft:air_drag_modifier"}].modifiers \
     run \
     data modify storage hc:temp rm_mods.mod_attr \
@@ -68,8 +68,8 @@ execute if data entity @s \
     append from entity @s \
     attributes[{id:"minecraft:attack_speed"}]
 
-# minecraft:below_name_distance (JE 26.2)
-#execute if data entity @s \
+# minecraft:below_name_distance
+execute if data entity @s \
     attributes[{id:"minecraft:below_name_distance"}].modifiers \
     run \
     data modify storage hc:temp rm_mods.mod_attr \
@@ -92,8 +92,8 @@ execute if data entity @s \
     append from entity @s \
     attributes[{id:"minecraft:block_interaction_range"}]
 
-# minecraft:bounciness (JE 26.2)
-#execute if data entity @s \
+# minecraft:bounciness
+execute if data entity @s \
     attributes[{id:"minecraft:bounciness"}].modifiers \
     run \
     data modify storage hc:temp rm_mods.mod_attr \
@@ -156,8 +156,8 @@ execute if data entity @s \
     append from entity @s \
     attributes[{id:"minecraft:follow_range"}]
 
-# minecraft:friction_modifier (JE 26.2)
-#execute if data entity @s \
+# minecraft:friction_modifier
+execute if data entity @s \
     attributes[{id:"minecraft:friction_modifier"}].modifiers \
     run \
     data modify storage hc:temp rm_mods.mod_attr \
@@ -237,7 +237,7 @@ execute if data entity @s \
     attributes[{id:"minecraft:movement_speed"}]
 
 # minecraft:name_tag_distance
-#execute if data entity @s \
+execute if data entity @s \
     attributes[{id:"minecraft:name_tag_distance"}].modifiers \
     run \
     data modify storage hc:temp rm_mods.mod_attr \
@@ -323,6 +323,7 @@ execute if data entity @s \
     data modify storage hc:temp rm_mods.mod_attr \
     append from entity @s \
     attributes[{id:"minecraft:water_movement_efficiency"}]
+
 # minecraft:entity_interaction_range
 execute if data entity @s \
     attributes[{id:"minecraft:entity_interaction_range"}].modifiers \
@@ -330,6 +331,7 @@ execute if data entity @s \
     data modify storage hc:temp rm_mods.mod_attr \
     append from entity @s \
     attributes[{id:"minecraft:entity_interaction_range"}]
+
 # minecraft:waypoint_receive_range
 execute if data entity @s \
     attributes[{id:"minecraft:waypoint_receive_range"}].modifiers \
@@ -350,7 +352,7 @@ execute if data entity @s \
 ## ITERATE AND REMOVE EACH POSSIBLE MODIFIER
 
 # minecraft:air_drag_modifier
-#execute if data storage hc:temp \
+execute if data storage hc:temp \
     rm_mods.mod_attr[{id:"minecraft:air_drag_modifier"}] \
     run \
     function std:array/for_each_unwrap { \
@@ -362,7 +364,6 @@ execute if data entity @s \
         }, \
         index_macro:"__index__", \
     }
-
 
 # minecraft:armor
 execute if data storage hc:temp \
@@ -448,8 +449,8 @@ execute if data storage hc:temp \
         index_macro:"__index__", \
     }
 
-# minecraft:below_name_distance (JE 26.2)
-#execute if data storage hc:temp \
+# minecraft:below_name_distance
+execute if data storage hc:temp \
     rm_mods.mod_attr[{id:"minecraft:below_name_distance"}] \
     run \
     function std:array/for_each_unwrap { \
@@ -490,8 +491,8 @@ execute if data storage hc:temp \
         index_macro:"__index__", \
     }
 
-# minecraft:bounciness (JE 26.2)
-#execute if data storage hc:temp \
+# minecraft:bounciness
+execute if data storage hc:temp \
     rm_mods.mod_attr[{id:"minecraft:bounciness"}] \
     run \
     function std:array/for_each_unwrap { \
@@ -602,8 +603,8 @@ execute if data storage hc:temp \
         index_macro:"__index__", \
     }
 
-# minecraft:friction_modifier (JE 26.2)
-#execute if data storage hc:temp \
+# minecraft:friction_modifier
+execute if data storage hc:temp \
     rm_mods.mod_attr[{id:"minecraft:friction_modifier"}] \
     run \
     function std:array/for_each_unwrap { \
@@ -743,7 +744,7 @@ execute if data storage hc:temp \
     }
 
 # minecraft:name_tag_distance
-#execute if data storage hc:temp \
+execute if data storage hc:temp \
     rm_mods.mod_attr[{id:"minecraft:name_tag_distance"}] \
     run \
     function std:array/for_each_unwrap { \
