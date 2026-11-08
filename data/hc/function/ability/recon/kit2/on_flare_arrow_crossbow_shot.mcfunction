@@ -13,9 +13,7 @@ execute if entity @s[ \
 ] \
     store result score @s hc.ReconKit2FlareArrowCooldown \
     run \
-    data get storage hc:main \
-    consts.classes[{key:"hc:recon"}].\
-    kits[{id:2}].recon_k2_data.flare_arrow.cooldown_ticks
+    compute entity @s integer hc:class/recon/kit2/flare_arrow/cooldown_ticks
 
 # give arrow instantly if proj_cooldown is triggered
 execute if entity @s[ \
