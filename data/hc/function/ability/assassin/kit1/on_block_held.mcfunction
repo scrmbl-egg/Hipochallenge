@@ -12,17 +12,13 @@ advancement revoke @s only hc.core:class/assassin/kit1/blocked_with_sword
 execute unless predicate hc.core:class/assassin/kit1/is_in_parry_window \
     store result score @s hc.AssassinKit1ParryWindowRemainingTicks \
     run \
-    data get storage hc:main \
-    consts.classes[{key:"hc:assassin"}].kits[{id:1}].\
-    assassin_k1_data.parry.window_duration_ticks
+    compute entity @s integer hc:class/assassin/kit1/parry/window_duration_ticks
 
 # if player wasn't in the parrying window, also set the parrying window ticks
 execute unless score @s hc.AssassinKit1BlockRemainingTicks matches 0.. \
     store result score @s hc.AssassinKit1BlockRemainingTicks \
     run \
-    data get storage hc:main \
-    consts.classes[{key:"hc:assassin"}].kits[{id:1}].\
-    assassin_k1_data.parry.window_duration_ticks
+    compute entity @s integer hc:class/assassin/kit1/parry/window_duration_ticks
 
 # tag the player as someone who is holding block, so we can defer the decrement
 # of the hc.AssassinKit1BlockRemainingTicks score
