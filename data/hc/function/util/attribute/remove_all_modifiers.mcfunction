@@ -9,8 +9,6 @@ data modify storage hc:temp rm_mods set value { \
     mod_attr:[], \
 }
 
-# TODO: check JE 26.2 attributes
-
 ## CHECK EVERY ATTRIBUTE
 # minecraft:air_drag_modifier
 execute if data entity @s \
