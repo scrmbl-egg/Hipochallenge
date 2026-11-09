@@ -15,19 +15,19 @@
 ## NOTE:
 # before running this function, a predicate check is ran:
 #
-# hc:mode/is_match_being_played
+# hc:game/mode/is_match_being_played
 #
 # This predicate, internally, ONLY checks if the current state ID is between
 # 1 and INT32_MAX or INT32_MIN and -1. Which means that checking the following
-# storage location (within the scope of this function):
+# storage location:
 #
 # hc:main vars.game_context.mode.state
 #
-# ...is SAFE and won't be null!
+# ...is SAFE and won't be null WHILE RUNNING THIS FUNCTION!
 #
 # This also implies that when an on_tick_function returns 0, a special routine
-# must be ran in order to properly run the exit function and set that same
-# location back to an empty object {}.
+# must be ran in order to properly run the exit function and remove that same
+# storage location.
 
 ## setup local scoreboard (for quick comparisons without macros)
 scoreboard objectives add __hc.GameModeTick dummy

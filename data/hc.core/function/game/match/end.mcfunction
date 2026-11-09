@@ -1,4 +1,4 @@
-#>hc.core:match/end
+#>hc.core:game/match/end
 #
 # Ends the current match and calls the proper functions to free all resources
 # made for the match.
@@ -33,9 +33,9 @@ function std:function/call_from_nbt { \
     args:{}, \
 }
 
-# set current state to an empty object (makes `hc:mode/is_match_being_played`
+# remove current state object (makes `hc:game/mode/is_match_being_played`
 # evaluate to false after this operation)
-data modify storage hc:main vars.game_context.mode.state set value {}
+data remove storage hc:main vars.game_context.mode.state
 
 # return 1 for success
 return 1
