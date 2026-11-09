@@ -12,9 +12,7 @@ execute on origin \
     ] \
     store result score @s hc.TankKit2TridentCooldown \
     run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:tank"}].\
-    kits[{id:2}].tank_k2_data.trident.cooldown_ticks
+    compute entity @s integer hc:class/tank/kit2/trident_cooldown_ticks
 
 # return asap without setting cooldown if projectile cooldown is disabled
 execute on origin \

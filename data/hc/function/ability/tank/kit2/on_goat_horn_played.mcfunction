@@ -33,6 +33,4 @@ tag @s add hc.TankKit2GoatHornDetecting
 
 execute store result score @s hc.TankKit2GoatHornRecoveryTicks \
     run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:tank"}].\
-    kits[{id:2}].tank_k2_data.horn.recovery_ticks
+    compute entity @s integer hc:class/tank/kit2/horn_recovery_ticks

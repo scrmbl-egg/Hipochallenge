@@ -49,9 +49,7 @@ function hc:team/get_self_team { \
 
 # get radius
 data modify storage hc:temp tank_k1_goat_horn.radius \
-    set from storage hc:main \
-    consts.classes[{key:"hc:tank"}].\
-    kits[{id:1}].tank_k1_data.horn.radius
+    set compute entity @s float hc:class/tank/kit1/horn_radius
 
 # give all effect info effects
 function hc.core:ability/tank/kit1/goat_horn/give_effects \

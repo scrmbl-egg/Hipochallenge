@@ -12,9 +12,7 @@ execute if entity @s[ \
     store result score @s hc.TankPerk1NutritiousMealCooldown \
     run \
     return run \
-    data get storage hc:main consts.\
-    classes[{key:"hc:tank"}].\
-    perks[{id:1}].tank_p1_data.nutritious_meal.give_delay_ticks
+    compute entity @s integer hc:class/tank/perk1/nutritious_meal_delay_ticks
 
 # give directly if in creative (implicit) or in neutral/training team
 execute if entity @s[gamemode=creative] \

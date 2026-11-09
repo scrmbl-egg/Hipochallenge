@@ -14,12 +14,12 @@ data modify storage hc:temp spirit set value { \
     target_uuid:[I; 0, 0, 0, 0], \
 }
 
-data modify storage hc:temp spirit.target_mode \
+#data modify storage hc:temp spirit.target_mode \
     set from storage hc:main \
     consts.classes[{key:"hc:tank"}].\
     kits[{id:3}].tank_k3_data.spirit.selection.target_mode
 
-data modify storage hc:temp spirit.max_distance set from \
+#data modify storage hc:temp spirit.max_distance set from \
     storage hc:main \
     consts.classes[{key:"hc:tank"}].\
     kits[{id:3}].tank_k3_data.spirit.selection.max_distance

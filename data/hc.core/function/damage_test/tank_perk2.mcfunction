@@ -14,7 +14,7 @@ execute as @s \
     return fail
 
 # give effects to victim
-function hc:util/effect/give_ability_effects \
+#function hc:util/effect/give_ability_effects \
     with storage hc:main consts.\
     classes[{key:"hc:tank"}].\
     perks[{id:2}].tank_p2_data.attack.effects_info
