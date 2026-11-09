@@ -1,5 +1,4 @@
 use ::java::util::text::TranslatedText
-use super::game::GameModePresetBase
 
 
 /// Level information struct.
