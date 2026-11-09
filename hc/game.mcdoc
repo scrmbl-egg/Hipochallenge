@@ -30,8 +30,15 @@ struct GameContext {
     level: Level,
 }
 
-/// Game mode struct.
-struct GameModePresetBase {
+/// Game mode preset struct. A mode preset is an NBT compound that contains
+/// information about one of multiple game modes. Game modes must define
+/// the sizes of teams, and the states that the match state machine will
+/// switch between dynamically, among other things.
+///
+/// When a game mode is selected, its corresponding preset structure is
+/// **copied** into the `hc:main vars.game_context.mode.preset` storage
+/// location.
+struct GameModePreset {
     /// Key of the game mode preset.
     key: (
         #[canonical] GameModeKey |
@@ -44,15 +51,19 @@ struct GameModePresetBase {
     /// Translated text for the game mode name.
     name: TranslatedText,
 
-    /// Sizes of the teams in this game mode. The size of this number array
-    /// also determines the amount of teams present in the game mode.
+    /// Sizes of the teams in this game mode. The size of this array also
+    /// determines the amount of teams present in the game mode (minimum of
+    /// 1 team per game mode).
     ///
     /// - `team_sizes[0]`: First team's size (1 to 6 players).
     /// - `team_sizes[1]`: Second team's size (1 to 6 players).
-    /// - ...
+    /// - `team_sizes[2]`: Third team's size (1 to 6 players, **unused**).
+    /// - `team_sizes[3]`: Forth team's size (1 to 6 players, **unused**).
     ///
-    /// TODO: maybe more teams could be supported in the future.
-    team_sizes: int @ 1..6[] @ 2,
+    /// To get the amount of necessary players for a match (which is the sum
+    /// of the integers in this array), use the `hc:game/mode/needed_players`
+    /// context integer provider.
+    team_sizes: int @ 1..6[] @ 1..4,
 
     /// Match request data for this game mode.
     match_request: struct GameModeMatchRequestData {
@@ -203,81 +214,3 @@ enum(string) GameModeKey {
     /// Deathmatch game mode.
     DeathMatch = "hc:deathmatch",
 }
-
-
-/// Union type that encapsulates all game mode types.
-type GameModePreset = (
-    GameModePresetBase |
-    struct CasualGameMode {
-        key: "hc:casual",
-        id: 0,
-
-        /// Casual game mode data.
-        casual_data: struct {
-            /// Duration of the level's intro in seconds.
-            level_intro_duration_seconds: int @ 1..107374182,
-
-            /// Duration of the kit and perk selection intermission.
-            intermission_duration_seconds: int @ 1..107374182,
-
-            /// Duration of the round's intro in seconds.
-            round_intro_duration_seconds: int @ 1..107374182,
-
-            /// Duration of a round in seconds.
-            round_duration_seconds: int @ 1..107374182,
-
-            /// Duration of the round's outro in seconds.
-            round_outro_duration_seconds: int @ 1..107374182,
-
-            /// Amount of rounds a team must win to win the whole match.
-            rounds_to_win: int @ 1..,
-        },
-
-        ...GameModePresetBase,
-    } |
-    struct CompetitiveGameMode {
-        key: "hc:competitive",
-        id: 1,
-
-        /// Competitive game mode data.
-        competitive_data: struct {
-            /// Duration of the level's intro in seconds.
-            level_intro_duration_seconds: int @ 1..107374182,
-
-            /// Duration of the kit and perk selection intermission.
-            intermission_duration_seconds: int @ 1..107374182,
-
-            /// Duration of the round's intro in seconds.
-            round_intro_duration_seconds: int @ 1..107374182,
-
-            /// Duration of a round in seconds.
-            round_duration_seconds: int @ 1..107374182,
-
-            /// Duration of the round's outro in seconds.
-            round_outro_duration_seconds: int @ 1..107374182,
-
-            /// Amount of rounds a team must win to win the whole match.
-            rounds_to_win: int @ 1..,
-
-            /// Won round lead to win the match.
-            min_winning_lead: int @ 0..,
-        },
-
-        ...GameModePresetBase,
-    } |
-    struct DeathMatchGameMode {
-        key: "hc:deathmatch",
-        id: 2,
-
-        /// Deathmatch game mode data.
-        deathmatch_data: struct {
-            /// Amount of kills a team must do to win the match prematurely.
-            kills_to_win: int @ 1..,
-
-            /// Duration of the match in seconds.
-            duration_seconds: int @ 1..107374182,
-        },
-
-        ...GameModePresetBase,
-    }
-)

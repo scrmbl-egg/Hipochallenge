@@ -4,6 +4,8 @@
 # mode.
 
 ## CREATE STOPWATCH
+# HACK: this stopwatch is a placeholder, this must be substituted with a proper
+# check that all players from a team are dead.
 stopwatch create hc:casual/round_overtime
 
 ## TITLE

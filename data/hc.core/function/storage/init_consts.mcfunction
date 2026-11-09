@@ -11,7 +11,6 @@
 
 # TODO: implement game state functions (current ones are placeholders)
 # TODO: Complete the list of constants
-# TODO: Many constants should be moved to number providers
 
 function hc:msg/debug/send_info { \
     text:"\"Initializing datapack constants...\"", \
@@ -28,9 +27,6 @@ data modify storage hc:main consts.map set value { \
 
 ## GAME CONSTANTS
 data modify storage hc:main consts.game set value { \
-    match_request:{ \
-        duration_seconds:120, \
-    }, \
     modes:[ \
         { \
             key:"hc:casual", \
@@ -88,14 +84,6 @@ data modify storage hc:main consts.game set value { \
                     on_exit_function:"hc.core:game/mode/casual/round_outro/on_exit", \
                 }, \
             ], \
-            casual_data:{ \
-                level_intro_duration_seconds:10, \
-                intermission_duration_seconds:30, \
-                round_intro_duration_seconds:3, \
-                round_duration_seconds:60, \
-                round_outro_duration_seconds:5, \
-                rounds_to_win:5, \
-            }, \
         }, \
         { \
             key:"hc:competitive", \
@@ -132,15 +120,6 @@ data modify storage hc:main consts.game set value { \
                     on_exit_function:"hc.core:game/mode/competitive/round/on_exit", \
                 }, \
             ], \
-            competitive_data:{ \
-                level_intro_duration_seconds:10, \
-                intermission_duration_seconds:30, \
-                round_intro_duration_seconds:3, \
-                round_duration_seconds:120, \
-                round_outro_duration_seconds:5, \
-                rounds_to_win:5, \
-                min_winning_lead:2, \
-            }, \
         }, \
         { \
             key:"hc:deathmatch", \
@@ -163,10 +142,6 @@ data modify storage hc:main consts.game set value { \
                     on_exit_function:"std:empty", \
                 }, \
             ], \
-            deathmatch_data:{ \
-                kills_to_win:30, \
-                duration_seconds:300, \
-            }, \
         }, \
     ], \
 }

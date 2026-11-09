@@ -5,20 +5,17 @@
 ## INIT SCOREBOARD HOLDERS
 execute store result score hc:state_remaining_ticks __hc.Casual \
     run \
-    data get storage hc:main vars.game_context.mode.preset.\
-    casual_data.intermission_duration_seconds 20
+    compute default integer hc:game/mode/casual/intermission/duration_ticks
 
 ## SETUP BOSSBAR
 bossbar add hc:casual/intermission ""
 
 execute store result bossbar hc:casual/intermission max \
     run \
-    data get storage hc:main vars.game_context.mode.preset.\
-    casual_data.intermission_duration_seconds 20
+    compute default integer hc:game/mode/casual/intermission/duration_ticks
 execute store result bossbar hc:casual/intermission value \
     run \
-    data get storage hc:main vars.game_context.mode.preset.\
-    casual_data.intermission_duration_seconds 20
+    compute default integer hc:game/mode/casual/intermission/duration_ticks
 
 bossbar set hc:casual/intermission color blue
 bossbar set hc:casual/intermission players \

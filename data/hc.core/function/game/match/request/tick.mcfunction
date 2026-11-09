@@ -9,14 +9,10 @@ execute if score \
     run \
     scoreboard players remove hc:request_remaining_ticks __hc.MatchRequest 1
 
-# get seconds remaining (+1 to round UP)
-scoreboard players operation \
-    hc:request_remaining_secs __hc.MatchRequest = \
-    hc:request_remaining_ticks __hc.MatchRequest
-scoreboard players operation \
-    hc:request_remaining_secs __hc.MatchRequest /= \
-    hc:tps __hc.MatchRequest
-scoreboard players add hc:request_remaining_secs __hc.MatchRequest 1
+# get remaining seconds
+execute store result score hc:request_remaining_secs __hc.MatchRequest \
+    run \
+    compute default integer hc:game/request/remaining_seconds
 
 ## get joining players
 scoreboard players set hc:joining_player_count __hc.MatchRequest 0
@@ -47,7 +43,6 @@ execute unless score \
 function hc.core:game/match/request/display/update
 
 # end if time reaches the end
-execute if score \
-    hc:request_remaining_ticks __hc.MatchRequest matches ..0 \
+execute if score hc:request_remaining_ticks __hc.MatchRequest matches ..0 \
     run \
     function hc.core:game/match/request/end

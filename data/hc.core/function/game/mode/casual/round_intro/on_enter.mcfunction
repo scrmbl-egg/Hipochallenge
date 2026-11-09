@@ -5,8 +5,7 @@
 ## INIT SCOREBOARD HOLDERS
 execute store result score hc:state_remaining_ticks __hc.Casual \
     run \
-    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
-    casual_data.round_intro_duration_seconds 20
+    compute default integer hc:game/mode/casual/round_intro/duration_ticks
 
 
 # increment current round number

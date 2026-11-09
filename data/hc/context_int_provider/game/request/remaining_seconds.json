@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:from_float",
+    "input": {
+        "type": "minecraft:ceil",
+        "input": {
+            "type": "minecraft:div",
+            "left": {
+                "type": "minecraft:from_int",
+                "input": {
+                    "type": "minecraft:score",
+                    "score": "__hc.MatchRequest",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "hc:request_remaining_ticks"
+                    },
+                    "fallback": 0
+                }
+            },
+            "right": 20
+        }
+    }
+}

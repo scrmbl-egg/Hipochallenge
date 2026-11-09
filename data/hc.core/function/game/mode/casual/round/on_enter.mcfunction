@@ -6,8 +6,7 @@
 # store duration
 execute store result score hc:state_remaining_ticks __hc.Casual \
     run \
-    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
-    casual_data.round_duration_seconds 20
+    compute default integer hc:game/mode/casual/round/duration_ticks
 
 
 ## SETUP BOSSBAR
@@ -15,12 +14,10 @@ bossbar add hc:casual/round ""
 
 execute store result bossbar hc:casual/round max \
     run \
-    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
-    casual_data.round_duration_seconds 20
+    compute default integer hc:game/mode/casual/round/duration_ticks
 execute store result bossbar hc:casual/round value \
     run \
-    data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
-    casual_data.round_duration_seconds 20
+    compute default integer hc:game/mode/casual/round/duration_ticks
 
 bossbar set hc:casual/round color green
 bossbar set hc:casual/round players @a[predicate=hc:team/is_in_match_team]

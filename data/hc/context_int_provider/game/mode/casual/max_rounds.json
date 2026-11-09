@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:sub",
+    "left": {
+        "type": "minecraft:mul",
+        "inputs": [
+            "hc:game/mode/casual/rounds_to_win",
+            2
+        ]
+    },
+    "right": 1
+}
