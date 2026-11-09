@@ -73,7 +73,9 @@
                                     "components": {
                                         "minecraft:item_model": "minecraft:knowledge_book",
                                         "minecraft:custom_data": {
-                                            "hc:item/replace_with": "hc.core:training/training_menu"
+                                            "hc:item/replace_with": {
+                                                "loot_table": "hc.core:training/training_menu"
+                                            }
                                         }
                                     },
                                     "count": 1

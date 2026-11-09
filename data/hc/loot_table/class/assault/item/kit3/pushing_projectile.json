@@ -32,7 +32,9 @@
                                     "id": "minecraft:paper",
                                     "components": {
                                         "minecraft:custom_data": {
-                                            "hc:item/replace_with": "hc:class/assault/item/kit3/pushing_projectile"
+                                            "hc:item/replace_with": {
+                                                "loot_table": "hc:class/assault/item/kit3/pushing_projectile"
+                                            }
                                         }
                                     }
                                 }
