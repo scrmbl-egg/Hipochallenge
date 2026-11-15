@@ -16,6 +16,56 @@ execute store result bossbar hc:casual/round value \
     run \
     scoreboard players get hc:state/remaining_ticks __hc.Casual
 
+# change between the 3 colors depending on the current remaining ticks
+execute if predicate { \
+    type:"minecraft:int_value_check", \
+    test:{ \
+        min:{ \
+            type:"minecraft:add", \
+            inputs:["hc:game/mode/casual/round/yellow_bossbar_ticks", 1], \
+        }, \
+        max:"std:types/int/max", \
+    }, \
+    value:{ \
+        type:"minecraft:score", \
+        score:"__hc.Casual", \
+        target:{type:"minecraft:fixed",name:"hc:state/remaining_ticks"}, \
+    }, \
+} \
+    run \
+    bossbar set hc:casual/round color green
+execute if predicate { \
+    type:"minecraft:int_value_check", \
+    test:{ \
+        min:{ \
+            type:"minecraft:add", \
+            inputs:["hc:game/mode/casual/round/red_bossbar_ticks", 1], \
+        }, \
+        max:"hc:game/mode/casual/round/yellow_bossbar_ticks", \
+    }, \
+    value:{ \
+        type:"minecraft:score", \
+        score:"__hc.Casual", \
+        target:{type:"minecraft:fixed",name:"hc:state/remaining_ticks"}, \
+    }, \
+} \
+    run \
+    bossbar set hc:casual/round color yellow
+execute if predicate { \
+    type:"minecraft:int_value_check", \
+    test:{ \
+        min:0, \
+        max:"hc:game/mode/casual/round/red_bossbar_ticks", \
+    }, \
+    value:{ \
+        type:"minecraft:score", \
+        score:"__hc.Casual", \
+        target:{type:"minecraft:fixed",name:"hc:state/remaining_ticks"}, \
+    }, \
+} \
+    run \
+    bossbar set hc:casual/round color red
+
 
 ## if time expires, go to sudden death
 execute if score hc:state/remaining_ticks __hc.Casual matches ..0 \

@@ -1,0 +1,5 @@
+{
+    "type": "minecraft:div",
+    "left": "hc:game/mode/casual/round/duration_ticks",
+    "right": 2
+}
