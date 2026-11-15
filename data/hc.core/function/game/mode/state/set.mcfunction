@@ -33,14 +33,9 @@ execute if data storage hc:temp set_state{id:0} \
     data remove storage hc:temp set_state
 
 # else...
-# set state (preset states array is guaranteed, so unsafe version can be used)
-$function std:array/get_element_unsafe { \
-    array_storage:"hc:main", \
-    array_nbt:"vars.game_context.mode.preset.states", \
-    out_storage:"hc:main", \
-    out_nbt:"vars.game_context.mode.state", \
-    source_path:{id:$(id)}, \
-}
+# set state (preset states array is guaranteed, no need to check its presence)
+$data modify storage hc:main vars.game_context.mode.state \
+    set from storage hc:main vars.game_context.mode.preset.states[{id:$(id)}]
 
 # send debug message
 function hc:msg/debug/send_info { \
