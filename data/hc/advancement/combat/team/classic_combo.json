@@ -15,7 +15,7 @@
                 {"translate":"hc.class.tank.name","fallback":"Tank"},
                 {"translate":"hc.class.recon.name","fallback":"Recon"},
                 {"translate":"hc.class.marksman.name","fallback":"Marksman"},
-                {"translate":"hc.level.subdec.name","fallback":"Subterranean Decay"}
+                {"translate":"hc.level.cnduit.name","fallback":"Conduits"}
             ]
         },
         "frame": "goal",
