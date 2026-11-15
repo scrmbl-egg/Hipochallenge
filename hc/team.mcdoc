@@ -5,7 +5,9 @@ use ::java::util::text::TextStyle
 use ::java::util::avatar::Profile
 
 
-/// Struct for representing a team preset.
+/// Struct for representing a team color preset.
+///
+/// These presets are **copied** in the `color_preset` field of a `TeamContext`.
 struct TeamColorPreset {
     /// Key of the team.
     key: (
@@ -54,7 +56,7 @@ struct TeamContext {
         ...TextBase,
     },
 
-    /// Team color preset.
+    /// Copy of the selected team color preset.
     color_preset: TeamColorPreset,
 
     /// List of player profiles in the team.

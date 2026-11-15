@@ -34,9 +34,11 @@ struct Perk {
     /// Function called when the player equips the perk. This can be used for
     /// setting up resources, scores... etc.
     ///
-    /// ### Note
+    /// ---
+    ///
+    /// **Note:**
     /// This function is called regardless of if the player is in a match team
-    /// or in training, so any special cases should be handled in the function
+    /// or in training, so any special cases should be handled *in* the function
     /// itself.
     on_equip_function?: #[id="function"] string,
 

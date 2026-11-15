@@ -4,7 +4,9 @@
 /// that contain a `key` field, which is used to access a value through
 /// something other than an integer index.
 ///
-/// # Generic arguments
+/// ---
+///
+/// **Generic arguments:**
 ///
 /// - `K`: type of the key.
 /// - `V`: type of the value.
@@ -12,7 +14,9 @@
 /// be called. This helps with clarity when accessing the table through the
 /// `data` command.
 ///
-/// # Mcdoc example
+/// ---
+///
+/// **Mcdoc example:**
 ///
 /// To create a table type where rows are accessed with a `string` key, and
 /// where the value type is a list of effects called "effects", we can use:

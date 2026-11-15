@@ -105,7 +105,9 @@ struct GameModePreset {
     /// starts, the `start_state` flag must be included (since it's a flag, the
     /// value must be an empty struct `{}`).
     ///
-    /// ## Note
+    /// ---
+    ///
+    /// **Note:**
     /// If the `start_state` flag is not well set, the state machine will
     /// decide the first state of the game mode in the following ways:
     ///
@@ -147,7 +149,9 @@ struct GameModeState {
     /// returned by the function, the state machine will interpret the current
     /// state is still desired (same as if it returned its own `id`).
     ///
-    /// ### Example
+    /// ---
+    ///
+    /// **Example:**
     /// ```mcfunction
     /// #>custom:my_game_mode/select_kit/tick
     ///
@@ -159,22 +163,30 @@ struct GameModeState {
     /// ```
     ///
     /// Since the next state is determined by the returned `id`, here are some
-    /// tricks that can be performed:
+    /// tricks that can be performed with `return run`:
     ///
     /// - You can switch to a random state:
-    ///  ```mcfunction
-    ///  execute if predicate custom:example_predicate \
-    ///     run \
+    ///     ```mcfunction
     ///     return run random value 1..6
-    ///  ```
-    /// - You can get the `id` from storage instead of hardcoding it:
-    ///  ```mcfunction
-    ///  execute if predicate custom:example_predicate \
-    ///     run \
+    ///     ```
+    ///
+    /// - You can use the result of a function:
+    ///     ```mcfunction
+    ///     return run function example:get_next_state
+    ///     ```
+    ///
+    /// - You can return the result of a computed number provider:
+    ///     ```mcfunction
+    ///     return run compute default integer example:next_state
+    ///     ```
+    ///
+    /// - You can get the number from any data source:
+    ///     ```mcfunction
+    ///     # this is the method used in the datapack!
     ///     return run \
-    ///     data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
-    ///     states[{key:"intermission"}].id
-    ///  ```
+    ///         data get storage hc:main consts.game.modes[{key:"hc:casual"}].\
+    ///         states[{key:"round"}].id
+    ///     ```
     on_tick_function: #[id="function"] string,
 
     /// Callback function that is called just before the next state starts.
@@ -183,7 +195,9 @@ struct GameModeState {
     /// Flag that specifies this state is the first one when the game mode
     /// starts.
     ///
-    /// ### Note
+    /// ---
+    ///
+    /// **Note:**
     /// If multiple states in the list have this flag, the first in the list
     /// that specifies this flag will be the starting state.
     start_state?: struct StartStateFlag {},

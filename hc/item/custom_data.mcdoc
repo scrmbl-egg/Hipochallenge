@@ -19,12 +19,14 @@ type Id = #[match_regex="^[a-z0-9_]+(:[a-z0-9_/]+)?$"] string
 /// consumable item). When this component is detected in an item, it is
 /// replaced a tick after detection.
 ///
-/// # TODO:
+/// ---
+///
+/// TODO:
 /// This replacement must be deferred or scheduled one tick after because
 /// same tick replacement causes them to be BUGGED!. No animations, no cooldown
 /// indicator... etc.
 ///
-/// # FIXME:
+/// FIXME:
 /// if the aforementioned bug is ever fixed by Mojang, return to the old
 /// system, or a simplier one.
 struct ReplaceItemLootTable {
