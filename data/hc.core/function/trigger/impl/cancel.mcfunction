@@ -18,14 +18,14 @@ execute unless predicate { \
             type:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                cancel:{min:-2147483648,max:-1}, \
+                cancel:{min:"std:types/int/min",max:-1}, \
             }, \
         }, \
         { \
             type:"minecraft:entity_scores", \
             entity:"this", \
             scores:{ \
-                cancel:{min:1,max:2147483647}, \
+                cancel:{min:1,max:"std:types/int/max"}, \
             }, \
         }, \
     ], \
