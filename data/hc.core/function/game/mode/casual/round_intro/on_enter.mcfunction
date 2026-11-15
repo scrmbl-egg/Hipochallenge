@@ -3,7 +3,7 @@
 # Function called when entering the round_intro state of the casual game mode.
 
 ## INIT SCOREBOARD HOLDERS
-execute store result score hc:state_remaining_ticks __hc.Casual \
+execute store result score hc:state/remaining_ticks __hc.Casual \
     run \
     compute default integer hc:game/mode/casual/round_intro/duration_ticks
 

@@ -4,7 +4,7 @@
 
 ## INIT SCOREBOARD HOLDERS
 # start timer
-execute store result score hc:state_remaining_ticks __hc.Casual \
+execute store result score hc:state/remaining_ticks __hc.Casual \
     run \
     compute default integer hc:game/mode/casual/level_intro/duration_ticks
 

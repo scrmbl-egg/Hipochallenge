@@ -3,7 +3,7 @@
 # Function called when entering the intermission state of the casual game mode.
 
 ## INIT SCOREBOARD HOLDERS
-execute store result score hc:state_remaining_ticks __hc.Casual \
+execute store result score hc:state/remaining_ticks __hc.Casual \
     run \
     compute default integer hc:game/mode/casual/intermission/duration_ticks
 

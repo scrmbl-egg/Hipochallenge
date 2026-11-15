@@ -4,7 +4,7 @@
 
 ## INIT SCOREBOARDS HOLDERS
 # store duration
-execute store result score hc:state_remaining_ticks __hc.Casual \
+execute store result score hc:state/remaining_ticks __hc.Casual \
     run \
     compute default integer hc:game/mode/casual/round/duration_ticks
 
@@ -26,10 +26,7 @@ bossbar set hc:casual/round name { \
     translate:"", \
     fallback:"%1$s \u231b", \
     with:[ \
-        { \
-            storage:"hc:main", \
-            nbt:"vars.game_context.mode.preset.casual_data.round_duration_seconds", \
-        }, \
+        {score:{name:"hc:state/remaining_secs",objective:"__hc.Casual"}}, \
     ], \
 }
 bossbar set hc:casual/round visible true

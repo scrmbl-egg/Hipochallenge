@@ -3,11 +3,29 @@
 # Function that is called each tick of the casual mode.
 
 # decrement score whenever a duration is specified by another state
-execute if score hc:state_remaining_ticks __hc.Casual matches 0.. \
+execute if score hc:state/remaining_ticks __hc.Casual matches 0.. \
     run \
-    scoreboard players remove hc:state_remaining_ticks __hc.Casual 1
+    scoreboard players remove hc:state/remaining_ticks __hc.Casual 1
 
-# get remaining seconds (add 1 to round UP)
-execute store result score hc:state_remaining_secs __hc.Casual \
+# calculate remaining seconds
+execute store result score hc:state/remaining_secs __hc.Casual \
     run \
-    compute default integer hc:game/mode/casual/state_remaining_seconds
+    compute default integer { \
+        type:"minecraft:div", \
+        left:{ \
+            type:"minecraft:add", \
+            inputs:[ \
+                { \
+                    type:"minecraft:score", \
+                    score:"__hc.Casual", \
+                    target:{ \
+                        type:"minecraft:fixed", \
+                        name:"hc:state/remaining_ticks" \
+                    }, \
+                    fallback:0 \
+                }, \
+                19, \
+            ] \
+        }, \
+        right:20, \
+    }
