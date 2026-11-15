@@ -2,11 +2,11 @@
 #
 # Removes all triggers in the datapack.
 
-## BASIC (available at all times)
+## ESSENTIALS (available at all times)
 scoreboard objectives remove list
+scoreboard objectives remove info
 
 ## PLAZA / LOBBY
-scoreboard objectives remove info
 scoreboard objectives remove tp_tutorial
 scoreboard objectives remove tp_training
 scoreboard objectives remove tp_training_cnduit
